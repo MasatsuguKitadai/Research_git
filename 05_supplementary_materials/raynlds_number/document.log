@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.4.14)  14 MAY 2021 17:40
+This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.4.14)  17 MAY 2021 14:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -277,30 +277,32 @@ LaTeX Font Info:    Trying to load font information for T1+cmss on input line 58
 File: t1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 64.
+(Font)              scaled to size 9.60999pt on input line 59.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 64.
-LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 65.
-LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 4.805pt on input line 65.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 65.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 65.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+(Font)              scaled to size 9.60999pt on input line 59.
 File: image_1.jpg Graphic file (type bmp)
 <image_1.jpg>
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 110.
+(Font)              scaled to size 8.64899pt on input line 64.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 110.
- [1
+(Font)              scaled to size 8.64899pt on input line 64.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 6.72699pt on input line 74.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 4.805pt on input line 74.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 74.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 74.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Underfull \hbox (badness 2689) in paragraph at lines 124--127
+\JY1/mc/m/n/10 なお\T1/cmr/m/n/10 , \JY1/mc/m/n/10 一般的な乗用車におけるタイヤサイズ
+ []
+
+[1
 
 
 ] (./document.aux) ) 
@@ -311,6 +313,6 @@ Here is how much of TeX's memory you used:
  19725 multiletter control sequences out of 15000+600000
  545284 words of font info for 73 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 30i,7n,36p,363b,340s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 30i,7n,36p,363b,336s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on document.dvi (1 page, 3548 bytes).
+Output written on document.dvi (1 page, 5120 bytes).
