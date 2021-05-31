@@ -1,0 +1,95 @@
+\documentclass[a4paper]{jsarticle}
+\setlength{\topmargin}{-20.4cm}
+\setlength{\oddsidemargin}{-10.4mm}
+\setlength{\evensidemargin}{-10.4mm}
+\setlength{\textwidth}{18cm}
+\setlength{\textheight}{26cm}
+
+\usepackage[top=15truemm,bottom=25truemm,left=20truemm,right=20truemm]{geometry}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{listings}
+\usepackage{listings,jvlisting}
+\usepackage{geometry}
+\usepackage{framed}
+
+\lstset{
+basicstyle={\ttfamily},
+identifierstyle={\small},
+commentstyle={\smallitshape},
+keywordstyle={\small\bfseries},
+ndkeywordstyle={\small},
+stringstyle={\small\ttfamily},
+frame={tb},
+breaklines=true,
+columns=[l]{fullflexible},
+xrightmargin=0zw,
+xleftmargin=3zw,
+numberstyle={\scriptsize},
+stepnumber=1,
+numbersep=1zw,
+lineskip=-0.5ex
+}
+
+\makeatletter
+\def\@maketitle
+{
+\begin{center}
+{\LARGE \@title \par}
+\end{center}
+\begin{flushright}
+{\large OpenFOAM NO.01\quad\@date\quad\@author}
+\end{flushright}
+\par\vskip 1.5em
+}
+\makeatother
+
+\author{}
+\title{メッシュの作成手順}
+\date{}
+
+\begin{document}
+\maketitle
+\section{\large メッシュ作成の流れ}
+\begin{itemize}
+    \item blockMesh
+    \item surfaceFeatures
+    \item decomposePar
+    \item snappyHexMesh
+\end{itemize}
+\section{\large blockMesh → 計算領域の設定を行う}
+該当するファイルは, "system/blockMeshDict"
+\subsection{単位の設定}
+単位は"m"で,デフォルトでは"1"に設定されている.(仮に"mm"に設定したい場合は,0.001に書き換える.)任意の単位に変更できるが,
+他の計算の設定と混同しないように統一しておくこと(基本的には変更しない)が望ましい.
+\begin{framed}
+    \begin{center}
+        convertToMeters 1;
+    \end{center}
+\end{framed}
+\subsection{領域の設定}
+"vertice"に設定する解析範囲にしたがって座標(8点)を記入する.
+原点は,3Dモデルと対応する.
+\begin{framed}
+    \begin{center}
+        {
+            vertices\\
+            (\\
+            \qquad (-0.250 -0.750 -0.025)\\
+            \qquad (0.250 -0.750 -0.025)\\
+            \qquad (0.250 0.250 -0.025)\\
+            \qquad (-0.250 0.250 -0.025)\\
+            \qquad (-0.250 -0.750 0.475)\\
+            \qquad (0.250 -0.750 0.475)\\
+            \qquad (0.250 0.250 0.475)\\
+            \qquad (-0.250 0.250 0.475)\\
+            );
+        }
+    \end{center}
+\end{framed}
+
+また,その分割数を指定する.
+\end{document}
