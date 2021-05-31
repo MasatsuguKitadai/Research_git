@@ -1,0 +1,40 @@
+【メッシュの作成】
+
+blockMesh
+
+surfaceFeatures
+
+decomposePar
+
+mpiexec -n 6 snappyHexMesh -parallel -overwrite
+
+【流体解析】
+
+ls -d processor* | xargs -I {} rm -rf ./{}/0
+
+ls -d processor* | xargs -I {} cp -r 0.orig ./{}/0
+
+mpiexec -n 6 patchSummary -parallel
+
+mpiexec -n 6 potentialFoam -parallel
+
+mpiexec -n 6 simpleFoam -parallel > log.simpleFoam
+
+【分割されているメッシュ・解析結果の結合】
+
+reconstructParMesh -constant
+
+reconstructPar -latestTime
+
+【メッシュの削除】
+
+foamCleanPolyMesh
+
+【Memo】
+
+メッシュの作成までは並列計算が可能
+その後のsimpleFoamから解析が不可能になる
+→ エラーが出ているファイルを確認する
+
+計算の進捗を表示する
+tail -f log.simpleFoam | grep Time

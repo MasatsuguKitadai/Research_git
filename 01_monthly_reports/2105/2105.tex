@@ -57,14 +57,39 @@ lineskip=-0.5ex
 \begin{itemize}
     \item 進捗概要
     \item OpenFOAMでの解析練習
-    \item opencvを使ってみた
+    \item anacondaを利用したプログラミング連取
 \end{itemize}
 \section{\large 進捗概要}
 5月は実験環境における流れ場の数値解析を目標にOpenFOAMを用いて解析練習を行った.
-また, anacondaを利用する機会があったため, opencvを用いて動画像の処理を行った.
 \section{\large OpenFOAMでの解析練習}
-\subsection{タイヤ単体モデルの解析}
-はじめに,タイヤ単体のモデルを作成し解析を行った.
-\subsection{ホイールハウスを含めたモデルの解析}
+\subsection{OpenFOAMにおける解析の流れ}
+OpenFOAMを使用した解析は以下のような流れで行った.\\
+\subsection{解析の結果}
+数値計算を行うことのできたモデル及び条件は以下の3例である．
+\renewcommand{\labelenumi}{(\alph{enumi})}
+\begin{enumerate}
+    \item 回転していないタイヤモデル単体の解析
+    \item 回転しているタイヤモデル単体の解析
+    \item ホイールハウスを含めた回転していないタイヤモデルの解析
+\end{enumerate}
+\subsection{今後の課題}
+今回は「解析を実行した」のみにとどまってしまったため，
+今後は解析結果や解析の条件の分析に努めたい．
+分析の内容として，以下のような項目が挙げられる．
+\begin{itemize}
+    \item 乱流モデルの違いが計算結果に与える影響
+    \item 要素数の違いが計算結果及び計算速度に与える影響
+    \item メッシュ設定の違いが計算結果に与える影響(境界層・細分化部分の指定 等)
+    \item 境界条件の違いによる流れ場への影響
+\end{itemize}
+\par
+分析の方法としては，人間の目では認知できない微妙な違いを判別する必要が
+出てくる場合も考えられるため，画像処理を用いて行おうと考えている．
+\par
+また，数値解析における最大の難点として，計算に長時間必要であることが挙げられるが，
+近年では，GPUを用いた並列計算の手法も開発されつつあり，
+利用することができれば大幅な計算時間の短縮が期待できる．
+長期的な展望としていつか挑戦してみたい．
+\subsection{解析における疑問点}
 \section{\large opencv 使ってみた}
 \end{document}
