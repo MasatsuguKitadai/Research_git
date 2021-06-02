@@ -24,7 +24,11 @@ mpiexec -n 6 simpleFoam -parallel > log.simpleFoam
 
 reconstructParMesh -constant
 
+reconstructPar
+(すべての解析結果の統合)
+
 reconstructPar -latestTime
+(最後の解析結果のみ統合)
 
 【メッシュの削除】
 
@@ -38,3 +42,7 @@ foamCleanPolyMesh
 
 計算の進捗を表示する
 tail -f log.simpleFoam | grep Time
+
+【メッシュファイルのショートカット作成】
+ln -s ../../tyremodel_constant/constant/polyMesh .
+ln -s ../../tyremodel_constant/constant/extendedFeatureEdgeMesh .
