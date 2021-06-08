@@ -15,6 +15,16 @@
 \usepackage{listings,jvlisting}
 \usepackage{geometry}
 \usepackage{framed}
+\usepackage{color}
+\usepackage[dvipdfmx]{hyperref}
+
+\hypersetup{
+	colorlinks=false, % リンクに色をつけない設定
+	bookmarks=true, % 以下ブックマークに関する設定
+	bookmarksnumbered=true,
+	pdfborder={0 0 0},
+	bookmarkstype=toc
+}
 
 \lstset{
 basicstyle={\ttfamily},
@@ -34,32 +44,33 @@ numbersep=1zw,
 lineskip=-0.5ex
 }
 
-\makeatletter
-\def\@maketitle
-{
-\begin{center}
-{\LARGE \@title \par}
-\end{center}
-\begin{flushright}
-{\large OpenFOAM NO.01\quad\@date\quad\@author}
-\end{flushright}
-\par\vskip 1.5em
-}
-\makeatother
-
 \author{}
-\title{メッシュの作成手順}
+\title{プログラミング環境の構築}
 \date{}
 
 \begin{document}
 \maketitle
-\section{\large メッシュ作成の流れ}
+
+想定しているのは以下の環境です。
 \begin{itemize}
-    \item blockMesh
-    \item surfaceFeatures
-    \item decomposePar
-    \item snappyHexMesh
+    \item windows10
+    \item vscode
+    \item wsl
 \end{itemize}
+
+\section{\large Tex のセットアップ}
+\subsection{Tex live のインストール}
+\textcolor{blue}{\href{http://www.tug.org/texlive/acquire-netinstall.html}{ここ}} から、Tex Liveのセットアップファイルをダウンロードする。\\
+「 install-tl-windows.exe 」をクリックするとファイルのダウンロードが始まる。\\
+ダウンロードしたファイルを起動し、手順に沿って進める。（基本、Enter連続でOK）\\
+※ インストールは長時間かかります。(3時間程度)
+\subsection{VScode での設定}
+拡張機能から、LaTex workshop をインストールする。\\
+settings json を開く。(usr、workspace のどちらでも可)\\
+このmanualフォルダにある json\_forTex.txt の内容をコピー＆ペーストして保存する。
+左下の歯車マークをクリックし、Command Palette をクリックする。\\
+出てきた検索欄に、「LaTex Workshop: Build with recipe」と入力し、「latexmk」を選択する。\\
+その後、アプリをリフレッシュする。
 \section{\large blockMesh → 計算領域の設定を行う}
 該当するファイルは, "system/blockMeshDict"
 \subsection{単位の設定}
