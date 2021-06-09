@@ -1,6 +1,0 @@
-\BOOKMARK [1][-]{section.1}{1 Tex のセットアップ}{}% 1
-\BOOKMARK [2][-]{subsection.1.1}{1.1 Tex live のインストール}{section.1}% 2
-\BOOKMARK [2][-]{subsection.1.2}{1.2 VScode での設定}{section.1}% 3
-\BOOKMARK [1][-]{section.2}{2 blockMesh → 計算領域の設定を行う}{}% 4
-\BOOKMARK [2][-]{subsection.2.1}{2.1 単位の設定}{section.2}% 5
-\BOOKMARK [2][-]{subsection.2.2}{2.2 領域の設定}{section.2}% 6
