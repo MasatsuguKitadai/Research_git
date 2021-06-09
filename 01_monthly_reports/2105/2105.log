@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 This is pTeX, Version 3.14159265-p3.8.2 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=ptex 2021.5.31)  1 JUN 2021 11:28
+=======
+This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.3.30)  2 JUN 2021 09:27
+entering extended mode
+>>>>>>> 0d79ce06d5bb38ba77d292d05b35ff3cc34c0b55
  restricted \write18 enabled.
  %&-line parsing enabled.
 **2105.tex
@@ -85,9 +90,30 @@ l.16 \usepackage
                 {geometry}
 ? 
 
+<<<<<<< HEAD
 Overfull \hbox (7.69064pt too wide) in paragraph at lines 8--17
 []\tenrm [top=15truemm,bottom=25truemm,left=20truemm,right=20truemm]geometry [l
 atin1]inputenc ams-math|
+=======
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+>>>>>>> 0d79ce06d5bb38ba77d292d05b35ff3cc34c0b55
 
 \hbox(7.5+2.5)x469.75499, glue set - 1.0
 .\hbox(0.0+0.0)x20.0
@@ -97,6 +123,7 @@ atin1]inputenc ams-math|
 .\tenrm o
 .etc.
 
+<<<<<<< HEAD
 ! Undefined control sequence.
 l.18 \lstset
             {
@@ -209,3 +236,82 @@ l.57 \begin
 ? 
 [1] )
 Output written on 2105.dvi (1 page, 1120 bytes).
+=======
+\c@lstlisting=\count273
+LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
+(Font)              scaled to size 16.60605pt on input line 56.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 16.60605pt on input line 56.
+LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
+(Font)              scaled to size 11.53198pt on input line 56.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 11.53198pt on input line 56.
+LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
+(Font)              scaled to size 11.53198pt on input line 57.
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 11.53198pt on input line 57.
+LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
+(Font)              scaled to size 9.60999pt on input line 74.
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 9.60999pt on input line 74.
+File: images/image_1.jpg Graphic file (type bmp)
+<images/image_1.jpg>
+LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
+(Font)              scaled to size 8.64899pt on input line 79.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 8.64899pt on input line 79.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 6.72699pt on input line 83.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 4.805pt on input line 83.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 83.
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 83.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+File: images/image_2.jpg Graphic file (type bmp)
+<images/image_2.jpg>
+File: images/image_3.jpg Graphic file (type bmp)
+<images/image_3.jpg>
+File: images/image_4.jpg Graphic file (type bmp)
+<images/image_4.jpg>
+File: screenshots/tyremodel_mesh.png Graphic file (type bmp)
+<screenshots/tyremodel_mesh.png>
+File: screenshots/fullmodel_mesh.png Graphic file (type bmp)
+<screenshots/fullmodel_mesh.png>
+ [1
+
+
+]
+File: screenshots/tyremodel_pressure1.png Graphic file (type bmp)
+<screenshots/tyremodel_pressure1.png>
+File: screenshots/tyremodel_pressure1_r.png Graphic file (type bmp)
+<screenshots/tyremodel_pressure1_r.png>
+File: screenshots/tyremodel_velocity1.png Graphic file (type bmp)
+<screenshots/tyremodel_velocity1.png>
+File: screenshots/tyremodel_velocity1_r.png Graphic file (type bmp)
+<screenshots/tyremodel_velocity1_r.png>
+File: screenshots/tyremodel_stream2.png Graphic file (type bmp)
+<screenshots/tyremodel_stream2.png>
+File: screenshots/tyremodel_stream2_r.png Graphic file (type bmp)
+<screenshots/tyremodel_stream2_r.png>
+ [2]
+File: screenshots/fullmodel_pressure.png Graphic file (type bmp)
+<screenshots/fullmodel_pressure.png>
+File: screenshots/fullmodel_stream.png Graphic file (type bmp)
+<screenshots/fullmodel_stream.png>
+ [3] (./2105.aux) ) 
+Here is how much of TeX's memory you used:
+ 4104 strings out of 481768
+ 55873 string characters out of 5933620
+ 306908 words of memory out of 5000000
+ 19480 multiletter control sequences out of 15000+600000
+ 542201 words of font info for 72 fonts, out of 8000000 for 9000
+ 934 hyphenation exceptions out of 8191
+ 30i,5n,36p,334b,338s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on 2105.dvi (3 pages, 11728 bytes).
+>>>>>>> 0d79ce06d5bb38ba77d292d05b35ff3cc34c0b55
