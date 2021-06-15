@@ -1,0 +1,72 @@
+\documentclass[twocolumn,a4j]{jsarticle}
+\setlength{\topmargin}{-20.4cm}
+\setlength{\oddsidemargin}{-10.4mm}
+\setlength{\evensidemargin}{-10.4mm}
+\setlength{\textwidth}{18cm}
+\setlength{\textheight}{26cm}
+
+\usepackage[top=15truemm,bottom=25truemm,left=20truemm,right=20truemm]{geometry}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{listings}
+\usepackage{listings,jvlisting}
+\usepackage{geometry}
+
+\lstset{
+basicstyle={\ttfamily},
+identifierstyle={\small},
+commentstyle={\smallitshape},
+keywordstyle={\small\bfseries},
+ndkeywordstyle={\small},
+stringstyle={\small\ttfamily},
+frame={tb},
+breaklines=true,
+columns=[l]{fullflexible},
+xrightmargin=0zw,
+xleftmargin=3zw,
+numberstyle={\scriptsize},
+stepnumber=1,
+numbersep=1zw,
+lineskip=-0.5ex
+}
+
+\makeatletter
+\def\@maketitle
+{
+\begin{center}
+{\LARGE \@title \par}
+\end{center}
+\begin{flushright}
+{\large 報告書NO.03\quad\@date\quad\@author}
+\end{flushright}
+\par\vskip 1.5em
+}
+\makeatother
+
+\author{来代 勝胤}
+\title{令和3年度 6月 報告書}
+\date{2021/7/7}
+
+\begin{document}
+\columnseprule=0.1mm
+\maketitle
+\section{\large 報告内容}
+\begin{itemize}
+    \item 進捗概要
+    \item 揚抗力測定実験
+    \item 数値流体解析の理論
+    \item OpenFOAMでの流れ場解析
+\end{itemize}
+\subsection{進捗概要}
+今月は、揚抗力の測定を行うことができた。
+事前に揚抗力計の校正を目的とした実験も行った。
+また、OpenFOAMを用いて解析を行うにあたり、
+OpenFOAMのソルバー内で用いられている数式の理解に努めた。
+先月の課題であった解析結果の差別化についてもいくつかの方法を用いて行った。
+\subsection{揚抗力測定実験}
+\subsection{数値流体解析の理論}
+\subsection{OpenFOAMでの流れ場解析}
+\end{document}
