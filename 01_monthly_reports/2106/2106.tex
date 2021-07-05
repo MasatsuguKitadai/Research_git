@@ -14,6 +14,7 @@
 \usepackage{listings}
 \usepackage{listings,jvlisting}
 \usepackage{geometry}
+\usepackage{enumerate}
 
 \lstset{
 basicstyle={\ttfamily},
@@ -53,20 +54,39 @@ lineskip=-0.5ex
 \begin{document}
 \columnseprule=0.1mm
 \maketitle
-\section{\large 報告内容}
+\section*{報告内容}
 \begin{itemize}
     \item 進捗概要
-    \item 揚抗力測定実験
-    \item 数値流体解析の理論
-    \item OpenFOAMでの流れ場解析
+    \item 揚抗力測定の事前実験
+    \item Arduinoによる温湿度測定
+    \item 7月の予定
 \end{itemize}
-\subsection{進捗概要}
-今月は、揚抗力の測定を行うことができた。
-事前に揚抗力計の校正を目的とした実験も行った。
-また、OpenFOAMを用いて解析を行うにあたり、
-OpenFOAMのソルバー内で用いられている数式の理解に努めた。
-先月の課題であった解析結果の差別化についてもいくつかの方法を用いて行った。
-\subsection{揚抗力測定実験}
-\subsection{数値流体解析の理論}
-\subsection{OpenFOAMでの流れ場解析}
+\section{進捗概要}
+今月は、揚抗力測定の事前実験を行った。
+具体的に行った実験の内容は以下の通りである。
+\begin{enumerate}[(1)]
+    \item ロードセルの校正実験
+    \item タイヤモデルとロードセルの校正実験
+\end{enumerate}
+また、Arduino講習が実施されていたため、
+そこで学んだことを踏まえ、部屋内の温湿度計を製作した。\\
+\section{揚抗力測定実験}
+\subsection{実験の目的と方法}
+作用力測定の実験を行うにあたり、タイヤモデルの上方に設置されているひずみゲージの出力電圧と
+実際に加わっている荷重を関係付ける必要がある。
+そこで、ロードセルを用いた校正実験を行うことによりそれらを行った。
+
+\begin{enumerate}[Step.1]
+    \item ひずみゲージとロードセルの出力電圧を調べる
+    \item ひずみゲージの出力電圧と荷重の関係を導く
+    \item 導出した関係をもとにひずみゲージの出力電圧から作用力を求める
+\end{enumerate}
+
+\subsection{ロードセルの校正実験}
+
+
+\section{7月の予定}
+7月は、引越しの関係もあり、回流水槽を用いた実験ができなくなってしまうため、
+タイヤの作用力測定を複数のモデルで行う必要がある。また、大学院入試が近づいてきたため
+入試に向けた勉強を優先して行うつもりである。
 \end{document}
