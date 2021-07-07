@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.sjis) (TeX Live 2021/W32TeX) (preloaded format=platex 2021.6.8)  6 JUL 2021 14:35
+This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.sjis) (TeX Live 2021/W32TeX) (preloaded format=platex 2021.6.8)  7 JUL 2021 10:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -393,27 +393,27 @@ LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 11.53198pt on input line 42.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 59.
+(Font)              scaled to size 9.60999pt on input line 57.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 59.
+(Font)              scaled to size 9.60999pt on input line 57.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 69.
+(Font)              scaled to size 6.72699pt on input line 67.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 4.805pt on input line 69.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 69.
+(Font)              scaled to size 4.805pt on input line 67.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 67.
  (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 69.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 67.
  (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 File: images/schematic.jpg Graphic file (type bmp)
 <images/schematic.jpg>
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 78.
+(Font)              scaled to size 8.64899pt on input line 76.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 78.
+(Font)              scaled to size 8.64899pt on input line 76.
 File: images/loadcell.jpg Graphic file (type bmp)
 <images/loadcell.jpg>
 
@@ -439,4 +439,4 @@ Here is how much of TeX's memory you used:
  934 hyphenation exceptions out of 8191
  60i,6n,66p,274b,414s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on 2106.dvi (2 pages, 8976 bytes).
+Output written on 2106.dvi (2 pages, 8788 bytes).
