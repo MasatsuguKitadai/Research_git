@@ -1,0 +1,82 @@
+\documentclass[a4paper]{jsarticle}
+\setlength{\topmargin}{-20.4cm}
+\setlength{\oddsidemargin}{-10.4mm}
+\setlength{\evensidemargin}{-10.4mm}
+\setlength{\textwidth}{18cm}
+\setlength{\textheight}{26cm}
+
+\usepackage[top=15truemm,bottom=25truemm,left=20truemm,right=20truemm]{geometry}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage[dvipdfmx]{color}
+\usepackage{listings}
+\usepackage{listings,jvlisting}
+\usepackage{geometry}
+\usepackage{framed}
+\usepackage{color}
+\usepackage[dvipdfmx]{hyperref}
+\usepackage{ascmac}
+\usepackage{enumerate}
+\usepackage{tabularx}
+\usepackage{cancel}
+\usepackage{scalefnt}
+
+\renewcommand{\figurename}{fig.}
+\renewcommand{\tablename}{table }
+\newcommand{\redunderline}[1]{\textcolor{BrickRed}{\underline{\textcolor{black}{#1}}}} 
+
+\hypersetup{
+	colorlinks=false, % リンクに色をつけない設定
+	bookmarks=true, % 以下ブックマークに関する設定
+	bookmarksnumbered=true,
+	pdfborder={0 0 0},
+	bookmarkstype=toc
+}
+
+\lstset{
+basicstyle={\ttfamily},
+identifierstyle={\small},
+commentstyle={\smallitshape},
+keywordstyle={\small\bfseries},
+ndkeywordstyle={\small},
+stringstyle={\small\ttfamily},
+frame={tb},
+breaklines=true,
+columns=[l]{fullflexible},
+xrightmargin=0zw,
+xleftmargin=3zw,
+numberstyle={\scriptsize},
+stepnumber=1,
+numbersep=1zw,
+lineskip=-0.5ex
+}
+
+
+
+\author{}
+\title{C言語}
+\date{}
+
+\begin{document}
+\maketitle
+\section{用語}
+\subsubsection*{バッファ}
+バッファとは、データが 1 つの場所から別の場所に転送する際に、データを一時的に保持するメモリストレージ領域のことをいいます。\\
+プログラムがデータをバッファに書き込もうとした際に、データの量がメモリバッファのストレージ容量を超えてしまうと、隣接するメモリ位置を上書きしてしまいます。\\
+この結果発生する事象をバッファオーバーフロー（バッファオーバーラン）と呼びます。\\
+\section{ファイルの読み書き}
+
+\begin{itembox}[l]{ファイルへの読み書き}
+    \begin{enumerate}[(1)]
+        \item 1文字の読み込み\\
+              int fgetc(FILE *fp);
+        \item 1文字の書き出し\\
+              int fputc(int c, FILE *fp);
+        \item 文字列の書き出し\\
+        \item int fprintf(FILE *steram, char *format, ...);
+    \end{enumerate}
+\end{itembox}
+\end{document}
