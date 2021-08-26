@@ -38,8 +38,8 @@ int main(void)
     {
         value[i][1] = ch1;
         value[i][2] = ch2;
+        printf("[%d] %lf %lf\n", i, value[i][1], value[i][2]);
         i = i + 1;
-        printf("[%d] %lf %lf\n", i, ch1, ch2);
     }
 
     fclose(fp);
