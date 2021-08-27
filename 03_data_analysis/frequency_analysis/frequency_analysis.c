@@ -42,6 +42,8 @@ int main(void)
         i = i + 1;
     }
 
+    // 計算
+
     fclose(fp);
 
     return (0);
