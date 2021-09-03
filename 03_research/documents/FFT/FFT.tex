@@ -1,0 +1,346 @@
+\documentclass[a4paper]{jsarticle}
+\setlength{\topmargin}{-20.4cm}
+\setlength{\oddsidemargin}{-10.4mm}
+\setlength{\evensidemargin}{-10.4mm}
+\setlength{\textwidth}{18cm}
+\setlength{\textheight}{26cm}
+
+\usepackage[top=15truemm,bottom=25truemm,left=20truemm,right=20truemm]{geometry}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage[dvipdfmx]{color}
+\usepackage{listings}
+\usepackage{listings,jvlisting}
+\usepackage{geometry}
+\usepackage{framed}
+\usepackage{color}
+\usepackage[dvipdfmx]{hyperref}
+\usepackage{ascmac}
+\usepackage{enumerate}
+\usepackage{tabularx}
+\usepackage{cancel}
+\usepackage{scalefnt}
+
+\renewcommand{\figurename}{fig.}
+\renewcommand{\tablename}{table }
+\newcommand{\redunderline}[1]{\textcolor{BrickRed}{\underline{\textcolor{black}{#1}}}} 
+
+\hypersetup{
+	colorlinks=false, % リンクに色をつけない設定
+	bookmarks=true, % 以下ブックマークに関する設定
+	bookmarksnumbered=true,
+	pdfborder={0 0 0},
+	bookmarkstype=toc
+}
+
+\lstset{
+basicstyle={\ttfamily},
+identifierstyle={\small},
+commentstyle={\smallitshape},
+keywordstyle={\small\bfseries},
+ndkeywordstyle={\small},
+stringstyle={\small\ttfamily},
+frame={tb},
+breaklines=true,
+columns=[l]{fullflexible},
+xrightmargin=0zw,
+xleftmargin=3zw,
+numberstyle={\scriptsize},
+stepnumber=1,
+numbersep=1zw,
+lineskip=-0.5ex
+}
+
+
+
+\author{}
+\title{高速フーリエ変換}
+\date{}
+
+\begin{document}
+\maketitle
+\section{フーリエ解析}
+\begin{itembox}[l]{point}
+    \begin{center}
+        複雑な関数・現象を\textgt{三角関数}に分解して考える
+    \end{center}
+\end{itembox}
+\subsection{フーリエ級数展開}
+関数$f\left(x\right)$の性質を知るために、より\textgt{基本的な関数系}
+\begin{eqnarray*}
+    \left\{\varphi_0\left(x\right),\varphi_1\left(x\right),\varphi_2\left(x\right),\cdots\right\}
+\end{eqnarray*}
+で級数展開を考える.
+\begin{eqnarray*}
+    f\left(x\right)=\sum^\infty_{n=0}C_n\varphi_n\left(x\right)
+\end{eqnarray*}
+\subsubsection*{$f\left(x\right)$が無限回微分可能 (\textgt{マクローリン展開})}
+$\rightarrow\left\{1,x,x^2,x^3,\cdots\right\}$で級数展開
+\begin{eqnarray*}
+    f\left(x\right) = \sum^\infty_{n=0}\frac{f^{\left(n\right)}\left(0\right)}{n!}\;x^n
+\end{eqnarray*}
+\subsubsection*{$f\left(x\right)$が周期関数 (\textgt{フーリエ級数展開})}
+$\rightarrow\left\{1,\cos x,\sin x,\cos 2x, \sin 2x,\cdots\right\}$ (三角関数系) で級数展開
+\begin{eqnarray*}
+    f\left(x\right) = a + \sum^\infty_{n=1}\left(a_n \cos nx+b_n \sin nx\right)\;\cdots\; \left(※\right)
+\end{eqnarray*}
+\subsubsection{三角関数の利点}
+$\rightarrow$直交性 (自身以外との内積が0)
+\begin{itembox}[l]{関数の内積}
+    \begin{eqnarray*}
+        f\left(x\right),g\left(x\right)&\;：\;&周期関数 \left(2\pi\right)\\
+        \int^\pi_{\pi}f\left(x\right)&&g\left(x\right) dx\\
+    \end{eqnarray*}
+\end{itembox}
+\begin{eqnarray*}
+    \int^\pi_{-\pi}\sin mx \;\sin\left(nx\right)dx &=&
+    \begin{cases}
+        0 \;\left(m\neq n\right) \\
+        \pi \left(m=n\right)
+    \end{cases}\\
+    \int^\pi_{-\pi}\cos mx \;\cos\left(nx\right)dx &=&
+    \begin{cases}
+        0 \;\left(m\neq n\right) \\
+        \pi \left(m=n\right)
+    \end{cases}\\
+    \int^\pi_{-\pi}\cos mx \;\sin\left(nx\right)dx &=&0\\
+\end{eqnarray*}
+\subsubsection{定数を求める}
+(※)の両辺に$\cos mx \;$をかけて,$\pi \sim -\pi$で積分.\\
+\begin{eqnarray*}
+    \int^\pi_{-\pi}f\left(x\right)\cos mx \; dx
+    &=& \int^\pi_{-\pi}a\cos  mx \; dx + \sum^\infty_{n=1}\int^\pi_{-\pi}\left(a_n \cos\left(nx\right) \cos mx \; + b_n \sin \left(nx\right) \cos mx \;\right) dx\\
+    &=&a_m \pi
+\end{eqnarray*}
+(※)の両辺に$\sin mx \;$をかけて,$\pi \sim -\pi$で積分.\\
+\begin{eqnarray*}
+    \int^\pi_{-\pi}f\left(x\right)\sin mx \; dx
+    &=& \int^\pi_{-\pi}a\sin mx \; dx + \sum^\infty_{n=1}\int^\pi_{-\pi}\left(a_n \cos\left(nx\right) \sin mx + b_n \sin \left(nx\right) \sin mx \right) dx\\
+    &=&b_m \pi
+\end{eqnarray*}
+(※)の両辺を$\pi \sim -\pi$で積分.\\
+\begin{eqnarray*}
+    \int^\pi_{-\pi}f\left(x\right) dx= 2\pi a
+\end{eqnarray*}
+上記の式より
+\begin{eqnarray*}
+    a_m &=& \frac{1}{\pi} \int^\pi_{-\pi}f\left(x\right)\cos mx \; dx\\
+    b_m &=& \frac{1}{\pi} \int^\pi_{-\pi}f\left(x\right)\sin mx \; dx\\
+    a &=& \frac{1}{2\pi} \int^\pi_{-\pi}f\left(x\right)dx\\
+\end{eqnarray*}
+$a_m$の式に$m=0$を代入すると
+\begin{eqnarray*}
+    a_0 = \frac{1}{\pi} \int^\pi_{-\pi}f\left(x\right) dx = 2a\\
+\end{eqnarray*}
+$\rightarrow$ 以後、$a$を$\dfrac{a_0}{2}$として,(※)は以下のように書き表せる.
+\begin{itembox}[l]{$f\left(x\right)$のフーリエ級数}
+    \begin{eqnarray*}
+        \frac{a_0}{2} + \sum^\infty_{n=1}\left(a_n \cos nx+b_n \sin nx\right)\\ \\
+        \begin{cases}
+            a_n = \displaystyle \frac{1}{\pi} \int^\pi_{-\pi}f\left(x\right)\cos nx \; dx \\
+            b_n = \displaystyle \frac{1}{\pi} \int^\pi_{-\pi}f\left(x\right)\sin nx \; dx \\
+        \end{cases}\\
+    \end{eqnarray*}
+    \begin{center}
+        これを、\textgt{$f\left(x\right)$のフーリエ級数}という.\\
+        $f\left(x\right)$に収束するかどうか($f\left(x\right)$と一致するか)は別問題.
+    \end{center}
+\end{itembox}
+\subsubsection{フーリエ級数の収束性}
+周期$2\pi$の周期関数$f\left(x\right)$が\textgt{区分的に滑らか}であるとき、$f\left(x\right)$のフーリエ級数は以下のように収束する。
+\begin{itembox}[l]{フーリエ級数の収束}
+    \begin{eqnarray*}
+        \frac{a_0}{2}+\sum^{\infty}_{n=1}\left(a_n\cos\left(nx\right)+b_n\sin\left(nx\right)\right) =
+        \begin{cases}
+            f\left(x\right) \; (連続な点)                                              \\
+            \\
+            \displaystyle\frac{f\left(x-0\right)+f\left(x+0\right)}{2} \; (不連続な点) \\
+        \end{cases}\\
+    \end{eqnarray*}
+\end{itembox}
+\subsubsection*{区分的に滑らか}
+$a \leq x \leq b$上の関数$f\left(x\right)$が次の条件を満たすとき,$a \leq x \leq b$で\textgt{区分的に連続}であるという。
+\begin{enumerate}[(i)]
+    \item $a \leq x \leq b$で有限個の点を除いて連続
+    \item 不連続点$c$において$f\left(c-0\right),f\left(c+0\right)$が存在する。
+\end{enumerate}
+さらに、導関数$f'\left(x\right)$が\textgt{区分的に連続}であるとき、関数$f\left(x\right)$を\textgt{区分的に滑らか}という。
+
+\subsection{複素フーリエ級数}
+\begin{itembox}[l]{オイラーの公式}
+    \begin{eqnarray*}
+        e^{i\theta} = \cos \theta + i \sin \theta\\
+    \end{eqnarray*}
+\end{itembox}
+\begin{eqnarray*}
+    \begin{cases}
+        e^{in\theta} = \cos n\theta + i \sin n\theta  \\
+        e^{-in\theta} = \cos n\theta - i \sin n\theta \\
+    \end{cases}
+    \; より \;
+    \begin{cases}
+        \displaystyle\cos nx = \frac{ e^{in\theta} +  e^{-in\theta}}{2}  \\
+        \displaystyle\cos nx = \frac{ e^{in\theta} -  e^{-in\theta}}{2i} \\
+    \end{cases}
+\end{eqnarray*}
+これをフーリエ級数に代入して整理すると、以下のように表すことができる.
+\begin{eqnarray*}
+    \frac{a_0}{2} + \sum^\infty_{n=1}\left(a_n \cos nx+b_n \sin nx\right)
+    &=&\frac{a_0}{2} + \sum^\infty_{n=1}\left(\frac{a_n-ib_n}{2}e^{inx}+\frac{a_n+ib_n}{2}e^{-inx}\right)\\
+    &=&\sum^\infty_{n=-\infty} C_n e^{inx}\\
+    \begin{cases}
+        \displaystyle C_0 = \frac{a_0}{2}         \\
+        \displaystyle C_n = \frac{a_n-ib_n}{2}    \\
+        \displaystyle C_{-n} = \frac{a_n+ib_n}{2} \\
+    \end{cases}
+    &&とする
+\end{eqnarray*}
+\begin{itembox}[l]{複素フーリエ級数}
+    \begin{eqnarray*}
+        複素フーリエ級数 &:& \sum^\infty_{n=-\infty} C_n e^{inx} \\
+        複素フーリエ係数 &:& C_n = \frac{1}{2\pi} \int^{\pi}_{-\pi} f\left(x\right) e^{-inx} \;dx\\
+    \end{eqnarray*}
+\end{itembox}
+\subsubsection*{$C_n$の性質}
+$f\left(x\right)$が実関数であるとき $C_{-n}=C_n*$が成立する。($C_n^*$は$C_n$の複素共役)\\
+$\rightarrow$ $n$が非負なものを計算すれば求められる。
+\begin{eqnarray*}
+    C_{-n} &=& \frac{1}{2\pi} \int^{\pi}_{-\pi} f\left(x\right) e^{inx} \;dx\\
+    C_{n}^* &=& \frac{1}{2\pi} \int^{\pi}_{-\pi} f\left(x\right) \left(e^{inx}\right)^* \;dx\\
+    &=& \frac{1}{2\pi} \int^{\pi}_{-\pi} f\left(x\right) e^{inx} \;dx\\
+    &=& C_{-n}
+\end{eqnarray*}
+
+\subsection{一般周期のフーリエ級数}
+\begin{itembox}[l]{point}
+    \begin{center}
+        周期$2\pi$の関数へと変換する
+    \end{center}
+\end{itembox}
+周期が$2L$の関数を考える.
+\begin{eqnarray*}
+    f\left(x\right) \;&:&\; 周期 \; 2L\\
+    &\downarrow& \; x = \frac{L}{\pi} t \; として変数変換\\
+    f\left(\frac{L}{\pi} t\right) \;&:&\; 周期 \; 2\pi\\
+    f\left(\frac{L}{\pi} t\right) &=& h\left(t\right) \; とする
+\end{eqnarray*}
+\begin{center}
+    グラフは横軸方向に $\dfrac{\pi}{L}$ 倍される
+\end{center}
+
+$h\left(t\right)$をフーリエ級数展開すると、
+\begin{eqnarray*}
+    &&h\left(t\right) \sim \frac{a_0}{2}+\sum^{\infty}_{n=1}\left(a_n \cos nt + b_n \sin nt\right)\\
+    &&\begin{cases}
+        a_n=\displaystyle\frac{1}{\pi}\int^{\pi}_{-\pi}h\left(t\right)\cos nt dt\\
+        b_n=\displaystyle\frac{1}{\pi}\int^{\pi}_{-\pi}h\left(t\right)\sin nt dt
+    \end{cases}
+\end{eqnarray*}
+$t$を$x$に戻すと
+\begin{eqnarray*}
+    &&f\left(x\right) \sim \frac{a_0}{2}+\sum^{\infty}_{n=1}\left(a_n \cos \frac{n\pi}{L}x + b_n \sin \frac{n\pi}{L}x\right)\\
+    &&\begin{cases}
+        a_n=\displaystyle\frac{1}{L}\int^{L}_{-L}f\left(x\right)\cos \frac{n\pi}{L}x dx\\
+        b_n=\displaystyle\frac{1}{L}\int^{L}_{-L}f\left(x\right)\sin \frac{n\pi}{L}x dx
+    \end{cases}
+\end{eqnarray*}
+
+複素数の場合
+\begin{eqnarray*}
+    f\left(x\right) &\sim& \sum^{\infty}_{n=-\infty} c_n \exp{\left(i \frac{n\pi}{L}x\right)}\\
+    c_n &=& \displaystyle\frac{1}{2L}\int^{L}_{-L}f\left(x\right) \exp{\left(-i \frac{n\pi}{L}x\right)} dx
+\end{eqnarray*}
+
+\subsection{フーリエ変換}
+
+\subsubsection{フーリエの積分公式}
+\begin{itembox}[l]{point}
+    \begin{center}
+        非周期関数 $\rightarrow$ 周期 $\infty$ として考える.
+    \end{center}
+\end{itembox}
+
+はじめに、周期$2L$の関数$f\left(x\right)$のフーリエ級数展開を考える。
+\begin{eqnarray*}
+    \begin{cases}
+        \displaystyle f\left(x\right) \sim \sum^{\infty}_{n=-\infty} c_n \exp{\left(i \frac{n\pi}{L}x\right)}\\
+        \displaystyle c_n = \displaystyle\frac{1}{2L}\int^{L}_{-L}f\left(t\right) \exp{\left(-i \frac{n\pi}{L}x\right)} dx
+    \end{cases}
+\end{eqnarray*}
+ここで、$c_n$をそのまま$f\left(x\right)$に代入すると、
+\begin{eqnarray*}
+  f\left(x\right) &\sim& \sum^{\infty}_{n=-\infty} \left[ \frac{1}{2L}\int^{L}_{-L}f\left(t\right) \exp{\left(-i \frac{n\pi}{L}t\right)} dt\right] \exp{\left(i \frac{n\pi}{L}x\right)}\\
+\omega_n &=& \frac{n\pi}{L}\\
+\Delta \omega &=& \omega_{n+1} -\omega_n = \frac{\pi}{L}
+\end{eqnarray*}
+書き換えると,
+\begin{eqnarray*}
+    f\left(x\right) &\sim& \sum^{\infty}_{n=-\infty} \left[ \frac{1}{2\pi}\int^{L}_{-L}f\left(t\right) \exp{\left(-i \omega_n  t\right)} dt\right] \exp{\left(i \omega_n x \right)} \Delta \omega
+\end{eqnarray*}
+また、$G\left(\omega_n\right)$ を,以下のようにおく。
+\begin{eqnarray*}
+    G\left(\omega_n\right) &=&  \frac{1}{2\pi}\int^{L}_{-L}f\left(t\right) \exp{\left(-i \omega_n t \right)} dt\\
+\end{eqnarray*}
+ここで、$L \rightarrow \infty$で$\Delta \omega \rightarrow 0$より、
+\begin{eqnarray*}
+    \lim_{\Delta \omega \rightarrow 0} f\left(x\right) 
+    &=& \lim_{\Delta \omega \rightarrow 0} \sum_{n=-\infty}^{\infty} G\left(\omega_n\right) \Delta \omega\\
+    &=& \int^{\infty}_{-\infty} G\left(\omega\right) d\omega\\
+\end{eqnarray*}
+\begin{itembox}[l]{フーリエの積分公式}
+    \begin{eqnarray*}
+        f\left(x\right) \sim \int^{\infty}_{-\infty}\left[ \frac{1}{2\pi} \int^{\infty}_{-\infty}f\left(t\right)\exp\left(-i \omega t\right)\right] \exp\left(i \omega x\right) d\omega\\
+    \end{eqnarray*}
+    \begin{center}
+        ※成立する条件 : $f\left(x\right)$が$\left(-\infty,\infty\right)$で区分的に滑らかで,$\left(-\infty,\infty\right)$において\textgt{絶対可積分}\\ 
+    \end{center}
+\end{itembox}
+\begin{itembox}[l]{絶対可積分}
+    \begin{eqnarray*}
+        \int^{\infty}_{-\infty}\left| f\left(x\right)\right| dx < \infty\\
+    \end{eqnarray*}
+\end{itembox}
+\subsubsection{フーリエ変換}
+\begin{itembox}[l]{フーリエ変換}
+    \begin{eqnarray*}
+        f\left(x\right) &\sim& \frac{1}{2\pi}\int^{\infty}_{-\infty} F\left(\omega\right) \exp \left(i\omega x\right) d\omega\\
+    \end{eqnarray*}
+\end{itembox}
+\begin{eqnarray*}
+    f\left(x\right) &\sim& \frac{1}{2\pi}\int^{\infty}_{-\infty}\left[\int^{\infty}_{-\infty}f\left(t\right)\exp \left(-i \omega t\right)dt\right] \exp \left(i\omega x\right) d\omega\\
+    \\
+    &&ここで\\
+    \\
+    F\left(\omega\right) &=& \int^{\infty}_{-\infty}f\left(t\right)\exp \left(-i \omega t\right)dt \\
+    \\
+    &&として,元の式に代入すると\\
+    \\
+    f\left(x\right) &\sim& \frac{1}{2\pi}\int^{\infty}_{-\infty} F\left(\omega\right) \exp \left(i\omega x\right) d\omega\\
+\end{eqnarray*}
+式の意味
+\section{FFT}
+\subsection{FFTとは}
+FFTとは、\textgt{高速フーリエ変換 (fast Fourier transform)}の略称であり、
+離散フーリエ変換を計算機上で高速に計算するアルゴリズムである。
+
+\section{用語}
+\subsubsection*{バッファ}
+バッファとは、データが 1 つの場所から別の場所に転送する際に、データを一時的に保持するメモリストレージ領域のことをいいます。\\
+プログラムがデータをバッファに書き込もうとした際に、データの量がメモリバッファのストレージ容量を超えてしまうと、隣接するメモリ位置を上書きしてしまいます。\\
+この結果発生する事象をバッファオーバーフロー（バッファオーバーラン）と呼びます。\\
+\section{ファイルの読み書き}
+
+\begin{itembox}[l]{ファイルへの読み書き}
+    \begin{enumerate}[(1)]
+        \item 1文字の読み込み\\
+              int fgetc(FILE *fp);
+        \item 1文字の書き出し\\
+              int fputc(int c, FILE *fp);
+        \item 文字列の書き出し\\
+        \item int fprintf(FILE *steram, char *format, ...);
+    \end{enumerate}
+\end{itembox}
+\end{document}
