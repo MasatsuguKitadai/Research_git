@@ -60,7 +60,7 @@ lineskip=-0.5ex
 
 \author{来代 勝胤}
 \title{令和3年度 8月 報告書}
-\date{2021/5/12}
+\date{2021/9/8}
 
 \begin{document}
 \columnseprule=0.1mm
@@ -69,18 +69,85 @@ lineskip=-0.5ex
 \section*{報告内容}
 \begin{enumerate}[1.]
     \item 進捗状況
+    \item 研究背景と目的
     \item 作用力測定 
     \item 今後の研究方針
     \item 今月の予定
 \end{enumerate}
 \section{進捗状況}
+大学院入試があったため、2ヶ月ほど卒業研究に着手できていなかったが、
+村田先生、M1末次さんが代わりに実験を進めてくれており、
+9つのタイヤモデルを用いた実験データを2回分を取得できた。\par
+今後は、この取得したデータをもとに解析を進め、
+それぞれのモデル周りの流れ場の違いを明らかにすることを目的として研究を進める。
+\section{研究背景と目的}
+エネルギー資源の大量消費に関する問題の中で,「自動車のランニングコスト」が大きく取り上げられている.
+ランニングコストの削減方法について「空気抵抗の削減」は,すべての自動車に対して有効な手段であるといえ,
+特にタイヤに働く空気抵抗は25 ~ 40 \% を占めるとされる. \par
+関連する研究内容として,抗力および流れ場に関するものがあり,前者は抗力発生のメカニズムの理解,
+後者は周りの流れ場特性の説明が挙げられる.
+近年の研究では,数値計算が主流となっているが,それを裏付ける実測が不可欠であると考えられる.\par 
+したがって,自動車のランニングコスト削減のため,タイヤに作用する空気抵抗に着目し,
+タイヤ形状およびその周辺形状が揚抗力の発生にどのような影響を与えるか,その差異が生じるメカニズムを理解すること,
+また,数値計算結果の信頼性を保証するため,実験測定を行いその指標として活用される結果を得ることを目的としている. 
+\newpage
 \section{作用力測定}
 \subsection{測定実験}
+作用力の実験は以下のようなモデルを用いて行った。
+\begin{table}[h]
+    \caption{Models}
+    \footnotesize
+        \begin{center}
+            \begin{tabular}{|p{20mm}|p{45mm}|}
+        \hline
+        \multicolumn{1}{|c|}{\textgt{名称}}      & \multicolumn{1}{|c|}{\textgt{特徴}}            \\ \hline
+        \multicolumn{1}{|c|}{Normal}             & \begin{tabular}{l} {肩部 R1, 幅 18.6 [mm] }\end{tabular} \\ \hline
+        \multicolumn{1}{|c|}{Type a}             & \begin{tabular}{l} {肩部 R1, 幅 17.9 [mm] }\end{tabular} \\ \hline
+        \multicolumn{1}{|c|}{Type b}             & \begin{tabular}{l} {肩部 R1, 幅 19.3 [mm] }\end{tabular} \\ \hline
+        \multicolumn{1}{|c|}{Type c}             & \begin{tabular}{l} {肩部 C1, 幅 18.6 [mm] }\end{tabular} \\ \hline
+        \multicolumn{1}{|c|}{Groove A}             & \begin{tabular}{l} 回転方向の溝 ※\end{tabular}     \\ \hline
+        \multicolumn{1}{|c|}{Groove B}             & \begin{tabular}{l} 回転方向及び垂直方向の溝 ※\end{tabular}     \\ \hline
+        \multicolumn{1}{|c|}{Groove C}             & \begin{tabular}{l} 回転方向及びそれに45°傾いた溝 ※\end{tabular}     \\ \hline
+        \multicolumn{1}{|c|}{Groove D}             & \begin{tabular}{l} 回転方向及びそれに-45°傾いた溝 ※\end{tabular}     \\ \hline
+    \end{tabular}
+\end{center}
+    \begin{center}
+        ※ 肩部,幅は Normal と共通
+    \end{center}
+\end{table}
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=80mm]{images/models_1.jpg}
+        \caption{models}
+        ※ Type a, Type b,Type b は省略
+    \end{center}
+\end{figure}
 \subsection{測定結果}
+データの処理ができていないため、
+例として Normal (実験2回目) のグラフを示す.
+\begin{figure}[htbp]
+    \begin{center}
+        \includegraphics[width=80mm]{images/graph.jpg}
+        \caption{測定結果 例}
+    \end{center}
+\end{figure}
 \subsection{考察}
 \section{今後の研究方針}
+\subsection{ノイズの除去}
+それぞれのモデルにおける作用力の違いを明らかにするため、
+まずは測定データのノイズを除去する必要がある。
+したがって、FFTの理解及びプログラムへ実装し、不要な周波数成分の除去を行う.\\
+\subsection{ドリフトの考慮}
+測定開始から時間経過とともに基準点が変動していくドリフトを考慮する必要がある。
+そのため、その方法を検討・試行して、実用的なデータを得られるようにする。\\
+\subsection{校正実験データの適用}
+6月に行ったひずみゲージの校正実験結果をもとに
+出力電圧を作用力へと換算し、モデルごとの差異を確かめる。\\
 \section{今月の予定}
 \begin{enumerate}[1.]
     \item FFTの実装
+    \item ドリフトを考慮した解析方法の検討
 \end{enumerate}
+\section{参考文献}
 \end{document}

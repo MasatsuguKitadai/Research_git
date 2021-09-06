@@ -1,9 +1,9 @@
-This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.sjis) (TeX Live 2021/W32TeX) (preloaded format=platex 2021.6.8)  6 SEP 2021 18:13
+This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.sjis) (TeX Live 2021/W32TeX) (preloaded format=platex 2021.6.8)  3 SEP 2021 17:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**c:/Users/Kitadai/git_windows/lab/01_monthly_reports/2108/2108
-(c:/Users/Kitadai/git_windows/lab/01_monthly_reports/2108/2108.tex
+**c:/Users/Kitadai/git_windows/lab/01_monthly_reports/template/2100
+(c:/Users/Kitadai/git_windows/lab/01_monthly_reports/template/2100.tex
 pLaTeX2e <2021-06-01>+1 (based on LaTeX2e <2021-06-01>)
 L3 programming layer <2021-06-01> (c:/texlive/2021/texmf-dist/tex/platex/jsclasses/jsarticle.cls
 Document Class: jsarticle 2020/10/09 jsclasses (okumura, texjporg)
@@ -357,8 +357,8 @@ File: l3backend-dvips.def 2021-05-07 L3 backend support: dvips
 \g__pdf_backend_annotation_int=\count299
 \g__pdf_backend_link_int=\count300
 \g__pdf_backend_link_sf_int=\count301
-) (./2108.aux)
-\openout1 = `2108.aux'.
+) (./2100.aux)
+\openout1 = `2100.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
 LaTeX Font Info:    ... okay on input line 65.
@@ -431,79 +431,37 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 65.
 LaTeX Info: Redefining \pageref on input line 65.
 LaTeX Info: Redefining \nameref on input line 65.
- (./2108.out) (./2108.out)
+ (./2100.out) (./2100.out)
 \@outlinefile=\write3
-\openout3 = `2108.out'.
+\openout3 = `2100.out'.
 
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 16.60605pt on input line 69.
+(Font)              scaled to size 16.60605pt on input line 68.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 16.60605pt on input line 69.
+(Font)              scaled to size 16.60605pt on input line 68.
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 69.
+(Font)              scaled to size 11.53198pt on input line 68.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 69.
+(Font)              scaled to size 11.53198pt on input line 68.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 69.
+(Font)              scaled to size 11.53198pt on input line 68.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 69.
-LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 95.
-LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 95.
-LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 98.
-LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 98.
-LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 5.76599pt on input line 101.
-LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 4.805pt on input line 101.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 101.
- (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 101.
- (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 7.68799pt on input line 103.
-LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 7.68799pt on input line 103.
-
-Overfull \hbox (8.38374pt too wide) in paragraph at lines 110--110
-[]|[]| 
- []
-
-
-Overfull \hbox (9.09209pt too wide) in paragraph at lines 111--111
-[]|[]| 
- []
-
-File: images/models_1.jpg Graphic file (type bmp)
-<images/models_1.jpg>
-File: images/graph.jpg Graphic file (type bmp)
-<images/graph.jpg>
-
-Underfull \vbox (badness 6842) has occurred while \output is active []
-
+(Font)              scaled to size 11.53198pt on input line 68.
  [1
 
 
-] [2
 
-] (./2108.aux)
-Package rerunfilecheck Info: File `2108.out' has not changed.
-(rerunfilecheck)             Checksum: 79B3E8665666E0909AA6D655B8A69E0D;702.
+] (./2100.aux)
+Package rerunfilecheck Info: File `2100.out' has not changed.
+(rerunfilecheck)             Checksum: 30EEB19A06BB689FC757218DAD36E8E5;97.
  ) 
 Here is how much of TeX's memory you used:
- 11134 strings out of 478987
- 160119 string characters out of 5865292
- 505959 words of memory out of 5000000
- 29143 multiletter control sequences out of 15000+600000
- 415082 words of font info for 83 fonts, out of 8000000 for 9000
+ 11065 strings out of 478987
+ 159135 string characters out of 5865292
+ 486346 words of memory out of 5000000
+ 29101 multiletter control sequences out of 15000+600000
+ 410005 words of font info for 59 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 60i,17n,66p,274b,457s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,5n,66p,278b,340s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on 2108.dvi (2 pages, 10736 bytes).
+Output written on 2100.dvi (1 page, 2128 bytes).
