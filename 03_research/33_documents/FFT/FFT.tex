@@ -235,7 +235,7 @@ $h\left(t\right)$をフーリエ級数展開すると、
 \begin{eqnarray*}
     &&h\left(t\right) \sim \frac{a_0}{2}+\sum^{\infty}_{n=1}\left(a_n \cos nt + b_n \sin nt\right)\\
     &&\begin{cases}
-        a_n=\displaystyle\frac{1}{\pi}\int^{\pi}_{-\pi}h\left(t\right)\cos nt dt\\
+        a_n=\displaystyle\frac{1}{\pi}\int^{\pi}_{-\pi}h\left(t\right)\cos nt dt \\
         b_n=\displaystyle\frac{1}{\pi}\int^{\pi}_{-\pi}h\left(t\right)\sin nt dt
     \end{cases}
 \end{eqnarray*}
@@ -243,7 +243,7 @@ $t$を$x$に戻すと
 \begin{eqnarray*}
     &&f\left(x\right) \sim \frac{a_0}{2}+\sum^{\infty}_{n=1}\left(a_n \cos \frac{n\pi}{L}x + b_n \sin \frac{n\pi}{L}x\right)\\
     &&\begin{cases}
-        a_n=\displaystyle\frac{1}{L}\int^{L}_{-L}f\left(x\right)\cos \frac{n\pi}{L}x dx\\
+        a_n=\displaystyle\frac{1}{L}\int^{L}_{-L}f\left(x\right)\cos \frac{n\pi}{L}x dx \\
         b_n=\displaystyle\frac{1}{L}\int^{L}_{-L}f\left(x\right)\sin \frac{n\pi}{L}x dx
     \end{cases}
 \end{eqnarray*}
@@ -266,15 +266,15 @@ $t$を$x$に戻すと
 はじめに、周期$2L$の関数$f\left(x\right)$のフーリエ級数展開を考える。
 \begin{eqnarray*}
     \begin{cases}
-        \displaystyle f\left(x\right) \sim \sum^{\infty}_{n=-\infty} c_n \exp{\left(i \frac{n\pi}{L}x\right)}\\
+        \displaystyle f\left(x\right) \sim \sum^{\infty}_{n=-\infty} c_n \exp{\left(i \frac{n\pi}{L}x\right)} \\
         \displaystyle c_n = \displaystyle\frac{1}{2L}\int^{L}_{-L}f\left(t\right) \exp{\left(-i \frac{n\pi}{L}x\right)} dx
     \end{cases}
 \end{eqnarray*}
 ここで、$c_n$をそのまま$f\left(x\right)$に代入すると、
 \begin{eqnarray*}
-  f\left(x\right) &\sim& \sum^{\infty}_{n=-\infty} \left[ \frac{1}{2L}\int^{L}_{-L}f\left(t\right) \exp{\left(-i \frac{n\pi}{L}t\right)} dt\right] \exp{\left(i \frac{n\pi}{L}x\right)}\\
-\omega_n &=& \frac{n\pi}{L}\\
-\Delta \omega &=& \omega_{n+1} -\omega_n = \frac{\pi}{L}
+    f\left(x\right) &\sim& \sum^{\infty}_{n=-\infty} \left[ \frac{1}{2L}\int^{L}_{-L}f\left(t\right) \exp{\left(-i \frac{n\pi}{L}t\right)} dt\right] \exp{\left(i \frac{n\pi}{L}x\right)}\\
+    \omega_n &=& \frac{n\pi}{L}\\
+    \Delta \omega &=& \omega_{n+1} -\omega_n = \frac{\pi}{L}
 \end{eqnarray*}
 書き換えると,
 \begin{eqnarray*}
@@ -286,16 +286,16 @@ $t$を$x$に戻すと
 \end{eqnarray*}
 ここで、$L \rightarrow \infty$で$\Delta \omega \rightarrow 0$より、
 \begin{eqnarray*}
-    \lim_{\Delta \omega \rightarrow 0} f\left(x\right) 
+    \lim_{\Delta \omega \rightarrow 0} f\left(x\right)
     &=& \lim_{\Delta \omega \rightarrow 0} \sum_{n=-\infty}^{\infty} G\left(\omega_n\right) \Delta \omega\\
     &=& \int^{\infty}_{-\infty} G\left(\omega\right) d\omega\\
 \end{eqnarray*}
 \begin{itembox}[l]{フーリエの積分公式}
     \begin{eqnarray*}
-        f\left(x\right) \sim \int^{\infty}_{-\infty}\left[ \frac{1}{2\pi} \int^{\infty}_{-\infty}f\left(t\right)\exp\left(-i \omega t\right)\right] \exp\left(i \omega x\right) d\omega\\
+        f\left(x\right) \sim \int^{\infty}_{-\infty}\left[ \frac{1}{2\pi} \int^{\infty}_{-\infty}f\left(t\right)\exp\left(-i \omega t\right)\right] \exp\left(i \omega x\right) d\omega
     \end{eqnarray*}
     \begin{center}
-        ※成立する条件 : $f\left(x\right)$が$\left(-\infty,\infty\right)$で区分的に滑らかで,$\left(-\infty,\infty\right)$において\textgt{絶対可積分}\\ 
+        ※成立する条件 : $f\left(x\right)$が$\left(-\infty,\infty\right)$で区分的に滑らかで,$\left(-\infty,\infty\right)$において\textgt{絶対可積分}\\
     \end{center}
 \end{itembox}
 \begin{itembox}[l]{絶対可積分}
@@ -303,12 +303,8 @@ $t$を$x$に戻すと
         \int^{\infty}_{-\infty}\left| f\left(x\right)\right| dx < \infty\\
     \end{eqnarray*}
 \end{itembox}
+
 \subsubsection{フーリエ変換}
-\begin{itembox}[l]{フーリエ変換}
-    \begin{eqnarray*}
-        f\left(x\right) &\sim& \frac{1}{2\pi}\int^{\infty}_{-\infty} F\left(\omega\right) \exp \left(i\omega x\right) d\omega\\
-    \end{eqnarray*}
-\end{itembox}
 \begin{eqnarray*}
     f\left(x\right) &\sim& \frac{1}{2\pi}\int^{\infty}_{-\infty}\left[\int^{\infty}_{-\infty}f\left(t\right)\exp \left(-i \omega t\right)dt\right] \exp \left(i\omega x\right) d\omega\\
     \\
@@ -320,10 +316,47 @@ $t$を$x$に戻すと
     \\
     f\left(x\right) &\sim& \frac{1}{2\pi}\int^{\infty}_{-\infty} F\left(\omega\right) \exp \left(i\omega x\right) d\omega\\
 \end{eqnarray*}
-式の意味
-\section{FFT}
-\subsection{FFTとは}
-FFTとは、\textgt{高速フーリエ変換 (fast Fourier transform)}の略称であり、
+\begin{itembox}[l]{フーリエ変換}
+    \begin{eqnarray*}
+        F\left(\omega\right) &=& \int^\infty_{-\infty} f\left(t\right) \exp\left(-i\omega t\right)\\
+        &=& F\left[f\left(t\right)\right]
+    \end{eqnarray*}
+    \begin{center}
+        ※ 絶対加積分であれば$F\left(\omega\right)$ は存在
+    \end{center}
+\end{itembox}
+\subsection{フーリエの反転公式と逆フーリエ変換}
+\begin{itembox}[l]{フーリエの反転公式}
+    \begin{eqnarray*}
+        F\left(\omega\right)&=&F\left[f\left(t\right)\right]\;とすると、\\
+        \\
+        \frac{1}{2\pi}\int^{\infty}_{-\infty} F\left(\omega\right) \exp \left(i\omega x\right) d\omega &=&
+        \begin{cases}
+            f\left(x\right) \; \left(連続な点\right)                                  \\
+            \\
+            \dfrac{f\left(x-0\right)+f\left(x+0\right)}{2} \; \left(不連続な点\right) \\
+        \end{cases}\\
+    \end{eqnarray*}
+\end{itembox}
+\begin{itembox}[l]{フーリエ逆変換}
+    \begin{eqnarray*}
+        F\left(\omega\right)&=&F\left[f\left(t\right)\right]\;とすると、\\
+        \\
+        F^{-1}\left[F\left(\omega\right)\right] &:=&  \frac{1}{2\pi}\int^{\infty}_{-\infty} F\left(\omega\right) \exp \left(i\omega x\right) d\omega\\
+    \end{eqnarray*}
+\end{itembox}
+
+\subsection{まとめ}
+\begin{itembox}[l]{point}
+    \begin{eqnarray*}
+        ・フーリエ級数 &\rightarrow& 周期関数を波の合成で表す  \rightarrow ある程度の周波数の波で事足りる\\
+        ・フーリエ変換 &\rightarrow& 非周期関数を波の合成で表す \rightarrow 無数の連続的な周波数の波が必要\\
+    \end{eqnarray*}
+\end{itembox}
+
+\section{高速フーリエ変換(fast Fourier transform)}
+\subsection{高速フーリエ変換とは}
+\textgt{高速フーリエ変換 (fast Fourier transform)}とは、
 離散フーリエ変換を計算機上で高速に計算するアルゴリズムである。
 
 \section{用語}
