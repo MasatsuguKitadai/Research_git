@@ -354,10 +354,45 @@ $t$を$x$に戻すと
     \end{eqnarray*}
 \end{itembox}
 
+\section{離散フーリエ変換 (dicrete Fourier transform)}
+\subsection{離散フーリエ変換とは}
+信号処理等の離散化されたデジタル信号の周波数解析等によく利用される。
+また、偏微分方程式や畳み込み積分の数値計算を効率的に行うことに利用される。
+離散フーリエ変換は、計算機上で後述の高速フーリエ変換(FFT)を使って高速に計算することができる。
+\begin{itembox}[l]{離散フーリエ変換}
+    \begin{eqnarray*}
+        F\left(t\right) &=& \sum^{N-1}_{x-} f\left(x\right) \exp \left(-i \frac{2\pi tx}{N}\right)\\
+        N\; &:&\; 任意の自然数\\
+    \end{eqnarray*}
+\end{itembox}
+\begin{itembox}[l]{離散フーリエ変換 (2)}
+    \begin{eqnarray*}
+        F\left(\frac{n}{\Delta t N}\right) &=& \sum^{N-1}_{k=0} \Delta t\cdot f\left(k\cdot \Delta t\right) \exp \left(-i \frac{2\pi nk}{N}\right)\\
+        \\
+        N\; &:&\; 値の数\\
+        \Delta t \;&:&\; サンプリング周期\\
+        \frac{1}{\Delta t N} \;&:&\; 基本周波数\\
+        k \;&:&\; 時間領域において何番目の数値か\\
+        n \;&:&\; 基本周数の何倍か\\
+    \end{eqnarray*}
+\end{itembox}
+
+\subsection{逆離散フーリエ変換 (inverse discrete Fourier transform)}
+\begin{itembox}[l]{逆離散フーリエ変換}
+    \begin{eqnarray*}
+        f\left(x\right) = \frac{1}{N}\sum ^{N-1}_{t=0} F\left(t\right) \exp \left(i\frac{2\pi xt}{N}\right)\\
+    \end{eqnarray*}
+\end{itembox}
+
 \section{高速フーリエ変換(fast Fourier transform)}
 \subsection{高速フーリエ変換とは}
 \textgt{高速フーリエ変換 (fast Fourier transform)}とは、
 離散フーリエ変換を計算機上で高速に計算するアルゴリズムである。
+\begin{itembox}[l]{高速フーリエ変換}
+\begin{eqnarray*}
+    F\left(t\right) = \sum^{N-1}_{x=0}f\left(x\right) \exp\left(-i\frac{2 \pi tx}{N}\right)\\
+\end{eqnarray*}
+\end{itembox}
 
 \section{用語}
 \subsubsection*{バッファ}

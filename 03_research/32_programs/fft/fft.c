@@ -5,12 +5,12 @@ DATE    :
 ******************************************************************************/
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 #define ch 2
 const char *read_file = "../../data/210806/Normal.CSV";
 FILE *fp;
 /*****************************************************************************/
-int omit = 31;
-char buf[128];
+int N = 1000;
 /*********************************   MAIN   *********************************/
 int main(void)
 {
@@ -25,12 +25,12 @@ int main(void)
         exit(0);
     }
 
-    printf("omit success!\n");
-
     // データの格納
 
     double ch1, ch2;
-    double value[1000][ch];
+    double value[N][ch];
+
+    // ch1:drag, ch2:lift
 
     i = 0;
 
@@ -43,6 +43,32 @@ int main(void)
     }
 
     // 計算
+
+    int k, n, N;
+    const double pi = acos(-1); //円周率の設定
+    double re_d, re_l, im_d, im_l, dft_d, dft_l;
+
+    i = 0;
+
+    for(n=0; n<N; n++) {
+        re_d=0;
+        re_l=0;
+        im_d=0;
+        im_l=0;
+
+        for(k=0; k<N; k++) {
+            re_d += value[i][1]*cos(2*pi*k*n/N);
+            im_d += -value[i][1]*sin(2*pi*k*n/N);
+            re_l += value[i][2]*cos(2*pi*k*n/N);
+            im_l += -value[i][2]*sin(2*pi*k*n/N);
+        }
+
+        dft_d = re_d*re_d+im_d*im_d;
+        dft_l = re_l*re_l+im_l*im_l;
+
+        printf("%d, %f, %lf\n", n, dft_d, dft_l);
+        i = i + 1;
+    }
 
     fclose(fp);
 

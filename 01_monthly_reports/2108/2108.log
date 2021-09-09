@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.sjis) (TeX Live 2021/W32TeX) (preloaded format=platex 2021.6.8)  6 SEP 2021 18:13
+This is e-pTeX, Version 3.141592653-p3.9.0-210218-2.6 (utf8.sjis) (TeX Live 2021/W32TeX) (preloaded format=platex 2021.6.8)  8 SEP 2021 15:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -360,28 +360,28 @@ File: l3backend-dvips.def 2021-05-07 L3 backend support: dvips
 ) (./2108.aux)
 \openout1 = `2108.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: dvips
@@ -418,7 +418,7 @@ LaTeX Font Info:    ... okay on input line 65.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \c@lstlisting=\count302
-Package hyperref Info: Link coloring OFF on input line 65.
+Package hyperref Info: Link coloring OFF on input line 67.
 (c:/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (c:/texlive/2021/texmf-dist/tex/latex/refcount/refcount.sty
@@ -428,56 +428,56 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count303
 )
-LaTeX Info: Redefining \ref on input line 65.
-LaTeX Info: Redefining \pageref on input line 65.
-LaTeX Info: Redefining \nameref on input line 65.
+LaTeX Info: Redefining \ref on input line 67.
+LaTeX Info: Redefining \pageref on input line 67.
+LaTeX Info: Redefining \nameref on input line 67.
  (./2108.out) (./2108.out)
 \@outlinefile=\write3
 \openout3 = `2108.out'.
 
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 16.60605pt on input line 69.
+(Font)              scaled to size 16.60605pt on input line 71.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 16.60605pt on input line 69.
+(Font)              scaled to size 16.60605pt on input line 71.
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 69.
+(Font)              scaled to size 11.53198pt on input line 71.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 69.
+(Font)              scaled to size 11.53198pt on input line 71.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 69.
+(Font)              scaled to size 11.53198pt on input line 71.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 69.
+(Font)              scaled to size 11.53198pt on input line 71.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 95.
+(Font)              scaled to size 9.60999pt on input line 96.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 95.
+(Font)              scaled to size 9.60999pt on input line 96.
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 98.
+(Font)              scaled to size 8.64899pt on input line 100.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 98.
+(Font)              scaled to size 8.64899pt on input line 100.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 5.76599pt on input line 101.
+(Font)              scaled to size 5.76599pt on input line 103.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 4.805pt on input line 101.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 101.
+(Font)              scaled to size 4.805pt on input line 103.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 103.
  (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 101.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 103.
  (c:/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 7.68799pt on input line 103.
+(Font)              scaled to size 7.68799pt on input line 105.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 7.68799pt on input line 103.
+(Font)              scaled to size 7.68799pt on input line 105.
 
-Overfull \hbox (8.38374pt too wide) in paragraph at lines 110--110
+Overfull \hbox (8.38374pt too wide) in paragraph at lines 112--112
 []|[]| 
  []
 
 
-Overfull \hbox (9.09209pt too wide) in paragraph at lines 111--111
+Overfull \hbox (9.09209pt too wide) in paragraph at lines 113--113
 []|[]| 
  []
 
@@ -485,25 +485,25 @@ File: images/models_1.jpg Graphic file (type bmp)
 <images/models_1.jpg>
 File: images/graph.jpg Graphic file (type bmp)
 <images/graph.jpg>
-
-Underfull \vbox (badness 6842) has occurred while \output is active []
-
- [1
+[1
 
 
-] [2
+]
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 6.72699pt on input line 140.
+ [2
 
 ] (./2108.aux)
 Package rerunfilecheck Info: File `2108.out' has not changed.
-(rerunfilecheck)             Checksum: 79B3E8665666E0909AA6D655B8A69E0D;702.
+(rerunfilecheck)             Checksum: 3E84A8CA91DA73E03046A4CB92BD9557;442.
  ) 
 Here is how much of TeX's memory you used:
- 11134 strings out of 478987
- 160119 string characters out of 5865292
- 505959 words of memory out of 5000000
- 29143 multiletter control sequences out of 15000+600000
- 415082 words of font info for 83 fonts, out of 8000000 for 9000
+ 11138 strings out of 478987
+ 160168 string characters out of 5865292
+ 503708 words of memory out of 5000000
+ 29147 multiletter control sequences out of 15000+600000
+ 416228 words of font info for 89 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 60i,17n,66p,274b,457s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,16n,66p,274b,455s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on 2108.dvi (2 pages, 10736 bytes).
+Output written on 2108.dvi (2 pages, 10816 bytes).

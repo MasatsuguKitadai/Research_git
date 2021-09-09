@@ -58,6 +58,8 @@ lineskip=-0.5ex
 }
 \makeatother
 
+\setcounter{tocdepth}{3}
+
 \author{来代 勝胤}
 \title{令和3年度 8月 報告書}
 \date{2021/9/8}
@@ -70,14 +72,14 @@ lineskip=-0.5ex
 \begin{enumerate}[1.]
     \item 進捗状況
     \item 研究背景と目的
-    \item 作用力測定 
-    \item 今後の研究方針
+    \item 作用力測定
     \item 今月の予定
+    \item 参考文献
 \end{enumerate}
 \section{進捗状況}
 大学院入試があったため、2ヶ月ほど卒業研究に着手できていなかったが、
 村田先生、M1末次さんが代わりに実験を進めてくれており、
-9つのタイヤモデルを用いた実験データを2回分を取得できた。\par
+8つのタイヤモデルを用いた実験データを2回分を取得できた。\par
 今後は、この取得したデータをもとに解析を進め、
 それぞれのモデル周りの流れ場の違いを明らかにすることを目的として研究を進める。
 \section{研究背景と目的}
@@ -90,12 +92,12 @@ lineskip=-0.5ex
 したがって,自動車のランニングコスト削減のため,タイヤに作用する空気抵抗に着目し,
 タイヤ形状およびその周辺形状が揚抗力の発生にどのような影響を与えるか,その差異が生じるメカニズムを理解すること,
 また,数値計算結果の信頼性を保証するため,実験測定を行いその指標として活用される結果を得ることを目的としている. 
-\newpage
 \section{作用力測定}
 \subsection{測定実験}
-作用力の実験は以下のようなモデルを用いて行った。
+作用力の実験は右上図のようなモデルを用いて,それぞれ2回ずつ計測を行った。
+\newpage
 \begin{table}[h]
-    \caption{Models}
+    \caption{Feature of models}
     \footnotesize
         \begin{center}
             \begin{tabular}{|p{20mm}|p{45mm}|}
@@ -118,36 +120,49 @@ lineskip=-0.5ex
 \begin{figure}[htbp]
     \footnotesize
     \begin{center}
-        \includegraphics[width=80mm]{images/models_1.jpg}
-        \caption{models}
+        \includegraphics[width=70mm]{images/models_1.jpg}
+        \caption{Image of models}
         ※ Type a, Type b,Type b は省略
     \end{center}
 \end{figure}
 \subsection{測定結果}
 データの処理ができていないため、
-例として Normal (実験2回目) のグラフを示す.
+例として Normal の抗力の実験結果 (実験2回目) のグラフを示す.
 \begin{figure}[htbp]
     \begin{center}
         \includegraphics[width=80mm]{images/graph.jpg}
-        \caption{測定結果 例}
+        \caption{Result of Normal's drag}
     \end{center}
 \end{figure}
-\subsection{考察}
-\section{今後の研究方針}
-\subsection{ノイズの除去}
-それぞれのモデルにおける作用力の違いを明らかにするため、
-まずは測定データのノイズを除去する必要がある。
-したがって、FFTの理解及びプログラムへ実装し、不要な周波数成分の除去を行う.\\
-\subsection{ドリフトの考慮}
-測定開始から時間経過とともに基準点が変動していくドリフトを考慮する必要がある。
-そのため、その方法を検討・試行して、実用的なデータを得られるようにする。\\
-\subsection{校正実験データの適用}
-6月に行ったひずみゲージの校正実験結果をもとに
-出力電圧を作用力へと換算し、モデルごとの差異を確かめる。\\
+\newpage
+\subsection{今後の研究方針}
+\begin{itemize}
+    \item [$\blacksquare$] \textgt{ノイズの除去}\\
+    それぞれのモデルにおける作用力の違いを明らかにするため、
+    まずは測定データのノイズを除去する必要がある。
+    したがって、FFTの理解及びプログラムへ実装し、不要な周波数成分の除去を行う.
+    \item [$\blacksquare$] \textgt{ドリフトの考慮}\\
+    測定開始から時間経過とともに基準点が変動していくドリフトを考慮する必要がある。
+    そのため、その方法を検討・試行して、実用的なデータを得られるようにする。
+    \item [$\blacksquare$] \textgt{校正実験データの適用}\\
+    6月に行ったひずみゲージの校正実験結果をもとに
+    出力電圧を作用力へと換算し、モデルごとの差異を確かめる。
+\end{itemize}
 \section{今月の予定}
-\begin{enumerate}[1.]
-    \item FFTの実装
-    \item ドリフトを考慮した解析方法の検討
-\end{enumerate}
+\begin{itemize}
+    \item [$\blacksquare$] \textgt{FFTの実装}
+    \begin{itemize}
+        \item [$\bullet$] FFTのプログラムの作成
+        \item [$\bullet$] バンドパスフィルタの適切な設定
+        \item [$\bullet$] 9月下旬を目標
+    \end{itemize}
+    \item [$\blacksquare$] \textgt{ドリフト補正方法の検討}
+    \begin{itemize}
+        \item [$\bullet$] 情報収集
+        \item [$\bullet$] 補正方法の試行
+        \item [$\bullet$] 10月度報告会を目標
+    \end{itemize}
+\end{itemize}
+
 \section{参考文献}
 \end{document}
