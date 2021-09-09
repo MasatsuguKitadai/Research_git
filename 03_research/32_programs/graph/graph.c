@@ -13,13 +13,15 @@ FILE *fp1, *fp2;
 int graph(char filename1[], char filename2[])
 {
     //  入力ファイル
-    if((fp1=fopen(filename1,"r"))==NULL){
+    if ((fp1 = fopen(filename1, "r")) == NULL)
+    {
         printf("FILE1 not open\n");
         return -1;
     }
-    
+
     // 出力ファイル
-    if((fp2=fopen(filename2,"w"))==NULL){
+    if ((fp2 = fopen(filename2, "w")) == NULL)
+    {
         printf("FILE2 not open\n");
         return -1;
     }
@@ -40,11 +42,11 @@ int graph(char filename1[], char filename2[])
 
     // gnuplot
 
-        if ((gp = popen("gnuplot", "w")) == NULL)
-        {
-            printf("gnuplot is not here!\n");
-            exit(0); // gnuplotが無い場合、異常ある場合は終了
-        }
+    if ((gp = popen("gnuplot", "w")) == NULL)
+    {
+        printf("gnuplot is not here!\n");
+        exit(0); // gnuplotが無い場合、異常ある場合は終了
+    }
 
     return 0;
 }
