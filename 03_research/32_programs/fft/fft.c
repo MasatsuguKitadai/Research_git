@@ -1,5 +1,5 @@
 /******************************************************************************
-PROGRAM NAME :frequency_analysis.c
+PROGRAM NAME :fft.c
 AUTHER  : Masatsugu Kitadai
 DATE    :
 ******************************************************************************/
@@ -7,10 +7,8 @@ DATE    :
 #include <stdlib.h>
 #include <math.h>
 #define ch 2
-const char *read_file = "../../data/210806/Normal.CSV";
+const char *read_file = "../../31_data/210806/Normal.CSV";
 FILE *fp;
-/*****************************************************************************/
-int N = 1000;
 /*********************************   MAIN   *********************************/
 int main(void)
 {
@@ -27,6 +25,7 @@ int main(void)
 
     // データの格納
 
+    int N = 1000;
     double ch1, ch2;
     double value[N][ch];
 
@@ -44,7 +43,7 @@ int main(void)
 
     // 計算
 
-    int k, n, N;
+    int k, n;
     const double pi = acos(-1); //円周率の設定
     double re_d, re_l, im_d, im_l, dft_d, dft_l;
 
@@ -63,10 +62,10 @@ int main(void)
             im_l += -value[i][2]*sin(2*pi*k*n/N);
         }
 
-        dft_d = re_d*re_d+im_d*im_d;
-        dft_l = re_l*re_l+im_l*im_l;
+        dft_d = sqrt(re_d*re_d+im_d*im_d);
+        dft_l = sqrt(re_l*re_l+im_l*im_l);
 
-        printf("%d, %f, %lf\n", n, dft_d, dft_l);
+    printf("[%d] %f %lf\n", n, dft_d, dft_l);
         i = i + 1;
     }
 
