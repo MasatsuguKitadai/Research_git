@@ -95,27 +95,27 @@ int main()
 
     // 生データ プロット
 
-    plot("..//34_result//210806//raw_data//dat//C1.dat", "..//34_result//210806//raw_data//png//C1.png", " C1");
-    plot("..//34_result//210806//raw_data//dat//Groove_A.dat", "..//34_result//210806//raw_data//png//Groove_A.png", " Groove A");
-    plot("..//34_result//210806//raw_data//dat//Groove_B.dat", "..//34_result//210806//raw_data//png//Groove_B.png", " Groove B");
-    plot("..//34_result//210806//raw_data//dat//Groove_C.dat", "..//34_result//210806//raw_data//png//Groove_C.png", " Groove C");
-    plot("..//34_result//210806//raw_data//dat//Groove_D.dat", "..//34_result//210806//raw_data//png//Groove_D.png", " Groove D");
-    plot("..//34_result//210806//raw_data//dat//Normal.dat", "..//34_result//210806//raw_data//png//Normal.png", " Normal");
-    plot("..//34_result//210806//raw_data//dat//R1_17.9.dat", "..//34_result//210806//raw_data//png//R1_17.9.png", " R1 17.9");
-    plot("..//34_result//210806//raw_data//dat//R1_18.6.dat", "..//34_result//210806//raw_data//png//R1_18.6.png", " R1 18.6");
-    plot("..//34_result//210806//raw_data//dat//R1_19.3.dat", "..//34_result//210806//raw_data//png//R1_19.3.png", " R1 19.3");
+    // plot("..//33_result//210806//raw_data//dat//C1.dat", "..//33_result//210806//raw_data//png//C1", " C1");
+    // plot("..//33_result//210806//raw_data//dat//Groove_A.dat", "..//33_result//210806//raw_data//png//Groove_A", " Groove A");
+    // plot("..//33_result//210806//raw_data//dat//Groove_B.dat", "..//33_result//210806//raw_data//png//Groove_B", " Groove B");
+    // plot("..//33_result//210806//raw_data//dat//Groove_C.dat", "..//33_result//210806//raw_data//png//Groove_C", " Groove C");
+    // plot("..//33_result//210806//raw_data//dat//Groove_D.dat", "..//33_result//210806//raw_data//png//Groove_D", " Groove D");
+    // plot("..//33_result//210806//raw_data//dat//Normal.dat", "..//33_result//210806//raw_data//png//Normal", " Normal");
+    // plot("..//33_result//210806//raw_data//dat//R1_17.9.dat", "..//33_result//210806//raw_data//png//R1_17.9", " R1 17.9");
+    // plot("..//33_result//210806//raw_data//dat//R1_18.6.dat", "..//33_result//210806//raw_data//png//R1_18.6", " R1 18.6");
+    // plot("..//33_result//210806//raw_data//dat//R1_19.3.dat", "..//33_result//210806//raw_data//png//R1_19.3", " R1 19.3");
 
     // 移動平均 (全体) プロット
 
-    // plot("..//34_result//210806//moving_average//dat//C1_ma.dat", "..//34_result//210806//moving_average//png//C1_ma.png", " C1 MA(21)");
-    // plot("..//34_result//210806//moving_average//dat//Groove_A_ma.dat", "..//34_result//210806//moving_average//png//Groove_A_ma.png", " Groove A MA(21)");
-    // plot("..//34_result//210806//moving_average//dat//Groove_B_ma.dat", "..//34_result//210806//moving_average//png//Groove_B_ma.png", " Groove B MA(21)");
-    // plot("..//34_result//210806//moving_average//dat//Groove_C_ma.dat", "..//34_result//210806//moving_average//png//Groove_C_ma.png", " Groove C MA(21)");
-    // plot("..//34_result//210806//moving_average//dat//Groove_D_ma.dat", "..//34_result//210806//moving_average//png//Groove_D_ma.png", " Groove D MA(21)");
-    // plot("..//34_result//210806//moving_average//dat//Normal_ma.dat", "..//34_result//210806//moving_average//png//Normal_ma.png", " Normal MA(21)");
-    // plot("..//34_result//210806//moving_average//dat//R1_17.9_ma.dat", "..//34_result//210806//moving_average//png//R1_17.9_ma.png", " R1 17.9 MA(21)");
-    // plot("..//34_result//210806//moving_average//dat//R1_18.6_ma.dat", "..//34_result//210806//moving_average//png//R1_18.6_mapng", " R1 18.6 MA(21)");
-    // plot("..//34_result//210806//moving_average//dat//R1_19.3_ma.dat", "..//34_result//210806//moving_average//png//R1_19.3_ma.png", " R1 19.3 MA(21)");
+    // plot("..//33_result//210806//moving_average//dat//C1_ma.dat", "..//33_result//210806//moving_average//png//C1_ma", " C1 MA(21)");
+    // plot("..//33_result//210806//moving_average//dat//Groove_A_ma.dat", "..//33_result//210806//moving_average//png//Groove_A_ma", " Groove A MA(21)");
+    // plot("..//33_result//210806//moving_average//dat//Groove_B_ma.dat", "..//33_result//210806//moving_average//png//Groove_B_ma", " Groove B MA(21)");
+    // plot("..//33_result//210806//moving_average//dat//Groove_C_ma.dat", "..//33_result//210806//moving_average//png//Groove_C_ma", " Groove C MA(21)");
+    // plot("..//33_result//210806//moving_average//dat//Groove_D_ma.dat", "..//33_result//210806//moving_average//png//Groove_D_ma", " Groove D MA(21)");
+    // plot("..//33_result//210806//moving_average//dat//Normal_ma.dat", "..//33_result//210806//moving_average//png//Normal_ma", " Normal MA(21)");
+    // plot("..//33_result//210806//moving_average//dat//R1_17.9_ma.dat", "..//33_result//210806//moving_average//png//R1_17.9_ma", " R1 17.9 MA(21)");
+    // plot("..//33_result//210806//moving_average//dat//R1_18.6_ma.dat", "..//33_result//210806//moving_average//png//R1_18.6_ma", " R1 18.6 MA(21)");
+    // plot("..//33_result//210806//moving_average//dat//R1_19.3_ma.dat", "..//33_result//210806//moving_average//png//R1_19.3_ma", " R1 19.3 MA(21)");
 
     return (0);
 }

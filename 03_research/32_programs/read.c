@@ -47,5 +47,5 @@ int read(char filename1[])
 // int main ()
 // {
 //     // test
-//     read("..//..//34_result//210806//raw_data//dat//C1.dat");
+//     read("..//..//33_result//210806//raw_data//dat//C1.dat");
 // }

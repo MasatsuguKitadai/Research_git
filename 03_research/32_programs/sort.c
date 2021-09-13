@@ -60,13 +60,13 @@ int sort(char filename_1[], char filename_2[])
 int main()
 {
     /* 210806 */
-    sort("../31_data/210806/C1.CSV", "../34_result/210806/raw_data/dat/C1.dat");
-    sort("../31_data/210806/Groove_A.CSV", "../34_result/210806/raw_data/dat/Groove_A.dat");
-    sort("../31_data/210806/Groove_B.CSV", "../34_result/210806/raw_data/dat/Groove_B.dat");
-    sort("../31_data/210806/Groove_C.CSV", "../34_result/210806/raw_data/dat/Groove_C.dat");
-    sort("../31_data/210806/Groove_D.CSV", "../34_result/210806/raw_data/dat/Groove_D.dat");
-    sort("../31_data/210806/Normal.CSV", "../34_result/210806/raw_data/dat/Normal.dat");
-    sort("../31_data/210806/R1_17.9.CSV", "../34_result/210806/raw_data/dat/R1_17.9.dat");
-    sort("../31_data/210806/R1_18.6.CSV", "../34_result/210806/raw_data/dat/R1_18.6.dat");
-    sort("../31_data/210806/R1_19.3.CSV", "../34_result/210806/raw_data/dat/R1_19.3.dat");
+    sort("../31_data/210806/C1.CSV", "../33_result/210806/raw_data/dat/C1.dat");
+    sort("../31_data/210806/Groove_A.CSV", "../33_result/210806/raw_data/dat/Groove_A.dat");
+    sort("../31_data/210806/Groove_B.CSV", "../33_result/210806/raw_data/dat/Groove_B.dat");
+    sort("../31_data/210806/Groove_C.CSV", "../33_result/210806/raw_data/dat/Groove_C.dat");
+    sort("../31_data/210806/Groove_D.CSV", "../33_result/210806/raw_data/dat/Groove_D.dat");
+    sort("../31_data/210806/Normal.CSV", "../33_result/210806/raw_data/dat/Normal.dat");
+    sort("../31_data/210806/R1_17.9.CSV", "../33_result/210806/raw_data/dat/R1_17.9.dat");
+    sort("../31_data/210806/R1_18.6.CSV", "../33_result/210806/raw_data/dat/R1_18.6.dat");
+    sort("../31_data/210806/R1_19.3.CSV", "../33_result/210806/raw_data/dat/R1_19.3.dat");
 }

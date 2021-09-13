@@ -81,15 +81,15 @@ int ma(char filename1[], char filename2[])
 
 int main()
 {
-    ma("..//34_result//210806//raw_data//dat//C1.dat", "..//34_result//210806//moving_average//dat//C1_ma.dat");
-    ma("..//34_result//210806//raw_data//dat//Groove_A.dat", "..//34_result//210806//moving_average//dat//Groove_A_ma.dat");
-    ma("..//34_result//210806//raw_data//dat//Groove_B.dat", "..//34_result//210806//moving_average//dat//Groove_B_ma.dat");
-    ma("..//34_result//210806//raw_data//dat//Groove_C.dat", "..//34_result//210806//moving_average//dat//Groove_C_ma.dat");
-    ma("..//34_result//210806//raw_data//dat//Groove_D.dat", "..//34_result//210806//moving_average//dat//Groove_D_ma.dat");
-    ma("..//34_result//210806//raw_data//dat//Normal.dat", "..//34_result//210806//moving_average//dat//Normal_ma.dat");
-    ma("..//34_result//210806//raw_data//dat//R1_17.9.dat", "..//34_result//210806//moving_average//dat//R1_17.9_ma.dat");
-    ma("..//34_result//210806//raw_data//dat//R1_18.6.dat", "..//34_result//210806//moving_average//dat//R1_18.6_ma.dat");
-    ma("..//34_result//210806//raw_data//dat//R1_19.3.dat", "..//34_result//210806//moving_average//dat//R1_19.3_ma.dat");
+    ma("..//33_result//210806//raw_data//dat//C1.dat", "..//33_result//210806//moving_average//dat//C1_ma.dat");
+    ma("..//33_result//210806//raw_data//dat//Groove_A.dat", "..//33_result//210806//moving_average//dat//Groove_A_ma.dat");
+    ma("..//33_result//210806//raw_data//dat//Groove_B.dat", "..//33_result//210806//moving_average//dat//Groove_B_ma.dat");
+    ma("..//33_result//210806//raw_data//dat//Groove_C.dat", "..//33_result//210806//moving_average//dat//Groove_C_ma.dat");
+    ma("..//33_result//210806//raw_data//dat//Groove_D.dat", "..//33_result//210806//moving_average//dat//Groove_D_ma.dat");
+    ma("..//33_result//210806//raw_data//dat//Normal.dat", "..//33_result//210806//moving_average//dat//Normal_ma.dat");
+    ma("..//33_result//210806//raw_data//dat//R1_17.9.dat", "..//33_result//210806//moving_average//dat//R1_17.9_ma.dat");
+    ma("..//33_result//210806//raw_data//dat//R1_18.6.dat", "..//33_result//210806//moving_average//dat//R1_18.6_ma.dat");
+    ma("..//33_result//210806//raw_data//dat//R1_19.3.dat", "..//33_result//210806//moving_average//dat//R1_19.3_ma.dat");
 
     return (0);
 }
