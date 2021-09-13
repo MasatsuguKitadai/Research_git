@@ -19,7 +19,7 @@ int ma(char name[], char date[])
     char filename2[100];
 
     sprintf(filename1, "..//33_result//%s//raw_data//dat//%s.dat", date, name);     
-    sprintf(filename2, "..//33_result//%s//moving_average//%d//dat//%s_ma(%d).dat", date, range_ma, name, range_ma);
+    sprintf(filename2, "..//33_result//%s//median//%d//dat//%s_me(%d).dat", date, range_me, name, range_me);
 
     // printf("%s\n",filename1);
     // printf("%s\n",filename2);
@@ -57,30 +57,74 @@ int ma(char name[], char date[])
 
     data_long = i;
 
-    // 計算 (移動平均)
+    // 計算 (中央値)
 
     int j = 0;
-    int a, b;
+    int a, b, c;
+    int x, y, z;
+    double w;
 
-    a = (range_ma - 1) / 2;
+    a = (range_me - 1) / 2;
     b = data_long - 2 * a;
+    c = a + 1;
 
-    double ma_d[b], ma_l[b], sum1, sum2;
+    double me_d[b], me_l[b];
+    double d[range_me], l[range_me];
 
     for (i = 0; i < b; i++)
     {
-        sum1 = 0;
-        sum2 = 0;
+        // printf("\n[%d]\n",i);
 
-        for (j = 0; j < range_ma; j++)
+        // 指定された範囲の配列を作成
+        for (j = 0; j < range_me; j++)
         {
-            sum1 = sum1 + value[i + j][1];
-            sum2 = sum2 + value[i + j][2];
-            j = j + 1;
+            d[j] = value[i + j][1];
+            l[j] = value[i + j][2];
+            // printf("[%d]\t%lf\n", j, d[j]);
         }
 
-        ma_d[i] = sum1 / range_ma;
-        ma_l[i] = sum2 / range_ma;
+        // 並び替え
+        for (x = 0; x < range_me; x++ )
+        {
+            // drag
+            y = x;
+            for (z = x; z < range_me; z++)
+            {
+                if (d[z] < d[y]) 
+                {
+                    y = z;
+                }
+            } 
+            if (x < y) 
+            {
+                w = d[x];
+                d[x] = d[y];
+                d[y] = w; 
+            }
+
+            // lift
+            y = x;
+            for (z = x; z < range_me; z++)
+            {
+                if (l[z] < l[y]) 
+                {
+                    y = z;
+                }
+            } 
+            if (x < y) 
+            {
+                w = l[x];
+                l[x] = l[y];
+                l[y] = w; 
+            }
+
+            // printf("[%d]\t%lf\t%lf\n", x, d[x], l[x]);
+        }
+
+        me_d[i] = d[c];
+        me_l[i] = l[c];
+
+        // printf("[%d]\t%lf\t%lf\n", i, me_d[i], me_l[i]);
     }
 
     // ファイル書き出し
@@ -89,8 +133,8 @@ int ma(char name[], char date[])
 
     for (i = 0; i < b; i++)
     {
-        fprintf(fp2, "%d\t%lf\t%lf\n", i, ma_d[i], ma_l[i]);
-        printf("[%d]\t%lf\t%lf\n", i, ma_d[i], ma_l[i]);
+        fprintf(fp2, "%d\t%lf\t%lf\n", i, me_d[i], me_l[i]);
+        // printf("[%d]\t%lf\t%lf\n", i, me_d[i], me_l[i]);
     }
 
     fclose(fp2);

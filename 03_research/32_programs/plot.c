@@ -18,14 +18,28 @@ int y_max1 = 3;
 int y_min2 = -3;
 int y_max2 = 3;
 
+// label
+const char *xxlabel = "time [s]";
+const char *yylabel = "output [V]";
+
+// ファイル名の作成
+char filename1[100];
+char filename2[100];
+char filename3[100];
+char label[100];
+
 double size;
 FILE *fp1, *fp2;
 FILE *gp;
+
 /*********************************   gnuplot   *********************************/
-int plot(char filename1[], char filename2[], char filename3[])
+int plot(char name[] ,char date[], char label_name[])
 {
-    const char *xxlabel = "time [s]";
-    const char *yylabel = "output [V]";
+    #include "setting_files/range.h"            // それぞれのデータの範囲指定
+
+    // #include "setting_files/raw_data.h"      // 生データ
+    // #include "setting_files/moving_average.h"   // 移動平均
+    // #include "setting_files/median.h"           // 中央値
 
     // size
     size = 1;
@@ -39,7 +53,8 @@ int plot(char filename1[], char filename2[], char filename3[])
     //PNG image drag
 
     fprintf(gp, "set terminal pngcairo enhanced font 'Times New Roman,15' \n");
-    fprintf(gp, "set output '%s_drag.png'\n", filename2);
+    fprintf(gp, "set output '%s'\n", filename2);
+    // fprintf(gp, "set multiplot\n");     
     fprintf(gp, "unset key\n");
     fprintf(gp, "set term pngcairo size 1280, 960 font ',24'\n");
     // fprintf(gp, "set size ratio %lf\n", size);
@@ -53,17 +68,17 @@ int plot(char filename1[], char filename2[], char filename3[])
     fprintf(gp, "set xlabel '%s'offset 0.0,0\n", xxlabel);
     fprintf(gp, "set yrange [%d:%d]\n", y_min1, y_max1);
     fprintf(gp, "set ylabel '%s'offset 0,0.0\n", yylabel);
-    fprintf(gp, "set title '%s drag'\n", filename3);
+    fprintf(gp, "set title '%s drag'\n", label);
 
     // fprintf(gp, "set samples 10000\n");
-    fprintf(gp, "plot '%s' using 1:2 with lines lc 'black'\n", filename1);
+    fprintf(gp, "plot '%s' using 1:2 with lines lc 'black', 0 lc 'red'\n", filename1);
 
     fflush(gp); //Clean up Data
 
     // PNG image lift
 
     fprintf(gp, "set terminal pngcairo enhanced font 'Times New Roman,15' \n");
-    fprintf(gp, "set output '%s_lift.png'\n", filename2);
+    fprintf(gp, "set output '%s'\n", filename3);
     fprintf(gp, "unset key\n");
     fprintf(gp, "set term pngcairo size 1280, 960 font ',24'\n");
     // fprintf(gp, "set size ratio %lf\n", size);
@@ -77,10 +92,14 @@ int plot(char filename1[], char filename2[], char filename3[])
     fprintf(gp, "set xlabel '%s'offset 0.0,0\n", xxlabel);
     fprintf(gp, "set yrange [%d:%d]\n", y_min2, y_max2);
     fprintf(gp, "set ylabel '%s'offset 0,0.0\n", yylabel);
-    fprintf(gp, "set title '%s lift'\n", filename3);
+    fprintf(gp, "set title '%s lift'\n", label);
+
+    // 直線 (y=0)
+
+    // fprintf(gp, "f1(x) = 0\n");
 
     // fprintf(gp, "set samples 10000\n");
-    fprintf(gp, "plot '%s' using 1:3 with lines lc 'black'\n", filename1);
+    fprintf(gp, "plot '%s' using 1:3 with lines lc 'black', 0 lc 'red'\n", filename1);
 
     fflush(gp); //Clean up Data
 
@@ -93,29 +112,15 @@ int main()
 {
     // y軸範囲の設定に注意!!
 
-    // 生データ プロット
-
-    // plot("..//33_result//210806//raw_data//dat//C1.dat", "..//33_result//210806//raw_data//png//C1", " C1");
-    // plot("..//33_result//210806//raw_data//dat//Groove_A.dat", "..//33_result//210806//raw_data//png//Groove_A", " Groove A");
-    // plot("..//33_result//210806//raw_data//dat//Groove_B.dat", "..//33_result//210806//raw_data//png//Groove_B", " Groove B");
-    // plot("..//33_result//210806//raw_data//dat//Groove_C.dat", "..//33_result//210806//raw_data//png//Groove_C", " Groove C");
-    // plot("..//33_result//210806//raw_data//dat//Groove_D.dat", "..//33_result//210806//raw_data//png//Groove_D", " Groove D");
-    // plot("..//33_result//210806//raw_data//dat//Normal.dat", "..//33_result//210806//raw_data//png//Normal", " Normal");
-    // plot("..//33_result//210806//raw_data//dat//R1_17.9.dat", "..//33_result//210806//raw_data//png//R1_17.9", " R1 17.9");
-    // plot("..//33_result//210806//raw_data//dat//R1_18.6.dat", "..//33_result//210806//raw_data//png//R1_18.6", " R1 18.6");
-    // plot("..//33_result//210806//raw_data//dat//R1_19.3.dat", "..//33_result//210806//raw_data//png//R1_19.3", " R1 19.3");
-
-    // 移動平均 (全体) プロット
-
-    // plot("..//33_result//210806//moving_average//dat//C1_ma.dat", "..//33_result//210806//moving_average//png//C1_ma", " C1 MA(21)");
-    // plot("..//33_result//210806//moving_average//dat//Groove_A_ma.dat", "..//33_result//210806//moving_average//png//Groove_A_ma", " Groove A MA(21)");
-    // plot("..//33_result//210806//moving_average//dat//Groove_B_ma.dat", "..//33_result//210806//moving_average//png//Groove_B_ma", " Groove B MA(21)");
-    // plot("..//33_result//210806//moving_average//dat//Groove_C_ma.dat", "..//33_result//210806//moving_average//png//Groove_C_ma", " Groove C MA(21)");
-    // plot("..//33_result//210806//moving_average//dat//Groove_D_ma.dat", "..//33_result//210806//moving_average//png//Groove_D_ma", " Groove D MA(21)");
-    // plot("..//33_result//210806//moving_average//dat//Normal_ma.dat", "..//33_result//210806//moving_average//png//Normal_ma", " Normal MA(21)");
-    // plot("..//33_result//210806//moving_average//dat//R1_17.9_ma.dat", "..//33_result//210806//moving_average//png//R1_17.9_ma", " R1 17.9 MA(21)");
-    // plot("..//33_result//210806//moving_average//dat//R1_18.6_ma.dat", "..//33_result//210806//moving_average//png//R1_18.6_ma", " R1 18.6 MA(21)");
-    // plot("..//33_result//210806//moving_average//dat//R1_19.3_ma.dat", "..//33_result//210806//moving_average//png//R1_19.3_ma", " R1 19.3 MA(21)");
+    plot("C1", "210806", "C1");
+    plot("Groove_A", "210806", "Groove A");
+    plot("Groove_B", "210806", "Groove B");
+    plot("Groove_C", "210806", "Groove C");
+    plot("Groove_D", "210806", "Groove D");
+    plot("Normal", "210806", "Normal");
+    plot("R1_17.9", "210806", "R1 17.9");
+    plot("R1_18.6", "210806", "R1 18.3");
+    plot("R1_19.3", "210806", "R1 19.3");
 
     return (0);
 }
