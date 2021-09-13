@@ -36,26 +36,6 @@
 	bookmarkstype=toc
 }
 
-\lstset{
-basicstyle={\ttfamily},
-identifierstyle={\small},
-commentstyle={\smallitshape},
-keywordstyle={\small\bfseries},
-ndkeywordstyle={\small},
-stringstyle={\small\ttfamily},
-frame={tb},
-breaklines=true,
-columns=[l]{fullflexible},
-xrightmargin=0zw,
-xleftmargin=3zw,
-numberstyle={\scriptsize},
-stepnumber=1,
-numbersep=1zw,
-lineskip=-0.5ex
-}
-
-
-
 \author{}
 \title{高速フーリエ変換}
 \date{}
@@ -389,9 +369,9 @@ $t$を$x$に戻すと
 \textgt{高速フーリエ変換 (fast Fourier transform)}とは、
 離散フーリエ変換を計算機上で高速に計算するアルゴリズムである。
 \begin{itembox}[l]{高速フーリエ変換}
-\begin{eqnarray*}
-    F\left(t\right) = \sum^{N-1}_{x=0}f\left(x\right) \exp\left(-i\frac{2 \pi tx}{N}\right)\\
-\end{eqnarray*}
+    \begin{eqnarray*}
+        F\left(t\right) = \sum^{N-1}_{x=0}f\left(x\right) \exp\left(-i\frac{2 \pi tx}{N}\right)\\
+    \end{eqnarray*}
 \end{itembox}
 
 \section{用語}

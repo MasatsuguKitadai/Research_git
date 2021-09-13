@@ -10,14 +10,20 @@ DATE    :
 FILE *fp1, *fp2;
 /*********************************   MAIN   *********************************/
 
-int sort(char filename_1[], char filename_2[])
+int sort(char name[], char date[])
 {
-    int i, j;
+    // ファイル名の作成
+
+    char filename1[100];
+    char filename2[100];
+
+    sprintf(filename1, "../31_data/%s/%s.CSV", date, name);
+    sprintf(filename2, "../33_result/%s/raw_data/dat/%s.dat", date, name);
 
     // ファイルの読み込み
 
-    fp1 = fopen(filename_1, "r");
-    if (filename_1 == NULL)
+    fp1 = fopen(filename1, "r");
+    if (filename1 == NULL)
     {
         printf("Error! I can't open the file.\n");
         exit(0);
@@ -25,6 +31,7 @@ int sort(char filename_1[], char filename_2[])
 
     // データの格納
 
+    int i, j;
     int N = 1000;
     double ch1, ch2;
     double value[N][ch];
@@ -45,7 +52,7 @@ int sort(char filename_1[], char filename_2[])
 
     // datファイルに出力
 
-    fp2 = fopen(filename_2, "w");
+    fp2 = fopen(filename2, "w");
 
     for (j = 0; j < i; j++)
     {
@@ -60,13 +67,13 @@ int sort(char filename_1[], char filename_2[])
 int main()
 {
     /* 210806 */
-    sort("../31_data/210806/C1.CSV", "../33_result/210806/raw_data/dat/C1.dat");
-    sort("../31_data/210806/Groove_A.CSV", "../33_result/210806/raw_data/dat/Groove_A.dat");
-    sort("../31_data/210806/Groove_B.CSV", "../33_result/210806/raw_data/dat/Groove_B.dat");
-    sort("../31_data/210806/Groove_C.CSV", "../33_result/210806/raw_data/dat/Groove_C.dat");
-    sort("../31_data/210806/Groove_D.CSV", "../33_result/210806/raw_data/dat/Groove_D.dat");
-    sort("../31_data/210806/Normal.CSV", "../33_result/210806/raw_data/dat/Normal.dat");
-    sort("../31_data/210806/R1_17.9.CSV", "../33_result/210806/raw_data/dat/R1_17.9.dat");
-    sort("../31_data/210806/R1_18.6.CSV", "../33_result/210806/raw_data/dat/R1_18.6.dat");
-    sort("../31_data/210806/R1_19.3.CSV", "../33_result/210806/raw_data/dat/R1_19.3.dat");
+    sort("C1", "210806");
+    sort("Groove_A", "210806");
+    sort("Groove_B", "210806");
+    sort("Groove_C", "210806");
+    sort("Groove_D", "210806");
+    sort("Normal", "210806");
+    sort("R1_17.9", "210806");
+    sort("R1_18.6", "210806");
+    sort("R1_19.3", "210806");
 }

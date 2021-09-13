@@ -7,7 +7,7 @@ DATE    :
 #include <stdlib.h>
 #include <math.h>
 #define ch 2
-#include "setting_files/range.h"
+#include "files/range.h"
 
 FILE *fp1, *fp2;
 /*********************************   MAIN   *********************************/
@@ -18,7 +18,7 @@ int ma(char name[], char date[])
     char filename1[100];
     char filename2[100];
 
-    sprintf(filename1, "..//33_result//%s//raw_data//dat//%s.dat", date, name);     
+    sprintf(filename1, "..//33_result//%s//raw_data//dat//%s.dat", date, name);
     sprintf(filename2, "..//33_result//%s//median//%d//dat//%s_me(%d).dat", date, range_me, name, range_me);
 
     // printf("%s\n",filename1);
@@ -84,38 +84,38 @@ int ma(char name[], char date[])
         }
 
         // 並び替え
-        for (x = 0; x < range_me; x++ )
+        for (x = 0; x < range_me; x++)
         {
             // drag
             y = x;
             for (z = x; z < range_me; z++)
             {
-                if (d[z] < d[y]) 
+                if (d[z] < d[y])
                 {
                     y = z;
                 }
-            } 
-            if (x < y) 
+            }
+            if (x < y)
             {
                 w = d[x];
                 d[x] = d[y];
-                d[y] = w; 
+                d[y] = w;
             }
 
             // lift
             y = x;
             for (z = x; z < range_me; z++)
             {
-                if (l[z] < l[y]) 
+                if (l[z] < l[y])
                 {
                     y = z;
                 }
-            } 
-            if (x < y) 
+            }
+            if (x < y)
             {
                 w = l[x];
                 l[x] = l[y];
-                l[y] = w; 
+                l[y] = w;
             }
 
             // printf("[%d]\t%lf\t%lf\n", x, d[x], l[x]);

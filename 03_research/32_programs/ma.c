@@ -7,7 +7,7 @@ DATE    :
 #include <stdlib.h>
 #include <math.h>
 #define ch 2
-#include "setting_files/range.h"
+#include "files/range.h"
 
 FILE *fp1, *fp2;
 /*********************************   MAIN   *********************************/
@@ -18,7 +18,7 @@ int ma(char name[], char date[])
     char filename1[100];
     char filename2[100];
 
-    sprintf(filename1, "..//33_result//%s//raw_data//dat//%s.dat", date, name);     
+    sprintf(filename1, "..//33_result//%s//raw_data//dat//%s.dat", date, name);
     sprintf(filename2, "..//33_result//%s//moving_average//%d//dat//%s_ma(%d).dat", date, range_ma, name, range_ma);
 
     // printf("%s\n",filename1);

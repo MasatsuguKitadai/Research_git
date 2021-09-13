@@ -11,12 +11,12 @@ int x_min = -50;
 int x_max = 750;
 
 // drag
-int y_min1 = -3;
-int y_max1 = 3;
+int y_min1 = -2;
+int y_max1 = 2;
 
 // lift
-int y_min2 = -3;
-int y_max2 = 3;
+int y_min2 = -2;
+int y_max2 = 2;
 
 // label
 const char *xxlabel = "time [s]";
@@ -33,13 +33,18 @@ FILE *fp1, *fp2;
 FILE *gp;
 
 /*********************************   gnuplot   *********************************/
-int plot(char name[] ,char date[], char label_name[])
+int plot(char name[], char date[], char label_name[])
 {
-    #include "setting_files/range.h"            // それぞれのデータの範囲指定
+#include "files/range.h" // それぞれのデータの範囲指定
 
-    // #include "setting_files/raw_data.h"      // 生データ
-    // #include "setting_files/moving_average.h"   // 移動平均
-    // #include "setting_files/median.h"           // 中央値
+    // 生データ
+    // #include "setting/raw_data.h"
+
+    // 移動平均
+    // #include "setting/moving_average.h"
+
+    // 中央値
+    // #include "setting/median.h"
 
     // size
     size = 1;
@@ -54,7 +59,7 @@ int plot(char name[] ,char date[], char label_name[])
 
     fprintf(gp, "set terminal pngcairo enhanced font 'Times New Roman,15' \n");
     fprintf(gp, "set output '%s'\n", filename2);
-    // fprintf(gp, "set multiplot\n");     
+    // fprintf(gp, "set multiplot\n");
     fprintf(gp, "unset key\n");
     fprintf(gp, "set term pngcairo size 1280, 960 font ',24'\n");
     // fprintf(gp, "set size ratio %lf\n", size);
