@@ -83,7 +83,7 @@ int ma(char name[], char date[])
             // printf("[%d]\t%lf\n", j, d[j]);
         }
 
-        // 並び替え
+        // 並び替え (小さい順)
         for (x = 0; x < range_me; x++)
         {
             // drag

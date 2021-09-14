@@ -7,25 +7,13 @@ DATE    :
 #include <stdlib.h>
 #include <math.h>
 
+// range x
 int x_min = -50;
 int x_max = 750;
-
-// drag
-int y_min1 = -2;
-int y_max1 = 2;
-
-// lift
-int y_min2 = -2;
-int y_max2 = 2;
 
 // label
 const char *xxlabel = "time [s]";
 const char *yylabel = "output [V]";
-
-// ファイル名の作成
-char filename1[100];
-char filename2[100];
-char filename3[100];
 char label[100];
 
 double size;
@@ -38,13 +26,16 @@ int plot(char name[], char date[], char label_name[])
 #include "files/range.h" // それぞれのデータの範囲指定
 
     // 生データ
-    // #include "setting/raw_data.h"
+    #include "files/raw_data.h"
+    sprintf(label, "%s", label_name);
 
     // 移動平均
-    // #include "setting/moving_average.h"
+    // #include "files/moving_average.h"
+    // sprintf(label, "%s  Ma (%d)", label_name, rangse_ma); 
 
     // 中央値
-    // #include "setting/median.h"
+    // #include "files/median.h"
+    // sprintf(label, "%s  Me (%d)", label_name, range_me); s
 
     // size
     size = 1;
