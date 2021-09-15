@@ -1,5 +1,5 @@
 // 移動平均 範囲
-int range_ma = 11;
+int range_ma = 21;
 
 // ファイル作成
 char filename1[100];
@@ -7,6 +7,7 @@ char filename2[100];
 char filename3[100];
 char filename4[100];
 char filename5[100];
+char filename6[100];
 
 // ファイルの指定 (plot)
 sprintf(filename1, "..//33_result//%s//moving_average//%d//dat//%s_ma(%d).dat", date, range_ma, name, range_ma);
@@ -17,3 +18,6 @@ sprintf(filename3, "..//33_result//%s//moving_average//%d//lift//%s_ma(%d)_lift.
 sprintf(filename4, "..//33_result//%s//moving_average//%d//dat//%s_ma(%d).dat", date, range_ma, name, range_ma);
 sprintf(filename5, "..//33_result//%s//moving_average//%d//start_point//%s_ma(%d)_sp.dat", date, range_ma, name, range_ma);
 // なんとなく良い感じかも
+
+// 開始点特定 (まとめる)
+sprintf(filename6, "..//33_result//%s//moving_average//%d//start_point//summary_ma(%d)_sp.dat", date, range_ma, range_ma);
