@@ -1,3 +1,6 @@
+// 移動平均 範囲
+int range_ma = 11;
+
 // ファイル作成
 char filename1[100];
 char filename2[100];

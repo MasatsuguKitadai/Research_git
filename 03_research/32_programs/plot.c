@@ -11,6 +11,19 @@ DATE    :
 int x_min = -50;
 int x_max = 750;
 
+// range y
+
+// 一括指定
+const int max = 2;
+
+// drag
+int y_min1 = -max;
+int y_max1 = max;
+
+// lift
+int y_min2 = -max;
+int y_max2 = max;
+
 // label
 const char *xxlabel = "time [s]";
 const char *yylabel = "output [V]";

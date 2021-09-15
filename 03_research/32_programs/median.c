@@ -7,27 +7,26 @@ DATE    :
 #include <stdlib.h>
 #include <math.h>
 #define ch 2
-#include "files/range.h"
 
-FILE *fp1, *fp2;
+FILE *fp, *fp1;
 /*********************************   MAIN   *********************************/
 int ma(char name[], char date[])
 {
+    // 設定ファイルのインポート
+    #include "files/median.h"
+
     // ファイル名の作成
 
-    char filename1[100];
-    char filename2[100];
+    char filename[100];
+    sprintf(filename, "..//33_result//%s//raw_data//dat//%s.dat", date, name);
 
-    sprintf(filename1, "..//33_result//%s//raw_data//dat//%s.dat", date, name);
-    sprintf(filename2, "..//33_result//%s//median//%d//dat//%s_me(%d).dat", date, range_me, name, range_me);
-
+    // printf("%s\n",filename);
     // printf("%s\n",filename1);
-    // printf("%s\n",filename2);
 
     // ファイルの読み込み
 
-    fp1 = fopen(filename1, "r");
-    if (filename1 == NULL)
+    fp = fopen(filename, "r");
+    if (filename == NULL)
     {
         printf("Error! I can't open the file.\n");
         exit(0);
@@ -44,7 +43,7 @@ int ma(char name[], char date[])
 
     // ch1:drag, ch2:lift
 
-    while ((fscanf(fp1, "%d\t%lf\t%lf", &num, &ch1, &ch2)) != EOF)
+    while ((fscanf(fp, "%d\t%lf\t%lf", &num, &ch1, &ch2)) != EOF)
     {
         number[i] = num;
         value[i][1] = ch1;
@@ -53,7 +52,7 @@ int ma(char name[], char date[])
         i = i + 1;
     }
 
-    fclose(fp1);
+    fclose(fp);
 
     data_long = i;
 
@@ -129,15 +128,15 @@ int ma(char name[], char date[])
 
     // ファイル書き出し
 
-    fp2 = fopen(filename2, "w");
+    fp1 = fopen(filename1, "w");
 
     for (i = 0; i < b; i++)
     {
-        fprintf(fp2, "%d\t%lf\t%lf\n", i, me_d[i], me_l[i]);
+        fprintf(fp1, "%d\t%lf\t%lf\n", i, me_d[i], me_l[i]);
         // printf("[%d]\t%lf\t%lf\n", i, me_d[i], me_l[i]);
     }
 
-    fclose(fp2);
+    fclose(fp1);
 }
 
 int main()

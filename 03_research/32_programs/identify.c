@@ -1,23 +1,22 @@
 /******************************************************************************
-PROGRAM NAME : ma.c
-AUTHER  : Masatsugu Kitadai
+PROGRAM NAME : identify.c
+AUTHER  : masatsugu Kitadai
 DATE    :
 ******************************************************************************/
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
 #define ch 2
-#include "files/range.h"
 
 FILE *fp1, *fp2;
-/*********************************   MAIN   *********************************/
-int ma(char name[], char date[])
+/*********************************   identifyIN   *********************************/
+int identify(char name[], char date[])
 {
     // 生データ
-    #include "files/raw_data.h"
+    // #include "files/raw_data.h"
     
     // 移動平均
-    // #include "files/moving_average.h"
+    #include "files/moving_average.h"
 
     // 中央値
     // #include "files/median.h"
@@ -26,6 +25,10 @@ int ma(char name[], char date[])
     // printf("%s\n",filename5);
 
     // ファイルの読み込み
+
+    // 開始点特定 範囲
+    int range_1 = 100; // 前部の範囲
+    int range_2 = 10;  // 後部の範囲
 
     fp1 = fopen(filename4, "r");
     if (filename4 == NULL)
@@ -232,24 +235,24 @@ int ma(char name[], char date[])
 
     // fprintf(fp2, "model, drag, drag, lift, lift\n", );
     // fprintf(fp2, "%s, (sec), (v), (sec), (v)\n", );
-    fprintf(fp2, "前:%d\t後:%d\n", range_1, range_2);
     fprintf(fp2, "%d\t%lf\t%d\t%lf\n", start_num[1], start_value[1], start_num[2], start_value[2]);
+    fprintf(fp2, "前:%d\t後:%d\n", range_1, range_2);
 
     fclose(fp2);
 }
 
-int main()
+int identifyin()
 {
     // 2021/8/6
-    ma("C1", "210806");
-    ma("Groove_A", "210806");
-    ma("Groove_B", "210806");
-    ma("Groove_C", "210806");
-    ma("Groove_D", "210806");
-    ma("Normal", "210806");
-    ma("R1_17.9", "210806");
-    ma("R1_18.6", "210806");
-    ma("R1_19.3", "210806");
+    identify("C1", "210806");
+    identify("Groove_A", "210806");
+    identify("Groove_B", "210806");
+    identify("Groove_C", "210806");
+    identify("Groove_D", "210806");
+    identify("Noridentifyl", "210806");
+    identify("R1_17.9", "210806");
+    identify("R1_18.6", "210806");
+    identify("R1_19.3", "210806");
 
     return (0);
 }

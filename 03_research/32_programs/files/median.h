@@ -1,3 +1,6 @@
+// 中央値 範囲
+int range_me = 21;
+
 // ファイル作成
 char filename1[100];
 char filename2[100];
