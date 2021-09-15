@@ -7,8 +7,7 @@ DATE    :
 #include <stdlib.h>
 #include <math.h>
 #define ch 2
-
-FILE *fp, *fp1;
+#include "files/fp.h"
 /*********************************   MAIN   *********************************/
 int ma(char name[], char date[])
 {

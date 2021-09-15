@@ -1,3 +1,16 @@
+// range y (plot.c)
+
+// 一括指定
+const int max = 3;
+
+// drag
+int y_min1 = -max;
+int y_max1 = max;
+
+// lift
+int y_min2 = -max;
+int y_max2 = max;
+
 // ファイル作成
 char filename1[100];
 char filename2[100];

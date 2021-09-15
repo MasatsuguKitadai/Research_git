@@ -6,23 +6,11 @@ DATE    :
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include "files/fp.h"
 
 // range x
 int x_min = -50;
 int x_max = 750;
-
-// range y
-
-// 一括指定
-const int max = 2;
-
-// drag
-int y_min1 = -max;
-int y_max1 = max;
-
-// lift
-int y_min2 = -max;
-int y_max2 = max;
 
 // label
 const char *xxlabel = "time [s]";
@@ -30,21 +18,18 @@ const char *yylabel = "output [V]";
 char label[100];
 
 double size;
-FILE *fp1, *fp2;
 FILE *gp;
 
 /*********************************   gnuplot   *********************************/
 int plot(char name[], char date[], char label_name[])
 {
-#include "files/range.h" // それぞれのデータの範囲指定
-
     // 生データ
-    #include "files/raw_data.h"
-    sprintf(label, "%s", label_name);
+    // #include "files/raw_data.h"
+    // sprintf(label, "%s", label_name);
 
     // 移動平均
-    // #include "files/moving_average.h"
-    // sprintf(label, "%s  Ma (%d)", label_name, rangse_ma); 
+    #include "files/moving_average.h"
+    sprintf(label, "%s  Ma (%d)", label_name, range_ma); 
 
     // 中央値
     // #include "files/median.h"
@@ -80,7 +65,7 @@ int plot(char name[], char date[], char label_name[])
     fprintf(gp, "set title '%s drag'\n", label);
 
     // fprintf(gp, "set samples 10000\n");
-    fprintf(gp, "plot '%s' using 1:2 with lines lc 'black', 0 lc 'red'\n", filename1);
+    fprintf(gp, "plot '%s' using 1:2 with lines lc 'black', '%s' using 1:2 with points pt 5 ps 2 lc 'blue', '%s' using 1:2 with points pt 5 ps 2 lc 'blue', 0 lc 'dark-grey'\n", filename1, filename5, filename7);
 
     fflush(gp); //Clean up Data
 
@@ -103,12 +88,9 @@ int plot(char name[], char date[], char label_name[])
     fprintf(gp, "set ylabel '%s'offset 0,0.0\n", yylabel);
     fprintf(gp, "set title '%s lift'\n", label);
 
-    // 直線 (y=0)
-
-    // fprintf(gp, "f1(x) = 0\n");
-
     // fprintf(gp, "set samples 10000\n");
-    fprintf(gp, "plot '%s' using 1:3 with lines lc 'black', 0 lc 'red'\n", filename1);
+    // fprintf(gp, "plot '%s' using 1:3 with lines lc 'black', 0 lc 'red'\n", filename1);
+    fprintf(gp, "plot '%s' using 1:3 with lines lc 'black', '%s' using 3:4 with points pt 5 ps 2 lc 'blue', '%s' using 3:4 with points pt 5 ps 2 lc 'blue', 0 lc 'dark-grey'\n", filename1, filename5, filename7);
 
     fflush(gp); //Clean up Data
 

@@ -7,9 +7,8 @@ DATE    :
 #include <stdlib.h>
 #include <math.h>
 #define ch 2
-FILE *fp1, *fp2;
+#include "files/fp.h"
 /*********************************   MAIN   *********************************/
-
 int sort(char name[], char date[])
 {
     // ファイル名の作成
