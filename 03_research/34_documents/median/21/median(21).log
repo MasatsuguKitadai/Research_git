@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.3.30)  13 SEP 2021 23:38
+This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.3.30)  16 SEP 2021 09:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -480,7 +480,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 167.
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 167.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 167.
 Package rerunfilecheck Info: File `median(21).out' has not changed.
-(rerunfilecheck)             Checksum: 6E1AF028D3E4528D31717D1E6C4CCDA9;104.
+(rerunfilecheck)             Checksum: 63756C1275896E08B776FCD5356EB0D5;114.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 167.
  ) 
 Here is how much of TeX's memory you used:
@@ -492,4 +492,4 @@ Here is how much of TeX's memory you used:
  934 hyphenation exceptions out of 8191
  34i,5n,36p,288b,360s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on median(21).dvi (9 pages, 6980 bytes).
+Output written on median(21).dvi (9 pages, 6992 bytes).

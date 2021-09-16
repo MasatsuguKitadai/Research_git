@@ -11,17 +11,10 @@ DATE    :
 /*********************************   identifyIN   *********************************/
 int identify(char name[], char date[])
 {
-    // 生データ
-    // #include "files/raw_data.h"
-    
-    // 移動平均
-    #include "files/moving_average.h"
+#include "files/file.h"
 
-    // 中央値
-    // #include "files/median.h"
-
+    // printf("%s\n",filename4);
     // printf("%s\n",filename6);
-    // printf("%s\n",filename7);
 
     // ファイルの読み込み
 
@@ -29,8 +22,8 @@ int identify(char name[], char date[])
     int range_1 = 150; // 前部の範囲
     int range_2 = 10;  // 後部の範囲
 
-    fp1 = fopen(filename6, "r");
-    if (filename6 == NULL)
+    fp1 = fopen(filename4, "r");
+    if (filename4 == NULL)
     {
         printf("Error! I can't open the file.\n");
         exit(0);
@@ -68,7 +61,7 @@ int identify(char name[], char date[])
     double w;
 
     range = data_long - (range_1);
-    
+
     int finish_num[ch];
     double finish_value[ch];
     double top[ch], bottom[ch], sum1[ch], sum2[ch], ave1[ch], ave2[ch];
@@ -96,7 +89,7 @@ int identify(char name[], char date[])
             d1[j] = value[i + j][1];
             // printf("[%d]\t%lf\n", j, d1[j]);
         }
-        
+
         for (k = 1; k < range_2 + 1; k++)
         {
             d2[k] = value[i + range_1 + k][1];
@@ -152,13 +145,13 @@ int identify(char name[], char date[])
         // (1) drag
         if (ave2[1] < bottom[1])
         {
-            finish_num[1] = i + range_1+ range_2;
-            finish_value[1] = value[i + range_1+ range_2][1];
+            finish_num[1] = i + range_1 + range_2;
+            finish_value[1] = value[i + range_1 + range_2][1];
             break;
         }
     }
 
-// lift
+    // lift
 
     finish_num[2] = 0;
     finish_value[2] = 0;
@@ -180,7 +173,7 @@ int identify(char name[], char date[])
             l1[j] = value[i + j][2];
             // printf("[%d]\t%lf\t%lf\n", j, d1[j], l1[j]);
         }
-        
+
         for (k = 1; k < range_2 + 1; k++)
         {
             l2[k] = value[i + range_1 + k][2];
@@ -239,7 +232,7 @@ int identify(char name[], char date[])
         if (ave2[2] > top[2])
         {
             finish_num[2] = i + range_1 + range_2;
-            finish_value[2] = value[i + range_1+ range_2][2];
+            finish_value[2] = value[i + range_1 + range_2][2];
             break;
         }
     }
@@ -248,7 +241,7 @@ int identify(char name[], char date[])
 
     // ファイル書き出し
 
-    fp2 = fopen(filename7, "w");
+    fp2 = fopen(filename6, "w");
 
     // fprintf(fp2, "model, drag, drag, lift, lift\n", );
     // fprintf(fp2, "%s, (sec), (v), (sec), (v)\n", );

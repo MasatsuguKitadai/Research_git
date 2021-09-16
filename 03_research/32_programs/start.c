@@ -11,14 +11,7 @@ DATE    :
 /*********************************   identifyIN   *********************************/
 int identify(char name[], char date[])
 {
-    // 生データ
-    // #include "files/raw_data.h"
-    
-    // 移動平均
-    #include "files/moving_average.h"
-
-    // 中央値
-    // #include "files/median.h"
+#include "files/file.h"
 
     // printf("%s\n",filename4);
     // printf("%s\n",filename5);
@@ -26,8 +19,8 @@ int identify(char name[], char date[])
     // ファイルの読み込み
 
     // 開始点特定 範囲
-    int range_1 = 80; // 前部の範囲
-    int range_2 = 3;  // 後部の範囲
+    int range_1 = 90; // 前部の範囲
+    int range_2 = 5;  // 後部の範囲
 
     fp1 = fopen(filename4, "r");
     if (filename4 == NULL)
@@ -68,7 +61,7 @@ int identify(char name[], char date[])
     double w;
 
     range = data_long - (range_1);
-    
+
     int start_num[ch];
     double start_value[ch];
     double top[ch], bottom[ch], sum1[ch], sum2[ch], ave1[ch], ave2[ch];
@@ -79,7 +72,7 @@ int identify(char name[], char date[])
     start_num[1] = 0;
     start_value[1] = 0;
 
-    for (i = 0; i < range; i++)
+    for (i = 50; i < range; i++)
     {
         // 配列の初期化
 
@@ -96,7 +89,7 @@ int identify(char name[], char date[])
             d1[j] = value[i + j][1];
             // printf("[%d]\t%lf\n", j, d1[j]);
         }
-        
+
         for (k = 1; k < range_2 + 1; k++)
         {
             d2[k] = value[i + range_1 + k][1];
@@ -152,12 +145,12 @@ int identify(char name[], char date[])
         }
     }
 
-// lift
+    // lift
 
     start_num[2] = 0;
     start_value[2] = 0;
 
-    for (i = 0; i < range; i++)
+    for (i = 50; i < range; i++)
     {
         // 配列の初期化
 
@@ -174,7 +167,7 @@ int identify(char name[], char date[])
             l1[j] = value[i + j][2];
             // printf("[%d]\t%lf\t%lf\n", j, d1[j], l1[j]);
         }
-        
+
         for (k = 1; k < range_2 + 1; k++)
         {
             l2[k] = value[i + range_1 + k][2];
