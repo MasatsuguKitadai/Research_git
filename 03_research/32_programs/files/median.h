@@ -1,5 +1,5 @@
 // 中央値 範囲
-int range_me = 21;
+int range_me = 11;
 
 // range y (plot.c)
 
@@ -21,6 +21,8 @@ char filename3[100];
 char filename4[100];
 char filename5[100];
 char filename6[100];
+char filename7[100];
+char filename8[100];
 
 // ファイルの指定 (plot)
 sprintf(filename1, "..//33_result//%s//median//%d//dat//%s_me(%d).dat", date, range_me, name, range_me);
@@ -33,3 +35,9 @@ sprintf(filename5, "..//33_result//%s//median//%d//start_point//%s_me(%d)_sp.dat
 
 // 終了点特定 (1)
 sprintf(filename6, "..//33_result//%s//median//%d//finish_point//%s_me(%d)_fp.dat", date, range_me, name, range_me);
+
+// 開始点を含む点までの平均値
+sprintf(filename7, "..//33_result//%s//median//%d//start_average//%s_me(%d)_sa.dat", date, range_me, name, range_me);
+
+// 終了点後部の平均値
+sprintf(filename8, "..//33_result//%s//median//%d//finish_average//%s_me(%d)_fa.dat", date, range_me, name, range_me);

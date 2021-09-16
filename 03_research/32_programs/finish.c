@@ -22,7 +22,7 @@ int identify(char name[], char date[])
     int range_1 = 150; // 前部の範囲
     int range_2 = 10;  // 後部の範囲
 
-    fp1 = fopen(filename4, "r");
+    fp4 = fopen(filename4, "r");
     if (filename4 == NULL)
     {
         printf("Error! I can't open the file.\n");
@@ -40,7 +40,7 @@ int identify(char name[], char date[])
 
     // ch1:drag, ch2:lift
 
-    while ((fscanf(fp1, "%d\t%lf\t%lf", &num, &ch1, &ch2)) != EOF)
+    while ((fscanf(fp4, "%d\t%lf\t%lf", &num, &ch1, &ch2)) != EOF)
     {
         number[i] = num;
         value[i][1] = ch1;
@@ -49,7 +49,7 @@ int identify(char name[], char date[])
         i = i + 1;
     }
 
-    fclose(fp1);
+    fclose(fp4);
 
     data_long = i;
 
@@ -241,14 +241,14 @@ int identify(char name[], char date[])
 
     // ファイル書き出し
 
-    fp2 = fopen(filename6, "w");
+    fp5 = fopen(filename6, "w");
 
-    // fprintf(fp2, "model, drag, drag, lift, lift\n", );
-    // fprintf(fp2, "%s, (sec), (v), (sec), (v)\n", );
-    fprintf(fp2, "%d\t%lf\t%d\t%lf\n", finish_num[1], finish_value[1], finish_num[2], finish_value[2]);
-    // fprintf(fp2, "前:%d\t後:%d\n", range_1, range_2);
+    // fprintf(fp5, "model, drag, drag, lift, lift\n", );
+    // fprintf(fp5, "%s, (sec), (v), (sec), (v)\n", );
+    fprintf(fp5, "%d\t%lf\t%d\t%lf\n", finish_num[1], finish_value[1], finish_num[2], finish_value[2]);
+    // fprintf(fp5, "前:%d\t後:%d\n", range_1, range_2);
 
-    fclose(fp2);
+    fclose(fp5);
 }
 
 int main()

@@ -22,6 +22,7 @@ char filename4[100];
 char filename5[100];
 char filename6[100];
 char filename7[100];
+char filename8[100];
 
 // ファイルの指定 (plot)
 sprintf(filename1, "..//33_result//%s//moving_average//%d//dat//%s_ma(%d).dat", date, range_ma, name, range_ma);
@@ -34,3 +35,9 @@ sprintf(filename5, "..//33_result//%s//moving_average//%d//start_point//%s_ma(%d
 
 // 終了点特定 (1)
 sprintf(filename6, "..//33_result//%s//moving_average//%d//finish_point//%s_ma(%d)_fp.dat", date, range_ma, name, range_ma);
+
+// 開始点を含む点までの平均値
+sprintf(filename7, "..//33_result//%s//moving_average//%d//start_average//%s_ma(%d)_sa.dat", date, range_ma, name, range_ma);
+
+// 終了点後部の平均値
+sprintf(filename8, "..//33_result//%s//moving_average//%d//finish_average//%s_ma(%d)_fa.dat", date, range_ma, name, range_ma);

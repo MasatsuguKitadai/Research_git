@@ -1,1 +1,1 @@
-FILE *fp, *fp1, *fp2, *fp3, *fp4, *fp5, *fp6;
+FILE *fp, *fp1, *fp2, *fp3, *fp4, *fp5, *fp6, *fp7, *fp8;

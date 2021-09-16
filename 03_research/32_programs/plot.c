@@ -26,13 +26,13 @@ int plot(char name[], char date[], char label_name[])
 #include "files/file.h"
 
     // 生データ
-    // sprintf(label, "%s", label_name);
+    sprintf(label, "%s", label_name);
 
     // 移動平均
     // sprintf(label, "%s  Ma (%d)", label_name, range_ma);
 
     // 中央値
-    sprintf(label, "%s  Me (%d)", label_name, range_me);
+    // sprintf(label, "%s  Me (%d)", label_name, range_me);
 
     // size
     size = 1;
@@ -64,7 +64,7 @@ int plot(char name[], char date[], char label_name[])
     fprintf(gp, "set title '%s drag'\n", label);
 
     // fprintf(gp, "set samples 10000\n");
-    fprintf(gp, "plot '%s' using 1:2 with lines lc 'black', '%s' using 1:2 with points pt 5 ps 2 lc 'red', '%s' using 1:2 with points pt 5 ps 2 lc 'blue', 0 lw 2 lc 'dark-grey'\n", filename1, filename5, filename6);
+    fprintf(gp, "plot '%s' using 1:2 with lines lc 'black', '%s' using 1:2 with points pt 5 ps 2 lc 'red', '%s' using 1:2 with points pt 5 ps 2 lc 'red','%s' using 1:2 with points pt 5 ps 2 lc 'green','%s' using 1:2 with points pt 5 ps 2 lc 'green', 0 lw 2 lc 'dark-grey'\n", filename1, filename5, filename6, filename7, filename8);
 
     fflush(gp); //Clean up Data
 
@@ -88,8 +88,8 @@ int plot(char name[], char date[], char label_name[])
     fprintf(gp, "set title '%s lift'\n", label);
 
     // fprintf(gp, "set samples 10000\n");
-    // fprintf(gp, "plot '%s' using 1:3 with lines lc 'black', 0 lc 'red'\n", filename1);
-    fprintf(gp, "plot '%s' using 1:3 with lines lc 'black', '%s' using 3:4 with points pt 5 ps 2 lc 'red', '%s' using 3:4 with points pt 5 ps 2 lc 'blue', 0 lw 2 lc 'dark-grey'\n", filename1, filename5, filename6);
+    fprintf(gp, "plot '%s' using 1:3 with lines lc 'black', 0 lw 2 lc 'dark-grey'\n", filename1);
+    // fprintf(gp, "plot '%s' using 1:3 with lines lc 'black', '%s' using 3:4 with points pt 5 ps 2 lc 'red', '%s' using 3:4 with points pt 5 ps 2 lc 'blue', 0 lw 2 lc 'dark-grey'\n", filename1, filename5, filename6);
 
     fflush(gp); //Clean up Data
 
