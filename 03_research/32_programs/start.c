@@ -227,6 +227,22 @@ int identify(char name[], char date[])
 
     printf("[%d]\t%lf\t[%d]\t%lf\t(%s)\n", start_num[1], start_value[1], start_num[2], start_value[2], name);
 
+    // drag スタート前までの平均値の計算
+
+    int omit = 50;
+    double sum, ave;
+    sum = 0;
+    ave = 0;
+
+    for (i = omit; i < start_num[1] + 1; i++)
+    {
+        sum = sum + value[i][1];
+    }
+
+    ave = sum / (start_num[1] + 1 - omit);
+
+    // printf("[%d]\tvalue : %lf\taverage : %lf\t sum : %lf\t(%s)\n", start_num[1], start_value[1], ave, sum, name);
+
     // ファイル書き出し
 
     fp5 = fopen(filename5, "w");
@@ -237,6 +253,12 @@ int identify(char name[], char date[])
     // fprintf(fp5, "前:%d\t後:%d\n", range_1, range_2);
 
     fclose(fp5);
+
+    fp7 = fopen(filename7, "w");
+
+    fprintf(fp7, "%d\t%lf\n", start_num[1], ave);
+
+    fclose(fp7);
 }
 
 int main()
