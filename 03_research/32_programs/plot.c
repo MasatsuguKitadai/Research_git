@@ -26,10 +26,10 @@ int plot(char name[], char date[], char label_name[])
 #include "files/file.h"
 
     // 生データ
-    sprintf(label, "%s", label_name);
+    // sprintf(label, "%s", label_name);
 
     // 移動平均
-    // sprintf(label, "%s  Ma (%d)", label_name, range_ma);
+    sprintf(label, "%s  Ma (%d)", label_name, range_ma);
 
     // 中央値
     // sprintf(label, "%s  Me (%d)", label_name, range_me);

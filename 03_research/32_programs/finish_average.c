@@ -49,7 +49,7 @@ int finish_average(char name[], char date[])
     data_long = i;
 
     // 終了点データの格納
-    
+
     int finish_num[ch];
     double finish_value[ch];
 
@@ -60,7 +60,7 @@ int finish_average(char name[], char date[])
         exit(0);
     }
 
-    fscanf(fp6, "%d\t%lf\t%d\t%lf",&finish_num[1], &finish_value[1], &finish_num[2], &finish_value[2]);
+    fscanf(fp6, "%d\t%lf\t%d\t%lf", &finish_num[1], &finish_value[1], &finish_num[2], &finish_value[2]);
     // printf("%d\t%lf\t%d\t%lf\t(%s)\n",finish_num[1], finish_value[1], finish_num[2], finish_value[2], name);
 
     fclose(fp6);
@@ -72,7 +72,7 @@ int finish_average(char name[], char date[])
     sum = 0;
     ave = 0;
 
-    for (i = finish_num[1]; i < data_long - omit ; i++)
+    for (i = finish_num[1]; i < data_long - omit; i++)
     {
         sum = sum + value[i][1];
     }

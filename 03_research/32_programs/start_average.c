@@ -49,7 +49,7 @@ int start_average(char name[], char date[])
     data_long = i;
 
     // 開始点・終了点データの格納
-    
+
     int start_num[ch];
     double start_value[ch];
 
@@ -60,7 +60,7 @@ int start_average(char name[], char date[])
         exit(0);
     }
 
-    fscanf(fp5, "%d\t%lf\t%d\t%lf",&start_num[1], &start_value[1], &start_num[2], &start_value[2]);
+    fscanf(fp5, "%d\t%lf\t%d\t%lf", &start_num[1], &start_value[1], &start_num[2], &start_value[2]);
     // printf("%d\t%lf\t%d\t%lf\t(%s)\n",start_num[1], start_value[1], start_num[2], start_value[2], name);
 
     fclose(fp5);
@@ -72,7 +72,7 @@ int start_average(char name[], char date[])
     sum = 0;
     ave = 0;
 
-    for (i = omit; i < start_num[1] + 1 ; i++)
+    for (i = omit; i < start_num[1] + 1; i++)
     {
         sum = sum + value[i][1];
     }
