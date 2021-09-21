@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.3.30)  17 SEP 2021 10:41
+This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.3.30)  21 SEP 2021 23:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -434,45 +434,45 @@ LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
 (Font)              scaled to size 13.83836pt on input line 37.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 13.83836pt on input line 37.
-File: ../../../33_result/210806/moving_average/21/drag/Normal_ma(21)_drag.png Graphic file (type bmp)
-<../../../33_result/210806/moving_average/21/drag/Normal_ma(21)_drag.png>
-File: ../../../33_result/210806/moving_average/21/drag/C1_ma(21)_drag.png Graphic file (type bmp)
-<../../../33_result/210806/moving_average/21/drag/C1_ma(21)_drag.png>
-File: ../../../33_result/210806/moving_average/21/drag/Groove_A_ma(21)_drag.png Graphic file (type bmp)
-<../../../33_result/210806/moving_average/21/drag/Groove_A_ma(21)_drag.png>
-File: ../../../33_result/210806/moving_average/21/drag/Groove_B_ma(21)_drag.png Graphic file (type bmp)
-<../../../33_result/210806/moving_average/21/drag/Groove_B_ma(21)_drag.png>
-File: ../../../33_result/210806/moving_average/21/drag/Groove_C_ma(21)_drag.png Graphic file (type bmp)
-<../../../33_result/210806/moving_average/21/drag/Groove_C_ma(21)_drag.png>
-File: ../../../33_result/210806/moving_average/21/drag/Groove_D_ma(21)_drag.png Graphic file (type bmp)
-<../../../33_result/210806/moving_average/21/drag/Groove_D_ma(21)_drag.png>
-File: ../../../33_result/210806/moving_average/21/drag/R1_17.9_ma(21)_drag.png Graphic file (type bmp)
-<../../../33_result/210806/moving_average/21/drag/R1_17.9_ma(21)_drag.png>
-File: ../../../33_result/210806/moving_average/21/drag/R1_18.6_ma(21)_drag.png Graphic file (type bmp)
-<../../../33_result/210806/moving_average/21/drag/R1_18.6_ma(21)_drag.png>
-File: ../../../33_result/210806/moving_average/21/drag/R1_19.3_ma(21)_drag.png Graphic file (type bmp)
-<../../../33_result/210806/moving_average/21/drag/R1_19.3_ma(21)_drag.png>
-File: ../../../33_result/210806/moving_average/21/lift/Normal_ma(21)_lift.png Graphic file (type bmp)
-<../../../33_result/210806/moving_average/21/lift/Normal_ma(21)_lift.png>
+File: ../../../33_result/210806/moving_average/21/drag/01/Normal_ma(21)_drag_01.png Graphic file (type bmp)
+<../../../33_result/210806/moving_average/21/drag/01/Normal_ma(21)_drag_01.png>
+File: ../../../33_result/210806/moving_average/21/drag/01/C1_ma(21)_drag_01.png Graphic file (type bmp)
+<../../../33_result/210806/moving_average/21/drag/01/C1_ma(21)_drag_01.png>
+File: ../../../33_result/210806/moving_average/21/drag/01/Groove_A_ma(21)_drag_01.png Graphic file (type bmp)
+<../../../33_result/210806/moving_average/21/drag/01/Groove_A_ma(21)_drag_01.png>
+File: ../../../33_result/210806/moving_average/21/drag/01/Groove_B_ma(21)_drag_01.png Graphic file (type bmp)
+<../../../33_result/210806/moving_average/21/drag/01/Groove_B_ma(21)_drag_01.png>
+File: ../../../33_result/210806/moving_average/21/drag/01/Groove_C_ma(21)_drag_01.png Graphic file (type bmp)
+<../../../33_result/210806/moving_average/21/drag/01/Groove_C_ma(21)_drag_01.png>
+File: ../../../33_result/210806/moving_average/21/drag/01/Groove_D_ma(21)_drag_01.png Graphic file (type bmp)
+<../../../33_result/210806/moving_average/21/drag/01/Groove_D_ma(21)_drag_01.png>
+File: ../../../33_result/210806/moving_average/21/drag/01/R1_17.9_ma(21)_drag_01.png Graphic file (type bmp)
+<../../../33_result/210806/moving_average/21/drag/01/R1_17.9_ma(21)_drag_01.png>
+File: ../../../33_result/210806/moving_average/21/drag/01/R1_18.6_ma(21)_drag_01.png Graphic file (type bmp)
+<../../../33_result/210806/moving_average/21/drag/01/R1_18.6_ma(21)_drag_01.png>
+File: ../../../33_result/210806/moving_average/21/drag/01/R1_19.3_ma(21)_drag_01.png Graphic file (type bmp)
+<../../../33_result/210806/moving_average/21/drag/01/R1_19.3_ma(21)_drag_01.png>
+File: ../../../33_result/210806/moving_average/21/lift/01/Normal_ma(21)_lift_01.png Graphic file (type bmp)
+<../../../33_result/210806/moving_average/21/lift/01/Normal_ma(21)_lift_01.png>
  [1
 
 ] [2] [3] [4]
-File: ../../../33_result/210806/moving_average/21/lift/C1_ma(21)_lift.png Graphic file (type bmp)
-<../../../33_result/210806/moving_average/21/lift/C1_ma(21)_lift.png>
-File: ../../../33_result/210806/moving_average/21/lift/Groove_A_ma(21)_lift.png Graphic file (type bmp)
-<../../../33_result/210806/moving_average/21/lift/Groove_A_ma(21)_lift.png>
-File: ../../../33_result/210806/moving_average/21/lift/Groove_B_ma(21)_lift.png Graphic file (type bmp)
-<../../../33_result/210806/moving_average/21/lift/Groove_B_ma(21)_lift.png>
-File: ../../../33_result/210806/moving_average/21/lift/Groove_C_ma(21)_lift.png Graphic file (type bmp)
-<../../../33_result/210806/moving_average/21/lift/Groove_C_ma(21)_lift.png>
-File: ../../../33_result/210806/moving_average/21/lift/Groove_D_ma(21)_lift.png Graphic file (type bmp)
-<../../../33_result/210806/moving_average/21/lift/Groove_D_ma(21)_lift.png>
-File: ../../../33_result/210806/moving_average/21/lift/R1_17.9_ma(21)_lift.png Graphic file (type bmp)
-<../../../33_result/210806/moving_average/21/lift/R1_17.9_ma(21)_lift.png>
-File: ../../../33_result/210806/moving_average/21/lift/R1_18.6_ma(21)_lift.png Graphic file (type bmp)
-<../../../33_result/210806/moving_average/21/lift/R1_18.6_ma(21)_lift.png>
-File: ../../../33_result/210806/moving_average/21/lift/R1_19.3_ma(21)_lift.png Graphic file (type bmp)
-<../../../33_result/210806/moving_average/21/lift/R1_19.3_ma(21)_lift.png>
+File: ../../../33_result/210806/moving_average/21/lift/01/C1_ma(21)_lift_01.png Graphic file (type bmp)
+<../../../33_result/210806/moving_average/21/lift/01/C1_ma(21)_lift_01.png>
+File: ../../../33_result/210806/moving_average/21/lift/01/Groove_A_ma(21)_lift_01.png Graphic file (type bmp)
+<../../../33_result/210806/moving_average/21/lift/01/Groove_A_ma(21)_lift_01.png>
+File: ../../../33_result/210806/moving_average/21/lift/01/Groove_B_ma(21)_lift_01.png Graphic file (type bmp)
+<../../../33_result/210806/moving_average/21/lift/01/Groove_B_ma(21)_lift_01.png>
+File: ../../../33_result/210806/moving_average/21/lift/01/Groove_C_ma(21)_lift_01.png Graphic file (type bmp)
+<../../../33_result/210806/moving_average/21/lift/01/Groove_C_ma(21)_lift_01.png>
+File: ../../../33_result/210806/moving_average/21/lift/01/Groove_D_ma(21)_lift_01.png Graphic file (type bmp)
+<../../../33_result/210806/moving_average/21/lift/01/Groove_D_ma(21)_lift_01.png>
+File: ../../../33_result/210806/moving_average/21/lift/01/R1_17.9_ma(21)_lift_01.png Graphic file (type bmp)
+<../../../33_result/210806/moving_average/21/lift/01/R1_17.9_ma(21)_lift_01.png>
+File: ../../../33_result/210806/moving_average/21/lift/01/R1_18.6_ma(21)_lift_01.png Graphic file (type bmp)
+<../../../33_result/210806/moving_average/21/lift/01/R1_18.6_ma(21)_lift_01.png>
+File: ../../../33_result/210806/moving_average/21/lift/01/R1_19.3_ma(21)_lift_01.png Graphic file (type bmp)
+<../../../33_result/210806/moving_average/21/lift/01/R1_19.3_ma(21)_lift_01.png>
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 167.
  [5] [6] [7] [8] [9]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 167.
@@ -480,16 +480,16 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 167.
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 167.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 167.
 Package rerunfilecheck Info: File `morving_average(21).out' has not changed.
-(rerunfilecheck)             Checksum: EEA1F7EF4AD913A706F3C4F74653BD93;130.
+(rerunfilecheck)             Checksum: 49E6A19F08F1A167444B5EC3E4B12989;130.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 167.
  ) 
 Here is how much of TeX's memory you used:
  8406 strings out of 481768
- 125830 string characters out of 5933620
+ 126220 string characters out of 5933620
  399984 words of memory out of 5000000
  23660 multiletter control sequences out of 15000+600000
  538333 words of font info for 53 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
  34i,5n,36p,305b,360s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on morving_average(21).dvi (9 pages, 7168 bytes).
+Output written on morving_average(21).dvi (9 pages, 7276 bytes).
