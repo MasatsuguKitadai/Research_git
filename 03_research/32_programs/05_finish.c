@@ -62,26 +62,26 @@ int identify(char name[], char date[])
 
     range = data_long - (range_1);
 
-    int finish_num[ch];
+    int finish_num;
     double finish_value[ch];
-    double top[ch], bottom[ch], sum1[ch], sum2[ch], ave1[ch], ave2[ch];
+    double top, bottom, sum1, sum2, ave1, ave2;
     double d1[range_1], l1[range_1], d2[range_2], l2[range_2];
 
     // drag
 
-    finish_num[1] = 0;
+    finish_num = 0;
     finish_value[1] = 0;
-    top[1] = 0;
-    bottom[1] = 0;
+    top = 0;
+    bottom = 0;
 
     for (i = 200; i < range; i++)
     {
         // 配列の初期化
 
-        sum1[1] = 0;
-        ave1[1] = 0;
-        sum2[1] = 0;
-        ave2[1] = 0;
+        sum1 = 0;
+        ave1 = 0;
+        sum2 = 0;
+        ave2 = 0;
 
         // 指定された範囲の配列を作成
         for (j = 0; j < range_1; j++)
@@ -117,160 +117,77 @@ int identify(char name[], char date[])
         }
 
         // 範囲の最大値・最小値の特定
-        if (bottom[1] > d1[0])
+        if (bottom > d1[0])
         {
-            bottom[1] = d1[0];
+            bottom = d1[0];
         }
-        if (top[1] < d1[range_1 - 1])
+        if (top < d1[range_1 - 1])
         {
-            top[1] = d1[range_1 - 1];
+            top = d1[range_1 - 1];
         }
 
         // 平均値の算出 (前部)
         for (j = 0; j < range_1; j++)
         {
-            sum1[1] = sum1[1] + d1[j];
+            sum1 = sum1 + d1[j];
         }
 
-        ave1[1] = sum1[1] / range_1;
+        ave1 = sum1 / range_1;
 
         // 平均値の算出 (後部)
         for (k = 0; k < range_2; k++)
         {
-            sum2[1] = sum2[1] + d2[k];
+            sum2 = sum2 + d2[k];
         }
 
-        ave2[1] = sum2[1] / range_2;
+        ave2 = sum2 / range_2;
 
         // (1) drag
-        if (ave2[1] < bottom[1])
+        if (ave2 < bottom)
         {
-            finish_num[1] = i + range_1 + range_2;
-            finish_value[1] = value[i + range_1 + range_2][1];
+            finish_num = i + range_1 + range_2;
+            finish_value[1] = value[finish_num][1];
             break;
         }
     }
+
+    // 終了後からの平均値計算
+
+    int omit = 30;
+    double sum[2], ave[2];
+
+    // drag
+    sum[1] = 0;
+    ave[1] = 0;
+
+    for (i = finish_num; i < data_long - omit; i++)
+    {
+        sum[1] = sum[1] + value[i][1];
+    }
+
+    ave[1] = sum[1] / (data_long - omit - finish_num);
 
     // lift
 
-    finish_num[2] = 0;
-    finish_value[2] = 0;
-    top[2] = 0;
-    bottom[2] = 0;
+    finish_value[2] = value[finish_num][2];
 
-    for (i = 200; i < range; i++)
+    sum[2] = 0;
+    ave[2] = 0;
+
+    for (i = finish_num; i < data_long - omit; i++)
     {
-        // 配列の初期化
-
-        sum1[2] = 0;
-        ave1[2] = 0;
-        sum2[2] = 0;
-        ave2[2] = 0;
-
-        // 指定された範囲の配列を作成
-        for (j = 0; j < range_1; j++)
-        {
-            l1[j] = value[i + j][2];
-            // printf("[%d]\t%lf\t%lf\n", j, d1[j], l1[j]);
-        }
-
-        for (k = 1; k < range_2 + 1; k++)
-        {
-            l2[k] = value[i + range_1 + k][2];
-            // printf("[%d]\t%lf\t%lf\n", k, d2[k], l2[k]);
-        }
-
-        // 並び替え (小さい順)
-        for (x = 0; x < range_1; x++)
-        {
-            // lift
-            y = x;
-            for (z = x; z < range_1; z++)
-            {
-                if (l1[z] < l1[y])
-                {
-                    y = z;
-                }
-            }
-            if (x < y)
-            {
-                w = l1[x];
-                l1[x] = l1[y];
-                l1[y] = w;
-            }
-            // printf("[%d]\t%lf\t%lf\n", x, d[x], l[x]);
-        }
-        // printf("[%d]\t%lf\t%lf\n", i, me_d[i], me_l[i]);
-
-        // 範囲の最大値・最小値の特定
-        if (bottom[1] > l1[0])
-        {
-            bottom[1] = l1[0];
-        }
-        if (top[1] < l1[range_1 - 1])
-        {
-            top[1] = l1[range_1 - 1];
-        }
-
-        // 平均値の算出 (前部)
-        for (j = 0; j < range_1; j++)
-        {
-            sum1[2] = sum1[2] + l1[j];
-        }
-
-        ave1[2] = sum1[2] / range_1;
-
-        // 平均値の算出 (後部)
-        for (k = 0; k < range_2; k++)
-        {
-            sum2[2] = sum2[2] + l2[k];
-        }
-
-        ave2[2] = sum2[2] / range_2;
-
-        // (1) lift
-        if (ave2[2] > top[2])
-        {
-            finish_num[2] = i + range_1 + range_2;
-            finish_value[2] = value[i + range_1 + range_2][2];
-            break;
-        }
+        sum[2] = sum[2] + value[i][2];
     }
 
-    printf("[%d]\t%lf\t[%d]\t%lf\t(%s)\n", finish_num[1], finish_value[1], finish_num[2], finish_value[2], name);
-
-    // drag 終了後からの平均値計算
-
-    int omit = 30;
-    double sum, ave;
-    sum = 0;
-    ave = 0;
-
-    for (i = finish_num[1]; i < data_long - omit; i++)
-    {
-        sum = sum + value[i][1];
-    }
-
-    ave = sum / (data_long - omit - finish_num[1]);
-
-    // printf("[%d]\tvalue : %lf\taverage : %lf\t sum : %lf\t(%s)\n", finish_num[1], finish_value[1], ave, sum, name);
+    ave[2] = sum[2] / (data_long - omit - finish_num);
 
     // ファイル書き出し
 
-    fp5 = fopen(filename6, "w");
+    fp6 = fopen(filename6, "w");
 
-    // fprintf(fp5, "model, drag, drag, lift, lift\n", );
-    // fprintf(fp5, "%s, (sec), (v), (sec), (v)\n", );
-    fprintf(fp5, "%d\t%lf\t%d\t%lf\n", finish_num[1], finish_value[1], finish_num[2], finish_value[2]);
-    // fprintf(fp5, "前:%d\t後:%d\n", range_1, range_2);
+    fprintf(fp6, "%d\t%lf\t%lf\t%lf\t%lf\n", finish_num, finish_value[1], ave[1], finish_value[2], ave[2]);
 
-    fclose(fp5);
-
-    fp8 = fopen(filename8, "w");
-
-    fprintf(fp8, "%d\t%lf\n", finish_num[1], ave);
-
-    fclose(fp8);
+    fclose(fp6);
 }
 
 int main()

@@ -33,8 +33,5 @@ sprintf(filename5, "..//33_result//%s//raw_data//start_point//%s_sp.dat", date, 
 // 終了点特定 (1)
 sprintf(filename6, "..//33_result//%s//raw_data//finish_point//%s_fp.dat", date, name);
 
-// 開始点を含む点までの平均値
-sprintf(filename7, "..//33_result//%s//raw_data//start_average//%s_sa.dat", date, name);
-
-// 終了点後部の平均値
-sprintf(filename8, "..//33_result//%s//raw_data//finish_average//%s_fa.dat", date, name);
+// 線形補間
+sprintf(filename7, "..//33_result//%s//raw_data//linear_interpolation//%s_lerp.dat", date, name);
