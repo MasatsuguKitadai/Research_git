@@ -19,7 +19,7 @@ fprintf(gp, "set ylabel '%s'offset 0,0.0\n", yylabel);
 fprintf(gp, "set title '%s drag'\n", label);
 
 // fprintf(gp, "set samples 10000\n");
-fprintf(gp, "plot '%s' using 1:2 with lines lc 'black', 0 lw 2 lc 'dark-grey'\n", filename1);
+fprintf(gp, "plot '%s' using 1:2 with lines lc 'black'\n", filename1);
 fflush(gp); //Clean up Data
 
 // lift
@@ -42,6 +42,6 @@ fprintf(gp, "set ylabel '%s'offset 0,0.0\n", yylabel);
 fprintf(gp, "set title '%s lift'\n", label);
 
 // fprintf(gp, "set samples 10000\n");
-fprintf(gp, "plot '%s' using 1:3 with lines lc 'black', 0 lw 2 lc 'dark-grey'\n", filename1);
+fprintf(gp, "plot '%s' using 1:3 with lines lc 'black'\n", filename1);
 
 fflush(gp); //Clean up Data

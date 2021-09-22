@@ -3,8 +3,10 @@
 fprintf(gp, "set terminal pngcairo enhanced font 'Times New Roman,15' \n");
 fprintf(gp, "set output '%s'\n", graphname5);
 // fprintf(gp, "set multiplot\n");
-fprintf(gp, "unset key\n");
+// fprintf(gp, "unset key\n");
+fprintf(gp, "set key left top\n");
 fprintf(gp, "set term pngcairo size 1280, 960 font ',24'\n");
+fprintf(gp, "set key font ',20'\n");
 // fprintf(gp, "set size ratio %lf\n", size);
 
 fprintf(gp, "set lmargin screen 0.10\n");
@@ -19,7 +21,7 @@ fprintf(gp, "set ylabel '%s'offset 0,0.0\n", yylabel);
 fprintf(gp, "set title '%s drag'\n", label);
 
 // fprintf(gp, "set samples 10000\n");
-fprintf(gp, "plot '%s' using 1:2 with lines lc 'black', '%s' using 1:3 with lines lw 2 lc 'orange', 0 lw 2 lc 'dark-grey'\n", filename1, filename7);
+fprintf(gp, "plot '%s' using 1:2 with lines lc 'black' title 'raw data', '%s' using 1:3 with lines lw 2 lc 'orange' title 'correction data', 0 lw 2 lc 'dark-grey' notitle\n", filename1, filename7);
 
 fflush(gp); //Clean up Data
 
@@ -27,8 +29,10 @@ fflush(gp); //Clean up Data
 
 fprintf(gp, "set terminal pngcairo enhanced font 'Times New Roman,15' \n");
 fprintf(gp, "set output '%s'\n", graphname6);
-fprintf(gp, "unset key\n");
+// fprintf(gp, "unset key\n");
+fprintf(gp, "set key left top\n");
 fprintf(gp, "set term pngcairo size 1280, 960 font ',24'\n");
+fprintf(gp, "set key font ',20'\n");
 // fprintf(gp, "set size ratio %lf\n", size);
 
 fprintf(gp, "set lmargin screen 0.10\n");
@@ -43,6 +47,6 @@ fprintf(gp, "set ylabel '%s'offset 0,0.0\n", yylabel);
 fprintf(gp, "set title '%s lift'\n", label);
 
 // fprintf(gp, "set samples 10000\n");
-fprintf(gp, "plot '%s' using 1:3 with lines lc 'black', '%s' using 1:5 with lines lw 2 lc 'orange', 0 lw 2 lc 'dark-grey'\n", filename1, filename7);
+fprintf(gp, "plot '%s' using 1:3 with lines lc 'black' title 'raw data', '%s' using 1:5 with lines lw 2 lc 'orange' title 'correction data', 0 lw 2 lc 'dark-grey' notitle\n", filename1, filename7);
 
 fflush(gp); //Clean up Data

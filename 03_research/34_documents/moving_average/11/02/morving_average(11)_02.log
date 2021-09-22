@@ -1,9 +1,9 @@
-This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.3.30)  22 SEP 2021 09:03
+This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.9.16)  22 SEP 2021 14:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**/home/masatsugu/git/lab/03_research/34_documents/moving_average/11/02/morving_average(11)_02
-(/home/masatsugu/git/lab/03_research/34_documents/moving_average/11/02/morving_average(11)_02.tex
+**/home/kitadai/git_ubuntu/lab/03_research/34_documents/moving_average/11/02/morving_average(11)_02
+(/home/kitadai/git_ubuntu/lab/03_research/34_documents/moving_average/11/02/morving_average(11)_02.tex
 pLaTeX2e <2020-02-02>+2 (based on LaTeX2e <2020-02-02> patch level 2)
 L3 programming layer <2020-02-14> (/usr/share/texlive/texmf-dist/tex/platex/jsclasses/jsarticle.cls
 Document Class: jsarticle 2020/02/02 jsclasses (okumura, texjporg)
@@ -485,11 +485,11 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 167.
  ) 
 Here is how much of TeX's memory you used:
  8406 strings out of 481768
- 126448 string characters out of 5933620
+ 126463 string characters out of 5933620
  399987 words of memory out of 5000000
  23660 multiletter control sequences out of 15000+600000
  538333 words of font info for 53 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 34i,5n,36p,312b,360s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,5n,36p,317b,360s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on morving_average(11)_02.dvi (9 pages, 7328 bytes).
