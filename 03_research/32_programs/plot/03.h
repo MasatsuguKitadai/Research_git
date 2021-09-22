@@ -43,6 +43,6 @@ fprintf(gp, "set ylabel '%s'offset 0,0.0\n", yylabel);
 fprintf(gp, "set title '%s lift'\n", label);
 
 // fprintf(gp, "set samples 10000\n");
-fprintf(gp, "plot '%s' using 1:3 with lines lc 'black', '%s' using 1:3 with points pt 5 ps 2 lc 'red', '%s' using 1:3 with points pt 5 ps 2 lc 'red','%s' using 1:4 with points pt 5 ps 2 lc 'green','%s' using 1:5 with points pt 5 ps 2 lc 'green', '%s' using 1:4 with lines lw 2 lc 'green', 0 lw 2 lc 'dark-grey'\n", filename1, filename5, filename6, filename5, filename6, filename7);
+fprintf(gp, "plot '%s' using 1:3 with lines lc 'black', '%s' using 1:3 with points pt 5 ps 2 lc 'red', '%s' using 1:3 with points pt 5 ps 2 lc 'red','%s' using 1:5 with points pt 5 ps 2 lc 'green','%s' using 1:5 with points pt 5 ps 2 lc 'green', '%s' using 1:4 with lines lw 2 lc 'green', 0 lw 2 lc 'dark-grey'\n", filename1, filename5, filename6, filename5, filename6, filename7);
 
 fflush(gp); //Clean up Data
