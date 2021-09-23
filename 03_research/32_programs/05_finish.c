@@ -153,19 +153,20 @@ int identify(char name[], char date[])
 
     // 終了後からの平均値計算
 
-    int omit = 30;
+    int sec = 60;
+    int ave_num;
     double sum[2], ave[2];
 
     // drag
     sum[1] = 0;
     ave[1] = 0;
 
-    for (i = finish_num; i < data_long - omit; i++)
+    for (i = finish_num; i < finish_num + sec; i++)
     {
         sum[1] = sum[1] + value[i][1];
     }
 
-    ave[1] = sum[1] / (data_long - omit - finish_num);
+    ave[1] = sum[1] / sec;
 
     // lift
 
@@ -173,13 +174,13 @@ int identify(char name[], char date[])
 
     sum[2] = 0;
     ave[2] = 0;
-
+    
     for (i = finish_num; i < data_long - omit; i++)
     {
         sum[2] = sum[2] + value[i][2];
     }
 
-    ave[2] = sum[2] / (data_long - omit - finish_num);
+    ave[2] = sum[2] / sec;
 
     // ファイル書き出し
 

@@ -74,7 +74,6 @@ int ma(char name[], char date[])
         {
             sum1 = sum1 + value[i + j][1];
             sum2 = sum2 + value[i + j][2];
-            j = j + 1;
         }
 
         ma_d[i] = sum1 / range_ma;

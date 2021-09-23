@@ -147,7 +147,8 @@ int identify(char name[], char date[])
 
     // スタート前までの平均値の計算
 
-    int omit = 50;
+    int sec = 120;
+    int ave_num;
     double sum[2], ave[2];
 
     // drag
@@ -157,30 +158,31 @@ int identify(char name[], char date[])
     sum[1] = 0;
     ave[1] = 0;
 
-    for (i = omit; i < start_num + 1; i++)
+    for (i = start_num - sec; i < start_num + 1; i++)
     {
         sum[1] = sum[1] + value[i][1];
     }
 
-    ave[1] = sum[1] / (start_num + 1 - omit);
+    ave[1] = sum[1] / sec;
+    ave_num = start_num - sec / 2;
 
     // lift
 
     sum[2] = 0;
     ave[2] = 0;
 
-    for (i = omit; i < start_num + 1; i++)
+    for (i = start_num - sec; i < start_num + 1; i++)
     {
         sum[2] = sum[2] + value[i][2];
     }
 
-    ave[2] = sum[2] / (start_num + 1 - omit);
+    ave[2] = sum[2] / sec;
 
     // ファイル書き出し
 
     fp5 = fopen(filename5, "w");
 
-    fprintf(fp5, "%d\t%lf\t%lf\t%lf\t%lf\n", start_num, start_value[1], ave[1], start_value[2], ave[2]);
+    fprintf(fp5, "%d\t%lf\t%lf\t%lf\t%lf\t%d\n", start_num, start_value[1], ave[1], start_value[2], ave[2], ave_num);
 
     fclose(fp5);
 }

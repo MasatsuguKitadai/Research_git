@@ -4,7 +4,7 @@ int range_ma = 11;
 // range y (plot.c)
 
 // 一括指定
-const int max = 1;
+const int max = 2;
 
 // drag
 int y_min1 = -max;
