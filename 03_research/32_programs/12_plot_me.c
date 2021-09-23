@@ -21,12 +21,12 @@ double size;
 FILE *gp;
 
 /*********************************   gnuplot   *********************************/
-int plot(char name[], char date[], char label_name[])
+int plot_me(char name[], char date[], char label_name[])
 {
 #include "files/file.h"
 
-    // 生データ
-    sprintf(label, "%s", label_name);
+    // 中央値
+    sprintf(label, "%s  Me (%d)", label_name, range_me);
 
     // size
     size = 1;
@@ -51,15 +51,15 @@ int plot(char name[], char date[], char label_name[])
 // {
 //     // y軸範囲の設定に注意!!
 
-//     plot("C1", "210806", "C1");
-//     plot("Groove_A", "210806", "Groove A");
-//     plot("Groove_B", "210806", "Groove B");
-//     plot("Groove_C", "210806", "Groove C");
-//     plot("Groove_D", "210806", "Groove D");
-//     plot("Normal", "210806", "Normal");
-//     plot("R1_17.9", "210806", "R1 17.9");
-//     plot("R1_18.6", "210806", "R1 18.6");
-//     plot("R1_19.3", "210806", "R1 19.3");
+//     plot_me("C1", "210806", "C1");
+//     plot_me("Groove_A", "210806", "Groove A");
+//     plot_me("Groove_B", "210806", "Groove B");
+//     plot_me("Groove_C", "210806", "Groove C");
+//     plot_me("Groove_D", "210806", "Groove D");
+//     plot_me("Normal", "210806", "Normal");
+//     plot_me("R1_17.9", "210806", "R1 17.9");
+//     plot_me("R1_18.6", "210806", "R1 18.6");
+//     plot_me("R1_19.3", "210806", "R1 19.3");
 
 //     return (0);
 // }

@@ -29,6 +29,21 @@ int lerp(char name[], char date[])
     double value[N][2];
     int number[N];
 
+    // 変数の初期化
+
+    i = 0;
+    num = 0;
+    data_long = 0;
+    ch1 = 0;
+    ch2 = 0;
+
+    for (i = 0; i < N; i++)
+    {
+        value[i][1] = 0;
+        value[i][2] = 0;
+        number[i] = 0;
+    }
+
     // ch1:drag, ch2:lift
 
     while ((fscanf(fp1, "%d\t%lf\t%lf", &num, &ch1, &ch2)) != EOF)
@@ -44,7 +59,7 @@ int lerp(char name[], char date[])
     data_long = i;
 
     // 変数の宣言
-    int start_num, finish_num;
+    int start_num, finish_num, ave_num[2];
     double start_value[2], start_ave[2], finish_value[2], finish_ave[2];
 
     // ファイルの読み込み (開始点)
@@ -55,7 +70,7 @@ int lerp(char name[], char date[])
         exit(0);
     }
 
-    fscanf(fp5, "%d\t%lf\t%lf\t%lf\t%lf", &start_num, &start_value[1], &start_ave[1], &start_value[2], &start_ave[2]);
+    fscanf(fp5, "%d\t%lf\t%lf\t%lf\t%lf\t%d", &start_num, &start_value[1], &start_ave[1], &start_value[2], &start_ave[2], &ave_num[1]);
 
     fclose(fp5);
 
@@ -67,7 +82,7 @@ int lerp(char name[], char date[])
         exit(0);
     }
 
-    fscanf(fp6, "%d\t%lf\t%lf\t%lf\t%lf", &finish_num, &finish_value[1], &finish_ave[1], &finish_value[2], &finish_ave[2]);
+    fscanf(fp6, "%d\t%lf\t%lf\t%lf\t%lf\t%d", &finish_num, &finish_value[1], &finish_ave[1], &finish_value[2], &finish_ave[2], &ave_num[2]);
 
     fclose(fp6);
 
@@ -78,12 +93,12 @@ int lerp(char name[], char date[])
     double a[2], b[2];
 
     // 比例定数 a
-    a[1] = (finish_ave[1] - start_ave[1]) / (finish_num - start_num);
-    a[2] = (finish_ave[2] - start_ave[2]) / (finish_num - start_num);
+    a[1] = (finish_ave[1] - start_ave[1]) / (ave_num[2] - ave_num[1]);
+    a[2] = (finish_ave[2] - start_ave[2]) / (ave_num[2] - ave_num[1]);
 
     // 切片 b
-    b[1] = start_ave[1] - a[1] * start_num;
-    b[2] = start_ave[2] - a[2] * start_num;
+    b[1] = start_ave[1] - a[1] * ave_num[1];
+    b[2] = start_ave[2] - a[2] * ave_num[1];
 
     // 関数 f
     // printf("f(x) = %lf x + %lf \tdrag\t%s\n", a[1], b[1], name);
@@ -91,7 +106,6 @@ int lerp(char name[], char date[])
 
     // 変数の宣言
     int j, range;
-    range = finish_num - start_num;
     double f[data_long][2], c[data_long][2];
 
     // 配列の初期化
@@ -101,9 +115,9 @@ int lerp(char name[], char date[])
         f[j][2] = 0;
     }
 
-    // 線形補間の値の計算 
+    // 線形補間の値の計算
     // printf("%s\n", name);
-    for (j = start_num; j < start_num + range + 1; j++)
+    for (j = 0; j < data_long; j++)
     {
         f[j][1] = a[1] * j + b[1];
         f[j][2] = a[2] * j + b[2];
@@ -111,7 +125,7 @@ int lerp(char name[], char date[])
     }
 
     // 補正値の計算
-    for (j = start_num; j < start_num + range + 1; j++)
+    for (j = 0; j < data_long; j++)
     {
         c[j][1] = value[j][1] - f[j][1];
         c[j][2] = value[j][2] - f[j][2];
@@ -121,7 +135,7 @@ int lerp(char name[], char date[])
     // 書き出し
     fp7 = fopen(filename7, "w");
 
-    for (j = start_num; j < start_num + range + 1; j++)
+    for (j = 0; j < data_long; j++)
     {
         fprintf(fp7, "%d\t%lf\t%lf\t%lf\t%lf\n", j, f[j][1], c[j][1], f[j][2], c[j][2]);
     }
@@ -129,18 +143,18 @@ int lerp(char name[], char date[])
     fclose(fp7);
 }
 
-int main()
-{
-    // 2021/8/6
-    lerp("C1", "210806");
-    lerp("Groove_A", "210806");
-    lerp("Groove_B", "210806");
-    lerp("Groove_C", "210806");
-    lerp("Groove_D", "210806");
-    lerp("Normal", "210806");
-    lerp("R1_17.9", "210806");
-    lerp("R1_18.6", "210806");
-    lerp("R1_19.3", "210806");
+// int main()
+// {
+//     // 2021/8/6
+//     lerp("C1", "210806");
+//     lerp("Groove_A", "210806");
+//     lerp("Groove_B", "210806");
+//     lerp("Groove_C", "210806");
+//     lerp("Groove_D", "210806");
+//     lerp("Normal", "210806");
+//     lerp("R1_17.9", "210806");
+//     lerp("R1_18.6", "210806");
+//     lerp("R1_19.3", "210806");
 
-    return (0);
-}
+//     return (0);
+// }

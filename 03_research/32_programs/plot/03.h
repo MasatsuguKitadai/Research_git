@@ -21,7 +21,7 @@ fprintf(gp, "set ylabel '%s'offset 2,0.0\n", yylabel);
 fprintf(gp, "set title '%s drag'\n", label);
 
 // fprintf(gp, "set samples 10000\n");
-fprintf(gp, "plot '%s' using 1:2 with lines lc 'black' notitle, '%s' using 1:2 with points pt 5 ps 2 lc 'red' title 'start', '%s' using 1:2 with points pt 5 ps 2 lc 'blue' title 'finish','%s' using 6:3 with points pt 5 ps 2 lc 'green' title 'average','%s' using 1:3 with points pt 5 ps 2 lc 'green' notitle, '%s' using 1:2 with lines lw 2 lc 'green' notitle, 0 lw 2 lc 'dark-grey' notitle\n", filename1, filename5, filename6, filename5, filename6, filename7);
+fprintf(gp, "plot '%s' using 1:2 with lines lc 'black' notitle, '%s' using 1:2 with points pt 5 ps 2 lc 'red' title 'start', '%s' using 1:2 with points pt 5 ps 2 lc 'blue' title 'finish','%s' using 6:3 with points pt 5 ps 2 lc 'green' title 'average','%s' using 6:3 with points pt 5 ps 2 lc 'green' notitle, '%s' using 1:2 with lines lw 2 lc 'green' notitle, 0 lw 2 lc 'dark-grey' notitle\n", filename1, filename5, filename6, filename5, filename6, filename7);
 
 fflush(gp); //Clean up Data
 
@@ -47,6 +47,6 @@ fprintf(gp, "set ylabel '%s'offset 2,0.0\n", yylabel);
 fprintf(gp, "set title '%s lift'\n", label);
 
 // fprintf(gp, "set samples 10000\n");
-fprintf(gp, "plot '%s' using 1:3 with lines lc 'black' notitle, '%s' using 1:3 with points pt 5 ps 2 lc 'red' title 'start', '%s' using 1:3 with points pt 5 ps 2 lc 'blue' title 'finish','%s' using 6:5 with points pt 5 ps 2 lc 'green' title 'average','%s' using 1:5 with points pt 5 ps 2 lc 'green' notitle, '%s' using 1:4 with lines lw 2 lc 'green' notitle, 0 lw 2 lc 'dark-grey' notitle\n", filename1, filename5, filename6, filename5, filename6, filename7);
+fprintf(gp, "plot '%s' using 1:3 with lines lc 'black' notitle, '%s' using 1:3 with points pt 5 ps 2 lc 'red' title 'start', '%s' using 1:4 with points pt 5 ps 2 lc 'blue' title 'finish','%s' using 6:5 with points pt 5 ps 2 lc 'green' title 'average','%s' using 6:5 with points pt 5 ps 2 lc 'green' notitle, '%s' using 1:4 with lines lw 2 lc 'green' notitle, 0 lw 2 lc 'dark-grey' notitle\n", filename1, filename5, filename6, filename5, filename6, filename7);
 
 fflush(gp); //Clean up Data

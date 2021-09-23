@@ -11,8 +11,8 @@ DATE    :
 /*********************************   MAIN   *********************************/
 int ma(char name[], char date[])
 {
-    // 設定ファイルのインポート
-    #include "files/moving_average.h"
+// 設定ファイルのインポート
+#include "files/moving_average.h"
 
     // ファイル名の作成
 
@@ -33,12 +33,27 @@ int ma(char name[], char date[])
 
     // データの格納
 
-    int i = 0;
+    int i;
     int N = 1000;
     int num, data_long;
     double ch1, ch2;
     double value[N][ch];
     int number[N];
+
+    // 変数の初期化
+
+    i = 0;
+    num = 0;
+    data_long = 0;
+    ch1 = 0;
+    ch2 = 0;
+
+    for (i = 0; i < N; i++)
+    {
+        value[i][1] = 0;
+        value[i][2] = 0;
+        number[i] = 0;
+    }
 
     // ch1:drag, ch2:lift
 
@@ -59,6 +74,11 @@ int ma(char name[], char date[])
 
     int j = 0;
     int a, b;
+
+    // 変数の初期化
+
+    a = 0;
+    b = 0;
 
     a = (range_ma - 1) / 2;
     b = data_long - 2 * a;
@@ -93,18 +113,18 @@ int ma(char name[], char date[])
     fclose(fp1);
 }
 
-int main()
-{
-    // 2021/8/6
-    ma("C1", "210806");
-    ma("Groove_A", "210806");
-    ma("Groove_B", "210806");
-    ma("Groove_C", "210806");
-    ma("Groove_D", "210806");
-    ma("Normal", "210806");
-    ma("R1_17.9", "210806");
-    ma("R1_18.6", "210806");
-    ma("R1_19.3", "210806");
+// int main()
+// {
+//     // 2021/8/6
+//     ma("C1", "210806");
+//     ma("Groove_A", "210806");
+//     ma("Groove_B", "210806");
+//     ma("Groove_C", "210806");
+//     ma("Groove_D", "210806");
+//     ma("Normal", "210806");
+//     ma("R1_17.9", "210806");
+//     ma("R1_18.6", "210806");
+//     ma("R1_19.3", "210806");
 
-    return (0);
-}
+//     return (0);
+// }

@@ -1,5 +1,5 @@
 /******************************************************************************
-PROGRAM NAME : identify.c
+PROGRAM NAME : finish.c
 AUTHER  : masatsugu Kitadai
 DATE    :
 ******************************************************************************/
@@ -8,8 +8,8 @@ DATE    :
 #include <math.h>
 #define ch 2
 #include "files/fp.h"
-/*********************************   identifyIN   *********************************/
-int identify(char name[], char date[])
+/*********************************   MAIN   *********************************/
+int finish(char name[], char date[])
 {
 #include "files/file.h"
 
@@ -18,7 +18,7 @@ int identify(char name[], char date[])
 
     // ファイルの読み込み
 
-    // 開始点特定 範囲
+    // 停止点特定 範囲
     int range_1 = 150; // 前部の範囲
     int range_2 = 10;  // 後部の範囲
 
@@ -167,6 +167,7 @@ int identify(char name[], char date[])
     }
 
     ave[1] = sum[1] / sec;
+    ave_num = finish_num + sec / 2;
 
     // lift
 
@@ -174,19 +175,19 @@ int identify(char name[], char date[])
 
     sum[2] = 0;
     ave[2] = 0;
-    
-    for (i = finish_num; i < data_long - omit; i++)
+
+    for (i = finish_num; i < finish_num + sec + 1; i++)
     {
         sum[2] = sum[2] + value[i][2];
     }
 
-    ave[2] = sum[2] / sec;
+    ave[2] = sum[2] / (sec + 1);
 
     // ファイル書き出し
 
     fp6 = fopen(filename6, "w");
 
-    fprintf(fp6, "%d\t%lf\t%lf\t%lf\t%lf\n", finish_num, finish_value[1], ave[1], finish_value[2], ave[2]);
+    fprintf(fp6, "%d\t%lf\t%lf\t%lf\t%lf\t%d\n", finish_num, finish_value[1], ave[1], finish_value[2], ave[2], ave_num);
 
     fclose(fp6);
 }
@@ -194,15 +195,15 @@ int identify(char name[], char date[])
 int main()
 {
     // 2021/8/6
-    identify("C1", "210806");
-    identify("Groove_A", "210806");
-    identify("Groove_B", "210806");
-    identify("Groove_C", "210806");
-    identify("Groove_D", "210806");
-    identify("Normal", "210806");
-    identify("R1_17.9", "210806");
-    identify("R1_18.6", "210806");
-    identify("R1_19.3", "210806");
+    finish("C1", "210806");
+    finish("Groove_A", "210806");
+    finish("Groove_B", "210806");
+    finish("Groove_C", "210806");
+    finish("Groove_D", "210806");
+    finish("Normal", "210806");
+    finish("R1_17.9", "210806");
+    finish("R1_18.6", "210806");
+    finish("R1_19.3", "210806");
 
     return (0);
 }

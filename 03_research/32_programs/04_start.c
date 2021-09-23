@@ -1,5 +1,5 @@
 /******************************************************************************
-PROGRAM NAME : identify.c
+PROGRAM NAME : start.c
 AUTHER  : masatsugu Kitadai
 DATE    :
 ******************************************************************************/
@@ -9,7 +9,7 @@ DATE    :
 #define ch 2
 #include "files/fp.h"
 /*********************************   MAIN   *********************************/
-int identify(char name[], char date[])
+int start(char name[], char date[])
 {
 #include "files/file.h"
 
@@ -18,7 +18,7 @@ int identify(char name[], char date[])
 
     // ファイルの読み込み
 
-    // 開始点特定 範囲
+    // 起動点特定 範囲
     int range_1 = 90; // 前部の範囲
     int range_2 = 5;  // 後部の範囲
 
@@ -76,8 +76,6 @@ int identify(char name[], char date[])
     {
         // 配列の初期化
 
-        top = 0;
-        bottom = 0;
         sum1 = 0;
         ave1 = 0;
         sum2 = 0;
@@ -176,7 +174,7 @@ int identify(char name[], char date[])
         sum[2] = sum[2] + value[i][2];
     }
 
-    ave[2] = sum[2] / sec;
+    ave[2] = sum[2] / (sec + 1);
 
     // ファイル書き出し
 
@@ -187,18 +185,18 @@ int identify(char name[], char date[])
     fclose(fp5);
 }
 
-int main()
-{
-    // 2021/8/6
-    identify("C1", "210806");
-    identify("Groove_A", "210806");
-    identify("Groove_B", "210806");
-    identify("Groove_C", "210806");
-    identify("Groove_D", "210806");
-    identify("Normal", "210806");
-    identify("R1_17.9", "210806");
-    identify("R1_18.6", "210806");
-    identify("R1_19.3", "210806");
+// int main()
+// {
+//     // 2021/8/6
+//     start("C1", "210806");
+//     start("Groove_A", "210806");
+//     start("Groove_B", "210806");
+//     start("Groove_C", "210806");
+//     start("Groove_D", "210806");
+//     start("Normal", "210806");
+//     start("R1_17.9", "210806");
+//     start("R1_18.6", "210806");
+//     start("R1_19.3", "210806");
 
-    return (0);
-}
+//     return (0);
+// }
