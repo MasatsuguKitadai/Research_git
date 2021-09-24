@@ -8,8 +8,9 @@ DATE    :
 #include <math.h>
 #define ch 2
 FILE *fp1;
+#include // 方法別
 /*********************************   MAIN   *********************************/
-int read(char filename1[])
+int base_line(char name[],char date[])
 {
     // ファイルの読み込み
 
@@ -42,10 +43,6 @@ int read(char filename1[])
     fclose(fp1);
 
     data_long = i;
-}
 
-// int main ()
-// {
-//     // test
-//     read("..//..//33_result//210806//raw_data//dat//C1.dat");
-// }
+    // 開始前までの平均
+}

@@ -28,13 +28,13 @@ sprintf(filename3, "..//33_result//%s//raw_data//lift//01//%s_lift.png", date, n
 
 // 開始点特定 (1)
 sprintf(filename4, "..//33_result//%s//raw_data//dat//%s.dat", date, name);
-sprintf(filename5, "..//33_result//%s//raw_data//start_point//%s_sp.dat", date, name);
+sprintf(filename5, "..//33_result//%s//raw_data//start//%s_s.dat", date, name);
 
 // 終了点特定 (1)
-sprintf(filename6, "..//33_result//%s//raw_data//finish_point//%s_fp.dat", date, name);
+sprintf(filename6, "..//33_result//%s//raw_data//finish//%s_f.dat", date, name);
 
 // 線形補間
-sprintf(filename7, "..//33_result//%s//raw_data//linear_interpolation//%s_lerp.dat", date, name);
+sprintf(filename7, "..//33_result//%s//raw_data//lerp//%s_lerp.dat", date, name);
 
 // グラフ作成
 char graphname1[100];

@@ -19,7 +19,7 @@ int finish(char name[], char date[])
     // ファイルの読み込み
 
     // 停止点特定 範囲
-    int range_1 = 150; // 前部の範囲
+    int range_1 = 120; // 前部の範囲
     int range_2 = 10;  // 後部の範囲
 
     fp4 = fopen(filename4, "r");

@@ -54,6 +54,8 @@ int ma(char name[], char date[])
     fclose(fp);
 
     data_long = i;
+    // printf("datalong\t%d\n", data_long);
+
 
     // 計算 (移動平均)
 

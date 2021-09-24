@@ -8,6 +8,7 @@ DATE    :
 #include <math.h>
 #define ch 2
 #include "files/fp.h"
+// int range_ma = 5;
 /*********************************   MAIN   *********************************/
 int start(char name[], char date[])
 {
@@ -17,7 +18,7 @@ int start(char name[], char date[])
 
     // 起動点特定 範囲
     int range_1 = 90; // 前部の範囲
-    int range_2 = 5;  // 後部の範囲
+    int range_2 = 10;  // 後部の範囲
 
     fp4 = fopen(filename4, "r");
     if (filename4 == NULL)
@@ -35,7 +36,16 @@ int start(char name[], char date[])
     double value_2[N][ch];
     int number[N];
 
+    // 変数の初期化
+    for(i = 0; i < N; i++)
+    {
+        value_2[i][1] = 0;
+        value_2[i][2] = 0; 
+    }
+
     // ch1:drag, ch2:lift
+
+    i = 0;
 
     while ((fscanf(fp4, "%d\t%lf\t%lf", &num, &ch1, &ch2)) != EOF)
     {
@@ -49,6 +59,8 @@ int start(char name[], char date[])
     fclose(fp4);
 
     data_long = i;
+    // printf("datalong\t%d\n", data_long);
+
 
     // 計算 (測定開始点の特定)
 
@@ -69,6 +81,9 @@ int start(char name[], char date[])
     start_num = 0;
     start_value_2[1] = 0;
 
+
+    // printf("[%d]\n", start_num);
+
     for (i = 50; i < range; i++)
     {
         // 配列の初期化
@@ -77,6 +92,17 @@ int start(char name[], char date[])
         ave1 = 0;
         sum2 = 0;
         ave2 = 0;
+
+        // for (j = 0; j < range_1; j++)
+        // {
+        //     d1[j] = 0;
+        //     l1[j] = 0;
+        // }
+        // for (j = 0; j < range_2; j++)
+        // {
+        //     d2[j] = 0;
+        //     l2[j] = 0;
+        // }
 
         // 指定された範囲の配列を作成
         for (j = 0; j < range_1; j++)
@@ -131,6 +157,8 @@ int start(char name[], char date[])
 
         ave2 = sum2 / range_2;
 
+        // printf("[%d]\ttop :\t%lf\tave2s :\t%lf\n", i + range_1, top, ave2);
+
         // (1) drag
         if (ave2 > top)
         {
@@ -179,6 +207,7 @@ int start(char name[], char date[])
 
     fprintf(fp5, "%d\t%lf\t%lf\t%lf\t%lf\t%d\n", start_num, start_value_2[1], ave[1], start_value_2[2], ave[2], ave_num);
     // printf("[%d]\t%lf\t%lf\t%lf\t%lf\t[%d]\n", start_num, start_value_2[1], ave[1], start_value_2[2], ave[2], ave_num);
+    // printf("[%d]\t[%s]\n\n", start_num, name);
 
     fclose(fp5);
 }
@@ -195,6 +224,5 @@ int start(char name[], char date[])
 //     start("R1_17.9", "210806");
 //     start("R1_18.6", "210806");
 //     start("R1_19.3", "210806");
-
-//     return (0);
+// return (0);
 // }

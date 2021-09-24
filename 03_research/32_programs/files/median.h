@@ -28,13 +28,13 @@ sprintf(filename3, "..//33_result//%s//median//%d//lift//01//%s_me(%d)_lift.png"
 
 // 開始点特定 (1)
 sprintf(filename4, "..//33_result//%s//median//%d//dat//%s_me(%d).dat", date, range_me, name, range_me);
-sprintf(filename5, "..//33_result//%s//median//%d//start_point//%s_me(%d)_sp.dat", date, range_me, name, range_me);
+sprintf(filename5, "..//33_result//%s//median//%d//start//%s_me(%d)_s.dat", date, range_me, name, range_me);
 
 // 終了点特定 (1)
-sprintf(filename6, "..//33_result//%s//median//%d//finish_point//%s_me(%d)_fp.dat", date, range_me, name, range_me);
+sprintf(filename6, "..//33_result//%s//median//%d//finish//%s_me(%d)_f.dat", date, range_me, name, range_me);
 
 // 線形補間
-sprintf(filename7, "..//33_result//%s//median//%d//linear_interpolation//%s_me(%d)_lerp.dat", date, range_me, name, range_me);
+sprintf(filename7, "..//33_result//%s//median//%d//lerp//%s_me(%d)_lerp.dat", date, range_me, name, range_me);
 
 // グラフ作成
 char graphname1[100];

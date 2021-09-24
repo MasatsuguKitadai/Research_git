@@ -17,7 +17,7 @@ int start(char name[], char date[])
 
     // 起動点特定 範囲
     int range_1 = 90; // 前部の範囲
-    int range_2 = 5;  // 後部の範囲
+    int range_2 = 10;  // 後部の範囲
 
     fp4 = fopen(filename4, "r");
     if (filename4 == NULL)
