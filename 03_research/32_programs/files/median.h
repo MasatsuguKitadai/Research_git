@@ -1,6 +1,3 @@
-// 中央値 範囲
-int range_me = 5;
-
 // range y (plot.c)
 
 // 一括指定

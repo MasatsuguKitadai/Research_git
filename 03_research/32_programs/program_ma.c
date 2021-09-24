@@ -3,24 +3,28 @@ PROGRAM NAME :program_ma.c
 AUTHER  : Masatsugu Kitadai
 DATE    :
 ******************************************************************************/
-#include "02_moving_average.c"
-#include "04_start.c"
-#include "05_finish.c"
-#include "06_lerp.c"
-#include "11_plot_ma.c"
+
+// 移動平均 範囲
+int range_ma = 5;
+
+#include "20_moving_average.c"
+#include "41_start_ma.c"
+#include "51_finish_ma.c"
+#include "61_lerp_ma.c"
+#include "91_plot_ma.c"
 /*********************************   MAIN   *********************************/
 int main()
 {
     // 2021/8/6
-    ma("C1", "210806");
-    ma("Groove_A", "210806");
-    ma("Groove_B", "210806");
-    ma("Groove_C", "210806");
-    ma("Groove_D", "210806");
-    ma("Normal", "210806");
-    ma("R1_17.9", "210806");
-    ma("R1_18.6", "210806");
-    ma("R1_19.3", "210806");
+    // ma("C1", "210806");
+    // ma("Groove_A", "210806");
+    // ma("Groove_B", "210806");
+    // ma("Groove_C", "210806");
+    // ma("Groove_D", "210806");
+    // ma("Normal", "210806");
+    // ma("R1_17.9", "210806");
+    // ma("R1_18.6", "210806");
+    // ma("R1_19.3", "210806");
 
     start("C1", "210806");
     start("Groove_A", "210806");

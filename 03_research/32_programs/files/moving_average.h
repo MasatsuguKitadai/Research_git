@@ -1,6 +1,3 @@
-// 移動平均 範囲
-int range_ma = 5;
-
 // range y (plot.c)
 
 // 一括指定

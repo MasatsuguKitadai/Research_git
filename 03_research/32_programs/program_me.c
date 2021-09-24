@@ -3,11 +3,15 @@ PROGRAM NAME :program_ma.c
 AUTHER  : Masatsugu Kitadai
 DATE    :
 ******************************************************************************/
-#include "03_median.c"
-#include "04_start.c"
-#include "05_finish.c"
-#include "06_lerp.c"
-#include "12_plot_me.c"
+
+// 中央値 範囲
+int range_me = 5;
+
+#include "30_median.c"
+#include "42_start_me.c"
+#include "52_finish_me.c"
+#include "62_lerp_me.c"
+#include "92_plot_me.c"
 /*********************************   MAIN   *********************************/
 int main()
 {
