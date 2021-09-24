@@ -181,6 +181,7 @@ int start(char name[], char date[])
     fp5 = fopen(filename5, "w");
 
     fprintf(fp5, "%d\t%lf\t%lf\t%lf\t%lf\t%d\n", start_num, start_value[1], ave[1], start_value[2], ave[2], ave_num);
+    printf("[%d]\t%lf\t%lf\t%lf\t%lf\t[%d]\n", start_num, start_value[1], ave[1], start_value[2], ave[2], ave_num);
 
     fclose(fp5);
 }

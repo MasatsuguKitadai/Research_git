@@ -47,19 +47,19 @@ int plot_ma(char name[], char date[], char label_name[])
     pclose(gp);
 }
 
-int main()
-{
-    // y軸範囲の設定に注意!!
+// int main()
+// {
+//     // y軸範囲の設定に注意!!
 
-    plot_ma("C1", "210806", "C1");
-    plot_ma("Groove_A", "210806", "Groove A");
-    plot_ma("Groove_B", "210806", "Groove B");
-    plot_ma("Groove_C", "210806", "Groove C");
-    plot_ma("Groove_D", "210806", "Groove D");
-    plot_ma("Normal", "210806", "Normal");
-    plot_ma("R1_17.9", "210806", "R1 17.9");
-    plot_ma("R1_18.6", "210806", "R1 18.6");
-    plot_ma("R1_19.3", "210806", "R1 19.3");
+//     plot_ma("C1", "210806", "C1");
+//     plot_ma("Groove_A", "210806", "Groove A");
+//     plot_ma("Groove_B", "210806", "Groove B");
+//     plot_ma("Groove_C", "210806", "Groove C");
+//     plot_ma("Groove_D", "210806", "Groove D");
+//     plot_ma("Normal", "210806", "Normal");
+//     plot_ma("R1_17.9", "210806", "R1 17.9");
+//     plot_ma("R1_18.6", "210806", "R1 18.6");
+//     plot_ma("R1_19.3", "210806", "R1 19.3");
 
-    return (0);
-}
+//     return (0);
+// }

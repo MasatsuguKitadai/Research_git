@@ -1,5 +1,5 @@
 // 中央値 範囲
-int range_me = 11;
+int range_me = 5;
 
 // range y (plot.c)
 
@@ -37,7 +37,7 @@ sprintf(filename5, "..//33_result//%s//median//%d//start_point//%s_me(%d)_sp.dat
 sprintf(filename6, "..//33_result//%s//median//%d//finish_point//%s_me(%d)_fp.dat", date, range_me, name, range_me);
 
 // 線形補間
-sprintf(filename7, "..//33_result//%s//moving_average//%d//linear_interpolation//%s_ma(%d)_lerp.dat", date, range_me, name, range_me);
+sprintf(filename7, "..//33_result//%s//median//%d//linear_interpolation//%s_me(%d)_lerp.dat", date, range_me, name, range_me);
 
 // グラフ作成
 char graphname1[100];

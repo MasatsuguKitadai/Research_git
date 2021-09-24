@@ -29,21 +29,6 @@ int lerp(char name[], char date[])
     double value[N][2];
     int number[N];
 
-    // 変数の初期化
-
-    i = 0;
-    num = 0;
-    data_long = 0;
-    ch1 = 0;
-    ch2 = 0;
-
-    for (i = 0; i < N; i++)
-    {
-        value[i][1] = 0;
-        value[i][2] = 0;
-        number[i] = 0;
-    }
-
     // ch1:drag, ch2:lift
 
     while ((fscanf(fp1, "%d\t%lf\t%lf", &num, &ch1, &ch2)) != EOF)

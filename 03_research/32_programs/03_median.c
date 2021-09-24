@@ -1,5 +1,5 @@
 /******************************************************************************
-PROGRAM NAME : ma.c
+PROGRAM NAME : median.c
 AUTHER  : Masatsugu Kitadai
 DATE    :
 ******************************************************************************/
@@ -9,10 +9,10 @@ DATE    :
 #define ch 2
 #include "files/fp.h"
 /*********************************   MAIN   *********************************/
-int ma(char name[], char date[])
+int me(char name[], char date[])
 {
-    // 設定ファイルのインポート
-    #include "files/median.h"
+// 設定ファイルのインポート
+#include "files/median.h"
 
     // ファイル名の作成
 
@@ -138,18 +138,18 @@ int ma(char name[], char date[])
     fclose(fp1);
 }
 
-int main()
-{
-    // 2021/8/6
-    ma("C1", "210806");
-    ma("Groove_A", "210806");
-    ma("Groove_B", "210806");
-    ma("Groove_C", "210806");
-    ma("Groove_D", "210806");
-    ma("Normal", "210806");
-    ma("R1_17.9", "210806");
-    ma("R1_18.6", "210806");
-    ma("R1_19.3", "210806");
+// int main()
+// {
+//     // 2021/8/6
+//     me("C1", "210806");
+//     me("Groove_A", "210806");
+//     me("Groove_B", "210806");
+//     me("Groove_C", "210806");
+//     me("Groove_D", "210806");
+//     me("Normal", "210806");
+//     me("R1_17.9", "210806");
+//     me("R1_18.6", "210806");
+//     me("R1_19.3", "210806");
 
-    return (0);
-}
+//     return (0);
+// }

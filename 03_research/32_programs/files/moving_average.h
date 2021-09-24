@@ -1,5 +1,5 @@
 // 移動平均 範囲
-int range_ma = 21;
+int range_ma = 5;
 
 // range y (plot.c)
 

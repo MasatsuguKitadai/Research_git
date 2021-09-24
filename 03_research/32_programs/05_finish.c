@@ -192,18 +192,18 @@ int finish(char name[], char date[])
     fclose(fp6);
 }
 
-int main()
-{
-    // 2021/8/6
-    finish("C1", "210806");
-    finish("Groove_A", "210806");
-    finish("Groove_B", "210806");
-    finish("Groove_C", "210806");
-    finish("Groove_D", "210806");
-    finish("Normal", "210806");
-    finish("R1_17.9", "210806");
-    finish("R1_18.6", "210806");
-    finish("R1_19.3", "210806");
+// int main()
+// {
+//     // 2021/8/6
+//     finish("C1", "210806");
+//     finish("Groove_A", "210806");
+//     finish("Groove_B", "210806");
+//     finish("Groove_C", "210806");
+//     finish("Groove_D", "210806");
+//     finish("Normal", "210806");
+//     finish("R1_17.9", "210806");
+//     finish("R1_18.6", "210806");
+//     finish("R1_19.3", "210806");
 
-    return (0);
-}
+//     return (0);
+// }
