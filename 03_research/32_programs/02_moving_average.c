@@ -33,27 +33,12 @@ int ma(char name[], char date[])
 
     // データの格納
 
-    int i;
+    int i = 0;
     int N = 1000;
     int num, data_long;
     double ch1, ch2;
     double value[N][ch];
     int number[N];
-
-    // 変数の初期化
-
-    i = 0;
-    num = 0;
-    data_long = 0;
-    ch1 = 0;
-    ch2 = 0;
-
-    for (i = 0; i < N; i++)
-    {
-        value[i][1] = 0;
-        value[i][2] = 0;
-        number[i] = 0;
-    }
 
     // ch1:drag, ch2:lift
 
