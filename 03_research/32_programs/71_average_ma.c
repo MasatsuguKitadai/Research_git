@@ -8,7 +8,6 @@ DATE    :
 #include <math.h>
 #define ch 2
 #include "files/fp.h"
-int range_ma = 11;
 /*********************************   MAIN   *********************************/
 int average(char name[], char date[])
 {
@@ -85,7 +84,8 @@ int average(char name[], char date[])
     // (1) 基準の平均値
 
     // 測定開始直後・終了直前のスキップ
-    int skip1 = 30;
+    int range_1 = 120;
+    int range_2 = 60;
 
     double sum_zero[2];
     double ave_zero[2];
@@ -96,14 +96,14 @@ int average(char name[], char date[])
     ave_zero[1] = 0;
     ave_zero[2] = 0;
 
-    for (i = skip1; i < start_num; i++)
+    for (i = start_num - range_1; i < start_num; i++)
     {
         sum_zero[1] = sum_zero[1] + value[i][1];
         sum_zero[2] = sum_zero[2] + value[i][2];
         j  = j + 1;
     }
 
-    for (i = finish_num; i < data_long - skip1; i++)
+    for (i = finish_num; i < finish_num + range_2; i++)
     {
         sum_zero[1] = sum_zero[1] + value[i][1];
         sum_zero[2] = sum_zero[2] + value[i][2];
@@ -114,18 +114,19 @@ int average(char name[], char date[])
     ave_zero[2] = sum_zero[2] / j;
 
     // (2) 出力の平均値
-    int skip2 = 60;
 
     double sum_output[2];
     double ave_output[2];
     int k = 0;
+
+    int skip = 30;
 
     sum_output[1] = 0;
     sum_output[2] = 0;
     ave_output[1] = 0;
     ave_output[2] = 0;
 
-    for (i = start_num + skip2; i < finish_num - skip2; i++)
+    for (i = start_num + skip; i < finish_num - skip; i++)
     {
         sum_output[1] = sum_output[1] + value[i][1];
         sum_output[2] = sum_output[2] + value[i][2];
@@ -136,19 +137,33 @@ int average(char name[], char date[])
     ave_output[2] = sum_output[2] / k;
 
     // 書き出し
-    printf("ZERO\t[drag] %lf \t%lf \t[lift] %lf \t%lf \t[%s]\n", ave_zero[1], ave_output[1], ave_zero[2], ave_output[2], name);
+    // printf("ZERO\t[drag] %lf \t%lf \t[lift] %lf \t%lf \t[%s]\n", ave_zero[1], ave_output[1], ave_zero[2], ave_output[2], name);
+
+    fp = fopen(filename8, "w");
+    if (filename8 == NULL)
+    {
+        printf("Error! I can't open the file.\n");
+        exit(0);
+    }
+
+    for ( i = 0; i < data_long; i++)
+    {
+        fprintf(fp, "%d\t%lf\t%lf\t%lf\t%lf\n", i, ave_zero[1], ave_output[1], ave_zero[2], ave_output[2]);
+    }
+    
+    fclose(fp);
 }
 
-int main ()
-{
-    // 2021/8/6
-    average("C1", "210806");
-    average("Groove_A", "210806");
-    average("Groove_B", "210806");
-    average("Groove_C", "210806");
-    average("Groove_D", "210806");
-    average("Normal", "210806");
-    average("R1_17.9", "210806");
-    average("R1_18.6", "210806");
-    average("R1_19.3", "210806");
-}
+// int main ()
+// {
+//     // 2021/8/6
+//     average("C1", "210806");
+//     average("Groove_A", "210806");
+//     average("Groove_B", "210806");
+//     average("Groove_C", "210806");
+//     average("Groove_D", "210806");
+//     average("Normal", "210806");
+//     average("R1_17.9", "210806");
+//     average("R1_18.6", "210806");
+//     average("R1_19.3", "210806");
+// }

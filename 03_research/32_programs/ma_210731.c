@@ -10,6 +10,7 @@ int range_ma = 11;
 #include "41_start_ma.c"
 #include "51_finish_ma.c"
 #include "61_lerp_ma.c"
+#include "71_average_ma.c"
 #include "91_plot_ma.c"
 /*********************************   MAIN   *********************************/
 int main()
@@ -54,6 +55,16 @@ int main()
     lerp("R1_17.9", "210731");
     lerp("R1_18.6", "210731");
     lerp("R1_19.3", "210731");
+
+    average("C1", "210731");
+    average("Groove_A", "210731");
+    average("Groove_B", "210731");
+    average("Groove_C", "210731");
+    average("Groove_D", "210731");
+    average("Normal", "210731");
+    average("R1_17.9", "210731");
+    average("R1_18.6", "210731");
+    average("R1_19.3", "210731");
 
     plot_ma("C1", "210731", "C1");
     plot_ma("Groove_A", "210731", "Groove A");
