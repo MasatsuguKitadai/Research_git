@@ -23,8 +23,8 @@ char filename8[100];
 
 // ファイルの指定 (plot)
 sprintf(filename1, "..//33_result//%s//median//%d//dat//%s_me(%d).dat", date, range_me, name, range_me);
-sprintf(filename2, "..//33_result//%s//median//%d//drag//01//%s_me(%d)_drag.png", date, range_me, name, range_me);
-sprintf(filename3, "..//33_result//%s//median//%d//lift//01//%s_me(%d)_lift.png", date, range_me, name, range_me);
+sprintf(filename2, "..//33_result//%s//median//%d//drag//01//%s_me(%d)_drag_01.png", date, range_me, name, range_me);
+sprintf(filename3, "..//33_result//%s//median//%d//lift//01//%s_me(%d)_lift_01.png", date, range_me, name, range_me);
 
 // 開始点特定 (1)
 sprintf(filename4, "..//33_result//%s//median//%d//dat//%s_me(%d).dat", date, range_me, name, range_me);
