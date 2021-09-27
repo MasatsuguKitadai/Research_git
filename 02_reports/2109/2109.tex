@@ -75,12 +75,12 @@ lineskip=-0.5ex
     \item ドリフトの補正
     \item 補正結果と傾向
 \end{enumerate}
-\section*{進捗状況}
-今月は，実験データの解析を行った．
 \section{ノイズの除去方法について}
 データの事前処理として，移動平均法，中央値法を利用した．
 今回は任意の点において前後5点の合計11点を用いた移動平均をとり，
 そのデータを解析対象した．
+\par
+なお、当資料におけるグラフには2021年8月6日(金)に実施した"Normal"モデルの実験データを用いている.
 \begin{figure}[htbp]
     \footnotesize
     \begin{center}
@@ -140,7 +140,7 @@ lineskip=-0.5ex
     \item 時刻が小さい方を「前部」，大きい方を「後部」とし，n は採用するサンプル数を示す．
 \end{enumerate}
 
-\subsection{結果}
+\subsection{出力結果}
 以下のように，おおよそ起動及び停止時刻を特定することができ，
 他のモデルにおけるデータについても同様の結果が得られた．
 \begin{figure}[htbp]
@@ -164,5 +164,36 @@ lineskip=-0.5ex
     \item それぞれの平均値を起動時刻の60秒前，停止時刻の30秒後に適用し，それらを結んで直線を作成する．
     \item 元データから直線の差をとり，補正値として採用する．
 \end{enumerate}
+\subsection{出力結果}
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=80mm]{images/Normal_ma(11)_drag_03.png}
+        \caption{Linear interpolation of start / stop time (Drag)}
+        \includegraphics[width=80mm]{images/Normal_ma(11)_lift_03.png}
+        \caption{Linear interpolation of start / stop time (Lift)}
+    \end{center}
+\end{figure}
+\newpage
 \section{補正結果と傾向}
+\subsection{補正結果}
+補正後の結果は、以下の図のようになった。
+補正後のデータ(黄線)は、Drag、Liftのどちらも基準線(y=0)に沿うように移動しているため、
+ドリフトの補正は機能していると考えられる。
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=80mm]{images/Normal_ma(11)_drag_04.png}
+        \caption{Linear interpolation of start / stop time (Drag)}
+        \includegraphics[width=80mm]{images/Normal_ma(11)_lift_04.png}
+        \caption{Linear interpolation of start / stop time (Lift)}
+    \end{center}
+\end{figure}
+\subsection{補正結果・平均値の比較}
+補正後の出力結果から、以下の2部分に分けて平均値を算出した。
+\begin{enumerate}[(1)]
+    \item 水流の安定している範囲での出力
+    \item 起動前・停止後の出力
+\end{enumerate} 
+
 \end{document}
