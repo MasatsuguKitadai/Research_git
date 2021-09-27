@@ -1,0 +1,168 @@
+\documentclass[twocolumn,a4j]{jsarticle}
+\setlength{\topmargin}{-20.4cm}
+\setlength{\oddsidemargin}{-10.4mm}
+\setlength{\evensidemargin}{-10.4mm}
+\setlength{\textwidth}{18cm}
+\setlength{\textheight}{26cm}
+
+\usepackage[top=15truemm,bottom=25truemm,left=20truemm,right=20truemm]{geometry}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage[dvipdfmx]{color}
+\usepackage{listings}
+\usepackage{listings,jvlisting}
+\usepackage{geometry}
+\usepackage{framed}
+\usepackage{color}
+\usepackage[dvipdfmx]{hyperref}
+\usepackage{ascmac}
+\usepackage{enumerate}
+\usepackage{tabularx}
+\usepackage{cancel}
+\usepackage{scalefnt}
+
+\renewcommand{\figurename}{fig.}
+\renewcommand{\tablename}{table }
+
+\lstset{
+basicstyle={\ttfamily},
+identifierstyle={\small},
+commentstyle={\smallitshape},
+keywordstyle={\small\bfseries},
+ndkeywordstyle={\small},
+stringstyle={\small\ttfamily},
+frame={tb},
+breaklines=true,
+columns=[l]{fullflexible},
+xrightmargin=0zw,
+xleftmargin=3zw,
+numberstyle={\scriptsize},
+stepnumber=1,
+numbersep=1zw,
+lineskip=-0.5ex
+}
+
+\makeatletter
+\def\@maketitle
+{
+\begin{center}
+{\LARGE \@title \par}
+\end{center}
+\begin{flushright}
+{\large \@date\quad\@author}
+\end{flushright}
+\par\vskip 1.5em
+}
+\makeatother
+
+\setcounter{tocdepth}{3}
+
+\author{来代 勝胤}
+\title{令和3年度 9月度 報告書}
+\date{2021/9/8}
+
+\begin{document}
+\columnseprule=0.1mm
+
+\maketitle
+\section*{報告内容}
+\begin{enumerate}[1.]
+    \item ノイズの除去方法
+    \item 水流の起動・停止時刻の特定
+    \item ドリフトの補正
+    \item 補正結果と傾向
+\end{enumerate}
+\section*{進捗状況}
+今月は，実験データの解析を行った．
+\section{ノイズの除去方法について}
+データの事前処理として，移動平均法，中央値法を利用した．
+今回は任意の点において前後5点の合計11点を用いた移動平均をとり，
+そのデータを解析対象した．
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=80mm]{images/Normal_ma(11)_drag_01.png}
+        \caption{Moving average method}
+        \includegraphics[width=80mm]{images/Normal_me(11)_drag_01.png}
+        \caption{Median method}
+        ※ 2021/8/6 実施分の実験データを使用
+    \end{center}
+\end{figure}
+\section{水流の起動・停止時刻の特定}
+データの解析を行う前に，
+回流水槽の水流の起動及び停止時刻を特定する必要がある．
+特定に際して，後の処理を考慮した時刻を採用している．
+\vskip\baselineskip
+\subsection{起動・停止時刻特定の条件}
+\begin{itemize}
+    \item [$\blacksquare$] \textgt{起動時刻の特定}
+          \begin{itemize}
+              \item [$\bullet$] 大きく上昇する直前の時刻を捉えたい
+              \item [$\bullet$] Dragデータで特定し，Liftデータにも利用
+          \end{itemize}
+    \item [$\blacksquare$] \textgt{停止時刻の特定}
+          \begin{itemize}
+              \item [$\bullet$] 降下後の時刻を捉えたい
+              \item [$\bullet$] Dragデータで特定し，Liftデータにも利用
+          \end{itemize}
+\end{itemize}
+\subsection{起動時刻特定のアルゴリズム}
+\begin{enumerate}[(1)]
+    \item 任意の時刻 t(s) について，前部(n=60)と後部(n=10)を指定する．
+    \item 前部の平均値及び後部の最小値を特定する．
+    \item 前部の最大値が後部の平均値を上回った場合の時刻 t(s) を"起動時刻"として採用する．
+\end{enumerate}
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=80mm]{images/Normal_ma(11)_drag_02.png}
+        \caption{Moving average method}
+    \end{center}
+\end{figure}
+
+\subsection{停止時刻特定のアルゴリズム}
+\begin{enumerate}[(1)]
+    \item 任意の時刻 t(s) について，前部(n=120)と後部(n=10)を指定する．
+    \item 前部の最小値及び後部の平均値を特定する．
+    \item 後部の平均値が後部の最小値を下回った場合の時刻 t(s) を"停止時刻"として採用する．
+\end{enumerate}
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=80mm]{images/Normal_ma(11)_drag_02.png}
+        \caption{Moving average method}
+    \end{center}
+\end{figure}
+\begin{enumerate}[※]
+    \item 時刻が小さい方を「前部」，大きい方を「後部」とし，n は採用するサンプル数を示す．
+\end{enumerate}
+
+\subsection{結果}
+以下のように，おおよそ起動及び停止時刻を特定することができ，
+他のモデルにおけるデータについても同様の結果が得られた．
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=80mm]{images/Normal_ma(11)_drag_02.png}
+        \caption{Specifying start / stop time (Drag)}
+        \includegraphics[width=80mm]{images/Normal_ma(11)_lift_02.png}
+        \caption{Specifying start / stop time (Lift)}
+    \end{center}
+\end{figure}
+\section{ドリフトの補正について}
+実験に使用したひずみゲージの出力結果をみると，
+時刻が進むに連れて右肩下がりにドリフトするような傾向がみられた．
+そのため，回流水槽の起動前，停止後のデータを用いて線形補間を行い
+データに適用することとした．
+\vskip\baselineskip
+\subsection{ドリフト補正のアルゴリズム}
+\begin{enumerate}[(1)]
+    \item 特定した起動時刻の直前(n=120)及び，停止時刻直後(n=60)の平均値を算出する．
+    \item それぞれの平均値を起動時刻の60秒前，停止時刻の30秒後に適用し，それらを結んで直線を作成する．
+    \item 元データから直線の差をとり，補正値として採用する．
+\end{enumerate}
+\section{補正結果と傾向}
+\end{document}
