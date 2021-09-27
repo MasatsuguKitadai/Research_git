@@ -41,6 +41,7 @@ int plot_me(char name[], char date[], char label_name[])
 #include "plot/02.h"
 #include "plot/03.h"
 #include "plot/04.h"
+#include "plot/05.h"
 
     fprintf(gp, "exit\n"); // Quit gnuplot
 

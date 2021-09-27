@@ -36,6 +36,9 @@ sprintf(filename6, "..//33_result//%s//moving_average//%d//finish//%s_ma(%d)_f.d
 // 線形補間
 sprintf(filename7, "..//33_result//%s//moving_average//%d//lerp//%s_ma(%d)_lerp.dat", date, range_ma, name, range_ma);
 
+// 平均値の計算
+sprintf(filename8, "..//33_result//%s//moving_average//%d//average//%s_ma(%d)_average.dat", date, range_ma, name, range_ma);
+
 // グラフ作成
 char graphname1[100];
 char graphname2[100];
@@ -43,6 +46,8 @@ char graphname3[100];
 char graphname4[100];
 char graphname5[100];
 char graphname6[100];
+char graphname7[100];
+char graphname8[100];
 
 // ファイル名作成
 sprintf(graphname1, "..//33_result//%s//moving_average//%d//drag//02//%s_ma(%d)_drag_02.png", date, range_ma, name, range_ma);
@@ -53,3 +58,6 @@ sprintf(graphname4, "..//33_result//%s//moving_average//%d//lift//03//%s_ma(%d)_
 
 sprintf(graphname5, "..//33_result//%s//moving_average//%d//drag//04//%s_ma(%d)_drag_04.png", date, range_ma, name, range_ma);
 sprintf(graphname6, "..//33_result//%s//moving_average//%d//lift//04//%s_ma(%d)_lift_04.png", date, range_ma, name, range_ma);
+
+sprintf(graphname7, "..//33_result//%s//moving_average//%d//drag//05//%s_ma(%d)_drag_05.png", date, range_ma, name, range_ma);
+sprintf(graphname8, "..//33_result//%s//moving_average//%d//lift//05//%s_ma(%d)_lift_05.png", date, range_ma, name, range_ma);

@@ -4,12 +4,13 @@ AUTHER  : Masatsugu Kitadai
 DATE    :
 ******************************************************************************/
 // 中央値 範囲
-int range_me = 5;
+int range_me = 11;
 
 #include "30_median.c"
 #include "42_start_me.c"
 #include "52_finish_me.c"
 #include "62_lerp_me.c"
+#include "72_average_me.c"
 #include "92_plot_me.c"
 /*********************************   MAIN   *********************************/
 int main()
@@ -54,6 +55,16 @@ int main()
     lerp("R1_17.9", "210806");
     lerp("R1_18.6", "210806");
     lerp("R1_19.3", "210806");
+
+    average("C1", "210806");
+    average("Groove_A", "210806");
+    average("Groove_B", "210806");
+    average("Groove_C", "210806");
+    average("Groove_D", "210806");
+    average("Normal", "210806");
+    average("R1_17.9", "210806");
+    average("R1_18.6", "210806");
+    average("R1_19.3", "210806");
 
     plot_me("C1", "210806", "C1");
     plot_me("Groove_A", "210806", "Groove A");
