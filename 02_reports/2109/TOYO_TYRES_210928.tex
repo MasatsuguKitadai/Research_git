@@ -112,9 +112,9 @@ lineskip=-0.5ex
 \end{itemize}
 \subsection{起動時刻特定のアルゴリズム}
 \begin{enumerate}[(1)]
-    \item 任意の時刻 t(s) について，前部(n=60)と後部(n=10)を指定する.
-    \item 前部の平均値及び後部の最小値を特定する.
-    \item 前部の最大値が後部の平均値を上回った場合の時刻 t(s) を"起動時刻"として採用する.
+    \item 任意の時刻 t(s) について，前部(n=90)と後部(n=10)を指定する.
+    \item 前部の最大値の特定及び後部の平均値を算出する.
+    \item 後部の最大値が前部の平均値を上回った場合の時刻 t(s) を"起動時刻"として採用する.
 \end{enumerate}
 \begin{figure}[htbp]
     \footnotesize
@@ -127,7 +127,7 @@ lineskip=-0.5ex
 \begin{enumerate}[(1)]
     \item 任意の時刻 t(s) について，前部(n=120)と後部(n=10)を指定する.
     \item 前部の最小値及び後部の平均値を特定する.
-    \item 後部の平均値が後部の最小値を下回った場合の時刻 t(s) を"停止時刻"として採用する.
+    \item 後部の平均値が前部の最小値を下回った場合の時刻 t(s) を"停止時刻"として採用する.
 \end{enumerate}
 \begin{figure}[htbp]
     \footnotesize
@@ -136,7 +136,7 @@ lineskip=-0.5ex
         \caption{Method fo detecting finish time}
     \end{center}
 \end{figure}
-s\subsection{出力結果}
+\subsection{出力結果}
 以下のように，おおよそ起動及び停止時刻を特定することができ，
 他のモデルにおけるデータについても同様の結果が得られた.
 \begin{figure}[htbp]
