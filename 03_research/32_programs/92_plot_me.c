@@ -26,7 +26,7 @@ int plot_me(char name[], char date[], char label_name[])
 #include "files/median.h"
 
     // 中央値
-    sprintf(label, "%s  Me (%d)", label_name, range_me);
+    sprintf(label, "%s  Median n=%d", label_name, range_me);
 
     // size
     size = 1;

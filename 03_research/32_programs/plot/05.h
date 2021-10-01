@@ -21,7 +21,7 @@ fprintf(gp, "set ylabel '%s'offset 2,0.0\n", yylabel);
 fprintf(gp, "set title '%s drag'\n", label);
 
 // fprintf(gp, "set samples 10000\n");
-fprintf(gp, "plot 0 lw 2 lc 'dark-grey' notitle, '%s' using 1:3 with lines lw 2 lc 'orange' title 'correction data', '%s' using 1:3 with lines dt (10,5) lw 3 lc 'green' title 'average (1)', '%s' using 1:2 with lines dt (10,5) lw 3 lc 'magenta' title 'average (2)'\n", filename7, filename8, filename8);
+fprintf(gp, "plot 0 lw 2 lc 'dark-grey' notitle, '%s' using 1:3 with lines lw 2 lc 'orange' title 'correction', '%s' using 1:3 with lines dt (10,5) lw 3 lc 'green' title 'average (1)', '%s' using 1:2 with lines dt (10,5) lw 3 lc 'magenta' title 'average (2)'\n", filename7, filename8, filename8);
 
 fflush(gp); //Clean up Data
 
@@ -47,6 +47,6 @@ fprintf(gp, "set ylabel '%s'offset 2,0.0\n", yylabel);
 fprintf(gp, "set title '%s lift'\n", label);
 
 // fprintf(gp, "set samples 10000\n");
-fprintf(gp, "plot 0 lw 2 lc 'dark-grey' notitle, '%s' using 1:5 with lines lw 2 lc 'orange' title 'correction data', '%s' using 1:5 with lines dt (10,5) lw 3 lc 'green' title 'average (1)', '%s' using 1:4 with lines dt (10,5) lw 3 lc 'magenta' title 'average (2)'\n", filename7, filename8, filename8);
+fprintf(gp, "plot 0 lw 2 lc 'dark-grey' notitle, '%s' using 1:5 with lines lw 2 lc 'orange' title 'correction', '%s' using 1:5 with lines dt (10,5) lw 3 lc 'green' title 'average (1)', '%s' using 1:4 with lines dt (10,5) lw 3 lc 'magenta' title 'average (2)'\n", filename7, filename8, filename8);
 
 fflush(gp); //Clean up Data
