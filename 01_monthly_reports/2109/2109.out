@@ -1,8 +1,18 @@
 \BOOKMARK [1][-]{section.1}{進捗状況}{}% 1
-\BOOKMARK [1][-]{section.2}{研究背景と目的}{}% 2
-\BOOKMARK [1][-]{section.3}{作用力測定}{}% 3
-\BOOKMARK [2][-]{subsection.3.1}{測定実験}{section.3}% 4
-\BOOKMARK [2][-]{subsection.3.2}{測定結果}{section.3}% 5
-\BOOKMARK [2][-]{subsection.3.3}{今後の研究方針}{section.3}% 6
-\BOOKMARK [1][-]{section.4}{今月の予定}{}% 7
-\BOOKMARK [1][-]{section.5}{参考文献}{}% 8
+\BOOKMARK [1][-]{section.2}{ノイズの除去方法について}{}% 2
+\BOOKMARK [1][-]{section.3}{水流の起動・停止時刻の特定}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{起動・停止時刻特定の条件}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.2}{起動時刻特定のアルゴリズム}{section.3}% 5
+\BOOKMARK [2][-]{subsection.3.3}{停止時刻特定のアルゴリズム}{section.3}% 6
+\BOOKMARK [2][-]{subsection.3.4}{出力結果}{section.3}% 7
+\BOOKMARK [1][-]{section.4}{ドリフトの補正について}{}% 8
+\BOOKMARK [2][-]{subsection.4.1}{ドリフト補正のアルゴリズム}{section.4}% 9
+\BOOKMARK [2][-]{subsection.4.2}{出力結果}{section.4}% 10
+\BOOKMARK [1][-]{section.5}{補正結果と傾向}{}% 11
+\BOOKMARK [2][-]{subsection.5.1}{補正結果}{section.5}% 12
+\BOOKMARK [2][-]{subsection.5.2}{平均値の比較}{section.5}% 13
+\BOOKMARK [2][-]{subsection.5.3}{平均値算出のアルゴリズム}{section.5}% 14
+\BOOKMARK [3][-]{subsubsection.5.3.1}{avergae \(1\) : 水流の安定している範囲の出力}{subsection.5.3}% 15
+\BOOKMARK [3][-]{subsubsection.5.3.2}{avergae \(2\) : 起動前・停止後の出力}{subsection.5.3}% 16
+\BOOKMARK [2][-]{subsection.5.4}{結果}{section.5}% 17
+\BOOKMARK [1][-]{section.6}{今後の予定}{}% 18

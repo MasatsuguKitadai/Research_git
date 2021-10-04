@@ -52,7 +52,7 @@ lineskip=-0.5ex
 {\LARGE \@title \par}
 \end{center}
 \begin{flushright}
-{\large 報告書NO.04\quad\@date\quad\@author}
+{\large 報告書NO.05\quad\@date\quad\@author}
 \end{flushright}
 \par\vskip 1.5em
 }
@@ -61,7 +61,7 @@ lineskip=-0.5ex
 \setcounter{tocdepth}{3}
 
 \author{来代 勝胤}
-\title{令和3年度 8月 報告書}
+\title{令和3年度 9月 報告書}
 \date{2021/9/8}
 
 \begin{document}
@@ -71,98 +71,194 @@ lineskip=-0.5ex
 \section*{報告内容}
 \begin{enumerate}[1.]
     \item 進捗状況
-    \item 研究背景と目的
-    \item 作用力測定
-    \item 今月の予定
-    \item 参考文献
+    \item ノイズの除去方法
+    \item 水流の起動・停止時刻の特定
+    \item ドリフトの補正
+    \item 補正結果と傾向
+    \item 今後の予定
 \end{enumerate}
 \section{進捗状況}
-大学院入試があったため、2ヶ月ほど卒業研究に着手できていなかったが、
-村田先生、M1末次さんが代わりに実験を進めてくれており、
-8つのタイヤモデルを用いた実験データを2回分を取得できた。\par
-今後は、この取得したデータをもとに解析を進め、
-それぞれのモデル周りの流れ場の違いを明らかにすることを目的として研究を進める。
-\section{研究背景と目的}
-エネルギー資源の大量消費に関する問題の中で,「自動車のランニングコスト」が大きく取り上げられている.
-ランニングコストの削減方法について「空気抵抗の削減」は,すべての自動車に対して有効な手段であるといえ,
-特にタイヤに働く空気抵抗は25 ~ 40 \% を占めるとされる. \par
-関連する研究内容として,抗力および流れ場に関するものがあり,前者は抗力発生のメカニズムの理解,
-後者は周りの流れ場特性の説明が挙げられる.
-近年の研究では,数値計算が主流となっているが,それを裏付ける実測が不可欠であると考えられる.\par 
-したがって,自動車のランニングコスト削減のため,タイヤに作用する空気抵抗に着目し,
-タイヤ形状およびその周辺形状が揚抗力の発生にどのような影響を与えるか,その差異が生じるメカニズムを理解すること,
-また,数値計算結果の信頼性を保証するため,実験測定を行いその指標として活用される結果を得ることを目的としている. 
-\section{作用力測定}
-\subsection{測定実験}
-作用力の実験は右上図のようなモデルを用いて,それぞれ2回ずつ計測を行った。
-\newpage
-\begin{table}[h]
-    \caption{Feature of models}
+今月は、実験データから回流水槽の水流の開始及び停止時刻を検出し、
+ドリフト補正を行った。また、処理したデータを用いて簡易的に
+各モデルについて出力値の比較を行った。
+\section{ノイズの除去方法について}
+データの事前処理として，移動平均法，中央値法を利用した.
+今回は任意の点において前後5点の合計11点を用いた移動平均をとり，
+そのデータを解析対象した.
+\par
+なお,当資料におけるグラフには2021年8月6日(金)に実施した"Normal"モデルの実験データを用いている.
+\begin{figure}[htbp]
     \footnotesize
     \begin{center}
-        \begin{tabular}{|p{20mm}|p{45mm}|}
-            \hline
-            \multicolumn{1}{|c|}{\textgt{名称}} & \multicolumn{1}{|c|}{\textgt{特徴}} \\ \hline
-            \multicolumn{1}{|c|}{Normal}        & \begin{tabular}{l} {肩部 R1, 幅 18.6 [mm] }\end{tabular}           \\ \hline
-            \multicolumn{1}{|c|}{Type a}        & \begin{tabular}{l} {肩部 R1, 幅 17.9 [mm] }\end{tabular}           \\ \hline
-            \multicolumn{1}{|c|}{Type b}        & \begin{tabular}{l} {肩部 R1, 幅 19.3 [mm] }\end{tabular}           \\ \hline
-            \multicolumn{1}{|c|}{Type c}        & \begin{tabular}{l} {肩部 C1, 幅 18.6 [mm] }\end{tabular}           \\ \hline
-            \multicolumn{1}{|c|}{Groove A}      & \begin{tabular}{l} 回転方向の溝 ※\end{tabular}           \\ \hline
-            \multicolumn{1}{|c|}{Groove B}      & \begin{tabular}{l} 回転方向及び垂直方向の溝 ※\end{tabular}           \\ \hline
-            \multicolumn{1}{|c|}{Groove C}      & \begin{tabular}{l} 回転方向及びそれに45°傾いた溝 ※\end{tabular}           \\ \hline
-            \multicolumn{1}{|c|}{Groove D}      & \begin{tabular}{l} 回転方向及びそれに-45°傾いた溝 ※\end{tabular}           \\ \hline
-        \end{tabular}
+        \includegraphics[width=80mm]{images/Normal_ma(11)_drag_01.png}
+        \caption{Moving average method}
+        \includegraphics[width=80mm]{images/Normal_me(11)_drag_01.png}
+        \caption{Median method}
     \end{center}
+\end{figure}
+\section{水流の起動・停止時刻の特定}
+データの解析を行う前に，
+回流水槽の水流の起動及び停止時刻を特定する必要がある.
+特定に際して，後の処理を考慮した時刻を採用している.
+
+\subsection{起動・停止時刻特定の条件}
+\begin{itemize}
+    \item [$\blacksquare$] \textgt{起動時刻の特定}
+        \begin{itemize}
+            \item [$\bullet$] 大きく上昇する直前の時刻を捉えたい
+            \item [$\bullet$] Dragデータで特定し，Liftデータにも利用
+        \end{itemize}
+    \item [$\blacksquare$] \textgt{停止時刻の特定}
+        \begin{itemize}
+            \item [$\bullet$] 降下後の時刻を捉えたい
+            \item [$\bullet$] Dragデータで特定し，Liftデータにも利用
+        \end{itemize}
+\end{itemize}
+\subsection{起動時刻特定のアルゴリズム}
+\begin{enumerate}[(1)]
+    \item 任意の時刻 t(s) について，前部(n=90)と後部(n=10)を指定する.
+    \item 前部の最大値の特定及び後部の平均値を算出する.
+    \item 後部の最大値が前部の平均値を上回った場合の時刻 t(s) を"起動時刻"として採用する.
+\end{enumerate}
+\begin{figure}[htbp]
+    \footnotesize
     \begin{center}
-        ※ 肩部,幅は Normal と共通
+        \includegraphics[width=80mm]{images/start.png}
+        \caption{Method fo detecting start time}
+    \end{center}
+\end{figure}
+\subsection{停止時刻特定のアルゴリズム}
+\begin{enumerate}[(1)]
+    \item 任意の時刻 t(s) について，前部(n=120)と後部(n=10)を指定する.
+    \item 前部の最小値及び後部の平均値を特定する.
+    \item 後部の平均値が前部の最小値を下回った場合の時刻 t(s) を"停止時刻"として採用する.
+\end{enumerate}
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=80mm]{images/finish.png}
+        \caption{Method fo detecting finish time}
+    \end{center}
+\end{figure}
+\subsection{出力結果}
+以下のように，おおよそ起動及び停止時刻を特定することができ，
+他のモデルにおけるデータについても同様の結果が得られた.
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=80mm]{images/Normal_ma(11)_drag_02.png}
+        \caption{Detecting start / stop time (Drag)}
+        \includegraphics[width=80mm]{images/Normal_ma(11)_lift_02.png}
+        \caption{Detecting start / stop time (Lift)}
+    \end{center}
+\end{figure}
+\newpage
+\section{ドリフトの補正について}
+実験に使用したひずみゲージの出力結果をみると，
+時刻が進むに連れて右肩下がりにドリフトするような傾向がみられた.
+そのため，回流水槽の起動前，停止後のデータを用いて線形補間を行い
+データに適用することとした.
+
+\subsection{ドリフト補正のアルゴリズム}
+\begin{enumerate}[(1)]
+    \item 特定した起動時刻の直前(n=120)及び，停止時刻直後(n=60)の平均値を算出する.
+    \item それぞれの平均値を起動時刻の60秒前，停止時刻の30秒後に適用し，それらを結んで直線を作成する.
+    \item 元データから直線の差をとり，補正値として採用する.
+\end{enumerate}
+\subsection{出力結果}
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=80mm]{images/Normal_ma(11)_drag_03.png}
+        \caption{Linear interpolation of start / stop time (Drag)}
+    \end{center}
+\end{figure}
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=80mm]{images/Normal_ma(11)_lift_03.png}
+        \caption{Linear interpolation of start / stop time (Lift)}
+    \end{center}
+\end{figure}
+\newpage
+\section{補正結果と傾向}
+\subsection{補正結果}
+補正後の結果は，以下の図のようになった.
+補正後のデータ(黄線)は，Drag，Liftのどちらも基準線(y=0)に沿うように移動している.
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=80mm]{images/Normal_ma(11)_drag_04.png}
+        \caption{Linear interpolation of start / stop time (Drag)}
+        \includegraphics[width=80mm]{images/Normal_ma(11)_lift_04.png}
+        \caption{Linear interpolation of start / stop time (Lift)}
+    \end{center}
+\end{figure}
+\newpage
+\subsection{平均値の比較}
+補正後の出力結果から，以下の2部分に分けて平均値を算出した.
+\begin{itemize}
+    \item 水流の安定している範囲の出力
+    \item 起動前・停止後の出力
+\end{itemize}
+\subsection{平均値算出のアルゴリズム}
+\subsubsection{avergae (1) : 水流の安定している範囲の出力}
+\begin{itemize}
+    \item 特定した起動時刻の直後(n=30)及び，停止時刻直前(n=30)を除いた部分の平均値を算出する.
+\end{itemize}
+\subsubsection{avergae (2) : 起動前・停止後の出力}
+\begin{itemize}
+    \item 特定した起動時刻の直前(n=120)及び，停止時刻直後(n=60)から平均値を算出する.
+\end{itemize}
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=80mm]{images/average.png}
+    \end{center}
+\end{figure}
+\newpage
+\subsection{結果}
+算出した結果をプロットすると以下のようになった.\par
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=80mm]{images/Normal_ma(11)_drag_05.png}
+        \caption{Calculation of average value (Drag)}
+        \includegraphics[width=80mm]{images/Normal_ma(11)_lift_05.png}
+        \caption{Calculation of average value (Lift)}
+    \end{center}
+\end{figure}
+また，それぞれのモデルのDragについて，算出したものを以下の表に，
+2回分の実験におけるaverage(2)について表にまとめた.\par
+表1をみると，average (2) は，すべての補正データにおいて
+おおよそゼロに近い値を示しており，ほかの実験データについても同様な傾向が見られた.
+したがって，ドリフトの補正は機能していると考えられる.\par
+次に表2をみると，傾向の一致しない場合が数多くみられた.
+\begin{enumerate}[※]
+    \item Data(1)は2021年8月6日実施分，Data(2)は2021年7月31日実施分のデータを用いていることを示す.
+\end{enumerate}
+\begin{table}[htbp]
+    \footnotesize
+    \caption{Average of Data (1)}
+    \begin{center}
+        \includegraphics[width=80mm]{images/Picture2.png}
     \end{center}
 \end{table}
-\begin{figure}[htbp]
+\begin{table}[htbp]
     \footnotesize
+    \caption{Average of all data}
     \begin{center}
-        \includegraphics[width=70mm]{images/models_1.jpg}
-        \caption{Image of models}
-        ※ Type a, Type b,Type b は省略
+        \includegraphics[width=85mm]{images/Picture1.png}
     \end{center}
-\end{figure}
-\subsection{測定結果}
-データの処理ができていないため、
-例として Normal の抗力の実験結果 (実験2回目) のグラフを示す.
-\begin{figure}[htbp]
-    \begin{center}
-        \includegraphics[width=80mm]{images/graph.jpg}
-        \caption{Result of Normal's drag}
-    \end{center}
-\end{figure}
+\end{table}
 \newpage
-\subsection{今後の研究方針}
+\section{今後の予定}
+今後は,以下のような項目でデータの解析を進めていく予定である.
 \begin{itemize}
-    \item [$\blacksquare$] \textgt{ノイズの除去}\\
-          それぞれのモデルにおける作用力の違いを明らかにするため、
-          まずは測定データのノイズを除去する必要がある。
-          したがって、FFTの理解及びプログラムへ実装し、不要な周波数成分の除去を行う.
-    \item [$\blacksquare$] \textgt{ドリフトの考慮}\\
-          測定開始から時間経過とともに基準点が変動していくドリフトを考慮する必要がある。
-          そのため、その方法を検討・試行して、実用的なデータを得られるようにする。
-    \item [$\blacksquare$] \textgt{校正実験データの適用}\\
-          6月に行ったひずみゲージの校正実験結果をもとに
-          出力電圧を作用力へと換算し、モデルごとの差異を確かめる。
-\end{itemize}
-\section{今月の予定}
-\begin{itemize}
-    \item [$\blacksquare$] \textgt{FFTの実装}
-          \begin{itemize}
-              \item [$\bullet$] FFTのプログラムの作成
-              \item [$\bullet$] バンドパスフィルタの適切な設定
-              \item [$\bullet$] 9月下旬を目標
-          \end{itemize}
-    \item [$\blacksquare$] \textgt{ドリフト補正方法の検討}
-          \begin{itemize}
-              \item [$\bullet$] 情報収集
-              \item [$\bullet$] 補正方法の試行
-              \item [$\bullet$] 10月度報告会を目標
-          \end{itemize}
+    \item ノイズ処理手法の見直し
+    \item 移動平均に用いるサンプル数の見直し
+    \item 補正データの再処理
+    \item 校正実験のデータを用いたCd・Cl値の算出
 \end{itemize}
 
-\section{参考文献}
 \end{document}
