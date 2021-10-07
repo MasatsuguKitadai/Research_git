@@ -1,9 +1,9 @@
-This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.3.30)  17 SEP 2021 09:17
+This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.9.16)  7 OCT 2021 11:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**/home/masatsugu/git/lab/03_research/34_documents/raw_data/raw_data
-(/home/masatsugu/git/lab/03_research/34_documents/raw_data/raw_data.tex
+**/home/kitadai/git/lab/03_research/34_documents/raw_data/raw_data
+(/home/kitadai/git/lab/03_research/34_documents/raw_data/raw_data.tex
 pLaTeX2e <2020-02-02>+2 (based on LaTeX2e <2020-02-02> patch level 2)
 L3 programming layer <2020-02-14> (/usr/share/texlive/texmf-dist/tex/platex/jsclasses/jsarticle.cls
 Document Class: jsarticle 2020/02/02 jsclasses (okumura, texjporg)
@@ -349,7 +349,8 @@ File: l3backend-dvips.def 2020-02-03 L3 backend support: dvips
 \g__pdf_backend_annotation_int=\count284
 \g__pdf_backend_link_int=\count285
 \g__pdf_backend_link_sf_int=\count286
-) (./raw_data.aux)
+)
+No file raw_data.aux.
 \openout1 = `raw_data.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
@@ -372,7 +373,6 @@ LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 36.
 LaTeX Font Info:    ... okay on input line 36.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 36.
 LaTeX Font Info:    ... okay on input line 36.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: dvips
 *geometry* verbose mode - [ preamble ] result:
@@ -422,9 +422,12 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 36.
 LaTeX Info: Redefining \pageref on input line 36.
 LaTeX Info: Redefining \nameref on input line 36.
- (./raw_data.out) (./raw_data.out)
 \@outlinefile=\write3
 \openout3 = `raw_data.out'.
+
+
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
 
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
 (Font)              scaled to size 13.83836pt on input line 37.
@@ -434,62 +437,338 @@ LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
 (Font)              scaled to size 13.83836pt on input line 37.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 13.83836pt on input line 37.
+
+LaTeX Warning: File `../../33_result/210806/raw_data/drag/Normal_drag.png' not found on input line 42.
+
+
+! LaTeX Error: Cannot determine size of graphic in ../../33_result/210806/raw_data/drag/Normal_drag.xbb (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.42 ...sult/210806/raw_data/drag/Normal_drag.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 File: ../../33_result/210806/raw_data/drag/Normal_drag.png Graphic file (type bmp)
 <../../33_result/210806/raw_data/drag/Normal_drag.png>
+
+LaTeX Warning: File `../../33_result/210806/raw_data/drag/C1_drag.png' not found on input line 49.
+
+
+! LaTeX Error: Cannot determine size of graphic in ../../33_result/210806/raw_data/drag/C1_drag.xbb (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.49 ...3_result/210806/raw_data/drag/C1_drag.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 File: ../../33_result/210806/raw_data/drag/C1_drag.png Graphic file (type bmp)
 <../../33_result/210806/raw_data/drag/C1_drag.png>
+
+LaTeX Warning: File `../../33_result/210806/raw_data/drag/Groove_A_drag.png' not found on input line 56.
+
+
+! LaTeX Error: Cannot determine size of graphic in ../../33_result/210806/raw_data/drag/Groove_A_drag.xbb (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.56 ...lt/210806/raw_data/drag/Groove_A_drag.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 File: ../../33_result/210806/raw_data/drag/Groove_A_drag.png Graphic file (type bmp)
 <../../33_result/210806/raw_data/drag/Groove_A_drag.png>
+
+LaTeX Warning: File `../../33_result/210806/raw_data/drag/Groove_B_drag.png' not found on input line 63.
+
+
+! LaTeX Error: Cannot determine size of graphic in ../../33_result/210806/raw_data/drag/Groove_B_drag.xbb (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.63 ...lt/210806/raw_data/drag/Groove_B_drag.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 File: ../../33_result/210806/raw_data/drag/Groove_B_drag.png Graphic file (type bmp)
 <../../33_result/210806/raw_data/drag/Groove_B_drag.png>
+
+LaTeX Warning: File `../../33_result/210806/raw_data/drag/Groove_C_drag.png' not found on input line 70.
+
+
+! LaTeX Error: Cannot determine size of graphic in ../../33_result/210806/raw_data/drag/Groove_C_drag.xbb (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.70 ...lt/210806/raw_data/drag/Groove_C_drag.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 File: ../../33_result/210806/raw_data/drag/Groove_C_drag.png Graphic file (type bmp)
 <../../33_result/210806/raw_data/drag/Groove_C_drag.png>
+
+LaTeX Warning: File `../../33_result/210806/raw_data/drag/Groove_D_drag.png' not found on input line 77.
+
+
+! LaTeX Error: Cannot determine size of graphic in ../../33_result/210806/raw_data/drag/Groove_D_drag.xbb (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.77 ...lt/210806/raw_data/drag/Groove_D_drag.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 File: ../../33_result/210806/raw_data/drag/Groove_D_drag.png Graphic file (type bmp)
 <../../33_result/210806/raw_data/drag/Groove_D_drag.png>
+
+LaTeX Warning: File `../../33_result/210806/raw_data/drag/R1_17.9_drag.png' not found on input line 84.
+
+
+! LaTeX Error: Cannot determine size of graphic in ../../33_result/210806/raw_data/drag/R1_17.9_drag.xbb (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.84 ...ult/210806/raw_data/drag/R1_17.9_drag.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 File: ../../33_result/210806/raw_data/drag/R1_17.9_drag.png Graphic file (type bmp)
 <../../33_result/210806/raw_data/drag/R1_17.9_drag.png>
+
+LaTeX Warning: File `../../33_result/210806/raw_data/drag/R1_18.6_drag.png' not found on input line 91.
+
+
+! LaTeX Error: Cannot determine size of graphic in ../../33_result/210806/raw_data/drag/R1_18.6_drag.xbb (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.91 ...ult/210806/raw_data/drag/R1_18.6_drag.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 File: ../../33_result/210806/raw_data/drag/R1_18.6_drag.png Graphic file (type bmp)
 <../../33_result/210806/raw_data/drag/R1_18.6_drag.png>
+
+LaTeX Warning: File `../../33_result/210806/raw_data/drag/R1_19.3_drag.png' not found on input line 98.
+
+
+! LaTeX Error: Cannot determine size of graphic in ../../33_result/210806/raw_data/drag/R1_19.3_drag.xbb (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.98 ...ult/210806/raw_data/drag/R1_19.3_drag.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 File: ../../33_result/210806/raw_data/drag/R1_19.3_drag.png Graphic file (type bmp)
 <../../33_result/210806/raw_data/drag/R1_19.3_drag.png>
+
+LaTeX Warning: File `../../33_result/210806/raw_data/lift/Normal_lift.png' not found on input line 107.
+
+
+! LaTeX Error: Cannot determine size of graphic in ../../33_result/210806/raw_data/lift/Normal_lift.xbb (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.107 ...ult/210806/raw_data/lift/Normal_lift.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 File: ../../33_result/210806/raw_data/lift/Normal_lift.png Graphic file (type bmp)
 <../../33_result/210806/raw_data/lift/Normal_lift.png>
- [1
 
-] [2] [3] [4]
+LaTeX Warning: File `../../33_result/210806/raw_data/lift/C1_lift.png' not found on input line 114.
+
+
+! LaTeX Error: Cannot determine size of graphic in ../../33_result/210806/raw_data/lift/C1_lift.xbb (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.114 ..._result/210806/raw_data/lift/C1_lift.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 File: ../../33_result/210806/raw_data/lift/C1_lift.png Graphic file (type bmp)
 <../../33_result/210806/raw_data/lift/C1_lift.png>
+
+LaTeX Warning: File `../../33_result/210806/raw_data/lift/Groove_A_lift.png' not found on input line 121.
+
+
+! LaTeX Error: Cannot determine size of graphic in ../../33_result/210806/raw_data/lift/Groove_A_lift.xbb (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.121 ...t/210806/raw_data/lift/Groove_A_lift.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 File: ../../33_result/210806/raw_data/lift/Groove_A_lift.png Graphic file (type bmp)
 <../../33_result/210806/raw_data/lift/Groove_A_lift.png>
+
+LaTeX Warning: File `../../33_result/210806/raw_data/lift/Groove_B_lift.png' not found on input line 128.
+
+
+! LaTeX Error: Cannot determine size of graphic in ../../33_result/210806/raw_data/lift/Groove_B_lift.xbb (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.128 ...t/210806/raw_data/lift/Groove_B_lift.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 File: ../../33_result/210806/raw_data/lift/Groove_B_lift.png Graphic file (type bmp)
 <../../33_result/210806/raw_data/lift/Groove_B_lift.png>
+
+LaTeX Warning: File `../../33_result/210806/raw_data/lift/Groove_C_lift.png' not found on input line 135.
+
+
+! LaTeX Error: Cannot determine size of graphic in ../../33_result/210806/raw_data/lift/Groove_C_lift.xbb (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.135 ...t/210806/raw_data/lift/Groove_C_lift.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 File: ../../33_result/210806/raw_data/lift/Groove_C_lift.png Graphic file (type bmp)
 <../../33_result/210806/raw_data/lift/Groove_C_lift.png>
+
+LaTeX Warning: File `../../33_result/210806/raw_data/lift/Groove_D_lift.png' not found on input line 142.
+
+
+! LaTeX Error: Cannot determine size of graphic in ../../33_result/210806/raw_data/lift/Groove_D_lift.xbb (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.142 ...t/210806/raw_data/lift/Groove_D_lift.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 File: ../../33_result/210806/raw_data/lift/Groove_D_lift.png Graphic file (type bmp)
 <../../33_result/210806/raw_data/lift/Groove_D_lift.png>
+
+LaTeX Warning: File `../../33_result/210806/raw_data/lift/R1_17.9_lift.png' not found on input line 149.
+
+
+! LaTeX Error: Cannot determine size of graphic in ../../33_result/210806/raw_data/lift/R1_17.9_lift.xbb (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.149 ...lt/210806/raw_data/lift/R1_17.9_lift.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 File: ../../33_result/210806/raw_data/lift/R1_17.9_lift.png Graphic file (type bmp)
 <../../33_result/210806/raw_data/lift/R1_17.9_lift.png>
+
+LaTeX Warning: File `../../33_result/210806/raw_data/lift/R1_18.6_lift.png' not found on input line 156.
+
+
+! LaTeX Error: Cannot determine size of graphic in ../../33_result/210806/raw_data/lift/R1_18.6_lift.xbb (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.156 ...lt/210806/raw_data/lift/R1_18.6_lift.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 File: ../../33_result/210806/raw_data/lift/R1_18.6_lift.png Graphic file (type bmp)
 <../../33_result/210806/raw_data/lift/R1_18.6_lift.png>
+
+LaTeX Warning: File `../../33_result/210806/raw_data/lift/R1_19.3_lift.png' not found on input line 163.
+
+
+! LaTeX Error: Cannot determine size of graphic in ../../33_result/210806/raw_data/lift/R1_19.3_lift.xbb (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.163 ...lt/210806/raw_data/lift/R1_19.3_lift.png}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 File: ../../33_result/210806/raw_data/lift/R1_19.3_lift.png Graphic file (type bmp)
 <../../33_result/210806/raw_data/lift/R1_19.3_lift.png>
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 167.
- [5] [6] [7] [8] [9]
+[1
+
+] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17] [18]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 167.
  (./raw_data.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 167.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 167.
-Package rerunfilecheck Info: File `raw_data.out' has not changed.
-(rerunfilecheck)             Checksum: 45710B9EF7F74E3EBDF890C5084E89E8;104.
+
+
+Package rerunfilecheck Warning: File `raw_data.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `raw_data.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  45710B9EF7F74E3EBDF890C5084E89E8;104.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 167.
  ) 
 Here is how much of TeX's memory you used:
- 8406 strings out of 481768
- 124438 string characters out of 5933620
- 399973 words of memory out of 5000000
- 23660 multiletter control sequences out of 15000+600000
+ 8945 strings out of 481768
+ 151920 string characters out of 5933620
+ 400858 words of memory out of 5000000
+ 24127 multiletter control sequences out of 15000+600000
  538333 words of font info for 53 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 34i,5n,36p,285b,360s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,5n,36p,283b,366s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on raw_data.dvi (9 pages, 6784 bytes).
+Output written on raw_data.dvi (18 pages, 8664 bytes).

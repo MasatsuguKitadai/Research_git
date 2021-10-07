@@ -60,5 +60,5 @@ sprintf(graphname4, "..//33_result//%s//median//%d//lift//03//%s_me(%d)_lift_03.
 sprintf(graphname5, "..//33_result//%s//median//%d//drag//04//%s_me(%d)_drag_04.png", date, range_me, name, range_me);
 sprintf(graphname6, "..//33_result//%s//median//%d//lift//04//%s_me(%d)_lift_04.png", date, range_me, name, range_me);
 
-sprintf(graphname7, "..//33_result//%s//median//%d//drag//05//%s_ma(%d)_drag_05.png", date, range_me, name, range_me);
-sprintf(graphname8, "..//33_result//%s//median//%d//lift//05//%s_ma(%d)_lift_05.png", date, range_me, name, range_me);
+sprintf(graphname7, "..//33_result//%s//median//%d//drag//05//%s_me(%d)_drag_05.png", date, range_me, name, range_me);
+sprintf(graphname8, "..//33_result//%s//median//%d//lift//05//%s_me(%d)_lift_05.png", date, range_me, name, range_me);

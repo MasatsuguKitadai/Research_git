@@ -26,7 +26,7 @@ int plot_ma(char name[], char date[], char label_name[])
 #include "files/moving_average.h"
 
     // 移動平均
-    sprintf(label, "%s  Moving average n=%d", label_name, range_ma);
+    sprintf(label, "%s  Moving average (n=%d)", label_name, range_ma);
 
     // size
     size = 1;
