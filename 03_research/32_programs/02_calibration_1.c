@@ -19,7 +19,7 @@ int main()
     // char filename3[100] = "../31_data/calibration_1/lift_3.csv";
 
     // 変数の設定
-    int i = 0;
+    int i, j;
     double ch1, ch2, ch3, ch4;
     double value_1[10][4];
 
@@ -31,6 +31,17 @@ int main()
         exit(0);
     }
 
+    // 配列の初期化
+    for (i = 0; i < 10; i++)
+    {
+        for ( j = 0; j < 4; j++)
+        {
+            value_1[i][j] = 0; 
+        }        
+    }
+
+    printf("check\n");
+
     for (i = 0; i < 10; i++)
     // while ((fscanf(fp, "%lf, %lf, %lf, %lf", &ch1, &ch2, &ch3, &ch4)) != EOF)
     {
@@ -40,7 +51,7 @@ int main()
         value_1[i][3] = ch3;
         value_1[i][4] = ch4;
         printf("[%d]\t%lf %lf %lf %lf\n", i, value_1[i][1], value_1[i][2], value_1[i][3], value_1[i][4]);
-        i = i + 1;
+        // i = i + 1;
     }
 
     fclose(fp);
