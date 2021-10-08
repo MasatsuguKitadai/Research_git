@@ -1,9 +1,9 @@
-This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.9.16)  7 OCT 2021 12:39
+This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.9.16)  7 OCT 2021 12:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**/home/kitadai/git/lab/03_research/34_documents/median/5/05/median(11)_05
-(/home/kitadai/git/lab/03_research/34_documents/median/5/05/median(11)_05.tex
+**/home/kitadai/git/lab/03_research/34_documents/median/5/05/median(5)_05
+(/home/kitadai/git/lab/03_research/34_documents/median/5/05/median(5)_05.tex
 pLaTeX2e <2020-02-02>+2 (based on LaTeX2e <2020-02-02> patch level 2)
 L3 programming layer <2020-02-14> (/usr/share/texlive/texmf-dist/tex/platex/jsclasses/jsarticle.cls
 Document Class: jsarticle 2020/02/02 jsclasses (okumura, texjporg)
@@ -349,8 +349,8 @@ File: l3backend-dvips.def 2020-02-03 L3 backend support: dvips
 \g__pdf_backend_annotation_int=\count284
 \g__pdf_backend_link_int=\count285
 \g__pdf_backend_link_sf_int=\count286
-) (./median(11)_05.aux)
-\openout1 = `median(11)_05.aux'.
+) (./median(5)_05.aux)
+\openout1 = `median(5)_05.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
 LaTeX Font Info:    ... okay on input line 36.
@@ -422,9 +422,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 36.
 LaTeX Info: Redefining \pageref on input line 36.
 LaTeX Info: Redefining \nameref on input line 36.
- (./median(11)_05.out) (./median(11)_05.out)
+ (./median(5)_05.out) (./median(5)_05.out)
 \@outlinefile=\write3
-\openout3 = `median(11)_05.out'.
+\openout3 = `median(5)_05.out'.
 
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
 (Font)              scaled to size 13.83836pt on input line 37.
@@ -476,20 +476,20 @@ File: ../../../../33_result/210806/median/5/lift/05/R1_19.3_me(5)_lift_05.png Gr
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 167.
  [5] [6] [7] [8] [9]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 167.
- (./median(11)_05.aux)
+ (./median(5)_05.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 167.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 167.
-Package rerunfilecheck Info: File `median(11)_05.out' has not changed.
+Package rerunfilecheck Info: File `median(5)_05.out' has not changed.
 (rerunfilecheck)             Checksum: 560C563A075D53D70EB8CF0F6F9D8D94;130.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 167.
  ) 
 Here is how much of TeX's memory you used:
  8406 strings out of 481768
- 125686 string characters out of 5933620
- 399978 words of memory out of 5000000
+ 125671 string characters out of 5933620
+ 399977 words of memory out of 5000000
  23660 multiletter control sequences out of 15000+600000
  538333 words of font info for 53 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 34i,5n,36p,291b,360s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,5n,36p,290b,360s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on median(11)_05.dvi (9 pages, 7148 bytes).
+Output written on median(5)_05.dvi (9 pages, 7148 bytes).

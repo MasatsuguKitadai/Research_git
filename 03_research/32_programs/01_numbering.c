@@ -43,7 +43,7 @@ int sort(char name[], char date[])
     {
         value[i][1] = ch1;
         value[i][2] = ch2;
-        // printf("[%d] %lf %lf\n", i, value[i][1], value[i][2]);
+        printf("[%d] %lf %lf\n", i, value[i][1], value[i][2]);
         i = i + 1;
     }
 
@@ -66,24 +66,24 @@ int sort(char name[], char date[])
 int main()
 {
     /* 210806 */
-    sort("C1", "210806");
-    sort("Groove_A", "210806");
-    sort("Groove_B", "210806");
-    sort("Groove_C", "210806");
-    sort("Groove_D", "210806");
+    // sort("C1", "210806");
+    // sort("Groove_A", "210806");
+    // sort("Groove_B", "210806");
+    // sort("Groove_C", "210806");
+    // sort("Groove_D", "210806");
     sort("Normal", "210806");
-    sort("R1_17.9", "210806");
-    sort("R1_18.6", "210806");
-    sort("R1_19.3", "210806");
+    // sort("R1_17.9", "210806");
+    // sort("R1_18.6", "210806");
+    // sort("R1_19.3", "210806");
 
     /* 210731 */
-    sort("C1", "210731");
-    sort("Groove_A", "210731");
-    sort("Groove_B", "210731");
-    sort("Groove_C", "210731");
-    sort("Groove_D", "210731");
-    sort("Normal", "210731");
-    sort("R1_17.9", "210731");
-    sort("R1_18.6", "210731");
-    sort("R1_19.3", "210731");
+    // sort("C1", "210731");
+    // sort("Groove_A", "210731");
+    // sort("Groove_B", "210731");
+    // sort("Groove_C", "210731");
+    // sort("Groove_D", "210731");
+    // sort("Normal", "210731");
+    // sort("R1_17.9", "210731");
+    // sort("R1_18.6", "210731");
+    // sort("R1_19.3", "210731");
 }

@@ -14,29 +14,34 @@ int main()
     char filename1[100] = "../31_data/calibration_1/drag_1.csv";
     char filename2[100] = "../31_data/calibration_1/drag_2.csv";
     char filename3[100] = "../31_data/calibration_1/drag_3.csv";
+    // char filename1[100] = "../31_data/calibration_1/lift_1.csv";
+    // char filename2[100] = "../31_data/calibration_1/lift_2.csv";
+    // char filename3[100] = "../31_data/calibration_1/lift_3.csv";
 
     // 変数の設定
     int i = 0;
     double ch1, ch2, ch3, ch4;
-    double value_1[4][100];
+    double value_1[10][4];
 
     // ファイルの読み込み
-    fp1 = fopen(filename1, "r");
+    fp = fopen(filename1, "r");
     if (filename1 == NULL)
     {
         printf("Error! I can't open the file.\n");
         exit(0);
     }
 
-    while ((fscanf(fp1, "%lf,%lf,%lf,%lf", &ch1, &ch2, &ch3, &ch4)) != EOF)
+    for (i = 0; i < 10; i++)
+    // while ((fscanf(fp, "%lf, %lf, %lf, %lf", &ch1, &ch2, &ch3, &ch4)) != EOF)
     {
-        value_1[1][i] = ch1;
-        value_1[2][i] = ch2;
-        value_1[3][i] = ch3;
-        value_1[4][i] = ch4;
-        printf("[%d] %lf %lf %lf %lf\n", i, value_1[1][i], value_1[2][i], value_1[3][i], value_1[4][i]);
+        fscanf(fp1, "%lf, %lf, %lf, %lf", &ch1, &ch2, &ch3, &ch4);
+        value_1[i][1] = ch1;
+        value_1[i][2] = ch2;
+        value_1[i][3] = ch3;
+        value_1[i][4] = ch4;
+        printf("[%d]\t%lf %lf %lf %lf\n", i, value_1[i][1], value_1[i][2], value_1[i][3], value_1[i][4]);
         i = i + 1;
     }
 
-    fclose(fp1);
+    fclose(fp);
 }
