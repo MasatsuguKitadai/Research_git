@@ -21,18 +21,18 @@ double size;
 FILE *gp;
 
 // csvファイル名
-char filename1[100] = "../31_data/calibration/dat/load.dat";
-char filename2[100] = "../31_data/calibration/dat/x-axis.dat";
-char filename3[100] = "../31_data/calibration/dat/y-axis.dat";
-char filename4[100] = "../31_data/calibration/dat/load_least-squares.dat";
+char filename1[100] = "../33_result/calibration/dat/load.dat";
+char filename2[100] = "../33_result/calibration/dat/x-axis.dat";
+char filename3[100] = "../33_result/calibration/dat/y-axis.dat";
+char filename4[100] = "../33_result/calibration/dat/load_least-squares.dat";
 
 // pngファイル名
-char graphname1[100] = "../33_result/calibration/01_load.png";
-char graphname2[100] = "../33_result/calibration/02_length-sensors_x-axis.png";
-char graphname3[100] = "../33_result/calibration/03_length-sensors_y-axis.png";
-char graphname4[100] = "../33_result/calibration/04_strainsensor-loadcell_x-axis.png";    
-char graphname5[100] = "../33_result/calibration/05_strainsensor-loadcell_y-axis.png";
-char graphname6[100] = "../33_result/calibration/06_load-leastsquares.png";
+char graphname1[100] = "../33_result/calibration/graph/01_load.png";
+char graphname2[100] = "../33_result/calibration/graph/02_length-sensors_x-axis.png";
+char graphname3[100] = "../33_result/calibration/graph/03_length-sensors_y-axis.png";
+char graphname4[100] = "../33_result/calibration/graph/04_strainsensor-loadcell_x-axis.png";
+char graphname5[100] = "../33_result/calibration/graph/05_strainsensor-loadcell_y-axis.png";
+char graphname6[100] = "../33_result/calibration/graph/06_load-leastsquares.png";
 
 /*********************************   gnuplot   *********************************/
 int main()
@@ -46,11 +46,10 @@ int main()
         exit(0); // gnuplotが無い場合、異常ある場合は終了
     }
 
-    #include "plot/11.h"
-    #include "plot/12.h"
+#include "plot/11.h"
+#include "plot/12.h"
 
     fprintf(gp, "exit\n"); // Quit gnuplot
 
     pclose(gp);
-
 }

@@ -12,8 +12,8 @@ DATE    :
 int main()
 {
     // ファイル名の指定
-    char filename1[100] = "../31_data/calibration/dat/load.dat";
-    char filename2[100] = "../31_data/calibration/dat/load_least-squares.dat";
+    char filename1[100] = "../33_result/calibration/dat/load.dat";
+    char filename2[100] = "../33_result/calibration/dat/load_least-squares.dat";
 
     // 変数の設定
     int i, j;
@@ -24,10 +24,10 @@ int main()
     // 配列の初期化
     for (i = 0; i < 10; i++)
     {
-        for ( j = 0; j < 2; j++)
+        for (j = 0; j < 2; j++)
         {
             value[i][j] = 0;
-        }        
+        }
     }
 
     // Model-loadcell <Drag>
@@ -56,7 +56,7 @@ int main()
     datalong = i;
 
     // 計算
-    double a , b;
+    double a, b;
     double sum1, sum2, sum3, sum4;
 
     // 変数の初期化
@@ -66,38 +66,41 @@ int main()
     sum2 = 0;
     sum3 = 0;
     sum4 = 0;
-    
+
     // それぞれの合計の計算
-    for ( i = 0; i < datalong; i++)
+    for (i = 0; i < datalong; i++)
     {
-        sum1 = sum1 + value[i][1];
-        sum2 = sum2 + value[i][2];
-        sum3 = sum3 + (value[i][1] * value[i][1]);
-        sum4 = sum4 + (value[i][1] * value[i][2]);
+        sum1 = sum1 + value[i][2];
+        sum2 = sum2 + value[i][1];
+        sum3 = sum3 + (value[i][2] * value[i][2]);
+        sum4 = sum4 + (value[i][2] * value[i][1]);
     }
 
-    a = (datalong * sum4 - sum1 * sum2)/(datalong * sum3 - sum1 * sum1);
-    b = (sum3 * sum2 - sum4 * sum1)/(datalong * sum3 - sum1 * sum1);
-    
+    a = (datalong * sum4 - sum1 * sum2) / (datalong * sum3 - sum1 * sum1);
+    b = (sum3 * sum2 - sum4 * sum1) / (datalong * sum3 - sum1 * sum1);
+
     printf("f[x] = %lf x + %lf\n", a, b);
 
     // 範囲内のデータ計算
 
     double n[datalong], result[datalong];
+    double result_;
 
-    for (i = 0; i < datalong; i++)
+    result_ = a * -1 + b;
+
+    for (i = 0; i < 5; i++)
     {
-        n[i] = 0.05 * i - 0.05;
-        result[i] = a * n[i] + b;
+        result[i] = a * i + b;
     }
-    
 
     // データの書き出し
     fp2 = fopen(filename2, "w");
 
-    for (i = 0; i < datalong; i++)
+    fprintf(fp2, "%d\t%lf\n", -1, result_);
+
+    for (i = 0; i < 5; i++)
     {
-        fprintf(fp2, "%lf\t%lf\n",  n[i], result[i]);
+        fprintf(fp2, "%d\t%lf\n", i, result[i]);
     }
 
     fclose(fp2);

@@ -17,8 +17,6 @@ int main()
     char filename3[100] = "../31_data/calibration/y-axis.csv";
 
     char filename4[100] = "../33_result/calibration/dat/load.dat";
-    char filename5[100] = "../33_result/calibration/dat/x-axis.dat";
-    char filename6[100] = "../33_result/calibration/dat/y-axis.dat";
 
     // 変数の設定
     int i, j;
@@ -113,36 +111,47 @@ int main()
     }
 
     fclose(fp3);
+
     datalong[3] = i;
+
+    // 計算
+    double a, b;
+    double sum1, sum2, sum3, sum4;
+
+    // 変数の初期化
+    a = 0;
+    b = 0;
+    sum1 = 0;
+    sum2 = 0;
+    sum3 = 0;
+    sum4 = 0;
+
+    // 近似直線の計算
+    for (i = 0; i < datalong[1]; i++)
+    {
+        sum1 = sum1 + value_1[i][2];
+        sum2 = sum2 + value_1[i][1];
+        sum3 = sum3 + (value_1[i][2] * value_1[i][2]);
+        sum4 = sum4 + (value_1[i][2] * value_1[i][1]);
+    }
+
+    a = (datalong[1] * sum4 - sum1 * sum2) / (datalong[1] * sum3 - sum1 * sum1);
+    b = (sum3 * sum2 - sum4 * sum1) / (datalong[1] * sum3 - sum1 * sum1);
+
+    printf("f[x] = %lf x + %lf\n", a, b);
+
+    // 荷重への換算
 
     // datファイルの作成
 
-    fp4 = fopen(filename4, "w");
-
-    for (i = 0; i < datalong[1]; i++)
-    {
-        fprintf(fp4, "%lf\t%lf\n", value_1[i][1], value_1[i][2]);
-    }
-
-    fclose(fp4);
-
-    fp5 = fopen(filename5, "w");
-
-    for (i = 0; i < datalong[2]; i++)
-    {
-        fprintf(fp5, "%lf\t%lf\t%lf\t%lf\n", value_2[i][1], value_2[i][2], value_2[i][3], value_2[i][4]);
-    }
-
-    fclose(fp5);
-
-    fp6 = fopen(filename6, "w");
-
-    for (i = 0; i < datalong[3]; i++)
-    {
-        fprintf(fp6, "%lf\t%lf\t%lf\t%lf\n", value_3[i][1], value_3[i][2], value_3[i][3], value_3[i][4]);
-    }
-
-    fclose(fp6);
+    // fp6 = fopen(filename6, "w");
+    //
+    // for (i = 0; i < datalong[3]; i++)
+    // {
+    // fprintf(fp6, "%lf\t%lf\t%lf\t%lf\n", value_3[i][1], value_3[i][2], value_3[i][3], value_3[i][4]);
+    // }
+    //
+    // fclose(fp6);
 
     return (0);
 }
