@@ -35,9 +35,9 @@ fprintf(gp, "set tmargin screen 0.90\n");
 fprintf(gp, "set bmargin screen 0.15\n");
 
 fprintf(gp, "set xrange [-0.025:0.425]\n");
-fprintf(gp, "set xlabel 'Load-cell [V]'offset 0.0,0\n");
+fprintf(gp, "set xlabel 'Load-cell [mm]'offset 0.0,0\n");
 fprintf(gp, "set yrange [-6:6]\n");
-fprintf(gp, "set ylabel 'Strain-sensor [V]'offset 0,0.0\n");
+fprintf(gp, "set ylabel 'Output of Sensors [V]'offset 0,0.0\n");
 fprintf(gp, "set title 'x-axis (drag) direction'\n");
 
 fprintf(gp, "plot '%s' using 1:2 with points ps 2 pt 5 lc 'dark-grey' title 'load-cell', '%s' using 1:3 with points ps 2 pt 5 lc 'royalblue' title 'drag', '%s' using 1:4 with points ps 2 pt 5 lc 'orange' title 'lift'\n", filename2, filename2, filename2);
@@ -58,9 +58,9 @@ fprintf(gp, "set tmargin screen 0.90\n");
 fprintf(gp, "set bmargin screen 0.15\n");
 
 fprintf(gp, "set xrange [-0.025:0.425]\n");
-fprintf(gp, "set xlabel 'Load-cell [V]'offset 0.0,0\n");
+fprintf(gp, "set xlabel 'Load-cell [mm]'offset 0.0,0\n");
 fprintf(gp, "set yrange [-6:1]\n");
-fprintf(gp, "set ylabel 'Strain-sensor [V]'offset 0,0.0\n");
+fprintf(gp, "set ylabel 'Output of Sensors [V]'offset 0,0.0\n");
 fprintf(gp, "set title 'y-axis (lift) direction'\n");
 
 fprintf(gp, "plot '%s' using 1:2 with points ps 2 pt 5 lc 'dark-grey' title 'load-cell', '%s' using 1:3 with points ps 2 pt 5 lc 'royalblue' title 'drag', '%s' using 1:4 with points ps 2 pt 5 lc 'orange' title 'lift'\n", filename3, filename3, filename3);
