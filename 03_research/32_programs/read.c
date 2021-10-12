@@ -8,7 +8,6 @@ DATE    :
 #include <math.h>
 #define ch 2
 FILE *fp1;
-#include // 方法別
 /*********************************   MAIN   *********************************/
 int base_line(char name[],char date[])
 {

@@ -6,12 +6,12 @@ DATE    :
 // 中央値 範囲
 int range_me = 11;
 
-#include "main_programs/30_median.c"
-#include "main_programs/42_start_me.c"
-#include "main_programs/52_finish_me.c"
-#include "main_programs/62_lerp_me.c"
-#include "main_programs/72_average_me.c"
-#include "main_programs/92_plot_me.c"
+#include "02_me/30_median.c"
+#include "02_me/42_start_me.c"
+#include "02_me/52_finish_me.c"
+#include "02_me/62_lerp_me.c"
+#include "02_me/72_average_me.c"
+#include "02_me/92_plot_me.c"
 /*********************************   MAIN   *********************************/
 int main()
 {
