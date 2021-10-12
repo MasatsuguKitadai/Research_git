@@ -3,10 +3,10 @@ PROGRAM NAME :program_ma.c
 AUTHER  : Masatsugu Kitadai
 DATE    :
 ******************************************************************************/
-#include "mainprograms/40_start_raw.c"
-#include "mainprograms/50_finish_raw.c"
-#include "mainprograms/60_lerp_raw.c"
-#include "mainprograms/90_plot_raw.c"
+#include "main_programs/40_start_raw.c"
+#include "main_programs/50_finish_raw.c"
+#include "main_programs/60_lerp_raw.c"
+#include "main_programs/90_plot_raw.c"
 /*********************************   MAIN   *********************************/
 int main()
 {
