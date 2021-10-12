@@ -9,19 +9,19 @@ DATE    :
 #include "files/fp.h"
 #define g 9.81;
 /*********************************   MAIN   *********************************/
-int convert()
+int calcuration()
 {
     // 入力ファイル名
-    char filename1[100] = "../31_data/calibration/force.csv";
-    char filename2[100] = "../31_data/calibration/x-axis.csv";
-    char filename3[100] = "../31_data/calibration/y-axis.csv";
+    char filename1[100] = "../31_data/convert/force.csv";
+    char filename2[100] = "../31_data/convert/x-axis.csv";
+    char filename3[100] = "../31_data/convert/y-axis.csv";
 
     // 出力ファイル名
-    char filename4[100] = "../33_result/calibration/dat/x-force.dat";
-    char filename5[100] = "../33_result/calibration/dat/y-force.dat";
-    char filename6[100] = "../33_result/calibration/dat/force&line_1.dat";
-    char filename7[100] = "../33_result/calibration/dat/force&line_2.dat";
-
+    char filename4[100] = "../33_result/convert/dat/x-force.dat";
+    char filename5[100] = "../33_result/convert/dat/y-force.dat";
+    char filename6[100] = "../33_result/convert/dat/force&line_1.dat";
+    char filename7[100] = "../33_result/convert/dat/force&line_2.dat";
+    char filename8[100] = "../33_result/convert/dat/formula.dat";
 
     // 変数の設定
     int i, j;
@@ -153,9 +153,9 @@ int convert()
 
     // datファイルへの書き込み
 
-    fp6 = fopen(filename6, "w");    
-    
-    for ( i = 0; i < n; i++)
+    fp6 = fopen(filename6, "w");
+
+    for (i = 0; i < n; i++)
     {
         fprintf(fp6, "%d\t%lf\n", i - 1, result[i]);
     }
@@ -201,12 +201,12 @@ int convert()
 
     // datファイルの作成
     fp4 = fopen(filename4, "w");
-    
+
     for (i = 0; i < datalong[2]; i++)
     {
         fprintf(fp4, "%lf\t%lf\n", result_x[i][1], result_x[i][2]);
     }
-    
+
     fclose(fp4);
 
     // <lift>
@@ -244,12 +244,12 @@ int convert()
 
     // datファイルの作成
     fp5 = fopen(filename5, "w");
-    
+
     for (i = 0; i < datalong[3]; i++)
     {
         fprintf(fp5, "%lf\t%lf\n", result_y[i][1], result_y[i][2]);
     }
-    
+
     fclose(fp5);
 
     // 近似直線の計算
@@ -262,16 +262,25 @@ int convert()
         formula_x[i] = a2 * (i - 7) + b2;
         formula_y[i] = a3 * (i - 7) + b3;
     }
-    
+
     fp7 = fopen(filename7, "w");
 
     for (i = 0; i < count; i++)
     {
         fprintf(fp7, "%d\t%lf\t%lf\n", i - 7, formula_x[i], formula_y[i]);
     }
-    
+
     fclose(fp7);
 
+    // 近似式・係数出力
+
+    fp8 = fopen(filename8, "w");
+
+    fprintf(fp8, "%lf\t%lf\n", a1, b1);
+    fprintf(fp8, "%lf\t%lf\n", a2, b2);
+    fprintf(fp8, "%lf\t%lf\n", a3, b3);
+
+    fclose(fp8);
 
     return (0);
 }

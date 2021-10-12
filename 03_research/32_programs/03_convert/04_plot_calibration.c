@@ -21,23 +21,23 @@ double size;
 FILE *gp;
 
 // csvファイル名
-char filename1[100] = "../33_result/calibration/dat/force.dat";
-char filename2[100] = "../33_result/calibration/dat/x-axis.dat";
-char filename3[100] = "../33_result/calibration/dat/y-axis.dat";
-char filename4[100] = "../33_result/calibration/dat/x-force.dat";
-char filename5[100] = "../33_result/calibration/dat/y-force.dat";
-char filename6[100] = "../33_result/calibration/dat/force&line_1.dat";
-char filename7[100] = "../33_result/calibration/dat/force&line_2.dat";
+char filename1[100] = "../33_result/convert/dat/force.dat";
+char filename2[100] = "../33_result/convert/dat/x-axis.dat";
+char filename3[100] = "../33_result/convert/dat/y-axis.dat";
+char filename4[100] = "../33_result/convert/dat/x-force.dat";
+char filename5[100] = "../33_result/convert/dat/y-force.dat";
+char filename6[100] = "../33_result/convert/dat/force&line_1.dat";
+char filename7[100] = "../33_result/convert/dat/force&line_2.dat";
 
 // pngファイル名
-char graphname1[100] = "../33_result/calibration/graph/01_force.png";
-char graphname2[100] = "../33_result/calibration/graph/03_length-output_x.png";
-char graphname3[100] = "../33_result/calibration/graph/04_length-output_y.png";
-char graphname4[100] = "../33_result/calibration/graph/05_strainsensor-loadcell_x.png";
-char graphname5[100] = "../33_result/calibration/graph/06_strainsensor-loadcell_y.png";
-char graphname6[100] = "../33_result/calibration/graph/02_force&line.png";
-char graphname7[100] = "../33_result/calibration/graph/07_strainsensor-forces.png";
-char graphname8[100] = "../33_result/calibration/graph/08_strainsensor-forces&line.png";
+char graphname1[100] = "../33_result/convert/graph/01_force.png";
+char graphname2[100] = "../33_result/convert/graph/03_length-output_x.png";
+char graphname3[100] = "../33_result/convert/graph/04_length-output_y.png";
+char graphname4[100] = "../33_result/convert/graph/05_strainsensor-loadcell_x.png";
+char graphname5[100] = "../33_result/convert/graph/06_strainsensor-loadcell_y.png";
+char graphname6[100] = "../33_result/convert/graph/02_force&line.png";
+char graphname7[100] = "../33_result/convert/graph/07_strainsensor-forces.png";
+char graphname8[100] = "../33_result/convert/graph/08_strainsensor-forces&line.png";
 
 /*********************************   gnuplot   *********************************/
 int plot_calibration()

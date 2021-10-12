@@ -52,7 +52,7 @@ int average(char name[], char date[])
     finish_num = 0;
 
     // 起動時刻の読み込み
-    
+
     fp = fopen(filename5, "r");
     if (filename5 == NULL)
     {
@@ -66,7 +66,7 @@ int average(char name[], char date[])
     fclose(fp);
 
     // 停止時刻の読み込み
-    
+
     fp = fopen(filename6, "r");
     if (filename6 == NULL)
     {
@@ -100,7 +100,7 @@ int average(char name[], char date[])
     {
         sum_zero[1] = sum_zero[1] + value[i][1];
         sum_zero[2] = sum_zero[2] + value[i][2];
-        j  = j + 1;
+        j = j + 1;
     }
 
     for (i = finish_num; i < finish_num + range_2; i++)
@@ -109,7 +109,7 @@ int average(char name[], char date[])
         sum_zero[2] = sum_zero[2] + value[i][2];
         j = j + 1;
     }
-    
+
     ave_zero[1] = sum_zero[1] / j;
     ave_zero[2] = sum_zero[2] / j;
 
@@ -146,11 +146,11 @@ int average(char name[], char date[])
         exit(0);
     }
 
-    for ( i = 0; i < data_long; i++)
+    for (i = 0; i < data_long; i++)
     {
         fprintf(fp, "%d\t%lf\t%lf\t%lf\t%lf\n", i, ave_zero[1], ave_output[1], ave_zero[2], ave_output[2]);
     }
-    
+
     fclose(fp);
 }
 

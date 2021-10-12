@@ -12,13 +12,13 @@ DATE    :
 int main()
 {
     // ファイル名の指定
-    char filename1[100] = "../31_data/calibration/force.csv";
-    char filename2[100] = "../31_data/calibration/x-axis.csv";
-    char filename3[100] = "../31_data/calibration/y-axis.csv";
+    char filename1[100] = "../31_data/convert/force.csv";
+    char filename2[100] = "../31_data/convert/x-axis.csv";
+    char filename3[100] = "../31_data/convert/y-axis.csv";
 
-    char filename4[100] = "../33_result/calibration/dat/force.dat";
-    char filename5[100] = "../33_result/calibration/dat/x-axis.dat";
-    char filename6[100] = "../33_result/calibration/dat/y-axis.dat";
+    char filename4[100] = "../33_result/convert/dat/force.dat";
+    char filename5[100] = "../33_result/convert/dat/x-axis.dat";
+    char filename6[100] = "../33_result/convert/dat/y-axis.dat";
 
     // 変数の設定
     int i, j;

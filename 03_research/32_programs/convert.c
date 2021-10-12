@@ -8,7 +8,7 @@ DATE    :
 /*********************************   MAIN   *********************************/
 int main()
 {
-    convert();
+    calcuration();
     plot_calibration();
     return (0);
 }
