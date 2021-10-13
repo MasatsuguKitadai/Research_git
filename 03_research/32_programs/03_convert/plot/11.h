@@ -14,8 +14,8 @@ fprintf(gp, "set bmargin screen 0.15\n");
 fprintf(gp, "set xrange [-1:4]\n");
 fprintf(gp, "set xlabel 'Load cell [V]'offset 0,0.0\n");
 fprintf(gp, "set yrange [-0.05:0.4]\n");
-fprintf(gp, "set ylabel 'Load [N]'offset 2.0,0\n");
-fprintf(gp, "set title 'Load - Loadcell'\n");
+fprintf(gp, "set ylabel 'Input [N]'offset 2.0,0\n");
+fprintf(gp, "set title 'Input - Loadcell'\n");
 
 fprintf(gp, "plot '%s' using 2:1 with points ps 2 pt 5 lc 'dark-grey'\n", filename1);
 
