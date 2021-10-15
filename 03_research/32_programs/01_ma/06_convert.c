@@ -4,7 +4,7 @@ AUTHER  : Masatsugu Kitadai
 DATE    :
 ******************************************************************************/
 // 移動平均 範囲
-int range_ma = 11;
+// int range_ma = 11;
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -238,27 +238,27 @@ int convert_3(char name[], char date[])
     return (0);
 }
 
-int main()
-{
-    convert_1("Normal", "210806");
-    convert_1("Groove_A", "210806");
-    convert_1("Groove_B", "210806");
-    convert_1("Groove_C", "210806");
-    convert_1("Groove_D", "210806");
-    convert_1("C1", "210806");
-    convert_2("R1_17.9", "210806");
-    convert_1("R1_18.6", "210806");
-    convert_3("R1_19.3", "210806");
+// int main()
+// {
+//     convert_1("Normal", "210806");
+//     convert_1("Groove_A", "210806");
+//     convert_1("Groove_B", "210806");
+//     convert_1("Groove_C", "210806");
+//     convert_1("Groove_D", "210806");
+//     convert_1("C1", "210806");
+//     convert_2("R1_17.9", "210806");
+//     convert_1("R1_18.6", "210806");
+//     convert_3("R1_19.3", "210806");
 
-    printf("\n");
+//     printf("\n");
     
-    convert_1("Normal", "210731");
-    convert_1("Groove_A", "210731");
-    convert_1("Groove_B", "210731");
-    convert_1("Groove_C", "210731");
-    convert_1("Groove_D", "210731");
-    convert_1("C1", "210731");
-    convert_2("R1_17.9", "210731");
-    convert_1("R1_18.6", "210731");
-    convert_3("R1_19.3", "210731");
-}
+//     convert_1("Normal", "210731");
+//     convert_1("Groove_A", "210731");
+//     convert_1("Groove_B", "210731");
+//     convert_1("Groove_C", "210731");
+//     convert_1("Groove_D", "210731");
+//     convert_1("C1", "210731");
+//     convert_2("R1_17.9", "210731");
+//     convert_1("R1_18.6", "210731");
+//     convert_3("R1_19.3", "210731");
+// }

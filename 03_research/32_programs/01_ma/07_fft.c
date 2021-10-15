@@ -10,7 +10,7 @@ DATE    :
 #include "files/fp.h"
 
 // 移動平均 範囲
-int range_ma = 11;
+// int range_ma = 11;
 
 // 円周率の定義
 #define pi 4 * atan(1.0)
@@ -251,18 +251,18 @@ int fft(char name[], char date[])
 
 }
 
-int main()
-{
-    // 2021/8/6
-    fft("C1", "210806");
-    fft("Groove_A", "210806");
-    fft("Groove_B", "210806");
-    fft("Groove_C", "210806");
-    fft("Groove_D", "210806");
-    fft("Normal", "210806");
-    fft("R1_17.9", "210806");
-    fft("R1_18.6", "210806");
-    fft("R1_19.3", "210806");
+// int main()
+// {
+//     // 2021/8/6
+//     fft("C1", "210806");
+//     fft("Groove_A", "210806");
+//     fft("Groove_B", "210806");
+//     fft("Groove_C", "210806");
+//     fft("Groove_D", "210806");
+//     fft("Normal", "210806");
+//     fft("R1_17.9", "210806");
+//     fft("R1_18.6", "210806");
+//     fft("R1_19.3", "210806");
 
-    return (0);
-}
+//     return (0);
+// }
