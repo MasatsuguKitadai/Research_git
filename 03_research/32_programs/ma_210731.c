@@ -6,12 +6,12 @@ DATE    :
 // 移動平均 範囲
 int range_ma = 11;
 
-#include "01_ma/20_moving_average.c"
-#include "01_ma/41_start_ma.c"
-#include "01_ma/51_finish_ma.c"
-#include "01_ma/61_lerp_ma.c"
-#include "01_ma/71_average_ma.c"
-#include "01_ma/91_plot_ma.c"
+#include "01_ma/01_moving_average.c"
+#include "01_ma/02_start_ma.c"
+#include "01_ma/03_finish_ma.c"
+#include "01_ma/04_lerp_ma.c"
+#include "01_ma/05_average_ma.c"
+#include "01_ma/10_plot_ma.c"
 /*********************************   MAIN   *********************************/
 int main()
 {
