@@ -15,13 +15,13 @@ fprintf(gp, "set tmargin screen 0.90\n");
 fprintf(gp, "set bmargin screen 0.15\n");
 
 fprintf(gp, "set xrange [0:0.5]\n");
-fprintf(gp, "set xlabel '%s'offset 0.0,0\n", xxlabel);
-fprintf(gp, "set yrange [0:20]\n");
-fprintf(gp, "set ylabel '%s'offset 1,0.0\n", yylabel);
+fprintf(gp, "set xlabel 'frequency [Hz]'offset 0.0,0\n");
+fprintf(gp, "set yrange [0:25]\n");
+fprintf(gp, "set ylabel 'power spectral density'offset 1,0.0\n");
 fprintf(gp, "set title '%s drag'\n", label);
 
 // fprintf(gp, "set samples 10000\n");
-fprintf(gp, "plot '%s' using 2:1 with lines lw 2 lc 'black' notitle\n", filename9);
+fprintf(gp, "plot '%s' using 2:1 with lines lw 2 lc 'blue' notitle\n", filename9);
 
 fflush(gp); //Clean up Data
 
@@ -42,13 +42,13 @@ fprintf(gp, "set tmargin screen 0.90\n");
 fprintf(gp, "set bmargin screen 0.15\n");
 
 fprintf(gp, "set xrange [0:0.5]\n");
-fprintf(gp, "set xlabel '%s'offset 0.0,0\n", xxlabel);
+fprintf(gp, "set xlabel 'frequency [Hz]'offset 0.0,0\n");
 fprintf(gp, "set yrange [0:25]\n");
-fprintf(gp, "set ylabel '%s'offset 1,0.0\n", yylabel);
+fprintf(gp, "set ylabel 'power spectral density'offset 1,0.0\n");
 fprintf(gp, "set title '%s drag'\n", label);
 
 // fprintf(gp, "set samples 10000\n");
-fprintf(gp, "plot '%s' using 2:1 with lines lw 2 lc 'black' notitle\n", filename10);
+fprintf(gp, "plot '%s' using 2:1 with lines lw 2 lc 'blue' notitle\n", filename10);
 
 fflush(gp); //Clean up Data
 
@@ -69,13 +69,13 @@ fprintf(gp, "set tmargin screen 0.90\n");
 fprintf(gp, "set bmargin screen 0.15\n");
 
 fprintf(gp, "set xrange [0:0.5]\n");
-fprintf(gp, "set xlabel '%s'offset 0.0,0\n", xxlabel);
-fprintf(gp, "set yrange [0:20]\n");
-fprintf(gp, "set ylabel '%s'offset 1,0.0\n", yylabel);
+fprintf(gp, "set xlabel 'frequency [Hz]'offset 0.0,0\n");
+fprintf(gp, "set yrange [0:25]\n");
+fprintf(gp, "set ylabel 'power spectral density'offset 1,0.0\n");
 fprintf(gp, "set title '%s drag'\n", label);
 
 // fprintf(gp, "set samples 10000\n");
-fprintf(gp, "plot '%s' using 2:1 with lines lw 2 lc 'black' notitle\n", filename11);
+fprintf(gp, "plot '%s' using 2:1 with lines lw 2 lc 'red' notitle\n", filename11);
 
 fflush(gp); //Clean up Data
 
@@ -96,12 +96,12 @@ fprintf(gp, "set tmargin screen 0.90\n");
 fprintf(gp, "set bmargin screen 0.15\n");
 
 fprintf(gp, "set xrange [0:0.5]\n");
-fprintf(gp, "set xlabel '%s'offset 0.0,0\n", xxlabel);
-fprintf(gp, "set yrange [0:50]\n");
-fprintf(gp, "set ylabel '%s'offset 1,0.0\n", yylabel);
+fprintf(gp, "set xlabel 'frequency [Hz]'offset 0.0,0\n");
+fprintf(gp, "set yrange [0:25]\n");
+fprintf(gp, "set ylabel 'power spectral density'offset 1,0.0\n");
 fprintf(gp, "set title '%s drag'\n", label);
 
 // fprintf(gp, "set samples 10000\n");
-fprintf(gp, "plot '%s' using 2:1 with lines lw 2 lc 'black' notitle\n", filename12);
+fprintf(gp, "plot '%s' using 2:1 with lines lw 2 lc 'red' notitle\n", filename12);
 
 fflush(gp); //Clean up Data
