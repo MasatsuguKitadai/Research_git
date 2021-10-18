@@ -77,7 +77,7 @@ void S_fft(double ak[], double bk[], int n, int ff)
 
 int fft(char name[], char date[])
 {
-#include "files/moving_average.h"
+#include "files/raw_data.h"
 
     // ファイルの読み込み (dat データ)
 
@@ -116,16 +116,16 @@ int fft(char name[], char date[])
     double start_value[2], start_ave[2], finish_value[2], finish_ave[2];
 
     // ファイルの読み込み (開始点)
-    fp5 = fopen(filename5, "r");
-    if (filename5 == NULL)
+    fp13 = fopen(filename13, "r"); 
+    if (filename13 == NULL)
     {
         printf("Error! I can't open the file.\n");
         exit(0);
     }
 
-    fscanf(fp5, "%d\t%lf\t%lf\t%lf\t%lf\t%d", &start_num, &start_value[0], &start_ave[0], &start_value[1], &start_ave[1], &ave_num[0]);
+    fscanf(fp13, "%d\t%lf\t%lf\t%lf\t%lf\t%d", &start_num, &start_value[0], &start_ave[0], &start_value[1], &start_ave[1], &ave_num[0]);
 
-    fclose(fp5);
+    fclose(fp13);
 
     printf("%d\t%lf\t%lf\t%lf\t%lf\t[%s start]\n", start_num, start_value[0], start_ave[0], start_value[1], start_ave[1], name);
 
@@ -141,7 +141,7 @@ int fft(char name[], char date[])
     int start_1, start_2;
     
     start_1 = start_num - (range_1 + 30);
-    start_2 = start_num + 60;
+    start_2 = start_num + 60;               
 
     int j;
 

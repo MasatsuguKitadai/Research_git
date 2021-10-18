@@ -24,6 +24,7 @@ char filename9[100];
 char filename10[100];
 char filename11[100];
 char filename12[100];
+char filename13[100];
 
 
 // ファイルの指定 (plot)
@@ -49,6 +50,9 @@ sprintf(filename9,  "..//..//33_result//%s//moving_average//%d//fft//drag_1//%s_
 sprintf(filename10, "..//..//33_result//%s//moving_average//%d//fft//drag_2//%s_ma(%d)_fft_drag_2.dat", date, range_ma, name, range_ma);
 sprintf(filename11, "..//..//33_result//%s//moving_average//%d//fft//lift_1//%s_ma(%d)_fft_lift_1.dat", date, range_ma, name, range_ma);
 sprintf(filename12, "..//..//33_result//%s//moving_average//%d//fft//lift_2//%s_ma(%d)_fft_lift_2.dat", date, range_ma, name, range_ma);
+
+// raw_data 用
+sprintf(filename13, "..//..//33_result//%s//raw_data//start_ma(%d)//%s_ma(%d)_s_rawdata_ver.dat", date, range_ma, name, range_ma);
 
 // グラフ作成
 char graphname1[100];
@@ -78,4 +82,3 @@ char graphname12[100];
 sprintf(graphname10, "..//..//33_result//%s//moving_average//%d//graph//lift//06//%s_ma(%d)_lift_06.png", date, range_ma, name, range_ma);
 sprintf(graphname11, "..//..//33_result//%s//moving_average//%d//graph//drag//07//%s_ma(%d)_drag_07.png", date, range_ma, name, range_ma);
 sprintf(graphname12, "..//..//33_result//%s//moving_average//%d//graph//lift//07//%s_ma(%d)_lift_07.png", date, range_ma, name, range_ma);
-sprintf(graphname13, "..//..//33_result//%s//moving_average//%d//graph//lift//07//%s_ma(%d)_lift_07.png", date, range_ma, name, range_ma);

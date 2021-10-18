@@ -8,7 +8,8 @@ DATE    :
 #include <math.h>
 #define ch 2
 #include "files/fp.h"
-// int range_ma = 5;
+
+int range_ma = 11;
 /*********************************   MAIN   *********************************/
 int start(char name[], char date[])
 {
@@ -206,23 +207,36 @@ int start(char name[], char date[])
     fp5 = fopen(filename5, "w");
 
     fprintf(fp5, "%d\t%lf\t%lf\t%lf\t%lf\t%d\n", start_num, start_value_2[1], ave[1], start_value_2[2], ave[2], ave_num);
-    // printf("[%d]\t%lf\t%lf\t%lf\t%lf\t[%d]\n", start_num, start_value_2[1], ave[1], start_value_2[2], ave[2], ave_num);
+    // printf("[%d]\t%lf\t%lf\t%lf\t%lf\t[%d]\t%s\n", start_num, start_value_2[1], ave[1], start_value_2[2], ave[2], ave_num, name);
     // printf("[%d]\t[%s]\n\n", start_num, name);
 
     fclose(fp5);
+
+    // rawdata 用データ
+
+    start_num = start_num + 5;
+    start_value_2[1] = value_2[start_num][1];
+    start_value_2[2] = value_2[start_num][2];
+
+    fp13 = fopen(filename13, "w");
+
+    fprintf(fp13, "%d\t%lf\t%lf\t%lf\t%lf\t%d\n", start_num, start_value_2[1], ave[1], start_value_2[2], ave[2], ave_num);
+    // printf("[%d]\t%lf\t%lf\t%lf\t%lf\t[%d]\t%s\n", start_num, start_value_2[1], ave[1], start_value_2[2], ave[2], ave_num, name);
+
+    fclose(fp13);
 }
 
-// int main()
-// {
-//     // 2021/8/6
-//     start("C1", "210806");
-//     start("Groove_A", "210806");
-//     start("Groove_B", "210806");
-//     start("Groove_C", "210806");
-//     start("Groove_D", "210806");
-//     start("Normal", "210806");
-//     start("R1_17.9", "210806");
-//     start("R1_18.6", "210806");
-//     start("R1_19.3", "210806");
-// return (0);
-// }
+int main()
+{
+    // 2021/8/6
+    start("C1", "210806");
+    start("Groove_A", "210806");
+    start("Groove_B", "210806");
+    start("Groove_C", "210806");
+    start("Groove_D", "210806");
+    start("Normal", "210806");
+    start("R1_17.9", "210806");
+    start("R1_18.6", "210806");
+    start("R1_19.3", "210806");
+return (0);
+}

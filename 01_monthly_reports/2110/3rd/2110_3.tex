@@ -1,0 +1,86 @@
+\documentclass[twocolumn,a4j]{jsarticle}
+\setlength{\topmargin}{-20.4cm}
+\setlength{\oddsidemargin}{-10.4mm}
+\setlength{\evensidemargin}{-10.4mm}
+\setlength{\textwidth}{18cm}
+\setlength{\textheight}{26cm}
+
+\usepackage[top=15truemm,bottom=25truemm,left=15truemm,right=15truemm]{geometry}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage[dvipdfmx]{color}
+\usepackage{listings}
+\usepackage{listings,jvlisting}
+\usepackage{geometry}
+\usepackage{framed}
+\usepackage{color}
+\usepackage[dvipdfmx]{hyperref}
+\usepackage{ascmac}
+\usepackage{enumerate}
+\usepackage{tabularx}
+\usepackage{cancel}
+\usepackage{scalefnt}
+
+\renewcommand{\figurename}{Fig.}
+\renewcommand{\tablename}{Table }
+
+\lstset{
+basicstyle={\ttfamily},
+identifierstyle={\small},
+commentstyle={\smallitshape},
+keywordstyle={\small\bfseries},
+ndkeywordstyle={\small},
+stringstyle={\small\ttfamily},
+frame={tb},
+breaklines=true,
+columns=[l]{fullflexible},
+xrightmargin=0zw,
+xleftmargin=3zw,
+numberstyle={\scriptsize},
+stepnumber=1,
+numbersep=1zw,
+lineskip=-0.5ex
+}
+
+\makeatletter
+\def\@maketitle
+{
+\begin{center}
+{\LARGE \@title \par}
+\end{center}
+\begin{flushright}
+{\large 報告書 NO.06 - 2\quad\@date\quad\@author}
+\end{flushright}
+\par\vskip 1.5em
+}
+\makeatother
+
+\setcounter{tocdepth}{3}
+
+\author{来代 勝胤}
+\title{令和3年度 10月 第3週 報告書}
+\date{2021/10/21}
+
+\begin{document}
+\columnseprule=0.1mm
+
+\maketitle
+\section*{報告内容}
+\begin{enumerate}[1.]
+    \item 進捗状況
+    \item FFTによる周波数特性の比較
+    \item 校正実験装置のフレーム組立
+\end{enumerate}
+\section{進捗状況}
+今週は、実験データを、
+(1) 測定前 (2) 測定中 の2つの部分に分けてFFTを行い、
+周波数特定について比較を行った。
+また、ひずみゲージの実験装置に用いるフレームの組立を行った。
+\section{FFTによる周波数特性の比較}
+
+\section{校正実験装置のフレーム組立}
+
+\end{document}

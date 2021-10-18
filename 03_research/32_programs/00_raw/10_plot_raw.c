@@ -37,29 +37,30 @@ int plot(char name[], char date[], char label_name[])
         exit(0); // gnuplotが無い場合、異常ある場合は終了
     }
 
-#include "plot/01.h"
+// #include "plot/01.h"
 #include "plot/02.h"
-#include "plot/03.h"
-#include "plot/04.h"
+// #include "plot/03.h"
+// #include "plot/04.h"
+#include "plot/06.h"
 
     fprintf(gp, "exit\n"); // Quit gnuplot
 
     pclose(gp);
 }
 
-// int main()
-// {
-//     // y軸範囲の設定に注意!!
+int main()
+{
+    // y軸範囲の設定に注意!!
 
-//     plot("C1", "210806", "C1");
-//     plot("Groove_A", "210806", "Groove A");
-//     plot("Groove_B", "210806", "Groove B");
-//     plot("Groove_C", "210806", "Groove C");
-//     plot("Groove_D", "210806", "Groove D");
-//     plot("Normal", "210806", "Normal");
-//     plot("R1_17.9", "210806", "R1 17.9");
-//     plot("R1_18.6", "210806", "R1 18.6");
-//     plot("R1_19.3", "210806", "R1 19.3");
+    plot("C1", "210806", "C1");
+    plot("Groove_A", "210806", "Groove A");
+    plot("Groove_B", "210806", "Groove B");
+    plot("Groove_C", "210806", "Groove C");
+    plot("Groove_D", "210806", "Groove D");
+    plot("Normal", "210806", "Normal");
+    plot("R1_17.9", "210806", "R1 17.9");
+    plot("R1_18.6", "210806", "R1 18.6");
+    plot("R1_19.3", "210806", "R1 19.3");
 
-//     return (0);
-// }
+    return (0);
+}
