@@ -52,7 +52,7 @@ lineskip=-0.5ex
 {\LARGE \@title \par}
 \end{center}
 \begin{flushright}
-{\large 報告書 NO.06 - 2\quad\@date\quad\@author}
+{\large 報告書 NO.06 - 2-1\quad\@date\quad\@author}
 \end{flushright}
 \par\vskip 1.5em
 }
@@ -79,8 +79,51 @@ lineskip=-0.5ex
 (1) 測定前 (2) 測定中 の2つの部分に分けてFFTを行い、
 周波数特定について比較を行った。
 また、ひずみゲージの実験装置に用いるフレームの組立を行った。
-\section{FFTによる周波数特性の比較}
 
+\section{FFTによる周波数特性の比較}
+周波数解析を行うにあたり、解析範囲について以下のFig.1に示す。
+回流水槽の水流発生時刻については、移動平均(n=11)を用いて特定した時刻を用いている。\\
+※ 開始時刻 [s] = 移動平均(n=11)の開始時刻 [s] + 5 [s]\\
+
+\subsection{FFTに利用する範囲の設定}
+周波数解析に利用した範囲は、水流発生時刻を基準として、後部を Range 1 (作用力測定中)、
+前部を Range 2 (水流発生前・タイヤモデルのみ回転) として設定している。
+なお、水流開始時刻から Range 1 は60秒間、Range 2 は30秒間のデータを除いて使用している。
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=90mm]{../images/image_1.png}
+        \caption{Range of FFT}
+    \end{center}
+\end{figure}
+
+\subsection{解析結果}
+FFTによる解析結果は以下 Fig.2 ～ Fig.4のようになった。
+なお、今回のFFT解析には、2021年8月6日(金) 実施の実験データを使用している。\\
+\subsubsection{Normal Drag}
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=85mm]{../images/Normal_drag_06.png}
+        \caption{Normal's drag Range1 result}
+        \includegraphics[width=85mm]{../images/Normal_drag_07.png}
+        \caption{Normal's drag Range2 result}
+    \end{center}
+\end{figure}
+\newpage
+\subsubsection{Normal Lift}
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=85mm]{../images/Normal_lift_06.png}
+        \caption{Normal's lift Range1 result}
+        \includegraphics[width=85mm]{../images/Normal_lift_07.png}
+        \caption{Normal's lift Range2 result}
+        \includegraphics[width=85mm]{../images/Normal_lift_08.png}
+        \caption{Normal'lift result}
+    \end{center}
+\end{figure}
+\newpage
 \section{校正実験装置のフレーム組立}
 
 \end{document}

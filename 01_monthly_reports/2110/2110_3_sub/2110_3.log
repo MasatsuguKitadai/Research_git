@@ -1,9 +1,9 @@
-This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.9.16)  19 OCT 2021 10:27
+This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.9.16)  19 OCT 2021 11:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**/home/kitadai/git/lab/01_monthly_reports/2110/2110_3/2110_3
-(/home/kitadai/git/lab/01_monthly_reports/2110/2110_3/2110_3.tex
+**/home/kitadai/git/lab/01_monthly_reports/2110/2110_3_sub/2110_3
+(/home/kitadai/git/lab/01_monthly_reports/2110/2110_3_sub/2110_3.tex
 pLaTeX2e <2020-02-02>+2 (based on LaTeX2e <2020-02-02> patch level 2)
 L3 programming layer <2020-02-14> (/usr/share/texlive/texmf-dist/tex/platex/jsclasses/jsarticle.cls
 Document Class: jsarticle 2020/02/02 jsclasses (okumura, texjporg)
@@ -352,32 +352,32 @@ File: l3backend-dvips.def 2020-02-03 L3 backend support: dvips
 ) (./2110_3.aux)
 \openout1 = `2110_3.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: dvips
 *geometry* verbose mode - [ preamble ] result:
 * driver: dvips
-* paper: <default>
+* paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
@@ -394,14 +394,14 @@ LaTeX Font Info:    ... okay on input line 67.
 * \headsep=15.69719pt
 * \topskip=12.76073pt
 * \footskip=28.45792pt
-* \marginparwidth=27.74062pt
+* \marginparwidth=18.49374pt
 * \marginparsep=18.49374pt
 * \columnsep=18.49374pt
 * \skip\footins=16.0pt plus 5.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
-* \@twocolumntrue
+* \@twocolumnfalse
 * \@twosidefalse
 * \@mparswitchfalse
 * \@reversemarginfalse
@@ -409,7 +409,7 @@ LaTeX Font Info:    ... okay on input line 67.
 
 \c@lstlisting=\count287
 \AtBeginShipoutBox=\box81
-Package hyperref Info: Link coloring OFF on input line 67.
+Package hyperref Info: Link coloring OFF on input line 49.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
  (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
@@ -419,74 +419,76 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count288
 )
-LaTeX Info: Redefining \ref on input line 67.
-LaTeX Info: Redefining \pageref on input line 67.
-LaTeX Info: Redefining \nameref on input line 67.
+LaTeX Info: Redefining \ref on input line 49.
+LaTeX Info: Redefining \pageref on input line 49.
+LaTeX Info: Redefining \nameref on input line 49.
  (./2110_3.out) (./2110_3.out)
 \@outlinefile=\write3
 \openout3 = `2110_3.out'.
 
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 16.60605pt on input line 71.
+(Font)              scaled to size 16.60605pt on input line 51.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 16.60605pt on input line 71.
+(Font)              scaled to size 16.60605pt on input line 51.
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 71.
+(Font)              scaled to size 11.53198pt on input line 51.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 71.
-LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 71.
-LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 71.
-LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 88.
-LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 88.
-File: ../images/image_1.png Graphic file (type bmp)
-<../images/image_1.png>
-
-Overfull \hbox (9.24686pt too wide) in paragraph at lines 95--96
- [] 
- []
-
+(Font)              scaled to size 11.53198pt on input line 51.
+File: ../images/Normal_drag_08.png Graphic file (type bmp)
+<../images/Normal_drag_08.png>
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 96.
+(Font)              scaled to size 8.64899pt on input line 55.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 96.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-File: ../images/Normal_drag_06.png Graphic file (type bmp)
-<../images/Normal_drag_06.png>
-File: ../images/Normal_drag_07.png Graphic file (type bmp)
-<../images/Normal_drag_07.png>
- [1
-
-
-]
-File: ../images/Normal_lift_06.png Graphic file (type bmp)
-<../images/Normal_lift_06.png>
-File: ../images/Normal_lift_07.png Graphic file (type bmp)
-<../images/Normal_lift_07.png>
+(Font)              scaled to size 8.64899pt on input line 55.
+File: ../images/Groove_A_drag_08.png Graphic file (type bmp)
+<../images/Groove_A_drag_08.png>
+File: ../images/Groove_B_drag_08.png Graphic file (type bmp)
+<../images/Groove_B_drag_08.png>
+File: ../images/Groove_C_drag_08.png Graphic file (type bmp)
+<../images/Groove_C_drag_08.png>
+File: ../images/Groove_D_drag_08.png Graphic file (type bmp)
+<../images/Groove_D_drag_08.png>
+File: ../images/R1_17.9_drag_08.png Graphic file (type bmp)
+<../images/R1_17.9_drag_08.png>
+File: ../images/R1_18.6_drag_08.png Graphic file (type bmp)
+<../images/R1_18.6_drag_08.png>
+File: ../images/R1_19.3_drag_08.png Graphic file (type bmp)
+<../images/R1_19.3_drag_08.png>
 File: ../images/Normal_lift_08.png Graphic file (type bmp)
 <../images/Normal_lift_08.png>
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 129.
- [2]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 129.
+File: ../images/Groove_A_lift_08.png Graphic file (type bmp)
+<../images/Groove_A_lift_08.png>
+File: ../images/Groove_B_lift_08.png Graphic file (type bmp)
+<../images/Groove_B_lift_08.png>
+File: ../images/Groove_C_lift_08.png Graphic file (type bmp)
+<../images/Groove_C_lift_08.png>
+File: ../images/Groove_D_lift_08.png Graphic file (type bmp)
+<../images/Groove_D_lift_08.png>
+File: ../images/R1_17.9_lift_08.png Graphic file (type bmp)
+<../images/R1_17.9_lift_08.png>
+File: ../images/R1_18.6_lift_08.png Graphic file (type bmp)
+<../images/R1_18.6_lift_08.png>
+File: ../images/R1_19.3_lift_08.png Graphic file (type bmp)
+<../images/R1_19.3_lift_08.png>
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 179.
+ [1
+
+] [2] [3] [4] [5] [6] [7] [8]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 179.
  (./2110_3.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 129.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 129.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 179.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 179.
 Package rerunfilecheck Info: File `2110_3.out' has not changed.
-(rerunfilecheck)             Checksum: E32DEEF42064DBADC933C7B88C349550;475.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 129.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 179.
  ) 
 Here is how much of TeX's memory you used:
- 8367 strings out of 481768
- 121651 string characters out of 5933620
- 402042 words of memory out of 5000000
- 23632 multiletter control sequences out of 15000+600000
- 540079 words of font info for 62 fonts, out of 8000000 for 9000
+ 8397 strings out of 481768
+ 122825 string characters out of 5933620
+ 403985 words of memory out of 5000000
+ 23655 multiletter control sequences out of 15000+600000
+ 538905 words of font info for 56 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 34i,5n,36p,278b,444s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,5n,36p,282b,504s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on 2110_3.dvi (2 pages, 6656 bytes).
+Output written on 2110_3.dvi (8 pages, 7452 bytes).
