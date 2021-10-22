@@ -54,7 +54,7 @@ int fft(char name[], char date[])
     double start_value[2], start_ave[2], finish_value[2], finish_ave[2];
 
     // ファイルの読み込み (開始点)
-    fp13 = fopen(filename13, "r"); 
+    fp13 = fopen(filename13, "r");
     if (filename13 == NULL)
     {
         printf("Error! I can't open the file.\n");
@@ -74,12 +74,12 @@ int fft(char name[], char date[])
     int range_1, range_2;
 
     range_1 = 128;
-    range_2 = 256;
+    range_2 = 128;
 
     int start_1, start_2;
-    
+
     start_1 = start_num - (range_1 + 30);
-    start_2 = start_num + 60;               
+    start_2 = start_num + 60;
 
     int j;
 
@@ -92,7 +92,7 @@ int fft(char name[], char date[])
     double value_drag_i_1[range_1], value_lift_i_1[range_1];
 
     j = 0;
-    for(i = start_1; i < start_1 + range_1; i++)
+    for (i = start_1; i < start_1 + range_1; i++)
     {
         value_drag_1[j] = value[i][0];
         value_lift_1[j] = value[i][1];
@@ -108,10 +108,10 @@ int fft(char name[], char date[])
 
     fp9 = fopen(filename9, "w");
 
-    for(i = 0; i < range_1; i++)
-    {   
+    for (i = 0; i < range_1; i++)
+    {
         // printf("[%d]\t%lf\t%lf\n", i, value_drag_1[i], value_drag_i_1[i]);
-        pw = sqrt(value_drag_1[i] * value_drag_1[i] + value_drag_i_1[i] * value_drag_i_1[i]);  /* パワースペクトル  */
+        pw = sqrt(value_drag_1[i] * value_drag_1[i] + value_drag_i_1[i] * value_drag_i_1[i]); /* パワースペクトル  */
         fq = (double)i / (dt * (double)range_1);
         fprintf(fp9, "%lf\t%lf\n", pw, fq);
         // printf("[%d]\t%lf\t%lf\n", i, pw, fq);
@@ -125,9 +125,9 @@ int fft(char name[], char date[])
 
     fp11 = fopen(filename11, "w");
 
-    for(i = 0; i < range_1; i++)
+    for (i = 0; i < range_1; i++)
     {
-        pw = sqrt(value_lift_1[i] * value_lift_1[i] + value_lift_i_1[i] * value_lift_i_1[i]);  /* パワースペクトル  */
+        pw = sqrt(value_lift_1[i] * value_lift_1[i] + value_lift_i_1[i] * value_lift_i_1[i]); /* パワースペクトル  */
         fq = (double)i / (dt * (double)range_1);
         fprintf(fp11, "%lf\t%lf\n", pw, fq);
         // printf("[%d]\t%lf\t%lf\n", i, pw, fq);
@@ -141,7 +141,7 @@ int fft(char name[], char date[])
     double value_drag_i_2[range_2], value_lift_i_2[range_2];
 
     j = 0;
-    for(i = start_2; i < start_2 + range_2; i++)
+    for (i = start_2; i < start_2 + range_2; i++)
     {
         value_drag_2[j] = value[i][0];
         value_lift_2[j] = value[i][1];
@@ -157,10 +157,10 @@ int fft(char name[], char date[])
 
     fp10 = fopen(filename10, "w");
 
-    for(i = 0; i < range_2; i++)
+    for (i = 0; i < range_2; i++)
     {
         // printf("[%d]\t%lf\t%lf\n", i, value_drag_2[i], value_drag_i_2[i]);
-        pw = sqrt(value_drag_2[i] * value_drag_2[i] + value_drag_i_2[i] * value_drag_i_2[i]);  /* パワースペクトル  */
+        pw = sqrt(value_drag_2[i] * value_drag_2[i] + value_drag_i_2[i] * value_drag_i_2[i]); /* パワースペクトル  */
         fq = (double)i / (dt * (double)range_2);
         fprintf(fp10, "%lf\t%lf\n", pw, fq);
         // printf("[%d]\t%lf\t%lf\n", i, pw, fq);
@@ -174,16 +174,15 @@ int fft(char name[], char date[])
 
     fp12 = fopen(filename12, "w");
 
-    for(i = 0; i < range_2; i++)
+    for (i = 0; i < range_2; i++)
     {
-        pw = sqrt(value_lift_2[i] * value_lift_2[i] + value_lift_i_2[i] * value_lift_i_2[i]);  /* パワースペクトル  */
+        pw = sqrt(value_lift_2[i] * value_lift_2[i] + value_lift_i_2[i] * value_lift_i_2[i]); /* パワースペクトル  */
         fq = (double)i / (dt * (double)range_2);
         fprintf(fp12, "%lf\t%lf\n", pw, fq);
         // printf("[%d]\t%lf\t%lf\n", i, pw, fq);
     }
 
     fclose(fp12);
-
 }
 
 int main()
