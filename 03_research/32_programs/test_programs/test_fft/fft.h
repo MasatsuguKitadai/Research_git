@@ -1,5 +1,5 @@
 // 円周率の定義
-// #define pi 4 * atan(1.0)
+#define pi 4 * atan(1.0)
 
 void S_fft(double ak[], double bk[], int n, int ff)
 {
@@ -7,7 +7,7 @@ void S_fft(double ak[], double bk[], int n, int ff)
     int i, j, k, k1, num, nhalf, phi, phi0, rot[n];
     double s, sc, c, a0, b0, tmp;
 
-    for(i = 0; i < n; i++)
+    for (i = 0; i < n; i++)
     {
         rot[i] = 0;
     }
@@ -18,7 +18,7 @@ void S_fft(double ak[], double bk[], int n, int ff)
 
     while (num >= 1)
     {
-        for(j = 0; j < n; j += (2 * num))
+        for (j = 0; j < n; j += (2 * num))
         {
             phi = rot[j] / 2;
             phi0 = phi + nhalf;
@@ -39,18 +39,18 @@ void S_fft(double ak[], double bk[], int n, int ff)
         num = num / 2;
     }
 
-    if(ff < 0)
+    if (ff < 0)
     {
-        for(i = 0; i < n; i++)
+        for (i = 0; i < n; i++)
         {
-            ak[i] /= (double) n;
-            bk[i] /= (double) n;
+            ak[i] /= (double)n;
+            bk[i] /= (double)n;
         }
     }
-    
-    for(i = 0; i < n - 1; i++)
+
+    for (i = 0; i < n - 1; i++)
     {
-        if((j = rot[i]) > i)
+        if ((j = rot[i]) > i)
         {
             tmp = ak[i];
             ak[i] = ak[j];

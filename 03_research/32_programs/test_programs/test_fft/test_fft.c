@@ -20,12 +20,15 @@ int main()
 
 #include "fft.h"
 
-// n=256の正弦波について
+    // n=256の正弦波について
 
     // 変数の作成
 
-    int range = 256;
-    double data[range], value[range], value_i[range]; 
+    int range1 = 128;
+    double data[range1], value[range1], value_i[range1];
+
+    int range2 = 128;
+    double data_2[range2], value_2[range2], value_i_2[range2];
 
     // ファイルの読み込み (dat データ)
 
@@ -40,34 +43,32 @@ int main()
 
     int i = 0;
     int num;
-    double row1, row2;
 
-    while ((fscanf(fp, "%d\t%lf\t%lf", &num, &row1, &row2)) != EOF)
+    while (fscanf(fp, "%d %lf", &num, &value[i]) != EOF)
     {
-        data[i] = row2;
+        // value[i] = value_sin;
+        // printf("[%d]\t%lf\n", num, value[i]);
         i = i + 1;
-        printf("%d\t%lf\t%lf\n", num, row1, row2);
     }
 
     fclose(fp);
 
     // FFTの適用
 
-    S_fft(value, value_i, range, 1);
+    S_fft(value, value_i, range1, 1);
 
     double pw, fq, dt;
     dt = 1;
 
-    fp = fopen(filename2, "w");
+    fp = fopen(filename3, "w");
 
-    for(i = 0; i < range; i++)
+    for (i = 0; i < range1; i++)
     {
-        pw = sqrt(value[i] * value[i] + value_i[i] * value_i[i]);  /* パワースペクトル  */
-        fq = (double)i / (dt * (double)range);
+        pw = sqrt(value[i] * value[i] + value_i[i] * value_i[i]); /* パワースペクトル  */
+        fq = (double)i / (dt * (double)range1);
         fprintf(fp, "%lf\t%lf\n", pw, fq);
-        printf("[%d]\t%lf\t%lf\n", i, pw, fq);
+        printf("[%d]\tvalue: %lf\tvalue_i: %lf\tpw: %lf\tfq :%lf\n", i, value[i], value_i[i], pw, fq);
     }
 
     fclose(fp);
-
 }
