@@ -151,18 +151,12 @@ $x$をひずみセンサの出力電圧，$y$をタイヤモデルに加わる�
     \mathrm{line 2} \; : \; y &=& 0.303 \; x - 0.07
 \end{eqnarray}
 
-\newpage
 \subsection{実験データへの適用について}
 
-ここで、導出した近似式をみると、
-どちらも原点を通っていないことがわかる。
-ここで、ロードセル・もしくはひずみセンサについて
-原点付近で出力電圧が非線形で変化する可能性があると考えた。
-
-また、Table.1 の実験データをみると、
-校正実験で得たデータ範囲に対して、
-入力荷重へと換算を適用する範囲は
-非常に狭い範囲であることがわかる。
+ここで，以前算出したTable.1の実験データの平均値をみると，
+校正実験で得たデータ範囲に対して，
+入力荷重へと換算を適用する範囲は，Fig.6のように
+非常に狭い範囲であることがわかる．
 
 \begin{table}[htbp]
     \footnotesize
@@ -175,12 +169,25 @@ $x$をひずみセンサの出力電圧，$y$をタイヤモデルに加わる�
 \begin{figure}[htbp]
     \footnotesize
     \begin{center}
-        \includegraphics[width=85mm]{../images/image_04.png}
-        \caption{Correlation of input force and strain-sensors}
+        \includegraphics[width=85mm]{../images/image_08.png}
+        \caption{Range to use}
     \end{center}
 \end{figure}
 
+また，導出した近似式をみると，
+どちらも原点を通っていないことがわかる．
+ここで，ロードセル・もしくはひずみセンサについて，Fig.7 赤線のような
+原点付近で出力電圧が非線形で変化する可能性があると考えた．
 
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=40mm]{../images/image_10.png}
+        \caption{Non-linear region}
+    \end{center}
+\end{figure}
+
+\newpage
 \section{校正実験の再実施}
 回流水槽での実験結果の換算に必要な範囲の
 ロードセルとひずみゲージの関係式を得るために，
@@ -188,19 +195,21 @@ $x$をひずみセンサの出力電圧，$y$をタイヤモデルに加わる�
 
 \subsection{校正実験装置の製作}
 
-校正実験の再実施にあたって，実験装置Fig.7, Fig.8, Fig.9を作成した．
+校正実験の再実施にあたって，実験装置 (Fig.8, Fig.9, Fig.10 参照) を作成した．
 
 \begin{figure}[htbp]
     \footnotesize
     \begin{center}
-        \includegraphics[width=55mm]{../images/image_05.png}
+        \includegraphics[width=45mm]{../images/image_05.png}
         \caption{Calibration experiment equipment}
-        \includegraphics[width=55mm]{../images/image_06.png}
+        \includegraphics[width=45mm]{../images/image_06.png}
         \caption{Load cell and specimen}
-        \includegraphics[width=55mm]{../images/image_07.png}
+        \includegraphics[width=45mm]{../images/image_07.png}
         \caption{Strain sensor}
     \end{center}
 \end{figure}
+
+\newpage
 
 \subsection{校正実験結果}
 
