@@ -8,8 +8,8 @@ DATE    :
 #include <math.h>
 
 FILE *fp;
-const char filename1[100] = "test_data/sin_n=128.dat";
-const char filename2[100] = "test_data/sin_n=256.dat";
+const char filename1[100] = "test_data/01_sin_n=128.dat";
+const char filename2[100] = "test_data/02_sin_n=256.dat";
 
 // sin波の配列
 double value_128[128];
@@ -19,8 +19,8 @@ double sin_wave_1[256];
 double sin_wave_2[256];
 
 // sin波の周期 [秒]
-int wave1 = 128;
-int wave2 = 64;
+int wave1 = 12;
+int wave2 = 36;
 
 // 円周率の定義
 #define pi 4 * atan(1.0)
@@ -43,7 +43,7 @@ int main()
 
     for (i = 0; i < 128; i++)
     {
-        value_128[i] = sin_wave_1[i] + sin_wave_2[i];
+        value_128[i] = sin_wave_1[i] + 2 * sin_wave_2[i];
         fprintf(fp, "%d\t%lf\n", i, value_128[i]);
     }
 
@@ -53,7 +53,7 @@ int main()
 
     for (i = 0; i < 256; i++)
     {
-        value_256[i] = 2 * (sin_wave_1[i] + sin_wave_2[i]);
+        value_256[i] = sin_wave_1[i] + 2 * sin_wave_2[i];
         fprintf(fp, "%d\t%lf\n", i, value_256[i]);
     }
 

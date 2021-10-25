@@ -8,10 +8,10 @@ DATE    :
 #include <math.h>
 
 FILE *fp1, *fp2, *fp3, *fp4;
-const char filename1[100] = "test_data/sin_n=128.dat";
-const char filename2[100] = "test_data/sin_n=256.dat";
-const char filename3[100] = "test_data/sin_n=128_fft.dat";
-const char filename4[100] = "test_data/sin_n=256_fft.dat";
+const char filename1[100] = "test_data/01_sin_n=128.dat";
+const char filename2[100] = "test_data/02_sin_n=256.dat";
+const char filename3[100] = "test_data/03_sin_n=128_fft.dat";
+const char filename4[100] = "test_data/04_sin_n=256_fft.dat";
 
 // 円周率の定義
 #define pi 4 * atan(1.0)
