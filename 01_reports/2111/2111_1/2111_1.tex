@@ -52,7 +52,7 @@ lineskip=-0.5ex
 {\LARGE \@title \par}
 \end{center}
 \begin{flushright}
-{\large 報告書 NO.06 - 1\quad\@date\quad\@author}
+{\large 報告書 NO.07 - 1\quad\@date\quad\@author}
 \end{flushright}
 \par\vskip 1.5em
 }
@@ -74,13 +74,13 @@ lineskip=-0.5ex
     \item ストレインアンプの調整
 \end{enumerate}
 \section{進捗状況}
-今週は、ストレインアンプの調整を行った。
-ロードセルに使用しているアンプは、
+今週は，ストレインアンプの調整を行った．
+ロードセルに使用しているアンプは，
 以前の実験と同様に動作していたため
-ひずみセンサに取り付けられたアンプの調整を行った。
+ひずみセンサに取り付けられたアンプの調整を行った．
 \section{ストレインアンプの調整}
-以下のFig.1、Fig.2に2021年6月21日に行った
-ロードセルとひずみセンサの校正実験の結果を示す。
+以下のFig.1，Fig.2に2021年6月21日に行った
+ロードセルとひずみセンサの校正実験の結果を示す．
 \begin{figure}[htbp]
     \footnotesize
     \begin{center}
@@ -89,12 +89,12 @@ lineskip=-0.5ex
         \includegraphics[width=80mm]{../images/previously_lift.png}
         \caption{previously data (lift)}
     \end{center}
-\end{figure}\\
-なお、今回の結果と比較するため、
-ロードセルの出力電圧(横軸)は $0 ～ -2.0$ の範囲のデータを採用している。
+\end{figure}\par
+なお，今回の結果と比較するため，
+ロードセルの出力電圧(横軸)は $0 ～ -2.0$ の範囲のデータを採用している．
 \newpage
-\subsection{Range:1k の場合}
-以下のFig.3、Fig.4にレンジを「1k」として測定した結果を示す。
+\subsection{Range：1k の場合}
+以下のFig.3，Fig.4にレンジを「1k」として測定した結果を示す．
 \begin{figure}[htbp]
     \footnotesize
     \begin{center}
@@ -104,15 +104,15 @@ lineskip=-0.5ex
         \caption{range : 1k data (lift)}
     \end{center}
 \end{figure}\par
-Fig.3をみると、Fig.1と比較して、
-近似式の傾きの差異は大きいが、
+Fig.3をみると，Fig.1と比較して，
+近似式の傾きの差異は大きいが，
 ひずみセンサの出力電圧(縦軸)の範囲と
-同様の結果が得られていると考えられる。
-供試体を押す角度によって、
-結果が変化することを考慮してデータの解析を行う必要がある。
+同様の結果が得られていると考えられる．
+供試体を押す角度によって，
+結果が変化することを考慮してデータの解析を行う必要がある．
 \newpage
-\subsection{Range:2k の場合}
-以下のFig.5、Fig.6にレンジを「2k」として測定した結果を示す。
+\subsection{Range：2k の場合}
+以下のFig.5，Fig.6にレンジを「2k」として測定した結果を示す．
 \begin{figure}[htbp]
     \footnotesize
     \begin{center}
@@ -122,13 +122,13 @@ Fig.3をみると、Fig.1と比較して、
         \caption{range : 2k (lift)}
     \end{center}
 \end{figure}\par
-Fig.6をみると、Fig.2と比較して、ひずみセンサの出力電圧(縦軸)の範囲と
-同様の結果が得られていると考えられる。
-こちらもFig.1とFig.3の関係と同様に、
-押す角度によって結果が大きく変化することを考慮する必要がある。
+Fig.6をみると，Fig.2と比較して，ひずみセンサの出力電圧(縦軸)の範囲と
+同様の結果が得られていると考えられる．
+こちらもFig.1とFig.3の関係と同様に，
+押す角度によって結果が大きく変化することを考慮する必要がある．
 \newpage
-\subsection{Range:500 の場合}
-以下のFig.5、Fig.6にレンジを「500」として測定した結果を示す。
+\subsection{Range：500 の場合}
+以下のFig.5，Fig.6にレンジを「500」として測定した結果を示す．
 \begin{figure}[htbp]
     \footnotesize
     \begin{center}
@@ -138,6 +138,28 @@ Fig.6をみると、Fig.2と比較して、ひずみセンサの出力電圧(縦
         \caption{range : 500 (lift)}
     \end{center}
 \end{figure}\par
-ひずみセンサの出力電圧(縦軸)の範囲が、他のデータと大きく異なるため
-以前の校正実験の際の設定に該当しないと考えられる。
+ひずみセンサの出力電圧(縦軸)の範囲が，他のデータと大きく異なるため
+以前の校正実験の際の設定に該当しないと考えられる．
+\newpage
+\subsection{合力の比較}
+これまでの実験結果をみると，
+力を加える方向の微細な差で，大きく結果が変化していることが考えられる．
+そこで，抗力及び揚力方向のひずみセンサが90度に取り付けられていると仮定し，
+以下の関係性から合力を算出した．
+\begin{eqnarray*}
+    F &=& \sqrt{f_x ^2 + f_y ^2} \\
+    F &:& 合力\\
+    f_x &:& 抗力\\
+    f_y &:& 揚力\\
+\end{eqnarray*}\par
+Fig.1～Fig.8の測定結果から算出した合力を以下のFig.9，Fig.10に示す．
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=80mm]{../images/resultantforce_drag.png}
+        \caption{resultant force (drag)}
+        \includegraphics[width=80mm]{../images/resultantforce_lift.png}
+        \caption{resultant force (lift)}
+    \end{center}
+\end{figure}\par
 \end{document}

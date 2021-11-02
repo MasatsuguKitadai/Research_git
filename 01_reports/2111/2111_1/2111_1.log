@@ -1,9 +1,9 @@
-This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.9.16)  2 NOV 2021 18:57
+This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.7.12)  2 NOV 2021 22:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**/home/kitadai/git/lab/01_reports/2111/2111_1/2111_1
-(/home/kitadai/git/lab/01_reports/2111/2111_1/2111_1.tex
+**/home/masatsugu/git/lab/01_reports/2111/2111_1/2111_1
+(/home/masatsugu/git/lab/01_reports/2111/2111_1/2111_1.tex
 pLaTeX2e <2020-02-02>+2 (based on LaTeX2e <2020-02-02> patch level 2)
 L3 programming layer <2020-02-14> (/usr/share/texlive/texmf-dist/tex/platex/jsclasses/jsarticle.cls
 Document Class: jsarticle 2020/02/02 jsclasses (okumura, texjporg)
@@ -478,23 +478,30 @@ File: ../images/500_drag.png Graphic file (type bmp)
 <../images/500_drag.png>
 File: ../images/500_lift.png Graphic file (type bmp)
 <../images/500_lift.png>
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 143.
  [2]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 143.
+File: ../images/resultantforce_drag.png Graphic file (type bmp)
+<../images/resultantforce_drag.png>
+File: ../images/resultantforce_lift.png Graphic file (type bmp)
+<../images/resultantforce_lift.png>
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 165.
+ [3
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 165.
  (./2111_1.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 143.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 143.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 165.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 165.
 Package rerunfilecheck Info: File `2111_1.out' has not changed.
-(rerunfilecheck)             Checksum: B31D999FD6977B4C2305614DC27E8DEF;317.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 143.
+(rerunfilecheck)             Checksum: 1A67ED649B7713A65AF9D6F94CFA91EB;387.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 165.
  ) 
 Here is how much of TeX's memory you used:
- 8403 strings out of 481768
- 122186 string characters out of 5933620
- 401039 words of memory out of 5000000
- 23653 multiletter control sequences out of 15000+600000
+ 8411 strings out of 481768
+ 122462 string characters out of 5933620
+ 402040 words of memory out of 5000000
+ 23659 multiletter control sequences out of 15000+600000
  541962 words of font info for 72 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 34i,5n,36p,270b,444s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,6n,36p,272b,444s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on 2111_1.dvi (2 pages, 7400 bytes).
+Output written on 2111_1.dvi (3 pages, 9396 bytes).
