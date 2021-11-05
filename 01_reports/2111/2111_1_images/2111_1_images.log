@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.9.16)  4 NOV 2021 12:00
+This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.11.5)  5 NOV 2021 16:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -485,7 +485,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 125.
 Here is how much of TeX's memory you used:
  8384 strings out of 481768
  122159 string characters out of 5933620
- 398997 words of memory out of 5000000
+ 398996 words of memory out of 5000000
  23646 multiletter control sequences out of 15000+600000
  540072 words of font info for 62 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
