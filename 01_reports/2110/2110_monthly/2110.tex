@@ -242,15 +242,19 @@ $x$をひずみセンサの出力電圧，$y$をタイヤモデルに加わる�
 
 算出(Excelの標準機能)した近似直線の傾きをみると，
 以前校正を行った際の結果と大きく異なっていることがわかる．
-また、意図した方向のみならず
+また、意図した方向のみならず，もう一方の方向にも力が加わっていることがわかる．\par
 
 \begin{figure}[htbp]
     \footnotesize
     \begin{center}
-        \includegraphics[width=70mm]{../images/image_11.png}
+        \includegraphics[width=65mm]{../images/image_11.png}
         \caption{Direction of force}
     \end{center}
 \end{figure}
+
+これは，ロードセルから加えられる作用力が，正しい方向に加わっていないことが考えられるが，
+人為的な校正装置の設置では，それを正すことは非常に困難である．
+したがって，取得したデータを各方向成分に解析する必要がある．
 
 \newpage
 \section{今月の進捗と11月の予定}
