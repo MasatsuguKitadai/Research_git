@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.11.5)  9 NOV 2021 12:38
+This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.11.5)  9 NOV 2021 19:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -518,23 +518,34 @@ File: ../images/image_06.png Graphic file (type bmp)
 <../images/image_06.png>
 File: ../images/image_07.png Graphic file (type bmp)
 <../images/image_07.png>
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 236.
+File: ../images/graph_21119_drag_previous.png Graphic file (type bmp)
+<../images/graph_21119_drag_previous.png>
+File: ../images/graph_21119_lift_previous.png Graphic file (type bmp)
+<../images/graph_21119_lift_previous.png>
  [3]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 236.
+File: ../images/graph_21119_drag_1.png Graphic file (type bmp)
+<../images/graph_21119_drag_1.png>
+File: ../images/graph_21119_lift_1.png Graphic file (type bmp)
+<../images/graph_21119_lift_1.png>
+File: ../images/image_11.png Graphic file (type bmp)
+<../images/image_11.png>
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 275.
+ [4]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 275.
  (./2110.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 236.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 236.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 275.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 275.
 Package rerunfilecheck Info: File `2110.out' has not changed.
 (rerunfilecheck)             Checksum: 16DBD9F1EB5CD647B47AF67A5CB049B0;743.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 236.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 275.
  ) 
 Here is how much of TeX's memory you used:
- 8416 strings out of 481768
- 122654 string characters out of 5933620
+ 8436 strings out of 481768
+ 123325 string characters out of 5933620
  404026 words of memory out of 5000000
- 23663 multiletter control sequences out of 15000+600000
+ 23678 multiletter control sequences out of 15000+600000
  541962 words of font info for 72 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
  34i,11n,36p,274b,442s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on 2110.dvi (3 pages, 13752 bytes).
+Output written on 2110.dvi (4 pages, 16436 bytes).
