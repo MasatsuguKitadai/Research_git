@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.11.5)  9 NOV 2021 19:45
+This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.11.5)  9 NOV 2021 20:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -529,15 +529,15 @@ File: ../images/graph_21119_lift_1.png Graphic file (type bmp)
 <../images/graph_21119_lift_1.png>
 File: ../images/image_11.png Graphic file (type bmp)
 <../images/image_11.png>
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 275.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 274.
  [4]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 275.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 274.
  (./2110.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 275.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 275.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 274.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 274.
 Package rerunfilecheck Info: File `2110.out' has not changed.
 (rerunfilecheck)             Checksum: 16DBD9F1EB5CD647B47AF67A5CB049B0;743.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 275.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 274.
  ) 
 Here is how much of TeX's memory you used:
  8436 strings out of 481768
@@ -548,4 +548,4 @@ Here is how much of TeX's memory you used:
  934 hyphenation exceptions out of 8191
  34i,11n,36p,274b,442s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on 2110.dvi (4 pages, 16436 bytes).
+Output written on 2110.dvi (4 pages, 16340 bytes).
