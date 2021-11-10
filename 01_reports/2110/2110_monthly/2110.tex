@@ -189,7 +189,7 @@ $x$をひずみセンサの出力電圧，$y$をタイヤモデルに加わる�
 \section{校正実験の再実施}
 回流水槽での実験結果の換算に必要な範囲の
 ロードセルとひずみゲージの関係式を得るために，
-校正実験を再度実施することとした．
+校正実験を再度実施することとした．\\
 
 \subsection{校正実験装置の製作}
 
@@ -210,12 +210,53 @@ $x$をひずみセンサの出力電圧，$y$をタイヤモデルに加わる�
 \newpage
 
 \subsection{校正実験結果}
+はじめに，以下のFig.11，Fig.12に2021年6月21日に行った
+ロードセルとひずみセンサの校正実験の結果を示す．
+なお，今回の結果と比較するため，
+ロードセルの出力電圧(横軸)は $0 ～ -2.0$ の範囲のデータを採用している．\\
 
-2021年10月21日(木)に，実験を行いデータを確認したが，
-ストレインアンプの調整ができておらず，
-正しいデータが取得できなかった．\par
-したがって，早急に調整を行い実験を行う必要がある．
+\subsubsection*{以前の実験結果}
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=75mm]{../images/graph_21119_drag_previous.png}
+        \caption{Previous data of drag}
+        \includegraphics[width=75mm]{../images/graph_21119_lift_previous.png}
+        \caption{Previous data of lift}
+    \end{center}
+\end{figure}
 
+\newpage
+作成した実験装置を用いて，再実験を実施した
+結果を以下のFig.13，Fig.14に示す．\\
+\subsubsection*{再実験結果}
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=75mm]{../images/graph_21119_drag_1.png}
+        \caption{Re-exprimental data of drag}
+        \includegraphics[width=75mm]{../images/graph_21119_lift_1.png}
+        \caption{Re-exprimental data of lift}
+    \end{center}
+\end{figure}
+
+算出(Excelの標準機能)した近似直線の傾きをみると，
+以前校正を行った際の結果と大きく異なっていることがわかる．
+また、意図した方向のみならず，もう一方の方向にも力が加わっていることがわかる．\par
+
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=65mm]{../images/image_11.png}
+        \caption{Direction of force}
+    \end{center}
+\end{figure}
+
+これは，ロードセルから加えられる作用力が，正しい方向に加わっていないことが考えられるが，
+人為的な校正装置の設置では，それを正すことは非常に困難である．
+したがって，取得したデータを各方向成分に解析する必要がある．
+
+\newpage
 \section{今月の進捗と11月の予定}
 \begin{itemize}
     \item [$\blacksquare$] \textgt{今月の進捗}
@@ -224,12 +265,13 @@ $x$をひずみセンサの出力電圧，$y$をタイヤモデルに加わる�
                     作用力への換算過程の確認
               \item [$\bullet$] ロードセルの出力電圧と入力荷重の関係式を得ることができた
               \item [$\bullet$] ロードセルもしくはひずみゲージの出力電圧に非線形領域が存在する可能性があることがわかった
-              \item [$\bullet$] ロードセルとひずみゲージの校正実験を再度行っている\\
+              \item [$\bullet$] ロードセルとひずみゲージの校正実験を再度行った
+              \item [$\bullet$] 正確な校正実験データを得るためには各方向に加わる作用力を解析する必要がある\\
           \end{itemize}
     \item [$\blacksquare$] \textgt{11月の予定}
           \begin{itemize}
-              \item [$\bullet$] 校正実験の再実施
-              \item [$\bullet$] 実験データから出力電圧から入力荷重への換算\\
+              \item [$\bullet$] 実験データから出力電圧から入力荷重への換算
+              \item [$\bullet$] 方向別の作用力の解析方法の検討\\
           \end{itemize}
 \end{itemize}
 
