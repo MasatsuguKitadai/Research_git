@@ -1,5 +1,5 @@
 /******************************************************************************
-PROGRAM NAME : calibration.c
+PROGRAM NAME : calcuration.c
 AUTHER  : Masatsugu Kitadai
 DATE    :
 ******************************************************************************/
@@ -22,6 +22,9 @@ int calcuration()
     char filename6[100] = "../33_result/convert/dat/force&line_1.dat";
     char filename7[100] = "../33_result/convert/dat/force&line_2.dat";
     char filename8[100] = "../33_result/convert/dat/formula.dat";
+
+    // 入力ファイル名(オフセット)
+    char filename9[100] = "../33_result/convert/dat/offset_211109.dat";
 
     // 変数の設定
     int i, j;
@@ -63,6 +66,7 @@ int calcuration()
     }
 
     fclose(fp1);
+    
     datalong[1] = i;
 
     // Model-loadcell <Drag>
@@ -88,6 +92,7 @@ int calcuration()
     }
 
     fclose(fp2);
+
     datalong[2] = i;
 
     // Model-loadcell <Drag>
@@ -115,6 +120,20 @@ int calcuration()
     fclose(fp3);
 
     datalong[3] = i;
+
+    // ファイルの読み込み (offset)
+    fp9 = fopen(filename9, "r");
+    if (filename9 == NULL)
+    {
+        printf("Error! I can't open the file.\n");
+        exit(0);
+    }
+    
+    double offset;
+
+    fscanf(fp3, "%lf", &ch1);
+    offset = ch1;
+    // printf("%lf\n", offset);
 
     // 計算
     double a1, b1;
@@ -185,7 +204,7 @@ int calcuration()
     sum3 = 0;
     sum4 = 0;
 
-    // 近似直線の計算
+    // 近似直線の計算（最小二乗法）
     for (i = 0; i < datalong[2]; i++)
     {
         sum1 = sum1 + result_x[i][1];
@@ -197,7 +216,7 @@ int calcuration()
     a2 = (datalong[2] * sum4 - sum1 * sum2) / (datalong[2] * sum3 - sum1 * sum1);
     b2 = (sum3 * sum2 - sum4 * sum1) / (datalong[2] * sum3 - sum1 * sum1);
 
-    printf("f[x] = %lf x + %lf\t[input - force]\n", a2, b2);
+    printf("f[x] = %lf x + %lf\t[input - force (drag)]\n", a2, b2);
 
     // datファイルの作成
     fp4 = fopen(filename4, "w");
@@ -240,7 +259,7 @@ int calcuration()
     a3 = (datalong[3] * sum4 - sum1 * sum2) / (datalong[3] * sum3 - sum1 * sum1);
     b3 = (sum3 * sum2 - sum4 * sum1) / (datalong[3] * sum3 - sum1 * sum1);
 
-    printf("f[x] = %lf x + %lf\t[input - force]\n", a3, b3);
+    printf("f[x] = %lf x + %lf\t[input - force (lift)]\n", a3, b3);
 
     // datファイルの作成
     fp5 = fopen(filename5, "w");
