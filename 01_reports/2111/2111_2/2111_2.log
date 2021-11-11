@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.11.5)  10 NOV 2021 15:23
+This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.11.5)  11 NOV 2021 12:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -454,6 +454,8 @@ File: ../images/graph_21119_drag_1.png Graphic file (type bmp)
 <../images/graph_21119_drag_1.png>
 File: ../images/graph_21119_drag_2.png Graphic file (type bmp)
 <../images/graph_21119_drag_2.png>
+File: ../images/graph_211111_drag_3.png Graphic file (type bmp)
+<../images/graph_211111_drag_3.png>
  [1
 
 
@@ -472,14 +474,14 @@ File: ../images/calibration_2_lift.png Graphic file (type bmp)
 <../images/calibration_2_lift.png>
  [2]
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 165.
+(Font)              scaled to size 6.72699pt on input line 166.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 4.805pt on input line 165.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 165.
+(Font)              scaled to size 4.805pt on input line 166.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 166.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 165.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 166.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
@@ -491,23 +493,23 @@ File: ../images/convert.png Graphic file (type bmp)
 <../images/convert.png>
 File: ../images/convert_offset.png Graphic file (type bmp)
 <../images/convert_offset.png>
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 196.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 197.
  [3]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 196.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 197.
  (./2111_2.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 196.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 196.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 197.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 197.
 Package rerunfilecheck Info: File `2111_2.out' has not changed.
 (rerunfilecheck)             Checksum: 4117DE0288522D8BAC1252A32FC22237;1007.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 196.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 197.
  ) 
 Here is how much of TeX's memory you used:
- 8429 strings out of 481768
- 123311 string characters out of 5933620
+ 8433 strings out of 481768
+ 123446 string characters out of 5933620
  401139 words of memory out of 5000000
- 23673 multiletter control sequences out of 15000+600000
+ 23676 multiletter control sequences out of 15000+600000
  541962 words of font info for 72 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
  34i,8n,36p,270b,441s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on 2111_2.dvi (3 pages, 11868 bytes).
+Output written on 2111_2.dvi (3 pages, 11968 bytes).
