@@ -1,9 +1,9 @@
-This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.11.5)  24 NOV 2021 15:01
+This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.11.5)  24 NOV 2021 15:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**/home/kitadai/git/lab/01_reports/2111/2111_4/2111_4
-(/home/kitadai/git/lab/01_reports/2111/2111_4/2111_4.tex
+**/home/kitadai/git/lab/01_reports/2111/2111_3/2111_3
+(/home/kitadai/git/lab/01_reports/2111/2111_3/2111_3.tex
 pLaTeX2e <2020-02-02>+2 (based on LaTeX2e <2020-02-02> patch level 2)
 L3 programming layer <2020-02-14> (/usr/share/texlive/texmf-dist/tex/platex/jsclasses/jsarticle.cls
 Document Class: jsarticle 2020/02/02 jsclasses (okumura, texjporg)
@@ -349,8 +349,8 @@ File: l3backend-dvips.def 2020-02-03 L3 backend support: dvips
 \g__pdf_backend_annotation_int=\count284
 \g__pdf_backend_link_int=\count285
 \g__pdf_backend_link_sf_int=\count286
-) (./2111_4.aux)
-\openout1 = `2111_4.aux'.
+) (./2111_3.aux)
+\openout1 = `2111_3.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
 LaTeX Font Info:    ... okay on input line 67.
@@ -422,9 +422,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 67.
 LaTeX Info: Redefining \pageref on input line 67.
 LaTeX Info: Redefining \nameref on input line 67.
- (./2111_4.out) (./2111_4.out)
+ (./2111_3.out) (./2111_3.out)
 \@outlinefile=\write3
-\openout3 = `2111_4.out'.
+\openout3 = `2111_3.out'.
 
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
 (Font)              scaled to size 16.60605pt on input line 71.
@@ -438,27 +438,53 @@ LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
 (Font)              scaled to size 11.53198pt on input line 71.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 11.53198pt on input line 71.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 83.
+LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
+(Font)              scaled to size 9.60999pt on input line 86.
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 9.60999pt on input line 86.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 6.72699pt on input line 87.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 4.805pt on input line 87.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 87.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 87.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+File: ../images/monthly_plan.png Graphic file (type bmp)
+<../images/monthly_plan.png>
+LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
+(Font)              scaled to size 8.64899pt on input line 118.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 8.64899pt on input line 118.
+File: ../images/testpieces_2.png Graphic file (type bmp)
+<../images/testpieces_2.png>
  [1
 
 
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 191.
+ [2
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 83.
- (./2111_4.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 83.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 83.
-Package rerunfilecheck Info: File `2111_4.out' has not changed.
-(rerunfilecheck)             Checksum: 363C6F535992BFD0CE45770FCD0D087F;141.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 83.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 191.
+ (./2111_3.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 191.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 191.
+Package rerunfilecheck Info: File `2111_3.out' has not changed.
+(rerunfilecheck)             Checksum: 8444CB93B8E7F6799E0ACD41FB287948;549.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 191.
  ) 
 Here is how much of TeX's memory you used:
- 8330 strings out of 481768
- 120810 string characters out of 5933620
- 400039 words of memory out of 5000000
- 23607 multiletter control sequences out of 15000+600000
- 538913 words of font info for 56 fonts, out of 8000000 for 9000
+ 8380 strings out of 481768
+ 121643 string characters out of 5933620
+ 419039 words of memory out of 5000000
+ 23636 multiletter control sequences out of 15000+600000
+ 541962 words of font info for 72 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 34i,5n,36p,270b,329s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,9n,36p,270b,444s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on 2111_4.dvi (1 page, 2400 bytes).
+Output written on 2111_3.dvi (2 pages, 12096 bytes).
