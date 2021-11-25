@@ -71,19 +71,29 @@ lineskip=-0.5ex
 \section*{報告内容}
 \begin{enumerate}[1.]
     \item 進捗状況
-    \item 実験装置
-    \item 実験結果
+    \item 実験装置の組立
+    \item 実験装置のたわみ量の算出
 \end{enumerate}
 
 \section{進捗状況}
-今週は、実験に向けて簡易的な実験装置の組立を行った．
-また、作用力実験における荷重の暫定的な換算結果から、
+今週は，実験に向けて簡易的な実験装置の組立を行った．
+また，作用力実験における荷重の暫定的な換算結果から，
 実験装置がどの程度変位するかの簡易的な算出を行った．
+
 \section{実験装置の組立}
-\section{実験装置のひずみ算出}
-試験用のひずみセンサを選定するにあたって、
+仮実験を行うにあたり，以下 Fig.1 の実験装置を作成した。
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=80mm]{../images/device_1.jpg}
+        \caption{Experimental device}
+    \end{center}
+\end{figure}
+
+\section{実験装置のたわみ量の算出}
+試験用のひずみセンサを選定するにあたって，
 ひずみセンサの取付部が作用力によってどの程度変位するかを調べる必要がある．
-ここで、簡単のため可能な限り切りのいい数字を使っておおよその変位量を算出した．
+ここで，簡単のため可能な限り切りのいい数字を使っておおよその変位量を算出した．
 \begin{figure}[htbp]
     \footnotesize
     \begin{center}
@@ -92,25 +102,39 @@ lineskip=-0.5ex
     \end{center}
 \end{figure}
 \subsection{算出結果}
-
-\subsection{算出過程}
-\begin{itembox}[l]{算出条件}
+    \begin{screen}
+        \begin{itemize}
+            \item 先端のたわみ量　　：$0.151 \;\left[\mathrm{mm}\right]$
+            \item 取付軸表面の伸縮量：$1.029 × 10^{-3} \;\left[\mathrm{mm}\right]$
+            \item 取付軸表面のひずみ：$5.717 × 10^{-6} \left[\mathrm{-}\right]$
+        \end{itemize}
+    \end{screen}
+\vskip\baselineskip
+\subsection{算出条件}
+\begin{screen}
     \begin{itemize}
-        \item [$\bullet$] アルミニウムの弾性係数　　：$E = 70 \;\left[\mathrm{GPa}\right]$
-        \item [$\bullet$] ひずみセンサと作用点の距離：$l = 625 \;\left[\mathrm{mm}\right]$
-        \item [$\bullet$] 作用力　　　　　　　　　　：$N = 0.15 \;\left[\mathrm{N}\right]$              
-        \item [$\bullet$] 断面二次モーメント　　　　：$I = 2701 \;\left[\mathrm{mm^4}\right]$              
-        \item [$\bullet$] 取付部に加わるモーメント　：$M$              
-        \item [$\bullet$] たわみの曲率半径　　　　　：$R$              
-        \item [$\bullet$] たわみ角　　　　　　　　　：$\theta$              
+        \item [$\bullet$] アルミニウムの弾性係数　　　：$E = 70 \;\left[\mathrm{GPa}\right]$
+        \item [$\bullet$] ひずみセンサと作用点の距離　：$l_1 = 725 \;\left[\mathrm{mm}\right]$
+        \item [$\bullet$] 取付部材料の長さ　　　　　　：$l_2 = 180 \;\left[\mathrm{mm}\right]$
+        \item [$\bullet$] 作用力　　　　　　　　　　　：$F = 0.15 \;\left[\mathrm{N}\right]$              
+        \item [$\bullet$] 断面二次モーメント　　　　　：$I = 2701 \;\left[\mathrm{mm^4}\right]$              
+        \item [$\bullet$] 取付部に加わるモーメント　　：$M$              
+        \item [$\bullet$] 取付部材料のたわみの曲率半径：$R$              
+        \item [$\bullet$] 取付部材料のたわみ角　　　　：$\theta$
+        \item [$\bullet$] 取付部材料のたわみ　　　　　：$w$
+        \item [$\bullet$] 取付部表面の伸び　　　　　　：$\lambda$
+        \item [$\bullet$] 取付部表面のひずみ　　　　　：$\varepsilon$
+        \item [$\bullet$] 取付部表面と中立軸の距離　　：$\delta r$              
     \end{itemize}
-\end{itembox}
+\end{screen}
+\newpage
+\subsection{算出課程}
 \begin{itemize}
-    \item [$\blacksquare$] 取付部に加わるモーメントの算出
+    \item [$\blacksquare$] 実験装置に加わるモーメントの算出
     \begin{eqnarray*}
-        M &=& N × \frac{l}{1000}\\
-        &=& 0.15 × 0.625\\
-        &=& 0.09375 \;\left[\mathrm{N \cdot m}\right]
+        M &=& F × \frac{l_1}{1000}\\
+        &=& 0.15 × 0.725\\
+        &=& 0.10875 \;\left[\mathrm{N \cdot m}\right]
     \end{eqnarray*}
     \item [$\blacksquare$] たわみの曲率半径の算出
     \begin{itembox}[l]{たわみの曲率半径}
@@ -120,14 +144,15 @@ lineskip=-0.5ex
     \end{itembox}
     \begin{eqnarray*}
         R &=& \frac{EI}{M}\\
-        &=& 70 × 2701 × \frac{100000}{9375}\\
-        &\approx& 2016746.667 \left[\mathrm{mm}\right]
+        &=& 70 × 2701 × \frac{100000}{10875}\\
+        &\approx& 1738574.713 \left[\mathrm{mm}\right]
     \end{eqnarray*}
-    \item [$\blacksquare$] たわみ角の算出
+    \item [$\blacksquare$] 位置$x$[mm] におけるたわみ角とたわみの算出
     \begin{itembox}[l]{たわみの微分方程式}
             \begin{center}
-                $\displaystyle \frac{d^2w}{dx^2}=-\frac{M}{EI}$
-                ※ 今回はひずみは正の値となる
+                $\displaystyle \frac{d^2w}{dx^2}=-\frac{M}{EI}$\\
+                \vskip\baselineskip
+                ※ 今回のひずみは正の値となる
             \end{center}
     \end{itembox}
     \begin{itembox}[l]{初期条件}
@@ -137,11 +162,54 @@ lineskip=-0.5ex
     \end{itembox}
     \begin{eqnarray*}
         \frac{d^2w}{dx^2}&=&\frac{M}{EI}\\
-        &=&\frac{0.09375}{70 × 2701}\\
-        &=& 4.958 × 10^{-7} \left[\mathrm{1/mm}\right]\\ \\
-        \frac{dw}{dx} &=& \frac{M}{EI} x + C_1\\ \\
-        \frac{dw}{dx} &=& \frac{1}{2} \frac{M}{EI} x^2 + C_1x + C_2\\
+        &=&\frac{0.10875}{70 × 2701}\\
+        &=&5.7518 \cdots × 10^{-7}\\
+        &\approx& 5.752 × 10^{-7} \;\left[\mathrm{1/mm}\right]\\ \\
+        \frac{dw}{dx} &=& \theta = \frac{M}{EI} x + C_1\\ \\
+        w &=& \frac{1}{2} \frac{M}{EI} x^2 + C_1x + C_2
+    \end{eqnarray*}
+    初期条件より
+    \begin{eqnarray*}
+        C_1 = C_2 = 0
+    \end{eqnarray*}
+    したがって，
+    \begin{eqnarray*}
+        \theta &=& \frac{M}{EI}x\\ \\
+        w &=& \frac{1}{2}\frac{M}{EI}x^2\\
     \end{eqnarray*}
 \end{itemize}
-\section{実験結果}
+\newpage
+\begin{itemize}
+    \item [$\blacksquare$] ひずみセンサ取付部($x=90$)の伸びの算出\\
+    $x = 90$のとき、たわみ角は，
+    \begin{eqnarray*}
+        \theta &=& \frac{M}{EI} × 90\\
+        &=& 5.7152 × 10^{-7} × 90\\
+        &=& 5.1437 × 10^{-5}\\
+        &\approx& 5.144 × 10^{-5} \;\left[\mathrm{rad}\right]
+    \end{eqnarray*}
+    したがって，取付軸の伸び$\lambda$は，
+    \begin{eqnarray*}
+        \lambda &=& \left(R+\delta r\right)\theta - R\theta\\
+        &=& \delta r \theta\\
+        &=& 20 × \;\theta\\
+        &=& 20 × 5.1437 × 10^{-5}\\
+        &=& 1.02874 × 10^{-3}\\
+        &\approx& 1.029 × 10^{-3} \;\left[\mathrm{mm}\right]\\
+    \end{eqnarray*}
+    \item [$\blacksquare$] ひずみセンサ取付部($x=90$)のひずみの算出
+        \begin{eqnarray*}
+            \varepsilon &=& \frac{\lambda}{l_2}\\
+            &=& \frac{1.029 × 10^{-3}}{180}\\
+            &=& 5.7166 \cdots × 10^{-6}\\
+            &\approx& 5.717 × 10^{-6} \left[\mathrm{-}\right]
+        \end{eqnarray*} 
+    \item [$\blacksquare$] 先端($x=725$)のたわみ量 $w$ の算出
+    \begin{eqnarray*}
+        w &=& \frac{1}{2} × \frac{M}{EI} × l^2\\
+        &=& \frac{1}{2} × 5.752 × 10^{-7} × 725^2\\
+        &=& 0.1511 \cdots\\
+        &\approx& 0.151 \;\left[\mathrm{mm}\right]
+    \end{eqnarray*} 
+\end{itemize}
 \end{document}
