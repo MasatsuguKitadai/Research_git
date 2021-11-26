@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.11.5)  25 NOV 2021 17:18
+This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.11.5)  26 NOV 2021 17:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -438,27 +438,96 @@ LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
 (Font)              scaled to size 11.53198pt on input line 73.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 11.53198pt on input line 73.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 91.
+LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
+(Font)              scaled to size 9.60999pt on input line 89.
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 9.60999pt on input line 89.
+File: ../images/calibration_1.png Graphic file (type bmp)
+<../images/calibration_1.png>
+LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
+(Font)              scaled to size 8.64899pt on input line 96.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 8.64899pt on input line 96.
+File: ../images/graph_21119_drag_previous.png Graphic file (type bmp)
+<../images/graph_21119_drag_previous.png>
+File: ../images/graph_21119_lift_previous.png Graphic file (type bmp)
+<../images/graph_21119_lift_previous.png>
  [1
 
 
-
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 91.
+File: ../images/graph_21119_drag_1.png Graphic file (type bmp)
+<../images/graph_21119_drag_1.png>
+File: ../images/graph_21119_drag_2.png Graphic file (type bmp)
+<../images/graph_21119_drag_2.png>
+File: ../images/graph_211111_drag_3.png Graphic file (type bmp)
+<../images/graph_211111_drag_3.png>
+File: ../images/graph_21119_lift_1.png Graphic file (type bmp)
+<../images/graph_21119_lift_1.png>
+File: ../images/graph_21119_lift_2.png Graphic file (type bmp)
+<../images/graph_21119_lift_2.png>
+File: ../images/graph_21119_lift_3.png Graphic file (type bmp)
+<../images/graph_21119_lift_3.png>
+ [2]
+File: ../../2110/images/image_08.png Graphic file (type bmp)
+<../../2110/images/image_08.png>
+File: ../../2110/images/image_10.png Graphic file (type bmp)
+<../../2110/images/image_10.png>
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 6.72699pt on input line 187.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 4.805pt on input line 187.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 187.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 187.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+File: ../images/calibration_2_drag.png Graphic file (type bmp)
+<../images/calibration_2_drag.png>
+File: ../images/calibration_2_lift.png Graphic file (type bmp)
+<../images/calibration_2_lift.png>
+ [3]
+File: ../images/calibration_2_drag_offset.png Graphic file (type bmp)
+<../images/calibration_2_drag_offset.png>
+File: ../images/calibration_2_lift_offset.png Graphic file (type bmp)
+<../images/calibration_2_lift_offset.png>
+File: ../images/convert.png Graphic file (type bmp)
+<../images/convert.png>
+File: ../images/convert_offset.png Graphic file (type bmp)
+<../images/convert_offset.png>
+ [4]
+File: ../images/testpieces_2.png Graphic file (type bmp)
+<../images/testpieces_2.png>
+ [5]
+File: ../images/moment.png Graphic file (type bmp)
+<../images/moment.png>
+
+Underfull \vbox (badness 6893) has occurred while \output is active []
+
+ [6]
+File: ../images/device_1.jpg Graphic file (type bmp)
+<../images/device_1.jpg>
+ [7]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 524.
+ [8]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 524.
  (./TOYOTYRES_211130.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 91.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 91.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 524.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 524.
 Package rerunfilecheck Info: File `TOYOTYRES_211130.out' has not changed.
-(rerunfilecheck)             Checksum: 1F95F931FC2D4C21BDDFE40478F8412B;317.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 91.
+(rerunfilecheck)             Checksum: FB210435AA7657D6917C133F5B47A697;1762.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 524.
  ) 
 Here is how much of TeX's memory you used:
- 8330 strings out of 481768
- 120984 string characters out of 5933620
- 401062 words of memory out of 5000000
- 23607 multiletter control sequences out of 15000+600000
- 538913 words of font info for 56 fonts, out of 8000000 for 9000
+ 8461 strings out of 481768
+ 124261 string characters out of 5933620
+ 419944 words of memory out of 5000000
+ 23695 multiletter control sequences out of 15000+600000
+ 542297 words of font info for 73 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 34i,5n,36p,288b,329s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,9n,36p,288b,443s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on TOYOTYRES_211130.dvi (1 page, 3212 bytes).
+Output written on TOYOTYRES_211130.dvi (8 pages, 37380 bytes).
