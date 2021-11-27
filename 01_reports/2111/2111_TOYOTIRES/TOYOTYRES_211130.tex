@@ -84,7 +84,7 @@ lineskip=-0.5ex
 ロードセルを用いた校正実験において，
 微小な作用力が加わる範囲でロードセルの出力電圧に
 出力電圧の非線形領域が存在する懸念があったため，
-微小な作用力による出力電圧の変化を調べるための校正実験を行った．\\]
+微小な作用力による出力電圧の変化を調べるための校正実験を行った．
 
 \begin{figure}[htbp]
     \footnotesize
@@ -97,29 +97,29 @@ lineskip=-0.5ex
     \end{center}
 \end{figure}
 
+\newpage
+
 \subsection{校正実験(1) ロードセルと荷重の関係}
-以下のFig.1に2021年6月に行ったロードセルの出力電圧と荷重に関する校正実験の結果を示す．
+以下のFig.1に2021年6月に行ったロードセルの出力電圧と荷重に関する校正実験結果を示す．
 
 \begin{figure}[htbp]
     \footnotesize
     \begin{center}
-        \includegraphics[width=68mm]{../images/calibration_1.png}
+        \includegraphics[width=60mm]{../images/calibration_1.png}
         \caption{Previous data of load cell - input force}
     \end{center}
 \end{figure}
 
-\newpage
-
 \subsection{校正実験(2) ロードセルとひずみセンサの関係}
 以下のFig.2，Fig.3に2021年6月に行った
-ロードセルの出力電圧とひずみセンサの出力電圧に関する校正実験の結果を示す．
+ロードセルとひずみセンサの出力電圧に関する校正実験結果を示す．
 
 \begin{figure}[htbp]
     \footnotesize
     \begin{center}
-        \includegraphics[width=68mm]{../images/graph_21119_drag_previous.png}
+        \includegraphics[width=62mm]{../images/graph_21119_drag_previous.png}
         \caption{Previous data of load cell - strain sensors (drag)}
-        \includegraphics[width=68mm]{../images/graph_21119_lift_previous.png}
+        \includegraphics[width=62mm]{../images/graph_21119_lift_previous.png}
         \caption{Previous data of load cell - strain sensors (lift)}
     \end{center}
 \end{figure}
@@ -146,7 +146,7 @@ lineskip=-0.5ex
 
 \subsection{再実施結果：揚力}
 以下のFig.7～Fig.9に揚力方向の実験データを示す．
-実験条件及びデータ解析方法は抗力方向と同様である．
+実験条件及びデータ解析方法は抗力方向と同様である．\\ \\
 \begin{figure}[htbp]
     \footnotesize
     \begin{center}
@@ -175,8 +175,6 @@ lineskip=-0.5ex
 そのオフセット値を，実験結果のロードセルの出力電圧から差し引いた値を
 採用することとする．\\
 
-\newpage
-
 \subsection{オフセット値の算出}
 実験の際にロードセルのストレインアンプは，
 バランスをとった後，0.720付近の値を示すことが多くある．
@@ -187,6 +185,8 @@ lineskip=-0.5ex
 \begin{eqnarray*}
   \mathrm{offset} = -0.728
 \end{eqnarray*}
+
+\newpage
 
 \subsection{オフセット値の適用}
 算出したオフセット値を以前の実験結果に適用した．\\
@@ -206,7 +206,7 @@ lineskip=-0.5ex
 \newpage
 
 \subsubsection*{オフセット値適用後の実験結果}
-以下のFig.14，Fig.15にストレインアンプのオフセット値適用後の実験結果を示す．\par
+以下のFig.14，Fig.15にストレインアンプのオフセット値適用後の実験結果を示す．\\
 \begin{figure}[htbp]
     \footnotesize
     \begin{center}
@@ -302,7 +302,7 @@ lineskip=-0.5ex
 なお，現在の実験装置で使用されている (1)円筒を基準とし，
 同等の断面二次モーメントを持つ形状とした．\\
 
-\subsection{断面二次モーメントの算出}
+\subsection{比較形状寸法の算出}
 (i)の円筒を基準に算出した断面二次モーメントを以下に示す．
 なお，上記の”比較実験の対象”の記号に対応している．
 
@@ -359,130 +359,132 @@ lineskip=-0.5ex
         \end{eqnarray*}
     \end{enumerate}
 
-    \subsection{実験装置のたわみ量とひずみの算出}
-    試験用のひずみセンサを選定するにあたり，
-    ひずみセンサの取付部の作用力によるひずみ量を調べる必要がある．
-    ここで，簡単のため可能な限り切りのいい数字を使っておおよその変位量を算出した．
-    \begin{figure}[htbp]
-        \footnotesize
-        \begin{center}
-            \includegraphics[width=60mm]{../images/moment.png}
-            \caption{Cross-sectional shape of experimental device}
-        \end{center}
-    \end{figure}\\
+%     \subsection{実験装置のたわみ量とひずみの算出}
+%     試験用のひずみセンサを選定するにあたり，
+%     ひずみセンサの取付部の作用力によるひずみ量を調べる必要がある．
+%     ここで，簡単のため可能な限り切りのいい数字を使っておおよその変位量を算出した．
+%     \begin{figure}[htbp]
+%         \footnotesize
+%         \begin{center}
+%             \includegraphics[width=60mm]{../images/moment.png}
+%             \caption{Cross-sectional shape of experimental device}
+%         \end{center}
+%     \end{figure}\\
+
+% \newpage
+
+%     \subsubsection{算出結果}
+%         \begin{screen}
+%             \begin{itemize}
+%                 \item 先端のたわみ量　　：$0.151 \;\left[\mathrm{mm}\right]$
+%                 \item 取付軸表面の伸縮量：$1.029 × 10^{-3} \;\left[\mathrm{mm}\right]$
+%                 \item 取付軸表面のひずみ：$5.717 × 10^{-6} \left[\mathrm{-}\right]$
+%             \end{itemize}
+%         \end{screen}
+    
+%     \vskip\baselineskip
+
+%     \subsubsection{算出条件}
+%     \begin{screen}
+%         \begin{itemize}
+%             \item [$\bullet$] アルミニウムの弾性係数　　：$E = 70 \left[\mathrm{GPa}\right]$
+%             \item [$\bullet$] ひずみセンサと作用点の距離：$l_1 = 725 \left[\mathrm{mm}\right]$
+%             \item [$\bullet$] 取付部材料の長さ　　　　　：$l_2 = 180 \left[\mathrm{mm}\right]$
+%             \item [$\bullet$] 作用力　　　　　　　　　　：$F = 0.15 \left[\mathrm{N}\right]$              
+%             \item [$\bullet$] 断面二次モーメント　　　　：$I = 2701 \left[\mathrm{mm^4}\right]$              
+%             \item [$\bullet$] 取付部に加わるモーメント　：$M$              
+%             \item [$\bullet$] 取付部のたわみの曲率半径　：$R$              
+%             \item [$\bullet$] 取付部のたわみ角　　　　　：$\theta$
+%             \item [$\bullet$] 取付部のたわみ　　　　　　：$w$
+%             \item [$\bullet$] 取付部表面の伸び　　　　　：$\lambda$
+%             \item [$\bullet$] 取付部表面のひずみ　　　　：$\varepsilon$
+%             \item [$\bullet$] 取付部表面と中立軸の距離　：$\delta r$              
+%         \end{itemize}
+%     \end{screen}
+    
+%     \subsubsection{算出過程}
+%     \begin{itemize}
+%         \item [$\blacksquare$] 実験装置に加わるモーメントの算出
+%         \begin{eqnarray*}
+%             M &=& F × \frac{l_1}{1000}\\
+%             &=& 0.15 × 0.725\\
+%             &=& 0.10875 \;\left[\mathrm{N \cdot m}\right]
+%         \end{eqnarray*}
+%         \item [$\blacksquare$] たわみの曲率半径の算出
+%         \begin{itembox}[l]{たわみの曲率半径}
+%             \begin{center}
+%                 $\displaystyle \frac{1}{R} = \frac{M}{EI}$
+%             \end{center}
+%         \end{itembox}
+%         \begin{eqnarray*}
+%             R &=& \frac{EI}{M}\\
+%             &=& 70 × 2701 × \frac{100000}{10875}\\
+%             &\approx& 1738574.713 \left[\mathrm{mm}\right]
+%         \end{eqnarray*}
+%         \item [$\blacksquare$] 位置$x$[mm] におけるたわみ角とたわみの算出
+%         \begin{itembox}[l]{たわみの微分方程式}
+%                 \begin{center}
+%                     $\displaystyle \frac{d^2w}{dx^2}=-\frac{M}{EI}$\\
+%                     \vskip\baselineskip
+%                     ※ 今回のひずみは正の値となる
+%                 \end{center}
+%         \end{itembox}
+%         \begin{itembox}[l]{初期条件}
+%         \begin{itemize}
+%             \item [$\bullet$] $x=0$ のとき $w=0$，$\theta =0$
+%         \end{itemize}
+%         \end{itembox}
+%         \begin{eqnarray*}
+%             \frac{d^2w}{dx^2}&=&\frac{M}{EI}\\
+%             &=&\frac{0.10875}{70 × 2701}\\
+%             &=&5.7518 \cdots × 10^{-7}\\
+%             &\approx& 5.752 × 10^{-7} \;\left[\mathrm{1/mm}\right]\\ \\
+%             \frac{dw}{dx} &=& \theta = \frac{M}{EI} x + C_1\\ \\
+%             w &=& \frac{1}{2} \frac{M}{EI} x^2 + C_1x + C_2
+%         \end{eqnarray*}
+%         初期条件より
+%         \begin{eqnarray*}
+%             C_1 = C_2 = 0
+%         \end{eqnarray*}
+%         したがって，
+%         \begin{eqnarray*}
+%             \theta &=& \frac{M}{EI}x\\ \\
+%             w &=& \frac{1}{2}\frac{M}{EI}x^2\\
+%         \end{eqnarray*}
+%             \item [$\blacksquare$] ひずみセンサ取付部($x=90$)の伸びの算出\\
+%         $x = 90$のとき，たわみ角は，
+%         \begin{eqnarray*}
+%             \theta &=& \frac{M}{EI} × 90\\
+%             &=& 5.7152 × 10^{-7} × 90\\
+%             &=& 5.1437 × 10^{-5}\\
+%             &\approx& 5.144 × 10^{-5} \;\left[\mathrm{rad}\right]
+%         \end{eqnarray*}
+%         したがって，取付軸の伸び$\lambda$は，
+%         \begin{eqnarray*}
+%             \lambda &=& \left(R+\delta r\right)\theta - R\theta\\
+%             &=& \delta r \theta\\
+%             &=& 20 × \;\theta\\
+%             &=& 20 × 5.1437 × 10^{-5}\\
+%             &=& 1.02874 × 10^{-3}\\
+%             &\approx& 1.029 × 10^{-3} \;\left[\mathrm{mm}\right]\\
+%         \end{eqnarray*}
+%         \item [$\blacksquare$] ひずみセンサ取付部($x=90$)のひずみの算出
+%             \begin{eqnarray*}
+%                 \varepsilon &=& \frac{\lambda}{l_2}\\
+%                 &=& \frac{1.029 × 10^{-3}}{180}\\
+%                 &=& 5.7166 \cdots × 10^{-6}\\
+%                 &\approx& 5.717 × 10^{-6} \left[\mathrm{-}\right]
+%             \end{eqnarray*} 
+%         \item [$\blacksquare$] 先端($x=725$)のたわみ量 $w$ の算出
+%         \begin{eqnarray*}
+%             w &=& \frac{1}{2} × \frac{M}{EI} × l^2\\
+%             &=& \frac{1}{2} × 5.752 × 10^{-7} × 725^2\\
+%             &=& 0.1511 \cdots\\
+%             &\approx& 0.151 \;\left[\mathrm{mm}\right]
+%         \end{eqnarray*} 
+%     \end{itemize}
 
 \newpage
-
-    \subsubsection{算出結果}
-        \begin{screen}
-            \begin{itemize}
-                \item 先端のたわみ量　　：$0.151 \;\left[\mathrm{mm}\right]$
-                \item 取付軸表面の伸縮量：$1.029 × 10^{-3} \;\left[\mathrm{mm}\right]$
-                \item 取付軸表面のひずみ：$5.717 × 10^{-6} \left[\mathrm{-}\right]$
-            \end{itemize}
-        \end{screen}
-    
-    \vskip\baselineskip
-
-    \subsubsection{算出条件}
-    \begin{screen}
-        \begin{itemize}
-            \item [$\bullet$] アルミニウムの弾性係数　　：$E = 70 \left[\mathrm{GPa}\right]$
-            \item [$\bullet$] ひずみセンサと作用点の距離：$l_1 = 725 \left[\mathrm{mm}\right]$
-            \item [$\bullet$] 取付部材料の長さ　　　　　：$l_2 = 180 \left[\mathrm{mm}\right]$
-            \item [$\bullet$] 作用力　　　　　　　　　　：$F = 0.15 \left[\mathrm{N}\right]$              
-            \item [$\bullet$] 断面二次モーメント　　　　：$I = 2701 \left[\mathrm{mm^4}\right]$              
-            \item [$\bullet$] 取付部に加わるモーメント　：$M$              
-            \item [$\bullet$] 取付部のたわみの曲率半径　：$R$              
-            \item [$\bullet$] 取付部のたわみ角　　　　　：$\theta$
-            \item [$\bullet$] 取付部のたわみ　　　　　　：$w$
-            \item [$\bullet$] 取付部表面の伸び　　　　　：$\lambda$
-            \item [$\bullet$] 取付部表面のひずみ　　　　：$\varepsilon$
-            \item [$\bullet$] 取付部表面と中立軸の距離　：$\delta r$              
-        \end{itemize}
-    \end{screen}
-    
-    \subsubsection{算出過程}
-    \begin{itemize}
-        \item [$\blacksquare$] 実験装置に加わるモーメントの算出
-        \begin{eqnarray*}
-            M &=& F × \frac{l_1}{1000}\\
-            &=& 0.15 × 0.725\\
-            &=& 0.10875 \;\left[\mathrm{N \cdot m}\right]
-        \end{eqnarray*}
-        \item [$\blacksquare$] たわみの曲率半径の算出
-        \begin{itembox}[l]{たわみの曲率半径}
-            \begin{center}
-                $\displaystyle \frac{1}{R} = \frac{M}{EI}$
-            \end{center}
-        \end{itembox}
-        \begin{eqnarray*}
-            R &=& \frac{EI}{M}\\
-            &=& 70 × 2701 × \frac{100000}{10875}\\
-            &\approx& 1738574.713 \left[\mathrm{mm}\right]
-        \end{eqnarray*}
-        \item [$\blacksquare$] 位置$x$[mm] におけるたわみ角とたわみの算出
-        \begin{itembox}[l]{たわみの微分方程式}
-                \begin{center}
-                    $\displaystyle \frac{d^2w}{dx^2}=-\frac{M}{EI}$\\
-                    \vskip\baselineskip
-                    ※ 今回のひずみは正の値となる
-                \end{center}
-        \end{itembox}
-        \begin{itembox}[l]{初期条件}
-        \begin{itemize}
-            \item [$\bullet$] $x=0$ のとき $w=0$，$\theta =0$
-        \end{itemize}
-        \end{itembox}
-        \begin{eqnarray*}
-            \frac{d^2w}{dx^2}&=&\frac{M}{EI}\\
-            &=&\frac{0.10875}{70 × 2701}\\
-            &=&5.7518 \cdots × 10^{-7}\\
-            &\approx& 5.752 × 10^{-7} \;\left[\mathrm{1/mm}\right]\\ \\
-            \frac{dw}{dx} &=& \theta = \frac{M}{EI} x + C_1\\ \\
-            w &=& \frac{1}{2} \frac{M}{EI} x^2 + C_1x + C_2
-        \end{eqnarray*}
-        初期条件より
-        \begin{eqnarray*}
-            C_1 = C_2 = 0
-        \end{eqnarray*}
-        したがって，
-        \begin{eqnarray*}
-            \theta &=& \frac{M}{EI}x\\ \\
-            w &=& \frac{1}{2}\frac{M}{EI}x^2\\
-        \end{eqnarray*}
-            \item [$\blacksquare$] ひずみセンサ取付部($x=90$)の伸びの算出\\
-        $x = 90$のとき，たわみ角は，
-        \begin{eqnarray*}
-            \theta &=& \frac{M}{EI} × 90\\
-            &=& 5.7152 × 10^{-7} × 90\\
-            &=& 5.1437 × 10^{-5}\\
-            &\approx& 5.144 × 10^{-5} \;\left[\mathrm{rad}\right]
-        \end{eqnarray*}
-        したがって，取付軸の伸び$\lambda$は，
-        \begin{eqnarray*}
-            \lambda &=& \left(R+\delta r\right)\theta - R\theta\\
-            &=& \delta r \theta\\
-            &=& 20 × \;\theta\\
-            &=& 20 × 5.1437 × 10^{-5}\\
-            &=& 1.02874 × 10^{-3}\\
-            &\approx& 1.029 × 10^{-3} \;\left[\mathrm{mm}\right]\\
-        \end{eqnarray*}
-        \item [$\blacksquare$] ひずみセンサ取付部($x=90$)のひずみの算出
-            \begin{eqnarray*}
-                \varepsilon &=& \frac{\lambda}{l_2}\\
-                &=& \frac{1.029 × 10^{-3}}{180}\\
-                &=& 5.7166 \cdots × 10^{-6}\\
-                &\approx& 5.717 × 10^{-6} \left[\mathrm{-}\right]
-            \end{eqnarray*} 
-        \item [$\blacksquare$] 先端($x=725$)のたわみ量 $w$ の算出
-        \begin{eqnarray*}
-            w &=& \frac{1}{2} × \frac{M}{EI} × l^2\\
-            &=& \frac{1}{2} × 5.752 × 10^{-7} × 725^2\\
-            &=& 0.1511 \cdots\\
-            &\approx& 0.151 \;\left[\mathrm{mm}\right]
-        \end{eqnarray*} 
-    \end{itemize}
 
 \section{実験装置の製作}
 作用力方向の違いによる影響を調べるため、
