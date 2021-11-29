@@ -1,9 +1,9 @@
-This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.3.30)  29 NOV 2021 10:25
+This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.11.5)  29 NOV 2021 18:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**/home/masatsugu/git/lab/01_reports/2111/2111_TOYOTIRES/TOYOTYRES_211130
-(/home/masatsugu/git/lab/01_reports/2111/2111_TOYOTIRES/TOYOTYRES_211130.tex
+**/home/kitadai/git/lab/01_reports/2111/2111_TOYOTIRES/TOYOTIRES_211130
+(/home/kitadai/git/lab/01_reports/2111/2111_TOYOTIRES/TOYOTIRES_211130.tex
 pLaTeX2e <2020-02-02>+2 (based on LaTeX2e <2020-02-02> patch level 2)
 L3 programming layer <2020-02-14> (/usr/share/texlive/texmf-dist/tex/platex/jsclasses/jsarticle.cls
 Document Class: jsarticle 2020/02/02 jsclasses (okumura, texjporg)
@@ -349,8 +349,8 @@ File: l3backend-dvips.def 2020-02-03 L3 backend support: dvips
 \g__pdf_backend_annotation_int=\count284
 \g__pdf_backend_link_int=\count285
 \g__pdf_backend_link_sf_int=\count286
-) (./TOYOTYRES_211130.aux)
-\openout1 = `TOYOTYRES_211130.aux'.
+) (./TOYOTIRES_211130.aux)
+\openout1 = `TOYOTIRES_211130.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
 LaTeX Font Info:    ... okay on input line 69.
@@ -422,9 +422,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 69.
 LaTeX Info: Redefining \pageref on input line 69.
 LaTeX Info: Redefining \nameref on input line 69.
- (./TOYOTYRES_211130.out) (./TOYOTYRES_211130.out)
+ (./TOYOTIRES_211130.out) (./TOYOTIRES_211130.out)
 \@outlinefile=\write3
-\openout3 = `TOYOTYRES_211130.out'.
+\openout3 = `TOYOTIRES_211130.out'.
 
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
 (Font)              scaled to size 16.60605pt on input line 73.
@@ -489,41 +489,84 @@ File: ../images/calibration_2_drag.png Graphic file (type bmp)
 <../images/calibration_2_drag.png>
 File: ../images/calibration_2_lift.png Graphic file (type bmp)
 <../images/calibration_2_lift.png>
- [3]
 File: ../images/calibration_2_drag_offset.png Graphic file (type bmp)
 <../images/calibration_2_drag_offset.png>
 File: ../images/calibration_2_lift_offset.png Graphic file (type bmp)
 <../images/calibration_2_lift_offset.png>
+ [3]
 File: ../images/convert.png Graphic file (type bmp)
 <../images/convert.png>
 File: ../images/convert_offset.png Graphic file (type bmp)
 <../images/convert_offset.png>
- [4]
 File: ../images/testpieces_2.png Graphic file (type bmp)
 <../images/testpieces_2.png>
- [5]
+ [4]
 File: ../images/device_1.jpg Graphic file (type bmp)
 <../images/device_1.jpg>
- [6]
-File: ../images/making.png Graphic file (type bmp)
-<../images/making.png>
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 534.
- [7]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 534.
- (./TOYOTYRES_211130.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 534.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 534.
-Package rerunfilecheck Info: File `TOYOTYRES_211130.out' has not changed.
-(rerunfilecheck)             Checksum: 855A3A4455A5360B325393D9BE36A647;1439.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 534.
+File: ../images/rotation.png Graphic file (type bmp)
+<../images/rotation.png>
+File: ../images/rotation_2.png Graphic file (type bmp)
+<../images/rotation_2.png>
+ [5]
+File: ../images/0.png Graphic file (type bmp)
+<../images/0.png>
+File: ../images/30.png Graphic file (type bmp)
+<../images/30.png>
+File: ../images/60.png Graphic file (type bmp)
+<../images/60.png>
+File: ../images/90.png Graphic file (type bmp)
+<../images/90.png>
+File: ../images/120.png Graphic file (type bmp)
+<../images/120.png>
+File: ../images/150.png Graphic file (type bmp)
+<../images/150.png>
+File: ../images/180.png Graphic file (type bmp)
+<../images/180.png>
+File: ../images/210.png Graphic file (type bmp)
+<../images/210.png>
+File: ../images/240.png Graphic file (type bmp)
+<../images/240.png>
+File: ../images/270.png Graphic file (type bmp)
+<../images/270.png>
+File: ../images/300.png Graphic file (type bmp)
+<../images/300.png>
+File: ../images/330.png Graphic file (type bmp)
+<../images/330.png>
+ [6] [7]
+File: ../images/experiment_results.png Graphic file (type bmp)
+<../images/experiment_results.png>
+
+Overfull \hbox (9.24686pt too wide) in paragraph at lines 607--608
+ [] 
+ []
+
+File: ../images/gradient_ratio_2.png Graphic file (type bmp)
+<../images/gradient_ratio_2.png>
+
+Overfull \hbox (9.24686pt too wide) in paragraph at lines 672--673
+ [] 
+ []
+
+[8]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 696.
+ [9
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 696.
+ (./TOYOTIRES_211130.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 696.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 696.
+Package rerunfilecheck Info: File `TOYOTIRES_211130.out' has not changed.
+(rerunfilecheck)             Checksum: D4E1C8A47B57C916CEEE9672B085C67A;1632.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 696.
  ) 
 Here is how much of TeX's memory you used:
- 8457 strings out of 481768
- 124215 string characters out of 5933620
- 408668 words of memory out of 5000000
- 23692 multiletter control sequences out of 15000+600000
+ 8518 strings out of 481768
+ 125413 string characters out of 5933620
+ 412815 words of memory out of 5000000
+ 23738 multiletter control sequences out of 15000+600000
  541962 words of font info for 72 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 34i,9n,36p,290b,443s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,9n,36p,300b,443s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on TOYOTYRES_211130.dvi (7 pages, 28648 bytes).
+Output written on TOYOTIRES_211130.dvi (9 pages, 40332 bytes).
