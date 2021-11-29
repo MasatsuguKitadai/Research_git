@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.11.5)  29 NOV 2021 18:13
+This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.11.5)  29 NOV 2021 18:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -508,6 +508,8 @@ File: ../images/rotation.png Graphic file (type bmp)
 File: ../images/rotation_2.png Graphic file (type bmp)
 <../images/rotation_2.png>
  [5]
+File: ../images/model_1.png Graphic file (type bmp)
+<../images/model_1.png>
 File: ../images/0.png Graphic file (type bmp)
 <../images/0.png>
 File: ../images/30.png Graphic file (type bmp)
@@ -536,37 +538,37 @@ File: ../images/330.png Graphic file (type bmp)
 File: ../images/experiment_results.png Graphic file (type bmp)
 <../images/experiment_results.png>
 
-Overfull \hbox (9.24686pt too wide) in paragraph at lines 607--608
+Overfull \hbox (9.24686pt too wide) in paragraph at lines 612--613
  [] 
  []
 
 File: ../images/gradient_ratio_2.png Graphic file (type bmp)
 <../images/gradient_ratio_2.png>
 
-Overfull \hbox (9.24686pt too wide) in paragraph at lines 672--673
+Overfull \hbox (9.24686pt too wide) in paragraph at lines 677--678
  [] 
  []
 
 [8]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 696.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 700.
  [9
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 696.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 700.
  (./TOYOTIRES_211130.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 696.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 696.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 700.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 700.
 Package rerunfilecheck Info: File `TOYOTIRES_211130.out' has not changed.
 (rerunfilecheck)             Checksum: D4E1C8A47B57C916CEEE9672B085C67A;1632.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 696.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 700.
  ) 
 Here is how much of TeX's memory you used:
- 8518 strings out of 481768
- 125413 string characters out of 5933620
+ 8522 strings out of 481768
+ 125500 string characters out of 5933620
  412815 words of memory out of 5000000
- 23738 multiletter control sequences out of 15000+600000
+ 23741 multiletter control sequences out of 15000+600000
  541962 words of font info for 72 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
  34i,9n,36p,300b,443s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on TOYOTIRES_211130.dvi (9 pages, 40332 bytes).
+Output written on TOYOTIRES_211130.dvi (9 pages, 40640 bytes).
