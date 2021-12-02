@@ -1,9 +1,9 @@
-This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.11.5)  1 DEC 2021 16:35
+This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.3.30)  2 DEC 2021 09:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**/home/kitadai/git/lab/01_reports/2112/2112_1/2112_1
-(/home/kitadai/git/lab/01_reports/2112/2112_1/2112_1.tex
+**/home/masatsugu/git/lab/01_reports/2112/2112_1/2112_1
+(/home/masatsugu/git/lab/01_reports/2112/2112_1/2112_1.tex
 pLaTeX2e <2020-02-02>+2 (based on LaTeX2e <2020-02-02> patch level 2)
 L3 programming layer <2020-02-14> (/usr/share/texlive/texmf-dist/tex/platex/jsclasses/jsarticle.cls
 Document Class: jsarticle 2020/02/02 jsclasses (okumura, texjporg)
@@ -349,8 +349,7 @@ File: l3backend-dvips.def 2020-02-03 L3 backend support: dvips
 \g__pdf_backend_annotation_int=\count284
 \g__pdf_backend_link_int=\count285
 \g__pdf_backend_link_sf_int=\count286
-)
-No file 2112_1.aux.
+) (./2112_1.aux)
 \openout1 = `2112_1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
@@ -373,6 +372,7 @@ LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 67.
 LaTeX Font Info:    ... okay on input line 67.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 67.
 LaTeX Font Info:    ... okay on input line 67.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: dvips
 *geometry* verbose mode - [ preamble ] result:
@@ -422,13 +422,10 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 67.
 LaTeX Info: Redefining \pageref on input line 67.
 LaTeX Info: Redefining \nameref on input line 67.
+ (./2112_1.out) (./2112_1.out)
 \@outlinefile=\write3
 \openout3 = `2112_1.out'.
 
-
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
-
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
 (Font)              scaled to size 16.60605pt on input line 71.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
@@ -441,339 +438,85 @@ LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
 (Font)              scaled to size 11.53198pt on input line 71.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 11.53198pt on input line 71.
-File: ../images/device_1.jpg Graphic file (type bmp)
-<../images/device_1.jpg>
+File: ../../2111/images/device_1.jpg Graphic file (type bmp)
+<../../2111/images/device_1.jpg>
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 92.
+(Font)              scaled to size 8.64899pt on input line 93.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 92.
-File: ../images/rotation.png Graphic file (type bmp)
-<../images/rotation.png>
-File: ../images/rotation_2.png Graphic file (type bmp)
-<../images/rotation_2.png>
-
-LaTeX Warning: File `../images/model_1.png' not found on input line 126.
-
-
-! LaTeX Error: Cannot determine size of graphic in ../images/model_1.xbb (no BoundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.126 ...aphics[width=58mm]{../images/model_1.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-File: ../images/model_1.png Graphic file (type bmp)
-<../images/model_1.png>
+(Font)              scaled to size 8.64899pt on input line 93.
+File: ../../2111/images/model_1.png Graphic file (type bmp)
+<../../2111/images/model_1.png>
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 131.
+(Font)              scaled to size 9.60999pt on input line 110.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 131.
-
-LaTeX Warning: File `../images/0.png' not found on input line 137.
-
-
-! LaTeX Error: Cannot determine size of graphic in ../images/0.xbb (no BoundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.137 ...ludegraphics[width=78mm]{../images/0.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-File: ../images/0.png Graphic file (type bmp)
-<../images/0.png>
-
-LaTeX Warning: File `../images/30.png' not found on input line 139.
-
-
-! LaTeX Error: Cannot determine size of graphic in ../images/30.xbb (no BoundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.139 ...udegraphics[width=78mm]{../images/30.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-File: ../images/30.png Graphic file (type bmp)
-<../images/30.png>
-
-LaTeX Warning: File `../images/60.png' not found on input line 147.
-
-
-! LaTeX Error: Cannot determine size of graphic in ../images/60.xbb (no BoundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.147 ...udegraphics[width=78mm]{../images/60.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-File: ../images/60.png Graphic file (type bmp)
-<../images/60.png>
-
-LaTeX Warning: File `../images/90.png' not found on input line 149.
-
-
-! LaTeX Error: Cannot determine size of graphic in ../images/90.xbb (no BoundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.149 ...udegraphics[width=78mm]{../images/90.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-File: ../images/90.png Graphic file (type bmp)
-<../images/90.png>
-
-LaTeX Warning: File `../images/120.png' not found on input line 151.
-
-
-! LaTeX Error: Cannot determine size of graphic in ../images/120.xbb (no BoundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.151 ...degraphics[width=78mm]{../images/120.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-File: ../images/120.png Graphic file (type bmp)
-<../images/120.png>
-
-LaTeX Warning: File `../images/150.png' not found on input line 153.
-
-
-! LaTeX Error: Cannot determine size of graphic in ../images/150.xbb (no BoundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.153 ...degraphics[width=78mm]{../images/150.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-File: ../images/150.png Graphic file (type bmp)
-<../images/150.png>
-
-LaTeX Warning: Float too large for page by 261.54169pt on input line 156.
-
-
-LaTeX Warning: File `../images/180.png' not found on input line 161.
-
-
-! LaTeX Error: Cannot determine size of graphic in ../images/180.xbb (no BoundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.161 ...degraphics[width=78mm]{../images/180.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-File: ../images/180.png Graphic file (type bmp)
-<../images/180.png>
-
-LaTeX Warning: File `../images/210.png' not found on input line 163.
-
-
-! LaTeX Error: Cannot determine size of graphic in ../images/210.xbb (no BoundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.163 ...degraphics[width=78mm]{../images/210.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-File: ../images/210.png Graphic file (type bmp)
-<../images/210.png>
-
-LaTeX Warning: File `../images/240.png' not found on input line 165.
-
-
-! LaTeX Error: Cannot determine size of graphic in ../images/240.xbb (no BoundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.165 ...degraphics[width=78mm]{../images/240.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-File: ../images/240.png Graphic file (type bmp)
-<../images/240.png>
-
-LaTeX Warning: Float too large for page by 13.8473pt on input line 168.
-
-
-LaTeX Warning: File `../images/270.png' not found on input line 173.
-
-
-! LaTeX Error: Cannot determine size of graphic in ../images/270.xbb (no BoundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.173 ...degraphics[width=78mm]{../images/270.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-File: ../images/270.png Graphic file (type bmp)
-<../images/270.png>
-
-LaTeX Warning: File `../images/300.png' not found on input line 175.
-
-
-! LaTeX Error: Cannot determine size of graphic in ../images/300.xbb (no BoundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.175 ...degraphics[width=78mm]{../images/300.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-File: ../images/300.png Graphic file (type bmp)
-<../images/300.png>
-
-LaTeX Warning: File `../images/330.png' not found on input line 177.
-
-
-! LaTeX Error: Cannot determine size of graphic in ../images/330.xbb (no BoundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.177 ...degraphics[width=78mm]{../images/330.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-File: ../images/330.png Graphic file (type bmp)
-<../images/330.png>
-
-LaTeX Warning: Float too large for page by 13.8473pt on input line 180.
-
-[1
-
-
-] [2] [3] [4]
+(Font)              scaled to size 9.60999pt on input line 110.
+File: ../../2111/images/0.png Graphic file (type bmp)
+<../../2111/images/0.png>
+File: ../../2111/images/30.png Graphic file (type bmp)
+<../../2111/images/30.png>
+File: ../../2111/images/60.png Graphic file (type bmp)
+<../../2111/images/60.png>
+File: ../../2111/images/90.png Graphic file (type bmp)
+<../../2111/images/90.png>
+File: ../../2111/images/120.png Graphic file (type bmp)
+<../../2111/images/120.png>
+File: ../../2111/images/150.png Graphic file (type bmp)
+<../../2111/images/150.png>
+File: ../../2111/images/180.png Graphic file (type bmp)
+<../../2111/images/180.png>
+File: ../../2111/images/210.png Graphic file (type bmp)
+<../../2111/images/210.png>
+File: ../../2111/images/240.png Graphic file (type bmp)
+<../../2111/images/240.png>
+File: ../../2111/images/270.png Graphic file (type bmp)
+<../../2111/images/270.png>
+File: ../../2111/images/300.png Graphic file (type bmp)
+<../../2111/images/300.png>
+File: ../../2111/images/330.png Graphic file (type bmp)
+<../../2111/images/330.png>
+ [1
+
+
+] [2]
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 197.
+(Font)              scaled to size 6.72699pt on input line 172.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 4.805pt on input line 197.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 197.
+(Font)              scaled to size 4.805pt on input line 172.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 172.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 197.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 172.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-
-LaTeX Warning: File `../images/experiment_results.png' not found on input line 206.
-
-
-! LaTeX Error: Cannot determine size of graphic in ../images/experiment_results.xbb (no BoundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.206 ...h=85mm]{../images/experiment_results.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-File: ../images/experiment_results.png Graphic file (type bmp)
-<../images/experiment_results.png>
-
-LaTeX Warning: File `../images/gradient_ratio_2.png' not found on input line 271.
-
-
-! LaTeX Error: Cannot determine size of graphic in ../images/gradient_ratio_2.xbb (no BoundingBox).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.271 ...dth=85mm]{../images/gradient_ratio_2.png}
-                                                  
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-File: ../images/gradient_ratio_2.png Graphic file (type bmp)
-<../images/gradient_ratio_2.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [5]
-File: ../images/moment.png Graphic file (type bmp)
-<../images/moment.png>
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [6] [7]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 463.
- [8
+File: ../../2111/images/experiment_results.png Graphic file (type bmp)
+<../../2111/images/experiment_results.png>
+ [3]
+File: ../../2111/images/gradient_ratio_2.png Graphic file (type bmp)
+<../../2111/images/gradient_ratio_2.png>
+File: ../../2111/images/moment.png Graphic file (type bmp)
+<../../2111/images/moment.png>
+ [4] [5]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 440.
+ [6
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 463.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 440.
  (./2112_1.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 463.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 463.
-
-
-Package rerunfilecheck Warning: File `2112_1.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `2112_1.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  8B437321B6311F56D05428329A65A159;998.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 463.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 440.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 440.
+Package rerunfilecheck Info: File `2112_1.out' has not changed.
+(rerunfilecheck)             Checksum: 8B437321B6311F56D05428329A65A159;998.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 440.
  ) 
 Here is how much of TeX's memory you used:
- 8901 strings out of 481768
- 132335 string characters out of 5933620
- 419923 words of memory out of 5000000
- 24076 multiletter control sequences out of 15000+600000
+ 8447 strings out of 481768
+ 123289 string characters out of 5933620
+ 419213 words of memory out of 5000000
+ 23686 multiletter control sequences out of 15000+600000
  542297 words of font info for 73 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 34i,9n,36p,270b,444s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,9n,36p,272b,444s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on 2112_1.dvi (8 pages, 31844 bytes).
+Output written on 2112_1.dvi (6 pages, 31492 bytes).
