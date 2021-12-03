@@ -65,6 +65,7 @@ int main()
 
     // 変数の宣言
 
+    int count;
     int change_time[4];
     double change_value[4];
 
@@ -77,9 +78,14 @@ int main()
     double x1[range_1], x2[range_2];
     double gap = 0.03;
 
+    double result_sum[3];
+    double result_ave[3];
+
+    // 配列の初期化
+
     l = 0;
 
-    for (i = 20; i < range; i++)
+    for (count = 20; count < range; count++)
     {
         // 配列の初期化
 
@@ -89,16 +95,16 @@ int main()
         ave2 = 0;
 
         // 指定された範囲の配列を作成
-        for (j = 0; j < range_1; j++)
+        for (i = 0; i < range_1; i++)
         {
-            x1[j] = value[i + j][2];
-            // printf("[%d]\t%lf\n", j, x1[j]);
+            x1[i] = value[count + i][2];
+            // printf("[%d]\t%lf\n", i, x1[i]);
         }
 
-        for (k = 1; k < range_2 + 1; k++)
+        for (j = 1; j < range_2 + 1; j++)
         {
-            x2[k] = value[i + range_1 + k][2];
-            // printf("[%d]\t%lf\n", k, x2[k]);
+            x2[j] = value[count + range_1 + j][2];
+            // printf("[%d]\t%lf\n", j, x2[j]);
         }
 
         // 並び替え (小さい順)
@@ -126,17 +132,17 @@ int main()
         top = x1[range_1 - 1];
 
         // 平均値の算出 (前部)
-        for (j = 0; j < range_1; j++)
+        for (i = 0; i < range_1; i++)
         {
-            sum1 = sum1 + x1[j];
+            sum1 = sum1 + x1[i];
         }
 
         ave1 = sum1 / range_1;
 
         // 平均値の算出 (後部)
-        for (k = 0; k < range_2; k++)
+        for (j = 0; j < range_2; j++)
         {
-            sum2 = sum2 + x2[k];
+            sum2 = sum2 + x2[j];
         }
 
         ave2 = sum2 / range_2;
@@ -145,13 +151,32 @@ int main()
 
         if (ave2 > top + gap)
         {
-            change_time[l] = i + range_1;
-            change_value[l] = value[change_time[l]][2];
-            printf("%d\t%lf\n", change_time[l], change_value[l]);
-            i = i + 20;
-            l = l + 1;
-        }
+            change_time[k] = count + range_1;
+            change_value[k] = value[change_time[k]][2];
+            printf("starttime = %d\n", change_time[k]);
+            count = change_time[k];
+            k = k + 1;
 
+
+            for (i = 0; i < 3; i++)
+            {
+                result_sum[i] = 0;
+                result_ave[i] = 0;
+            }    
+
+            // (3) 平均値の計算
+            for ( i = 0; i < 3; i++)
+            {
+                for (j = count - 10; j < count; j++)
+                {
+                    result_sum[i] = result_sum[i] + value[j][i];
+                }
+
+                result_ave[i] = result_sum[i] / 10;
+                printf("[%d]\t%lf\n", i, result_ave[i]);
+            }
+            printf("\n");
+        }
     }
 
     fp = fopen(filename_3, "w");
