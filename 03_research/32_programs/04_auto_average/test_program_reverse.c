@@ -1,5 +1,5 @@
 /******************************************************************************
-PROGRAM NAME : calibration.c
+PROGRAM NAME : 
 AUTHER  : Masatsugu Kitadai
 DATE    :
 ******************************************************************************/
@@ -11,14 +11,13 @@ FILE *fp;
 
 // 読み込みファイルの指定
 char filename_1[100] = "test_data/0_test_reverse.CSV";
-char filename_2[100] = "test_result/0_test_result_reverse.CSV";
-char filename_3[100] = "test_result/0_test_result_startpoints_reverse.CSV";
+char filename_3[100] = "test_result/0_test_result_changetime_reverse.CSV";
 
 /*********************************   MAIN   *********************************/
 int main()
 {
     // 変数宣言
-    int i, j, k;
+    int i, j, k, l;
     int datalength = 0;
     int ch = 3;
     double value[1000][ch];
@@ -62,55 +61,22 @@ int main()
 
     // 計算
 
-    // 変数の設定
-
-    int n = 5; // サンプル数
-    int m = 10; // 平均処理するデータ数
-
-    double average[datalength - 10][ch];
-    // double case[m][3];
-    double sum[ch];
-    double ave[ch];
-
-    // (1) 平均値の算出
-
-    for (i = 0; i < datalength - m; i++)
-    {
-        for (j = 0; j < 3; j++)
-        {
-            sum[j] = 0;
-            ave[j] = 0;
-        }
-
-        for (j = i; j < i + m; j++)
-        {
-            sum[0] = sum[0] + value[j][0];
-            sum[1] = sum[1] + value[j][1];
-            sum[2] = sum[2] + value[j][2];
-        }
-
-        for (j = 0; j < 3; j++)
-        {
-            ave[j] = sum[j] / m;
-            average[i][j] = ave[j];
-        }
-
-        // printf("[%d]\t%lf\t%lf\t%lf\n", i, average[i][0], average[i][1] ,average[i][2]);
-    }
-
-    // (2) 変化点の特定
+    // (1) 変化点の特定
 
     // 変数の宣言
 
-    int range_1 = 10;
-    int range_2 = 20;
-    int range = datalength - (m + range_1);
+    int change_time[4];
+    double change_value[4];
+
     int x, y, z;
     double w;
-    int start_num = 0;
-    double start_value;
+    int range_1 = 30;
+    int range_2 = 10;
+    int range = datalength - range_1;
     double top, bottom, sum1, sum2, ave1, ave2;
     double x1[range_1], x2[range_2];
+
+    l = 0;
 
     for (i = 20; i < range; i++)
     {
@@ -124,13 +90,13 @@ int main()
         // 指定された範囲の配列を作成
         for (j = 0; j < range_1; j++)
         {
-            x1[j] = average[i + j][2];
+            x1[j] = value[i + j][2];
             // printf("[%d]\t%lf\n", j, x1[j]);
         }
 
         for (k = 1; k < range_2 + 1; k++)
         {
-            x2[k] = average[i + range_1 + k][2];
+            x2[k] = value[i + range_1 + k][2];
             // printf("[%d]\t%lf\n", k, x2[k]);
         }
 
@@ -176,27 +142,22 @@ int main()
 
         // 比較
 
-        fp = fopen(filename_3, "w");
-
-
         if (ave2 > top)
         {
-            start_num = i + range_1;
-            start_value = value[start_num][2];
-            printf("%d\t%lf\n", start_num, start_value);
-            fprintf(fp,"%d,%lf\n", start_num, start_value);
+            change_time[l] = i + range_1;
+            change_value[l] = value[change_time[l]][2];
+            printf("%d\t%lf\n", change_time[l], change_value[l]);
+            i = i + 20;
+            l = l + 1;
         }
-        fclose(fp);
 
     }
 
-    // ファイルへの出力
+    fp = fopen(filename_3, "w");
 
-    fp = fopen(filename_2, "w");
-
-    for (i = 0; i < datalength - m; i++)
+    for (i = 0; i < 4; i++)
     {
-    fprintf(fp, "%d,%lf,%lf,%lf\n", i, average[i][0], average[i][1] ,average[i][2]);
+        fprintf(fp, "%d,%lf\n", change_time[i], change_value[i]);
     }
 
     fclose(fp);
