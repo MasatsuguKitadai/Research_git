@@ -75,6 +75,7 @@ int main()
     int range = datalength - range_1;
     double top, bottom, sum1, sum2, ave1, ave2;
     double x1[range_1], x2[range_2];
+    double gap = 0.03;
 
     l = 0;
 
@@ -142,7 +143,7 @@ int main()
 
         // 比較
 
-        if (ave2 > top)
+        if (ave2 > top + gap)
         {
             change_time[l] = i + range_1;
             change_value[l] = value[change_time[l]][2];
