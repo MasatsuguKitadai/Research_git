@@ -1,9 +1,9 @@
-This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.3.30)  2 DEC 2021 09:53
+This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.11.5)  2 DEC 2021 11:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**/home/masatsugu/git/lab/01_reports/2112/2112_1/2112_1
-(/home/masatsugu/git/lab/01_reports/2112/2112_1/2112_1.tex
+**/home/kitadai/git/lab/01_reports/2112/2112_1/2112_1
+(/home/kitadai/git/lab/01_reports/2112/2112_1/2112_1.tex
 pLaTeX2e <2020-02-02>+2 (based on LaTeX2e <2020-02-02> patch level 2)
 L3 programming layer <2020-02-14> (/usr/share/texlive/texmf-dist/tex/platex/jsclasses/jsarticle.cls
 Document Class: jsarticle 2020/02/02 jsclasses (okumura, texjporg)
@@ -438,8 +438,8 @@ LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
 (Font)              scaled to size 11.53198pt on input line 71.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 11.53198pt on input line 71.
-File: ../../2111/images/device_1.jpg Graphic file (type bmp)
-<../../2111/images/device_1.jpg>
+File: ../images/device_gray.jpg Graphic file (type bmp)
+<../images/device_gray.jpg>
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
 (Font)              scaled to size 8.64899pt on input line 93.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
@@ -498,25 +498,25 @@ File: ../../2111/images/gradient_ratio_2.png Graphic file (type bmp)
 File: ../../2111/images/moment.png Graphic file (type bmp)
 <../../2111/images/moment.png>
  [4] [5]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 440.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 442.
  [6
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 440.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 442.
  (./2112_1.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 440.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 440.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 442.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 442.
 Package rerunfilecheck Info: File `2112_1.out' has not changed.
 (rerunfilecheck)             Checksum: 8B437321B6311F56D05428329A65A159;998.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 440.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 442.
  ) 
 Here is how much of TeX's memory you used:
- 8447 strings out of 481768
- 123289 string characters out of 5933620
- 419213 words of memory out of 5000000
+ 8449 strings out of 481768
+ 123318 string characters out of 5933620
+ 419212 words of memory out of 5000000
  23686 multiletter control sequences out of 15000+600000
  542297 words of font info for 73 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 34i,9n,36p,272b,444s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,9n,36p,270b,444s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on 2112_1.dvi (6 pages, 31492 bytes).
+Output written on 2112_1.dvi (6 pages, 31488 bytes).
