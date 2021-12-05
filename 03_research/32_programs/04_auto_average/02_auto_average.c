@@ -35,7 +35,7 @@ int change(char angle[])
         }
     }
 
-    printf("check");
+    // printf("check\n");
 
     // ファイルの読み込み
     fp = fopen(filename_1, "r");
@@ -159,7 +159,6 @@ int change(char angle[])
             count = change_time[k];
             k = k + 1;
 
-
             for (i = 0; i < 3; i++)
             {
                 result_sum[i] = 0;
@@ -167,7 +166,7 @@ int change(char angle[])
             }
 
             // (3) 平均値の計算
-            for ( i = 0; i < 3; i++)
+            for (i = 0; i < 3; i++)
             {
                 for (j = count - 10; j < count; j++)
                 {
