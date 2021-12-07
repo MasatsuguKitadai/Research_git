@@ -1,0 +1,133 @@
+\documentclass[twocolumn,a4j]{jsarticle}
+\setlength{\topmargin}{-20.4cm}
+\setlength{\oddsidemargin}{-10.4mm}
+\setlength{\evensidemargin}{-10.4mm}
+\setlength{\textwidth}{18cm}
+\setlength{\textheight}{26cm}
+
+\usepackage[top=15truemm,bottom=25truemm,left=15truemm,right=15truemm]{geometry}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage[dvipdfmx]{color}
+\usepackage{listings}
+\usepackage{listings,jvlisting}
+\usepackage{geometry}
+\usepackage{framed}
+\usepackage{color}
+\usepackage[dvipdfmx]{hyperref}
+\usepackage{ascmac}
+\usepackage{enumerate}
+\usepackage{tabularx}
+\usepackage{cancel}
+\usepackage{scalefnt}
+
+\renewcommand{\figurename}{Fig.}
+\renewcommand{\tablename}{Table }
+
+\lstset{
+basicstyle={\ttfamily},
+identifierstyle={\small},
+commentstyle={\smallitshape},
+keywordstyle={\small\bfseries},
+ndkeywordstyle={\small},
+stringstyle={\small\ttfamily},
+frame={tb},
+breaklines=true,
+columns=[l]{fullflexible},
+xrightmargin=0zw,
+xleftmargin=3zw,
+numberstyle={\scriptsize},
+stepnumber=1,
+numbersep=1zw,
+lineskip=-0.5ex
+}
+
+\makeatletter
+\def\@maketitle
+{
+\begin{center}
+{\LARGE \@title \par}
+\end{center}
+\begin{flushright}
+{\large 報告書 NO.08 - 1\quad\@date\quad\@author}
+\end{flushright}
+\par\vskip 1.5em
+}
+\makeatother
+
+\setcounter{tocdepth}{3}
+
+\author{来代 勝胤}
+\title{令和3年度 12月 第2週 報告書}
+\date{2021/12/9}
+
+\begin{document}
+\columnseprule=0.1mm
+
+\maketitle
+\section*{報告内容}
+\begin{enumerate}[1.]
+    \item 進捗状況
+    \item 模擬実験の手順
+    \item 自動処理プログラムの作成
+\end{enumerate}
+
+\section{進捗状況}
+今週は、実験に使用する材料及びひずみゲージの発注、
+実験後のデータ処理のための自動平均値算出プログラムを作成した。
+また、そのプログラムの有用性を確かめるために、
+今後の実験・測定方法を模して簡易実験を行い、
+データ処理を行った。
+
+\section{模擬実験の手順}
+今後実験を行うにあたり，その手順を明確に決定しておく必要がある。
+大量のデータを一度にプログラムで処理できるようにするため，
+測定手順を以下のように定めた。\\
+
+\subsection{実験条件}
+\begin{table}[htbp]
+    \begin{center}
+        \begin{tabular}{|p{30mm}|p{20mm}|p{30}|}
+            \hline
+            \multicolumn{1}{|c|}{\textgt{条件}} & \multicolumn{1}{|c|}{\textgt{条件数}} & \multicolumn{1}{|c|}{\textgt{条件数}}\\ \hline
+            \multicolumn{1}{|c|}{試験片}                    & \multicolumn{1}{|c|}{3} & \multicolumn{1}{|c|}{\textgt{円筒・円柱・角柱}}  \\ \hline
+            \multicolumn{1}{|c|}{測定角度}                    & \multicolumn{1}{|c|}{24} & \multicolumn{1}{|c|}{\textgt{15度ごとの測定}}  \\ \hline
+            \multicolumn{1}{|c|}{試行回数}                    & \multicolumn{1}{|c|}{$x$} & \multicolumn{1}{|c|}{\textgt{検討中}}  \\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+\subsection{測定方法}
+\begin{itemize}
+    \item サンプリング周期は5[Hz]とする
+    \item ロードセルをマイクロステージを用いて\\0.04 [mm] ずつ移動させ測定する
+\end{itemize}
+
+\subsection{測定準備}
+\begin{screen}
+    \begin{enumerate}[(1)]
+        \item ロードセルを測定する角度に固定
+        \item 粗動用ダイヤルでロードセルを大まかな位置に設定
+        \item マイクロステージを動かしてロードセルが供試体に接触する位置を0.02[mm]単位で特定
+        \item その位置を基準に測定を開始する
+    \end{enumerate}
+\end{screen}
+
+\subsection{測定手順}
+\begin{screen}
+    \begin{enumerate}[(1)]
+        \item 測定開始から30秒間待機する
+        \item 40秒間の測定時間
+        \item 30秒間のマイクロステージ操作時間
+        \item (2)、(3)の作業を5回繰り返す (70秒周期)\\
+              ※ 5回目はロードセル，供試体を非接触状態にする
+    \end{enumerate}
+\end{screen}
+
+\subsection{サンプル数}
+\subsection{対称性}
+\section{自動処理プログラムの適用結果}
+\end{document}

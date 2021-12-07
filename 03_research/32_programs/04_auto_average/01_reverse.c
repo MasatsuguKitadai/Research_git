@@ -7,16 +7,18 @@ DATE    :
 #include <stdlib.h>
 #include <math.h>
 
-FILE *fp;
+FILE *fp, *fp_dat, *fp_csv;
 /*********************************   MAIN   *********************************/
 int reverse(char angle[])
 {
     // 読み込みファイルの指定
-    char filename_1[100];
-    char filename_2[100];
+    char filename_read[100];
+    char filename_csv[100];
+    char filename_dat[100];
 
-    sprintf(filename_1, "data/%s.CSV", angle);
-    sprintf(filename_2, "data_reverse/%s_reverse.CSV", angle);
+    sprintf(filename_read, "data/%s.CSV", angle);
+    sprintf(filename_csv, "csv_reverse/%s_reverse.CSV", angle);
+    sprintf(filename_dat, "dat_reverse/%s_reverse.dat", angle);
 
     // 変数宣言
     int i, j;
@@ -35,11 +37,11 @@ int reverse(char angle[])
         }
     }
 
-    printf("check");
+    // printf("check");
 
     // ファイルの読み込み
-    fp = fopen(filename_1, "r");
-    if (filename_1 == NULL)
+    fp = fopen(filename_read, "r");
+    if (filename_read == NULL)
     {
         printf("Error! I can't open the file.\n");
         exit(0);
@@ -49,7 +51,7 @@ int reverse(char angle[])
 
     while ((fscanf(fp, "%lf, %lf, %lf", &ch0, &ch1, &ch2)) != EOF)
     {
-        printf("%lf, %lf, %lf\n", ch0, ch1, ch2);
+        // printf("%lf, %lf, %lf\n", ch0, ch1, ch2);
         value[i][0] = ch0;
         value[i][1] = ch1;
         value[i][2] = ch2;
@@ -59,7 +61,7 @@ int reverse(char angle[])
     fclose(fp);
 
     datalength = i;
-    printf("datalengh = %d\n", datalength);
+    // printf("datalengh = %d\n", datalength);
 
     // 計算
 
@@ -68,14 +70,17 @@ int reverse(char angle[])
         value[i][2] = -1 * value[i][2];
     }
 
-    fp = fopen(filename_2, "w");
+    fp_csv = fopen(filename_csv, "w");
+    fp_dat = fopen(filename_dat, "w");
 
     for (i = 0; i < datalength; i++)
     {
-        fprintf(fp, "%lf,%lf,%lf\n", value[i][0], value[i][1], value[i][2]);
+        fprintf(fp_csv, "%lf,%lf,%lf\n", value[i][0], value[i][1], value[i][2]);
+        fprintf(fp_dat, "%d\t%lf\t%lf\t%lf\n", i, value[i][0], value[i][1], value[i][2]);
     }
 
-    fclose(fp);
+    fclose(fp_csv);
+    fclose(fp_dat);
 }
 
 int main()
