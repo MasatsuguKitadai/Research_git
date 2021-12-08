@@ -88,6 +88,7 @@ lineskip=-0.5ex
 測定手順を以下のように定めた。\\
 
 \subsection{実験条件}
+想定している実験は以下の図の通りである。
 \begin{table}[htbp]
     \begin{center}
         \begin{tabular}{|p{30mm}|p{20mm}|p{30}|}
@@ -103,7 +104,7 @@ lineskip=-0.5ex
 \subsection{測定方法}
 \begin{itemize}
     \item サンプリング周期は5[Hz]とする
-    \item ロードセルをマイクロステージを用いて\\0.04 [mm] ずつ移動させ測定する
+    \item ロードセルをマイクロステージを用いて\\0.03 [mm] ずつ移動させ測定する
 \end{itemize}
 
 \subsection{測定準備}
@@ -111,7 +112,7 @@ lineskip=-0.5ex
     \begin{enumerate}[(1)]
         \item ロードセルを測定する角度に固定
         \item 粗動用ダイヤルでロードセルを大まかな位置に設定
-        \item マイクロステージを動かしてロードセルが供試体に接触する位置を0.02[mm]単位で特定
+        \item マイクロステージを動かしてロードセルが供試体に接触する位置を0.01[mm]単位で特定
         \item その位置を基準に測定を開始する
     \end{enumerate}
 \end{screen}
@@ -122,12 +123,109 @@ lineskip=-0.5ex
         \item 測定開始から30秒間待機する
         \item 40秒間の測定時間
         \item 30秒間のマイクロステージ操作時間
-        \item (2)、(3)の作業を5回繰り返す (70秒周期)\\
+        \item (2)、(3)の作業を5回繰り返す (80秒周期)\\
               ※ 5回目はロードセル，供試体を非接触状態にする
     \end{enumerate}
 \end{screen}
 
-\subsection{サンプル数}
-\subsection{対称性}
+\section{実験結果}
+今回は，0～90度まで模擬実験を行った。
+0度についての結果を以下のFig.1、Fig.2に示す。
+
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=85mm]{../images/0_loadcell.png}
+        \caption{Result of loadcell's voltage}
+        \includegraphics[width=85mm]{../images/0_strainsensor.png}
+        \caption{Result of strainsensor's voltage}
+    \end{center}
+\end{figure}
+
 \section{自動処理プログラムの適用結果}
+模擬実験から得たデータを用いて，処理プログラムが有効かどうかの検証を行った。
+\subsection{ドリフト補正}
+以前，作用力測定の実験データ解析に用いたアルゴリズムをもとに
+ドリフト補正プログラムを作成し，結果に適用した。
+0度についての結果を以下のFig.3～Fig.5に示す。
+
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=80mm]{../images/0_loadcell_drift.png}
+        \caption{Result of loadcell's voltage}
+        \includegraphics[width=80mm]{../images/0_drag_drift.png}
+        \caption{Result of strainsensor's voltage}
+        \includegraphics[width=80mm]{../images/0_lift_drift.png}
+        \caption{Result of strainsensor's voltage}
+    \end{center}
+\end{figure}
+
+\subsection{平均値の算出}
+
+ドリフト補正を適用した結果を用いて、平均値の結果を算出した。
+0度についての結果を以下のFig.6～Fig.8に示す。
+
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=80mm]{../images/0_loadcell_average.png}
+        \caption{Result of strainsensor's voltage}
+        \includegraphics[width=80mm]{../images/0_drag_average.png}
+        \caption{Result of strainsensor's voltage}
+        \includegraphics[width=80mm]{../images/0_lift_average.png}
+        \caption{Result of strainsensor's voltage}
+    \end{center}
+\end{figure}
+\newpage
+
+\subsection{近似直線の算出}
+それぞれの出力電圧の平均値を用いて
+ロードセルとひずみセンサの関係性について，
+最小二乗法を用いて近似直線を算出した。
+各角度についての結果を以下のFig.9～Fig.15 に示す。
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=80mm]{../images/0_linear.png}
+        \caption{Result of strainsensor's voltage}
+        \includegraphics[width=80mm]{../images/15_linear.png}
+        \caption{Result of strainsensor's voltage}
+        \includegraphics[width=80mm]{../images/30_linear.png}
+        \caption{Result of strainsensor's voltage}
+    \end{center}
+\end{figure}
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=80mm]{../images/45_linear.png}
+        \caption{Result of strainsensor's voltage}
+        \includegraphics[width=80mm]{../images/60_linear.png}
+        \caption{Result of strainsensor's voltage}
+        \includegraphics[width=80mm]{../images/75_linear.png}
+        \caption{Result of strainsensor's voltage}
+        \includegraphics[width=80mm]{../images/90_linear.png}
+        \caption{Result of strainsensor's voltage}
+    \end{center}
+\end{figure}
+
+\newpage
+\subsection{平方根の算出}
+
+\begin{table}[htbp]
+    \begin{center}
+        \begin{tabular}{|p{20mm}|p{20mm}|p{20mm}|p{20mm}|}
+            \hline
+            \multicolumn{1}{|c|}{\textgt{Angle [deg]}} & \multicolumn{1}{|c|}{\textgt{Drag [V/V]}}  & \multicolumn{1}{|c|}{\textgt{Lift [V/V]}} & \multicolumn{1}{|c|}{\textgt{Sqrt [V/V]}}\\ \hline
+            \multicolumn{1}{|c|}{0}                    & \multicolumn{1}{|c|}{-0.6484}              & \multicolumn{1}{|c|}{\textgt{0.0839}}     & \multicolumn{1}{|c|}{\textgt{0.6539}}\\ \hline
+            \multicolumn{1}{|c|}{15}                   & \multicolumn{1}{|c|}{-0.6617}              & \multicolumn{1}{|c|}{\textgt{-0.0801}}    & \multicolumn{1}{|c|}{\textgt{0.6665}}\\ \hline
+            \multicolumn{1}{|c|}{30}                   & \multicolumn{1}{|c|}{-0.5956}              & \multicolumn{1}{|c|}{\textgt{-0.2457}}    & \multicolumn{1}{|c|}{\textgt{0.6443}}\\ \hline
+            \multicolumn{1}{|c|}{45}                   & \multicolumn{1}{|c|}{-0.5610}              & \multicolumn{1}{|c|}{\textgt{-0.3457}}    & \multicolumn{1}{|c|}{\textgt{0.6590}}\\ \hline
+            \multicolumn{1}{|c|}{60}                   & \multicolumn{1}{|c|}{-0.3652}              & \multicolumn{1}{|c|}{\textgt{-0.5248}}    & \multicolumn{1}{|c|}{\textgt{0.6394}}\\ \hline
+            \multicolumn{1}{|c|}{75}                   & \multicolumn{1}{|c|}{-0.2643}              & \multicolumn{1}{|c|}{\textgt{-0.5866}}    & \multicolumn{1}{|c|}{\textgt{0.6434}}\\ \hline
+            \multicolumn{1}{|c|}{90}                   & \multicolumn{1}{|c|}{-0.0833}              & \multicolumn{1}{|c|}{\textgt{-0.6380}}    & \multicolumn{1}{|c|}{\textgt{0.6434}}\\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
 \end{document}

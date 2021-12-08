@@ -4,6 +4,9 @@
 \BOOKMARK [2][-]{subsection.2.2}{測定方法}{section.2}% 4
 \BOOKMARK [2][-]{subsection.2.3}{測定準備}{section.2}% 5
 \BOOKMARK [2][-]{subsection.2.4}{測定手順}{section.2}% 6
-\BOOKMARK [2][-]{subsection.2.5}{サンプル数}{section.2}% 7
-\BOOKMARK [2][-]{subsection.2.6}{対称性}{section.2}% 8
-\BOOKMARK [1][-]{section.3}{自動処理プログラムの適用結果}{}% 9
+\BOOKMARK [1][-]{section.3}{実験結果}{}% 7
+\BOOKMARK [1][-]{section.4}{自動処理プログラムの適用結果}{}% 8
+\BOOKMARK [2][-]{subsection.4.1}{ドリフト補正}{section.4}% 9
+\BOOKMARK [2][-]{subsection.4.2}{平均値の算出}{section.4}% 10
+\BOOKMARK [2][-]{subsection.4.3}{近似直線の算出}{section.4}% 11
+\BOOKMARK [2][-]{subsection.4.4}{平方根の算出}{section.4}% 12

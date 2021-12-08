@@ -66,7 +66,7 @@ int calcuration()
     }
 
     fclose(fp1);
-    
+
     datalong[1] = i;
 
     // Model-loadcell <Drag>
@@ -128,7 +128,7 @@ int calcuration()
         printf("Error! I can't open the file.\n");
         exit(0);
     }
-    
+
     double offset;
 
     fscanf(fp3, "%lf", &ch1);
