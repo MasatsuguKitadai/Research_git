@@ -13,8 +13,8 @@ char filename_dat_2[100];
 char filename_plot[100];
 
 // range x
-int x_min = -30;
-int x_max = 360;
+int x_min = 0;
+int x_max = 2300;
 
 // range y
 int y_min = 0;
@@ -33,8 +33,8 @@ int plot(char angle[])
 {
     sprintf(label, "%s",angle);
     sprintf(filename_dat_1, "dat_reverse/%s_reverse.dat", angle);
-    sprintf(filename_dat_2, "dat_result/%s_change.dat", angle);
-    sprintf(filename_plot, "plot/%s.png", angle);
+    sprintf(filename_dat_2, "dat_result/%s_average.dat", angle);
+    sprintf(filename_plot, "plot/voltage-time/%s.png", angle);
 
     // size
     size = 1;
@@ -64,7 +64,7 @@ int plot(char angle[])
     fprintf(gp, "set title '%s deg'\n", label);
 
     // fprintf(gp, "set samples 10000\n");
-    fprintf(gp, "plot '%s' using 1:4 with lines lc 'black' notitle, '%s' using 1:2 with points pt 5 ps 2 lc 'red7 notitle\n", filename_dat_1, filename_dat_2);
+    fprintf(gp, "plot '%s' using 1:4 with lines lc 'black' notitle, '%s' using 1:3 with points lc 'red' pt 5 ps 2 notitle\n", filename_dat_1, filename_dat_2);
     fflush(gp); //Clean up Data
 
     fprintf(gp, "exit\n"); // Quit gnuplot
@@ -75,17 +75,17 @@ int plot(char angle[])
 int main()
 {
     plot("0");
-    plot("30");
-    plot("60");
-    plot("90");
-    plot("120");
-    plot("150");
-    plot("180");
-    plot("210");
-    plot("240");
-    plot("270");
-    plot("300");
-    plot("330");
+    // plot("30");
+    // plot("60");
+    // plot("90");
+    // plot("120");
+    // plot("150");
+    // plot("180");
+    // plot("210");
+    // plot("240");
+    // plot("270");
+    // plot("300");
+    // plot("330");
 
     return (0);
 }

@@ -24,12 +24,12 @@ int reverse(char angle[])
     int i, j;
     int datalength = 0;
     int ch = 3;
-    double value[1000][ch];
+    double value[5000][ch];
     double ch0, ch1, ch2; // ch0:drag, ch1:lift, ch2:load-cell
 
     // 配列の初期化
 
-    for (i = 0; i < 1000; i++)
+    for (i = 0; i < 5000; i++)
     {
         for (j = 0; j < 3; j++)
         {
@@ -86,17 +86,6 @@ int reverse(char angle[])
 int main()
 {
     reverse("0");
-    reverse("30");
-    reverse("60");
-    reverse("90");
-    reverse("120");
-    reverse("150");
-    reverse("180");
-    reverse("210");
-    reverse("240");
-    reverse("270");
-    reverse("300");
-    reverse("330");
-
+    reverse("0_sample_10");
     return (0);
 }
