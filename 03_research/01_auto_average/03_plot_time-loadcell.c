@@ -29,12 +29,12 @@ double size;
 FILE *gp;
 
 /*********************************   gnuplot   *********************************/
-int plot(char angle[])
+int plot(char date[], char angle[])
 {
     sprintf(label, "%s",angle);
-    sprintf(filename_dat_1, "dat_reverse/%s_reverse.dat", angle);
-    sprintf(filename_dat_2, "dat_result/%s_average.dat", angle);
-    sprintf(filename_plot, "plot/voltage-time/%s.png", angle);
+    sprintf(filename_dat_1, "%s/dat_reverse/%s_reverse.dat",    date,  angle);
+    sprintf(filename_dat_2, "%s/dat_result/%s_average.dat",     date, angle);
+    sprintf(filename_plot, "%s/plot/voltage-time/%s.png", date, angle);
 
     // size
     size = 1;
@@ -74,18 +74,14 @@ int plot(char angle[])
 
 int main()
 {
-    plot("0");
-    // plot("30");
-    // plot("60");
-    // plot("90");
-    // plot("120");
-    // plot("150");
-    // plot("180");
-    // plot("210");
-    // plot("240");
-    // plot("270");
-    // plot("300");
-    // plot("330");
+    // 211208
+    plot("211208", "0");
+    plot("211208", "15");
+    plot("211208", "30");
+    plot("211208", "45");
+    plot("211208", "60");
+    plot("211208", "75");
+    plot("211208", "90");
 
     return (0);
 }

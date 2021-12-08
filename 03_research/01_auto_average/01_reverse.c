@@ -85,7 +85,18 @@ int reverse(char date[], char angle[])
 
 int main()
 {
-    reverse("211207, 0");
-    reverse("211207, 0_sample_10");
+    // 211207
+    // reverse("211207", "0");
+    // reverse("211207", "0_sample_10");
+
+    // 211208
+    reverse("211208", "0");
+    reverse("211208", "15");
+    reverse("211208", "30");
+    reverse("211208", "45");
+    reverse("211208", "60");
+    reverse("211208", "75");
+    reverse("211208", "90");
+
     return (0);
 }

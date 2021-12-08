@@ -7,29 +7,9 @@ DATE    :
 #include <stdlib.h>
 #include <math.h>
 
-// filename
-char filename_dat_1[100];
-char filename_dat_2[100];
-char filename_plot[100];
-
-// range x
-int x_min = 0;
-int x_max = 2300;
-
-// range y
-int y_min = 0;
-int y_max = 2;
-
-// label
-const char *xxlabel = "time [s]";
-const char *yylabel = "output voltage [V]";
-char label[100];
-
-double size;
-
-FILE *fp, *fp_dat, *fp_csv, *gp;
+FILE *fp, *fp_dat, *fp_csv;
 /*********************************   MAIN   *********************************/
-int auto_average(char angle[])
+int auto_average(char date[], char angle[])
 {
     // 変数宣言
     int i, j, k, l;
@@ -44,9 +24,9 @@ int auto_average(char angle[])
     char filename_csv[100];
     char filename_dat[100];
 
-    sprintf(filename_read, "csv_reverse/%s_reverse.CSV", angle);
-    sprintf(filename_csv, "csv_result/%s_average.CSV", angle);
-    sprintf(filename_dat, "dat_result/%s_average.dat", angle);
+    sprintf(filename_read,"%s/csv_reverse/%s_reverse.CSV",  date, angle);
+    sprintf(filename_csv, "%s/csv_average/%s_average.CSV",   date, angle);
+    sprintf(filename_dat, "%s/dat_average/%s_average.dat",   date, angle);
     printf("【%s】\n", angle);
 
     // 配列の初期化
@@ -146,64 +126,18 @@ int auto_average(char angle[])
 
     fclose(fp_csv);
     fclose(fp_dat);
-
-    // plot
-
-    sprintf(label, "%s",angle);
-    sprintf(filename_dat_1, "dat_reverse/%s_reverse.dat", angle);
-    sprintf(filename_dat_2, "dat_result/%s_average.dat", angle);
-    sprintf(filename_plot, "plot/voltage-time/%s.png", angle);
-
-    // size
-    size = 1;
-
-    if ((gp = popen("gnuplot", "w")) == NULL)
-    {
-        printf("gnuplot is not here!\n");
-        exit(0); // gnuplotが無い場合、異常ある場合は終了
-    }
-
-    fprintf(gp, "set terminal pngcairo enhanced font 'Times New Roman,15' \n");
-    fprintf(gp, "set output '%s'\n", filename_plot);
-    // fprintf(gp, "set multiplot\n");
-    fprintf(gp, "unset key\n");
-    fprintf(gp, "set term pngcairo size 1280, 960 font ',24'\n");
-    // fprintf(gp, "set size ratio %lf\n", size);
-
-    fprintf(gp, "set lmargin screen 0.10\n");
-    fprintf(gp, "set rmargin screen 0.90\n");
-    fprintf(gp, "set tmargin screen 0.90\n");
-    fprintf(gp, "set bmargin screen 0.15\n");
-
-    fprintf(gp, "set xrange [%d:%d]\n", x_min, x_max);
-    fprintf(gp, "set xlabel '%s'offset 0.0,0\n", xxlabel);
-    fprintf(gp, "set yrange [%d:%d]\n", y_min, y_max);
-    fprintf(gp, "set ylabel '%s'offset 2,0.0\n", yylabel);
-    fprintf(gp, "set title '%s deg'\n", label);
-
-    // fprintf(gp, "set samples 10000\n");
-    fprintf(gp, "plot '%s' using 1:4 with lines lc 'black' notitle, '%s' using 1:3 with points lc 'red' pt 5 ps 2 notitle\n", filename_dat_1, filename_dat_2);
-    fflush(gp); //Clean up Data
-
-    fprintf(gp, "exit\n"); // Quit gnuplot
-
-    pclose(gp);
 }
 
 int main()
 {
-    auto_average("0");
-    // change("30");
-    // change("60");
-    // change("90");
-    // change("120");
-    // change("150");
-    // change("180");
-    // change("210");
-    // change("240");
-    // change("270");
-    // change("300");
-    // change("330");
+    // 211208
+    auto_average("211208", "0");
+    auto_average("211208", "15");
+    auto_average("211208", "30");
+    auto_average("211208", "45");
+    auto_average("211208", "60");
+    auto_average("211208", "75");
+    auto_average("211208", "90");
 
     return (0);
 }
