@@ -9,16 +9,16 @@ DATE    :
 
 FILE *fp, *fp_dat, *fp_csv;
 /*********************************   MAIN   *********************************/
-int reverse(char angle[])
+int reverse(char date[], char angle[])
 {
     // 読み込みファイルの指定
     char filename_read[100];
     char filename_csv[100];
     char filename_dat[100];
 
-    sprintf(filename_read, "data/%s.CSV", angle);
-    sprintf(filename_csv, "csv_reverse/%s_reverse.CSV", angle);
-    sprintf(filename_dat, "dat_reverse/%s_reverse.dat", angle);
+    sprintf(filename_read, "data/%s/%s.CSV", date, angle);
+    sprintf(filename_csv, "%s/csv_reverse/%s_reverse.CSV", date, angle);
+    sprintf(filename_dat, "%s/dat_reverse/%s_reverse.dat", date, angle);
 
     // 変数宣言
     int i, j;
@@ -85,7 +85,7 @@ int reverse(char angle[])
 
 int main()
 {
-    reverse("0");
-    reverse("0_sample_10");
+    reverse("211207, 0");
+    reverse("211207, 0_sample_10");
     return (0);
 }
