@@ -52,7 +52,7 @@ lineskip=-0.5ex
 {\LARGE \@title \par}
 \end{center}
 \begin{flushright}
-{\large 報告書 NO.08 - 1\quad\@date\quad\@author}
+{\large 報告書 NO.08 - 2\quad\@date\quad\@author}
 \end{flushright}
 \par\vskip 1.5em
 }
@@ -76,19 +76,19 @@ lineskip=-0.5ex
 \end{enumerate}
 
 \section{進捗状況}
-今週は、実験に使用する材料及びひずみゲージの発注、
-実験後のデータ処理のための自動平均値算出プログラムを作成した。
-また、そのプログラムの有用性を確かめるために、
-今後の実験・測定方法を模して簡易実験を行い、
-データ処理を行った。
+今週は，実験に使用する材料及びひずみゲージの発注，
+実験後のデータ処理のための自動平均値算出プログラムを作成した．
+また，そのプログラムの有用性を確かめるために，
+今後の実験・測定方法を模して簡易実験を行い，
+データ処理を行った．
 
 \section{模擬実験の手順}
-今後実験を行うにあたり，その手順を明確に決定しておく必要がある。
+今後実験を行うにあたり，その手順を明確に決定しておく必要がある．
 大量のデータを一度にプログラムで処理できるようにするため，
-測定手順を以下のように定めた。\\
+測定手順を以下のように定めた．\\
 
 \subsection{実験条件}
-想定している実験は以下の図の通りである。
+想定している実験は以下の図の通りである．
 \begin{table}[htbp]
     \begin{center}
         \begin{tabular}{|p{30mm}|p{20mm}|p{30}|}
@@ -123,42 +123,42 @@ lineskip=-0.5ex
         \item 測定開始から30秒間待機する
         \item 40秒間の測定時間
         \item 30秒間のマイクロステージ操作時間
-        \item (2)、(3)の作業を5回繰り返す (78秒周期)\\
+        \item (2)，(3)の作業を5回繰り返す (70秒周期)\\
               ※ 5回目はロードセル，供試体を非接触状態にする
     \end{enumerate}
 \end{screen}
 
 \section{実験結果}
-今回は，0～90度まで模擬実験を行った。
-0度についての結果を以下のFig.1、Fig.2に示す。
+今回は，0～90度まで模擬実験を行った．
+0度についての結果を以下のFig.1，Fig.2に示す．
 
 \begin{figure}[htbp]
     \footnotesize
     \begin{center}
         \includegraphics[width=85mm]{../images/voltage-time/0_loadcell.png}
-        \caption{Result of loadcell's voltage}
+        \caption{Result of loadcell voltage}
         \includegraphics[width=85mm]{../images/voltage-time/0_strainsensor.png}
-        \caption{Result of strainsensor's voltage}
+        \caption{Result of strainsensor voltage}
     \end{center}
 \end{figure}
 
 \section{処理プログラム}
-模擬実験から得たデータを用いて，処理プログラムが有効かどうかの検証を行った。
+模擬実験から得たデータを用いて，処理プログラムが有効かどうかの検証を行った．
 
 \subsection{ドリフト補正}
 以前，作用力測定の実験データ解析に用いたアルゴリズムをもとに
-ドリフト補正プログラムを作成し，結果に適用した。
-0度についての結果を以下のFig.3～Fig.5に示す。
+ドリフト補正プログラムを作成し，結果に適用した．
+0度についての結果を以下のFig.3～Fig.5に示す．
 
 \begin{figure}[htbp]
     \footnotesize
     \begin{center}
         \includegraphics[width=78mm]{../images/drift/0_loadcell_drift.png}
-        \caption{Result of loadcell's voltage}
+        \caption{Drift correction (loadcell)}
         \includegraphics[width=78mm]{../images/drift/0_drag_drift.png}
-        \caption{Result of strainsensor's voltage}
+        \caption{Drift correction (drag)}
         \includegraphics[width=78mm]{../images/drift/0_lift_drift.png}
-        \caption{Result of strainsensor's voltage}
+        \caption{Drift correction (lift)}
     \end{center}
 \end{figure}
 
@@ -166,18 +166,18 @@ lineskip=-0.5ex
 
 \subsection{平均値の算出}
 
-ドリフト補正を適用した結果を用いて、平均値の結果を算出した。
-0度についての結果を以下のFig.6～Fig.8に示す。
+ドリフト補正を適用した結果を用いて，平均値の結果を算出した．
+0度についての結果を以下のFig.6～Fig.8に示す．
 
 \begin{figure}[htbp]
     \footnotesize
     \begin{center}
         \includegraphics[width=78mm]{../images/average/0_loadcell_average.png}
-        \caption{Result of strainsensor's voltage}
+        \caption{Average calculation (loadcell)}
         \includegraphics[width=78mm]{../images/average/0_drag_average.png}
-        \caption{Result of strainsensor's voltage}
+        \caption{Average calculation (drag)}
         \includegraphics[width=78mm]{../images/average/0_lift_average.png}
-        \caption{Result of strainsensor's voltage}
+        \caption{Average calculation (lift)}
     \end{center}
 \end{figure}
 \newpage
@@ -185,35 +185,38 @@ lineskip=-0.5ex
 \subsection{近似直線の算出}
 それぞれの出力電圧の平均値を用いて
 ロードセルとひずみセンサの関係性について，
-最小二乗法を用いて近似直線を算出した。
-各角度についての結果を以下のFig.9～Fig.15 に示す。
+最小二乗法を用いて近似直線を算出した．
+各角度についての結果を以下のFig.9～Fig.15 に示す．
 \begin{figure}[htbp]
     \footnotesize
     \begin{center}
         \includegraphics[width=78mm]{../images/linear/0_linear.png}
-        \caption{Result of strainsensor's voltage}
+        \caption{Result of 0 deg}
         \includegraphics[width=78mm]{../images/linear/15_linear.png}
-        \caption{Result of strainsensor's voltage}
+        \caption{Result of 15 deg}
         \includegraphics[width=78mm]{../images/linear/30_linear.png}
-        \caption{Result of strainsensor's voltage}
+        \caption{Result of 30 deg}
     \end{center}
 \end{figure}
 \begin{figure}[htbp]
     \footnotesize
     \begin{center}
         \includegraphics[width=78mm]{../images/linear/45_linear.png}
-        \caption{Result of strainsensor's voltage}
+        \caption{Result of 45 deg}
         \includegraphics[width=78mm]{../images/linear/60_linear.png}
-        \caption{Result of strainsensor's voltage}
+        \caption{Result of 60 deg}
         \includegraphics[width=78mm]{../images/linear/75_linear.png}
-        \caption{Result of strainsensor's voltage}
+        \caption{Result of 75 deg}
         \includegraphics[width=78mm]{../images/linear/90_linear.png}
-        \caption{Result of strainsensor's voltage}
+        \caption{Result of 90 deg}
     \end{center}
 \end{figure}
 
 \newpage
-\subsection{平方根の算出}
+\subsection{二乗和平方根の算出}
+
+取得したデータを用いて二乗和平方根の算出を行った．
+その結果を以下のFig.16，Fig.17に示す．
 
 \begin{table}[htbp]
     \begin{center}
@@ -230,5 +233,15 @@ lineskip=-0.5ex
         \end{tabular}
     \end{center}
 \end{table}
+
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=85mm]{../images/summary/summary_1.png}
+        \caption{Summary of gradient value}
+        \includegraphics[width=85mm]{../images/summary/summary_2.png}
+        \caption{Summary of root sum square value}
+    \end{center}
+\end{figure}
 
 \end{document}
