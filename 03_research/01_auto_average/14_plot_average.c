@@ -27,7 +27,7 @@ double y_min_loadcell = -0.5;
 double y_max_loadcell = 2;
 
 // label
-const char *xxlabel = "time [s]";
+const char *xxlabel = "time [1/5 s]";
 const char *yylabel = "output voltage [V]";
 char label_loadcell[100];
 char label_drag[100];

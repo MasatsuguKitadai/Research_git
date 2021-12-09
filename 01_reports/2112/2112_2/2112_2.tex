@@ -71,8 +71,8 @@ lineskip=-0.5ex
 \section*{報告内容}
 \begin{enumerate}[1.]
     \item 進捗状況
-    \item 模擬実験の手順
-    \item 自動処理プログラムの作成
+    \item 模擬実験
+    \item 処理プログラム
 \end{enumerate}
 
 \section{進捗状況}
@@ -123,7 +123,7 @@ lineskip=-0.5ex
         \item 測定開始から30秒間待機する
         \item 40秒間の測定時間
         \item 30秒間のマイクロステージ操作時間
-        \item (2)、(3)の作業を5回繰り返す (80秒周期)\\
+        \item (2)、(3)の作業を5回繰り返す (78秒周期)\\
               ※ 5回目はロードセル，供試体を非接触状態にする
     \end{enumerate}
 \end{screen}
@@ -135,15 +135,16 @@ lineskip=-0.5ex
 \begin{figure}[htbp]
     \footnotesize
     \begin{center}
-        \includegraphics[width=85mm]{../images/0_loadcell.png}
+        \includegraphics[width=85mm]{../images/voltage-time/0_loadcell.png}
         \caption{Result of loadcell's voltage}
-        \includegraphics[width=85mm]{../images/0_strainsensor.png}
+        \includegraphics[width=85mm]{../images/voltage-time/0_strainsensor.png}
         \caption{Result of strainsensor's voltage}
     \end{center}
 \end{figure}
 
-\section{自動処理プログラムの適用結果}
+\section{処理プログラム}
 模擬実験から得たデータを用いて，処理プログラムが有効かどうかの検証を行った。
+
 \subsection{ドリフト補正}
 以前，作用力測定の実験データ解析に用いたアルゴリズムをもとに
 ドリフト補正プログラムを作成し，結果に適用した。
@@ -152,14 +153,16 @@ lineskip=-0.5ex
 \begin{figure}[htbp]
     \footnotesize
     \begin{center}
-        \includegraphics[width=80mm]{../images/0_loadcell_drift.png}
+        \includegraphics[width=78mm]{../images/drift/0_loadcell_drift.png}
         \caption{Result of loadcell's voltage}
-        \includegraphics[width=80mm]{../images/0_drag_drift.png}
+        \includegraphics[width=78mm]{../images/drift/0_drag_drift.png}
         \caption{Result of strainsensor's voltage}
-        \includegraphics[width=80mm]{../images/0_lift_drift.png}
+        \includegraphics[width=78mm]{../images/drift/0_lift_drift.png}
         \caption{Result of strainsensor's voltage}
     \end{center}
 \end{figure}
+
+\newpage
 
 \subsection{平均値の算出}
 
@@ -169,11 +172,11 @@ lineskip=-0.5ex
 \begin{figure}[htbp]
     \footnotesize
     \begin{center}
-        \includegraphics[width=80mm]{../images/0_loadcell_average.png}
+        \includegraphics[width=78mm]{../images/average/0_loadcell_average.png}
         \caption{Result of strainsensor's voltage}
-        \includegraphics[width=80mm]{../images/0_drag_average.png}
+        \includegraphics[width=78mm]{../images/average/0_drag_average.png}
         \caption{Result of strainsensor's voltage}
-        \includegraphics[width=80mm]{../images/0_lift_average.png}
+        \includegraphics[width=78mm]{../images/average/0_lift_average.png}
         \caption{Result of strainsensor's voltage}
     \end{center}
 \end{figure}
@@ -187,24 +190,24 @@ lineskip=-0.5ex
 \begin{figure}[htbp]
     \footnotesize
     \begin{center}
-        \includegraphics[width=80mm]{../images/0_linear.png}
+        \includegraphics[width=78mm]{../images/linear/0_linear.png}
         \caption{Result of strainsensor's voltage}
-        \includegraphics[width=80mm]{../images/15_linear.png}
+        \includegraphics[width=78mm]{../images/linear/15_linear.png}
         \caption{Result of strainsensor's voltage}
-        \includegraphics[width=80mm]{../images/30_linear.png}
+        \includegraphics[width=78mm]{../images/linear/30_linear.png}
         \caption{Result of strainsensor's voltage}
     \end{center}
 \end{figure}
 \begin{figure}[htbp]
     \footnotesize
     \begin{center}
-        \includegraphics[width=80mm]{../images/45_linear.png}
+        \includegraphics[width=78mm]{../images/linear/45_linear.png}
         \caption{Result of strainsensor's voltage}
-        \includegraphics[width=80mm]{../images/60_linear.png}
+        \includegraphics[width=78mm]{../images/linear/60_linear.png}
         \caption{Result of strainsensor's voltage}
-        \includegraphics[width=80mm]{../images/75_linear.png}
+        \includegraphics[width=78mm]{../images/linear/75_linear.png}
         \caption{Result of strainsensor's voltage}
-        \includegraphics[width=80mm]{../images/90_linear.png}
+        \includegraphics[width=78mm]{../images/linear/90_linear.png}
         \caption{Result of strainsensor's voltage}
     \end{center}
 \end{figure}
@@ -218,12 +221,12 @@ lineskip=-0.5ex
             \hline
             \multicolumn{1}{|c|}{\textgt{Angle [deg]}} & \multicolumn{1}{|c|}{\textgt{Drag [V/V]}}  & \multicolumn{1}{|c|}{\textgt{Lift [V/V]}} & \multicolumn{1}{|c|}{\textgt{Sqrt [V/V]}}\\ \hline
             \multicolumn{1}{|c|}{0}                    & \multicolumn{1}{|c|}{-0.6484}              & \multicolumn{1}{|c|}{\textgt{0.0839}}     & \multicolumn{1}{|c|}{\textgt{0.6539}}\\ \hline
-            \multicolumn{1}{|c|}{15}                   & \multicolumn{1}{|c|}{-0.6617}              & \multicolumn{1}{|c|}{\textgt{-0.0801}}    & \multicolumn{1}{|c|}{\textgt{0.6665}}\\ \hline
+            \multicolumn{1}{|c|}{15}                   & \multicolumn{1}{|c|}{-0.6617}              & \multicolumn{1}{|c|}{\textgt{-0.0781}}    & \multicolumn{1}{|c|}{\textgt{0.6665}}\\ \hline
             \multicolumn{1}{|c|}{30}                   & \multicolumn{1}{|c|}{-0.5956}              & \multicolumn{1}{|c|}{\textgt{-0.2457}}    & \multicolumn{1}{|c|}{\textgt{0.6443}}\\ \hline
             \multicolumn{1}{|c|}{45}                   & \multicolumn{1}{|c|}{-0.5610}              & \multicolumn{1}{|c|}{\textgt{-0.3457}}    & \multicolumn{1}{|c|}{\textgt{0.6590}}\\ \hline
             \multicolumn{1}{|c|}{60}                   & \multicolumn{1}{|c|}{-0.3652}              & \multicolumn{1}{|c|}{\textgt{-0.5248}}    & \multicolumn{1}{|c|}{\textgt{0.6394}}\\ \hline
             \multicolumn{1}{|c|}{75}                   & \multicolumn{1}{|c|}{-0.2643}              & \multicolumn{1}{|c|}{\textgt{-0.5866}}    & \multicolumn{1}{|c|}{\textgt{0.6434}}\\ \hline
-            \multicolumn{1}{|c|}{90}                   & \multicolumn{1}{|c|}{-0.0833}              & \multicolumn{1}{|c|}{\textgt{-0.6380}}    & \multicolumn{1}{|c|}{\textgt{0.6434}}\\ \hline
+            \multicolumn{1}{|c|}{90}                   & \multicolumn{1}{|c|}{-0.0833}              & \multicolumn{1}{|c|}{\textgt{-0.6378}}    & \multicolumn{1}{|c|}{\textgt{0.6434}}\\ \hline
         \end{tabular}
     \end{center}
 \end{table}

@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.11.5)  8 DEC 2021 17:50
+This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.11.5)  9 DEC 2021 11:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -456,14 +456,14 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-File: ../images/0_loadcell.png Graphic file (type bmp)
-<../images/0_loadcell.png>
+File: ../images/voltage-time/0_loadcell.png Graphic file (type bmp)
+<../images/voltage-time/0_loadcell.png>
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
 (Font)              scaled to size 8.64899pt on input line 139.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
 (Font)              scaled to size 8.64899pt on input line 139.
-File: ../images/0_strainsensor.png Graphic file (type bmp)
-<../images/0_strainsensor.png>
+File: ../images/voltage-time/0_strainsensor.png Graphic file (type bmp)
+<../images/voltage-time/0_strainsensor.png>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -471,57 +471,57 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 ]
-File: ../images/0_loadcell_drift.png Graphic file (type bmp)
-<../images/0_loadcell_drift.png>
-File: ../images/0_drag_drift.png Graphic file (type bmp)
-<../images/0_drag_drift.png>
-File: ../images/0_lift_drift.png Graphic file (type bmp)
-<../images/0_lift_drift.png>
-File: ../images/0_loadcell_average.png Graphic file (type bmp)
-<../images/0_loadcell_average.png>
-File: ../images/0_drag_average.png Graphic file (type bmp)
-<../images/0_drag_average.png>
-File: ../images/0_lift_average.png Graphic file (type bmp)
-<../images/0_lift_average.png>
+File: ../images/drift/0_loadcell_drift.png Graphic file (type bmp)
+<../images/drift/0_loadcell_drift.png>
+File: ../images/drift/0_drag_drift.png Graphic file (type bmp)
+<../images/drift/0_drag_drift.png>
+File: ../images/drift/0_lift_drift.png Graphic file (type bmp)
+<../images/drift/0_lift_drift.png>
+File: ../images/average/0_loadcell_average.png Graphic file (type bmp)
+<../images/average/0_loadcell_average.png>
+File: ../images/average/0_drag_average.png Graphic file (type bmp)
+<../images/average/0_drag_average.png>
+File: ../images/average/0_lift_average.png Graphic file (type bmp)
+<../images/average/0_lift_average.png>
  [2]
-File: ../images/0_linear.png Graphic file (type bmp)
-<../images/0_linear.png>
-File: ../images/15_linear.png Graphic file (type bmp)
-<../images/15_linear.png>
-File: ../images/30_linear.png Graphic file (type bmp)
-<../images/30_linear.png>
-File: ../images/45_linear.png Graphic file (type bmp)
-<../images/45_linear.png>
-File: ../images/60_linear.png Graphic file (type bmp)
-<../images/60_linear.png>
-File: ../images/75_linear.png Graphic file (type bmp)
-<../images/75_linear.png>
-File: ../images/90_linear.png Graphic file (type bmp)
-<../images/90_linear.png>
+File: ../images/linear/0_linear.png Graphic file (type bmp)
+<../images/linear/0_linear.png>
+File: ../images/linear/15_linear.png Graphic file (type bmp)
+<../images/linear/15_linear.png>
+File: ../images/linear/30_linear.png Graphic file (type bmp)
+<../images/linear/30_linear.png>
+File: ../images/linear/45_linear.png Graphic file (type bmp)
+<../images/linear/45_linear.png>
+File: ../images/linear/60_linear.png Graphic file (type bmp)
+<../images/linear/60_linear.png>
+File: ../images/linear/75_linear.png Graphic file (type bmp)
+<../images/linear/75_linear.png>
+File: ../images/linear/90_linear.png Graphic file (type bmp)
+<../images/linear/90_linear.png>
 
 
-LaTeX Warning: Float too large for page by 56.58856pt on input line 210.
+LaTeX Warning: Float too large for page by 39.53265pt on input line 213.
 
 [3]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 231.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 234.
  [4
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 231.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 234.
  (./2112_2.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 231.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 231.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 234.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 234.
 Package rerunfilecheck Info: File `2112_2.out' has not changed.
-(rerunfilecheck)             Checksum: 9B4507F2733B07B0FA4267C18AADB374;745.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 231.
+(rerunfilecheck)             Checksum: CCE95036904694D853EAAED2DBD4E840;724.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 234.
  ) 
 Here is how much of TeX's memory you used:
- 8435 strings out of 481768
- 123038 string characters out of 5933620
+ 8441 strings out of 481768
+ 123598 string characters out of 5933620
  409038 words of memory out of 5000000
  23677 multiletter control sequences out of 15000+600000
  542297 words of font info for 73 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
  34i,10n,36p,270b,441s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on 2112_2.dvi (4 pages, 15592 bytes).
+Output written on 2112_2.dvi (4 pages, 15652 bytes).
