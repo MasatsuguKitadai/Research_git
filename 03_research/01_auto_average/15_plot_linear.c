@@ -14,7 +14,7 @@ char filename_plot[100];
 
 // range x
 double x_min = 0;
-double x_max = 1;
+double x_max = 1.6;
 
 // range y
 double y_min = -0.8;
@@ -77,13 +77,30 @@ int plot(char date[], char angle[])
 int main()
 {
     // 211208
-    plot("211208", "0");
-    plot("211208", "15");
-    plot("211208", "30");
-    plot("211208", "45");
-    plot("211208", "60");
-    plot("211208", "75");
-    plot("211208", "90");
+    // plot("211208", "0");
+    // plot("211208", "15");
+    // plot("211208", "30");
+    // plot("211208", "45");
+    // plot("211208", "60");
+    // plot("211208", "75");
+    // plot("211208", "90");
+
+    // simulation
+    plot("simulation_data", "0");
+    plot("simulation_data", "15");
+    plot("simulation_data", "30");
+    plot("simulation_data", "45");
+    plot("simulation_data", "60");
+    plot("simulation_data", "75");
+    plot("simulation_data", "90");
+    plot("simulation_data", "105");
+    plot("simulation_data", "120");
+    plot("simulation_data", "135");
+    plot("simulation_data", "150");
+    plot("simulation_data", "165");
+    plot("simulation_data", "180");
+    plot("simulation_data", "195");
+    plot("simulation_data", "210");
 
     return (0);
 }

@@ -71,7 +71,7 @@ int linear(char date[], char angle[])
 
     // 計算
 
-    int n = 2;
+    int n = 3;
     double result_drag[n];
     double result_lift[n];
 
