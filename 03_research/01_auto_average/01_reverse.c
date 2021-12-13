@@ -16,8 +16,8 @@ int reverse(char date[], char angle[])
     char filename_csv[100];
     char filename_dat[100];
 
-    sprintf(filename_read, "data/%s/%s.CSV", date, angle);
-    sprintf(filename_csv, "%s/csv_reverse/%s_reverse.CSV", date, angle);
+    sprintf(filename_read, "data/%s/%s.csv", date, angle);
+    sprintf(filename_csv, "%s/csv_reverse/%s_reverse.csv", date, angle);
     sprintf(filename_dat, "%s/dat_reverse/%s_reverse.dat", date, angle);
 
     // 変数宣言
@@ -90,13 +90,30 @@ int main()
     // reverse("211207", "0_sample_10");
 
     // 211208
-    reverse("211208", "0");
-    reverse("211208", "15");
-    reverse("211208", "30");
-    reverse("211208", "45");
-    reverse("211208", "60");
-    reverse("211208", "75");
-    reverse("211208", "90");
+    // reverse("211208", "0");
+    // reverse("211208", "15");
+    // reverse("211208", "30");
+    // reverse("211208", "45");
+    // reverse("211208", "60");
+    // reverse("211208", "75");
+    // reverse("211208", "90");
+
+    // simulation
+    reverse("simulation_data", "0");
+    reverse("simulation_data", "15");
+    reverse("simulation_data", "30");
+    reverse("simulation_data", "45");
+    reverse("simulation_data", "60");
+    reverse("simulation_data", "75");
+    reverse("simulation_data", "90");
+    reverse("simulation_data", "105");
+    reverse("simulation_data", "120");
+    reverse("simulation_data", "135");
+    reverse("simulation_data", "150");
+    reverse("simulation_data", "165");
+    reverse("simulation_data", "180");
+    reverse("simulation_data", "195");
+    reverse("simulation_data", "210");
 
     return (0);
 }

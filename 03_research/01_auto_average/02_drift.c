@@ -24,8 +24,8 @@ int drift(char date[], char angle[])
     char filename_csv[100];
     char filename_dat[100];
 
-    sprintf(filename_read,"%s/csv_reverse/%s_reverse.CSV",  date, angle);
-    sprintf(filename_csv, "%s/csv_drift/%s_drift.CSV",   date, angle);
+    sprintf(filename_read,"%s/csv_reverse/%s_reverse.csv",  date, angle);
+    sprintf(filename_csv, "%s/csv_drift/%s_drift.csv",   date, angle);
     sprintf(filename_dat, "%s/dat_drift/%s_drift.dat",   date, angle);
     printf("【%s】\n", angle);
 
@@ -173,13 +173,30 @@ int drift(char date[], char angle[])
 int main()
 {
     // 211208
-    drift("211208", "0");
-    drift("211208", "15");
-    drift("211208", "30");
-    drift("211208", "45");
-    drift("211208", "60");
-    drift("211208", "75");
-    drift("211208", "90");
+    // drift("211208", "0");
+    // drift("211208", "15");
+    // drift("211208", "30");
+    // drift("211208", "45");
+    // drift("211208", "60");
+    // drift("211208", "75");
+    // drift("211208", "90");
+
+    // simulation
+    drift("simulation_data", "0");
+    drift("simulation_data", "15");
+    drift("simulation_data", "30");
+    drift("simulation_data", "45");
+    drift("simulation_data", "60");
+    drift("simulation_data", "75");
+    drift("simulation_data", "90");
+    drift("simulation_data", "105");
+    drift("simulation_data", "120");
+    drift("simulation_data", "135");
+    drift("simulation_data", "150");
+    drift("simulation_data", "165");
+    drift("simulation_data", "180");
+    drift("simulation_data", "195");
+    drift("simulation_data", "210");
 
     return (0);
 }

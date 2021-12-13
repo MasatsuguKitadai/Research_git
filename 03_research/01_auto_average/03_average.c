@@ -24,8 +24,8 @@ int average(char date[], char angle[])
     char filename_csv[100];
     char filename_dat[100];
 
-    sprintf(filename_read,"%s/csv_drift/%s_drift.CSV",  date, angle);
-    sprintf(filename_csv, "%s/csv_average/%s_average.CSV",   date, angle);
+    sprintf(filename_read,"%s/csv_drift/%s_drift.csv",  date, angle);
+    sprintf(filename_csv, "%s/csv_average/%s_average.csv",   date, angle);
     sprintf(filename_dat, "%s/dat_average/%s_average.dat",   date, angle);
     printf("【%s】\n", angle);
 
@@ -124,13 +124,30 @@ int average(char date[], char angle[])
 int main()
 {
     // 211208
-    average("211208", "0");
-    average("211208", "15");
-    average("211208", "30");
-    average("211208", "45");
-    average("211208", "60");
-    average("211208", "75");
-    average("211208", "90");
+    // average("211208", "0");
+    // average("211208", "15");
+    // average("211208", "30");
+    // average("211208", "45");
+    // average("211208", "60");
+    // average("211208", "75");
+    // average("211208", "90");
+
+    // simulation
+    average("simulation_data", "0");
+    average("simulation_data", "15");
+    average("simulation_data", "30");
+    average("simulation_data", "45");
+    average("simulation_data", "60");
+    average("simulation_data", "75");
+    average("simulation_data", "90");
+    average("simulation_data", "105");
+    average("simulation_data", "120");
+    average("simulation_data", "135");
+    average("simulation_data", "150");
+    average("simulation_data", "165");
+    average("simulation_data", "180");
+    average("simulation_data", "195");
+    average("simulation_data", "210");
 
     return (0);
 }

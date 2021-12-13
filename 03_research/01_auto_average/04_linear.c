@@ -26,10 +26,10 @@ int linear(char date[], char angle[])
     char filename_dat_1[100];
     char filename_dat_2[100];
 
-    sprintf(filename_read,"%s/csv_average/%s_average.CSV",  date, angle);
-    sprintf(filename_csv_1, "%s/csv_linear/%s_linear.CSV",   date, angle);
+    sprintf(filename_read,"%s/csv_average/%s_average.csv",  date, angle);
+    sprintf(filename_csv_1, "%s/csv_linear/%s_linear.csv",   date, angle);
     sprintf(filename_dat_1, "%s/dat_linear/%s_linear.dat",   date, angle);
-    sprintf(filename_csv_2, "%s/csv_gradient/%s_gradient.CSV",   date, angle);
+    sprintf(filename_csv_2, "%s/csv_gradient/%s_gradient.csv",   date, angle);
     sprintf(filename_dat_2, "%s/dat_gradient/%s_gradient.dat",   date, angle);
     printf("【%s】\n", angle);
 
@@ -158,13 +158,30 @@ int linear(char date[], char angle[])
 int main()
 {
     // 211208
-    linear("211208", "0");
-    linear("211208", "15");
-    linear("211208", "30");
-    linear("211208", "45");
-    linear("211208", "60");
-    linear("211208", "75");
-    linear("211208", "90");
+    // linear("211208", "0");
+    // linear("211208", "15");
+    // linear("211208", "30");
+    // linear("211208", "45");
+    // linear("211208", "60");
+    // linear("211208", "75");
+    // linear("211208", "90");
+
+    // simulation
+    linear("simulation_data", "0");
+    linear("simulation_data", "15");
+    linear("simulation_data", "30");
+    linear("simulation_data", "45");
+    linear("simulation_data", "60");
+    linear("simulation_data", "75");
+    linear("simulation_data", "90");
+    linear("simulation_data", "105");
+    linear("simulation_data", "120");
+    linear("simulation_data", "135");
+    linear("simulation_data", "150");
+    linear("simulation_data", "165");
+    linear("simulation_data", "180");
+    linear("simulation_data", "195");
+    linear("simulation_data", "210");
 
     return (0);
 }

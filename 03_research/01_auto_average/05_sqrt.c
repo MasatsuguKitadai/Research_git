@@ -22,8 +22,8 @@ int sqrt(char date[], char angle[])
     char filename_csv[100];
     char filename_dat[100];
 
-    sprintf(filename_read,"%s/csv_gradient/%s_gradient.CSV",  date, angle);
-    sprintf(filename_csv, "%s/csv_sqrt/%s_sqrt.CSV",   date, angle);
+    sprintf(filename_read,"%s/csv_gradient/%s_gradient.csv",  date, angle);
+    sprintf(filename_csv, "%s/csv_sqrt/%s_sqrt.csv",   date, angle);
     sprintf(filename_dat, "%s/dat_sqrt/%s_sqrt.dat",   date, angle);
     printf("【%s】\n", angle);
 
@@ -65,13 +65,30 @@ int sqrt(char date[], char angle[])
 int main()
 {
     // 211208
-    linear("211208", "0");
-    linear("211208", "15");
-    linear("211208", "30");
-    linear("211208", "45");
-    linear("211208", "60");
-    linear("211208", "75");
-    linear("211208", "90");
+    // linear("211208", "0");
+    // linear("211208", "15");
+    // linear("211208", "30");
+    // linear("211208", "45");
+    // linear("211208", "60");
+    // linear("211208", "75");
+    // linear("211208", "90");
+
+    // simulation
+    ("simulation_data", "0");
+    ("simulation_data", "15");
+    ("simulation_data", "30");
+    ("simulation_data", "45");
+    ("simulation_data", "60");
+    ("simulation_data", "75");
+    ("simulation_data", "90");
+    ("simulation_data", "105");
+    ("simulation_data", "120");
+    ("simulation_data", "135");
+    ("simulation_data", "150");
+    ("simulation_data", "165");
+    ("simulation_data", "180");
+    ("simulation_data", "195");
+    ("simulation_data", "210");
 
     return (0);
 }
