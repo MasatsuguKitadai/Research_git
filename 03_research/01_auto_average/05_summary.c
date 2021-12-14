@@ -27,8 +27,8 @@ int summary(char date[])
     for(i = 0; i < 24; i++)
     {
         angle = 15 * i;
-        sprintf(filename_csv,"result/%s/csv_gradient/%d_gradient.csv",  date, angle);
-        
+        sprintf(filename_read,"result/%s/csv_gradient/%d_gradient.csv",  date, angle);
+
         fp = fopen(filename_read, "r");
         if (filename_read == NULL)
         {
@@ -37,13 +37,15 @@ int summary(char date[])
         }
 
         fscanf(fp, "%lf, %lf, %lf", &ch0, &ch1, &ch2);
-        printf("%lf, %lf, %lf\n", ch0, ch1, ch2);
+        printf("【%d】\t%lf\t%lf\t%lf\n", angle, ch0, ch1, ch2);
         value[i][0] = ch0; // drag
         value[i][1] = ch1; // lift
         value[i][2] = ch2; // sqrt
 
         fclose(fp);
     }
+
+// plot用 データファイルの書き出し
 
     fp_csv = fopen(filename_csv, "w");
     fp_dat = fopen(filename_dat, "w");
@@ -62,7 +64,7 @@ int summary(char date[])
 int main()
 {
     // simulation
-    ("simulation_data");
+    summary("simulation_data");
 
     return (0);
 }

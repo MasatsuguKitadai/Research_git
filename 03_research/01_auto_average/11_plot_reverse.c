@@ -37,8 +37,8 @@ int plot(char date[], char angle[])
 {
     sprintf(label, "%s",angle);
     sprintf(filename_dat, "result/%s/dat_reverse/%s_reverse.dat",    date,  angle);
-    sprintf(filename_plot_1, "result/%s/plot/voltage-time/%s_loadcell.png", date, angle);
-    sprintf(filename_plot_2, "result/%s/plot/voltage-time/%s_strainsensor.png", date, angle);
+    sprintf(filename_plot_1, "result/%s/plot/reverse/%s_loadcell.png", date, angle);
+    sprintf(filename_plot_2, "result/%s/plot/reverse/%s_strainsensor.png", date, angle);
 
     // size
     size = 1;
@@ -128,6 +128,16 @@ int main()
     plot("simulation_data", "180");
     plot("simulation_data", "195");
     plot("simulation_data", "210");
+    plot("simulation_data", "225");
+    plot("simulation_data", "240");
+    plot("simulation_data", "255");
+    plot("simulation_data", "270");
+    plot("simulation_data", "285");
+    plot("simulation_data", "300");
+    plot("simulation_data", "315");
+    plot("simulation_data", "330");
+    plot("simulation_data", "345");
+    
 
     return (0);
 }

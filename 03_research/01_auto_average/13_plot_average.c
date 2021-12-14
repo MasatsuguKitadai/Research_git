@@ -148,7 +148,6 @@ int main()
     // plot("211208", "90");
 
     // simulation
-    plot("simulation_data", "0");
     plot("simulation_data", "15");
     plot("simulation_data", "30");
     plot("simulation_data", "45");
@@ -163,6 +162,15 @@ int main()
     plot("simulation_data", "180");
     plot("simulation_data", "195");
     plot("simulation_data", "210");
+    plot("simulation_data", "225");
+    plot("simulation_data", "240");
+    plot("simulation_data", "255");
+    plot("simulation_data", "270");
+    plot("simulation_data", "285");
+    plot("simulation_data", "300");
+    plot("simulation_data", "315");
+    plot("simulation_data", "330");
+    plot("simulation_data", "345");
 
     return (0);
 }

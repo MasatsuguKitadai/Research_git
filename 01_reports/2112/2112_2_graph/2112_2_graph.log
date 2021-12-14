@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.11.5)  9 DEC 2021 12:29
+This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.11.5)  14 DEC 2021 13:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -442,8 +442,8 @@ LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
 (Font)              scaled to size 9.60999pt on input line 72.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 9.60999pt on input line 72.
-File: ../images/voltage-time/0_loadcell.png Graphic file (type bmp)
-<../images/voltage-time/0_loadcell.png>
+File: ../images/reverse/0_loadcell.png Graphic file (type bmp)
+<../images/reverse/0_loadcell.png>
 
 Overfull \hbox (3.5563pt too wide) in paragraph at lines 76--77
  [] 
@@ -453,22 +453,22 @@ LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
 (Font)              scaled to size 8.64899pt on input line 77.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
 (Font)              scaled to size 8.64899pt on input line 77.
-File: ../images/voltage-time/0_strainsensor.png Graphic file (type bmp)
-<../images/voltage-time/0_strainsensor.png>
+File: ../images/reverse/0_strainsensor.png Graphic file (type bmp)
+<../images/reverse/0_strainsensor.png>
 
 Overfull \hbox (3.5563pt too wide) in paragraph at lines 78--79
  [][] 
  []
 
-File: ../images/voltage-time/15_loadcell.png Graphic file (type bmp)
-<../images/voltage-time/15_loadcell.png>
+File: ../images/reverse/15_loadcell.png Graphic file (type bmp)
+<../images/reverse/15_loadcell.png>
 
 Overfull \hbox (3.5563pt too wide) in paragraph at lines 88--89
  [] 
  []
 
-File: ../images/voltage-time/15_strainsensor.png Graphic file (type bmp)
-<../images/voltage-time/15_strainsensor.png>
+File: ../images/reverse/15_strainsensor.png Graphic file (type bmp)
+<../images/reverse/15_strainsensor.png>
 
 Overfull \hbox (3.5563pt too wide) in paragraph at lines 90--91
  [][] 
@@ -478,73 +478,73 @@ Overfull \hbox (3.5563pt too wide) in paragraph at lines 90--91
 
 
 ]
-File: ../images/voltage-time/30_loadcell.png Graphic file (type bmp)
-<../images/voltage-time/30_loadcell.png>
+File: ../images/reverse/30_loadcell.png Graphic file (type bmp)
+<../images/reverse/30_loadcell.png>
 
 Overfull \hbox (3.5563pt too wide) in paragraph at lines 100--101
  [] 
  []
 
-File: ../images/voltage-time/30_strainsensor.png Graphic file (type bmp)
-<../images/voltage-time/30_strainsensor.png>
+File: ../images/reverse/30_strainsensor.png Graphic file (type bmp)
+<../images/reverse/30_strainsensor.png>
 
 Overfull \hbox (3.5563pt too wide) in paragraph at lines 102--103
  [][] 
  []
 
-File: ../images/voltage-time/45_loadcell.png Graphic file (type bmp)
-<../images/voltage-time/45_loadcell.png>
+File: ../images/reverse/45_loadcell.png Graphic file (type bmp)
+<../images/reverse/45_loadcell.png>
 
 Overfull \hbox (3.5563pt too wide) in paragraph at lines 112--113
  [] 
  []
 
-File: ../images/voltage-time/45_strainsensor.png Graphic file (type bmp)
-<../images/voltage-time/45_strainsensor.png>
+File: ../images/reverse/45_strainsensor.png Graphic file (type bmp)
+<../images/reverse/45_strainsensor.png>
 
 Overfull \hbox (3.5563pt too wide) in paragraph at lines 114--115
  [][] 
  []
 
 [2]
-File: ../images/voltage-time/60_loadcell.png Graphic file (type bmp)
-<../images/voltage-time/60_loadcell.png>
+File: ../images/reverse/60_loadcell.png Graphic file (type bmp)
+<../images/reverse/60_loadcell.png>
 
 Overfull \hbox (3.5563pt too wide) in paragraph at lines 124--125
  [] 
  []
 
-File: ../images/voltage-time/60_strainsensor.png Graphic file (type bmp)
-<../images/voltage-time/60_strainsensor.png>
+File: ../images/reverse/60_strainsensor.png Graphic file (type bmp)
+<../images/reverse/60_strainsensor.png>
 
 Overfull \hbox (3.5563pt too wide) in paragraph at lines 126--127
  [][] 
  []
 
-File: ../images/voltage-time/75_loadcell.png Graphic file (type bmp)
-<../images/voltage-time/75_loadcell.png>
+File: ../images/reverse/75_loadcell.png Graphic file (type bmp)
+<../images/reverse/75_loadcell.png>
 
 Overfull \hbox (3.5563pt too wide) in paragraph at lines 136--137
  [] 
  []
 
-File: ../images/voltage-time/75_strainsensor.png Graphic file (type bmp)
-<../images/voltage-time/75_strainsensor.png>
+File: ../images/reverse/75_strainsensor.png Graphic file (type bmp)
+<../images/reverse/75_strainsensor.png>
 
 Overfull \hbox (3.5563pt too wide) in paragraph at lines 138--139
  [][] 
  []
 
 [3]
-File: ../images/voltage-time/90_loadcell.png Graphic file (type bmp)
-<../images/voltage-time/90_loadcell.png>
+File: ../images/reverse/90_loadcell.png Graphic file (type bmp)
+<../images/reverse/90_loadcell.png>
 
 Overfull \hbox (3.5563pt too wide) in paragraph at lines 148--149
  [] 
  []
 
-File: ../images/voltage-time/90_strainsensor.png Graphic file (type bmp)
-<../images/voltage-time/90_strainsensor.png>
+File: ../images/reverse/90_strainsensor.png Graphic file (type bmp)
+<../images/reverse/90_strainsensor.png>
 
 Overfull \hbox (3.5563pt too wide) in paragraph at lines 150--151
  [][] 
@@ -822,11 +822,11 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 325.
  ) 
 Here is how much of TeX's memory you used:
  8548 strings out of 481768
- 128383 string characters out of 5933620
+ 128163 string characters out of 5933620
  400716 words of memory out of 5000000
  23765 multiletter control sequences out of 15000+600000
  540079 words of font info for 62 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
  34i,5n,36p,282b,440s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on 2112_2_graph.dvi (10 pages, 20120 bytes).
+Output written on 2112_2_graph.dvi (10 pages, 20048 bytes).
