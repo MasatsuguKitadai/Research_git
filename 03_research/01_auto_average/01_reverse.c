@@ -17,8 +17,8 @@ int reverse(char date[], char angle[])
     char filename_dat[100];
 
     sprintf(filename_read, "data/%s/%s.csv", date, angle);
-    sprintf(filename_csv, "%s/csv_reverse/%s_reverse.csv", date, angle);
-    sprintf(filename_dat, "%s/dat_reverse/%s_reverse.dat", date, angle);
+    sprintf(filename_csv, "result/%s/csv_reverse/%s_reverse.csv", date, angle);
+    sprintf(filename_dat, "result/%s/dat_reverse/%s_reverse.dat", date, angle);
 
     // 変数宣言
     int i, j;
@@ -114,6 +114,14 @@ int main()
     reverse("simulation_data", "180");
     reverse("simulation_data", "195");
     reverse("simulation_data", "210");
-
+    reverse("simulation_data", "225");
+    reverse("simulation_data", "240");
+    reverse("simulation_data", "255");
+    reverse("simulation_data", "270");
+    reverse("simulation_data", "285");
+    reverse("simulation_data", "300");
+    reverse("simulation_data", "315");
+    reverse("simulation_data", "330");
+    reverse("simulation_data", "345");
     return (0);
 }
