@@ -20,7 +20,7 @@ int summary(char date[])
 
     sprintf(filename_csv,"result/%s/csv_summary/%s_summary.csv",  date, date);
     sprintf(filename_dat,"result/%s/dat_summary/%s_summary.dat",  date, date);
-    sprintf(filename_csv_ave,"result/%s/dat_summary/%s_summary_ave.csv",  date, date);
+    sprintf(filename_csv_ave,"result/%s/csv_summary/%s_summary_ave.csv",  date, date);
     sprintf(filename_dat_ave,"result/%s/dat_summary/%s_summary_ave.dat",  date, date);
 
     int i = 0;

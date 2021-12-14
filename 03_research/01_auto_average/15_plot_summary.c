@@ -25,9 +25,9 @@ double y_max = 0.8;
 // label
 const char *xxlabel = "angle [deg]";
 const char *yylabel_1 = "Gradient of voltage [V/V]";
-const char *yylabel_2 = "Root sum squire [V/V]";
+const char *yylabel_2 = "Root sum square [V/V]";
 char label_1[100] = "Gradient value";
-char label_2[100] = "Root sum aquare value";
+char label_2[100] = "Root sum square value";
 
 double size;
 FILE *gp;
@@ -98,7 +98,7 @@ int plot(char date[])
 
     // fprintf(gp, "set samples 10000\n");
     // fprintf(gp, "plot 0.63 with lines lc 'grey20' notitle, '%s' using 1:4 with points lc 'green' pt 5 ps 2 notitle\n", filename_dat);
-    fprintf(gp, "plot '%s' using 1:4 with points lc 'green' pt 5 ps 2 notitle, '%s' using 1:2 with lines lc 'gray40' notitle\n", filename_dat, filename_dat_ave);
+    fprintf(gp, "plot '%s' using 1:4 with points lc 'green' pt 5 ps 2 notitle, '%s' using 1:4 with lines lc 'gray40' notitle\n", filename_dat, filename_dat_ave);
     fflush(gp); //Clean up Data
 
     fprintf(gp, "exit\n"); // Quit gnuplot
