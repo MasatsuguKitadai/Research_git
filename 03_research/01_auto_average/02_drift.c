@@ -181,7 +181,7 @@ int main()
     // drift("211208", "75");
     // drift("211208", "90");
 
-    // simulation
+// simulation
     drift("simulation_data", "0");
     drift("simulation_data", "15");
     drift("simulation_data", "30");
@@ -197,6 +197,15 @@ int main()
     drift("simulation_data", "180");
     drift("simulation_data", "195");
     drift("simulation_data", "210");
+    drift("simulation_data", "225");
+    drift("simulation_data", "240");
+    drift("simulation_data", "255");
+    drift("simulation_data", "270");
+    drift("simulation_data", "285");
+    drift("simulation_data", "300");
+    drift("simulation_data", "315");
+    drift("simulation_data", "330");
+    drift("simulation_data", "345");
 
     return (0);
 }

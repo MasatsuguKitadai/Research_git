@@ -182,6 +182,15 @@ int main()
     linear("simulation_data", "180");
     linear("simulation_data", "195");
     linear("simulation_data", "210");
+    linear("simulation_data", "225");
+    linear("simulation_data", "240");
+    linear("simulation_data", "255");
+    linear("simulation_data", "270");
+    linear("simulation_data", "285");
+    linear("simulation_data", "300");
+    linear("simulation_data", "315");
+    linear("simulation_data", "330");
+    linear("simulation_data", "345");
 
     return (0);
 }

@@ -148,6 +148,15 @@ int main()
     average("simulation_data", "180");
     average("simulation_data", "195");
     average("simulation_data", "210");
+    average("simulation_data", "225");
+    average("simulation_data", "240");
+    average("simulation_data", "255");
+    average("simulation_data", "270");
+    average("simulation_data", "285");
+    average("simulation_data", "300");
+    average("simulation_data", "315");
+    average("simulation_data", "330");
+    average("simulation_data", "345");
 
     return (0);
 }
