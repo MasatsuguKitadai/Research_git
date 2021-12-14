@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.11.5)  14 DEC 2021 13:33
+This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.11.5)  14 DEC 2021 13:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -438,52 +438,21 @@ LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
 (Font)              scaled to size 11.53198pt on input line 71.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 11.53198pt on input line 71.
-LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 86.
-LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 86.
-LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 90.
-LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 4.805pt on input line 90.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 90.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 90.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-File: ../images/reverse/0_loadcell.png Graphic file (type bmp)
-<../images/reverse/0_loadcell.png>
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 135.
+(Font)              scaled to size 8.64899pt on input line 85.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 135.
-File: ../images/reverse/0_strainsensor.png Graphic file (type bmp)
-<../images/reverse/0_strainsensor.png>
+(Font)              scaled to size 8.64899pt on input line 85.
+File: ../images/table_1.jpg Graphic file (type bmp)
+<../images/table_1.jpg>
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Overfull \hbox (9.24686pt too wide) in paragraph at lines 86--87
+ [] 
+ []
 
- [1
-
-
-]
-File: ../images/drift/0_loadcell_drift.png Graphic file (type bmp)
-<../images/drift/0_loadcell_drift.png>
-File: ../images/drift/0_drag_drift.png Graphic file (type bmp)
-<../images/drift/0_drag_drift.png>
-File: ../images/drift/0_lift_drift.png Graphic file (type bmp)
-<../images/drift/0_lift_drift.png>
-File: ../images/average/0_loadcell_average.png Graphic file (type bmp)
-<../images/average/0_loadcell_average.png>
-File: ../images/average/0_drag_average.png Graphic file (type bmp)
-<../images/average/0_drag_average.png>
-File: ../images/average/0_lift_average.png Graphic file (type bmp)
-<../images/average/0_lift_average.png>
- [2]
+File: ../images/summary/summary_1.png Graphic file (type bmp)
+<../images/summary/summary_1.png>
+File: ../images/summary/summary_2.png Graphic file (type bmp)
+<../images/summary/summary_2.png>
 File: ../images/linear/0_linear.png Graphic file (type bmp)
 <../images/linear/0_linear.png>
 File: ../images/linear/15_linear.png Graphic file (type bmp)
@@ -492,38 +461,84 @@ File: ../images/linear/30_linear.png Graphic file (type bmp)
 <../images/linear/30_linear.png>
 File: ../images/linear/45_linear.png Graphic file (type bmp)
 <../images/linear/45_linear.png>
+
+LaTeX Warning: Float too large for page by 39.53265pt on input line 112.
+
 File: ../images/linear/60_linear.png Graphic file (type bmp)
 <../images/linear/60_linear.png>
 File: ../images/linear/75_linear.png Graphic file (type bmp)
 <../images/linear/75_linear.png>
 File: ../images/linear/90_linear.png Graphic file (type bmp)
 <../images/linear/90_linear.png>
+File: ../images/linear/105_linear.png Graphic file (type bmp)
+<../images/linear/105_linear.png>
+
+LaTeX Warning: Float too large for page by 39.53265pt on input line 129.
+
+File: ../images/linear/120_linear.png Graphic file (type bmp)
+<../images/linear/120_linear.png>
+File: ../images/linear/135_linear.png Graphic file (type bmp)
+<../images/linear/135_linear.png>
+File: ../images/linear/150_linear.png Graphic file (type bmp)
+<../images/linear/150_linear.png>
+File: ../images/linear/165_linear.png Graphic file (type bmp)
+<../images/linear/165_linear.png>
+
+LaTeX Warning: Float too large for page by 39.53265pt on input line 146.
+
+File: ../images/linear/180_linear.png Graphic file (type bmp)
+<../images/linear/180_linear.png>
+File: ../images/linear/195_linear.png Graphic file (type bmp)
+<../images/linear/195_linear.png>
+File: ../images/linear/210_linear.png Graphic file (type bmp)
+<../images/linear/210_linear.png>
+File: ../images/linear/225_linear.png Graphic file (type bmp)
+<../images/linear/225_linear.png>
+
+LaTeX Warning: Float too large for page by 39.53265pt on input line 163.
+
+File: ../images/linear/240_linear.png Graphic file (type bmp)
+<../images/linear/240_linear.png>
+File: ../images/linear/255_linear.png Graphic file (type bmp)
+<../images/linear/255_linear.png>
+File: ../images/linear/270_linear.png Graphic file (type bmp)
+<../images/linear/270_linear.png>
+File: ../images/linear/285_linear.png Graphic file (type bmp)
+<../images/linear/285_linear.png>
+
+LaTeX Warning: Float too large for page by 39.53265pt on input line 177.
+
+File: ../images/linear/300_linear.png Graphic file (type bmp)
+<../images/linear/300_linear.png>
+File: ../images/linear/315_linear.png Graphic file (type bmp)
+<../images/linear/315_linear.png>
+File: ../images/linear/330_linear.png Graphic file (type bmp)
+<../images/linear/330_linear.png>
+File: ../images/linear/345_linear.png Graphic file (type bmp)
+<../images/linear/345_linear.png>
+
+LaTeX Warning: Float too large for page by 39.53265pt on input line 191.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 193.
+[1
 
 
-LaTeX Warning: Float too large for page by 39.53265pt on input line 209.
-
-[3]
-File: ../images/summary/summary_1.png Graphic file (type bmp)
-<../images/summary/summary_1.png>
-File: ../images/summary/summary_2.png Graphic file (type bmp)
-<../images/summary/summary_2.png>
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 260.
- [4]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 260.
+] [2] [3] [4]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 193.
  (./2112_3.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 260.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 260.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 193.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 193.
 Package rerunfilecheck Info: File `2112_3.out' has not changed.
-(rerunfilecheck)             Checksum: DF30115105838BD002FDB026CAE18D55;730.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 260.
+(rerunfilecheck)             Checksum: 18F902DCD6DE2B2168F61D06CA7034F4;100.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 193.
  ) 
 Here is how much of TeX's memory you used:
- 8451 strings out of 481768
- 123863 string characters out of 5933620
- 413039 words of memory out of 5000000
- 23683 multiletter control sequences out of 15000+600000
- 542297 words of font info for 73 fonts, out of 8000000 for 9000
+ 8452 strings out of 481768
+ 124222 string characters out of 5933620
+ 406039 words of memory out of 5000000
+ 23692 multiletter control sequences out of 15000+600000
+ 539493 words of font info for 59 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 34i,10n,36p,271b,441s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,5n,36p,271b,435s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on 2112_3.dvi (4 pages, 18312 bytes).
+Output written on 2112_3.dvi (4 pages, 9328 bytes).

@@ -9,6 +9,7 @@ DATE    :
 
 // filename
 char filename_dat[100];
+char filename_dat_ave[100];
 char filename_plot_1[100];
 char filename_plot_2[100];
 
@@ -35,6 +36,7 @@ FILE *gp;
 int plot(char date[])
 {
     sprintf(filename_dat, "result/%s/dat_summary/%s_summary.dat", date, date);
+    sprintf(filename_dat_ave, "result/%s/dat_summary/%s_summary_ave.dat", date, date);
     sprintf(filename_plot_1, "result/%s/plot/summary/summary_1.png", date);
     sprintf(filename_plot_2, "result/%s/plot/summary/summary_2.png", date);
 
@@ -96,7 +98,7 @@ int plot(char date[])
 
     // fprintf(gp, "set samples 10000\n");
     // fprintf(gp, "plot 0.63 with lines lc 'grey20' notitle, '%s' using 1:4 with points lc 'green' pt 5 ps 2 notitle\n", filename_dat);
-    fprintf(gp, "plot '%s' using 1:4 with points lc 'green' pt 5 ps 2 notitle\n", filename_dat);
+    fprintf(gp, "plot '%s' using 1:4 with points lc 'green' pt 5 ps 2 notitle, '%s' using 1:2 with lines lc 'gray40' notitle\n", filename_dat, filename_dat_ave);
     fflush(gp); //Clean up Data
 
     fprintf(gp, "exit\n"); // Quit gnuplot
