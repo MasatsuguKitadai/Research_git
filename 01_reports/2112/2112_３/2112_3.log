@@ -1,9 +1,9 @@
-This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.12.14)  15 DEC 2021 10:10
+This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.11.5)  15 DEC 2021 18:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**/home/masatsugu/git/lab/01_reports/2112/2112_３/2112_3
-(/home/masatsugu/git/lab/01_reports/2112/2112_鐚^^93/2112_3.tex
+**/home/kitadai/git/lab/01_reports/2112/2112_３/2112_3
+(/home/kitadai/git/lab/01_reports/2112/2112_鐚^^93/2112_3.tex
 pLaTeX2e <2020-02-02>+2 (based on LaTeX2e <2020-02-02> patch level 2)
 L3 programming layer <2020-02-14> (/usr/share/texlive/texmf-dist/tex/platex/jsclasses/jsarticle.cls
 Document Class: jsarticle 2020/02/02 jsclasses (okumura, texjporg)
@@ -438,10 +438,14 @@ LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
 (Font)              scaled to size 11.53198pt on input line 71.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 11.53198pt on input line 71.
+LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
+(Font)              scaled to size 9.60999pt on input line 83.
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 9.60999pt on input line 83.
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 89.
+(Font)              scaled to size 8.64899pt on input line 90.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 89.
+(Font)              scaled to size 8.64899pt on input line 90.
 File: ../images/table_1.png Graphic file (type bmp)
 <../images/table_1.png>
 File: ../images/summary/summary_1.png Graphic file (type bmp)
@@ -458,12 +462,20 @@ File: ../images/linear/45_linear.png Graphic file (type bmp)
 <../images/linear/45_linear.png>
 
 
-LaTeX Warning: Float too large for page by 39.53265pt on input line 116.
+LaTeX Warning: Float too large for page by 39.53265pt on input line 117.
 
-[1
-
-
-]
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 6.72699pt on input line 125.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 4.805pt on input line 125.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 125.
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 125.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
 File: ../images/linear/60_linear.png Graphic file (type bmp)
 <../images/linear/60_linear.png>
 File: ../images/linear/75_linear.png Graphic file (type bmp)
@@ -474,8 +486,12 @@ File: ../images/linear/105_linear.png Graphic file (type bmp)
 <../images/linear/105_linear.png>
 
 
-LaTeX Warning: Float too large for page by 39.53265pt on input line 133.
+LaTeX Warning: Float too large for page by 39.53265pt on input line 149.
 
+[1
+
+
+] [2]
 File: ../images/linear/120_linear.png Graphic file (type bmp)
 <../images/linear/120_linear.png>
 File: ../images/linear/135_linear.png Graphic file (type bmp)
@@ -485,7 +501,8 @@ File: ../images/linear/150_linear.png Graphic file (type bmp)
 File: ../images/linear/165_linear.png Graphic file (type bmp)
 <../images/linear/165_linear.png>
 
-LaTeX Warning: Float too large for page by 39.53265pt on input line 150.
+
+LaTeX Warning: Float too large for page by 39.53265pt on input line 166.
 
 File: ../images/linear/180_linear.png Graphic file (type bmp)
 <../images/linear/180_linear.png>
@@ -496,7 +513,7 @@ File: ../images/linear/210_linear.png Graphic file (type bmp)
 File: ../images/linear/225_linear.png Graphic file (type bmp)
 <../images/linear/225_linear.png>
 
-LaTeX Warning: Float too large for page by 39.53265pt on input line 167.
+LaTeX Warning: Float too large for page by 39.53265pt on input line 183.
 
 File: ../images/linear/240_linear.png Graphic file (type bmp)
 <../images/linear/240_linear.png>
@@ -507,7 +524,7 @@ File: ../images/linear/270_linear.png Graphic file (type bmp)
 File: ../images/linear/285_linear.png Graphic file (type bmp)
 <../images/linear/285_linear.png>
 
-LaTeX Warning: Float too large for page by 39.53265pt on input line 181.
+LaTeX Warning: Float too large for page by 39.53265pt on input line 197.
 
 File: ../images/linear/300_linear.png Graphic file (type bmp)
 <../images/linear/300_linear.png>
@@ -518,25 +535,25 @@ File: ../images/linear/330_linear.png Graphic file (type bmp)
 File: ../images/linear/345_linear.png Graphic file (type bmp)
 <../images/linear/345_linear.png>
 
-LaTeX Warning: Float too large for page by 39.53265pt on input line 195.
+LaTeX Warning: Float too large for page by 39.53265pt on input line 211.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 197.
-[2] [3] [4]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 197.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 213.
+[3] [4]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 213.
  (./2112_3.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 197.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 197.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 213.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 213.
 Package rerunfilecheck Info: File `2112_3.out' has not changed.
-(rerunfilecheck)             Checksum: 90227445A21EC7957E9226C65E84BDD8;94.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 197.
+(rerunfilecheck)             Checksum: 3EE8CBC5A5344F9C012AC5C7271CFDAF;237.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 213.
  ) 
 Here is how much of TeX's memory you used:
- 8451 strings out of 481768
- 124224 string characters out of 5933619
- 403041 words of memory out of 5000000
- 23692 multiletter control sequences out of 15000+600000
- 539493 words of font info for 59 fonts, out of 8000000 for 9000
+ 8483 strings out of 481768
+ 124719 string characters out of 5933620
+ 403039 words of memory out of 5000000
+ 23710 multiletter control sequences out of 15000+600000
+ 541962 words of font info for 72 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 34i,5n,36p,273b,437s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,9n,36p,271b,437s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on 2112_3.dvi (4 pages, 9328 bytes).
+Output written on 2112_3.dvi (4 pages, 10416 bytes).
