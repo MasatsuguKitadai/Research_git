@@ -85,8 +85,8 @@ int calculate(char date[])
 {
 
     sprintf(filename_read,"result/%s/05_csv_summary/%s_summary.csv",  date, date);
-    sprintf(filename_csv ,"result/%s/07_csv_fft/%s_fft_lift.csv",  date, date);
-    sprintf(filename_dat ,"result/%s/07_dat_fft/%s_fft_lift.dat",  date, date);
+    sprintf(filename_csv ,"result/%s/07_csv_fft/%s_fft_drag.csv",  date, date);
+    sprintf(filename_dat ,"result/%s/07_dat_fft/%s_fft_drag.dat",  date, date);
 
     // 変数の作成
 
@@ -104,6 +104,7 @@ int calculate(char date[])
         value[i] = 0;
         value_i[i] = 0;
     }
+    
 
     i = 0;
 
@@ -121,7 +122,7 @@ int calculate(char date[])
     while ((fscanf(fp, "%d, %lf, %lf, %lf", &buf, &ch0, &ch1, &ch2)) != EOF)
     {
         // printf("[%d]\t%lf\t%lf\t%lf\n", buf, ch0, ch1, ch2);
-        value[i] = ch1;
+        value[i] = ch0;
         i = i + 1;
     }
 
@@ -129,7 +130,8 @@ int calculate(char date[])
 
     // FFTの適用
 
-    double ps, as, fq, dt;
+    double ps, as, dt;
+    int fq;
     dt = 1;
 
     S_fft(value, value_i, range, 1);
@@ -143,10 +145,13 @@ int calculate(char date[])
         as = sqrt(value[i] * value[i] + value_i[i] * value_i[i]); /* 振幅スペクトル  */
         // fq = (double)i / (dt * (double)range);
         fq = i;
-        fprintf(fp_csv, "%lf\t%lf\t%lf\t%lf\n", fq, ps, value[i], value_i[i]);
-        fprintf(fp_dat, "%lf\t%lf\t%lf\t%lf\n", fq, ps, value[i], value_i[i]);
-        printf("[%d]\tvalue: %lf \tvalue_: %lf\tpw: %lf\tfq :%lf\n", i, value[i], value_i[i], ps, fq);
+        fprintf(fp_csv, "%d,%lf,%lf,%lf\n", fq, ps, value[i], value_i[i]);
+        fprintf(fp_dat, "%d\t%lf\t%lf\t%lf\n", fq, ps, value[i], value_i[i]);
+        printf("[%d]\tvalue: %lf \tvalue_: %lf\tpw: %lf\tfq :%d\n", i, value[i], value_i[i], ps, fq);
     }
+
+    fclose(fp_csv);
+    fclose(fp_dat);
 }
 
 int main()

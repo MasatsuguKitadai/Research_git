@@ -33,8 +33,8 @@ FILE *gp;
 int plot(char date[])
 {
     sprintf(filename_dat, "result/%s/05_dat_summary/%s_summary.dat", date, date);
-    sprintf(filename_dat_wave, "result/%s/08_dat_wave/%s_wave.dat", date, date);
-    sprintf(filename_plot, "result/%s/plot/08/summary_1_ver2.png", date);
+    sprintf(filename_dat_wave, "result/%s/09_dat_wave/%s_wave.dat", date, date);
+    sprintf(filename_plot, "result/%s/plot/wave_maker/summary_1_ver2.png", date);
 
     // size
     size = 1;

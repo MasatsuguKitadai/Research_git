@@ -29,8 +29,8 @@ int wave_maker(char date[])
 {
 
     sprintf(filename_read,"result/%s/05_dat_summary/%s_summary_ave.dat",  date, date);
-    sprintf(filename_csv, "result/%s/08_csv_wave/%s_wave.csv",  date, date);
-    sprintf(filename_dat, "result/%s/08_dat_wave/%s_wave.dat",  date, date);
+    sprintf(filename_csv, "result/%s/09_csv_wave/%s_wave.csv",  date, date);
+    sprintf(filename_dat, "result/%s/09_dat_wave/%s_wave.dat",  date, date);
 
     int buf;
     double ch0, ch1, ch2;
