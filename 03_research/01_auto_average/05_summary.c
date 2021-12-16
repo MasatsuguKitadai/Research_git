@@ -18,10 +18,10 @@ int summary(char date[])
     char filename_dat[100];
     char filename_dat_ave[100];
 
-    sprintf(filename_csv,"result/%s/csv_summary/%s_summary.csv",  date, date);
-    sprintf(filename_dat,"result/%s/dat_summary/%s_summary.dat",  date, date);
-    sprintf(filename_csv_ave,"result/%s/csv_summary/%s_summary_ave.csv",  date, date);
-    sprintf(filename_dat_ave,"result/%s/dat_summary/%s_summary_ave.dat",  date, date);
+    sprintf(filename_csv,"result/%s/05_csv_summary/%s_summary.csv",  date, date);
+    sprintf(filename_dat,"result/%s/05_dat_summary/%s_summary.dat",  date, date);
+    sprintf(filename_csv_ave,"result/%s/05_csv_summary/%s_summary_ave.csv",  date, date);
+    sprintf(filename_dat_ave,"result/%s/05_dat_summary/%s_summary_ave.dat",  date, date);
 
     int i = 0;
     int angle = 0;
@@ -40,7 +40,7 @@ int summary(char date[])
     for(i = 0; i < 24; i++)
     {
         angle = 15 * i;
-        sprintf(filename_read,"result/%s/csv_gradient/%d_gradient.csv",  date, angle);
+        sprintf(filename_read,"result/%s/04_csv_gradient/%d_gradient.csv",  date, angle);
 
         fp = fopen(filename_read, "r");
         if (filename_read == NULL)

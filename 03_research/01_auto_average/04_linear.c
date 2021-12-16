@@ -26,11 +26,11 @@ int linear(char date[], char angle[])
     char filename_dat_1[100];
     char filename_dat_2[100];
 
-    sprintf(filename_read,"result/%s/csv_average/%s_average.csv",  date, angle);
-    sprintf(filename_csv_1, "result/%s/csv_linear/%s_linear.csv",   date, angle);
-    sprintf(filename_dat_1, "result/%s/dat_linear/%s_linear.dat",   date, angle);
-    sprintf(filename_csv_2, "result/%s/csv_gradient/%s_gradient.csv",   date, angle);
-    sprintf(filename_dat_2, "result/%s/dat_gradient/%s_gradient.dat",   date, angle);
+    sprintf(filename_read,"result/%s/03_csv_average/%s_average.csv",  date, angle);
+    sprintf(filename_csv_1, "result/%s/04_csv_linear/%s_linear.csv",   date, angle);
+    sprintf(filename_dat_1, "result/%s/04_dat_linear/%s_linear.dat",   date, angle);
+    sprintf(filename_csv_2, "result/%s/04_csv_gradient/%s_gradient.csv",   date, angle);
+    sprintf(filename_dat_2, "result/%s/04_dat_gradient/%s_gradient.dat",   date, angle);
     printf("【%s】\n", angle);
 
     // 配列の初期化

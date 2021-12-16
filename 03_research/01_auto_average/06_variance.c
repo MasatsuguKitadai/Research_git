@@ -16,9 +16,9 @@ int variance(char date[])
     char filename_csv[100];
     char filename_dat[100];
 
-    sprintf(filename_read,"result/%s/csv_summary/%s_summary.csv",  date, date);
-    sprintf(filename_csv,"result/%s/csv_variance/%s_variance.csv",  date, date);
-    sprintf(filename_dat,"result/%s/dat_variance/%s_variance.dat",  date, date);
+    sprintf(filename_read,"result/%s/05_csv_summary/%s_summary.csv",  date, date);
+    sprintf(filename_csv,"result/%s/05_csv_summary/%s_calculate.csv",  date, date);
+    sprintf(filename_dat,"result/%s/05_dat_summary/%s_calculate.dat",  date, date);
 
     int i = 0;
     int baf;
@@ -84,18 +84,14 @@ int variance(char date[])
 
     // plot用 データファイルの書き出し
 
-    // fp_csv = fopen(filename_csv, "w");
-    // fp_dat = fopen(filename_dat, "w");
+    fp_csv = fopen(filename_csv, "w");
+    fp_dat = fopen(filename_dat, "w");
 
-    // for (i = 0; i < 24; i++)
-    // {
-    //     angle = i * 15;
-    //     fprintf(fp_csv, "%d,%lf,%lf,%lf\n", angle, value[i][0], value[i][1], value[i][2]);
-    //     fprintf(fp_dat, "%d\t%lf\t%lf\t%lf\n", angle, value[i][0], value[i][1], value[i][2]);
-    // }
+    fprintf(fp_csv, "%lf\t%lf\n", variance, deviation);
+    fprintf(fp_dat, "%lf\t%lf\n", variance, deviation);
 
-    // fclose(fp_csv);
-    // fclose(fp_dat);
+    fclose(fp_csv);
+    fclose(fp_dat);
 }
 
 int main()

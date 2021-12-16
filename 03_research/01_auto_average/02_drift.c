@@ -24,9 +24,9 @@ int drift(char date[], char angle[])
     char filename_csv[100];
     char filename_dat[100];
 
-    sprintf(filename_read,"result/%s/csv_reverse/%s_reverse.csv",  date, angle);
-    sprintf(filename_csv, "result/%s/csv_drift/%s_drift.csv",   date, angle);
-    sprintf(filename_dat, "result/%s/dat_drift/%s_drift.dat",   date, angle);
+    sprintf(filename_read,"result/%s/01_csv_reverse/%s_reverse.csv",  date, angle);
+    sprintf(filename_csv, "result/%s/02_csv_drift/%s_drift.csv",   date, angle);
+    sprintf(filename_dat, "result/%s/02_dat_drift/%s_drift.dat",   date, angle);
     printf("【%s】\n", angle);
 
     // 配列の初期化
