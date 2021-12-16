@@ -35,7 +35,6 @@ int summary(char date[])
         sum[i] = 0;
         ave[i] = 0;
     }
-    
 
     for(i = 0; i < 24; i++)
     {

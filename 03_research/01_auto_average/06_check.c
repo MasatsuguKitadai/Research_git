@@ -17,11 +17,11 @@ int variance(char date[])
     char filename_dat[100];
 
     sprintf(filename_read,"result/%s/05_csv_summary/%s_summary.csv",  date, date);
-    sprintf(filename_csv,"result/%s/05_csv_summary/%s_calculate.csv",  date, date);
-    sprintf(filename_dat,"result/%s/05_dat_summary/%s_calculate.dat",  date, date);
+    sprintf(filename_csv,"result/%s/06_csv_check/%s_check.csv",  date, date);
+    sprintf(filename_dat,"result/%s/06_dat_check/%s_check.dat",  date, date);
 
     int i = 0;
-    int baf;
+    int buf;
     int angle[24];
     double ch0, ch1, ch2;
     double value[24][3];
@@ -33,10 +33,10 @@ int variance(char date[])
         exit(0);
     }
 
-    while ((fscanf(fp, "%d, %lf, %lf, %lf", &baf, &ch0, &ch1, &ch2)) != EOF)
+    while ((fscanf(fp, "%d, %lf, %lf, %lf", &buf, &ch0, &ch1, &ch2)) != EOF)
     {
-        // printf("%d, %lf, %lf, %lf\n", baf, ch0, ch1, ch2);
-        angle[i] = baf;
+        // printf("%d, %lf, %lf, %lf\n", buf, ch0, ch1, ch2);
+        angle[i] = buf;
         value[i][0] = ch0; // drag
         value[i][1] = ch1; // lift
         value[i][2] = ch2; // sqrt
