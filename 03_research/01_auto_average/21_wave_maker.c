@@ -28,9 +28,9 @@ int wave1 = 12;
 int wave_maker(char date[])
 {
 
-    sprintf(filename_read,"result/%s/05_dat_summary/%s_summary_ave.dat",  date, date);
-    sprintf(filename_csv, "result/%s/09_csv_wave/%s_wave.csv",  date, date);
-    sprintf(filename_dat, "result/%s/09_dat_wave/%s_wave.dat",  date, date);
+    sprintf(filename_read, "result/%s/05_dat_summary/%s_summary_ave.dat", date, date);
+    sprintf(filename_csv, "result/%s/21_csv_wave/%s_wave.csv", date, date);
+    sprintf(filename_dat, "result/%s/21_dat_wave/%s_wave.dat", date, date);
 
     int buf;
     double ch0, ch1, ch2;
@@ -55,7 +55,7 @@ int wave_maker(char date[])
     // printf("Drag\n");
     for (i = 0; i < 360; i++)
     {
-        wave_drag[i] = sin((2 * pi/360) * (i + 270));
+        wave_drag[i] = sin((2 * pi / 360) * (i + 270));
         wave_drag[i] = wave_drag[i] * average_value;
         // printf("value[%d] = %lf\n", i, wave_drag[i]);
     }
@@ -64,7 +64,7 @@ int wave_maker(char date[])
     // printf("Lift\n");
     for (i = 0; i < 360; i++)
     {
-        wave_lift[i] = sin((2 * pi/360) * (i + 180));
+        wave_lift[i] = sin((2 * pi / 360) * (i + 180));
         wave_lift[i] = wave_lift[i] * average_value;
         // printf("value[%d] = %lf\n", i, wave_lift[i]);
     }
@@ -77,17 +77,16 @@ int wave_maker(char date[])
     for (i = 0; i < 24; i++)
     {
         angle = i * 15;
-        fprintf(fp_csv, "%d,%lf,%lf\n", angle,  wave_drag[angle], wave_lift[angle]);
+        fprintf(fp_csv, "%d,%lf,%lf\n", angle, wave_drag[angle], wave_lift[angle]);
         fprintf(fp_dat, "%d\t%lf\t%lf\n", angle, wave_drag[angle], wave_lift[angle]);
     }
 
     fclose(fp_csv);
     fclose(fp_dat);
-
 }
 
 int main()
 {
     wave_maker("simulation_data");
-    return(0);
+    return (0);
 }

@@ -20,9 +20,9 @@ char filename_csv[100];
 
 int phase_angle(char date[])
 {
-    sprintf(filename_read ,"result/%s/07_csv_fft/%s_fft_drag.csv",  date, date);
-    sprintf(filename_csv ,"result/%s/08_phase_angle/%s.csv", date, date);
-    sprintf(filename_dat ,"result/%s/08_phase_angle/%s.dat", date, date);
+    sprintf(filename_read, "result/%s/22_csv_wave_fft/%s_wave_fft_drag.csv", date, date);
+    sprintf(filename_csv, "result/%s/23_csv_wave_phase_angle/%s.csv", date, date);
+    sprintf(filename_dat, "result/%s/23_dat_wave_phase_angle/%s.dat", date, date);
 
     int i;
     int buf;
@@ -41,7 +41,7 @@ int phase_angle(char date[])
 
     while ((fscanf(fp, "%d, %lf, %lf, %lf", &buf, &ch0, &ch1, &ch2)) != EOF)
     {
-        printf("[%d]\t%lf\t%lf\t%lf\n", buf, ch0, ch1, ch2);
+        // printf("[%d]\t%lf\t%lf\t%lf\n", buf, ch0, ch1, ch2);
         value[i][0] = buf;
         value[i][1] = ch0;
         value[i][2] = ch1;
@@ -59,9 +59,9 @@ int phase_angle(char date[])
 
     gradient = value[1][3] / value[1][2];
     phase_angle = atan(gradient);
-    angle = phase_angle * pi / 180;
 
-    printf("angle =\t%lf\n", phase_angle);
+    printf("gradient =\t%lf\n", gradient);
+    printf("angle    =\t%lf\n", phase_angle);
 
     fp_csv = fopen(filename_csv, "w");
     fp_dat = fopen(filename_dat, "w");
