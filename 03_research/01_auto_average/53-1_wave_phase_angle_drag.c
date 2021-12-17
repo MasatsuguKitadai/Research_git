@@ -20,9 +20,9 @@ char filename_csv[100];
 
 int phase_angle(char date[])
 {
-    sprintf(filename_read, "result/%s/22_csv_wave_fft/%s_wave_fft_drag.csv", date, date);
-    sprintf(filename_csv, "result/%s/23_csv_wave_phase_angle/%s.csv", date, date);
-    sprintf(filename_dat, "result/%s/23_dat_wave_phase_angle/%s.dat", date, date);
+    sprintf(filename_read, "result/%s/52_csv_wave_fft/%s_wave_fft_drag.csv", date, date);
+    sprintf(filename_csv, "result/%s/53_csv_wave_phase_angle/%s.csv", date, date);
+    sprintf(filename_dat, "result/%s/53_dat_wave_phase_angle/%s.dat", date, date);
 
     int i;
     int buf;

@@ -33,7 +33,7 @@ FILE *gp;
 int plot(char date[])
 {
     sprintf(filename_dat, "result/%s/05_dat_summary/%s_summary.dat", date, date);
-    sprintf(filename_dat_wave, "result/%s/21_dat_wave/%s_wave.dat", date, date);
+    sprintf(filename_dat_wave, "result/%s/51_dat_wave/%s_wave.dat", date, date);
     sprintf(filename_plot, "result/%s/plot/wave_maker/summary_1_ver2.png", date);
 
     // size
@@ -68,7 +68,7 @@ int plot(char date[])
 
     // fprintf(gp, "set samples 10000\n");
     // fprintf(gp, "plot '%s' using 1:2 with points lc 'blue' pt 5 ps 2 notitle, '%s' using 1:3 with points lc 'red' pt 5 ps 2 notitle, '%s' using 1:2 with points lc 'royalblue' pt 5 ps 2 notitle, '%s' using 1:3 with points lc 'orange' pt 5 ps 2 notitle\n", filename_dat, filename_dat, filename_dat_wave, filename_dat_wave);
-    fprintf(gp, "plot '%s' using 1:2 with points lc 'blue' pt 5 ps 2 title 'measured (Drag)', '%s' using 1:3 with points lc 'red' pt 5 ps 2 title 'measured (Lift)', '%s' using 1:2 with lines lc 'royalblue' title 'Theoretical (Drag)', '%s' using 1:3 with lines lc 'orange' title 'Theoretical (Lift)'\n", filename_dat, filename_dat, filename_dat_wave, filename_dat_wave);
+    fprintf(gp, "plot '%s' using 1:2 with points lc 'blue' pt 5 ps 2 title 'Measured (Drag)', '%s' using 1:3 with points lc 'red' pt 5 ps 2 title 'Measured (Lift)', '%s' using 1:2 with lines lc 'royalblue' title 'Theoretical (Drag)', '%s' using 1:3 with lines lc 'orange' title 'Theoretical (Lift)'\n", filename_dat, filename_dat, filename_dat_wave, filename_dat_wave);
     fflush(gp); // Clean up Data
 
     fprintf(gp, "exit\n"); // Quit gnuplot

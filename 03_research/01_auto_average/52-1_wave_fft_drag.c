@@ -84,9 +84,9 @@ void S_fft(double ak[], double bk[], int n, int ff)
 int calculate(char date[])
 {
 
-    sprintf(filename_read, "result/%s/21_csv_wave/%s_wave.csv", date, date);
-    sprintf(filename_csv, "result/%s/22_csv_wave_fft/%s_wave_fft_lift.csv", date, date);
-    sprintf(filename_dat, "result/%s/22_dat_wave_fft/%s_wave_fft_lift.dat", date, date);
+    sprintf(filename_read, "result/%s/51_csv_wave/%s_wave.csv", date, date);
+    sprintf(filename_csv, "result/%s/52_csv_wave_fft/%s_wave_fft_drag.csv", date, date);
+    sprintf(filename_dat, "result/%s/52_dat_wave_fft/%s_wave_fft_drag.dat", date, date);
 
     // 変数の作成
 
@@ -120,7 +120,7 @@ int calculate(char date[])
     while ((fscanf(fp, "%d, %lf, %lf", &buf, &ch0, &ch1)) != EOF)
     {
         // printf("[%d]\t%lf\t%lf\t%lf\n", buf, ch0, ch1);
-        value[i] = ch1;
+        value[i] = ch0;
         i = i + 1;
     }
 
