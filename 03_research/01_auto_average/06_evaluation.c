@@ -16,9 +16,9 @@ int variance(char date[])
     char filename_csv[100];
     char filename_dat[100];
 
-    sprintf(filename_read,"result/%s/05_csv_summary/%s_summary.csv",  date, date);
-    sprintf(filename_csv,"result/%s/06_csv_check/%s_check.csv",  date, date);
-    sprintf(filename_dat,"result/%s/06_dat_check/%s_check.dat",  date, date);
+    sprintf(filename_read, "result/%s/05_csv_summary/%s_summary.csv", date, date);
+    sprintf(filename_csv, "result/%s/06_csv_evaluation/%s_evaluation.csv", date, date);
+    sprintf(filename_dat, "result/%s/06_dat_evaluation/%s_evaluation.dat", date, date);
 
     int i = 0;
     int buf;
@@ -76,7 +76,7 @@ int variance(char date[])
         sum2 = value[i][2] * value[i][2] + sum2;
     }
 
-    variance = sum2/24 - ave[2] * ave[2];
+    variance = sum2 / 24 - ave[2] * ave[2];
     deviation = sqrt(variance);
 
     printf("variance \t= %lf\n", variance);
