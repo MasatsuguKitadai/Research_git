@@ -38,8 +38,8 @@ int plot(char date[])
     sprintf(filename_dat_2, "result/%s/07_dat_fft/%s_fft_lift.dat", date, date);
     sprintf(filename_dat_3, "result/%s/52_dat_wave_fft/%s_wave_fft_drag.dat", date, date);
     sprintf(filename_dat_4, "result/%s/52_dat_wave_fft/%s_wave_fft_lift.dat", date, date);
-    sprintf(filename_plot_1, "result/%s/plot/fft/%s_wave_drag.png", date, date);
-    sprintf(filename_plot_2, "result/%s/plot/fft/%s_wave_lift.png", date, date);
+    sprintf(filename_plot_1, "result/%s/plot/wave_maker/fft_summary_drag.png", date);
+    sprintf(filename_plot_2, "result/%s/plot/wave_maker/fft_summary_lift.png", date);
 
     if ((gp = popen("gnuplot", "w")) == NULL)
     {
@@ -47,12 +47,11 @@ int plot(char date[])
         exit(0); // gnuplotが無い場合、異常ある場合は終了
     }
 
-
     fprintf(gp, "set terminal pngcairo enhanced font 'Times New Roman,15' \n");
 
     fprintf(gp, "set output '%s'\n", filename_plot_1);
     // fprintf(gp, "set multiplot\n");
-    fprintf(gp, "set key left top\n");
+    fprintf(gp, "set key right top\n");
     fprintf(gp, "set key font ',20'\n");
     fprintf(gp, "set term pngcairo size 1280, 960 font ',24'\n");
     // fprintf(gp, "set size ratio %lf\n", size);
@@ -70,13 +69,13 @@ int plot(char date[])
 
     // fprintf(gp, "set samples 10000\n");
     fprintf(gp, "plot '%s' using 1:2 with lines lc 'red' title 'Measured (Drag)', '%s' using 1:2 with lines lc 'green' title 'Theorical (Drag)' \n", filename_dat_1, filename_dat_3);
-    fflush(gp); //Clean up Data
+    fflush(gp); // Clean up Data
 
     fprintf(gp, "set terminal pngcairo enhanced font 'Times New Roman,15' \n");
 
     fprintf(gp, "set output '%s'\n", filename_plot_2);
     // fprintf(gp, "set multiplot\n");
-    fprintf(gp, "set key left top\n");
+    fprintf(gp, "set key right top\n");
     fprintf(gp, "set key font ',20'\n");
     fprintf(gp, "set term pngcairo size 1280, 960 font ',24'\n");
     // fprintf(gp, "set size ratio %lf\n", size);
@@ -94,8 +93,7 @@ int plot(char date[])
 
     // fprintf(gp, "set samples 10000\n");
     fprintf(gp, "plot '%s' using 1:2 with lines lc 'blue' title 'Measured (Lift)', '%s' using 1:2 with lines lc 'orange' title 'Theorical (Lift)' \n", filename_dat_2, filename_dat_4);
-    fflush(gp); //Clean up Data
-
+    fflush(gp); // Clean up Data
 
     fprintf(gp, "exit\n"); // Quit gnuplot
 

@@ -35,8 +35,8 @@ FILE *gp;
 /*********************************   gnuplot   *********************************/
 int plot(char date[], char angle[])
 {
-    sprintf(label, "%s",angle);
-    sprintf(filename_dat, "result/%s/dat_reverse/%s_reverse.dat",    date,  angle);
+    sprintf(label, "%s", angle);
+    sprintf(filename_dat, "result/%s/dat_reverse/%s_reverse.dat", date, angle);
     sprintf(filename_plot_1, "result/%s/plot/reverse/%s_loadcell.png", date, angle);
     sprintf(filename_plot_2, "result/%s/plot/reverse/%s_strainsensor.png", date, angle);
 
@@ -69,9 +69,9 @@ int plot(char date[], char angle[])
 
     // fprintf(gp, "set samples 10000\n");
     fprintf(gp, "plot '%s' using 1:4 with lines lc 'black' title 'loadcell'\n", filename_dat);
-    fflush(gp); //Clean up Data
+    fflush(gp); // Clean up Data
 
-// 2枚目
+    // 2枚目
 
     fprintf(gp, "set terminal pngcairo enhanced font 'Times New Roman,15' \n");
     fprintf(gp, "set output '%s'\n", filename_plot_2);
@@ -94,7 +94,7 @@ int plot(char date[], char angle[])
 
     // fprintf(gp, "set samples 10000\n");
     fprintf(gp, "plot '%s' using 1:2 with lines lc 'royalblue' title 'drag', '%s' using 1:3 with lines lc 'orange' title 'lift'\n", filename_dat, filename_dat);
-    fflush(gp); //Clean up Data
+    fflush(gp); // Clean up Data
 
     fprintf(gp, "exit\n"); // Quit gnuplot
 
@@ -137,7 +137,6 @@ int main()
     plot("simulation_data", "315");
     plot("simulation_data", "330");
     plot("simulation_data", "345");
-    
 
     return (0);
 }
