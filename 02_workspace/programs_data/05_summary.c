@@ -11,17 +11,36 @@ FILE *fp, *fp_dat, *fp_csv;
 /*********************************   MAIN   *********************************/
 int summary(char date[])
 {
+    /*****************************************************************************/
+    // ディレクトリの作成
+    char directoryname_dat_1[100];
+    char directoryname_dat_2[100];
+    char directoryname_csv_1[100];
+    char directoryname_csv_2[100];
+
+    sprintf(directoryname_dat_1, "../result/%s/dat/05-1_summary", date);
+    sprintf(directoryname_dat_2, "../result/%s/dat/05-2_summary-average", date);
+    sprintf(directoryname_csv_1, "../result/%s/csv/05-1_summary", date);
+    sprintf(directoryname_csv_2, "../result/%s/csv/05-2_summary-average", date);
+
+    mkdir(directoryname_dat_1, S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IXOTH | S_IXOTH);
+    mkdir(directoryname_dat_2, S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IXOTH | S_IXOTH);
+    mkdir(directoryname_csv_1, S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IXOTH | S_IXOTH);
+    mkdir(directoryname_csv_2, S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IXOTH | S_IXOTH);
+
+    /*****************************************************************************/
+
     // ファイル名作成
     char filename_read[100];
-    char filename_csv[100];
-    char filename_csv_ave[100];
-    char filename_dat[100];
-    char filename_dat_ave[100];
+    char filename_csv_1[100];
+    char filename_csv_2[100];
+    char filename_dat_1[100];
+    char filename_dat_2[100];
 
-    sprintf(filename_csv,"result/%s/05_csv_summary/%s_summary.csv",  date, date);
-    sprintf(filename_dat,"result/%s/05_dat_summary/%s_summary.dat",  date, date);
-    sprintf(filename_csv_ave,"result/%s/05_csv_summary/%s_summary_ave.csv",  date, date);
-    sprintf(filename_dat_ave,"result/%s/05_dat_summary/%s_summary_ave.dat",  date, date);
+    sprintf(filename_dat_1, "../result/%s/dat/05-1_summary/%s_summary.csv", date, date);
+    sprintf(filename_csv_1, "../result/%s/csv/05-1_summary/%s_summary.dat", date, date);
+    sprintf(filename_dat_2, "../result/%s/dat/05-2_summary/%s_summary_ave.csv", date, date);
+    sprintf(filename_csv_2, "../result/%s/csv/05-2_summary/%s_summary_ave.dat", date, date);
 
     int i = 0;
     int angle = 0;
@@ -36,10 +55,10 @@ int summary(char date[])
         ave[i] = 0;
     }
 
-    for(i = 0; i < 24; i++)
+    for (i = 0; i < 24; i++)
     {
         angle = 15 * i;
-        sprintf(filename_read,"result/%s/04_csv_gradient/%d_gradient.csv",  date, angle);
+        sprintf(filename_read, "../result/%s/04_csv_gradient/%d_gradient.csv", date, angle);
 
         fp = fopen(filename_read, "r");
         if (filename_read == NULL)
@@ -69,8 +88,7 @@ int summary(char date[])
     printf("average of lift = %lf\n", ave[1]);
     printf("average of sqrt = %lf\n", ave[2]);
 
-
-// plot用 データファイルの書き出し
+    // plot用 データファイルの書き出し
 
     fp_csv = fopen(filename_csv, "w");
     fp_dat = fopen(filename_dat, "w");

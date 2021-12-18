@@ -191,9 +191,9 @@ int linear(char date[], char angle[])
     // filename
     char filename_plot[100];
 
-    sprintf(filename_dat_1, "result/%s/dat/03_average/03_%s.dat", date, angle);
-    sprintf(filename_dat_2, "result/%s/dat/04-1_linear/04-1_%s.dat", date, angle);
-    sprintf(filename_plot, "result/%s/plot/04/linear_%s.png", date, angle);
+    sprintf(filename_dat_1, "../result/%s/dat/03_average/03_%s.dat", date, angle);
+    sprintf(filename_dat_2, "../result/%s/dat/04-1_linear/04-1_%s.dat", date, angle);
+    sprintf(filename_plot, "../result/%s/plot/04/linear_%s.png", date, angle);
 
     /*****************************************************************************/
 
