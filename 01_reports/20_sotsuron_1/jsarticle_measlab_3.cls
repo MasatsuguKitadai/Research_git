@@ -149,7 +149,7 @@
 	\vskip 10truept
 	\begin{center}%
 		\let\footnote\thanks
-		{\LARGE 平成\@date 年度 \par}%
+		{\LARGE 令和\@date 年度 \par}%
 		\vskip 33.5truept
 		{\large
 			\begin{tabular}[t]{c}%
