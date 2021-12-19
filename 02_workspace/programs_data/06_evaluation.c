@@ -6,19 +6,35 @@ DATE    :
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <sys/stat.h>
 
-FILE *fp, *fp_dat, *fp_csv;
+FILE *fp, *fp_dat, *fp_csv, *gp;
 /*********************************   MAIN   *********************************/
-int variance(char date[])
+int evaluation(char date[])
 {
-    // ファイル名作成
+    /*****************************************************************************/
+    // ディレクトリの作成
+    char directoryname_dat[100];
+    char directoryname_csv[100];
+
+    sprintf(directoryname_dat, "../result/%s/dat/06_evaluation", date);
+    sprintf(directoryname_csv, "../result/%s/csv/06_evaluation", date);
+
+    mkdir(directoryname_dat, S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IXOTH | S_IXOTH);
+    mkdir(directoryname_csv, S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IXOTH | S_IXOTH);
+
+    /*****************************************************************************/
+
+    // filename
     char filename_read[100];
     char filename_csv[100];
     char filename_dat[100];
 
-    sprintf(filename_read, "result/%s/05_csv_summary/%s_summary.csv", date, date);
-    sprintf(filename_csv, "result/%s/06_csv_evaluation/%s_evaluation.csv", date, date);
-    sprintf(filename_dat, "result/%s/06_dat_evaluation/%s_evaluation.dat", date, date);
+    sprintf(filename_read, "../result/%s/csv/05-1_summary/05-1.csv", date);
+    sprintf(filename_csv, "../result/%s/csv/06_evaluation/06.csv", date);
+    sprintf(filename_dat, "../result/%s/dat/06_evaluation/06.dat", date);
+
+    /*****************************************************************************/
 
     int i = 0;
     int buf;
@@ -94,10 +110,10 @@ int variance(char date[])
     fclose(fp_dat);
 }
 
-int main()
-{
-    // simulation
-    variance("simulation_data");
+// int main()
+// {
+//     // simulation
+//     evaluation("testdata");
 
-    return (0);
-}
+//     return (0);
+// }

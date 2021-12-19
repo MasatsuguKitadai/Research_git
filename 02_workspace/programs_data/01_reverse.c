@@ -216,33 +216,33 @@ int reverse(char date[], char angle[])
     pclose(gp);
 }
 
-int main()
-{
-    // simulation
-    reverse("testdata", "0");
-    reverse("testdata", "15");
-    reverse("testdata", "30");
-    reverse("testdata", "45");
-    reverse("testdata", "60");
-    reverse("testdata", "75");
-    reverse("testdata", "90");
-    reverse("testdata", "105");
-    reverse("testdata", "120");
-    reverse("testdata", "135");
-    reverse("testdata", "150");
-    reverse("testdata", "165");
-    reverse("testdata", "180");
-    reverse("testdata", "195");
-    reverse("testdata", "210");
-    reverse("testdata", "225");
-    reverse("testdata", "240");
-    reverse("testdata", "255");
-    reverse("testdata", "270");
-    reverse("testdata", "285");
-    reverse("testdata", "300");
-    reverse("testdata", "315");
-    reverse("testdata", "330");
-    reverse("testdata", "345");
+// int main()
+// {
+//     // simulation
+//     reverse("testdata", "0");
+//     reverse("testdata", "15");
+//     reverse("testdata", "30");
+//     reverse("testdata", "45");
+//     reverse("testdata", "60");
+//     reverse("testdata", "75");
+//     reverse("testdata", "90");
+//     reverse("testdata", "105");
+//     reverse("testdata", "120");
+//     reverse("testdata", "135");
+//     reverse("testdata", "150");
+//     reverse("testdata", "165");
+//     reverse("testdata", "180");
+//     reverse("testdata", "195");
+//     reverse("testdata", "210");
+//     reverse("testdata", "225");
+//     reverse("testdata", "240");
+//     reverse("testdata", "255");
+//     reverse("testdata", "270");
+//     reverse("testdata", "285");
+//     reverse("testdata", "300");
+//     reverse("testdata", "315");
+//     reverse("testdata", "330");
+//     reverse("testdata", "345");
 
-    return (0);
-}
+//     return (0);
+// }

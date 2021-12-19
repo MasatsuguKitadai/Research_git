@@ -252,33 +252,33 @@ int linear(char date[], char angle[])
     pclose(gp);
 }
 
-int main()
-{
-    // simulation
-    linear("testdata", "0");
-    linear("testdata", "15");
-    linear("testdata", "30");
-    linear("testdata", "45");
-    linear("testdata", "60");
-    linear("testdata", "75");
-    linear("testdata", "90");
-    linear("testdata", "105");
-    linear("testdata", "120");
-    linear("testdata", "135");
-    linear("testdata", "150");
-    linear("testdata", "165");
-    linear("testdata", "180");
-    linear("testdata", "195");
-    linear("testdata", "210");
-    linear("testdata", "225");
-    linear("testdata", "240");
-    linear("testdata", "255");
-    linear("testdata", "270");
-    linear("testdata", "285");
-    linear("testdata", "300");
-    linear("testdata", "315");
-    linear("testdata", "330");
-    linear("testdata", "345");
+// int main()
+// {
+//     // simulation
+//     linear("testdata", "0");
+//     linear("testdata", "15");
+//     linear("testdata", "30");
+//     linear("testdata", "45");
+//     linear("testdata", "60");
+//     linear("testdata", "75");
+//     linear("testdata", "90");
+//     linear("testdata", "105");
+//     linear("testdata", "120");
+//     linear("testdata", "135");
+//     linear("testdata", "150");
+//     linear("testdata", "165");
+//     linear("testdata", "180");
+//     linear("testdata", "195");
+//     linear("testdata", "210");
+//     linear("testdata", "225");
+//     linear("testdata", "240");
+//     linear("testdata", "255");
+//     linear("testdata", "270");
+//     linear("testdata", "285");
+//     linear("testdata", "300");
+//     linear("testdata", "315");
+//     linear("testdata", "330");
+//     linear("testdata", "345");
 
-    return (0);
-}
+//     return (0);
+// }

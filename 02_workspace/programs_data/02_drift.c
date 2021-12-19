@@ -337,33 +337,33 @@ int drift(char date[], char angle[])
     pclose(gp);
 }
 
-int main()
-{
-    // simulation
-    drift("testdata", "0");
-    drift("testdata", "15");
-    drift("testdata", "30");
-    drift("testdata", "45");
-    drift("testdata", "60");
-    drift("testdata", "75");
-    drift("testdata", "90");
-    drift("testdata", "105");
-    drift("testdata", "120");
-    drift("testdata", "135");
-    drift("testdata", "150");
-    drift("testdata", "165");
-    drift("testdata", "180");
-    drift("testdata", "195");
-    drift("testdata", "210");
-    drift("testdata", "225");
-    drift("testdata", "240");
-    drift("testdata", "255");
-    drift("testdata", "270");
-    drift("testdata", "285");
-    drift("testdata", "300");
-    drift("testdata", "315");
-    drift("testdata", "330");
-    drift("testdata", "345");
+// int main()
+// {
+//     // simulation
+//     drift("testdata", "0");
+//     drift("testdata", "15");
+//     drift("testdata", "30");
+//     drift("testdata", "45");
+//     drift("testdata", "60");
+//     drift("testdata", "75");
+//     drift("testdata", "90");
+//     drift("testdata", "105");
+//     drift("testdata", "120");
+//     drift("testdata", "135");
+//     drift("testdata", "150");
+//     drift("testdata", "165");
+//     drift("testdata", "180");
+//     drift("testdata", "195");
+//     drift("testdata", "210");
+//     drift("testdata", "225");
+//     drift("testdata", "240");
+//     drift("testdata", "255");
+//     drift("testdata", "270");
+//     drift("testdata", "285");
+//     drift("testdata", "300");
+//     drift("testdata", "315");
+//     drift("testdata", "330");
+//     drift("testdata", "345");
 
-    return (0);
-}
+//     return (0);
+// }

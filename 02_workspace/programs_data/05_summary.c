@@ -224,10 +224,10 @@ int summary(char date[])
     pclose(gp);
 }
 
-int main()
-{
-    // simulation
-    summary("testdata");
+// int main()
+// {
+//     // simulation
+//     summary("testdata");
 
-    return (0);
-}
+//     return (0);
+// }

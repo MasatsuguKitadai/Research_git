@@ -23,6 +23,8 @@ int average(char date[], char angle[])
     mkdir(directoryname_dat, S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IXOTH | S_IXOTH);
     mkdir(directoryname_csv, S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IXOTH | S_IXOTH);
 
+    /*****************************************************************************/
+
     // ファイルの指定
     char filename_read[100];
     char filename_csv[100];
@@ -35,6 +37,7 @@ int average(char date[], char angle[])
     printf("【%s】\n", angle);
 
     /*****************************************************************************/
+
     // 変数宣言
     int i, j, k, l;
     int datalength = 0;
@@ -162,9 +165,9 @@ int average(char date[], char angle[])
 
     sprintf(filename_dat_1, "../result/%s/dat/03_average/03_%s.dat", date, angle);
     sprintf(filename_dat_2, "../result/%s/dat/02_drift/02_%s.dat", date, angle);
-    sprintf(filename_plot_1, "../result/%s/plot/03-1_loadcell/loadcell_average_%s.png", date, angle);
-    sprintf(filename_plot_2, "../result/%s/plot/03-2_drag/drag_average_%s.png", date, angle);
-    sprintf(filename_plot_3, "../result/%s/plot/03-3_lift/lift_average_%s.png", date, angle);
+    sprintf(filename_plot_1, "../result/%s/plot/03-1_loadcell/03_loadcell_average_%s.png", date, angle);
+    sprintf(filename_plot_2, "../result/%s/plot/03-2_drag/03_drag_average_%s.png", date, angle);
+    sprintf(filename_plot_3, "../result/%s/plot/03-3_lift/03_lift_average_%s.png", date, angle);
 
     /*****************************************************************************/
 
@@ -284,33 +287,33 @@ int average(char date[], char angle[])
     pclose(gp);
 }
 
-int main()
-{
-    // simulation
-    average("testdata", "0");
-    average("testdata", "15");
-    average("testdata", "30");
-    average("testdata", "45");
-    average("testdata", "60");
-    average("testdata", "75");
-    average("testdata", "90");
-    average("testdata", "105");
-    average("testdata", "120");
-    average("testdata", "135");
-    average("testdata", "150");
-    average("testdata", "165");
-    average("testdata", "180");
-    average("testdata", "195");
-    average("testdata", "210");
-    average("testdata", "225");
-    average("testdata", "240");
-    average("testdata", "255");
-    average("testdata", "270");
-    average("testdata", "285");
-    average("testdata", "300");
-    average("testdata", "315");
-    average("testdata", "330");
-    average("testdata", "345");
+// int main()
+// {
+//     // simulation
+//     average("testdata", "0");
+//     average("testdata", "15");
+//     average("testdata", "30");
+//     average("testdata", "45");
+//     average("testdata", "60");
+//     average("testdata", "75");
+//     average("testdata", "90");
+//     average("testdata", "105");
+//     average("testdata", "120");
+//     average("testdata", "135");
+//     average("testdata", "150");
+//     average("testdata", "165");
+//     average("testdata", "180");
+//     average("testdata", "195");
+//     average("testdata", "210");
+//     average("testdata", "225");
+//     average("testdata", "240");
+//     average("testdata", "255");
+//     average("testdata", "270");
+//     average("testdata", "285");
+//     average("testdata", "300");
+//     average("testdata", "315");
+//     average("testdata", "330");
+//     average("testdata", "345");
 
-    return (0);
-}
+//     return (0);
+// }
