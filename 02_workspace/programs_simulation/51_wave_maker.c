@@ -14,9 +14,9 @@ char filename_csv[100];
 char filename_dat[100];
 
 // sin波の配列
-double wave_value[360];
-double wave_drag[360];
-double wave_lift[360];
+double wave_value[3600];
+double wave_drag[3600];
+double wave_lift[3600];
 
 // sin波の周期 [秒]
 int wave1 = 12;
@@ -53,40 +53,39 @@ int wave_maker(char date[])
 
     // 正弦波 drag (位相 π ズレ)
     // printf("Drag\n");
-    for (i = 0; i < 360; i++)
+    for (i = 0; i < 3600; i++)
     {
-        wave_drag[i] = sin((2 * pi / 360) * (i + 270));
+        wave_drag[i] = sin((2 * pi / 3600) * (i + 2700));
         wave_drag[i] = wave_drag[i] * average_value;
         // printf("value[%d] = %lf\n", i, wave_drag[i]);
     }
 
     // 正弦波 lift (位相 3π/2 ズレ)
     // printf("Lift\n");
-    for (i = 0; i < 360; i++)
-    {
-        wave_lift[i] = sin((2 * pi / 360) * (i + 180));
-        wave_lift[i] = wave_lift[i] * average_value;
-        // printf("value[%d] = %lf\n", i, wave_lift[i]);
-    }
+    for (i = 0; i < 3600; i++)
+        wave_lift[i] = sin((2 * pi / 3600) * (i + 1800));
+    wave_lift[i] = wave_lift[i] * average_value;
+    // printf("value[%d] = %lf\n", i, wave_lift[i]);
+}
 
-    int angle;
+double angle;
 
-    fp_csv = fopen(filename_csv, "w");
-    fp_dat = fopen(filename_dat, "w");
+fp_csv = fopen(filename_csv, "w");
+fp_dat = fopen(filename_dat, "w");
 
-    for (i = 0; i < 24; i++)
-    {
-        angle = i * 15;
-        fprintf(fp_csv, "%d,%lf,%lf\n", angle, wave_drag[angle], wave_lift[angle]);
-        fprintf(fp_dat, "%d\t%lf\t%lf\n", angle, wave_drag[angle], wave_lift[angle]);
-    }
+for (i = 0; i < 3600; i++)
+{
+    angle = i / 1000;
+    fprintf(fp_csv, "%d,%lf,%lf\n", angle, wave_drag[angle], wave_lift[angle]);
+    fprintf(fp_dat, "%d\t%lf\t%lf\n", angle, wave_drag[angle], wave_lift[angle]);
+}
 
-    fclose(fp_csv);
-    fclose(fp_dat);
+fclose(fp_csv);
+fclose(fp_dat);
 }
 
 int main()
 {
-    wave_maker("simulation_data");
+    wave_maker("testdata");
     return (0);
 }
