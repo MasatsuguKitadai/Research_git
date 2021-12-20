@@ -19,7 +19,7 @@ FILE *fp, *fp_csv, *fp_dat, *gp;
 
 /*********************************   FFT   *********************************/
 
-void S_fft(double ak[], double bk[], int n, int ff)
+void S_fft_2(double ak[], double bk[], int n, int ff)
 {
     /* ff=1 for FFT, ff=-1 for Inverse FT */
     int i, j, k, k1, num, nhalf, phi, phi0, rot[n];
@@ -149,7 +149,7 @@ int calculate_lift(char date[], int range)
     int fq;
     dt = 1;
 
-    S_fft(value, value_i, range, 1);
+    S_fft_2(value, value_i, range, 1);
 
     fp_csv = fopen(filename_csv, "w");
     fp_dat = fopen(filename_dat, "w");

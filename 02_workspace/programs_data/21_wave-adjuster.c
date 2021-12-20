@@ -130,7 +130,7 @@ int waveadjuster(char date[])
 
     sprintf(filename_dat_1, "../result/%s/dat/05-1_summary/05-1.dat", date);
     sprintf(filename_dat_2, "../result/%s/dat/21_adjust-value/21.dat", date);
-    sprintf(filename_plot, "../result/%s/plot/21_adjust-value/21_adjust-value.png", date);
+    sprintf(filename_plot, "../result/%s/plot/21/21_adjust-value.png", date);
 
     /*****************************************************************************/
 

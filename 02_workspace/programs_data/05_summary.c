@@ -10,7 +10,7 @@ DATE    :
 
 FILE *fp, *fp_dat, *fp_csv, *gp;
 /*********************************   MAIN   *********************************/
-int summary(char date[])
+int summary(char date[], int count)
 {
     /*****************************************************************************/
     // ディレクトリの作成
@@ -31,6 +31,10 @@ int summary(char date[])
 
     /*****************************************************************************/
 
+    // 分割
+    int split = 3600 / count;
+    printf("split = %d\n", count);
+
     // ファイル名作成
     char filename_read[100];
     char filename_csv_1[100];
@@ -45,8 +49,9 @@ int summary(char date[])
 
     int i = 0;
     int angle = 0;
+    double angle_double = 0;
     double ch0, ch1, ch2;
-    double value[24][3];
+    double value[split][3];
     double sum[3];
     double ave[3];
 
@@ -56,9 +61,9 @@ int summary(char date[])
         ave[i] = 0;
     }
 
-    for (i = 0; i < 24; i++)
+    for (i = 0; i < split; i++)
     {
-        angle = 15 * i;
+        angle = count * i;
         sprintf(filename_read, "../result/%s/csv/04-2_gradient/04-2_%d.csv", date, angle);
 
         fp = fopen(filename_read, "r");
@@ -81,9 +86,9 @@ int summary(char date[])
         fclose(fp);
     }
 
-    ave[0] = sum[0] / 24;
-    ave[1] = sum[1] / 24;
-    ave[2] = sum[2] / 24;
+    ave[0] = sum[0] / split;
+    ave[1] = sum[1] / split;
+    ave[2] = sum[2] / split;
 
     printf("average of drag = %lf\n", ave[0]);
     printf("average of lift = %lf\n", ave[1]);
@@ -94,11 +99,13 @@ int summary(char date[])
     fp_csv = fopen(filename_csv_1, "w");
     fp_dat = fopen(filename_dat_1, "w");
 
-    for (i = 0; i < 24; i++)
+    for (i = 0; i < split; i++)
     {
-        angle = i * 15;
-        fprintf(fp_csv, "%d,%lf,%lf,%lf\n", angle, value[i][0], value[i][1], value[i][2]);
-        fprintf(fp_dat, "%d\t%lf\t%lf\t%lf\n", angle, value[i][0], value[i][1], value[i][2]);
+        angle = i * count;
+        angle_double = angle / 10;
+
+        fprintf(fp_csv, "%lf,%lf,%lf,%lf\n", angle_double, value[i][0], value[i][1], value[i][2]);
+        fprintf(fp_dat, "%lf\t%lf\t%lf\t%lf\n", angle_double, value[i][0], value[i][1], value[i][2]);
     }
 
     fclose(fp_csv);
