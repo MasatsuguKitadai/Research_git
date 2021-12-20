@@ -6,8 +6,7 @@ DATE    :
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-
-FILE *fp, *fp_csv, *fp_dat;
+#include <sys/stat.h>
 
 // 円周率の定義
 #define pi 4 * atan(1.0)
@@ -16,9 +15,11 @@ char filename_read[100];
 char filename_dat[100];
 char filename_csv[100];
 
+FILE *fp, *fp_csv, *fp_dat, *gp;
+
 /*********************************   FFT   *********************************/
 
-void S_fft(double ak[], double bk[], int n, int ff)
+void S_fft_1_theory(double ak[], double bk[], int n, int ff)
 {
     /* ff=1 for FFT, ff=-1 for Inverse FT */
     int i, j, k, k1, num, nhalf, phi, phi0, rot[n];
@@ -81,7 +82,7 @@ void S_fft(double ak[], double bk[], int n, int ff)
 
 /*********************************   MAIN   *********************************/
 
-int calculate(char date[], int range)
+int calculate_drag_theory(char date[], int range)
 {
     /*****************************************************************************/
     // ディレクトリの作成
@@ -100,32 +101,28 @@ int calculate(char date[], int range)
     char filename_dat[100];
 
     sprintf(filename_read, "../result/%s/csv/21_adjust-value/21.csv", date);
-    sprintf(filename_csv, "../result/%s/dat/22-1_fft-drag-theory/22-1.csv", date);
-    sprintf(filename_dat, "../result/%s/csv/22-1_fft-drag-theory/22-1.dat", date);
+    sprintf(filename_csv, "../result/%s/csv/22-1_fft-drag-theory/22-1.csv", date);
+    sprintf(filename_dat, "../result/%s/dat/22-1_fft-drag-theory/22-1.dat", date);
 
     /*****************************************************************************/
 
-    // 変数の作成
-
-    double value[range], value_i[range];
-
     // sin波の配列
+    double angle[3600];
     double wave_drag[3600];
-    double wave_lift[3600];
+
+    // 変数の作成
+    double value[range], value_i[range];
 
     // ファイルの読み込み (dat データ) ・格納
 
     int i;
-    int buf;
-    double ch0, ch1;
+    double ch0, ch1, ch2;
 
     for (i = 0; i < range; i++)
     {
         value[i] = 0;
         value_i[i] = 0;
     }
-
-    i = 0;
 
     fp = fopen(filename_read, "r");
 
@@ -137,14 +134,38 @@ int calculate(char date[], int range)
 
     // printf("check\n");
 
-    while ((fscanf(fp, "%d, %lf, %lf", &buf, &ch0, &ch1)) != EOF)
+    i = 0;
+
+    while ((fscanf(fp, "%lf,%lf,%lf", &ch0, &ch1, &ch2)) != EOF)
     {
-        // printf("[%d]\t%lf\t%lf\t%lf\n", buf, ch0, ch1);
-        value[i] = ch0;
+        angle[i] = ch0;
+        wave_drag[i] = ch1;
         i = i + 1;
     }
 
     fclose(fp);
+
+    int split = 3600 / range;
+
+    /*****************************************************************************/
+
+    // ファイルの読み込み (dat データ) ・格納
+
+    int buf;
+    int count = 0;
+
+    for (i = 0; i < range; i++)
+    {
+        value[i] = 0;
+        value_i[i] = 0;
+    }
+
+    for (i = 0; i < range; i++)
+    {
+        count = i * split;
+        value[i] = wave_drag[count];
+        printf("angle =\t%d\tvalue[%d] =\t%lf\n", count, i, value[i]);
+    }
 
     // FFTの適用
 
@@ -152,7 +173,7 @@ int calculate(char date[], int range)
     int fq;
     dt = 1;
 
-    S_fft(value, value_i, range, 1);
+    S_fft_1_theory(value, value_i, range, 1);
 
     fp_csv = fopen(filename_csv, "w");
     fp_dat = fopen(filename_dat, "w");
@@ -170,11 +191,82 @@ int calculate(char date[], int range)
 
     fclose(fp_csv);
     fclose(fp_dat);
+
+    /*****************************************************************************/
+    // Gnuplot //
+
+    // ディレクトリの作成
+    char directoryname_plot[100];
+
+    sprintf(directoryname_plot, "../result/%s/plot/22", date);
+
+    mkdir(directoryname_plot, S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IXOTH | S_IXOTH);
+
+    char filename_plot[100];
+
+    sprintf(filename_dat, "../result/%s/dat/22-1_fft-drag-theory/22-1.dat", date);
+    sprintf(filename_plot, "../result/%s/plot/22/22-1_fft-drag.png", date);
+
+    /*****************************************************************************/
+
+    // range x
+    double x_min = 0;
+    int x_max = range / 2;
+
+    // range y
+    double y_min = 0;
+    double y_max = 50;
+
+    // label
+    char label[100] = "FFT";
+    char xxlabel[100] = "Number of waves [-]";
+    char yylabel[100] = "Power [-]";
+
+    double size;
+
+    // size
+    size = 1;
+
+    /*****************************************************************************/
+
+    if ((gp = popen("gnuplot", "w")) == NULL)
+    {
+        printf("gnuplot is not here!\n");
+        exit(0); // gnuplotが無い場合、異常ある場合は終了
+    }
+
+    fprintf(gp, "set terminal pngcairo enhanced font 'Times New Roman,15' \n");
+
+    fprintf(gp, "set output '%s'\n", filename_plot);
+    // fprintf(gp, "set multiplot\n");
+    fprintf(gp, "set key left top\n");
+    fprintf(gp, "set key font ',20'\n");
+    fprintf(gp, "set term pngcairo size 1280, 960 font ',24'\n");
+    // fprintf(gp, "set size ratio %lf\n", size);
+
+    fprintf(gp, "set lmargin screen 0.10\n");
+    fprintf(gp, "set rmargin screen 0.90\n");
+    fprintf(gp, "set tmargin screen 0.90\n");
+    fprintf(gp, "set bmargin screen 0.15\n");
+
+    fprintf(gp, "set xrange [%lf:%d]\n", x_min, x_max);
+    fprintf(gp, "set xlabel '%s'offset 0.0,0\n", xxlabel);
+    fprintf(gp, "set yrange [%lf:%lf]\n", y_min, y_max);
+    fprintf(gp, "set ylabel '%s'offset 0,0.0\n", yylabel);
+    fprintf(gp, "set title '%s (drag)'\n", label);
+
+    // fprintf(gp, "set samples 10000\n");
+    fprintf(gp, "plot '%s' using 1:2 with lines lc 'black' notitle\n", filename_dat);
+    fflush(gp); // Clean up Data
+
+    fprintf(gp, "exit\n"); // Quit gnuplot
+
+    pclose(gp);
 }
 
-int main()
-{
-    calculate("simulation_data");
+// int main()
+// {
+//     calculate_drag_theory("test-fft", 16);
 
-    return (0);
-}
+//     return (0);
+// }

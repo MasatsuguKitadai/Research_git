@@ -10,7 +10,7 @@ DATE    :
 
 FILE *fp, *fp_dat, *fp_csv, *gp;
 /*********************************   MAIN   *********************************/
-int summary(char date[], int count)
+int summary(char date[], int range)
 {
     /*****************************************************************************/
     // ディレクトリの作成
@@ -32,8 +32,8 @@ int summary(char date[], int count)
     /*****************************************************************************/
 
     // 分割
-    int split = 3600 / count;
-    printf("split = %d\n", count);
+    int split = 3600 / range;
+    printf("split = %d\n", range);
 
     // ファイル名作成
     char filename_read[100];
@@ -63,7 +63,7 @@ int summary(char date[], int count)
 
     for (i = 0; i < split; i++)
     {
-        angle = count * i;
+        angle = range * i;
         sprintf(filename_read, "../result/%s/csv/04-2_gradient/04-2_%d.csv", date, angle);
 
         fp = fopen(filename_read, "r");
@@ -101,7 +101,7 @@ int summary(char date[], int count)
 
     for (i = 0; i < split; i++)
     {
-        angle = i * count;
+        angle = i * range;
         angle_double = angle / 10;
 
         fprintf(fp_csv, "%lf,%lf,%lf,%lf\n", angle_double, value[i][0], value[i][1], value[i][2]);

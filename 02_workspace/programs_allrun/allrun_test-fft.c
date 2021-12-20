@@ -3,6 +3,7 @@ PROGRAM NAME :allrun_testdata.c
 AUTHER  : Masatsugu Kitadai
 DATE    :
 ******************************************************************************/
+
 #include "../programs_data/01_reverse.c"
 #include "../programs_data/02_drift.c"
 #include "../programs_data/03_average.c"
@@ -12,6 +13,9 @@ DATE    :
 #include "../programs_data/07-1_fft_drag.c"
 #include "../programs_data/07-2_fft_lift.c"
 #include "../programs_data/21_wave-adjuster.c"
+#include "../programs_data/22-1_wave_fft_drag.c"
+#include "../programs_data/22-2_wave_fft_lift.c"
+
 /*********************************   MAIN   *********************************/
 int main()
 {
@@ -93,14 +97,20 @@ int main()
     // // 06_evaluation
     // evaluation("test-fft");
 
-    // // 07-1_fft_drag
-    // calculate_drag("test-fft", 16);
+    // 07-1_fft_drag
+    calculate_drag("test-fft", 16);
 
-    // // 07-2_fft_lift
-    // calculate_lift("test-fft", 16);
+    // 07-2_fft_lift
+    calculate_lift("test-fft", 16);
 
     // 21_wave-adjuster
     waveadjuster("test-fft");
+
+    // 22-1_wave_fft_drag
+    calculate_drag_theory("test-fft", 16);
+
+    // 22-2_wave_fft_lift
+    calculate_lift_theory("test-fft", 16);
 
     return (0);
 }

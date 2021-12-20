@@ -19,7 +19,7 @@ FILE *fp, *fp_csv, *fp_dat, *gp;
 
 /*********************************   FFT   *********************************/
 
-void S_fft_1(double ak[], double bk[], int n, int ff)
+void S_fft_2_theory(double ak[], double bk[], int n, int ff)
 {
     /* ff=1 for FFT, ff=-1 for Inverse FT */
     int i, j, k, k1, num, nhalf, phi, phi0, rot[n];
@@ -82,15 +82,15 @@ void S_fft_1(double ak[], double bk[], int n, int ff)
 
 /*********************************   MAIN   *********************************/
 
-int calculate_drag(char date[], int range)
+int calculate_lift_theory(char date[], int range)
 {
     /*****************************************************************************/
     // ディレクトリの作成
-    char directoryname_dat[100];
     char directoryname_csv[100];
+    char directoryname_dat[100];
 
-    sprintf(directoryname_dat, "../result/%s/dat/07-1_fft-drag", date);
-    sprintf(directoryname_csv, "../result/%s/csv/07-1_fft-drag", date);
+    sprintf(directoryname_dat, "../result/%s/dat/22-2_fft-lift-theory", date);
+    sprintf(directoryname_csv, "../result/%s/csv/22-2_fft-lift-theory", date);
 
     mkdir(directoryname_dat, S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IXOTH | S_IXOTH);
     mkdir(directoryname_csv, S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IXOTH | S_IXOTH);
@@ -100,20 +100,22 @@ int calculate_drag(char date[], int range)
     char filename_csv[100];
     char filename_dat[100];
 
-    sprintf(filename_read, "../result/%s/csv/05-1_summary/05-1.csv", date);
-    sprintf(filename_csv, "../result/%s/csv/07-1_fft-drag/07-1.csv", date);
-    sprintf(filename_dat, "../result/%s/dat/07-1_fft-drag/07-1.dat", date);
+    sprintf(filename_read, "../result/%s/csv/21_adjust-value/21.csv", date);
+    sprintf(filename_csv, "../result/%s/csv/22-2_fft-lift-theory/22-2.csv", date);
+    sprintf(filename_dat, "../result/%s/dat/22-2_fft-lift-theory/22-2.dat", date);
 
     /*****************************************************************************/
 
-    // 変数の作成
+    // sin波の配列
+    double angle[3600];
+    double wave_lift[3600];
 
+    // 変数の作成
     double value[range], value_i[range];
 
     // ファイルの読み込み (dat データ) ・格納
 
     int i;
-    double buf;
     double ch0, ch1, ch2;
 
     for (i = 0; i < range; i++)
@@ -121,8 +123,6 @@ int calculate_drag(char date[], int range)
         value[i] = 0;
         value_i[i] = 0;
     }
-
-    i = 0;
 
     fp = fopen(filename_read, "r");
 
@@ -132,16 +132,40 @@ int calculate_drag(char date[], int range)
         exit(0);
     }
 
-    printf("check\n");
+    // printf("check\n");
 
-    while ((fscanf(fp, "%lf, %lf, %lf, %lf", &buf, &ch0, &ch1, &ch2)) != EOF)
+    i = 0;
+
+    while ((fscanf(fp, "%lf,%lf,%lf", &ch0, &ch1, &ch2)) != EOF)
     {
-        // printf("[%d]\t%lf\t%lf\t%lf\n", buf, ch0, ch1, ch2);
-        value[i] = ch0;
+        angle[i] = ch0;
+        wave_lift[i] = ch1;
         i = i + 1;
     }
 
     fclose(fp);
+
+    int split = 3600 / range;
+
+    /*****************************************************************************/
+
+    // ファイルの読み込み (dat データ) ・格納
+
+    int buf;
+    int count = 0;
+
+    for (i = 0; i < range; i++)
+    {
+        value[i] = 0;
+        value_i[i] = 0;
+    }
+
+    for (i = 0; i < range; i++)
+    {
+        count = i * split;
+        value[i] = wave_lift[count];
+        printf("angle =\t%d\tvalue[%d] =\t%lf\n", count, i, value[i]);
+    }
 
     // FFTの適用
 
@@ -149,7 +173,7 @@ int calculate_drag(char date[], int range)
     int fq;
     dt = 1;
 
-    S_fft_1(value, value_i, range, 1);
+    S_fft_2_theory(value, value_i, range, 1);
 
     fp_csv = fopen(filename_csv, "w");
     fp_dat = fopen(filename_dat, "w");
@@ -174,14 +198,14 @@ int calculate_drag(char date[], int range)
     // ディレクトリの作成
     char directoryname_plot[100];
 
-    sprintf(directoryname_plot, "../result/%s/plot/07", date);
+    sprintf(directoryname_plot, "../result/%s/plot/22", date);
 
     mkdir(directoryname_plot, S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IXOTH | S_IXOTH);
 
     char filename_plot[100];
 
-    sprintf(filename_dat, "../result/%s/dat/07-1_fft-drag/07-1.dat", date);
-    sprintf(filename_plot, "../result/%s/plot/07/07-1.png", date);
+    sprintf(filename_dat, "../result/%s/dat/22-2_fft-lift-theory/22-2.dat", date);
+    sprintf(filename_plot, "../result/%s/plot/22/22-2_fft-lift.png", date);
 
     /*****************************************************************************/
 
@@ -229,7 +253,7 @@ int calculate_drag(char date[], int range)
     fprintf(gp, "set xlabel '%s'offset 0.0,0\n", xxlabel);
     fprintf(gp, "set yrange [%lf:%lf]\n", y_min, y_max);
     fprintf(gp, "set ylabel '%s'offset 0,0.0\n", yylabel);
-    fprintf(gp, "set title '%s (drag)'\n", label);
+    fprintf(gp, "set title '%s (lift)'\n", label);
 
     // fprintf(gp, "set samples 10000\n");
     fprintf(gp, "plot '%s' using 1:2 with lines lc 'black' notitle\n", filename_dat);
@@ -242,7 +266,7 @@ int calculate_drag(char date[], int range)
 
 // int main()
 // {
-//     calculate_drag("testdata", 32);
+//     calculate_lift_theory("test-fft", 16);
 
 //     return (0);
 // }

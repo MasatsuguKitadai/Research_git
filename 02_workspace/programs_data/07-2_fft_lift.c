@@ -113,7 +113,7 @@ int calculate_lift(char date[], int range)
     // ファイルの読み込み (dat データ) ・格納
 
     int i;
-    int buf;
+    double buf;
     double ch0, ch1, ch2;
 
     for (i = 0; i < range; i++)
@@ -134,7 +134,7 @@ int calculate_lift(char date[], int range)
 
     // printf("check\n");
 
-    while ((fscanf(fp, "%d, %lf, %lf, %lf", &buf, &ch0, &ch1, &ch2)) != EOF)
+    while ((fscanf(fp, "%lf, %lf, %lf, %lf", &buf, &ch0, &ch1, &ch2)) != EOF)
     {
         // printf("[%d]\t%lf\t%lf\t%lf\n", buf, ch0, ch1, ch2);
         value[i] = ch1;
@@ -191,7 +191,7 @@ int calculate_lift(char date[], int range)
 
     // range y
     double y_min = 0;
-    double y_max = 100;
+    double y_max = 50;
 
     // label
     char label[100] = "FFT";
