@@ -6,8 +6,7 @@ DATE    :
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-
-FILE *fp, *fp_csv, *fp_dat;
+#include <sys/stat.h>
 
 // 円周率の定義
 #define pi 4 * atan(1.0)
@@ -15,6 +14,8 @@ FILE *fp, *fp_csv, *fp_dat;
 char filename_read[100];
 char filename_dat[100];
 char filename_csv[100];
+
+FILE *fp, *fp_csv, *fp_dat, *gp;
 
 /*********************************   FFT   *********************************/
 
@@ -81,16 +82,32 @@ void S_fft(double ak[], double bk[], int n, int ff)
 
 /*********************************   MAIN   *********************************/
 
-int calculate(char date[])
+int calculate(char date[], int range)
 {
+    /*****************************************************************************/
+    // ディレクトリの作成
+    char directoryname_csv[100];
+    char directoryname_dat[100];
 
-    sprintf(filename_read,"result/%s/05_csv_summary/%s_summary.csv",  date, date);
-    sprintf(filename_csv ,"result/%s/07_csv_fft/%s_fft_lift.csv",  date, date);
-    sprintf(filename_dat ,"result/%s/07_dat_fft/%s_fft_lift.dat",  date, date);
+    sprintf(directoryname_dat, "../result/%s/dat/07-2_fft-lift", date);
+    sprintf(directoryname_csv, "../result/%s/csv/07-2_fft-lift", date);
+
+    mkdir(directoryname_dat, S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IXOTH | S_IXOTH);
+    mkdir(directoryname_csv, S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IXOTH | S_IXOTH);
+
+    // ファイルの指定
+    char filename_read[100];
+    char filename_csv[100];
+    char filename_dat[100];
+
+    sprintf(filename_read, "../result/%s/csv/05-1_summary/05-1.csv", date);
+    sprintf(filename_csv, "../result/%s/csv/07-2_fft-lift/07-2.csv", date);
+    sprintf(filename_dat, "../result/%s/dat/07-2_fft-lift/07-2.dat", date);
+
+    /*****************************************************************************/
 
     // 変数の作成
 
-    int range = 32;
     double value[range], value_i[range];
 
     // ファイルの読み込み (dat データ) ・格納
@@ -117,7 +134,6 @@ int calculate(char date[])
 
     // printf("check\n");
 
-
     while ((fscanf(fp, "%d, %lf, %lf, %lf", &buf, &ch0, &ch1, &ch2)) != EOF)
     {
         // printf("[%d]\t%lf\t%lf\t%lf\n", buf, ch0, ch1, ch2);
@@ -140,7 +156,7 @@ int calculate(char date[])
 
     for (i = 0; i < range; i++)
     {
-        ps = value[i] * value[i] + value_i[i] * value_i[i]; /* パワースペクトル  */
+        ps = value[i] * value[i] + value_i[i] * value_i[i];       /* パワースペクトル  */
         as = sqrt(value[i] * value[i] + value_i[i] * value_i[i]); /* 振幅スペクトル  */
         // fq = (double)i / (dt * (double)range);
         fq = i;
@@ -148,11 +164,85 @@ int calculate(char date[])
         fprintf(fp_dat, "%d\t%lf\t%lf\t%lf\n", fq, ps, value[i], value_i[i]);
         printf("[%d]\tvalue: %lf \tvalue_: %lf\tpw: %lf\tfq :%d\n", i, value[i], value_i[i], ps, fq);
     }
+
+    fclose(fp_csv);
+    fclose(fp_dat);
+
+    /*****************************************************************************/
+    // Gnuplot //
+
+    // ディレクトリの作成
+    char directoryname_plot[100];
+
+    sprintf(directoryname_plot, "../result/%s/plot/07", date);
+
+    mkdir(directoryname_plot, S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IXOTH | S_IXOTH);
+
+    char filename_plot[100];
+
+    sprintf(filename_dat, "../result/%s/dat/07-2_fft-lift/07-2.dat", date);
+    sprintf(filename_plot, "../result/%s/plot/07/07-2.png", date);
+
+    /*****************************************************************************/
+
+    // range x
+    double x_min = 0;
+    int x_max = range / 2;
+
+    // range y
+    double y_min = 0;
+    double y_max = 100;
+
+    // label
+    char label[100] = "FFT";
+    char xxlabel[100] = "Number of waves [-]";
+    char yylabel[100] = "Power [-]";
+
+    double size;
+
+    // size
+    size = 1;
+
+    /*****************************************************************************/
+
+    if ((gp = popen("gnuplot", "w")) == NULL)
+    {
+        printf("gnuplot is not here!\n");
+        exit(0); // gnuplotが無い場合、異常ある場合は終了
+    }
+
+    fprintf(gp, "set terminal pngcairo enhanced font 'Times New Roman,15' \n");
+
+    fprintf(gp, "set output '%s'\n", filename_plot);
+    // fprintf(gp, "set multiplot\n");
+    fprintf(gp, "set key left top\n");
+    fprintf(gp, "set key font ',20'\n");
+    fprintf(gp, "set term pngcairo size 1280, 960 font ',24'\n");
+    // fprintf(gp, "set size ratio %lf\n", size);
+
+    fprintf(gp, "set lmargin screen 0.10\n");
+    fprintf(gp, "set rmargin screen 0.90\n");
+    fprintf(gp, "set tmargin screen 0.90\n");
+    fprintf(gp, "set bmargin screen 0.15\n");
+
+    fprintf(gp, "set xrange [%lf:%d]\n", x_min, x_max);
+    fprintf(gp, "set xlabel '%s'offset 0.0,0\n", xxlabel);
+    fprintf(gp, "set yrange [%lf:%lf]\n", y_min, y_max);
+    fprintf(gp, "set ylabel '%s'offset 0,0.0\n", yylabel);
+    fprintf(gp, "set title '%s (lift)'\n", label);
+
+    // fprintf(gp, "set samples 10000\n");
+    fprintf(gp, "plot '%s' using 1:2 with lines lc 'black' notitle\n", filename_dat);
+    fflush(gp); // Clean up Data
+
+    fprintf(gp, "exit\n"); // Quit gnuplot
+
+    pclose(gp);
 }
 
 int main()
 {
-    calculate("simulation_data");
+    calculate("testdata", 32);
 
     return (0);
 }

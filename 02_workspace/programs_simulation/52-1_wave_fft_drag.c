@@ -81,17 +81,37 @@ void S_fft(double ak[], double bk[], int n, int ff)
 
 /*********************************   MAIN   *********************************/
 
-int calculate(char date[])
+int calculate(char date[], int range)
 {
+    /*****************************************************************************/
+    // ディレクトリの作成
+    char directoryname_csv[100];
+    char directoryname_dat[100];
 
-    sprintf(filename_read, "result/%s/51_csv_wave/%s_wave.csv", date, date);
-    sprintf(filename_csv, "result/%s/52_csv_wave_fft/%s_wave_fft_drag.csv", date, date);
-    sprintf(filename_dat, "result/%s/52_dat_wave_fft/%s_wave_fft_drag.dat", date, date);
+    sprintf(directoryname_dat, "../result/%s/dat/22-1_fft-drag-theory", date);
+    sprintf(directoryname_csv, "../result/%s/csv/22-1_fft-drag-theory", date);
+
+    mkdir(directoryname_dat, S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IXOTH | S_IXOTH);
+    mkdir(directoryname_csv, S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IXOTH | S_IXOTH);
+
+    // ファイルの指定
+    char filename_read[100];
+    char filename_csv[100];
+    char filename_dat[100];
+
+    sprintf(filename_read, "../result/%s/csv/21_adjust-value/21.csv", date);
+    sprintf(filename_csv, "../result/%s/dat/22-1_fft-drag-theory/22-1.csv", date);
+    sprintf(filename_dat, "../result/%s/csv/22-1_fft-drag-theory/22-1.dat", date);
+
+    /*****************************************************************************/
 
     // 変数の作成
 
-    int range = 32;
     double value[range], value_i[range];
+
+    // sin波の配列
+    double wave_drag[3600];
+    double wave_lift[3600];
 
     // ファイルの読み込み (dat データ) ・格納
 

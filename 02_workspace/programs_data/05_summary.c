@@ -107,7 +107,7 @@ int summary(char date[])
     fp_csv = fopen(filename_csv_2, "w");
     fp_dat = fopen(filename_dat_2, "w");
 
-    fprintf(fp_csv, "%lf\t%lf\t%lf\n", ave[0], ave[1], ave[2]);
+    fprintf(fp_csv, "%lf,%lf,%lf\n", ave[0], ave[1], ave[2]);
     fprintf(fp_dat, "-30\t%lf\t%lf\t%lf\n", ave[0], ave[1], ave[2]);
     fprintf(fp_dat, "360\t%lf\t%lf\t%lf\n", ave[0], ave[1], ave[2]);
 
