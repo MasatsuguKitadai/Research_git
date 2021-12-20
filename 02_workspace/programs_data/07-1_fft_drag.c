@@ -82,7 +82,7 @@ void S_fft(double ak[], double bk[], int n, int ff)
 
 /*********************************   MAIN   *********************************/
 
-int calculate(char date[], int range)
+int calculate_drag(char date[], int range)
 {
     /*****************************************************************************/
     // ディレクトリの作成
@@ -240,9 +240,9 @@ int calculate(char date[], int range)
     pclose(gp);
 }
 
-int main()
-{
-    calculate("testdata", 32);
+// int main()
+// {
+//     calculate_drag("testdata", 32);
 
-    return (0);
-}
+//     return (0);
+// }

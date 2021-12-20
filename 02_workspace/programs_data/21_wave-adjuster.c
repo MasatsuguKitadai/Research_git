@@ -189,8 +189,8 @@ int waveadjuster(char date[])
     pclose(gp);
 }
 
-int main()
-{
-    waveadjuster("testdata");
-    return (0);
-}
+// int main()
+// {
+//     waveadjuster("testdata");
+//     return (0);
+// }
