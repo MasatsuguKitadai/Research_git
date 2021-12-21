@@ -91,9 +91,10 @@ int summary(char date[], int range)
     ave[1] = sum[1] / split;
     ave[2] = sum[2] / split;
 
-    // printf("average of drag = %lf\n", ave[0]);
-    // printf("average of lift = %lf\n", ave[1]);
-    // printf("average of sqrt = %lf\n", ave[2]);
+    printf("average of drag = %lf\n", ave[0]);
+    printf("average of lift = %lf\n", ave[1]);
+    printf("average of sqrt = %lf\n", ave[2]);
+    printf("\n");
 
     // plot用 データファイルの書き出し
 
@@ -233,7 +234,6 @@ int summary(char date[], int range)
     pclose(gp);
 
     printf("05\t\tsuccess\n");
-
 }
 
 // int main()

@@ -121,6 +121,8 @@ int main()
     // 05_summary
     summary("test-fft", 225);
 
+    printf("\n---------------------------------------------------------------------------\n\n");
+
     // 06_evaluation
     evaluation("test-fft", 16);
 
