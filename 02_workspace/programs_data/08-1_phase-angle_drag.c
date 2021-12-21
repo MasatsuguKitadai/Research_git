@@ -73,20 +73,24 @@ int phase_angle_drag(char date[])
     // 計算
 
     double gradient;
-    double phase_angle;
-    double angle;
+    double radian;
+    double degree;
 
     gradient = value[1][3] / value[1][2];
-    phase_angle = atan(gradient);
+    radian = atan(gradient);
+    degree = 180 * radian / pi;
 
-    // printf("gradient =\t%lf\n", gradient);
-    // printf("angle    =\t%lf\n", phase_angle);
+    // printf("pi = %lf\n", pi);
+
+    printf("[DRAG]\n");
+    printf("Im/Re  =\t%lf\n", gradient);
+    printf("angle =\t%lf\t[deg]\n\n", degree);
 
     fp_csv = fopen(filename_csv, "w");
     fp_dat = fopen(filename_dat, "w");
 
-    fprintf(fp_csv, "%lf\t%lf\n", gradient, phase_angle);
-    fprintf(fp_dat, "%lf\t%lf\n", gradient, phase_angle);
+    fprintf(fp_csv, "%lf\t%lf\n", gradient, degree);
+    fprintf(fp_dat, "%lf\t%lf\n", gradient, degree);
 
     fclose(fp_csv);
     fclose(fp_dat);

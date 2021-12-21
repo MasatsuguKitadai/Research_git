@@ -69,6 +69,7 @@ void S_fft(double ak[], double bk[], int n, int ff)
             tmp = bk[i];
             bk[i] = bk[j];
             bk[j] = tmp;
+            bk[i] = -bk[i];
         }
     }
 }

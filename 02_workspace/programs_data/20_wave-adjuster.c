@@ -25,8 +25,8 @@ int waveadjuster(char date[])
     char directoryname_csv[100];
     char directoryname_dat[100];
 
-    sprintf(directoryname_dat, "../result/%s/dat/21_adjust-value", date);
-    sprintf(directoryname_csv, "../result/%s/csv/21_adjust-value", date);
+    sprintf(directoryname_dat, "../result/%s/dat/20_adjust-value", date);
+    sprintf(directoryname_csv, "../result/%s/csv/20_adjust-value", date);
 
     mkdir(directoryname_dat, S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IXOTH | S_IXOTH);
     mkdir(directoryname_csv, S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IXOTH | S_IXOTH);
@@ -40,9 +40,9 @@ int waveadjuster(char date[])
 
     sprintf(filename_read_1, "../result/%s/csv/05-2_summary-average/05-2.csv", date);
     sprintf(filename_read_2, "../wave-maker/csv/wave-value.csv");
-    sprintf(filename_csv, "../result/%s/csv/21_adjust-value/21.csv", date);
-    sprintf(filename_dat, "../result/%s/dat/21_adjust-value/21.dat", date);
-    sprintf(filename_dat_plot, "../result/%s/dat/21_adjust-value/21_plot.dat", date);
+    sprintf(filename_csv, "../result/%s/csv/20_adjust-value/20.csv", date);
+    sprintf(filename_dat, "../result/%s/dat/20_adjust-value/20.dat", date);
+    sprintf(filename_dat_plot, "../result/%s/dat/20_adjust-value/20_plot.dat", date);
 
     /*****************************************************************************/
 
@@ -134,7 +134,7 @@ int waveadjuster(char date[])
     // ディレクトリの作成
     char directoryname_plot[100];
 
-    sprintf(directoryname_plot, "../result/%s/plot/21", date);
+    sprintf(directoryname_plot, "../result/%s/plot/20", date);
 
     mkdir(directoryname_plot, S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IXOTH | S_IXOTH);
 
@@ -143,8 +143,8 @@ int waveadjuster(char date[])
     char filename_plot[100];
 
     sprintf(filename_dat_1, "../result/%s/dat/05-1_summary/05-1.dat", date);
-    sprintf(filename_dat_2, "../result/%s/dat/21_adjust-value/21_plot.dat", date);
-    sprintf(filename_plot, "../result/%s/plot/21/21_adjust-value.png", date);
+    sprintf(filename_dat_2, "../result/%s/dat/20_adjust-value/20_plot.dat", date);
+    sprintf(filename_plot, "../result/%s/plot/20/20_adjust-value.png", date);
 
     /*****************************************************************************/
 
@@ -202,7 +202,7 @@ int waveadjuster(char date[])
 
     pclose(gp);
 
-    printf("21\t\tsuccess\n");
+    printf("20\t\tsuccess\n");
 }
 
 // int main()

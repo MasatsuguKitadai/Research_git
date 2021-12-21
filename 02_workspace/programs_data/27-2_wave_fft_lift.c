@@ -20,15 +20,15 @@ FILE *fp, *fp_csv, *fp_dat, *gp;
 
 /*********************************   MAIN   *********************************/
 
-int calculate_drag_theory(char date[], int range)
+int calculate_lift_theory(char date[], int range)
 {
     /*****************************************************************************/
     // ディレクトリの作成
     char directoryname_csv[100];
     char directoryname_dat[100];
 
-    sprintf(directoryname_dat, "../result/%s/dat/22-1_fft-drag-theory", date);
-    sprintf(directoryname_csv, "../result/%s/csv/22-1_fft-drag-theory", date);
+    sprintf(directoryname_dat, "../result/%s/dat/27-2_fft-lift-theory", date);
+    sprintf(directoryname_csv, "../result/%s/csv/27-2_fft-lift-theory", date);
 
     mkdir(directoryname_dat, S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IXOTH | S_IXOTH);
     mkdir(directoryname_csv, S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IXOTH | S_IXOTH);
@@ -38,15 +38,15 @@ int calculate_drag_theory(char date[], int range)
     char filename_csv[100];
     char filename_dat[100];
 
-    sprintf(filename_read, "../result/%s/csv/21_adjust-value/21.csv", date);
-    sprintf(filename_csv, "../result/%s/csv/22-1_fft-drag-theory/22-1.csv", date);
-    sprintf(filename_dat, "../result/%s/dat/22-1_fft-drag-theory/22-1.dat", date);
+    sprintf(filename_read, "../result/%s/csv/20_adjust-value/20.csv", date);
+    sprintf(filename_csv, "../result/%s/csv/27-2_fft-lift-theory/27-2.csv", date);
+    sprintf(filename_dat, "../result/%s/dat/27-2_fft-lift-theory/27-2.dat", date);
 
     /*****************************************************************************/
 
     // sin波の配列
     double angle[3600];
-    double wave_drag[3600];
+    double wave_lift[3600];
 
     // 変数の作成
     double value[range], value_i[range];
@@ -77,7 +77,7 @@ int calculate_drag_theory(char date[], int range)
     while ((fscanf(fp, "%lf,%lf,%lf", &ch0, &ch1, &ch2)) != EOF)
     {
         angle[i] = ch0;
-        wave_drag[i] = ch1;
+        wave_lift[i] = ch2;
         i = i + 1;
     }
 
@@ -101,7 +101,7 @@ int calculate_drag_theory(char date[], int range)
     for (i = 0; i < range; i++)
     {
         count = i * split;
-        value[i] = wave_drag[count];
+        value[i] = wave_lift[count];
         // printf("angle =\t%d\tvalue[%d] =\t%lf\n", count, i, value[i]);
     }
 
@@ -138,14 +138,14 @@ int calculate_drag_theory(char date[], int range)
     // ディレクトリの作成
     char directoryname_plot[100];
 
-    sprintf(directoryname_plot, "../result/%s/plot/22", date);
+    sprintf(directoryname_plot, "../result/%s/plot/27", date);
 
     mkdir(directoryname_plot, S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IXOTH | S_IXOTH);
 
     char filename_plot[100];
 
-    sprintf(filename_dat, "../result/%s/dat/22-1_fft-drag-theory/22-1.dat", date);
-    sprintf(filename_plot, "../result/%s/plot/22/22-1_fft-drag.png", date);
+    sprintf(filename_dat, "../result/%s/dat/27-2_fft-lift-theory/27-2.dat", date);
+    sprintf(filename_plot, "../result/%s/plot/27/27-2_fft-lift.png", date);
 
     /*****************************************************************************/
 
@@ -193,7 +193,7 @@ int calculate_drag_theory(char date[], int range)
     fprintf(gp, "set xlabel '%s'offset 0.0,0\n", xxlabel);
     fprintf(gp, "set yrange [%lf:%lf]\n", y_min, y_max);
     fprintf(gp, "set ylabel '%s'offset 0,0.0\n", yylabel);
-    fprintf(gp, "set title '%s (drag)'\n", label);
+    fprintf(gp, "set title '%s (lift)'\n", label);
 
     // fprintf(gp, "set samples 10000\n");
     fprintf(gp, "plot '%s' using 1:2 with lines lc 'black' notitle\n", filename_dat);
@@ -203,12 +203,12 @@ int calculate_drag_theory(char date[], int range)
 
     pclose(gp);
 
-    printf("22-1\t\tsuccess\n");
+    printf("27-2\t\tsuccess\n");
 }
 
 // int main()
 // {
-//     calculate_drag_theory("test-fft", 16);
+//     calculate_lift_theory("test-fft", 16);
 
 //     return (0);
 // }
