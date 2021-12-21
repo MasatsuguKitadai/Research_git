@@ -206,8 +206,8 @@ int linear(char date[], char angle[])
     double y_max = 0.8;
 
     // label
-    const char *xxlabel = "loadcell voltage [V]";
-    const char *yylabel = "strain-sensor voltage [V]";
+    const char *xxlabel = "Loadcell voltage [V]";
+    const char *yylabel = "Strain-sensor voltage [V]";
     char label[100];
 
     double size;

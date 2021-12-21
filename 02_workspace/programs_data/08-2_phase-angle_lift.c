@@ -11,7 +11,7 @@ DATE    :
 FILE *fp, *fp_csv, *fp_dat;
 
 // 円周率の定義
-#define pi 4 * atan(1.0)
+// double pi = 4 * atan(1.0);
 
 char filename_read[100];
 char filename_dat[100];
@@ -82,6 +82,11 @@ int phase_angle_lift(char date[])
     radian = atan(gradient);
     degree = 180 * radian / pi;
 
+    if (degree == -90)
+    {
+        degree = 90;
+    }
+
     printf("[LIFT]\n");
     printf("Im/Re =\t%lf\n", gradient);
     // degree = 180 * radian / pi;
@@ -90,7 +95,7 @@ int phase_angle_lift(char date[])
     fp_csv = fopen(filename_csv, "w");
     fp_dat = fopen(filename_dat, "w");
 
-    fprintf(fp_csv, "%lf\t%lf\n", gradient, degree);
+    fprintf(fp_csv, "%lf,%lf\n", gradient, degree);
     fprintf(fp_dat, "%lf\t%lf\n", gradient, degree);
 
     fclose(fp_csv);

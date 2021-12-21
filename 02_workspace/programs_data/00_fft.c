@@ -7,13 +7,13 @@ DATE    :
 #include <stdlib.h>
 #include <math.h>
 
-// 円周率の定義
-#define pi 4 * atan(1.0)
+double pi = 4 * atan(1.0);
 
 /*********************************   FFT   *********************************/
 
 void S_fft(double ak[], double bk[], int n, int ff)
 {
+
     /* ff=1 for FFT, ff=-1 for Inverse FT */
     int i, j, k, k1, num, nhalf, phi, phi0, rot[n];
     double s, sc, c, a0, b0, tmp;

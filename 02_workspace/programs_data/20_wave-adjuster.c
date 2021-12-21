@@ -13,7 +13,7 @@ double wave_drag[3600];
 double wave_lift[3600];
 
 // 円周率の定義
-#define pi 4 * atan(1.0)
+// double pi = 4 * atan(1.0)
 
 FILE *fp, *fp_csv, *fp_dat, *fp_plot, *gp;
 

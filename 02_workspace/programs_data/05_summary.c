@@ -157,7 +157,7 @@ int summary(char date[], int range)
     double y_max = 0.8;
 
     // label
-    const char *xxlabel = "angle [deg]";
+    const char *xxlabel = "Angle [deg]";
     const char *yylabel_1 = "Gradient of voltage [V/V]";
     const char *yylabel_2 = "Output voltage [V/V]";
     char label_1[100] = "Gradient value";

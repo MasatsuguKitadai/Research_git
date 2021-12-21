@@ -10,7 +10,7 @@ DATE    :
 // #include "00_fft.c"
 
 // 円周率の定義
-#define pi 4 * atan(1.0)
+// double pi = 4 * atan(1.0);
 
 char filename_read[100];
 char filename_dat[100];
@@ -94,6 +94,15 @@ int calculate_lift(char date[], int range)
 
     for (i = 0; i < range; i++)
     {
+        if (value[i] == -0)
+        {
+            value[i] = -1 * value[i];
+        }
+        else if (value_i[i] == -0)
+        {
+            value_i[i] = -1 * value_i[i];
+        }
+
         ps = value[i] * value[i] + value_i[i] * value_i[i];       /* パワースペクトル  */
         as = sqrt(value[i] * value[i] + value_i[i] * value_i[i]); /* 振幅スペクトル  */
         // fq = (double)i / (dt * (double)range);

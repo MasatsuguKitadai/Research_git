@@ -145,8 +145,8 @@ int reverse(char date[], char angle[])
     double y_max_loadcell = 2;
 
     // label
-    const char *xxlabel = "time [1/5 s]";
-    const char *yylabel = "output voltage [V]";
+    const char *xxlabel = "Time [1/5 s]";
+    const char *yylabel = "Output voltage [V]";
     char label[100];
 
     double size;
