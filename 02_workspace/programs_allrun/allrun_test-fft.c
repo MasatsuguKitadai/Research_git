@@ -5,6 +5,7 @@ DATE    :
 ******************************************************************************/
 
 #include <sys/stat.h>
+#include "../programs_data/00_fft.c"
 #include "../programs_data/01_reverse.c"
 #include "../programs_data/02_drift.c"
 #include "../programs_data/03_average.c"
@@ -121,11 +122,17 @@ int main()
     // 06_evaluation
     evaluation("test-fft", 16);
 
+    printf("\n-------------------------\n\n");
+
     // 07-1_fft_drag
     calculate_drag("test-fft", 16);
 
+    printf("\n-------------------------\n\n");
+
     // 07-2_fft_lift
     calculate_lift("test-fft", 16);
+
+    printf("\n-------------------------\n\n");
 
     // 08-1_phase-angle_drag
     phase_angle_drag("test-fft");
@@ -136,8 +143,12 @@ int main()
     // 21_wave-adjuster
     waveadjuster("test-fft");
 
+    printf("\n-------------------------\n\n");
+
     // 22-1_wave_fft_drag
     calculate_drag_theory("test-fft", 16);
+
+    printf("\n-------------------------\n\n");
 
     // 22-2_wave_fft_lift
     calculate_lift_theory("test-fft", 16);

@@ -92,7 +92,6 @@ int phase_angle_lift(char date[])
     fclose(fp_dat);
 
     printf("08-2\t\tsuccess\n");
-
 }
 
 // int main()

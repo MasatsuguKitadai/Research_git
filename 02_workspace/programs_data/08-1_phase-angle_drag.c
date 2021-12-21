@@ -61,10 +61,10 @@ int phase_angle_drag(char date[])
     while ((fscanf(fp, "%d, %lf, %lf, %lf", &buf, &ch0, &ch1, &ch2)) != EOF)
     {
         // printf("[%d]\t%lf\t%lf\t%lf\n", buf, ch0, ch1, ch2);
-        value[i][0] = buf;
-        value[i][1] = ch0;
-        value[i][2] = ch1;
-        value[i][3] = ch2;
+        value[i][0] = buf; // 波数
+        value[i][1] = ch0; // パワースペクトル
+        value[i][2] = ch1; // 実部
+        value[i][3] = ch2; // 虚部
         i = i + 1;
     }
 
@@ -92,7 +92,6 @@ int phase_angle_drag(char date[])
     fclose(fp_dat);
 
     printf("08-1\t\tsuccess\n");
-
 }
 
 // int main()
