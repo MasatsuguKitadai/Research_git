@@ -15,7 +15,7 @@ double wave_lift[3600];
 // 円周率の定義
 #define pi 4 * atan(1.0)
 
-FILE *fp, *fp_csv, *fp_dat, *gp;
+FILE *fp, *fp_csv, *fp_dat, *fp_plot, *gp;
 
 /*********************************   MAIN   *********************************/
 int waveadjuster(char date[])
@@ -36,11 +36,13 @@ int waveadjuster(char date[])
     char filename_read_2[100];
     char filename_csv[100];
     char filename_dat[100];
+    char filename_dat_plot[100];
 
     sprintf(filename_read_1, "../result/%s/csv/05-2_summary-average/05-2.csv", date);
     sprintf(filename_read_2, "../wave-maker/csv/wave-value.csv");
     sprintf(filename_csv, "../result/%s/csv/21_adjust-value/21.csv", date);
     sprintf(filename_dat, "../result/%s/dat/21_adjust-value/21.dat", date);
+    sprintf(filename_dat_plot, "../result/%s/dat/21_adjust-value/21_plot.dat", date);
 
     /*****************************************************************************/
 
@@ -55,7 +57,7 @@ int waveadjuster(char date[])
     }
 
     fscanf(fp, "%lf,%lf,%lf", &ch0, &ch1, &ch2);
-    printf("【Average】\t%lf\t%lf\t%lf\n", ch0, ch1, ch2);
+    // printf("【Average】\t%lf\t%lf\t%lf\n", ch0, ch1, ch2);
     average_value = ch2; // sqrt average
 
     /*****************************************************************************/
@@ -101,6 +103,16 @@ int waveadjuster(char date[])
 
     fp_csv = fopen(filename_csv, "w");
     fp_dat = fopen(filename_dat, "w");
+    fp_plot = fopen(filename_dat_plot, "w");
+
+    for (i = 3300; i < 3600; i++)
+    {
+        buf = i;
+        angle = buf / 10;
+        angle = angle - 360;
+        // printf("angle = %lf\ti = %d\n", angle, i);
+        fprintf(fp_plot, "%lf\t%lf\t%lf\n", angle, wave_drag[i], wave_lift[i]);
+    }
 
     for (i = 0; i < 3600; i++)
     {
@@ -109,10 +121,12 @@ int waveadjuster(char date[])
         // printf("angle = %lf\ti = %d\n", angle, i);
         fprintf(fp_csv, "%lf,%lf,%lf\n", angle, wave_drag[i], wave_lift[i]);
         fprintf(fp_dat, "%lf\t%lf\t%lf\n", angle, wave_drag[i], wave_lift[i]);
+        fprintf(fp_plot, "%lf\t%lf\t%lf\n", angle, wave_drag[i], wave_lift[i]);
     }
 
     fclose(fp_csv);
     fclose(fp_dat);
+    fclose(fp_plot);
 
     /*****************************************************************************/
     // Gnuplot //
@@ -129,7 +143,7 @@ int waveadjuster(char date[])
     char filename_plot[100];
 
     sprintf(filename_dat_1, "../result/%s/dat/05-1_summary/05-1.dat", date);
-    sprintf(filename_dat_2, "../result/%s/dat/21_adjust-value/21.dat", date);
+    sprintf(filename_dat_2, "../result/%s/dat/21_adjust-value/21_plot.dat", date);
     sprintf(filename_plot, "../result/%s/plot/21/21_adjust-value.png", date);
 
     /*****************************************************************************/
@@ -187,6 +201,8 @@ int waveadjuster(char date[])
     fprintf(gp, "exit\n"); // Quit gnuplot
 
     pclose(gp);
+
+    printf("21\t\tsuccess\n");
 }
 
 // int main()

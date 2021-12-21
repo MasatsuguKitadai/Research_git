@@ -44,7 +44,7 @@ int linear(char date[], char angle[])
     sprintf(filename_csv_2, "../result/%s/csv/04-2_gradient/04-2_%s.csv", date, angle);
     sprintf(filename_dat_2, "../result/%s/dat/04-2_gradient/04-2_%s.dat", date, angle);
 
-    printf("【%s】\n", angle);
+    // printf("【%s】\n", angle);
 
     /*****************************************************************************/
 
@@ -90,7 +90,7 @@ int linear(char date[], char angle[])
     fclose(fp);
 
     datalength = i;
-    printf("datalengh = %d\n", datalength);
+    // printf("datalengh = %d\n", datalength);
 
     // 計算
 
@@ -120,7 +120,7 @@ int linear(char date[], char angle[])
     a1[0] = (datalength * sum4 - sum1 * sum2) / (datalength * sum3 - sum1 * sum1);
     b1 = (sum3 * sum2 - sum4 * sum1) / (datalength * sum3 - sum1 * sum1);
 
-    printf("f[x] = %lf x + %lf\t[loadcell - drag]\n", a1[0], b1);
+    // printf("f[x] = %lf x + %lf\t[loadcell - drag]\n", a1[0], b1);
 
     for (i = 0; i < n; i++)
     {
@@ -148,7 +148,7 @@ int linear(char date[], char angle[])
 
     sqrt_value = sqrt((a1[0] * a1[0]) + (a1[1] * a1[1]));
 
-    printf("f[x] = %lf x + %lf\t[loadcell - lift]\t%lf\n", a1[1], b1, sqrt_value);
+    // printf("f[x] = %lf x + %lf\t[loadcell - lift]\t%lf\n", a1[1], b1, sqrt_value);
 
     for (i = 0; i < n; i++)
     {
@@ -250,6 +250,9 @@ int linear(char date[], char angle[])
     fprintf(gp, "exit\n"); // Quit gnuplot
 
     pclose(gp);
+
+    printf("04\t[%s]\tsuccess\n", angle);
+
 }
 
 // int main()

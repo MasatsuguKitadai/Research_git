@@ -132,7 +132,7 @@ int calculate_drag(char date[], int range)
         exit(0);
     }
 
-    printf("check\n");
+    // printf("check\n");
 
     while ((fscanf(fp, "%lf, %lf, %lf, %lf", &buf, &ch0, &ch1, &ch2)) != EOF)
     {
@@ -162,7 +162,7 @@ int calculate_drag(char date[], int range)
         fq = i;
         fprintf(fp_csv, "%d,%lf,%lf,%lf\n", fq, ps, value[i], value_i[i]);
         fprintf(fp_dat, "%d\t%lf\t%lf\t%lf\n", fq, ps, value[i], value_i[i]);
-        printf("[%d]\tvalue: %lf \tvalue_: %lf\tpw: %lf\tfq :%d\n", i, value[i], value_i[i], ps, fq);
+        // printf("[%d]\tvalue: %lf \tvalue_: %lf\tpw: %lf\tfq :%d\n", i, value[i], value_i[i], ps, fq);
     }
 
     fclose(fp_csv);
@@ -238,6 +238,9 @@ int calculate_drag(char date[], int range)
     fprintf(gp, "exit\n"); // Quit gnuplot
 
     pclose(gp);
+
+    printf("07-1\t\tsuccess\n");
+
 }
 
 // int main()

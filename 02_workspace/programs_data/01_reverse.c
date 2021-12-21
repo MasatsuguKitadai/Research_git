@@ -214,6 +214,8 @@ int reverse(char date[], char angle[])
     fprintf(gp, "exit\n"); // Quit gnuplot
 
     pclose(gp);
+
+    printf("01\t[%s]\tsuccess\n", angle);
 }
 
 // int main()

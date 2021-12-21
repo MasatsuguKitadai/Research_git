@@ -32,7 +32,7 @@ int drift(char date[], char angle[])
     sprintf(filename_csv, "../result/%s/csv/02_drift/02_%s.csv", date, angle);
     sprintf(filename_dat, "../result/%s/dat/02_drift/02_%s.dat", date, angle);
 
-    printf("【%s】\n", angle);
+    // printf("【%s】\n", angle);
 
     /*****************************************************************************/
 
@@ -78,7 +78,7 @@ int drift(char date[], char angle[])
     fclose(fp);
 
     datalength = i;
-    printf("datalengh = %d\n", datalength);
+    // printf("datalengh = %d\n", datalength);
 
     // 平均値の計算
 
@@ -136,7 +136,7 @@ int drift(char date[], char angle[])
     // 関数 f
     for (i = 0; i < 3; i++)
     {
-        printf("[%d]\tf(x) = %lf x + %lf\n", i, a[i], b[i]);
+        // printf("[%d]\tf(x) = %lf x + %lf\n", i, a[i], b[i]);
     }
 
     // 変数の宣言
@@ -335,6 +335,9 @@ int drift(char date[], char angle[])
     fprintf(gp, "exit\n"); // Quit gnuplot
 
     pclose(gp);
+
+    printf("02\t[%s]\tsuccess\n", angle);
+
 }
 
 // int main()

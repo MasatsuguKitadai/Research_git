@@ -33,7 +33,7 @@ int summary(char date[], int range)
 
     // 分割
     int split = 3600 / range;
-    printf("split = %d\n", range);
+    // printf("split = %d\n", range);
 
     // ファイル名作成
     char filename_read[100];
@@ -74,7 +74,8 @@ int summary(char date[], int range)
         }
 
         fscanf(fp, "%lf, %lf, %lf", &ch0, &ch1, &ch2);
-        printf("【%d】\t%lf\t%lf\t%lf\n", angle, ch0, ch1, ch2);
+        // printf("【%d】\t%lf\t%lf\t%lf\n", angle, ch0, ch1, ch2);
+
         value[i][0] = ch0; // drag
         value[i][1] = ch1; // lift
         value[i][2] = ch2; // sqrt
@@ -90,9 +91,9 @@ int summary(char date[], int range)
     ave[1] = sum[1] / split;
     ave[2] = sum[2] / split;
 
-    printf("average of drag = %lf\n", ave[0]);
-    printf("average of lift = %lf\n", ave[1]);
-    printf("average of sqrt = %lf\n", ave[2]);
+    // printf("average of drag = %lf\n", ave[0]);
+    // printf("average of lift = %lf\n", ave[1]);
+    // printf("average of sqrt = %lf\n", ave[2]);
 
     // plot用 データファイルの書き出し
 
@@ -101,11 +102,12 @@ int summary(char date[], int range)
 
     for (i = 0; i < split; i++)
     {
-        angle = i * range;
-        angle_double = angle / 10;
+        angle_double = i * range;
+        angle_double = angle_double / 10;
 
         fprintf(fp_csv, "%lf,%lf,%lf,%lf\n", angle_double, value[i][0], value[i][1], value[i][2]);
         fprintf(fp_dat, "%lf\t%lf\t%lf\t%lf\n", angle_double, value[i][0], value[i][1], value[i][2]);
+        // printf("%lf\t%lf\t%lf\t%lf\n", angle_double, value[i][0], value[i][1], value[i][2]);
     }
 
     fclose(fp_csv);
@@ -229,6 +231,9 @@ int summary(char date[], int range)
     fprintf(gp, "exit\n"); // Quit gnuplot
 
     pclose(gp);
+
+    printf("05\t\tsuccess\n");
+
 }
 
 // int main()

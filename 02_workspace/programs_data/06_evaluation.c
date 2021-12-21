@@ -10,7 +10,7 @@ DATE    :
 
 FILE *fp, *fp_dat, *fp_csv, *gp;
 /*********************************   MAIN   *********************************/
-int evaluation(char date[])
+int evaluation(char date[], int range)
 {
     /*****************************************************************************/
     // ディレクトリの作成
@@ -37,10 +37,10 @@ int evaluation(char date[])
     /*****************************************************************************/
 
     int i = 0;
-    int buf;
-    int angle[24];
+    double buf;
+    int angle[range];
     double ch0, ch1, ch2;
-    double value[24][3];
+    double value[range][3];
 
     fp = fopen(filename_read, "r");
     if (filename_read == NULL)
@@ -49,7 +49,7 @@ int evaluation(char date[])
         exit(0);
     }
 
-    while ((fscanf(fp, "%d, %lf, %lf, %lf", &buf, &ch0, &ch1, &ch2)) != EOF)
+    while ((fscanf(fp, "%lf, %lf, %lf, %lf", &buf, &ch0, &ch1, &ch2)) != EOF)
     {
         // printf("%d, %lf, %lf, %lf\n", buf, ch0, ch1, ch2);
         angle[i] = buf;
@@ -74,7 +74,7 @@ int evaluation(char date[])
         ave[i] = 0;
     }
 
-    for (i = 0; i < 24; i++)
+    for (i = 0; i < range; i++)
     {
         sum[0] = value[i][0] + sum[0];
         sum[1] = value[i][1] + sum[1];
@@ -83,20 +83,20 @@ int evaluation(char date[])
 
     for (i = 0; i < 3; i++)
     {
-        ave[i] = sum[i] / 24;
-        printf("[%d]\t%lf\n", i, ave[i]);
+        ave[i] = sum[i] / range;
+        // printf("[%d]\t%lf\n", i, ave[i]);
     }
 
-    for (i = 0; i < 24; i++)
+    for (i = 0; i < range; i++)
     {
         sum2 = value[i][2] * value[i][2] + sum2;
     }
 
-    variance = sum2 / 24 - ave[2] * ave[2];
+    variance = sum2 / range - ave[2] * ave[2];
     deviation = sqrt(variance);
 
-    printf("variance \t= %lf\n", variance);
-    printf("deviation\t= %lf\n", deviation);
+    // printf("variance \t= %lf\n", variance);
+    // printf("deviation\t= %lf\n", deviation);
 
     // plot用 データファイルの書き出し
 
@@ -108,6 +108,9 @@ int evaluation(char date[])
 
     fclose(fp_csv);
     fclose(fp_dat);
+
+    printf("06\t\tsuccess\n");
+
 }
 
 // int main()

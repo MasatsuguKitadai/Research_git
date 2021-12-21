@@ -34,7 +34,7 @@ int average(char date[], char angle[])
     sprintf(filename_csv, "../result/%s/csv/03_average/03_%s.csv", date, angle);
     sprintf(filename_dat, "../result/%s/dat/03_average/03_%s.dat", date, angle);
 
-    printf("【%s】\n", angle);
+    // printf("【%s】\n", angle);
 
     /*****************************************************************************/
 
@@ -80,7 +80,7 @@ int average(char date[], char angle[])
     fclose(fp);
 
     datalength = i;
-    printf("datalengh = %d\n", datalength);
+    // printf("datalengh = %d\n", datalength);
 
     // 計算
 
@@ -119,7 +119,7 @@ int average(char date[], char angle[])
 
         count = count + 175;
         average_time[i] = count - 250;
-        printf("[%d]\t%lf\t%lf\t%lf\n", average_time[i], average_value[i][0], average_value[i][1], average_value[i][2]);
+        // printf("[%d]\t%lf\t%lf\t%lf\n", average_time[i], average_value[i][0], average_value[i][1], average_value[i][2]);
         // printf("%d\n", average_time[i]);
     }
 
@@ -285,6 +285,9 @@ int average(char date[], char angle[])
     fprintf(gp, "exit\n"); // Quit gnuplot
 
     pclose(gp);
+
+    printf("03\t[%s]\tsuccess\n", angle);
+
 }
 
 // int main()
