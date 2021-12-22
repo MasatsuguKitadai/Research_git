@@ -1,5 +1,7 @@
 \BOOKMARK [1][-]{section.1}{進捗状況}{}% 1
 \BOOKMARK [1][-]{section.2}{再実験の実施}{}% 2
-\BOOKMARK [1][-]{section.3}{理論値の算出}{}% 3
-\BOOKMARK [1][-]{section.4}{FFTの適用}{}% 4
-\BOOKMARK [1][-]{section.5}{位相角の算出}{}% 5
+\BOOKMARK [2][-]{subsection.2.1}{実験結果}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{標準偏差の評価}{section.2}% 4
+\BOOKMARK [1][-]{section.3}{理論値の算出}{}% 5
+\BOOKMARK [1][-]{section.4}{FFTの適用}{}% 6
+\BOOKMARK [1][-]{section.5}{位相角の算出}{}% 7

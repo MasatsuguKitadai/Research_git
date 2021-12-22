@@ -77,13 +77,18 @@ int phase_angle_drag_theory(char date[])
     double degree;
 
     gradient = value[1][3] / value[1][2];
-    radian = atan(gradient);
+    radian = atan2(value[1][3], value[1][2]);
     degree = 180 * radian / pi;
 
     if (degree == -90)
     {
         degree = 90;
     }
+    else if (degree == -180)
+    {
+        degree = 180;
+    }
+
 
     printf("[DRAG-Theory]\n");
     printf("Im/Re =\t%lf\n", gradient);

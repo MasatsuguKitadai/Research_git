@@ -84,9 +84,27 @@ lineskip=-0.5ex
 
 \section{再実験の実施}
 FFTを用いるためにデータ数を2の乗数に合わせなければならないことから，
-前回行った実験と同様の手法で再実験を行うこととした．
+前回行った実験と同様の手法で再実験を行うこととした．\\
+
+\subsection{実験結果}
 今回は，22.5度刻みの計16方向からひずみセンサおよびロードセルの出力電圧の測定を行った．
-実験結果を以下のTable 1および，Fig.1，Fig.2に示す．\\
+実験結果を以下のFig.1，Fig.2及びTable 1に示す．\\
+
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=88mm]{../images_2/05/05_summary-wave.png}
+        \caption{Summary of gradient value}
+    \end{center}
+\end{figure}
+\begin{figure}[htbp]
+        \footnotesize
+            \begin{center}
+        \includegraphics[width=88mm]{../images_2/05/05_summary-outputvoltage.png}
+        \caption{Summary of net voltage value}
+    \end{center}
+\end{figure}
+
 
 \begin{table}[htbp]
     \begin{center}
@@ -109,7 +127,7 @@ FFTを用いるためにデータ数を2の乗数に合わせなければなら�
             \multicolumn{1}{|c|}{270.0}                & \multicolumn{1}{|r|}{0.053645}            & \multicolumn{1}{|r|}{\textgt{0.634929}}   & \multicolumn{1}{|r|}{\textgt{0.637191}}  \\ \hline
             \multicolumn{1}{|c|}{292.5}                & \multicolumn{1}{|r|}{-0.179625}           & \multicolumn{1}{|r|}{\textgt{0.619397}}   & \multicolumn{1}{|r|}{\textgt{0.644917}}  \\ \hline
             \multicolumn{1}{|c|}{315.0}                & \multicolumn{1}{|r|}{-0.407471}           & \multicolumn{1}{|r|}{\textgt{0.503615}}   & \multicolumn{1}{|r|}{\textgt{0.647812}}  \\ \hline
-            \multicolumn{1}{|c|}{337.5}                & \multicolumn{1}{|r|}{-0.575843}           & \multicolumn{1}{|r|}{\textgt{0.304549}}   & \multicolumn{1}{|r|}{\textgt{0.651418}}  \\ \hline
+            \multicolumn{1}{|c|}{337.5}                & \multicolumn{1}{|r|}{-0.575843}           & \multicolumn{1}{|r|}{\textgt{0.304549}}   & \multicolumn{1}{|r|}{\textgt{0.651418}}  \\ \hline \hline
             \multicolumn{1}{|c|}{Average}              & \multicolumn{1}{|r|}{0.000257}            & \multicolumn{1}{|r|}{\textgt{-0.001664}}  & \multicolumn{1}{|r|}{\textgt{0.643436}}  \\ \hline
         \end{tabular}
     \end{center}
@@ -117,15 +135,7 @@ FFTを用いるためにデータ数を2の乗数に合わせなければなら�
 
 \newpage
 
-\begin{figure}[htbp]
-    \footnotesize
-    \begin{center}
-        \includegraphics[width=88mm]{../images_2/05/05_summary-wave.png}
-        \caption{Summary of gradient value}
-        \includegraphics[width=88mm]{../images_2/05/05_summary-outputvoltage.png}
-        \caption{Summary of net voltage value}
-    \end{center}
-\end{figure}
+\subsection{標準偏差の評価}
 
 実験結果から算出した正味出力電圧の分散及び標準偏差を以下のTable 2 に示す．
 
@@ -140,16 +150,30 @@ FFTを用いるためにデータ数を2の乗数に合わせなければなら�
     \end{center}
 \end{table}
 
-\newpage
+ここで，Table 1の平均値と Table 2の標準偏差を比較すると，
+標準偏差は平均値の 1\% 程度の範囲を示していることがわかる．
+
+\begin{itemize}
+    \item [$\blacksquare$] \textgt{平均値に対する標準偏差の割合}
+    \begin{eqnarray*}
+        \frac{0.007133}{0.643436} × 100 \approx 1.11 [\%]\\
+    \end{eqnarray*}
+\end{itemize}
+
+したがって，標準偏差は平均値に対して十分小さい値であるといえ，
+正味出力電圧は一定であると判断できると考える．
 
 \section{理論値の算出}
 電圧の測定実験において，抗力および揚力の出力電圧は正弦波の位相がそれぞれ$-\pi/2$，$\pi$だけ
 進んだ波形になると考えられる．
 
-\begin{eqnarray*}
-    \mathrm{Drag\;voltage} &=& A \sin\left(\omega t - \frac{\pi}{2}\right)\\
-    \mathrm{Lift\;voltage} &=& A \sin\left(\omega t + \pi\right)\\
-\end{eqnarray*}
+\begin{itemize}
+    \item [$\blacksquare$] \textgt{抗力・揚力における出力電圧の理論式}
+    \begin{eqnarray*}
+        \mathrm{(Drag\;voltage)} &=& A \sin\left(\omega t + \frac{3}{2}\pi\right) = A \cos\left(\omega t + \pi\right)\\
+        \mathrm{(Lift\;voltage)} &=& A \sin\left(\omega t + \pi\right) = A \cos\left(\omega t + \frac{1}{2}\pi\right)\\
+    \end{eqnarray*}
+\end{itemize}
 
 ここで，Table 1の正味の出力電圧の平均値を振幅とし，
 抗力および揚力についてそれぞれ位相が進んだ正弦波を作成した．
@@ -159,43 +183,44 @@ FFTを用いるためにデータ数を2の乗数に合わせなければなら�
     \footnotesize
     \begin{center}
         \includegraphics[width=88mm]{../images_2/20/20_adjust-value.png}
-        \caption{value}
+        \caption{theorical Value}
     \end{center}
 \end{figure}
 
+\vskip\baselineskip
 Fig.3をみると，実験結果は理論値に比べて抗力・揚力ともに
 位相が遅れていることがわかる．
 ここで，この結果から理論値との位相差を算出することを
 目的としてデータの処理を行うこととした．
 
+\newpage
 \section{FFTの適用}
 
-測定した16点のデータを用いて，実験結果及び理論値について
-FFTを適用した．その結果を以下のFig.4，Fig.5に示す．
-また，Table 3にFFTを適用した結果のうち，波数1についての結果を以下に示す．
-
-\newpage
+実験結果及び理論値についてFFTを適用した．その結果を以下のFig.4，Fig.5に示す．
 
 \begin{figure}[htbp]
     \footnotesize
     \begin{center}
-        \includegraphics[width=88mm]{../images_2/27/27-3_fft-drag_summary.png}
+        \includegraphics[width=83mm]{../images_2/27/27-3_fft-drag_summary.png}
         \caption{FFT Result [Drag]}
-        \includegraphics[width=88mm]{../images_2/27/27-4_fft-lift_summary.png}
+        \includegraphics[width=83mm]{../images_2/27/27-4_fft-lift_summary.png}
         \caption{FFT Result [Lift]}
     \end{center}
 \end{figure}
+
+\newpage
+また，Table 3に波数1について，それぞれの結果を以下に示す．
 
 \begin{table}[htbp]
     \begin{center}
         \caption{FFT result}
         \begin{tabular}{|p{20mm}|p{20mm}|p{20mm}|p{20mm}|}
             \hline
-            \multicolumn{1}{|c|}{}                 & \multicolumn{1}{|c|}{\textgt{Re}} & \multicolumn{1}{|c|}{\textgt{Im}}       & \multicolumn{1}{|c|}{\textgt{Power}}     \\ \hline
+            \multicolumn{1}{|c|}{}                 & \multicolumn{1}{|c|}{\textgt{$Re$}} & \multicolumn{1}{|c|}{\textgt{$Im$}}       & \multicolumn{1}{|c|}{\textgt{Power}}     \\ \hline
             \multicolumn{1}{|c|}{Measured [Drag]}  & \multicolumn{1}{|r|}{-5.148544}   & \multicolumn{1}{|r|}{\textgt{0.570901}} & \multicolumn{1}{|r|}{\textgt{26.833436}} \\ \hline
             \multicolumn{1}{|c|}{Measured [Lift]}  & \multicolumn{1}{|r|}{0.706293}    & \multicolumn{1}{|r|}{\textgt{5.061030}} & \multicolumn{1}{|r|}{\textgt{26.112873}} \\ \hline
-            \multicolumn{1}{|c|}{Theorical [Drag]} & \multicolumn{1}{|r|}{-5.147490}   & \multicolumn{1}{|r|}{\textgt{0.000000}} & \multicolumn{1}{|r|}{\textgt{26.496654}} \\ \hline
-            \multicolumn{1}{|c|}{Theorical [Lift]} & \multicolumn{1}{|r|}{0.000000}    & \multicolumn{1}{|r|}{\textgt{5.147490}} & \multicolumn{1}{|r|}{\textgt{26.496654}} \\ \hline
+            \multicolumn{1}{|c|}{Theory [Drag]} & \multicolumn{1}{|r|}{-5.147490}   & \multicolumn{1}{|r|}{\textgt{0.000000}} & \multicolumn{1}{|r|}{\textgt{26.496654}} \\ \hline
+            \multicolumn{1}{|c|}{Theory [Lift]} & \multicolumn{1}{|r|}{0.000000}    & \multicolumn{1}{|r|}{\textgt{5.147490}} & \multicolumn{1}{|r|}{\textgt{26.496654}} \\ \hline
         \end{tabular}
     \end{center}
 \end{table}
@@ -205,18 +230,17 @@ Fig.4，Fig.5をみると，実験結果と理論値のピークは一致して�
 したがって，FFTによって波の特徴を正しく捉えられており，抗力側及び揚力側に取り付けられているひずみセンサに
 大きな個体差はないと考えられる．
 
-\newpage
-
 \section{位相角の算出}
-ここで，Table 3の結果から以下の式をもとに位相角 $\varphi$ を算出した．
-また，その結果を以下のTable 4に示す．
+ここで，Table 3の結果から以下の式をもとに位相角 $\phi$ を算出した．
+抗力及び揚力方向の位相角をそれぞれ$\phi_x$，$\phi_y$として，その算出結果を以下のTable 4に示す．
 
-\begin{eqnarray*}
-    \mathrm{\varphi \; [degree]} = \arctan \left(\frac{Im}{Re}\right) × \frac{180}{\pi}
-\end{eqnarray*}
 
 \begin{itemize}
-    \item [※] ここでの位相角$\varphi$は，FFTの性質上，余弦波に対する位相角を示している．
+    \item [$\blacksquare$] 位相角$\phi$の算出
+    \begin{eqnarray*}
+        \mathrm{\phi \; [deg]} = \arctan \left(\frac{Im}{Re}\right) × \frac{180}{\pi}\\
+    \end{eqnarray*}    
+    \item [※] 位相角$\phi$は，FFTの性質上，余弦波に対する位相角を示している．
 \end{itemize}
 
 \begin{table}[htbp]
@@ -224,15 +248,33 @@ Fig.4，Fig.5をみると，実験結果と理論値のピークは一致して�
         \caption{Phase angle}
         \begin{tabular}{|p{20mm}|p{20mm}|p{20mm}|}
             \hline
-            \multicolumn{1}{|c|}{}                    & \multicolumn{1}{|c|}{\textgt{Drag [deg]}} & \multicolumn{1}{|c|}{\textgt{Lift [deg]}} \\ \hline
-            \multicolumn{1}{|c|}{\textgt{Measured}}   & \multicolumn{1}{|r|}{-6.327446}           & \multicolumn{1}{|r|}{82.055387}           \\ \hline
-            \multicolumn{1}{|c|}{\textgt{Theorical}}  & \multicolumn{1}{|r|}{0.000000}            & \multicolumn{1}{|r|}{90.000000}           \\ \hline
+            \multicolumn{1}{|c|}{}                    & \multicolumn{1}{|c|}{\textgt{$\phi_x$ [deg]}} & \multicolumn{1}{|c|}{\textgt{$\phi_y$ [deg]}} \\ \hline
+            \multicolumn{1}{|c|}{\textgt{Measured}}   & \multicolumn{1}{|r|}{173.672554}           & \multicolumn{1}{|r|}{82.055387}           \\ \hline
+            \multicolumn{1}{|c|}{\textgt{Theory}}  & \multicolumn{1}{|r|}{180.000000}            & \multicolumn{1}{|r|}{90.000000}           \\ \hline \hline
             \multicolumn{1}{|c|}{\textgt{Difference}} & \multicolumn{1}{|r|}{-6.327446}           & \multicolumn{1}{|r|}{-7.944613}           \\ \hline
         \end{tabular}
     \end{center}
 \end{table}
 
-Table 4をみると，抗力及び揚力方向に対して，
-ひずみセンサの取付角度に小さな差異が存在する可能性が考えられる．
+Table 4をみると，実験で使用した回転台の回転座標を基準として，実験装置に取付けられたひずみセンサは
+理論値に対して，抗力方向は約 -6.33 度，揚力方向は約 -7.94 度\\
+進んでいることを示している．
+\newpage
+また，実験結果における抗力・揚力方向の位相角の差を取ることでひずみセンサの取付角度が算出できる．
+
+\begin{itemize}
+    \item [$\blacksquare$] 抗力・揚力方向のひずみセンサの取付角度 $\phi$
+    \begin{eqnarray*}
+        \phi &=& \left| \phi_x - \phi_y \right| \\
+            &=& \left| 173.672554 - 82.055387 \right| \\
+            &\approx& 91.6 \left[\mathrm{deg}\right]\\
+    \end{eqnarray*}    
+\end{itemize}
+
+\par
+したがって，回流水槽での作用力測定の際に，実際に加わる作用力の方向と
+測定装置の設置角度に差異が存在している可能性があることがわかった．
+また，抗力・揚力方向のひずみセンサについてはおおよそ直角に貼付けられており
+今回の実験装置については重大な課題ではないと考える．
 
 \end{document}

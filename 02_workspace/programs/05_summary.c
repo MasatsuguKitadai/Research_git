@@ -160,7 +160,7 @@ int summary(char date[], int range)
     // label
     const char *xxlabel = "Angle [deg]";
     const char *yylabel_1 = "Gradient of voltage [V/V]";
-    const char *yylabel_2 = "Output voltage [V/V]";
+    const char *yylabel_2 = "Net output voltage [V/V]";
     char label_1[100] = "Gradient value";
     char label_2[100] = "Output otage";
 
