@@ -51,7 +51,7 @@ int evaluation(char date[], int range)
 
     while ((fscanf(fp, "%lf, %lf, %lf, %lf", &buf, &ch0, &ch1, &ch2)) != EOF)
     {
-        // printf("%d, %lf, %lf, %lf\n", buf, ch0, ch1, ch2);
+        // printf("%d, %.3f, %.3f, %.3f\n", buf, ch0, ch1, ch2);
         angle[i] = buf;
         value[i][0] = ch0; // drag
         value[i][1] = ch1; // lift
@@ -63,7 +63,7 @@ int evaluation(char date[], int range)
 
     // 分散計算
 
-    double variance = 0;
+    long double variance = 0;
     double deviation = 0;
     double sum2 = 0;
     double sum[3], ave[3];
@@ -84,7 +84,7 @@ int evaluation(char date[], int range)
     for (i = 0; i < 3; i++)
     {
         ave[i] = sum[i] / range;
-        // printf("[%d]\t%lf\n", i, ave[i]);
+        // printf("[%d]\t%.3f\n", i, ave[i]);
     }
 
     for (i = 0; i < range; i++)
@@ -95,22 +95,21 @@ int evaluation(char date[], int range)
     variance = sum2 / range - ave[2] * ave[2];
     deviation = sqrt(variance);
 
-    // printf("variance \t= %lf\n", variance);
-    // printf("deviation\t= %lf\n", deviation);
+    printf("variance \t= %Lf\n", variance);
+    printf("deviation\t= %lf\n\n", deviation);
 
     // plot用 データファイルの書き出し
 
     fp_csv = fopen(filename_csv, "w");
     fp_dat = fopen(filename_dat, "w");
 
-    fprintf(fp_csv, "%lf\t%lf\n", variance, deviation);
-    fprintf(fp_dat, "%lf\t%lf\n", variance, deviation);
+    fprintf(fp_csv, "%Lf\t%lf\n", variance, deviation);
+    fprintf(fp_dat, "%Lf\t%lf\n", variance, deviation);
 
     fclose(fp_csv);
     fclose(fp_dat);
 
     printf("06\t\tsuccess\n");
-
 }
 
 // int main()

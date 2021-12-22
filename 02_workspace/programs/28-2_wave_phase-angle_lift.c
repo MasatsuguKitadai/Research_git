@@ -60,7 +60,7 @@ int phase_angle_lift_theory(char date[])
 
     while ((fscanf(fp, "%d, %lf, %lf, %lf", &buf, &ch0, &ch1, &ch2)) != EOF)
     {
-        // printf("[%d]\t%lf\t%lf\t%lf\n", buf, ch0, ch1, ch2);
+        // printf("[%d]\t%.3f\t%.3f\t%.3f\n", buf, ch0, ch1, ch2);
         value[i][0] = buf; // 波数
         value[i][1] = ch0; // パワースペクトル
         value[i][2] = ch1; // 実部
@@ -89,10 +89,9 @@ int phase_angle_lift_theory(char date[])
         degree = 180;
     }
 
-
     printf("[lift-Theory]\n");
-    printf("Im/Re =\t%lf\n", gradient);
-    printf("angle =\t%lf\t[deg]\n\n", degree);
+    printf("Im/Re =\t%.3f\n", gradient);
+    printf("angle =\t%.3f\t[deg]\n\n", degree);
 
     /*****************************************************************************/
 
@@ -113,7 +112,7 @@ int phase_angle_lift_theory(char date[])
     i = 0;
 
     fscanf(fp, "%lf, %lf", &ch0, &ch1);
-    // printf("Radian = \t%lf\tDegree =\t%lf\n", ch0, ch1);
+    // printf("Radian = \t%.3f\tDegree =\t%.3f\n", ch0, ch1);
     radian_result = ch0; // 実験結果 Radian
     degree_result = ch1; // 実験結果 Degree
 
@@ -121,7 +120,7 @@ int phase_angle_lift_theory(char date[])
 
     double difference = 0;
     difference = degree - degree_result;
-    printf("Difference =\t%lf [deg]\n\n", difference);
+    printf("Difference =\t%.3f [deg]\n\n", difference);
 
     /*****************************************************************************/
 

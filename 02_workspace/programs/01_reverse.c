@@ -79,7 +79,7 @@ int reverse(char date[], char angle[])
 
     while ((fscanf(fp, "%lf, %lf, %lf", &ch0, &ch1, &ch2)) != EOF)
     {
-        // printf("%lf, %lf, %lf\n", ch0, ch1, ch2);
+        // printf("%.3f, %.3f, %.3f\n", ch0, ch1, ch2);
         value[i][0] = ch0;
         value[i][1] = ch1;
         value[i][2] = ch2;
@@ -103,8 +103,8 @@ int reverse(char date[], char angle[])
 
     for (i = 0; i < datalength; i++)
     {
-        fprintf(fp_csv, "%lf,%lf,%lf\n", value[i][0], value[i][1], value[i][2]);
-        fprintf(fp_dat, "%d\t%lf\t%lf\t%lf\n", i, value[i][0], value[i][1], value[i][2]);
+        fprintf(fp_csv, "%.3f,%.3f,%.3f\n", value[i][0], value[i][1], value[i][2]);
+        fprintf(fp_dat, "%d\t%.3f\t%.3f\t%.3f\n", i, value[i][0], value[i][1], value[i][2]);
     }
 
     fclose(fp_csv);
@@ -169,7 +169,7 @@ int reverse(char date[], char angle[])
     // fprintf(gp, "set multiplot\n");
     fprintf(gp, "unset key\n");
     fprintf(gp, "set term pngcairo size 1280, 960 font ',24'\n");
-    // fprintf(gp, "set size ratio %lf\n", size);
+    // fprintf(gp, "set size ratio %.3f\n", size);
 
     fprintf(gp, "set lmargin screen 0.10\n");
     fprintf(gp, "set rmargin screen 0.90\n");
@@ -178,7 +178,7 @@ int reverse(char date[], char angle[])
 
     fprintf(gp, "set xrange [%d:%d]\n", x_min, x_max);
     fprintf(gp, "set xlabel '%s'offset 0.0,0\n", xxlabel);
-    fprintf(gp, "set yrange [%lf:%lf]\n", y_min_loadcell, y_max_loadcell);
+    fprintf(gp, "set yrange [%.3f:%.3f]\n", y_min_loadcell, y_max_loadcell);
     fprintf(gp, "set ylabel '%s'offset 1,0.0\n", yylabel);
     fprintf(gp, "set title '%s deg'\n", label);
 
@@ -194,7 +194,7 @@ int reverse(char date[], char angle[])
     fprintf(gp, "set key right top\n");
     fprintf(gp, "set key font ',20'\n");
     fprintf(gp, "set term pngcairo size 1280, 960 font ',24'\n");
-    // fprintf(gp, "set size ratio %lf\n", size);
+    // fprintf(gp, "set size ratio %.3f\n", size);
 
     fprintf(gp, "set lmargin screen 0.10\n");
     fprintf(gp, "set rmargin screen 0.90\n");
@@ -203,7 +203,7 @@ int reverse(char date[], char angle[])
 
     fprintf(gp, "set xrange [%d:%d]\n", x_min, x_max);
     fprintf(gp, "set xlabel '%s'offset 0.0,0\n", xxlabel);
-    fprintf(gp, "set yrange [%lf:%lf]\n", y_min, y_max);
+    fprintf(gp, "set yrange [%.3f:%.3f]\n", y_min, y_max);
     fprintf(gp, "set ylabel '%s'offset 1,0.0\n", yylabel);
     fprintf(gp, "set title '%s deg'\n", label);
 

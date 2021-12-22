@@ -102,7 +102,7 @@ int calculate_lift_theory(char date[], int range)
     {
         count = i * split;
         value[i] = wave_lift[count];
-        // printf("angle =\t%d\tvalue[%d] =\t%lf\n", count, i, value[i]);
+        // printf("angle =\t%d\tvalue[%d] =\t%.3f\n", count, i, value[i]);
     }
 
     // FFTの適用
@@ -124,7 +124,7 @@ int calculate_lift_theory(char date[], int range)
         fq = i;
         fprintf(fp_csv, "%d,%lf,%lf,%lf\n", fq, ps, value[i], value_i[i]);
         fprintf(fp_dat, "%d\t%lf\t%lf\t%lf\n", fq, ps, value[i], value_i[i]);
-        printf("[%d]\tvalue_Re: %lf \tvalue_Im: %lf\tpw: %lf\tfq :%d\n", i, value[i], value_i[i], ps, fq);
+        printf("[%d]\tvalue_Re = %.3f \tvalue_Im = %.3f\t pw: %.3f\tfq :%d\n", i, value[i], value_i[i], ps, fq);
     }
 
     fclose(fp_csv);
@@ -187,16 +187,16 @@ int calculate_lift_theory(char date[], int range)
     fprintf(gp, "set key left top\n");
     fprintf(gp, "set key font ',20'\n");
     fprintf(gp, "set term pngcairo size 1280, 960 font ',24'\n");
-    // fprintf(gp, "set size ratio %lf\n", size);
+    // fprintf(gp, "set size ratio %.3f\n", size);
 
     fprintf(gp, "set lmargin screen 0.10\n");
     fprintf(gp, "set rmargin screen 0.90\n");
     fprintf(gp, "set tmargin screen 0.90\n");
     fprintf(gp, "set bmargin screen 0.15\n");
 
-    fprintf(gp, "set xrange [%lf:%d]\n", x_min, x_max);
+    fprintf(gp, "set xrange [%.3f:%d]\n", x_min, x_max);
     fprintf(gp, "set xlabel '%s'offset 0.0,0\n", xxlabel);
-    fprintf(gp, "set yrange [%lf:%lf]\n", y_min, y_max);
+    fprintf(gp, "set yrange [%.3f:%.3f]\n", y_min, y_max);
     fprintf(gp, "set ylabel '%s'offset 0,0.0\n", yylabel);
     fprintf(gp, "set title '%s (lift)'\n", label);
 
@@ -211,16 +211,16 @@ int calculate_lift_theory(char date[], int range)
     fprintf(gp, "set key left top\n");
     fprintf(gp, "set key font ',20'\n");
     fprintf(gp, "set term pngcairo size 1280, 960 font ',24'\n");
-    // fprintf(gp, "set size ratio %lf\n", size);
+    // fprintf(gp, "set size ratio %.3f\n", size);
 
     fprintf(gp, "set lmargin screen 0.10\n");
     fprintf(gp, "set rmargin screen 0.90\n");
     fprintf(gp, "set tmargin screen 0.90\n");
     fprintf(gp, "set bmargin screen 0.15\n");
 
-    fprintf(gp, "set xrange [%lf:%d]\n", x_min, x_max);
+    fprintf(gp, "set xrange [%.3f:%d]\n", x_min, x_max);
     fprintf(gp, "set xlabel '%s'offset 0.0,0\n", xxlabel);
-    fprintf(gp, "set yrange [%lf:%lf]\n", y_min, y_max);
+    fprintf(gp, "set yrange [%.3f:%.3f]\n", y_min, y_max);
     fprintf(gp, "set ylabel '%s'offset 0,0.0\n", yylabel);
     fprintf(gp, "set title '%s (Lift)'\n", label);
 

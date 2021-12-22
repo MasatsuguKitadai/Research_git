@@ -60,7 +60,7 @@ int phase_angle_drag(char date[])
 
     while ((fscanf(fp, "%d, %lf, %lf, %lf", &buf, &ch0, &ch1, &ch2)) != EOF)
     {
-        // printf("[%d]\t%lf\t%lf\t%lf\n", buf, ch0, ch1, ch2);
+        // printf("[%d]\t%.3f\t%.3f\t%.3f\n", buf, ch0, ch1, ch2);
         value[i][0] = buf; // 波数
         value[i][1] = ch0; // パワースペクトル
         value[i][2] = ch1; // 実部
@@ -89,11 +89,11 @@ int phase_angle_drag(char date[])
         degree = 180;
     }
 
-    // printf("pi = %lf\n", pi);
+    // printf("pi = %.3f\n", pi);
 
     printf("[DRAG]\n");
-    printf("Im/Re =\t%lf\n", gradient);
-    printf("angle =\t%lf\t[deg]\n\n", degree);
+    printf("Im/Re =\t%.3f\n", gradient);
+    printf("angle =\t%.3f\t[deg]\n\n", degree);
 
     fp_csv = fopen(filename_csv, "w");
     fp_dat = fopen(filename_dat, "w");

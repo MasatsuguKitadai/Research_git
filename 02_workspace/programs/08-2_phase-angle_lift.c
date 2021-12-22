@@ -60,7 +60,7 @@ int phase_angle_lift(char date[])
 
     while ((fscanf(fp, "%d, %lf, %lf, %lf", &buf, &ch0, &ch1, &ch2)) != EOF)
     {
-        // printf("[%d]\t%lf\t%lf\t%lf\n", buf, ch0, ch1, ch2);
+        // printf("[%d]\t%.3f\t%.3f\t%.3f\n", buf, ch0, ch1, ch2);
         value[i][0] = buf;
         value[i][1] = ch0;
         value[i][2] = ch1;
@@ -93,9 +93,9 @@ int phase_angle_lift(char date[])
 
 
     printf("[LIFT]\n");
-    printf("Im/Re =\t%lf\n", gradient);
+    printf("Im/Re =\t%.3f\n", gradient);
     // degree = 180 * radian / pi;
-    printf("angle =\t%lf\t[deg]\n\n", degree);
+    printf("angle =\t%.3f\t[deg]\n\n", degree);
 
     fp_csv = fopen(filename_csv, "w");
     fp_dat = fopen(filename_dat, "w");

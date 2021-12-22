@@ -80,7 +80,7 @@ int linear(char date[], char angle[])
 
     while ((fscanf(fp, "%lf, %lf, %lf", &ch0, &ch1, &ch2)) != EOF)
     {
-        // printf("%lf, %lf, %lf\n", ch0, ch1, ch2);
+        // printf("%.3f, %.3f, %.3f\n", ch0, ch1, ch2);
         average_value[i][0] = ch0;
         average_value[i][1] = ch1;
         average_value[i][2] = ch2;
@@ -120,7 +120,7 @@ int linear(char date[], char angle[])
     a1[0] = (datalength * sum4 - sum1 * sum2) / (datalength * sum3 - sum1 * sum1);
     b1 = (sum3 * sum2 - sum4 * sum1) / (datalength * sum3 - sum1 * sum1);
 
-    // printf("f[x] = %lf x + %lf\t[loadcell - drag]\n", a1[0], b1);
+    // printf("f[x] = %.3f x + %.3f\t[loadcell - drag]\n", a1[0], b1);
 
     for (i = 0; i < n; i++)
     {
@@ -148,7 +148,7 @@ int linear(char date[], char angle[])
 
     sqrt_value = sqrt((a1[0] * a1[0]) + (a1[1] * a1[1]));
 
-    // printf("f[x] = %lf x + %lf\t[loadcell - lift]\t%lf\n", a1[1], b1, sqrt_value);
+    // printf("f[x] = %.3f x + %.3f\t[loadcell - lift]\t%.3f\n", a1[1], b1, sqrt_value);
 
     for (i = 0; i < n; i++)
     {
@@ -230,16 +230,16 @@ int linear(char date[], char angle[])
     fprintf(gp, "set key left top\n");
     fprintf(gp, "set key font ',20'\n");
     fprintf(gp, "set term pngcairo size 1280, 960 font ',24'\n");
-    // fprintf(gp, "set size ratio %lf\n", size);
+    // fprintf(gp, "set size ratio %.3f\n", size);
 
     fprintf(gp, "set lmargin screen 0.10\n");
     fprintf(gp, "set rmargin screen 0.90\n");
     fprintf(gp, "set tmargin screen 0.90\n");
     fprintf(gp, "set bmargin screen 0.15\n");
 
-    fprintf(gp, "set xrange [%lf:%lf]\n", x_min, x_max);
+    fprintf(gp, "set xrange [%.3f:%.3f]\n", x_min, x_max);
     fprintf(gp, "set xlabel '%s'offset 0.0,0\n", xxlabel);
-    fprintf(gp, "set yrange [%lf:%lf]\n", y_min, y_max);
+    fprintf(gp, "set yrange [%.3f:%.3f]\n", y_min, y_max);
     fprintf(gp, "set ylabel '%s'offset 0,0.0\n", yylabel);
     fprintf(gp, "set title '%s deg'\n", label);
 
@@ -252,7 +252,6 @@ int linear(char date[], char angle[])
     pclose(gp);
 
     printf("04\t[%s]\tsuccess\n", angle);
-
 }
 
 // int main()

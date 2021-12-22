@@ -57,7 +57,7 @@ int waveadjuster(char date[])
     }
 
     fscanf(fp, "%lf,%lf,%lf", &ch0, &ch1, &ch2);
-    // printf("【Average】\t%lf\t%lf\t%lf\n", ch0, ch1, ch2);
+    // printf("【Average】\t%.3f\t%.3f\t%.3f\n", ch0, ch1, ch2);
     average_value = ch2; // sqrt average
 
     /*****************************************************************************/
@@ -73,7 +73,7 @@ int waveadjuster(char date[])
 
     while ((fscanf(fp, "%lf, %lf, %lf", &ch0, &ch1, &ch2)) != EOF)
     {
-        // printf("%lf, %lf, %lf\n", ch0, ch1, ch2);
+        // printf("%.3f, %.3f, %.3f\n", ch0, ch1, ch2);
         wave_drag[i] = ch1;
         wave_lift[i] = ch2;
         i = i + 1;
@@ -88,7 +88,7 @@ int waveadjuster(char date[])
     for (i = 0; i < 3600; i++)
     {
         wave_drag[i] = wave_drag[i] * average_value;
-        // printf("value[%d] = %lf\n", i, wave_drag[i]);
+        // printf("value[%d] = %.3f\n", i, wave_drag[i]);
     }
 
     // 正弦波 lift (位相 3π/2 ズレ)
@@ -96,7 +96,7 @@ int waveadjuster(char date[])
     for (i = 0; i < 3600; i++)
     {
         wave_lift[i] = wave_lift[i] * average_value;
-        // printf("value[%d] = %lf\n", i, wave_lift[i]);
+        // printf("value[%d] = %.3f\n", i, wave_lift[i]);
     }
 
     double angle, buf;
@@ -110,7 +110,7 @@ int waveadjuster(char date[])
         buf = i;
         angle = buf / 10;
         angle = angle - 360;
-        // printf("angle = %lf\ti = %d\n", angle, i);
+        // printf("angle = %.3f\ti = %d\n", angle, i);
         fprintf(fp_plot, "%lf\t%lf\t%lf\n", angle, wave_drag[i], wave_lift[i]);
     }
 
@@ -118,10 +118,10 @@ int waveadjuster(char date[])
     {
         buf = i;
         angle = buf / 10;
-        // printf("angle = %lf\ti = %d\n", angle, i);
+        // printf("angle = %.3f\ti = %d\n", angle, i);
         fprintf(fp_csv, "%lf,%lf,%lf\n", angle, wave_drag[i], wave_lift[i]);
         fprintf(fp_dat, "%lf\t%lf\t%lf\n", angle, wave_drag[i], wave_lift[i]);
-        fprintf(fp_plot, "%lf\t%lf\t%lf\n", angle, wave_drag[i], wave_lift[i]);
+        fprintf(fp_plot, "%lf\t%lf\t%.3f\n", angle, wave_drag[i], wave_lift[i]);
     }
 
     fclose(fp_csv);
@@ -179,17 +179,17 @@ int waveadjuster(char date[])
     fprintf(gp, "set key left top\n");
     fprintf(gp, "set key font ',20'\n");
     fprintf(gp, "set term pngcairo size 1280, 960 font ',24'\n");
-    // fprintf(gp, "set size ratio %lf\n", size);
+    // fprintf(gp, "set size ratio %.3f\n", size);
 
     fprintf(gp, "set lmargin screen 0.10\n");
     fprintf(gp, "set rmargin screen 0.90\n");
     fprintf(gp, "set tmargin screen 0.90\n");
     fprintf(gp, "set bmargin screen 0.15\n");
 
-    fprintf(gp, "set xrange [%lf:%lf]\n", x_min, x_max);
+    fprintf(gp, "set xrange [%.3f:%.3f]\n", x_min, x_max);
     fprintf(gp, "set xlabel '%s'offset 0.0,0\n", xxlabel);
-    fprintf(gp, "set xtics %lf\n", interval);
-    fprintf(gp, "set yrange [%lf:%lf]\n", y_min, y_max);
+    fprintf(gp, "set xtics %.3f\n", interval);
+    fprintf(gp, "set yrange [%.3f:%.3f]\n", y_min, y_max);
     fprintf(gp, "set ylabel '%s'offset 1,0.0\n", yylabel);
     fprintf(gp, "set title '%s'\n", label);
 

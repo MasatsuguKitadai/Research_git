@@ -74,7 +74,7 @@ int summary(char date[], int range)
         }
 
         fscanf(fp, "%lf, %lf, %lf", &ch0, &ch1, &ch2);
-        // printf("【%d】\t%lf\t%lf\t%lf\n", angle, ch0, ch1, ch2);
+        // printf("【%d】\t%.3f\t%.3f\t%.3f\n", angle, ch0, ch1, ch2);
 
         value[i][0] = ch0; // drag
         value[i][1] = ch1; // lift
@@ -91,9 +91,9 @@ int summary(char date[], int range)
     ave[1] = sum[1] / split;
     ave[2] = sum[2] / split;
 
-    printf("average of drag = %lf\n", ave[0]);
-    printf("average of lift = %lf\n", ave[1]);
-    printf("average of sqrt = %lf\n", ave[2]);
+    printf("average of drag = %.3f\n", ave[0]);
+    printf("average of lift = %.3f\n", ave[1]);
+    printf("average of sqrt = %.3f\n", ave[2]);
     printf("\n");
 
     // plot用 データファイルの書き出し
@@ -106,9 +106,9 @@ int summary(char date[], int range)
         angle_double = i * range;
         angle_double = angle_double / 10;
 
-        fprintf(fp_csv, "%lf,%lf,%lf,%lf\n", angle_double, value[i][0], value[i][1], value[i][2]);
-        fprintf(fp_dat, "%lf\t%lf\t%lf\t%lf\n", angle_double, value[i][0], value[i][1], value[i][2]);
-        // printf("%lf\t%lf\t%lf\t%lf\n", angle_double, value[i][0], value[i][1], value[i][2]);
+        fprintf(fp_csv, "%.1f,%lf,%lf,%lf\n", angle_double, value[i][0], value[i][1], value[i][2]);
+        fprintf(fp_dat, "%.1f\t%lf\t%lf\t%lf\n", angle_double, value[i][0], value[i][1], value[i][2]);
+        // printf("%.3f\t%.3f\t%.3f\t%.3f\n", angle_double, value[i][0], value[i][1], value[i][2]);
     }
 
     fclose(fp_csv);
@@ -117,9 +117,9 @@ int summary(char date[], int range)
     fp_csv = fopen(filename_csv_2, "w");
     fp_dat = fopen(filename_dat_2, "w");
 
-    fprintf(fp_csv, "%lf,%lf,%lf\n", ave[0], ave[1], ave[2]);
-    fprintf(fp_dat, "-30\t%lf\t%lf\t%lf\n", ave[0], ave[1], ave[2]);
-    fprintf(fp_dat, "360\t%lf\t%lf\t%lf\n", ave[0], ave[1], ave[2]);
+    fprintf(fp_csv, "%.1f,%lf,%lf\n", ave[0], ave[1], ave[2]);
+    fprintf(fp_dat, "-30\t%.1f\t%lf\t%lf\n", ave[0], ave[1], ave[2]);
+    fprintf(fp_dat, "360\t%.1f\t%lf\t%lf\n", ave[0], ave[1], ave[2]);
 
     fclose(fp_csv);
     fclose(fp_dat);
@@ -184,17 +184,17 @@ int summary(char date[], int range)
     fprintf(gp, "set key left top\n");
     fprintf(gp, "set key font ',20'\n");
     fprintf(gp, "set term pngcairo size 1280, 960 font ',24'\n");
-    // fprintf(gp, "set size ratio %lf\n", size);
+    // fprintf(gp, "set size ratio %.3f\n", size);
 
     fprintf(gp, "set lmargin screen 0.10\n");
     fprintf(gp, "set rmargin screen 0.90\n");
     fprintf(gp, "set tmargin screen 0.90\n");
     fprintf(gp, "set bmargin screen 0.15\n");
 
-    fprintf(gp, "set xrange [%lf:%lf]\n", x_min, x_max);
+    fprintf(gp, "set xrange [%.3f:%.3f]\n", x_min, x_max);
     fprintf(gp, "set xlabel '%s'offset 0.0,0\n", xxlabel);
-    fprintf(gp, "set xtics %lf\n", interval);
-    fprintf(gp, "set yrange [%lf:%lf]\n", y_min, y_max);
+    fprintf(gp, "set xtics %.3f\n", interval);
+    fprintf(gp, "set yrange [%.3f:%.3f]\n", y_min, y_max);
     fprintf(gp, "set ylabel '%s'offset 1,0.0\n", yylabel_1);
     fprintf(gp, "set title '%s'\n", label_1);
 
@@ -209,16 +209,16 @@ int summary(char date[], int range)
     fprintf(gp, "set key left top\n");
     fprintf(gp, "set key font ',20'\n");
     fprintf(gp, "set term pngcairo size 1280, 960 font ',24'\n");
-    // fprintf(gp, "set size ratio %lf\n", size);
+    // fprintf(gp, "set size ratio %.3f\n", size);
 
     fprintf(gp, "set lmargin screen 0.10\n");
     fprintf(gp, "set rmargin screen 0.90\n");
     fprintf(gp, "set tmargin screen 0.90\n");
     fprintf(gp, "set bmargin screen 0.15\n");
 
-    fprintf(gp, "set xrange [%lf:%lf]\n", x_min, x_max);
+    fprintf(gp, "set xrange [%.3f:%.3f]\n", x_min, x_max);
     fprintf(gp, "set xlabel '%s'offset 0.0,0\n", xxlabel);
-    fprintf(gp, "set xtics %lf\n", interval);
+    fprintf(gp, "set xtics %.3f\n", interval);
     fprintf(gp, "set yrange [0.6:0.7]\n");
     fprintf(gp, "set ylabel '%s'offset 1,0.0\n", yylabel_2);
     fprintf(gp, "set ytics 0.02\n");

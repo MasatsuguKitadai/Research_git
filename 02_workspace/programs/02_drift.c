@@ -68,7 +68,7 @@ int drift(char date[], char angle[])
 
     while ((fscanf(fp, "%lf, %lf, %lf", &ch0, &ch1, &ch2)) != EOF)
     {
-        // printf("%lf, %lf, %lf\n", ch0, ch1, ch2);
+        // printf("%.3f, %.3f, %.3f\n", ch0, ch1, ch2);
         value[i][0] = ch0;
         value[i][1] = ch1;
         value[i][2] = ch2;
@@ -114,7 +114,7 @@ int drift(char date[], char angle[])
 
         count = count + 175;
         average_time[i] = count - 250;
-        // printf("[%d]\t%lf\t%lf\t%lf\n", average_time[i], average_value[i][0], average_value[i][1], average_value[i][2]);
+        // printf("[%d]\t%.3f\t%.3f\t%.3f\n", average_time[i], average_value[i][0], average_value[i][1], average_value[i][2]);
         // printf("%d\n", average_time[i]);
     }
 
@@ -136,7 +136,7 @@ int drift(char date[], char angle[])
     // 関数 f
     for (i = 0; i < 3; i++)
     {
-        // printf("[%d]\tf(x) = %lf x + %lf\n", i, a[i], b[i]);
+        // printf("[%d]\tf(x) = %.3f x + %.3f\n", i, a[i], b[i]);
     }
 
     // 変数の宣言
@@ -157,7 +157,7 @@ int drift(char date[], char angle[])
         f[j][0] = a[0] * j + b[0];
         f[j][1] = a[1] * j + b[1];
         f[j][2] = a[2] * j + b[2];
-        // printf("[%d]\t%lf\t%lf\n", j, f[j][1], f[j][2]);
+        // printf("[%d]\t%.3f\t%.3f\n", j, f[j][1], f[j][2]);
     }
 
     // 補正値の計算
@@ -166,7 +166,7 @@ int drift(char date[], char angle[])
         c[j][0] = value[j][0] - f[j][0];
         c[j][1] = value[j][1] - f[j][1];
         c[j][2] = value[j][2] - f[j][2];
-        // printf("[%d]\t%lf\t%lf\n", j, c[j][1], c[j][2]);
+        // printf("[%d]\t%.3f\t%.3f\n", j, c[j][1], c[j][2]);
     }
 
     // 書き出し
@@ -262,7 +262,7 @@ int drift(char date[], char angle[])
     fprintf(gp, "set key right top\n");
     fprintf(gp, "set key font ',20'\n");
     fprintf(gp, "set term pngcairo size 1280, 960 font ',24'\n");
-    // fprintf(gp, "set size ratio %lf\n", size);
+    // fprintf(gp, "set size ratio %.3f\n", size);
 
     fprintf(gp, "set lmargin screen 0.10\n");
     fprintf(gp, "set rmargin screen 0.90\n");
@@ -271,7 +271,7 @@ int drift(char date[], char angle[])
 
     fprintf(gp, "set xrange [%d:%d]\n", x_min, x_max);
     fprintf(gp, "set xlabel '%s'offset 0.0,0\n", xxlabel);
-    fprintf(gp, "set yrange [%lf:%lf]\n", y_min_loadcell, y_max_loadcell);
+    fprintf(gp, "set yrange [%.3f:%.3f]\n", y_min_loadcell, y_max_loadcell);
     fprintf(gp, "set ylabel '%s'offset 0.5,0.0\n", yylabel);
     fprintf(gp, "set title '%s '\n", label_loadcell);
 
@@ -288,7 +288,7 @@ int drift(char date[], char angle[])
     fprintf(gp, "set key right top\n");
     fprintf(gp, "set key font ',20'\n");
     fprintf(gp, "set term pngcairo size 1280, 960 font ',24'\n");
-    // fprintf(gp, "set size ratio %lf\n", size);
+    // fprintf(gp, "set size ratio %.3f\n", size);
 
     fprintf(gp, "set lmargin screen 0.10\n");
     fprintf(gp, "set rmargin screen 0.90\n");
@@ -297,7 +297,7 @@ int drift(char date[], char angle[])
 
     fprintf(gp, "set xrange [%d:%d]\n", x_min, x_max);
     fprintf(gp, "set xlabel '%s'offset 0.0,0\n", xxlabel);
-    fprintf(gp, "set yrange [%lf:%lf]\n", y_min, y_max);
+    fprintf(gp, "set yrange [%.3f:%.3f]\n", y_min, y_max);
     fprintf(gp, "set ylabel '%s'offset 0.5,0.0\n", yylabel);
     fprintf(gp, "set title '%s '\n", label_drag);
 
@@ -314,7 +314,7 @@ int drift(char date[], char angle[])
     fprintf(gp, "set key right top\n");
     fprintf(gp, "set key font ',20'\n");
     fprintf(gp, "set term pngcairo size 1280, 960 font ',24'\n");
-    // fprintf(gp, "set size ratio %lf\n", size);
+    // fprintf(gp, "set size ratio %.3f\n", size);
 
     fprintf(gp, "set lmargin screen 0.10\n");
     fprintf(gp, "set rmargin screen 0.90\n");
@@ -323,7 +323,7 @@ int drift(char date[], char angle[])
 
     fprintf(gp, "set xrange [%d:%d]\n", x_min, x_max);
     fprintf(gp, "set xlabel '%s'offset 0.0,0\n", xxlabel);
-    fprintf(gp, "set yrange [%lf:%lf]\n", y_min, y_max);
+    fprintf(gp, "set yrange [%.3f:%.3f]\n", y_min, y_max);
     fprintf(gp, "set ylabel '%s'offset 0.5,0.0\n", yylabel);
     fprintf(gp, "set title '%s '\n", label_lift);
 
@@ -337,7 +337,6 @@ int drift(char date[], char angle[])
     pclose(gp);
 
     printf("02\t[%s]\tsuccess\n", angle);
-
 }
 
 // int main()
