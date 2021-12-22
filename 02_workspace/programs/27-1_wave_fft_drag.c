@@ -151,10 +151,15 @@ int calculate_drag_theory(char date[], int range)
 
     mkdir(directoryname_plot, S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IXOTH | S_IXOTH);
 
-    char filename_plot[100];
+    char filename_plot_1[100];
+    char filename_plot_2[100];
+    char filename_dat_2[100];
 
     sprintf(filename_dat, "../result/%s/dat/27-1_fft-drag-theory/27-1.dat", date);
-    sprintf(filename_plot, "../result/%s/plot/27/27-1_fft-drag.png", date);
+    sprintf(filename_dat_2, "../result/%s/dat/07-1_fft-drag/07-1.dat", date);
+
+    sprintf(filename_plot_1, "../result/%s/plot/27/27-1_fft-drag.png", date);
+    sprintf(filename_plot_2, "../result/%s/plot/27/27-3_fft-drag_summary.png", date);
 
     /*****************************************************************************/
 
@@ -186,7 +191,7 @@ int calculate_drag_theory(char date[], int range)
 
     fprintf(gp, "set terminal pngcairo enhanced font 'Times New Roman,15' \n");
 
-    fprintf(gp, "set output '%s'\n", filename_plot);
+    fprintf(gp, "set output '%s'\n", filename_plot_1);
     // fprintf(gp, "set multiplot\n");
     fprintf(gp, "set key left top\n");
     fprintf(gp, "set key font ',20'\n");
@@ -206,6 +211,30 @@ int calculate_drag_theory(char date[], int range)
 
     // fprintf(gp, "set samples 10000\n");
     fprintf(gp, "plot '%s' using 1:2 with lines lc 'black' notitle\n", filename_dat);
+    fflush(gp); // Clean up Data
+
+    /*****************************************************************************/
+
+    fprintf(gp, "set output '%s'\n", filename_plot_2);
+    // fprintf(gp, "set multiplot\n");
+    fprintf(gp, "set key left top\n");
+    fprintf(gp, "set key font ',20'\n");
+    fprintf(gp, "set term pngcairo size 1280, 960 font ',24'\n");
+    // fprintf(gp, "set size ratio %lf\n", size);
+
+    fprintf(gp, "set lmargin screen 0.10\n");
+    fprintf(gp, "set rmargin screen 0.90\n");
+    fprintf(gp, "set tmargin screen 0.90\n");
+    fprintf(gp, "set bmargin screen 0.15\n");
+
+    fprintf(gp, "set xrange [%lf:%d]\n", x_min, x_max);
+    fprintf(gp, "set xlabel '%s'offset 0.0,0\n", xxlabel);
+    fprintf(gp, "set yrange [%lf:%lf]\n", y_min, y_max);
+    fprintf(gp, "set ylabel '%s'offset 0,0.0\n", yylabel);
+    fprintf(gp, "set title '%s (Drag)'\n", label);
+
+    // fprintf(gp, "set samples 10000\n");
+    fprintf(gp, "plot '%s' using 1:2 with lines lc 'blue' lw 5 title 'Mesured', '%s' using 1:2 with lines lc 'royalblue' lw 5 title 'Theorical'\n", filename_dat_2, filename_dat);
     fflush(gp); // Clean up Data
 
     fprintf(gp, "exit\n"); // Quit gnuplot

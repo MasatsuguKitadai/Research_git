@@ -20,15 +20,15 @@ FILE *fp, *fp_csv, *fp_dat, *gp;
 
 /*********************************   MAIN   *********************************/
 
-int calculate_lift_theory(char date[], int range)
+int calculate_lift(char date[], int range)
 {
     /*****************************************************************************/
     // ディレクトリの作成
     char directoryname_csv[100];
     char directoryname_dat[100];
 
-    sprintf(directoryname_dat, "../result/%s/dat/27-2_fft-lift-theory", date);
-    sprintf(directoryname_csv, "../result/%s/csv/27-2_fft-lift-theory", date);
+    sprintf(directoryname_dat, "../result/%s/dat/07-2_fft-lift", date);
+    sprintf(directoryname_csv, "../result/%s/csv/07-2_fft-lift", date);
 
     mkdir(directoryname_dat, S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IXOTH | S_IXOTH);
     mkdir(directoryname_csv, S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IXOTH | S_IXOTH);
@@ -38,22 +38,20 @@ int calculate_lift_theory(char date[], int range)
     char filename_csv[100];
     char filename_dat[100];
 
-    sprintf(filename_read, "../result/%s/csv/20_adjust-value/20.csv", date);
-    sprintf(filename_csv, "../result/%s/csv/27-2_fft-lift-theory/27-2.csv", date);
-    sprintf(filename_dat, "../result/%s/dat/27-2_fft-lift-theory/27-2.dat", date);
+    sprintf(filename_read, "../result/%s/csv/05-1_summary/05-1.csv", date);
+    sprintf(filename_csv, "../result/%s/csv/07-2_fft-lift/07-2.csv", date);
+    sprintf(filename_dat, "../result/%s/dat/07-2_fft-lift/07-2.dat", date);
 
     /*****************************************************************************/
 
-    // sin波の配列
-    double angle[3600];
-    double wave_lift[3600];
-
     // 変数の作成
+
     double value[range], value_i[range];
 
     // ファイルの読み込み (dat データ) ・格納
 
     int i;
+    double buf;
     double ch0, ch1, ch2;
 
     for (i = 0; i < range; i++)
@@ -61,6 +59,8 @@ int calculate_lift_theory(char date[], int range)
         value[i] = 0;
         value_i[i] = 0;
     }
+
+    i = 0;
 
     fp = fopen(filename_read, "r");
 
@@ -72,38 +72,14 @@ int calculate_lift_theory(char date[], int range)
 
     // printf("check\n");
 
-    i = 0;
-
-    while ((fscanf(fp, "%lf,%lf,%lf", &ch0, &ch1, &ch2)) != EOF)
+    while ((fscanf(fp, "%lf, %lf, %lf, %lf", &buf, &ch0, &ch1, &ch2)) != EOF)
     {
-        angle[i] = ch0;
-        wave_lift[i] = ch2;
+        // printf("[%d]\t%lf\t%lf\t%lf\n", buf, ch0, ch1, ch2);
+        value[i] = ch1;
         i = i + 1;
     }
 
     fclose(fp);
-
-    int split = 3600 / range;
-
-    /*****************************************************************************/
-
-    // ファイルの読み込み (dat データ) ・格納
-
-    int buf;
-    int count = 0;
-
-    for (i = 0; i < range; i++)
-    {
-        value[i] = 0;
-        value_i[i] = 0;
-    }
-
-    for (i = 0; i < range; i++)
-    {
-        count = i * split;
-        value[i] = wave_lift[count];
-        // printf("angle =\t%d\tvalue[%d] =\t%lf\n", count, i, value[i]);
-    }
 
     // FFTの適用
 
@@ -118,6 +94,15 @@ int calculate_lift_theory(char date[], int range)
 
     for (i = 0; i < range; i++)
     {
+        if (value[i] == -0)
+        {
+            value[i] = -1 * value[i];
+        }
+        else if (value_i[i] == -0)
+        {
+            value_i[i] = -1 * value_i[i];
+        }
+
         ps = value[i] * value[i] + value_i[i] * value_i[i];       /* パワースペクトル  */
         as = sqrt(value[i] * value[i] + value_i[i] * value_i[i]); /* 振幅スペクトル  */
         // fq = (double)i / (dt * (double)range);
@@ -138,14 +123,14 @@ int calculate_lift_theory(char date[], int range)
     // ディレクトリの作成
     char directoryname_plot[100];
 
-    sprintf(directoryname_plot, "../result/%s/plot/27", date);
+    sprintf(directoryname_plot, "../result/%s/plot/07", date);
 
     mkdir(directoryname_plot, S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IXOTH | S_IXOTH);
 
     char filename_plot[100];
 
-    sprintf(filename_dat, "../result/%s/dat/27-2_fft-lift-theory/27-2.dat", date);
-    sprintf(filename_plot, "../result/%s/plot/27/27-2_fft-lift.png", date);
+    sprintf(filename_dat, "../result/%s/dat/07-2_fft-lift/07-2.dat", date);
+    sprintf(filename_plot, "../result/%s/plot/07/07-2_fft-lift.png", date);
 
     /*****************************************************************************/
 
@@ -203,12 +188,11 @@ int calculate_lift_theory(char date[], int range)
 
     pclose(gp);
 
-    printf("27-2\t\tsuccess\n");
+    printf("07-2\t\tsuccess\n");
 }
 
 // int main()
 // {
-//     calculate_lift_theory("test-fft", 16);
-
+//     calculate_lift("test-fft", 16);
 //     return (0);
 // }

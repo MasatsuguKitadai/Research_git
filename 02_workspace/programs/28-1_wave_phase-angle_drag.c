@@ -116,7 +116,7 @@ int phase_angle_drag_theory(char date[])
 
     double difference = 0;
     difference = degree - degree_result;
-    printf("\nDifference =\t%lf\n", difference);
+    printf("Difference =\t%lf [deg]\n\n", difference);
 
     /*****************************************************************************/
 

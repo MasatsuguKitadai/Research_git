@@ -5,22 +5,22 @@ DATE    :
 ******************************************************************************/
 
 #include <sys/stat.h>
-#include "../programs_data/00_fft.c"
-#include "../programs_data/01_reverse.c"
-#include "../programs_data/02_drift.c"
-#include "../programs_data/03_average.c"
-#include "../programs_data/04_linear.c"
-#include "../programs_data/05_summary.c"
-#include "../programs_data/06_evaluation.c"
-#include "../programs_data/07-1_fft_drag.c"
-#include "../programs_data/07-2_fft_lift.c"
-#include "../programs_data/08-1_phase-angle_drag.c"
-#include "../programs_data/08-2_phase-angle_lift.c"
-#include "../programs_data/20_wave-adjuster.c"
-#include "../programs_data/27-1_wave_fft_drag.c"
-#include "../programs_data/27-2_wave_fft_lift.c"
-#include "../programs_data/28-1_wave_phase-angle_drag.c"
-#include "../programs_data/28-2_wave_phase-angle_lift.c"
+#include "../programs/00_fft.c"
+#include "../programs/01_reverse.c"
+#include "../programs/02_drift.c"
+#include "../programs/03_average.c"
+#include "../programs/04_linear.c"
+#include "../programs/05_summary.c"
+#include "../programs/06_evaluation.c"
+#include "../programs/07-1_fft_drag.c"
+#include "../programs/07-2_fft_lift.c"
+#include "../programs/08-1_phase-angle_drag.c"
+#include "../programs/08-2_phase-angle_lift.c"
+#include "../programs/20_wave-adjuster.c"
+#include "../programs/27-1_wave_fft_drag.c"
+#include "../programs/27-2_wave_fft_lift.c"
+#include "../programs/28-1_wave_phase-angle_drag.c"
+#include "../programs/28-2_wave_phase-angle_lift.c"
 
 /*********************************   MAIN   *********************************/
 int directory(char date[])

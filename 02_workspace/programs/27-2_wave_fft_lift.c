@@ -9,26 +9,26 @@ DATE    :
 #include <sys/stat.h>
 // #include "00_fft.c"
 
+// 円周率の定義
+// double pi = 4 * atan(1.0);
+
 char filename_read[100];
 char filename_dat[100];
 char filename_csv[100];
-
-// 円周率の定義
-// double pi = 4 * atan(1.0);
 
 FILE *fp, *fp_csv, *fp_dat, *gp;
 
 /*********************************   MAIN   *********************************/
 
-int calculate_drag(char date[], int range)
+int calculate_lift_theory(char date[], int range)
 {
     /*****************************************************************************/
     // ディレクトリの作成
-    char directoryname_dat[100];
     char directoryname_csv[100];
+    char directoryname_dat[100];
 
-    sprintf(directoryname_dat, "../result/%s/dat/07-1_fft-drag", date);
-    sprintf(directoryname_csv, "../result/%s/csv/07-1_fft-drag", date);
+    sprintf(directoryname_dat, "../result/%s/dat/27-2_fft-lift-theory", date);
+    sprintf(directoryname_csv, "../result/%s/csv/27-2_fft-lift-theory", date);
 
     mkdir(directoryname_dat, S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IXOTH | S_IXOTH);
     mkdir(directoryname_csv, S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IXOTH | S_IXOTH);
@@ -38,20 +38,22 @@ int calculate_drag(char date[], int range)
     char filename_csv[100];
     char filename_dat[100];
 
-    sprintf(filename_read, "../result/%s/csv/05-1_summary/05-1.csv", date);
-    sprintf(filename_csv, "../result/%s/csv/07-1_fft-drag/07-1.csv", date);
-    sprintf(filename_dat, "../result/%s/dat/07-1_fft-drag/07-1.dat", date);
+    sprintf(filename_read, "../result/%s/csv/20_adjust-value/20.csv", date);
+    sprintf(filename_csv, "../result/%s/csv/27-2_fft-lift-theory/27-2.csv", date);
+    sprintf(filename_dat, "../result/%s/dat/27-2_fft-lift-theory/27-2.dat", date);
 
     /*****************************************************************************/
 
-    // 変数の作成
+    // sin波の配列
+    double angle[3600];
+    double wave_lift[3600];
 
+    // 変数の作成
     double value[range], value_i[range];
 
     // ファイルの読み込み (dat データ) ・格納
 
     int i;
-    double buf;
     double ch0, ch1, ch2;
 
     for (i = 0; i < range; i++)
@@ -59,8 +61,6 @@ int calculate_drag(char date[], int range)
         value[i] = 0;
         value_i[i] = 0;
     }
-
-    i = 0;
 
     fp = fopen(filename_read, "r");
 
@@ -72,14 +72,38 @@ int calculate_drag(char date[], int range)
 
     // printf("check\n");
 
-    while ((fscanf(fp, "%lf, %lf, %lf, %lf", &buf, &ch0, &ch1, &ch2)) != EOF)
+    i = 0;
+
+    while ((fscanf(fp, "%lf,%lf,%lf", &ch0, &ch1, &ch2)) != EOF)
     {
-        // printf("[%d]\t%lf\t%lf\t%lf\n", buf, ch0, ch1, ch2);
-        value[i] = ch0;
+        angle[i] = ch0;
+        wave_lift[i] = ch2;
         i = i + 1;
     }
 
     fclose(fp);
+
+    int split = 3600 / range;
+
+    /*****************************************************************************/
+
+    // ファイルの読み込み (dat データ) ・格納
+
+    int buf;
+    int count = 0;
+
+    for (i = 0; i < range; i++)
+    {
+        value[i] = 0;
+        value_i[i] = 0;
+    }
+
+    for (i = 0; i < range; i++)
+    {
+        count = i * split;
+        value[i] = wave_lift[count];
+        // printf("angle =\t%d\tvalue[%d] =\t%lf\n", count, i, value[i]);
+    }
 
     // FFTの適用
 
@@ -94,20 +118,10 @@ int calculate_drag(char date[], int range)
 
     for (i = 0; i < range; i++)
     {
-        if (value[i] == -0)
-        {
-            value[i] = -1 * value[i];
-        }
-        else if (value_i[i] == -0)
-        {
-            value_i[i] = -1 * value_i[i];
-        }
-
         ps = value[i] * value[i] + value_i[i] * value_i[i];       /* パワースペクトル  */
         as = sqrt(value[i] * value[i] + value_i[i] * value_i[i]); /* 振幅スペクトル  */
         // fq = (double)i / (dt * (double)range);
         fq = i;
-
         fprintf(fp_csv, "%d,%lf,%lf,%lf\n", fq, ps, value[i], value_i[i]);
         fprintf(fp_dat, "%d\t%lf\t%lf\t%lf\n", fq, ps, value[i], value_i[i]);
         printf("[%d]\tvalue_Re: %lf \tvalue_Im: %lf\tpw: %lf\tfq :%d\n", i, value[i], value_i[i], ps, fq);
@@ -124,14 +138,19 @@ int calculate_drag(char date[], int range)
     // ディレクトリの作成
     char directoryname_plot[100];
 
-    sprintf(directoryname_plot, "../result/%s/plot/07", date);
+    sprintf(directoryname_plot, "../result/%s/plot/27", date);
 
     mkdir(directoryname_plot, S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IXOTH | S_IXOTH);
 
-    char filename_plot[100];
+    char filename_plot_1[100];
+    char filename_plot_2[100];
+    char filename_dat_2[100];
 
-    sprintf(filename_dat, "../result/%s/dat/07-1_fft-drag/07-1.dat", date);
-    sprintf(filename_plot, "../result/%s/plot/07/07-1.png", date);
+    sprintf(filename_dat, "../result/%s/dat/27-2_fft-lift-theory/27-2.dat", date);
+    sprintf(filename_dat_2, "../result/%s/dat/07-2_fft-lift/07-2.dat", date);
+
+    sprintf(filename_plot_1, "../result/%s/plot/27/27-2_fft-lift.png", date);
+    sprintf(filename_plot_2, "../result/%s/plot/27/27-4_fft-lift_summary.png", date);
 
     /*****************************************************************************/
 
@@ -163,7 +182,7 @@ int calculate_drag(char date[], int range)
 
     fprintf(gp, "set terminal pngcairo enhanced font 'Times New Roman,15' \n");
 
-    fprintf(gp, "set output '%s'\n", filename_plot);
+    fprintf(gp, "set output '%s'\n", filename_plot_1);
     // fprintf(gp, "set multiplot\n");
     fprintf(gp, "set key left top\n");
     fprintf(gp, "set key font ',20'\n");
@@ -179,21 +198,46 @@ int calculate_drag(char date[], int range)
     fprintf(gp, "set xlabel '%s'offset 0.0,0\n", xxlabel);
     fprintf(gp, "set yrange [%lf:%lf]\n", y_min, y_max);
     fprintf(gp, "set ylabel '%s'offset 0,0.0\n", yylabel);
-    fprintf(gp, "set title '%s (drag)'\n", label);
+    fprintf(gp, "set title '%s (lift)'\n", label);
 
     // fprintf(gp, "set samples 10000\n");
     fprintf(gp, "plot '%s' using 1:2 with lines lc 'black' notitle\n", filename_dat);
+    fflush(gp); // Clean up Data
+
+    /*****************************************************************************/
+
+    fprintf(gp, "set output '%s'\n", filename_plot_2);
+    // fprintf(gp, "set multiplot\n");
+    fprintf(gp, "set key left top\n");
+    fprintf(gp, "set key font ',20'\n");
+    fprintf(gp, "set term pngcairo size 1280, 960 font ',24'\n");
+    // fprintf(gp, "set size ratio %lf\n", size);
+
+    fprintf(gp, "set lmargin screen 0.10\n");
+    fprintf(gp, "set rmargin screen 0.90\n");
+    fprintf(gp, "set tmargin screen 0.90\n");
+    fprintf(gp, "set bmargin screen 0.15\n");
+
+    fprintf(gp, "set xrange [%lf:%d]\n", x_min, x_max);
+    fprintf(gp, "set xlabel '%s'offset 0.0,0\n", xxlabel);
+    fprintf(gp, "set yrange [%lf:%lf]\n", y_min, y_max);
+    fprintf(gp, "set ylabel '%s'offset 0,0.0\n", yylabel);
+    fprintf(gp, "set title '%s (Lift)'\n", label);
+
+    // fprintf(gp, "set samples 10000\n");
+    fprintf(gp, "plot '%s' using 1:2 with lines lc 'red' lw 5 title 'Measured', '%s' using 1:2 with lines lc 'orange' lw 5 title 'Theorical'\n", filename_dat_2, filename_dat);
     fflush(gp); // Clean up Data
 
     fprintf(gp, "exit\n"); // Quit gnuplot
 
     pclose(gp);
 
-    printf("07-1\t\tsuccess\n");
+    printf("27-2\t\tsuccess\n");
 }
 
 // int main()
 // {
-//     calculate_drag("test-fft", 16);
+//     calculate_lift_theory("test-fft", 16);
+
 //     return (0);
 // }

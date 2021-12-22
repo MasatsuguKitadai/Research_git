@@ -9,26 +9,26 @@ DATE    :
 #include <sys/stat.h>
 // #include "00_fft.c"
 
-// 円周率の定義
-// double pi = 4 * atan(1.0);
-
 char filename_read[100];
 char filename_dat[100];
 char filename_csv[100];
+
+// 円周率の定義
+// double pi = 4 * atan(1.0);
 
 FILE *fp, *fp_csv, *fp_dat, *gp;
 
 /*********************************   MAIN   *********************************/
 
-int calculate_lift(char date[], int range)
+int calculate_drag(char date[], int range)
 {
     /*****************************************************************************/
     // ディレクトリの作成
-    char directoryname_csv[100];
     char directoryname_dat[100];
+    char directoryname_csv[100];
 
-    sprintf(directoryname_dat, "../result/%s/dat/07-2_fft-lift", date);
-    sprintf(directoryname_csv, "../result/%s/csv/07-2_fft-lift", date);
+    sprintf(directoryname_dat, "../result/%s/dat/07-1_fft-drag", date);
+    sprintf(directoryname_csv, "../result/%s/csv/07-1_fft-drag", date);
 
     mkdir(directoryname_dat, S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IXOTH | S_IXOTH);
     mkdir(directoryname_csv, S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IXOTH | S_IXOTH);
@@ -39,8 +39,8 @@ int calculate_lift(char date[], int range)
     char filename_dat[100];
 
     sprintf(filename_read, "../result/%s/csv/05-1_summary/05-1.csv", date);
-    sprintf(filename_csv, "../result/%s/csv/07-2_fft-lift/07-2.csv", date);
-    sprintf(filename_dat, "../result/%s/dat/07-2_fft-lift/07-2.dat", date);
+    sprintf(filename_csv, "../result/%s/csv/07-1_fft-drag/07-1.csv", date);
+    sprintf(filename_dat, "../result/%s/dat/07-1_fft-drag/07-1.dat", date);
 
     /*****************************************************************************/
 
@@ -75,7 +75,7 @@ int calculate_lift(char date[], int range)
     while ((fscanf(fp, "%lf, %lf, %lf, %lf", &buf, &ch0, &ch1, &ch2)) != EOF)
     {
         // printf("[%d]\t%lf\t%lf\t%lf\n", buf, ch0, ch1, ch2);
-        value[i] = ch1;
+        value[i] = ch0;
         i = i + 1;
     }
 
@@ -107,6 +107,7 @@ int calculate_lift(char date[], int range)
         as = sqrt(value[i] * value[i] + value_i[i] * value_i[i]); /* 振幅スペクトル  */
         // fq = (double)i / (dt * (double)range);
         fq = i;
+
         fprintf(fp_csv, "%d,%lf,%lf,%lf\n", fq, ps, value[i], value_i[i]);
         fprintf(fp_dat, "%d\t%lf\t%lf\t%lf\n", fq, ps, value[i], value_i[i]);
         printf("[%d]\tvalue_Re: %lf \tvalue_Im: %lf\tpw: %lf\tfq :%d\n", i, value[i], value_i[i], ps, fq);
@@ -129,8 +130,8 @@ int calculate_lift(char date[], int range)
 
     char filename_plot[100];
 
-    sprintf(filename_dat, "../result/%s/dat/07-2_fft-lift/07-2.dat", date);
-    sprintf(filename_plot, "../result/%s/plot/07/07-2.png", date);
+    sprintf(filename_dat, "../result/%s/dat/07-1_fft-drag/07-1.dat", date);
+    sprintf(filename_plot, "../result/%s/plot/07/07-1_fft-drag.png", date);
 
     /*****************************************************************************/
 
@@ -178,7 +179,7 @@ int calculate_lift(char date[], int range)
     fprintf(gp, "set xlabel '%s'offset 0.0,0\n", xxlabel);
     fprintf(gp, "set yrange [%lf:%lf]\n", y_min, y_max);
     fprintf(gp, "set ylabel '%s'offset 0,0.0\n", yylabel);
-    fprintf(gp, "set title '%s (lift)'\n", label);
+    fprintf(gp, "set title '%s (drag)'\n", label);
 
     // fprintf(gp, "set samples 10000\n");
     fprintf(gp, "plot '%s' using 1:2 with lines lc 'black' notitle\n", filename_dat);
@@ -188,11 +189,11 @@ int calculate_lift(char date[], int range)
 
     pclose(gp);
 
-    printf("07-2\t\tsuccess\n");
+    printf("07-1\t\tsuccess\n");
 }
 
 // int main()
 // {
-//     calculate_lift("test-fft", 16);
+//     calculate_drag("test-fft", 16);
 //     return (0);
 // }
