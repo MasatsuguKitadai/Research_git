@@ -101,7 +101,7 @@ lineskip=-0.5ex
 \subsection{実験条件}
 今回行った模擬実験の条件は以下の図の通りである．
 なお，測定角度については，処理プログラムにてFFTを適用する関係上，
-2の乗数倍である16とした．
+2の乗数の値となる16とした．
 \begin{table}[htbp]
     \begin{center}
         \begin{tabular}{|p{30mm}|p{20mm}|p{30}|}
@@ -121,7 +121,7 @@ lineskip=-0.5ex
             \hline
             \multicolumn{1}{|c|}{\textgt{項目}} & \multicolumn{1}{|c|}{\textgt{条件数}} & \multicolumn{1}{|c|}{\textgt{備考}}\\ \hline
             \multicolumn{1}{|c|}{試験片}                    & \multicolumn{1}{|c|}{3} & \multicolumn{1}{|c|}{\textgt{円筒・円柱・角柱}}  \\ \hline
-            \multicolumn{1}{|c|}{測定角度}                    & \multicolumn{1}{|c|}{$x$} & \multicolumn{1}{|c|}{\textgt{11.25度ごとの測定}}  \\ \hline
+            \multicolumn{1}{|c|}{測定角度}                    & \multicolumn{1}{|c|}{32} & \multicolumn{1}{|c|}{\textgt{11.25度ごとの測定}}  \\ \hline
             \multicolumn{1}{|c|}{試行回数}                    & \multicolumn{1}{|c|}{5回程度} & \multicolumn{1}{|c|}{\textgt{検討中}}  \\ \hline
         \end{tabular}
     \end{center}
@@ -133,7 +133,7 @@ lineskip=-0.5ex
         \item ロードセルをマイクロステージを用いて\\
               0.03 [mm] ずつ移動させ，
               作用力を加え電圧を測定する
-        \item 計4回(0.12[mm])移動させる
+        \item 基準を0[mm]として，0.03[mm]，0.06[mm]，0.09[mm]，0.12[mm]の計4回移動させる
     \end{itemize}
 
 \subsection{測定準備}
@@ -170,13 +170,13 @@ lineskip=-0.5ex
 \end{figure}
 
 \section{データ処理プログラムの作成}
-模擬実験の実験を一定の手順で行うことにより，
+実験を一定の手順で行うことにより，
 プログラムを複数のデータに一斉に適用することができる．\\
 
 \subsection{データ処理の手順}
 実験の目的は，実験装置の出力電圧から作用力へ正しく変換することである．
 % その目的を達成するにあたって以下の2項目を達成する必要がある．
-この目的を達成するために，以下のような手順でプログラムを作成した．
+この目的を達成するために，以下のような処理手順のプログラムを作成した．
 % \begin{enumerate}[(1)]
 %     \item 現在使用している実験装置の特徴を理解する
 %     \item 実際の作用力と実験装置の出力電圧の対応関係を明らかにする
@@ -212,11 +212,11 @@ lineskip=-0.5ex
     \footnotesize
     \begin{center}
         \includegraphics[width=78mm]{../images_2/02-1_loadcell/02_loadcell-drift_0.png}
-        \caption{Drift correction 0 [deg] (loadcell)}
+        \caption{Drift correction 0.0 [deg] (loadcell)}
         \includegraphics[width=78mm]{../images_2/02-2_drag/02_drag-drift_0.png}
-        \caption{Drift correction 0 [deg] (drag)}
+        \caption{Drift correction 0.0 [deg] (drag)}
         \includegraphics[width=78mm]{../images_2/02-3_lift/02_lift-drift_0.png}
-        \caption{Drift correction 0 [deg] (lift)}
+        \caption{Drift correction 0.0 [deg] (lift)}
     \end{center}
 \end{figure}
 
@@ -231,11 +231,11 @@ lineskip=-0.5ex
     \footnotesize
     \begin{center}
         \includegraphics[width=80mm]{../images_2/03-1_loadcell/03_loadcell_average_0.png}
-        \caption{Acting force average 0 [deg] (loadcell)}
+        \caption{Acting force average 0.0 [deg] (loadcell)}
         \includegraphics[width=80mm]{../images_2/03-2_drag/03_drag_average_0.png}
-        \caption{Acting force average 0 [deg] (drag)}
+        \caption{Acting force average 0.0 [deg] (drag)}
         \includegraphics[width=80mm]{../images_2/03-3_lift/03_lift_average_0.png}
-        \caption{Acting force average 0 [deg] (lift)}
+        \caption{Acting force average 0.0 [deg] (lift)}
     \end{center}
 \end{figure}
 
@@ -296,7 +296,7 @@ lineskip=-0.5ex
 \newpage
 
 また，それぞれの角度に対する傾きと正味出力電圧の値について
-以下のTable.14に示す．
+以下のTable.1に示す．
 
 \begin{table}[htbp]
     \begin{center}
@@ -473,7 +473,7 @@ Table 4をみると，実験で使用した回転台の回転座標を基準と�
               \item [$\bullet$] 模擬実験を行い，今後の実験手順を検討・決定した
               \item [$\bullet$] 実験結果の処理プログラムを作成した
               \item [$\bullet$] 実験結果から，作用力と測定装置の設置角度を算出することができた
-              \item [$\bullet$] 実験装置に取り付けられたひずみセンサの方向に大きな問題がないことが確認できた
+              \item [$\bullet$] 実験装置に取り付けられたひずみセンサの取付方向に大きな問題がないことが確認できた
           \end{itemize}
           \vskip\baselineskip
     \item [$\blacksquare$] 1月の予定
