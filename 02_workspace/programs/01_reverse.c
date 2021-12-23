@@ -151,7 +151,11 @@ int reverse(char date[], char angle[])
 
     double size;
 
-    sprintf(label, "%s", angle);
+    double angle_2 = 0;
+
+    angle_2 = atoi(angle);
+    angle_2 = angle_2 / 10;
+    sprintf(label, "%.1f", angle_2);
 
     // size
     size = 1;

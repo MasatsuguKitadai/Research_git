@@ -5,7 +5,7 @@
 \setlength{\textwidth}{18cm}
 \setlength{\textheight}{26cm}
 
-\usepackage[top=15truemm,bottom=25truemm,left=20truemm,right=20truemm]{geometry}
+\usepackage[top=13truemm,bottom=20truemm,left=15truemm,right=15truemm]{geometry}
 \usepackage[latin1]{inputenc}
 \usepackage{amsmath}
 \usepackage{amsfonts}
@@ -62,7 +62,7 @@ lineskip=-0.5ex
 
 \setcounter{tocdepth}{3}
 
-\author{来代 勝胤}
+\author{来代 勝胤 / Masatsugu KITADAI}
 \title{令和3年度 12月度 報告書}
 \date{2021/12/24}
 
@@ -72,631 +72,414 @@ lineskip=-0.5ex
 \maketitle
 \section*{報告内容}
 \begin{enumerate}[1.]
-    \item 校正実験の再実施
-    \item オフセット値の考慮
-    \item 卒業研究について
-    \item 実験装置の製作
-    \item 実験結果
-    \item 今月の進捗と12月の予定
+    \item 進捗状況
+    \item 模擬実験の実施
+    \item データ処理プログラムの作成
+    \item プログラムの適用結果
+    \item 今月の進捗と今後の予定
 \end{enumerate}
 
-\section{校正実験の再実施}
-ロードセルを用いた校正実験において，
-微小な作用力が加わる範囲でロードセルの出力電圧に
-非線形領域が存在する懸念があったため，
-微小な作用力による出力電圧の変化を調べるための校正実験を行った．
+\section{進捗状況}
+今月は，形状比較実験を行うにあたり，実験データ処理プログラムの作成を行った．
+また，その有用性を確かめるために現在の実験装置を用いて模擬実験を行った．
+
+\section{模擬実験の実施とその手順}
+今後の実験を行うにあたり，その手順を明確に決定しておく必要がある．
+大量のデータを一度にプログラムで処理できるようにするため，
+測定手順を以下のように定めた．\\
 
 \begin{figure}[htbp]
     \footnotesize
     \begin{center}
-        \includegraphics[width=80mm]{../../2110/images/image_08.png}
-        \caption{Range to use}
-        \vskip\baselineskip
-        \includegraphics[width=30mm]{../../2110/images/image_10.png}
-        \caption{Non-linear region}
-    \end{center}
-\end{figure}
-
-\newpage
-
-\subsection{校正実験(1) ロードセルと荷重の関係}
-以下のFig.1に2021年6月に行ったロードセルの出力電圧と荷重に関する校正実験結果を示す．
-
-\begin{figure}[htbp]
-    \footnotesize
-    \begin{center}
-        \includegraphics[width=60mm]{../images/calibration_1.png}
-        \caption{Previous data of load cell - input force}
-    \end{center}
-\end{figure}
-
-\subsection{校正実験(2) ロードセルとひずみセンサの関係}
-以下のFig.2，Fig.3に2021年6月に行った
-ロードセルとひずみセンサの出力電圧に関する校正実験結果を示す．
-
-\begin{figure}[htbp]
-    \footnotesize
-    \begin{center}
-        \includegraphics[width=62mm]{../images/graph_21119_drag_previous.png}
-        \caption{Previous data of load cell - strain sensors (drag)}
-        \includegraphics[width=62mm]{../images/graph_21119_lift_previous.png}
-        \caption{Previous data of load cell - strain sensors (lift)}
-    \end{center}
-\end{figure}
-
-\newpage
-
-\subsection{再実施結果：抗力}
-以下のFig.4～Fig.6に抗力方向の実験データを示す．
-なお，ロードセルを測定ごとに再設置し実験を行った．
-また，データは，採用点と後部の9点の計10点(10秒間)の平均を用いている．
-\begin{figure}[htbp]
-    \footnotesize
-    \begin{center}
-        \includegraphics[width=68mm]{../images/graph_21119_drag_1.png}
-        \caption{Re-experimental data of drag (1)}
-        \includegraphics[width=68mm]{../images/graph_21119_drag_2.png}
-        \caption{Re-experimental data of drag (2)}
-        \includegraphics[width=68mm]{../images/graph_211111_drag_3.png}
-        \caption{Re-experimental data of drag (3)}
-    \end{center}
-\end{figure}
-
-\newpage
-
-\subsection{再実施結果：揚力}
-以下のFig.7～Fig.9に揚力方向の実験データを示す．
-実験条件及びデータ解析方法は抗力方向と同様である．\\ \\
-\begin{figure}[htbp]
-    \footnotesize
-    \begin{center}
-        \includegraphics[width=68mm]{../images/graph_21119_lift_1.png}
-        \caption{Re-experimental data of lift (1)}
-        \includegraphics[width=68mm]{../images/graph_21119_lift_2.png}
-        \caption{Re-experimental data of lift (2)}
-        \includegraphics[width=68mm]{../images/graph_21119_lift_3.png}
-        \caption{Re-experimental data of lift (3)}
-    \end{center}
-\end{figure}
-
-\newpage
-
-% \subsection{結果分析}
-% 再実験結果(Fig.4～Fig.9)をそれぞれ比較すると，
-% 3回の実験データには同様の傾向が確認できる．\par
-% しかし，以前の実験結果(Fig.2，Fig.3)と比較すると
-% 近似直線の傾きに大きな差異があり，
-% 目的とは異なる方向(例：抗力方向に作用力を加えた場合の揚力方向の出力電圧)
-% の出力についても異なる傾向があることがわかる．
-
-\section{オフセット値の考慮}
-実験結果から，”原点を通らない”近似直線が算出されたことから，
-ロードセルのストレインアンプの出力電圧にオフセットがあると仮定した．
-そのオフセット値を，実験結果のロードセルの出力電圧から差し引いた値を
-採用することとする．
-
-\subsection{オフセット値の算出}
-実験の際にロードセルのストレインアンプは，
-バランスをとった後，0.720付近の値を示すことが多くある．
-そこで，ロードセルに作用力が加えられていない状態の出力電圧を測定し，
-その平均値をオフセット値として採用することとした．
-算出したオフセット値は以下のようになった．
-今回は，60秒間の測定値の平均を採用した．
-\begin{eqnarray*}
-    \mathrm{offset} = -0.728
-\end{eqnarray*}
-
-% \newpage
-
-\subsection{オフセット値の適用}
-算出したオフセット値を以前の実験結果に適用した．\\
-
-\subsubsection*{オフセット値適用前の実験結果}
-以下のFig.12，Fig.13にオフセット値適用前の実験結果を示す．
-\begin{figure}[htbp]
-    \footnotesize
-    \begin{center}
-        \includegraphics[width=72mm]{../images/calibration_2_drag.png}
-        \caption{Result of load cell - strain sensor (drag)}
-        \includegraphics[width=72mm]{../images/calibration_2_lift.png}
-        \caption{Result of load cell - strain sensor (lift)}
-    \end{center}
-\end{figure}
-
-\newpage
-
-\subsubsection*{オフセット値適用後の実験結果}
-以下のFig.14，Fig.15にオフセット値適用後の実験結果を示す．\\
-\begin{figure}[htbp]
-    \footnotesize
-    \begin{center}
-        \includegraphics[width=72mm]{../images/calibration_2_drag_offset.png}
-        \caption{Considered offset value (drag)}
-        \includegraphics[width=72mm]{../images/calibration_2_lift_offset.png}
-        \caption{Considered offset value (lift)}
-    \end{center}
-\end{figure}
-
-\subsubsection*{結果分析}
-
-抗力方向の校正実験結果であるFig.12とFig.14及び，
-揚力方向の校正実験結果であるFig.13とFig.15を比較すると，
-算出したオフセット値を適用することで近似直線の開始点が原点に近づいていることがわかる．
-
-\newpage
-
-\subsection{校正実験結果を用いた換算式の算出}
-同様に，入力荷重とひずみセンサの出力電圧の関係についての結果を以下のFig.16，Fig.17に示す．
-なお，Fig.16はFig.1，Fig14の結果，Fig.17はFig.1，Fig15の結果を利用している．
-\begin{figure}[htbp]
-    \footnotesize
-    \begin{center}
-        \includegraphics[width=72mm]{../images/convert.png}
-        \caption{Correlation between input force and output voltage}
-        \includegraphics[width=72mm]{../images/convert_offset.png}
-        \caption{Considered offset values}
-    \end{center}
-\end{figure}
-
-\vskip\baselineskip
-
-\subsubsection*{結果分析}
-オフセット値の適用前(Fig.16)とオフセット値適用後(Fig.17)を比較すると，
-こちらもオフセット値を適用することで近似直線の開始点が原点に近づいていることが確認できる．
-
-\subsubsection*{結論}
-したがって，ロードセルに用いているストレインアンプについては，
-バランスをとった後でも，実験結果にオフセット値を適用しなければならないことがわかった．\\
-
-\newpage
-
-\section{卒業研究について}
-
-現在のタイヤモデルの作用力測定について，
-荷重と出力電圧の関係を校正実験から得る必要がある．
-ここで，抗力・揚力の2方向からの作用力の関係を
-正しく評価することが非常に困難であり，
-ひずみセンサの取付方法や取付部の断面形状によって
-揚力と抗力に連性が生じている可能性があると考えた．\\
-% したがって，今後の研究テーマとして，
-% ひずみセンサを用いた2方向の作用力の評価方法について取り上げることとした．\\
-
-\subsection{研究目的}
-$x$軸，$y$軸方向に取り付けられたひずみセンサについて，
-作用力の方向による出力電圧への影響・取付部の断面形状の違いによる影響を調べ，
-その関係から作用力実験結果の出力電圧を荷重に適切に変換する方法を模索し提案することを目的とする．\\
-% \par
-% また，その結果から選定された断面形状の取付部を高感度ひずみセンサを用いて作成し，
-% 現在使用しているひずみセンサとの比較実験を行うことで，その改善結果を示す．\\
-
-\subsection{研究方針}
-\begin{enumerate}[(1)]
-    \item 現在の実験装置について，作用力の方向による出力電圧の変化を調べる．
-    \item [$\rightarrow$] 実験装置の特徴を理解し，
-          これまでの出力電圧から作用力への変換過程における問題点を明確にする．
-    \item (1)の実験について，異なる断面形状を用いて出力電圧を測定する．
-    \item [$\rightarrow$] 断面形状の違いがどのような影響を及ぼすのかを明らかにし，
-          2ゲージ法での測定に望ましい断面形状を提案する．
-    \item (2)の結果より選定された断面形状の取付部を高感度ひずみセンサを用いて作成し，
-          再度同様の実験を行う．
-    \item [$\rightarrow$] 現在使用しているひずみセンサとの比較実験を行い，
-          その改善結果を示す．
-\end{enumerate}
-
-\subsection{比較実験の対象}
-ひずみゲージ取付部の断面形状の違いによる影響を調べるため，
-以下の断面形状について，比較実験を行う．\par
-\begin{enumerate}[(i)]
-    \item 円筒  (外形：$D_1=$20.0[mm]，内径：$D_2=$18.0[mm])
-    \item 円　  (直径：$D$)
-    \item 正方形(辺の長さ：$L$)
-\end{enumerate}
-\begin{figure}[htbp]
-    \footnotesize
-    \begin{center}
-        \includegraphics[width=80mm]{../images/testpieces_2.png}
-        \caption{Cross-sectional shape of test pieces}
-    \end{center}
-\end{figure}
-
-\newpage
-
-\subsection{比較形状寸法の算出}
-比較対象の寸法を決定するにあたり
-現在の実験装置で使用されている (1)円筒を基準として，
-同等の断面二次モーメントを持つ形状とした．\par
-(i)の円筒の断面二次モーメントを基準に算出した比較形状の寸法を以下に示す．
-なお，上記の”比較実験の対象”の記号に対応している．\\
-
-\subsubsection{算出結果}
-\begin{screen}
-    \begin{enumerate}[(i)]
-        \item 円柱 $\cdots$ $D_1=\;$20.0 [mm]，$D_2=\;$18.0 [mm]
-        \item 円筒 $\cdots$ $D=\;$15.3 [mm]
-        \item 角柱 $\cdots$ $L=\;$13.4 [mm]
-    \end{enumerate}
-\end{screen}
-
-\vskip\baselineskip
-
-\subsubsection{算出過程}
-% \begin{itembox}[l]{円の断面二次モーメント}
-%     \begin{center}
-%         $\displaystyle I = \frac{\pi}{64}D^4\;\left(D:直径\right)$
-%     \end{center}
-% \end{itembox}
-% \begin{itembox}[l]{正方形の断面二次モーメント}
-%     \begin{center}
-%         $\displaystyle I = \frac{1}{12}L^4\;\left(L:辺の長さ\right)$
-%     \end{center}
-% \end{itembox}
-
-\begin{enumerate}[(i)]
-    \item 円筒(外形：$D_1=$20.0[mm]，内径：$D_2=$18.0[mm])\\
-          $\blacksquare$ 断面二次モーメントの算出
-          \begin{eqnarray*}
-              I &=& \frac{\pi}{64} \left(20^4 - 18^4\right)\\
-              &=& \frac{\pi}{64} × 55024\\
-              &=& 2700.98 \dots\\
-              &\approx& 2701.0 \left[\mathrm{mm^4}\right]
-          \end{eqnarray*}
-    \item 円(直径：$D$)\\
-          $\blacksquare$ 直径の算出
-          \begin{eqnarray*}
-              I &=& \frac{\pi}{64}D^4\\
-              \frac{\pi}{64} × 55024 &=& \frac{\pi}{64}D^4\\
-              D^4 &=& 55024\\
-              D&=& 15.31\dots\\
-              &\approx& 15.3 \left[\mathrm{mm}\right]
-          \end{eqnarray*}
-    \item 正方形(辺の長さ：$L$)\\
-          $\blacksquare$ 辺の長さの算出
-          \begin{eqnarray*}
-              I &=& \frac{1}{12}L^4\\
-              2701.0 &=& \frac{1}{12}L^4\\
-              L^4 &=& 2701.0 * 12\\
-              &=& 32412\\
-              L&=& 13.41\dots\\
-              &\approx& 13.4 \left[\mathrm{mm}\right]
-          \end{eqnarray*}
-\end{enumerate}
-
-%     \subsection{実験装置のたわみ量とひずみの算出}
-%     試験用のひずみセンサを選定するにあたり，
-%     ひずみセンサの取付部の作用力によるひずみ量を調べる必要がある．
-%     ここで，簡単のため可能な限り切りのいい数字を使っておおよその変位量を算出した．
-%     \begin{figure}[htbp]
-%         \footnotesize
-%         \begin{center}
-%             \includegraphics[width=60mm]{../images/moment.png}
-%             \caption{Cross-sectional shape of experimental device}
-%         \end{center}
-%     \end{figure}\\
-
-% \newpage
-
-%     \subsubsection{算出結果}
-%         \begin{screen}
-%             \begin{itemize}
-%                 \item 先端のたわみ量　　：$0.151 \;\left[\mathrm{mm}\right]$
-%                 \item 取付軸表面の伸縮量：$1.029 × 10^{-3} \;\left[\mathrm{mm}\right]$
-%                 \item 取付軸表面のひずみ：$5.717 × 10^{-6} \left[\mathrm{-}\right]$
-%             \end{itemize}
-%         \end{screen}
-
-%     \vskip\baselineskip
-
-%     \subsubsection{算出条件}
-%     \begin{screen}
-%         \begin{itemize}
-%             \item [$\bullet$] アルミニウムの弾性係数　　：$E = 70 \left[\mathrm{GPa}\right]$
-%             \item [$\bullet$] ひずみセンサと作用点の距離：$l_1 = 725 \left[\mathrm{mm}\right]$
-%             \item [$\bullet$] 取付部材料の長さ　　　　　：$l_2 = 180 \left[\mathrm{mm}\right]$
-%             \item [$\bullet$] 作用力　　　　　　　　　　：$F = 0.15 \left[\mathrm{N}\right]$              
-%             \item [$\bullet$] 断面二次モーメント　　　　：$I = 2701 \left[\mathrm{mm^4}\right]$              
-%             \item [$\bullet$] 取付部に加わるモーメント　：$M$              
-%             \item [$\bullet$] 取付部のたわみの曲率半径　：$R$              
-%             \item [$\bullet$] 取付部のたわみ角　　　　　：$\theta$
-%             \item [$\bullet$] 取付部のたわみ　　　　　　：$w$
-%             \item [$\bullet$] 取付部表面の伸び　　　　　：$\lambda$
-%             \item [$\bullet$] 取付部表面のひずみ　　　　：$\varepsilon$
-%             \item [$\bullet$] 取付部表面と中立軸の距離　：$\delta r$              
-%         \end{itemize}
-%     \end{screen}
-
-%     \subsubsection{算出過程}
-%     \begin{itemize}
-%         \item [$\blacksquare$] 実験装置に加わるモーメントの算出
-%         \begin{eqnarray*}
-%             M &=& F × \frac{l_1}{1000}\\
-%             &=& 0.15 × 0.725\\
-%             &=& 0.10875 \;\left[\mathrm{N \cdot m}\right]
-%         \end{eqnarray*}
-%         \item [$\blacksquare$] たわみの曲率半径の算出
-%         \begin{itembox}[l]{たわみの曲率半径}
-%             \begin{center}
-%                 $\displaystyle \frac{1}{R} = \frac{M}{EI}$
-%             \end{center}
-%         \end{itembox}
-%         \begin{eqnarray*}
-%             R &=& \frac{EI}{M}\\
-%             &=& 70 × 2701 × \frac{100000}{10875}\\
-%             &\approx& 1738577.713 \left[\mathrm{mm}\right]
-%         \end{eqnarray*}
-%         \item [$\blacksquare$] 位置$x$[mm] におけるたわみ角とたわみの算出
-%         \begin{itembox}[l]{たわみの微分方程式}
-%                 \begin{center}
-%                     $\displaystyle \frac{d^2w}{dx^2}=-\frac{M}{EI}$\\
-%                     \vskip\baselineskip
-%                     ※ 今回のひずみは正の値となる
-%                 \end{center}
-%         \end{itembox}
-%         \begin{itembox}[l]{初期条件}
-%         \begin{itemize}
-%             \item [$\bullet$] $x=0$ のとき $w=0$，$\theta =0$
-%         \end{itemize}
-%         \end{itembox}
-%         \begin{eqnarray*}
-%             \frac{d^2w}{dx^2}&=&\frac{M}{EI}\\
-%             &=&\frac{0.10875}{70 × 2701}\\
-%             &=&5.7518 \cdots × 10^{-7}\\
-%             &\approx& 5.752 × 10^{-7} \;\left[\mathrm{1/mm}\right]\\ \\
-%             \frac{dw}{dx} &=& \theta = \frac{M}{EI} x + C_1\\ \\
-%             w &=& \frac{1}{2} \frac{M}{EI} x^2 + C_1x + C_2
-%         \end{eqnarray*}
-%         初期条件より
-%         \begin{eqnarray*}
-%             C_1 = C_2 = 0
-%         \end{eqnarray*}
-%         したがって，
-%         \begin{eqnarray*}
-%             \theta &=& \frac{M}{EI}x\\ \\
-%             w &=& \frac{1}{2}\frac{M}{EI}x^2\\
-%         \end{eqnarray*}
-%             \item [$\blacksquare$] ひずみセンサ取付部($x=90$)の伸びの算出\\
-%         $x = 90$のとき，たわみ角は，
-%         \begin{eqnarray*}
-%             \theta &=& \frac{M}{EI} × 90\\
-%             &=& 5.7152 × 10^{-7} × 90\\
-%             &=& 5.1437 × 10^{-5}\\
-%             &\approx& 5.144 × 10^{-5} \;\left[\mathrm{rad}\right]
-%         \end{eqnarray*}
-%         したがって，取付軸の伸び$\lambda$は，
-%         \begin{eqnarray*}
-%             \lambda &=& \left(R+\delta r\right)\theta - R\theta\\
-%             &=& \delta r \theta\\
-%             &=& 20 × \;\theta\\
-%             &=& 20 × 5.1437 × 10^{-5}\\
-%             &=& 1.02877 × 10^{-3}\\
-%             &\approx& 1.029 × 10^{-3} \;\left[\mathrm{mm}\right]\\
-%         \end{eqnarray*}
-%         \item [$\blacksquare$] ひずみセンサ取付部($x=90$)のひずみの算出
-%             \begin{eqnarray*}
-%                 \varepsilon &=& \frac{\lambda}{l_2}\\
-%                 &=& \frac{1.029 × 10^{-3}}{180}\\
-%                 &=& 5.7166 \cdots × 10^{-6}\\
-%                 &\approx& 5.717 × 10^{-6} \left[\mathrm{-}\right]
-%             \end{eqnarray*} 
-%         \item [$\blacksquare$] 先端($x=725$)のたわみ量 $w$ の算出
-%         \begin{eqnarray*}
-%             w &=& \frac{1}{2} × \frac{M}{EI} × l^2\\
-%             &=& \frac{1}{2} × 5.752 × 10^{-7} × 725^2\\
-%             &=& 0.1511 \cdots\\
-%             &\approx& 0.151 \;\left[\mathrm{mm}\right]
-%         \end{eqnarray*} 
-%     \end{itemize}
-
-\newpage
-
-\section{実験装置の製作}
-作用力方向の違いによる影響を調べるため，
-現在の実験装置を用いて仮実験を行うこととした．
-仮実験を行うにあたり，以下のFig.19 の実験装置を作成した．
-\begin{figure}[htbp]
-    \footnotesize
-    \begin{center}
-        \includegraphics[width=65mm]{../images/device_1.jpg}
+        \includegraphics[width=75mm]{../images_3/device_1.jpg}
         \caption{Experimental device}
     \end{center}
 \end{figure}
 
-実験装置の概要は，以下のFig.20，Fig.21のとおりである．
-角度を設定することのできる回転台とロードセルを
-3Dプリンタで製作したジョイントを用いて固定している．
-
-\begin{figure}[htbp]
-    \footnotesize
-    \begin{center}
-        \includegraphics[width=65mm]{../images/rotation.png}
-        \caption{Schematic of experimental device (side view)}
-        \includegraphics[width=70mm]{../images/rotation_2.png}
-        \caption{Schematic of experimental device (top view)}
-    \end{center}
-\end{figure}
-
 \newpage
 
-\section{実験結果}
-製作した実験装置を用いて，試験的に実験を行った．
-その結果を以下に示す．
-今回は，30度ずつ作用力方向を変化させ
-計12回の測定を行った．
-グラフにプロットしている値は，校正実験の再実施結果と同様に
-採用点とその後9秒間の計10秒間の平均値を使用している．
-また，ロードセルの出力電圧に関して，
-オフセット値を測定開始前30秒間の平均値とし，
-測定結果に適用している．
-
-\begin{figure}[htbp]
-    \footnotesize
-    \begin{center}
-        \includegraphics[width=58mm]{../images/model_1.png}
-        \caption{Axis of experimental equipment}
-    \end{center}
-\end{figure}
-
-\subsection{各角度における測定結果}
-以下のFig.23 ～ Fig.34に各角度におけるひずみセンサの出力電圧の測定結果を示す．
-
-\begin{figure}[htbp]
-    \footnotesize
-    \begin{center}
-        \includegraphics[width=78mm]{../images/0.png}
-        \caption{Acting force from 0 degree direction}
-        \includegraphics[width=78mm]{../images/30.png}
-        \caption{Acting force from 30 degree direction}
-    \end{center}
-\end{figure}
-
-\begin{figure}[htbp]
-    \footnotesize
-    \begin{center}
-        \includegraphics[width=78mm]{../images/60.png}
-        \caption{Acting force from 60 degree direction}
-        \includegraphics[width=78mm]{../images/90.png}
-        \caption{Acting force from 90 degree direction}
-        \includegraphics[width=78mm]{../images/120.png}
-        \caption{Acting force from 120 degree direction}
-        \includegraphics[width=78mm]{../images/150.png}
-        \caption{Acting force from 150 degree direction}
-    \end{center}
-\end{figure}
-
-\begin{figure}[htbp]
-    \footnotesize
-    \begin{center}
-        \includegraphics[width=78mm]{../images/180.png}
-        \caption{Acting force from 180 degree direction}
-        \includegraphics[width=78mm]{../images/210.png}
-        \caption{Acting force from 210 degree direction}
-        \includegraphics[width=78mm]{../images/240.png}
-        \caption{Acting force from 240 degree direction}
-    \end{center}
-\end{figure}
-
-\begin{figure}[htbp]
-    \footnotesize
-    \begin{center}
-        \includegraphics[width=78mm]{../images/270.png}
-        \caption{Acting force from 270 degree direction}
-        \includegraphics[width=78mm]{../images/300.png}
-        \caption{Acting force from 300 degree direction}
-        \includegraphics[width=78mm]{../images/330.png}
-        \caption{Acting force from 330 degree direction}
-    \end{center}
-\end{figure}
-
-\newpage
-\;
-\newpage
-\;
-\newpage
-
-\subsection{作用力の角度と出力電圧の傾きの関係}
-
-Fig.23～34について，抗力・揚力のそれぞれの近似直線の傾きと
-作用力方向の関係について以下のTable.1，Fig.35に示す．\\
-また，作用力方向の違いによって出力電圧にどのような影響があるかを調べるため，
-以下のように抗力と揚力の勾配比を算出した．\\
-
-\begin{itembox}[l]{抗力・揚力の勾配比}
-    \begin{center}
-        $\displaystyle \left(L/D：勾配比\right) = $
-        \vskip\baselineskip
-        $\displaystyle \left|\frac{\left(L：揚力側出力電圧の近似直線の傾き\right)}{\left(D：抗力側出力電圧の近似直線の傾き\right)}\right|$
-    \end{center}
-\end{itembox}
-
-\begin{figure}[htbp]
-    \footnotesize
-    \begin{center}
-        \includegraphics[width=85mm]{../images/experiment_results.png}
-        \caption{Experiment results}
-    \end{center}
-\end{figure}
-
+\subsection{実験条件}
+今回行った模擬実験の条件は以下の図の通りである．
+なお，測定角度については，処理プログラムにてFFTを適用する関係上，
+2の乗数倍である16とした．
 \begin{table}[htbp]
-    \caption{Experiment results of gradient ratio}
     \begin{center}
-        \begin{tabular}{|p{20mm}|p{20mm}|p{20mm}|p{20mm}|}
+        \begin{tabular}{|p{30mm}|p{20mm}|p{30}|}
             \hline
-            \multicolumn{1}{|c|}{\textgt{Angle [deg]}} & \multicolumn{1}{|c|}{\textgt{D [V/V]}} & \multicolumn{1}{|c|}{\textgt{L [V/V]}} & \multicolumn{1}{|c|}{\textgt{L/D [-]}} \\ \hline
-            \multicolumn{1}{|c|}{0}                    & \multicolumn{1}{|c|}{0.656}            & \multicolumn{1}{|c|}{-0.110}           & \multicolumn{1}{|c|}{0.168}            \\ \hline
-            \multicolumn{1}{|c|}{30}                   & \multicolumn{1}{|c|}{0.632}            & \multicolumn{1}{|c|}{0.221}            & \multicolumn{1}{|c|}{0.349}            \\ \hline
-            \multicolumn{1}{|c|}{60}                   & \multicolumn{1}{|c|}{0.448}            & \multicolumn{1}{|c|}{0.530}            & \multicolumn{1}{|c|}{1.182}            \\ \hline
-            \multicolumn{1}{|c|}{90}                   & \multicolumn{1}{|c|}{0.048}            & \multicolumn{1}{|c|}{0.657}            & \multicolumn{1}{|c|}{13.688}           \\ \hline
-            \multicolumn{1}{|c|}{120}                  & \multicolumn{1}{|c|}{-0.169}           & \multicolumn{1}{|c|}{0.653}            & \multicolumn{1}{|c|}{3.861}            \\ \hline
-            \multicolumn{1}{|c|}{150}                  & \multicolumn{1}{|c|}{-0.510}           & \multicolumn{1}{|c|}{0.437}            & \multicolumn{1}{|c|}{0.856}            \\ \hline
-            \multicolumn{1}{|c|}{180}                  & \multicolumn{1}{|c|}{-0.632}           & \multicolumn{1}{|c|}{0.142}            & \multicolumn{1}{|c|}{0.224}            \\ \hline
-            \multicolumn{1}{|c|}{210}                  & \multicolumn{1}{|c|}{-0.527}           & \multicolumn{1}{|c|}{-0.380}           & \multicolumn{1}{|c|}{0.720}            \\ \hline
-            \multicolumn{1}{|c|}{240}                  & \multicolumn{1}{|c|}{-0.350}           & \multicolumn{1}{|c|}{-0.564}           & \multicolumn{1}{|c|}{1.611}            \\ \hline
-            \multicolumn{1}{|c|}{270}                  & \multicolumn{1}{|c|}{-0.088}           & \multicolumn{1}{|c|}{-0.642}           & \multicolumn{1}{|c|}{7.282}            \\ \hline
-            \multicolumn{1}{|c|}{300}                  & \multicolumn{1}{|c|}{0.226}            & \multicolumn{1}{|c|}{-0.625}           & \multicolumn{1}{|c|}{2.771}            \\ \hline
-            \multicolumn{1}{|c|}{330}                  & \multicolumn{1}{|c|}{0.546}            & \multicolumn{1}{|c|}{-0.431}           & \multicolumn{1}{|c|}{0.789}            \\ \hline
+            \multicolumn{1}{|c|}{\textgt{項目}} & \multicolumn{1}{|c|}{\textgt{条件数}} & \multicolumn{1}{|c|}{\textgt{備考}}\\ \hline
+            \multicolumn{1}{|c|}{試験片}                    & \multicolumn{1}{|c|}{1} & \multicolumn{1}{|c|}{\textgt{円筒：現在の実験装置で使用}}  \\ \hline
+            \multicolumn{1}{|c|}{測定角度}                    & \multicolumn{1}{|c|}{16} & \multicolumn{1}{|c|}{\textgt{22.5度ごとの測定}}  \\ \hline
+            \multicolumn{1}{|c|}{試行回数}                    & \multicolumn{1}{|c|}{1} & \multicolumn{1}{|c|}{\textgt{}}  \\ \hline
         \end{tabular}
     \end{center}
 \end{table}
 
-\newpage
-
-\subsection{理論値との比較}
-
-理論上の勾配比についても以下のように算出した．
-作用力ベクトルの大きさを1として，それぞれの角度(30度ごと)に供試体に作用したときに加わる作用力ベクトルの長さを
-抗力・揚力方向について算出し，その比をとることで理想的な作用力の比，すなわち勾配比を算出することができる．
-以下のTable.2にその算出結果を示す。\par
-
+また，今後の実験条件として，以下のように想定している．
 \begin{table}[htbp]
-    \caption{Calucuration of gradient ratio}
     \begin{center}
-        \begin{tabular}{|p{20mm}|p{20mm}|p{20mm}|p{20mm}|}
+        \begin{tabular}{|p{30mm}|p{20mm}|p{30}|}
             \hline
-            \multicolumn{1}{|c|}{\textgt{Angle [deg]}} & \multicolumn{1}{|c|}{\textgt{  Drag [-]  }} & \multicolumn{1}{|c|}{\textgt{  Lift [-]  }} & \multicolumn{1}{|c|}{\textgt{  L/D [-]  }} \\ \hline
-            \multicolumn{1}{|c|}{0}                    & \multicolumn{1}{|c|}{1.000}                 & \multicolumn{1}{|c|}{0.000}                 & \multicolumn{1}{|c|}{0.000}                \\ \hline
-            \multicolumn{1}{|c|}{30}                   & \multicolumn{1}{|c|}{0.870}                 & \multicolumn{1}{|c|}{0.500}                 & \multicolumn{1}{|c|}{0.580}                \\ \hline
-            \multicolumn{1}{|c|}{60}                   & \multicolumn{1}{|c|}{0.500}                 & \multicolumn{1}{|c|}{0.870}                 & \multicolumn{1}{|c|}{1.730}                \\ \hline
-            \multicolumn{1}{|c|}{90}                   & \multicolumn{1}{|c|}{0.000}                 & \multicolumn{1}{|c|}{1.000}                 & \multicolumn{1}{|c|}{$\infty$}             \\ \hline
-            \multicolumn{1}{|c|}{120}                  & \multicolumn{1}{|c|}{-0.500}                & \multicolumn{1}{|c|}{0.870}                 & \multicolumn{1}{|c|}{1.730}                \\ \hline
-            \multicolumn{1}{|c|}{150}                  & \multicolumn{1}{|c|}{-0.870}                & \multicolumn{1}{|c|}{0.500}                 & \multicolumn{1}{|c|}{0.580}                \\ \hline
-            \multicolumn{1}{|c|}{180}                  & \multicolumn{1}{|c|}{-1.000}                & \multicolumn{1}{|c|}{0.000}                 & \multicolumn{1}{|c|}{0.000}                \\ \hline
-            \multicolumn{1}{|c|}{210}                  & \multicolumn{1}{|c|}{-0.870}                & \multicolumn{1}{|c|}{-0.500}                & \multicolumn{1}{|c|}{0.580}                \\ \hline
-            \multicolumn{1}{|c|}{240}                  & \multicolumn{1}{|c|}{-0.500}                & \multicolumn{1}{|c|}{-0.870}                & \multicolumn{1}{|c|}{1.730}                \\ \hline
-            \multicolumn{1}{|c|}{270}                  & \multicolumn{1}{|c|}{0.000}                 & \multicolumn{1}{|c|}{-1.000}                & \multicolumn{1}{|c|}{$\infty$}             \\ \hline
-            \multicolumn{1}{|c|}{300}                  & \multicolumn{1}{|c|}{0.500}                 & \multicolumn{1}{|c|}{-0.870}                & \multicolumn{1}{|c|}{1.730}                \\ \hline
-            \multicolumn{1}{|c|}{330}                  & \multicolumn{1}{|c|}{0.870}                 & \multicolumn{1}{|c|}{-0.500}                & \multicolumn{1}{|c|}{0.580}                \\ \hline
+            \multicolumn{1}{|c|}{\textgt{項目}} & \multicolumn{1}{|c|}{\textgt{条件数}} & \multicolumn{1}{|c|}{\textgt{備考}}\\ \hline
+            \multicolumn{1}{|c|}{試験片}                    & \multicolumn{1}{|c|}{3} & \multicolumn{1}{|c|}{\textgt{円筒・円柱・角柱}}  \\ \hline
+            \multicolumn{1}{|c|}{測定角度}                    & \multicolumn{1}{|c|}{$x$} & \multicolumn{1}{|c|}{\textgt{11.25度ごとの測定}}  \\ \hline
+            \multicolumn{1}{|c|}{試行回数}                    & \multicolumn{1}{|c|}{5回程度} & \multicolumn{1}{|c|}{\textgt{検討中}}  \\ \hline
         \end{tabular}
-        \vskip\baselineskip
-        \small{※ Drag 及び Lift は，作用力ベクトルの大きさ[-]を表す}
     \end{center}
 \end{table}
 
-Table.1及びTable.2の$L/D$算出結果の関係を以下のFig.36に示す．
+\subsection{測定条件}
+    \begin{itemize}
+        \item サンプリング周期は5[Hz]とする
+        \item ロードセルをマイクロステージを用いて\\
+              0.03 [mm] ずつ移動させ，
+              作用力を加え電圧を測定する
+        \item 計4回(0.12[mm])移動させる
+    \end{itemize}
+
+\subsection{測定準備}
+    \begin{enumerate}[(1)]
+        \item ロードセルを測定する角度に固定
+        \item 粗動用ダイヤルでロードセルを大まかな位置に設定
+        \item マイクロステージを動かしてロードセルが供試体に接触する位置を0.01[mm]単位で特定
+        \item その位置を基準に測定を開始する
+    \end{enumerate}
+
+\subsection{測定手順}
+    \begin{enumerate}[(1)]
+        \item 測定開始から30秒間待機する
+        \item 40秒間の測定時間
+        \item 30秒間のマイクロステージ操作時間
+        \item (2)，(3)の作業を5回繰り返す (70秒周期)\\
+              ※ 5回目はロードセル，供試体を非接触状態にする
+    \end{enumerate}
+
+\newpage
+
+\subsection{実験結果}
+実施した模擬実験の結果を以下のFig.2，Fig.3に示す．
+ここでは例として，0度における結果を示している．
 
 \begin{figure}[htbp]
     \footnotesize
     \begin{center}
-        \includegraphics[width=85mm]{../images/gradient_ratio_2.png}
-        \caption{Gradient ratio of lift and drag}
+        \includegraphics[width=80mm]{../images_2/01-1_loadcell/01_loadcell_0.png}
+        \caption{Acting force from 0 [deg] (loadcell)}
+        \includegraphics[width=80mm]{../images_2/01-2_strainsensors/01_strainsensors_0.png}
+        \caption{Acting force from 0 [deg] (strainsensors)}
+    \end{center}
+\end{figure}
+
+\section{データ処理プログラムの作成}
+模擬実験の実験を一定の手順で行うことにより，
+プログラムを複数のデータに一斉に適用することができる．\\
+
+\subsection{データ処理の手順}
+実験の目的は，実験装置の出力電圧から作用力へ正しく変換することである．
+% その目的を達成するにあたって以下の2項目を達成する必要がある．
+この目的を達成するために，以下のような手順でプログラムを作成した．
+% \begin{enumerate}[(1)]
+%     \item 現在使用している実験装置の特徴を理解する
+%     \item 実際の作用力と実験装置の出力電圧の対応関係を明らかにする
+% \end{enumerate}
+
+% これらを達成するために，以下のような順序でプログラムを作成した
+
+    \begin{enumerate}[(1)]
+        \item ドリフト補正
+        \item 各距離における平均値の算出
+        \item ロードセルとひずみセンサの出力電圧の関係性を\\評価する近似直線を算出
+        \item 角度ごとの直線の傾きから理論値を算出
+        \item FFTを用いて位相角を算出
+        \item 作用力方向と実験装置の設置方向の角度の算出
+        \item 抗力及び揚力方向のひずみセンサの取付角の算出
+    \end{enumerate}
+
+\newpage
+
+\subsection{ドリフト補正}
+以前，作用力測定の結果の解析に用いたアルゴリズムをもとに
+ドリフト補正プログラムを作成し，結果に適用した．
+
+\begin{enumerate}[(1)]
+    \item 測定開始直後及び終了直前のデータ(30秒/150点)における平均値を算出
+    \item 算出した2つの平均値を結び，直線を作成
+    \item 元データと直線の差をとり，補正値として採用する
+\end{enumerate}
+
+以下のFig.4～Fig.6に0度における適用結果を示す．
+
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=78mm]{../images_2/02-1_loadcell/02_loadcell-drift_0.png}
+        \caption{Drift correction 0 [deg] (loadcell)}
+        \includegraphics[width=78mm]{../images_2/02-2_drag/02_drag-drift_0.png}
+        \caption{Drift correction 0 [deg] (drag)}
+        \includegraphics[width=78mm]{../images_2/02-3_lift/02_lift-drift_0.png}
+        \caption{Drift correction 0 [deg] (lift)}
     \end{center}
 \end{figure}
 
 \newpage
 
-\section{今月の進捗と12月の予定}
+\subsection{平均値の算出}
+実験手順にしたがって，プログラムの適用範囲を定め
+それぞれの距離における出力電圧について平均値を算出した
+以下のFig.7～Fig.9に0度における適用結果を示す．
+
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=80mm]{../images_2/03-1_loadcell/03_loadcell_average_0.png}
+        \caption{Acting force average 0 [deg] (loadcell)}
+        \includegraphics[width=80mm]{../images_2/03-2_drag/03_drag_average_0.png}
+        \caption{Acting force average 0 [deg] (drag)}
+        \includegraphics[width=80mm]{../images_2/03-3_lift/03_lift_average_0.png}
+        \caption{Acting force average 0 [deg] (lift)}
+    \end{center}
+\end{figure}
+
+\newpage
+
+\subsection{近似直線の算出}
+算出した平均値を用いて，ロードセルの出力電圧とひずみセンサの出力電圧についての
+関係性を求める．ここでは，それぞれの方向について最小二乗法を用いて近似式を作成した．
+以下のFig.10～Fig.12に0度～45度における適用結果を示す．
+
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=80mm]{../images_2/04/04_linear_0.png}
+        \caption{Correlation between loadcell and strainsensors 0.00 [deg]}
+        \includegraphics[width=80mm]{../images_2/04/04_linear_225.png}
+        \caption{Correlation between loadcell and strainsensors 22.5 [deg]}
+        \includegraphics[width=80mm]{../images_2/04/04_linear_450.png}
+        \caption{Correlation between loadcell and strainsensors 45.0 [deg]}
+    \end{center}
+\end{figure}
+
+また，以下のFig.13に算出した近似直線の傾きについて角度ごとにプロットした図を示す．
 \begin{itemize}
-    \item [$\blacksquare$] 今月の進捗
-          \begin{itemize}
-              \item [$\bullet$] 再実験結果より，抗力・揚力方向の出力電圧の依存関係を明らかに必要があることがわかった．
-              \item [$\bullet$] ロードセルの出力電圧について，オフセット値を考慮する必要があることがわかった．
-              \item [$\bullet$] 2方向に取り付けられたひずみセンサの特性について調べるため，実験装置の製作を行っている．
-              \item [$\bullet$] 簡易的に作成した実験装置を用いて，実験を行った．
-          \end{itemize}
-          \vskip\baselineskip
-    \item [$\blacksquare$] 12月の予定
-          \begin{itemize}
-              \item [$\bullet$] 実験準備 (12月上旬)
-              \item [$\bullet$] 形状比較実験の実施 (12月中旬～)
-          \end{itemize}
+    \item [※] ここでの\textgt{"傾き"}とは，\textgt{"ロードセルの単位出力電圧あたりのひずみセンサの出力電圧"}を表している．
 \end{itemize}
 
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=92mm]{../images_2/05/05_summary-wave.png}
+        \caption{Summary of gradient value}
+    \end{center}
+\end{figure}
+
+\subsection{正味出力電圧の算出}
+ここで，抗力・揚力方向のひずみセンサが直角に取り付けられていると仮定する．
+このとき，抗力，揚力方向の傾きをそれぞれ$A_d$，$A_l$として，
+以下の式に基づき正味出力電圧$A_{net}$を算出した．
+
+\begin{itemize}
+    \item [$\blacksquare$] \textgt{正味出力電圧の算出}
+    \begin{eqnarray*}
+        A_{net} = \sqrt{A_d^2 + A_l^2}\\
+    \end{eqnarray*}
+\end{itemize}
+
+このときのそれぞれの角度における算出結果を以下のFig.14に示す．
+
+\begin{figure}[htbp]
+        \footnotesize
+            \begin{center}
+        \includegraphics[width=92mm]{../images_2/05/05_summary-outputvoltage.png}
+        \caption{Summary of net voltage value}
+    \end{center}
+\end{figure}
+
+\newpage
+
+また，それぞれの角度に対する傾きと正味出力電圧の値について
+以下のTable.14に示す．
+
+\begin{table}[htbp]
+    \begin{center}
+        \caption{Result summary}
+        \begin{tabular}{|p{20mm}|p{20mm}|p{20mm}|p{20mm}|}
+            \hline
+            \multicolumn{1}{|c|}{\textgt{Angle [deg]}} & \multicolumn{1}{|c|}{\textgt{$A_d$ [V/V]}} & \multicolumn{1}{|c|}{\textgt{$A_l$ [V/V]}} & \multicolumn{1}{|c|}{\textgt{$A_{net}$ [V/V]}} \\ \hline
+            \multicolumn{1}{|c|}{0.0}                  & \multicolumn{1}{|r|}{-0.630}           & \multicolumn{1}{|r|}{\textgt{0.096}}  & \multicolumn{1}{|r|}{\textgt{0.637}}  \\ \hline
+            \multicolumn{1}{|c|}{22.5}                 & \multicolumn{1}{|r|}{-0.631}           & \multicolumn{1}{|r|}{\textgt{-0.135}}  & \multicolumn{1}{|r|}{\textgt{0.646}}  \\ \hline
+            \multicolumn{1}{|c|}{45.0}                 & \multicolumn{1}{|r|}{-0.505}           & \multicolumn{1}{|r|}{\textgt{-0.400}}  & \multicolumn{1}{|r|}{\textgt{0.645}}  \\ \hline
+            \multicolumn{1}{|c|}{67.5}                 & \multicolumn{1}{|r|}{-0.305}           & \multicolumn{1}{|r|}{\textgt{-0.564}}  & \multicolumn{1}{|r|}{\textgt{0.642}}  \\ \hline
+            \multicolumn{1}{|c|}{90.0}                 & \multicolumn{1}{|r|}{-0.065}           & \multicolumn{1}{|r|}{\textgt{-0.627}}  & \multicolumn{1}{|r|}{\textgt{0.630}}  \\ \hline
+            \multicolumn{1}{|c|}{112.5}                & \multicolumn{1}{|r|}{0.201}           & \multicolumn{1}{|r|}{\textgt{-0.613}}  & \multicolumn{1}{|r|}{\textgt{0.645}}  \\ \hline
+            \multicolumn{1}{|c|}{135.0}                & \multicolumn{1}{|r|}{0.368}           & \multicolumn{1}{|r|}{\textgt{-0.532}}  & \multicolumn{1}{|r|}{\textgt{0.647}}  \\ \hline
+            \multicolumn{1}{|c|}{157.5}                & \multicolumn{1}{|r|}{0.576}           & \multicolumn{1}{|r|}{\textgt{-0.322}}  & \multicolumn{1}{|r|}{\textgt{0.660}}  \\ \hline
+            \multicolumn{1}{|c|}{180.0}                & \multicolumn{1}{|r|}{0.632}           & \multicolumn{1}{|r|}{\textgt{-0.079}}  & \multicolumn{1}{|r|}{\textgt{0.637}}  \\ \hline
+            \multicolumn{1}{|c|}{202.5}                & \multicolumn{1}{|r|}{0.614}           & \multicolumn{1}{|r|}{\textgt{0.172}}  & \multicolumn{1}{|r|}{\textgt{0.637}}  \\ \hline
+            \multicolumn{1}{|c|}{225.0}                & \multicolumn{1}{|r|}{0.540}           & \multicolumn{1}{|r|}{\textgt{0.365}}  & \multicolumn{1}{|r|}{\textgt{0.651}}  \\ \hline
+            \multicolumn{1}{|c|}{247.5}                & \multicolumn{1}{|r|}{0.320}           & \multicolumn{1}{|r|}{\textgt{0.551}}  & \multicolumn{1}{|r|}{\textgt{0.637}}  \\ \hline
+            \multicolumn{1}{|c|}{270.0}                & \multicolumn{1}{|r|}{0.054}           & \multicolumn{1}{|r|}{\textgt{0.635}}  & \multicolumn{1}{|r|}{\textgt{0.637}}  \\ \hline
+            \multicolumn{1}{|c|}{292.5}                & \multicolumn{1}{|r|}{-0.180}           & \multicolumn{1}{|r|}{\textgt{0.619}}  & \multicolumn{1}{|r|}{\textgt{0.645}}  \\ \hline
+            \multicolumn{1}{|c|}{315.0}                & \multicolumn{1}{|r|}{-0.407}           & \multicolumn{1}{|r|}{\textgt{0.504}}  & \multicolumn{1}{|r|}{\textgt{0.648}}  \\ \hline
+            \multicolumn{1}{|c|}{337.5}                & \multicolumn{1}{|r|}{-0.576}           & \multicolumn{1}{|r|}{\textgt{0.305}}  & \multicolumn{1}{|r|}{\textgt{0.651}}  \\ \hline \hline
+            \multicolumn{1}{|c|}{Average}              & \multicolumn{1}{|r|}{0.000}           & \multicolumn{1}{|r|}{\textgt{-0.002}}  & \multicolumn{1}{|r|}{\textgt{0.643}}  \\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+また，正味出力電圧について算出した分散と標準偏差を以下のTable.2に示す．
+
+\begin{table}[htbp]
+    \begin{center}
+        \caption{Net output voltage's variation and standard deviation}
+        \begin{tabular}{|p{20mm}|p{20mm}|}
+            \hline
+            \multicolumn{1}{|c|}{\textgt{Variance}}     & \multicolumn{1}{|c|}{0.000051} \\ \hline
+            \multicolumn{1}{|c|}{\textgt{Standard deviation}} & \multicolumn{1}{|c|}{0.007} \\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+ここで，Table 1の正味出力電圧における平均値とTable 2の標準偏差を比較すると，
+標準偏差は平均値の 1$\%$ 程度の範囲を示していることがわかる．
+
+\begin{itemize}
+    \item [$\blacksquare$] \textgt{平均値に対する標準偏差の割合}
+    \begin{eqnarray*}
+        \frac{0.007}{0.643} × 100 \approx 1.09 [\%]
+    \end{eqnarray*}
+\end{itemize}
+
+したがって，標準偏差は平均値に対して十分小さい値であるといえ，
+正味出力電圧は一定であると判断できると考えられる．
+
+\newpage
+
+\subsection{理論値の算出}
+電圧の測定実験において，抗力および揚力の出力電圧は正弦波の位相がそれぞれ$-\pi/2$，$\pi$だけ
+進んだ波形になると考えられる．
+ここで，Table 1の正味出力電圧の平均値を振幅とし，
+抗力および揚力についてそれぞれ位相が進んだ正弦波を作成した．
+その算出結果と実験結果を重ねた図を以下のFig.15に示す．
+
+\begin{itemize}
+    \item [$\blacksquare$] \textgt{抗力・揚力における出力電圧の理論式}
+    \begin{eqnarray*}
+        V_{Drag} &=& A_{net} \sin\left(\omega t + \frac{3}{2}\pi\right) = A_{net} \cos\left(\omega t + \pi\right)\\
+        V_{Lift} &=& A_{net} \sin\left(\omega t + \pi\right) = A_{net} \cos\left(\omega t + \frac{1}{2}\pi\right)
+    \end{eqnarray*}
+    \item [※] $A_{net}$はTable 2の正味出力電圧の平均値を使用
+\end{itemize}
+
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=92mm]{../images_2/20/20_adjust-value.png}
+        \caption{theorical Value}
+    \end{center}
+\end{figure}
+
+Fig.15をみると，実験結果は理論値に比べて抗力・揚力ともに位相が遅れていることがわかる．\\
+
+\subsection{FFTの適用}
+以上の結果から理論値との位相差を算出することを目的としてデータの処理を行う．
+実験結果及び理論値についてFFTを適用した．その結果を以下のFig.16，Fig.17に，
+波数1についての算出値をTable 3に示す．
+\begin{table}[htbp]
+    \begin{center}
+        \caption{FFT result (Wave number [1])}
+        \begin{tabular}{|p{20mm}|p{20mm}|p{20mm}|p{20mm}|}
+            \hline
+            \multicolumn{1}{|c|}{}                 & \multicolumn{1}{|c|}{\textgt{$Re$}} & \multicolumn{1}{|c|}{\textgt{$Im$}}       & \multicolumn{1}{|c|}{\textgt{Power}}     \\ \hline
+            \multicolumn{1}{|c|}{Measured [Drag]}  & \multicolumn{1}{|r|}{-5.149}   & \multicolumn{1}{|r|}{\textgt{0.571}} & \multicolumn{1}{|r|}{\textgt{26.83}} \\ \hline
+            \multicolumn{1}{|c|}{Measured [Lift]}  & \multicolumn{1}{|r|}{0.706}    & \multicolumn{1}{|r|}{\textgt{5.061}} & \multicolumn{1}{|r|}{\textgt{26.11}} \\ \hline
+            \multicolumn{1}{|c|}{Theory [Drag]} & \multicolumn{1}{|r|}{-5.147}   & \multicolumn{1}{|r|}{\textgt{0.000}} & \multicolumn{1}{|r|}{\textgt{26.50}} \\ \hline
+            \multicolumn{1}{|c|}{Theory [Lift]} & \multicolumn{1}{|r|}{0.000}    & \multicolumn{1}{|r|}{\textgt{5.147}} & \multicolumn{1}{|r|}{\textgt{26.50}} \\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+\newpage
+
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=83mm]{../images_2/27/27-3_fft-drag_summary.png}
+        \caption{FFT Result (Drag)}
+        \includegraphics[width=83mm]{../images_2/27/27-4_fft-lift_summary.png}
+        \caption{FFT Result (Lift)}
+    \end{center}
+\end{figure}
+
+Fig.16，Fig.17をみると，実験結果と理論値のピークは一致していることがわかる．
+また，Table 3をみると，パワースペクトル値は4つの条件に関しておおよそ一致していることがわかる．
+したがって，FFTによって波の特徴を正しく捉えられており，抗力側及び揚力側に取り付けられているひずみセンサに
+大きな個体差はないと考えられる．
+
+\newpage
+
+\subsection{理論値と実測値の位相角の算出}
+
+ここで，Table 3の結果から以下の式をもとに位相角 $\phi$ を算出した．
+抗力及び揚力方向の位相角をそれぞれ$\phi_x$，$\phi_y$として，その算出結果を以下のTable 4に示す．
+
+\begin{itemize}
+    \item [$\blacksquare$] 位相角$\phi$の算出
+    \begin{eqnarray*}
+        \mathrm{\phi \; [deg]} = \arctan \left(\frac{Im}{Re}\right) × \frac{180}{\pi}
+    \end{eqnarray*}    
+    \item [※] 位相角$\phi$は，FFTの性質上，余弦波に対する位相角を示している．
+\end{itemize}
+
+\begin{table}[htbp]
+    \begin{center}
+        \caption{Phase angle}
+        \begin{tabular}{|p{20mm}|p{20mm}|p{20mm}|}
+            \hline
+            \multicolumn{1}{|c|}{}                    & \multicolumn{1}{|c|}{\textgt{$\phi_x$ [deg]}} & \multicolumn{1}{|c|}{\textgt{$\phi_y$ [deg]}} \\ \hline
+            \multicolumn{1}{|c|}{\textgt{Measured}}   & \multicolumn{1}{|r|}{173.7}           & \multicolumn{1}{|r|}{82.1}           \\ \hline
+            \multicolumn{1}{|c|}{\textgt{Theory}}  & \multicolumn{1}{|r|}{180.0}            & \multicolumn{1}{|r|}{90.0}           \\ \hline \hline
+            \multicolumn{1}{|c|}{\textgt{Difference}} & \multicolumn{1}{|r|}{-6.3}           & \multicolumn{1}{|r|}{-7.9}           \\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+Table 4をみると，実験で使用した回転台の回転座標を基準として，実験装置に取付けられたひずみセンサは
+理論値に対して，抗力方向は -6.3 度，揚力方向は -7.9 度
+進んでいることを示している．
+したがって，回流水槽での作用力測定の際に，実際に加わる作用力の方向と
+測定装置の設置角度に差異が存在している可能性があることがわかった．\\
+
+\subsection{ひずみセンサの取付角の算出}
+
+実験結果における抗力・揚力方向の位相角の差を取ることでひずみセンサの取付角度が算出できる．
+
+\begin{itemize}
+    \item [$\blacksquare$] 抗力・揚力方向のひずみセンサの取付角度 $\phi$
+    \begin{eqnarray*}
+        \phi &=& \left| \phi_x - \phi_y \right| \\
+            &=& \left| 173.7 - 82.1 \right| \\
+            &=& 91.6 \left[\mathrm{deg}\right]
+    \end{eqnarray*}    
+\end{itemize}
+
+以上より，抗力・揚力方向のひずみセンサは 91.6 度の角度で取り付けられていることがわかった．
+したがって，今回の実験装置について，ひずみセンサはおおよそ直角に貼付けられており，重大な課題ではないと考える．
+
+\newpage
+
+\section{今月のまとめと今後の予定}
+\begin{itemize}
+    \item [$\blacksquare$] 今月のまとめ
+          \begin{itemize}
+              \item [$\bullet$] 模擬実験を行い，今後の実験手順を検討・決定した
+              \item [$\bullet$] 実験結果の処理プログラムを作成した
+              \item [$\bullet$] 実験結果から，作用力と測定装置の設置角度を算出することができた
+              \item [$\bullet$] 実験装置に取り付けられたひずみセンサの方向に大きな問題がないことが確認できた
+          \end{itemize}
+          \vskip\baselineskip
+    \item [$\blacksquare$] 1月の予定
+          \begin{itemize}
+              \item [$\bullet$] 実験の実施 (1月末まで)
+              \item [$\bullet$] 校正方法の検討
+          \end{itemize}
+\end{itemize}
 \end{document}

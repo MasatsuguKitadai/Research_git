@@ -225,7 +225,7 @@ int calculate_lift_theory(char date[], int range)
     fprintf(gp, "set title '%s (Lift)'\n", label);
 
     // fprintf(gp, "set samples 10000\n");
-    fprintf(gp, "plot '%s' using 1:2 with lines lc 'red' lw 5 title 'Measured', '%s' using 1:2 with lines lc 'orange' lw 5 title 'Theorical'\n", filename_dat_2, filename_dat);
+    fprintf(gp, "plot '%s' using 1:2 with lines lc 'red' lw 5 title 'Measured', '%s' using 1:2 with lines lc 'orange' lw 5 title 'Theoretical'\n", filename_dat_2, filename_dat);
     fflush(gp); // Clean up Data
 
     fprintf(gp, "exit\n"); // Quit gnuplot

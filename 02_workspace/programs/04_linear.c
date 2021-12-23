@@ -210,6 +210,12 @@ int linear(char date[], char angle[])
     const char *yylabel = "Strain-sensor voltage [V]";
     char label[100];
 
+    double angle_2 = 0;
+    angle_2 = atoi(angle);
+    angle_2 = angle_2 / 10;
+    
+    sprintf(label, "%.1f", angle_2);
+
     double size;
 
     /*****************************************************************************/

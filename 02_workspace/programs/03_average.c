@@ -192,9 +192,13 @@ int average(char date[], char angle[])
 
     double size;
 
-    sprintf(label_loadcell, "%s deg (loadcell)", angle);
-    sprintf(label_drag, "%s deg (drag)", angle);
-    sprintf(label_lift, "%s deg (lift)", angle);
+    double angle_2 = 0;
+    angle_2 = atoi(angle);
+    angle_2 = angle_2 / 10;
+    
+    sprintf(label_loadcell, "%.1f deg (loadcell)", angle_2);
+    sprintf(label_drag, "%.1f deg (drag)", angle_2);
+    sprintf(label_lift, "%.1f deg (lift)", angle_2);
 
     /*****************************************************************************/
 

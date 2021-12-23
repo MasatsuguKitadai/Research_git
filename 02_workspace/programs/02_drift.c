@@ -239,9 +239,13 @@ int drift(char date[], char angle[])
 
     double size;
 
-    sprintf(label_loadcell, "%s deg (loadcell)", angle);
-    sprintf(label_drag, "%s deg (drag)", angle);
-    sprintf(label_lift, "%s deg (lift)", angle);
+    double angle_2 = 0;
+    angle_2 = atoi(angle);
+    angle_2 = angle_2 / 10;
+
+    sprintf(label_loadcell, "%.1f deg (loadcell)", angle_2);
+    sprintf(label_drag, "%.1f deg (drag)", angle_2);
+    sprintf(label_lift, "%.1f deg (lift)", angle_2);
 
     /*****************************************************************************/
 
@@ -277,7 +281,7 @@ int drift(char date[], char angle[])
 
     // fprintf(gp, "set samples 10000\n");
     // fprintf(gp, "plot '%s' using 1:4 with lines lc 'gray70' notitle, '%s' using 1:4 with lines lc 'gray20' notitle\n", filename_dat_1, filename_dat_2);
-    fprintf(gp, "plot '%s' using 1:4 with lines lc 'gray70' title 'raw data', '%s' using 1:4 with lines lc 'gray20' title 'corrected', '%s' using 1:7 with lines lc 'red' notitle\n", filename_dat_1, filename_dat_2, filename_dat_2);
+    fprintf(gp, "plot '%s' using 1:4 with lines lc 'gray70' title 'raw data', '%s' using 1:4 with lines lc 'gray20' title 'corrected', '%s' using 1:7 with lines lc 'red' title 'Average'\n", filename_dat_1, filename_dat_2, filename_dat_2);
     fflush(gp); // Clean up Data
 
     // graph : drag
@@ -303,7 +307,7 @@ int drift(char date[], char angle[])
 
     // fprintf(gp, "set samples 10000\n");
     // fprintf(gp, "plot '%s' using 1:2 with lines lc 'gray70' notitle, '%s' using 1:2 with lines lc 'gray20' notitle\n", filename_dat_1, filename_dat_2);
-    fprintf(gp, "plot '%s' using 1:2 with lines lc 'gray70' title 'raw data', '%s' using 1:2 with lines lc 'gray20' title 'corrected', '%s' using 1:5 with lines lc 'red' notitle\n", filename_dat_1, filename_dat_2, filename_dat_2);
+    fprintf(gp, "plot '%s' using 1:2 with lines lc 'gray70' title 'raw data', '%s' using 1:2 with lines lc 'gray20' title 'corrected', '%s' using 1:5 with lines lc 'red' title 'Average'\n", filename_dat_1, filename_dat_2, filename_dat_2);
     fflush(gp); // Clean up Data
 
     // graph : lift
