@@ -16,7 +16,9 @@ DATE    :
 #include "../programs/07-2_fft_lift.c"
 #include "../programs/08-1_phase-angle_drag.c"
 #include "../programs/08-2_phase-angle_lift.c"
+#include "../programs/09_net-voltage.c"
 #include "../programs/20_wave-adjuster.c"
+#include "../programs/21_wave-adjuster_ver2.c"
 #include "../programs/27-1_wave_fft_drag.c"
 #include "../programs/27-2_wave_fft_lift.c"
 #include "../programs/28-1_wave_phase-angle_drag.c"
@@ -148,8 +150,18 @@ int main()
 
     printf("\n---------------------------------------------------------------------------\n\n");
 
+    // 09_net-voltage
+    netvoltage("test-fft", 225);
+
+    printf("\n---------------------------------------------------------------------------\n\n");
+
     // 20_wave-adjuster
     waveadjuster("test-fft");
+
+    printf("\n---------------------------------------------------------------------------\n\n");
+
+    // 21_wave-adjuster_ver2
+    waveadjuster_ver2("test-fft");
 
     printf("\n---------------------------------------------------------------------------\n\n");
 
