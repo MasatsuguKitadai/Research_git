@@ -124,13 +124,13 @@ int calculate_lift_theory(char date[], int range)
         fq = i;
         fprintf(fp_csv, "%d,%lf,%lf,%lf\n", fq, ps, value[i], value_i[i]);
         fprintf(fp_dat, "%d\t%lf\t%lf\t%lf\n", fq, ps, value[i], value_i[i]);
-        printf("[%d]\tvalue_Re = %.3f \tvalue_Im = %.3f\t pw: %.3f\tfq :%d\n", i, value[i], value_i[i], ps, fq);
+        // printf("[%d]\tvalue_Re = %.3f \tvalue_Im = %.3f\t pw: %.3f\tfq :%d\n", i, value[i], value_i[i], ps, fq);
     }
 
     fclose(fp_csv);
     fclose(fp_dat);
 
-    printf("\n");
+    // printf("\n");
 
     /*****************************************************************************/
     // Gnuplot //

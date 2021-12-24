@@ -89,10 +89,9 @@ int phase_angle_drag_theory(char date[])
         degree = 180;
     }
 
-
     printf("[DRAG-Theory]\n");
-    printf("Im/Re =\t%.3f\n", gradient);
-    printf("angle =\t%.3f\t[deg]\n\n", degree);
+    printf("Im/Re =\t%.3f\n\n", gradient);
+    printf("angle =\t%.3f\t[deg]\n", degree);
 
     /*****************************************************************************/
 
@@ -120,7 +119,7 @@ int phase_angle_drag_theory(char date[])
     fclose(fp);
 
     double difference = 0;
-    difference = degree - degree_result;
+    difference = degree_result - degree;
     printf("Difference =\t%.3f [deg]\n\n", difference);
 
     /*****************************************************************************/
