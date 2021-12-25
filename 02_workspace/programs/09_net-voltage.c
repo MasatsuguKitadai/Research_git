@@ -220,6 +220,8 @@ int netvoltage(char date[], int range)
         b[0] = sin(angle_lift_difference[0]) * voltage_lift[i];
         b[1] = cos(angle_lift_difference[0]) * voltage_lift[i];
 
+        // printf("\n[%.1f]\t%.3f\t%.3f\t%.3f\t%.3f\n\n", angle[i], a[0], a[1], b[0], b[1]);
+
         voltage_x[i] = a[0] + b[0];
         voltage_y[i] = -a[1] + b[1];
         voltage_net[i] = sqrt((voltage_x[i] * voltage_x[i]) + (voltage_y[i] * voltage_y[i]));
