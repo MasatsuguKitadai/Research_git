@@ -214,16 +214,16 @@ int netvoltage(char date[], int range)
 
     for (i = 0; i < split; i++)
     {
-        a[0] = cos(angle_drag_difference[0]) * voltage_drag[i];
-        a[1] = sin(angle_drag_difference[0]) * voltage_drag[i];
+        a[0] = cos(-1 * angle_drag_difference[0]) * voltage_drag[i];
+        a[1] = sin(-1 * angle_drag_difference[0]) * voltage_drag[i];
 
-        b[0] = sin(angle_lift_difference[0]) * voltage_lift[i];
-        b[1] = cos(angle_lift_difference[0]) * voltage_lift[i];
+        b[0] = sin(-1 * angle_lift_difference[0]) * voltage_lift[i];
+        b[1] = cos(-1 * angle_lift_difference[0]) * voltage_lift[i];
 
         // printf("\n[%.1f]\t%.3f\t%.3f\t%.3f\t%.3f\n\n", angle[i], a[0], a[1], b[0], b[1]);
 
-        voltage_x[i] = a[0] + b[0];
-        voltage_y[i] = -a[1] + b[1];
+        voltage_x[i] = a[0] - b[0];
+        voltage_y[i] = a[1] + b[1];
         voltage_net[i] = sqrt((voltage_x[i] * voltage_x[i]) + (voltage_y[i] * voltage_y[i]));
 
         sum[0] = voltage_x[i] + sum[0];
