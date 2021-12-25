@@ -1,9 +1,9 @@
-This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.12.14)  19 DEC 2021 15:21
+This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.12.14)  25 DEC 2021 17:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**/home/masatsugu/git/lab/01_reports/20_sotsuron_1/0_Master_test
-(/home/masatsugu/git/lab/01_reports/20_sotsuron_1/0_Master_test.tex
+**/home/masatsugu/git/lab/01_reports/20_sotsuron_1/0_Master
+(/home/masatsugu/git/lab/01_reports/20_sotsuron_1/0_Master.tex
 pLaTeX2e <2020-02-02>+2 (based on LaTeX2e <2020-02-02> patch level 2)
 L3 programming layer <2020-02-14> (./jsarticle_measlab_3.cls
 Document Class: jsarticle_measlab_3 2015/01/27 tani update
@@ -204,8 +204,8 @@ File: l3backend-dvips.def 2020-02-03 L3 backend support: dvips
 \g__pdf_backend_annotation_int=\count288
 \g__pdf_backend_link_int=\count289
 \g__pdf_backend_link_sf_int=\count290
-) (./0_Master_test.aux)
-\openout1 = `0_Master_test.aux'.
+) (./0_Master.aux)
+\openout1 = `0_Master.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
 LaTeX Font Info:    ... okay on input line 17.
@@ -225,7 +225,7 @@ LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 17.
 LaTeX Font Info:    ... okay on input line 17.
 LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 17.
 LaTeX Font Info:    ... okay on input line 17.
- (./Section/1_Introduction_test.tex
+ (./Section/1_Introduction.tex
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
 (Font)              scaled to size 16.60605pt on input line 1.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
@@ -288,62 +288,25 @@ LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 5.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 13.83836pt on input line 5.
- (./0_Master_test.toc
+ (./0_Master.toc
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 5.
+(Font)              scaled to size 9.60999pt on input line 4.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 5.
+(Font)              scaled to size 9.60999pt on input line 4.
 )
 \tf@toc=\write3
-\openout3 = `0_Master_test.toc'.
+\openout3 = `0_Master.toc'.
 
- [2]
-LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 8.
-LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 8.
-LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 9.
-LaTeX Font Info:    Font shape `JT1/mc/b/n' in size <7> not available
-(Font)              Font shape `JT1/mc/bx/n' tried instead on input line 9.
-LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <7> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 9.
-LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 9.
-LaTeX Font Info:    Font shape `JY1/mc/b/n' in size <7> not available
-(Font)              Font shape `JY1/mc/bx/n' tried instead on input line 9.
-LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <7> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 9.
-LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 9.
-
-
-LaTeX Warning: Citation `latychevskaia2010depth' on page 3 undefined on input line 9.
-
-
-LaTeX Warning: Citation `tanakareduction' on page 3 undefined on input line 9.
-
-) [3] (./Section/2_Theory_test.tex
-File: image/theory/tomographic.eps Graphic file (type eps)
-<image/theory/tomographic.eps>
-LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 11.
-LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 11.
-) [4]
-No file 0_Master_test.bbl.
-[5] (./0_Master_test.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+ [2]) [3] (./Section/2_Theory.tex) [4] (./Section/3_.tex) [5]
+No file 0_Master.bbl.
+[6] (./0_Master.aux) ) 
 Here is how much of TeX's memory you used:
- 2093 strings out of 481768
- 28183 string characters out of 5933619
- 274544 words of memory out of 5000000
- 17501 multiletter control sequences out of 15000+600000
- 548068 words of font info for 98 fonts, out of 8000000 for 9000
+ 2077 strings out of 481768
+ 27828 string characters out of 5933619
+ 274510 words of memory out of 5000000
+ 17488 multiletter control sequences out of 15000+600000
+ 545815 words of font info for 87 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 35i,7n,30p,299b,367s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 31i,7n,26p,280b,367s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on 0_Master_test.dvi (6 pages, 5612 bytes).
+Output written on 0_Master.dvi (7 pages, 4340 bytes).
