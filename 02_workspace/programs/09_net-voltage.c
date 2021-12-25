@@ -133,7 +133,7 @@ int netvoltage(char date[], int range)
 
     i = 0;
 
-    printf("===========================\n");
+    printf("=============================\n");
     printf("\t[Drag]\t[Lift]\t[Net]\n");
 
     while ((fscanf(fp, "%lf,%lf,%lf,%lf", &buf, &ch0, &ch1, &ch2)) != EOF)
@@ -154,7 +154,7 @@ int netvoltage(char date[], int range)
     ave[1] = sum[1] / split;
     ave[2] = sum[2] / split;
 
-    printf("===========================\n");
+    printf("=============================\n");
     printf("[Ave]\t%.3f\t%.3f\t%.3f\n", ave[0], ave[1], ave[2]);
 
     printf("\n");
@@ -209,7 +209,7 @@ int netvoltage(char date[], int range)
     // printf("sin = %lf\n", sin(angle_lift_difference[0]));
     // printf("\n");
 
-    printf("===========================\n");
+    printf("=============================\n");
     printf("\t[Drag]\t[Lift]\t[Net]\n");
 
     for (i = 0; i < split; i++)
@@ -235,7 +235,7 @@ int netvoltage(char date[], int range)
     ave[1] = sum[1] / split;
     ave[2] = sum[2] / split;
 
-    printf("===========================\n");
+    printf("=============================\n");
     printf("[Ave]\t%.3f\t%.3f\t%.3f\n", ave[0], ave[1], ave[2]);
 
     /*****************************************************************************/
