@@ -297,9 +297,7 @@ int waveadjuster_ver2(char date[])
 
     pclose(gp);
 
-    printf("\n09\t\tsuccess\n");
-
-    printf("20\t\tsuccess\n");
+    printf("21\t\tsuccess\n");
 }
 
 // int main()

@@ -62,7 +62,7 @@ int netvoltage(char date[], int range)
     /*****************************************************************************/
 
     int i;
-    double buf;
+    double num;
     double ch0, ch1, ch2;
     double angle_drag[2];
     double angle_lift[2];
@@ -114,6 +114,42 @@ int netvoltage(char date[], int range)
 
     /*****************************************************************************/
 
+    // 位相差の算出
+
+    double angle_drag_theory[2];
+    double angle_lift_theory[2];
+
+    angle_drag_theory[0] = pi;
+    angle_lift_theory[0] = pi / 2;
+
+    // printf("(Drag)\t%.1f [rad]\n", angle_drag_theory[0]);
+    // printf("(Lift)\t%.1f [rad]\n\n", angle_lift_theory[0]);
+
+    angle_drag_theory[1] = 180;
+    angle_lift_theory[1] = 90;
+
+    double angle_drag_difference[2];
+    double angle_lift_difference[2];
+
+    angle_drag_difference[0] = angle_drag[0] - angle_drag_theory[0];
+    angle_lift_difference[0] = angle_lift[0] - angle_lift_theory[0];
+
+    angle_drag_difference[1] = angle_drag[1] - angle_drag_theory[1];
+    angle_lift_difference[1] = angle_lift[1] - angle_lift_theory[1];
+
+    printf("[Difference]=================\n\n");
+
+    printf("(Drag)\t%.1f [rad]\n", angle_drag_difference[0]);
+    printf("(Lift)\t%.1f [rad]\n", angle_lift_difference[0]);
+
+    printf("(Drag)\t%.1f [deg]\n", angle_drag_difference[1]);
+    printf("(Lift)\t%.1f [deg]\n", angle_lift_difference[1]);
+
+    printf("\n=============================\n");
+
+    /*****************************************************************************/
+    // 傾きの読み込み
+
     // 分割
     int split = 3600 / range;
 
@@ -133,12 +169,11 @@ int netvoltage(char date[], int range)
 
     i = 0;
 
-    printf("=============================\n");
     printf("\t[Drag]\t[Lift]\t[Net]\n");
 
-    while ((fscanf(fp, "%lf,%lf,%lf,%lf", &buf, &ch0, &ch1, &ch2)) != EOF)
+    while ((fscanf(fp, "%lf,%lf,%lf,%lf", &num, &ch0, &ch1, &ch2)) != EOF)
     {
-        angle[i] = buf;
+        angle[i] = num;
         voltage_drag[i] = ch0;
         voltage_lift[i] = ch1;
         printf("[%.1f]\t%.3f\t%.3f\t%.3f\n", angle[i], voltage_drag[i], voltage_lift[i], ch2);
@@ -160,50 +195,21 @@ int netvoltage(char date[], int range)
     printf("\n");
 
     /*****************************************************************************/
-
-    double angle_drag_theory[2];
-    double angle_lift_theory[2];
-
-    angle_drag_theory[0] = pi;
-    angle_lift_theory[0] = pi / 2;
-
-    // printf("(Drag)\t%.1f [rad]\n", angle_drag_theory[0]);
-    // printf("(Lift)\t%.1f [rad]\n\n", angle_lift_theory[0]);
-
-    angle_drag_theory[1] = 180;
-    angle_lift_theory[1] = 90;
-
-    double angle_drag_difference[2];
-    double angle_lift_difference[2];
-
     double voltage_x[split];
     double voltage_y[split];
+    double voltage_y_2[split];
     double voltage_net[split];
 
-    double a[2];
-    double b[2];
+    double buf[2];
+    double s[2];
+    double c[2];
+    double t[2];
 
     for (i = 0; i < 3; i++)
     {
         sum[i] = 0;
         ave[i] = 0;
     }
-
-    angle_drag_difference[0] = angle_drag[0] - angle_drag_theory[0];
-    angle_lift_difference[0] = angle_lift[0] - angle_lift_theory[0];
-
-    angle_drag_difference[1] = angle_drag[1] - angle_drag_theory[1];
-    angle_lift_difference[1] = angle_lift[1] - angle_lift_theory[1];
-
-    printf("[Difference]\n\n");
-
-    printf("(Drag)\t%.1f [rad]\n", angle_drag_difference[0]);
-    printf("(Lift)\t%.1f [rad]\n", angle_lift_difference[0]);
-
-    printf("(Drag)\t%.1f [deg]\n", angle_drag_difference[1]);
-    printf("(Lift)\t%.1f [deg]\n", angle_lift_difference[1]);
-
-    printf("\n");
 
     // printf("cos = %lf\n", cos(angle_drag_difference[0]));
     // printf("sin = %lf\n", sin(angle_lift_difference[0]));
@@ -214,22 +220,30 @@ int netvoltage(char date[], int range)
 
     for (i = 0; i < split; i++)
     {
-        a[0] = cos(-1 * angle_drag_difference[0]) * voltage_drag[i];
-        a[1] = sin(-1 * angle_drag_difference[0]) * voltage_drag[i];
+        s[0] = sin(-1 * angle_drag_difference[0]);
+        c[0] = cos(-1 * angle_drag_difference[0]);
 
-        b[0] = sin(-1 * angle_lift_difference[0]) * voltage_lift[i];
-        b[1] = cos(-1 * angle_lift_difference[0]) * voltage_lift[i];
+        s[1] = sin(-1 * angle_lift_difference[0]);
+        c[1] = cos(-1 * angle_lift_difference[0]);
 
-        // printf("\n[%.1f]\t%.3f\t%.3f\t%.3f\t%.3f\n\n", angle[i], a[0], a[1], b[0], b[1]);
+        // printf("\n\t[sin]\t[cos]\t[tan]\t|\t[sin]\t[cos]\t[tan]\n");
+        // printf("[%.1f]\t%.3f\t%.3f\t%.3f\t|\t%.3f\t%.3f\t%.3f\n", angle[i], s[0], c[0], t[0], s[1], c[1], t[1]);
 
-        voltage_x[i] = a[0] - b[0];
-        voltage_y[i] = a[1] + b[1];
+        // buf[0] = c[0] * c[1] / (s[0] * s[1]);
+        // buf[1] = s[0] * s[1] / (c[0] * c[1]);
+
+        voltage_x[i] = (voltage_drag[i] * c[1] - voltage_lift[i] * s[0]) / (c[0] * c[1] - s[0] * s[1]);
+        voltage_y[i] = -(c[0] / s[0]) * voltage_x[i] + voltage_drag[i] / s[0];
+        voltage_y_2[i] = -(s[1] / c[1]) * voltage_x[i] + voltage_lift[i] / c[1];
         voltage_net[i] = sqrt((voltage_x[i] * voltage_x[i]) + (voltage_y[i] * voltage_y[i]));
+
+        //　平均値の算出
 
         sum[0] = voltage_x[i] + sum[0];
         sum[1] = voltage_y[i] + sum[1];
         sum[2] = voltage_net[i] + sum[2];
 
+        // printf("[%.1f]\t%.3f\t%.3f\t%.3f\t\t%.3f\n", angle[i], voltage_x[i], voltage_y[i], voltage_net[i], voltage_y_2[i]);
         printf("[%.1f]\t%.3f\t%.3f\t%.3f\n", angle[i], voltage_x[i], voltage_y[i], voltage_net[i]);
     }
 
@@ -272,9 +286,8 @@ int netvoltage(char date[], int range)
     printf("\n09\t\tsuccess\n");
 }
 
-
 // int main()
 // {
-//     netvoltage("test-fft", 225);
-//     return (0);
+// netvoltage("test-fft", 225);
+// return (0);
 // }
