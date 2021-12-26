@@ -218,17 +218,17 @@ int netvoltage(char date[], int range)
     printf("=============================\n");
     printf("\t[Drag]\t[Lift]\t[Net]\n");
 
+    s[0] = sin(-1 * angle_drag_difference[0]);
+    c[0] = cos(-1 * angle_drag_difference[0]);
+
+    s[1] = sin(angle_lift_difference[0]);
+    c[1] = cos(-1 * angle_lift_difference[0]);
+
+    printf("\n[sin]\t[cos]\t| [sin]\t[cos]\n");
+    printf("%.3f\t%.3f\t| %.3f\t%.3f\n\n", s[0], c[0], s[1], c[1]);
+
     for (i = 0; i < split; i++)
     {
-        s[0] = sin(-1 * angle_drag_difference[0]);
-        c[0] = cos(-1 * angle_drag_difference[0]);
-
-        s[1] = sin(-1 * angle_lift_difference[0]);
-        c[1] = cos(-1 * angle_lift_difference[0]);
-
-        // printf("\n\t[sin]\t[cos]\t[tan]\t|\t[sin]\t[cos]\t[tan]\n");
-        // printf("[%.1f]\t%.3f\t%.3f\t%.3f\t|\t%.3f\t%.3f\t%.3f\n", angle[i], s[0], c[0], t[0], s[1], c[1], t[1]);
-
         // buf[0] = c[0] * c[1] / (s[0] * s[1]);
         // buf[1] = s[0] * s[1] / (c[0] * c[1]);
 
