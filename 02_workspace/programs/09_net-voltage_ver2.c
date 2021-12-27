@@ -221,7 +221,7 @@ int netvoltage(char date[], int range)
     s[0] = sin(-1 * angle_drag_difference[0]);
     c[0] = cos(-1 * angle_drag_difference[0]);
 
-    s[1] = sin(angle_lift_difference[0]);
+    s[1] = sin(-1 * angle_lift_difference[0]);
     c[1] = cos(-1 * angle_lift_difference[0]);
 
     printf("\n[sin]\t[cos]\t| [sin]\t[cos]\n");
@@ -232,7 +232,7 @@ int netvoltage(char date[], int range)
         // buf[0] = c[0] * c[1] / (s[0] * s[1]);
         // buf[1] = s[0] * s[1] / (c[0] * c[1]);
 
-        voltage_x[i] = (voltage_drag[i] * c[1] - voltage_lift[i] * s[0]) / (c[0] * c[1] - s[0] * s[1]);
+        voltage_x[i] = (voltage_drag[i] * c[1] - voltage_lift[i] * s[0]) / (c[0] * c[1] + s[0] * s[1]);
         voltage_y[i] = -(c[0] / s[0]) * voltage_x[i] + voltage_drag[i] / s[0];
         voltage_y_2[i] = -(s[1] / c[1]) * voltage_x[i] + voltage_lift[i] / c[1];
         voltage_net[i] = sqrt((voltage_x[i] * voltage_x[i]) + (voltage_y[i] * voltage_y[i]));
