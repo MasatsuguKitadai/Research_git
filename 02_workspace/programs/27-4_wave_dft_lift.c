@@ -160,7 +160,7 @@ int calculate_lift_theory(char date[], int range)
 
     // range y
     double y_min = 0;
-    double y_max = 50;
+    double y_max = 100;
 
     // label
     char label[100] = "DFT";

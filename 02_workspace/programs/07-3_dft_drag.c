@@ -74,7 +74,7 @@ int calculate_drag(char date[], int range)
 
     while ((fscanf(fp, "%lf, %lf, %lf, %lf", &buf, &ch0, &ch1, &ch2)) != EOF)
     {
-        // printf("[%d]\t%.3f\t%.3f\t%.3f\n", buf, ch0, ch1, ch2);
+        // printf("[%.1f]\t%.3f\t%.3f\t%.3f\n", buf, ch0, ch1, ch2);
         value[i] = ch0;
         i = i + 1;
     }
@@ -141,7 +141,7 @@ int calculate_drag(char date[], int range)
 
     // range y
     double y_min = 0;
-    double y_max = 50;
+    double y_max = 100;
 
     // label
     char label[100] = "DFT";

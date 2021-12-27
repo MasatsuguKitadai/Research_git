@@ -156,9 +156,9 @@ int calculate_drag_theory(char date[], int range)
     char filename_dat_2[100];
 
     sprintf(filename_dat, "../result/%s/dat/27-3_dft-drag-theory/27-3.dat", date);
-    sprintf(filename_dat_2, "../result/%s/dat/07-1_dft-drag/07-1.dat", date);
+    sprintf(filename_dat_2, "../result/%s/dat/07-3_dft-drag/07-3.dat", date);
 
-    sprintf(filename_plot_1, "../result/%s/plot/27/27-3_dft-drag.png", date);
+    sprintf(filename_plot_1, "../result/%s/plot/27/27-1_dft-drag.png", date);
     sprintf(filename_plot_2, "../result/%s/plot/27/27-3_dft-drag_summary.png", date);
 
     /*****************************************************************************/
@@ -169,7 +169,7 @@ int calculate_drag_theory(char date[], int range)
 
     // range y
     double y_min = 0;
-    double y_max = 50;
+    double y_max = 100;
 
     // label
     char label[100] = "DFT";
