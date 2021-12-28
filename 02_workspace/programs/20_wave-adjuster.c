@@ -63,7 +63,7 @@ int waveadjuster(char date[])
     /*****************************************************************************/
 
     fp = fopen(filename_read_2, "r");
-    if (filename_read_2 == NULL)
+    if (fp == NULL)
     {
         printf("Error! I can't open the file.\n");
         exit(0);

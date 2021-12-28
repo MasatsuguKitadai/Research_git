@@ -169,6 +169,7 @@ int netvoltage(char date[], int range)
 
     i = 0;
 
+    printf("【Raw Data】\n");
     printf("\t[Drag]\t[Lift]\t[Net]\n");
 
     while ((fscanf(fp, "%lf,%lf,%lf,%lf", &num, &ch0, &ch1, &ch2)) != EOF)
@@ -215,6 +216,7 @@ int netvoltage(char date[], int range)
     // printf("sin = %lf\n", sin(angle_lift_difference[0]));
     // printf("\n");
 
+    printf("【Corrected Data】\n");
     printf("=============================\n");
     printf("\t[Drag]\t[Lift]\t[Net]\n");
 
@@ -224,8 +226,8 @@ int netvoltage(char date[], int range)
     s[1] = sin(-1 * angle_lift_difference[0]);
     c[1] = cos(-1 * angle_lift_difference[0]);
 
-    printf("\n[sin]\t[cos]\t| [sin]\t[cos]\n");
-    printf("%.3f\t%.3f\t| %.3f\t%.3f\n\n", s[0], c[0], s[1], c[1]);
+    // printf("\n[sin]\t[cos]\t| [sin]\t[cos]\n");
+    // printf("%.3f\t%.3f\t| %.3f\t%.3f\n\n", s[0], c[0], s[1], c[1]);
 
     for (i = 0; i < split; i++)
     {

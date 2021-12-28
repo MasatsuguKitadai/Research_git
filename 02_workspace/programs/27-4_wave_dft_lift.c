@@ -147,7 +147,7 @@ int calculate_lift_theory(char date[], int range)
     char filename_dat_2[100];
 
     sprintf(filename_dat, "../result/%s/dat/27-4_dft-lift-theory/27-4.dat", date);
-    sprintf(filename_dat_2, "../result/%s/dat/07-2_dft-lift/07-2.dat", date);
+    sprintf(filename_dat_2, "../result/%s/dat/07-4_dft-lift/07-4.dat", date);
 
     sprintf(filename_plot_1, "../result/%s/plot/27/27-4_dft-lift.png", date);
     sprintf(filename_plot_2, "../result/%s/plot/27/27-4_dft-lift_summary.png", date);
