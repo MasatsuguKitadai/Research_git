@@ -46,7 +46,7 @@ DATE    :
 int main()
 {
     // make directory
-    char dataname[50] = "test-dft";
+    char dataname[50] = "1-1";
     int range_angle = 150;
     int split_angle = 24;
 

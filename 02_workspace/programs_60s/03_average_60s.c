@@ -86,7 +86,7 @@ int average(char date[], char angle[])
 
     // 変数の宣言
 
-    int count = 150;
+    int count = 300;
     int average_time[5];
     double sum[3];
     double average_value[5][3];
@@ -117,8 +117,8 @@ int average(char date[], char angle[])
             average_value[i][j] = sum[j] / 150;
         }
 
-        count = count + 175;
-        average_time[i] = count - 250;
+        count = count + 375;
+        average_time[i] = count - 450;
         // printf("[%d]\t%.3f\t%.3f\t%.3f\n", average_time[i], average_value[i][0], average_value[i][1], average_value[i][2]);
         // printf("%d\n", average_time[i]);
     }
@@ -173,7 +173,7 @@ int average(char date[], char angle[])
 
     // range x
     int x_min = 0;
-    int x_max = 2300;
+    int x_max = 3000;
 
     // range y
     double y_min = -1;

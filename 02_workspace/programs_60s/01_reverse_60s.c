@@ -82,7 +82,7 @@ int reverse(char date[], char angle[])
         // printf("%.3f, %.3f, %.3f\n", ch0, ch1, ch2);
         value[i][0] = ch0;
         value[i][1] = ch1;
-        value[i][2] = -1 * ch2;
+        value[i][2] = ch2;
         i = i + 1;
     }
 
@@ -134,7 +134,7 @@ int reverse(char date[], char angle[])
 
     // range x
     int x_min = 0;
-    int x_max = 2300;
+    int x_max = 3000;
 
     // range y
     double y_min = -1.5;
