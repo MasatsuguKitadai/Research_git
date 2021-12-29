@@ -112,8 +112,8 @@ int drift(char date[], char angle[])
             average_value[i][j] = sum[j] / 150;
         }
 
-        count = count + 375;
-        average_time[i] = count - 450;
+        count = count + 325;
+        average_time[i] = count - 400;
         // printf("[%d]\t%.3f\t%.3f\t%.3f\n", average_time[i], average_value[i][0], average_value[i][1], average_value[i][2]);
         // printf("%d\n", average_time[i]);
     }

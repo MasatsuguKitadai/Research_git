@@ -61,15 +61,15 @@ int main()
 
     // 01_reverse
     reverse(dataname, "0");
-    reverse(dataname, "150");
-    reverse(dataname, "300");
-    reverse(dataname, "450");
-    reverse(dataname, "600");
-    reverse(dataname, "750");
-    reverse(dataname, "900");
-    reverse(dataname, "1050");
-    reverse(dataname, "1200");
-    reverse(dataname, "1350");
+    // reverse(dataname, "150");
+    // reverse(dataname, "300");
+    // reverse(dataname, "450");
+    // reverse(dataname, "600");
+    // reverse(dataname, "750");
+    // reverse(dataname, "900");
+    // reverse(dataname, "1050");
+    // reverse(dataname, "1200");
+    // reverse(dataname, "1350");
     reverse(dataname, "1500");
     reverse(dataname, "1650");
     reverse(dataname, "1800");
@@ -89,15 +89,15 @@ int main()
 
     // 02_drift
     drift(dataname, "0");
-    drift(dataname, "150");
-    drift(dataname, "300");
-    drift(dataname, "450");
-    drift(dataname, "600");
-    drift(dataname, "750");
-    drift(dataname, "900");
-    drift(dataname, "1050");
-    drift(dataname, "1200");
-    drift(dataname, "1350");
+    // drift(dataname, "150");
+    // drift(dataname, "300");
+    // drift(dataname, "450");
+    // drift(dataname, "600");
+    // drift(dataname, "750");
+    // drift(dataname, "900");
+    // drift(dataname, "1050");
+    // drift(dataname, "1200");
+    // drift(dataname, "1350");
     drift(dataname, "1500");
     drift(dataname, "1650");
     drift(dataname, "1800");
@@ -117,15 +117,15 @@ int main()
 
     // 03_average
     average(dataname, "0");
-    average(dataname, "150");
-    average(dataname, "300");
-    average(dataname, "450");
-    average(dataname, "600");
-    average(dataname, "750");
-    average(dataname, "900");
-    average(dataname, "1050");
-    average(dataname, "1200");
-    average(dataname, "1350");
+    // average(dataname, "150");
+    // average(dataname, "300");
+    // average(dataname, "450");
+    // average(dataname, "600");
+    // average(dataname, "750");
+    // average(dataname, "900");
+    // average(dataname, "1050");
+    // average(dataname, "1200");
+    // average(dataname, "1350");
     average(dataname, "1500");
     average(dataname, "1650");
     average(dataname, "1800");
@@ -145,15 +145,15 @@ int main()
 
     // 04_linear
     linear(dataname, "0");
-    linear(dataname, "150");
-    linear(dataname, "300");
-    linear(dataname, "450");
-    linear(dataname, "600");
-    linear(dataname, "750");
-    linear(dataname, "900");
-    linear(dataname, "1050");
-    linear(dataname, "1200");
-    linear(dataname, "1350");
+    // linear(dataname, "150");
+    // linear(dataname, "300");
+    // linear(dataname, "450");
+    // linear(dataname, "600");
+    // linear(dataname, "750");
+    // linear(dataname, "900");
+    // linear(dataname, "1050");
+    // linear(dataname, "1200");
+    // linear(dataname, "1350");
     linear(dataname, "1500");
     linear(dataname, "1650");
     linear(dataname, "1800");
