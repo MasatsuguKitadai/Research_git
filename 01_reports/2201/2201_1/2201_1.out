@@ -7,5 +7,8 @@
 \BOOKMARK [2][-]{subsection.3.3}{実験結果}{section.3}% 7
 \BOOKMARK [1][-]{section.4}{補正処理の理論}{}% 8
 \BOOKMARK [2][-]{subsection.4.1}{校正時の問題点}{section.4}% 9
-\BOOKMARK [2][-]{subsection.4.2}{座標軸の変換}{section.4}% 10
-\BOOKMARK [1][-]{section.5}{校正方法の提案}{}% 11
+\BOOKMARK [2][-]{subsection.4.2}{座標軸の回転による影響}{section.4}% 10
+\BOOKMARK [2][-]{subsection.4.3}{位相角の算出}{section.4}% 11
+\BOOKMARK [2][-]{subsection.4.4}{出力電圧の座標変換}{section.4}% 12
+\BOOKMARK [2][-]{subsection.4.5}{テストデータへの適用}{section.4}% 13
+\BOOKMARK [1][-]{section.5}{校正方法の提案}{}% 14
