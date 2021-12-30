@@ -142,7 +142,7 @@ int reverse(char date[], char angle[])
 
     // range y (loadcell)
     double y_min_loadcell = -0.5;
-    double y_max_loadcell = 2;
+    double y_max_loadcell = 3;
 
     // label
     const char *xxlabel = "Time [1/5 s]";

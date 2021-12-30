@@ -46,7 +46,7 @@ DATE    :
 int main()
 {
     // make directory
-    char dataname[50] = "1-1";
+    char dataname[50] = "1-x";
     int range_angle = 150;
     int split_angle = 24;
 

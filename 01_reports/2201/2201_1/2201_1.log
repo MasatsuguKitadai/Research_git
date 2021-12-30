@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.12.14)  29 DEC 2021 17:23
+This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.12.14)  30 DEC 2021 13:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -455,32 +455,34 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 100.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 114.
+(Font)              scaled to size 8.64899pt on input line 117.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 114.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 146.
+(Font)              scaled to size 8.64899pt on input line 117.
  [1
 
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 146.
+File: ../images/image_1.png Graphic file (type bmp)
+<../images/image_1.png>
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 200.
+ [2
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 200.
  (./2201_1.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 146.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 146.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 200.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 200.
 Package rerunfilecheck Info: File `2201_1.out' has not changed.
-(rerunfilecheck)             Checksum: 1264163917A3555965AB5A89A2F2EB28;390.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 146.
+(rerunfilecheck)             Checksum: 5D8B7029135961C6FD6D587A192F6A84;642.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 200.
  ) 
 Here is how much of TeX's memory you used:
- 8368 strings out of 481768
- 121380 string characters out of 5933619
- 405038 words of memory out of 5000000
- 23630 multiletter control sequences out of 15000+600000
- 541962 words of font info for 72 fonts, out of 8000000 for 9000
+ 8380 strings out of 481768
+ 121569 string characters out of 5933619
+ 406038 words of memory out of 5000000
+ 23636 multiletter control sequences out of 15000+600000
+ 542297 words of font info for 73 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 34i,9n,36p,272b,384s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,9n,36p,272b,437s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on 2201_1.dvi (1 page, 8152 bytes).
+Output written on 2201_1.dvi (2 pages, 12772 bytes).

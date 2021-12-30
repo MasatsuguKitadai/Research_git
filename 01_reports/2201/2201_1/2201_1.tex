@@ -104,10 +104,13 @@ lineskip=-0.5ex
 \end{itemize}
 
 
+\newpage
+\section{評価実験}
+2021年12月29日(水)から，2022年1月5日(水)にかけて，
+製作した実験装置を用いて作用力測定装置の評価実験を行った．\\
 
-\section{実験結果}
-2021年12月29日(水)から，2022年1月5日(水)にかけて，作用力測定装置の評価実験を行った．
-以下にその条件を示す．
+\subsection{実験条件}
+今回行った実験条件を以下の表1に示す．
 
 \begin{table}[htbp]
     \begin{center}
@@ -122,6 +125,40 @@ lineskip=-0.5ex
     \end{center}
 \end{table}
 
+\subsection{実験方法}
+今回の実験では，以前行った模擬実験の方法をもとに検討し，
+以下のように設定した．\\
+
+$\blacksquare$ \textgt{測定条件}
+    \begin{itemize}
+        \item サンプリング周期は5[Hz]とする
+        \item ロードセルをマイクロステージを用いて\\
+              0.03 [mm] ずつ移動させ，
+              作用力を加え電圧を測定する
+        \item 基準を0[mm]として，0.03[mm]，0.06[mm]，0.09[mm]，0.12[mm]の計4回移動させる
+    \end{itemize}
+
+$\blacksquare$ \textgt{測定準備}
+    \begin{enumerate}[(1)]
+        \item ロードセルを測定する角度に固定
+        \item 粗動用ダイヤルでロードセルを大まかな位置に設定
+        \item マイクロステージを動かしてロードセルが供試体に接触する位置を0.01[mm]単位で特定
+        \item その位置を基準に測定を開始する
+    \end{enumerate}
+
+$\blacksquare$ \textgt{測定方法}
+    \begin{enumerate}[(1)]
+        \item 測定開始から60秒間待機する
+        \item 40秒間の測定時間
+        \item 60秒間のマイクロステージ操作時間
+        \item (2)，(3)の作業を5回繰り返す (100秒周期)\\
+              ※ 5回目はロードセル，供試体を非接触状態にする
+    \end{enumerate}
+
+\subsection{実験結果}
+
+\newpage
+
 \section{補正処理の理論}
 実験を行う過程で，作用力測定装置と回流水槽等の作用力を与える装置を
 正しく設置することが非常に困難であることがわかった．
@@ -133,7 +170,7 @@ lineskip=-0.5ex
 校正実験を行い，出力電圧を評価するためには
 それぞれの実験装置を正しい方向(角度)に設置する必要がある．
 しかし，これまでの実験過程及び結果から，
-以下のような要因が大きな影響を与えていることがわかった．
+以下のような要因が校正実験の際に影響を与えていることがわかった．
 
 \begin{itemize}
     \item [$\bullet$] 抗力・揚力方向のひずみセンサが直角に取り付けられていない
@@ -141,6 +178,23 @@ lineskip=-0.5ex
     \item [$\bullet$] 実験装置が水流に対して正しい方向に設置されていない
     \item [$\bullet$] 校正装置が正しく取り付けられていない
 \end{itemize}
+
+\subsection{座標軸の変換}
+ここで，作用力の座標軸について抗力方向を$x軸$，揚力方向を$y$軸，
+同様にひずみセンサの座標軸について抗力・揚力方向をそれぞれ$x'$軸，$y'$軸とすると
+上記の校正時の問題点により，以下の図のように
+ひずみセンサの$x'$軸，$y'$軸は，$x$軸，$y$軸に対して
+それぞれ角度$\theta_1$，$\theta_2$だけズレが生じていると考えられる．
+
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=60mm]{../images/image_1.png}
+        \caption{theorical Value}
+    \end{center}
+\end{figure}
+
+このとき，作用力$F$が加えられたとき，以下のような
 
 \section{校正方法の提案}
 \end{document}
