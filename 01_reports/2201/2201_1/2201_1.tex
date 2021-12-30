@@ -117,10 +117,10 @@ lineskip=-0.5ex
         \caption{Experimental conditions}
         \begin{tabular}{|p{30mm}|p{20mm}|p{30}|}
             \hline
-            \multicolumn{1}{|c|}{\textgt{項目}} & \multicolumn{1}{|c|}{\textgt{条件数}} & \multicolumn{1}{|c|}{\textgt{備考}}\\ \hline
-            \multicolumn{1}{|c|}{試験片}                    & \multicolumn{1}{|c|}{1} & \multicolumn{1}{|c|}{\textgt{円筒：実験装置で使用}}  \\ \hline
-            \multicolumn{1}{|c|}{測定角度}                    & \multicolumn{1}{|c|}{24} & \multicolumn{1}{|c|}{\textgt{15度ごとの測定}}  \\ \hline
-            \multicolumn{1}{|c|}{試行回数}                    & \multicolumn{1}{|c|}{3} & \multicolumn{1}{|c|}{\textgt{}}  \\ \hline
+            \multicolumn{1}{|c|}{\textgt{項目}} & \multicolumn{1}{|c|}{\textgt{条件数}} & \multicolumn{1}{|c|}{\textgt{備考}}                 \\ \hline
+            \multicolumn{1}{|c|}{試験片}        & \multicolumn{1}{|c|}{1}               & \multicolumn{1}{|c|}{\textgt{円筒：実験装置で使用}} \\ \hline
+            \multicolumn{1}{|c|}{測定角度}      & \multicolumn{1}{|c|}{24}              & \multicolumn{1}{|c|}{\textgt{15度ごとの測定}}       \\ \hline
+            \multicolumn{1}{|c|}{試行回数}      & \multicolumn{1}{|c|}{3}               & \multicolumn{1}{|c|}{\textgt{}}                     \\ \hline
         \end{tabular}
     \end{center}
 \end{table}
@@ -130,31 +130,31 @@ lineskip=-0.5ex
 以下のように設定した．\\
 
 $\blacksquare$ \textgt{測定条件}
-    \begin{itemize}
-        \item サンプリング周期は5[Hz]とする
-        \item ロードセルをマイクロステージを用いて\\
-              0.03 [mm] ずつ移動させ，
-              作用力を加え電圧を測定する
-        \item 基準を0[mm]として，0.03[mm]，0.06[mm]，0.09[mm]，0.12[mm]の計4回移動させる
-    \end{itemize}
+\begin{itemize}
+    \item サンプリング周期は5[Hz]とする
+    \item ロードセルをマイクロステージを用いて\\
+          0.03 [mm] ずつ移動させ，
+          作用力を加え電圧を測定する
+    \item 基準を0[mm]として，0.03[mm]，0.06[mm]，0.09[mm]，0.12[mm]の計4回移動させる
+\end{itemize}
 
 $\blacksquare$ \textgt{測定準備}
-    \begin{enumerate}[(1)]
-        \item ロードセルを測定する角度に固定
-        \item 粗動用ダイヤルでロードセルを大まかな位置に設定
-        \item マイクロステージを動かしてロードセルが供試体に接触する位置を0.01[mm]単位で特定
-        \item その位置を基準に測定を開始する
-    \end{enumerate}
+\begin{enumerate}[(1)]
+    \item ロードセルを測定する角度に固定
+    \item 粗動用ダイヤルでロードセルを大まかな位置に設定
+    \item マイクロステージを動かしてロードセルが供試体に接触する位置を0.01[mm]単位で特定
+    \item その位置を基準に測定を開始する
+\end{enumerate}
 
 $\blacksquare$ \textgt{測定方法}
-    \begin{enumerate}[(1)]
-        \item 測定開始から60秒間待機する
-        \item 測定 (40秒間)
-        \item 自動ステージ動作時間 (60秒間)
-        \item [※] 動作後，電圧の安定を図るため
-        \item (2)，(3)の作業を5回繰り返す (100秒周期)
-        \item [※] 5回目はロードセル，供試体を非接触状態にする
-    \end{enumerate}
+\begin{enumerate}[(1)]
+    \item 測定開始から60秒間待機する
+    \item 測定 (40秒間)
+    \item 自動ステージ動作時間 (60秒間)
+    \item [※] 動作後，電圧の安定を図るため
+    \item (2)，(3)の作業を5回繰り返す (100秒周期)
+    \item [※] 5回目はロードセル，供試体を非接触状態にする
+\end{enumerate}
 
 \subsection{実験結果}
 
@@ -167,30 +167,30 @@ $\blacksquare$ \textgt{測定方法}
         \begin{tabular}{|p{20mm}|p{20mm}|p{20mm}|p{20mm}|}
             \hline
             \multicolumn{1}{|c|}{\textgt{Angle [deg]}} & \multicolumn{1}{|c|}{\textgt{$A_d$ [V/V]}} & \multicolumn{1}{|c|}{\textgt{$A_l$ [V/V]}} & \multicolumn{1}{|c|}{\textgt{$A_{net}$ [V/V]}} \\ \hline
-            \multicolumn{1}{|c|}{0}                  & \multicolumn{1}{|r|}{}           & \multicolumn{1}{|r|}{\textgt{}}  & \multicolumn{1}{|r|}{\textgt{}}  \\ \hline
-            \multicolumn{1}{|c|}{15}                 & \multicolumn{1}{|r|}{}           & \multicolumn{1}{|r|}{\textgt{}}  & \multicolumn{1}{|r|}{\textgt{}}  \\ \hline
-            \multicolumn{1}{|c|}{30}                 & \multicolumn{1}{|r|}{}           & \multicolumn{1}{|r|}{\textgt{}}  & \multicolumn{1}{|r|}{\textgt{}}  \\ \hline
-            \multicolumn{1}{|c|}{45}                 & \multicolumn{1}{|r|}{}           & \multicolumn{1}{|r|}{\textgt{}}  & \multicolumn{1}{|r|}{\textgt{}}  \\ \hline
-            \multicolumn{1}{|c|}{60}                 & \multicolumn{1}{|r|}{}           & \multicolumn{1}{|r|}{\textgt{}}  & \multicolumn{1}{|r|}{\textgt{}}  \\ \hline
-            \multicolumn{1}{|c|}{75}                & \multicolumn{1}{|r|}{}           & \multicolumn{1}{|r|}{\textgt{}}  & \multicolumn{1}{|r|}{\textgt{}}  \\ \hline
-            \multicolumn{1}{|c|}{90}                & \multicolumn{1}{|r|}{}           & \multicolumn{1}{|r|}{\textgt{}}  & \multicolumn{1}{|r|}{\textgt{}}  \\ \hline
-            \multicolumn{1}{|c|}{105}                & \multicolumn{1}{|r|}{}           & \multicolumn{1}{|r|}{\textgt{}}  & \multicolumn{1}{|r|}{\textgt{}}  \\ \hline
-            \multicolumn{1}{|c|}{120}                & \multicolumn{1}{|r|}{}           & \multicolumn{1}{|r|}{\textgt{}}  & \multicolumn{1}{|r|}{\textgt{}}  \\ \hline
-            \multicolumn{1}{|c|}{135}                & \multicolumn{1}{|r|}{}           & \multicolumn{1}{|r|}{\textgt{}}  & \multicolumn{1}{|r|}{\textgt{}}  \\ \hline
-            \multicolumn{1}{|c|}{150}                & \multicolumn{1}{|r|}{}           & \multicolumn{1}{|r|}{\textgt{}}  & \multicolumn{1}{|r|}{\textgt{}}  \\ \hline
-            \multicolumn{1}{|c|}{165}                & \multicolumn{1}{|r|}{}           & \multicolumn{1}{|r|}{\textgt{}}  & \multicolumn{1}{|r|}{\textgt{}}  \\ \hline
-            \multicolumn{1}{|c|}{180}                & \multicolumn{1}{|r|}{}           & \multicolumn{1}{|r|}{\textgt{}}  & \multicolumn{1}{|r|}{\textgt{}}  \\ \hline
-            \multicolumn{1}{|c|}{195}                & \multicolumn{1}{|r|}{}           & \multicolumn{1}{|r|}{\textgt{}}  & \multicolumn{1}{|r|}{\textgt{}}  \\ \hline
-            \multicolumn{1}{|c|}{210}                & \multicolumn{1}{|r|}{}           & \multicolumn{1}{|r|}{\textgt{}}  & \multicolumn{1}{|r|}{\textgt{}}  \\ \hline
-            \multicolumn{1}{|c|}{225}                & \multicolumn{1}{|r|}{}           & \multicolumn{1}{|r|}{\textgt{}}  & \multicolumn{1}{|r|}{\textgt{}}  \\ \hline
-            \multicolumn{1}{|c|}{240}              & \multicolumn{1}{|r|}{}           & \multicolumn{1}{|r|}{\textgt{}}  & \multicolumn{1}{|r|}{\textgt{}}  \\ \hline
-            \multicolumn{1}{|c|}{255}              & \multicolumn{1}{|r|}{}           & \multicolumn{1}{|r|}{\textgt{}}  & \multicolumn{1}{|r|}{\textgt{}}  \\ \hline
-            \multicolumn{1}{|c|}{270}              & \multicolumn{1}{|r|}{}           & \multicolumn{1}{|r|}{\textgt{}}  & \multicolumn{1}{|r|}{\textgt{}}  \\ \hline
-            \multicolumn{1}{|c|}{285}              & \multicolumn{1}{|r|}{}           & \multicolumn{1}{|r|}{\textgt{}}  & \multicolumn{1}{|r|}{\textgt{}}  \\ \hline
-            \multicolumn{1}{|c|}{300}              & \multicolumn{1}{|r|}{}           & \multicolumn{1}{|r|}{\textgt{}}  & \multicolumn{1}{|r|}{\textgt{}}  \\ \hline
-            \multicolumn{1}{|c|}{315}              & \multicolumn{1}{|r|}{}           & \multicolumn{1}{|r|}{\textgt{}}  & \multicolumn{1}{|r|}{\textgt{}}  \\ \hline
-            \multicolumn{1}{|c|}{330}              & \multicolumn{1}{|r|}{}           & \multicolumn{1}{|r|}{\textgt{}}  & \multicolumn{1}{|r|}{\textgt{}}  \\ \hline
-            \multicolumn{1}{|c|}{345}              & \multicolumn{1}{|r|}{}           & \multicolumn{1}{|r|}{\textgt{}}  & \multicolumn{1}{|r|}{\textgt{}}  \\ \hline
+            \multicolumn{1}{|c|}{0}                    & \multicolumn{1}{|r|}{}                     & \multicolumn{1}{|r|}{\textgt{}}            & \multicolumn{1}{|r|}{\textgt{}}                \\ \hline
+            \multicolumn{1}{|c|}{15}                   & \multicolumn{1}{|r|}{}                     & \multicolumn{1}{|r|}{\textgt{}}            & \multicolumn{1}{|r|}{\textgt{}}                \\ \hline
+            \multicolumn{1}{|c|}{30}                   & \multicolumn{1}{|r|}{}                     & \multicolumn{1}{|r|}{\textgt{}}            & \multicolumn{1}{|r|}{\textgt{}}                \\ \hline
+            \multicolumn{1}{|c|}{45}                   & \multicolumn{1}{|r|}{}                     & \multicolumn{1}{|r|}{\textgt{}}            & \multicolumn{1}{|r|}{\textgt{}}                \\ \hline
+            \multicolumn{1}{|c|}{60}                   & \multicolumn{1}{|r|}{}                     & \multicolumn{1}{|r|}{\textgt{}}            & \multicolumn{1}{|r|}{\textgt{}}                \\ \hline
+            \multicolumn{1}{|c|}{75}                   & \multicolumn{1}{|r|}{}                     & \multicolumn{1}{|r|}{\textgt{}}            & \multicolumn{1}{|r|}{\textgt{}}                \\ \hline
+            \multicolumn{1}{|c|}{90}                   & \multicolumn{1}{|r|}{}                     & \multicolumn{1}{|r|}{\textgt{}}            & \multicolumn{1}{|r|}{\textgt{}}                \\ \hline
+            \multicolumn{1}{|c|}{105}                  & \multicolumn{1}{|r|}{}                     & \multicolumn{1}{|r|}{\textgt{}}            & \multicolumn{1}{|r|}{\textgt{}}                \\ \hline
+            \multicolumn{1}{|c|}{120}                  & \multicolumn{1}{|r|}{}                     & \multicolumn{1}{|r|}{\textgt{}}            & \multicolumn{1}{|r|}{\textgt{}}                \\ \hline
+            \multicolumn{1}{|c|}{135}                  & \multicolumn{1}{|r|}{}                     & \multicolumn{1}{|r|}{\textgt{}}            & \multicolumn{1}{|r|}{\textgt{}}                \\ \hline
+            \multicolumn{1}{|c|}{150}                  & \multicolumn{1}{|r|}{}                     & \multicolumn{1}{|r|}{\textgt{}}            & \multicolumn{1}{|r|}{\textgt{}}                \\ \hline
+            \multicolumn{1}{|c|}{165}                  & \multicolumn{1}{|r|}{}                     & \multicolumn{1}{|r|}{\textgt{}}            & \multicolumn{1}{|r|}{\textgt{}}                \\ \hline
+            \multicolumn{1}{|c|}{180}                  & \multicolumn{1}{|r|}{}                     & \multicolumn{1}{|r|}{\textgt{}}            & \multicolumn{1}{|r|}{\textgt{}}                \\ \hline
+            \multicolumn{1}{|c|}{195}                  & \multicolumn{1}{|r|}{}                     & \multicolumn{1}{|r|}{\textgt{}}            & \multicolumn{1}{|r|}{\textgt{}}                \\ \hline
+            \multicolumn{1}{|c|}{210}                  & \multicolumn{1}{|r|}{}                     & \multicolumn{1}{|r|}{\textgt{}}            & \multicolumn{1}{|r|}{\textgt{}}                \\ \hline
+            \multicolumn{1}{|c|}{225}                  & \multicolumn{1}{|r|}{}                     & \multicolumn{1}{|r|}{\textgt{}}            & \multicolumn{1}{|r|}{\textgt{}}                \\ \hline
+            \multicolumn{1}{|c|}{240}                  & \multicolumn{1}{|r|}{}                     & \multicolumn{1}{|r|}{\textgt{}}            & \multicolumn{1}{|r|}{\textgt{}}                \\ \hline
+            \multicolumn{1}{|c|}{255}                  & \multicolumn{1}{|r|}{}                     & \multicolumn{1}{|r|}{\textgt{}}            & \multicolumn{1}{|r|}{\textgt{}}                \\ \hline
+            \multicolumn{1}{|c|}{270}                  & \multicolumn{1}{|r|}{}                     & \multicolumn{1}{|r|}{\textgt{}}            & \multicolumn{1}{|r|}{\textgt{}}                \\ \hline
+            \multicolumn{1}{|c|}{286}                  & \multicolumn{1}{|r|}{}                     & \multicolumn{1}{|r|}{\textgt{}}            & \multicolumn{1}{|r|}{\textgt{}}                \\ \hline
+            \multicolumn{1}{|c|}{300}                  & \multicolumn{1}{|r|}{}                     & \multicolumn{1}{|r|}{\textgt{}}            & \multicolumn{1}{|r|}{\textgt{}}                \\ \hline
+            \multicolumn{1}{|c|}{315}                  & \multicolumn{1}{|r|}{}                     & \multicolumn{1}{|r|}{\textgt{}}            & \multicolumn{1}{|r|}{\textgt{}}                \\ \hline
+            \multicolumn{1}{|c|}{330}                  & \multicolumn{1}{|r|}{}                     & \multicolumn{1}{|r|}{\textgt{}}            & \multicolumn{1}{|r|}{\textgt{}}                \\ \hline
+            \multicolumn{1}{|c|}{345}                  & \multicolumn{1}{|r|}{}                     & \multicolumn{1}{|r|}{\textgt{}}            & \multicolumn{1}{|r|}{\textgt{}}                \\ \hline
         \end{tabular}
     \end{center}
 \end{table}
@@ -258,9 +258,9 @@ $\blacksquare$ \textgt{測定方法}
 
 \begin{itemize}
     \item [$\blacksquare$] 位相角$\phi$の算出
-    \begin{eqnarray*}
-        \mathrm{\phi \; [deg]} = \arctan \left(\frac{Im}{Re}\right) × \frac{180}{\pi}
-    \end{eqnarray*}    
+          \begin{eqnarray*}
+              \mathrm{\phi \; [deg]} = \arctan \left(\frac{Im}{Re}\right) × \frac{180}{\pi}
+          \end{eqnarray*}
     \item [※] 位相角$\phi$は，フーリエ変換の性質上，余弦波に対する位相角を示している．
 \end{itemize}
 
@@ -269,10 +269,10 @@ $\blacksquare$ \textgt{測定方法}
 
 \begin{itemize}
     \item [$\blacksquare$] \textgt{抗力・揚力における出力電圧の理論式}
-    \begin{eqnarray*}
-        V_{x} &=& A \sin\left(\omega t + \frac{3}{2}\pi\right) = A \cos\left(\omega t + \pi\right)\\
-        V_{y} &=& A \sin\left(\omega t + \pi\right) = A \cos\left(\omega t + \frac{1}{2}\pi\right)
-    \end{eqnarray*}
+          \begin{eqnarray*}
+              V_{x} &=& A \sin\left(\omega t + \frac{3}{2}\pi\right) = A \cos\left(\omega t + \pi\right)\\
+              V_{y} &=& A \sin\left(\omega t + \pi\right) = A \cos\left(\omega t + \frac{1}{2}\pi\right)
+          \end{eqnarray*}
     \item [※] $A$ は定数
 \end{itemize}
 
@@ -281,10 +281,10 @@ $\blacksquare$ \textgt{測定方法}
 
 \begin{itemize}
     \item [$\blacksquare$] \textgt{抗力・揚力における出力電圧の位相差の算出}
-    \begin{eqnarray*}
-        \theta_1 &=& \pi - \phi_1\\
-        \theta_2 &=& \frac{1}{2} \pi - \phi_2
-    \end{eqnarray*}
+          \begin{eqnarray*}
+              \theta_1 &=& \pi - \phi_1\\
+              \theta_2 &=& \frac{1}{2} \pi - \phi_2
+          \end{eqnarray*}
 \end{itemize}
 
 これより，Fig.1における波形はそれぞれの方向について$\theta_1$，$\theta_2$だけ
@@ -298,9 +298,9 @@ $\blacksquare$ \textgt{測定方法}
 
 \begin{itemize}
     \item [$\blacksquare$] 抗力・揚力方向のひずみセンサの取付角度 $\phi$
-    \begin{eqnarray*}
-        \phi &=& \left| \phi_x - \phi_y \right| \\
-    \end{eqnarray*}    
+          \begin{eqnarray*}
+              \phi &=& \left| \phi_x - \phi_y \right| \\
+          \end{eqnarray*}
 \end{itemize}
 
 \subsection{出力電圧の座標変換}
@@ -322,10 +322,10 @@ $\blacksquare$ \textgt{測定方法}
 
 \begin{itemize}
     \item [$\blacksquare$] $f_{x1}\left(x\right)$，$f_{y1}\left(x\right)$の算出
-    \begin{eqnarray*}
-        f_{x1}\left(x\right) &=& \tan \theta_1 \; x\\
-        f_{y1}\left(x\right) &=& - \frac{1}{\tan \theta_2}\; x
-    \end{eqnarray*}    
+          \begin{eqnarray*}
+              f_{x1}\left(x\right) &=& \tan \theta_1 \; x\\
+              f_{y1}\left(x\right) &=& - \frac{1}{\tan \theta_2}\; x
+          \end{eqnarray*}
 \end{itemize}
 
 このとき，作用力$F$は，Fig.に示す点$F$の座標を表すベクトルと考えることができる．
@@ -340,10 +340,10 @@ $F_{x'}$，$F_{y'}$のベクトルの大きさ$|\boldsymbol{F_{x'}}|$，$|\bolds
 
 \begin{itemize}
     \item [$\blacksquare$] 点$F_x'$，$F_y'$の座標
-    \begin{eqnarray*}
-        F_{x'} \left(x ,y\right) &=& \left(|\boldsymbol{F_{x'}}| \cos \theta_1,\; |\boldsymbol{F_{x'}}| \sin \theta_2\right)\\
-        F_{y'} \left(x ,y\right) &=& \left( - |\boldsymbol{F_{y'}}| \sin \theta_1,\; |\boldsymbol{F_{y'}}| \cos \theta_2\right)
-    \end{eqnarray*}    
+          \begin{eqnarray*}
+              F_{x'} \left(x ,y\right) &=& \left(|\boldsymbol{F_{x'}}| \cos \theta_1,\; |\boldsymbol{F_{x'}}| \sin \theta_2\right)\\
+              F_{y'} \left(x ,y\right) &=& \left( - |\boldsymbol{F_{y'}}| \sin \theta_1,\; |\boldsymbol{F_{y'}}| \cos \theta_2\right)
+          \end{eqnarray*}
 \end{itemize}
 
 次に，直線$f_{x2}\left(x\right)$，$f_{y2}\left(x\right)$を求める．
@@ -352,10 +352,10 @@ $f_{x1}\left(x\right)$，$f_{y1}\left(x\right)$，点$F_x'$，$F_y'$の座標の
 
 \begin{itemize}
     \item [$\blacksquare$] $f_{x2}\left(x\right)$，$f_{y2}\left(x\right)$の算出
-    \begin{eqnarray*}
-        f_{x2}\left(x\right) &=& - \frac{1}{\tan \theta_1} \; x + \frac{|F_{x'}|}{\sin \theta_1}\\
-        f_{y2}\left(x\right) &=& \tan \theta_2\; x + \frac{|F_{y'}|}{\cos \theta_2}
-    \end{eqnarray*}    
+          \begin{eqnarray*}
+              f_{x2}\left(x\right) &=& - \frac{1}{\tan \theta_1} \; x + \frac{|F_{x'}|}{\sin \theta_1}\\
+              f_{y2}\left(x\right) &=& \tan \theta_2\; x + \frac{|F_{y'}|}{\cos \theta_2}
+          \end{eqnarray*}
 \end{itemize}
 
 以上の$f_{x2}\left(x\right)$，$f_{y2}\left(x\right)$から，
@@ -363,31 +363,71 @@ $f_{x1}\left(x\right)$，$f_{y1}\left(x\right)$，点$F_x'$，$F_y'$の座標の
 
 \begin{itemize}
     \item [$\blacksquare$] $F\left(x,y\right)$の算出
-    \begin{eqnarray*}
-        x
-    \end{eqnarray*}    
+          \begin{eqnarray*}
+              x
+          \end{eqnarray*}
 \end{itemize}
 
 したがって，正規座標系における抗力$F_x$および揚力$F_y$は，以下のように表される．
 
 \begin{itemize}
     \item [$\blacksquare$] 抗力$F_x$・揚力$F_y$の大きさ
-    \begin{eqnarray*}
-        F_x &=& \\ 
-        F_y &=&  
-    \end{eqnarray*}    
+          \begin{eqnarray*}
+              F_x &=& \\
+              F_y &=&
+          \end{eqnarray*}
 \end{itemize}
 
 以上の過程よりひずみセンサにおける座標系から正規座標系への変換が可能である．
 
+\newpage
+
 \subsection{テストデータへの適用}
-
 抗力$F_x$・揚力$F_y$を導出する補正理論について
-テストデータを作成し，それに適用することでその有効性を確かめた．\\
+テストデータを作成し，それに適用することでその有効性を確かめた．
 
-$\blacksquare$ \textgt{$\theta_1 = 15 \; \mathrm{[deg]}$，$\theta_2 = 20 \; \mathrm{[deg]}$のとき}\\
-$\blacksquare$ \textgt{$\theta_1 = -15 \; \mathrm{[deg]}$，$\theta_2 = -20 \; \mathrm{[deg]}$のとき}\\
-$\blacksquare$ \textgt{$\theta_1 = 90 \; \mathrm{[deg]}$，$\theta_2 = 90 \; \mathrm{[deg]}$のとき}\\
+\begin{itemize}
+    \item [$\blacksquare$] \textgt{$\theta_1 = 15 \; \mathrm{[deg]}$，$\theta_2 = 20 \; \mathrm{[deg]}$のとき}\\
+          \begin{figure}[htbp]
+              \footnotesize
+              \begin{center}
+                  \includegraphics[width=86mm]{../graphes/simulation_150_200/20/20_adjust-value.png}
+                  \caption{}
+                  \includegraphics[width=86mm]{../graphes/simulation_150_200/21/21-2_corrected_drag.png}
+                  \caption{}
+                  \includegraphics[width=86mm]{../graphes/simulation_150_200/21/21-2_corrected_lift.png}
+                  \caption{}
+              \end{center}
+          \end{figure}
+          \newpage
+    \item [$\blacksquare$] \textgt{$\theta_1 = -15 \; \mathrm{[deg]}$，$\theta_2 = -20 \; \mathrm{[deg]}$のとき}\\
+          \begin{figure}[htbp]
+              \footnotesize
+              \begin{center}
+                  \includegraphics[width=86mm]{../graphes/simulation_-150_-200/20/20_adjust-value.png}
+                  \caption{}
+                  \includegraphics[width=86mm]{../graphes/simulation_-150_-200/21/21-2_corrected_drag.png}
+                  \caption{}
+                  \includegraphics[width=86mm]{../graphes/simulation_-150_-200/21/21-2_corrected_lift.png}
+                  \caption{}
+              \end{center}
+          \end{figure}
+          \newpage
+    \item [$\blacksquare$] \textgt{$\theta_1 = 90 \; \mathrm{[deg]}$，$\theta_2 = 90 \; \mathrm{[deg]}$のとき}\\
+          \begin{figure}[htbp]
+              \footnotesize
+              \begin{center}
+                  \includegraphics[width=86mm]{../graphes/simulation_900_900/20/20_adjust-value.png}
+                  \caption{}
+                  \includegraphics[width=86mm]{../graphes/simulation_900_900/21/21-2_corrected_drag.png}
+                  \caption{}
+                  \includegraphics[width=86mm]{../graphes/simulation_900_900/21/21-2_corrected_lift.png}
+                  \caption{}
+              \end{center}
+          \end{figure}
+    \item [※] 振幅は，実験結果を基準に0.6と設定している．
+          \newpage
+\end{itemize}
 
 \section{校正方法の提案}
 \end{document}
