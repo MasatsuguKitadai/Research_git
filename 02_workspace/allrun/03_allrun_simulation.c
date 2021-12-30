@@ -39,8 +39,8 @@ int main()
     char dataname[50];
     int range_angle = 150;
     int split_angle = 24;
-    int phi_1 = 900; // 抗力方向位相角
-    int phi_2 = 900; // 揚力方向位相角
+    int phi_1 = -150; // 抗力方向位相角
+    int phi_2 = -200; // 揚力方向位相角
 
     sprintf(dataname, "simulation_%d_%d", phi_1, phi_2);
 
@@ -82,7 +82,7 @@ int main()
     printf("\n---------------------------------------------------------------------------\n\n");
 
     // 09_net-voltage
-    netvoltage(dataname, range_angle);
+    netvoltage(dataname, range_angle, split_angle);
 
     printf("\n---------------------------------------------------------------------------\n\n");
 
