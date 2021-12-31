@@ -58,10 +58,10 @@ int drift(char date[], char angle[])
 
     // ファイルの読み込み
     fp = fopen(filename_read, "r");
-    if (filename_read == NULL)
+    if (fp == NULL)
     {
-        printf("Error! I can't open the file.\n");
-        exit(0);
+        printf("02\t[%s]\tno data file\n", angle);
+        return 1;
     }
 
     i = 0;

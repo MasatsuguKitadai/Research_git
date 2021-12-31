@@ -144,6 +144,7 @@ int main()
     printf("\n---------------------------------------------------------------------------\n\n");
 
     // 04_linear
+    printf("\t\t\t[DRAG]\t[LIFT]\t[NET]\n");
     linear(dataname, "0");
     linear(dataname, "150");
     linear(dataname, "300");

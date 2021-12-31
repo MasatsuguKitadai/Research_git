@@ -67,10 +67,10 @@ int summary(char date[], int range)
         sprintf(filename_read, "../result/%s/csv/04-2_gradient/04-2_%d.csv", date, angle);
 
         fp = fopen(filename_read, "r");
-        if (filename_read == NULL)
+        if (fp == NULL)
         {
-            printf("Error! I can't open the file.\n");
-            exit(0);
+            printf("[%d]\tError! I can't open the file.\n\n", angle);
+            break;
         }
 
         fscanf(fp, "%lf, %lf, %lf", &ch0, &ch1, &ch2);

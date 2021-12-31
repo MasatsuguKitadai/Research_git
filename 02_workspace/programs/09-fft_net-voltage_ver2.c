@@ -78,7 +78,7 @@ int netvoltage(char date[], int range, int split)
 
     fp = fopen(filename_read_1, "r");
 
-    if (filename_read == NULL)
+    if (fp == NULL)
     {
         printf("Error! I can't open the file.\n");
         exit(0);
@@ -96,7 +96,7 @@ int netvoltage(char date[], int range, int split)
 
     fp = fopen(filename_read_2, "r");
 
-    if (filename_read == NULL)
+    if (fp == NULL)
     {
         printf("Error! I can't open the file.\n");
         exit(0);

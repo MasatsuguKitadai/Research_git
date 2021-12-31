@@ -43,7 +43,7 @@ int evaluation(char date[], int range)
     double value[range][3];
 
     fp = fopen(filename_read, "r");
-    if (filename_read == NULL)
+    if (fp == NULL)
     {
         printf("Error! I can't open the file.\n");
         exit(0);

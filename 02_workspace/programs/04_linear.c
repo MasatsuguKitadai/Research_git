@@ -70,10 +70,10 @@ int linear(char date[], char angle[])
 
     // ファイルの読み込み
     fp = fopen(filename_read, "r");
-    if (filename_read == NULL)
+    if (fp == NULL)
     {
-        printf("Error! I can't open the file.\n");
-        exit(0);
+        printf("04\t[%s]\tno data file\n", angle);
+        return 1;
     }
 
     i = 0;
@@ -213,7 +213,7 @@ int linear(char date[], char angle[])
     double angle_2 = 0;
     angle_2 = atoi(angle);
     angle_2 = angle_2 / 10;
-    
+
     sprintf(label, "%.1f", angle_2);
 
     double size;
@@ -257,7 +257,8 @@ int linear(char date[], char angle[])
 
     pclose(gp);
 
-    printf("04\t[%s]\tsuccess\n", angle);
+    printf("04\t[%s]\tsuccess\t", angle);
+    printf("%.3lf\t%.3f\t%.3f\n", a1[0], a1[1], sqrt_value);
 }
 
 // int main()
