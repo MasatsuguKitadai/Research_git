@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.3.30)  31 DEC 2021 01:35
+This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.3.30)  31 DEC 2021 10:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -465,18 +465,23 @@ Underfull \vbox (badness 1708) has occurred while \output is active []
 
 
 ]
+File: ../graphes/1-1/05/05_summary-outputvoltage.png Graphic file (type bmp)
+<../graphes/1-1/05/05_summary-outputvoltage.png>
+File: ../graphes/1-1/05/05_summary-wave.png Graphic file (type bmp)
+<../graphes/1-1/05/05_summary-wave.png>
+ [2]
 File: ../images/image_1.png Graphic file (type bmp)
 <../images/image_1.png>
- [2]
 File: ../images/image_2.png Graphic file (type bmp)
 <../images/image_2.png>
+ [3]
 File: ../images/image_3.png Graphic file (type bmp)
 <../images/image_3.png>
- [3]
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 336.
+(Font)              scaled to size 6.72699pt on input line 350.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 4.805pt on input line 336.
+(Font)              scaled to size 4.805pt on input line 350.
+ [4]
 File: ../graphes/simulation_150_200/20/20_adjust-value.png Graphic file (type bmp)
 <../graphes/simulation_150_200/20/20_adjust-value.png>
 File: ../graphes/simulation_150_200/21/21-2_corrected_drag.png Graphic file (type bmp)
@@ -486,39 +491,36 @@ File: ../graphes/simulation_150_200/21/21-2_corrected_lift.png Graphic file (typ
 
 Underfull \vbox (badness 1107) has occurred while \output is active []
 
- [4]
 File: ../graphes/simulation_-150_-200/20/20_adjust-value.png Graphic file (type bmp)
 <../graphes/simulation_-150_-200/20/20_adjust-value.png>
 File: ../graphes/simulation_-150_-200/21/21-2_corrected_drag.png Graphic file (type bmp)
 <../graphes/simulation_-150_-200/21/21-2_corrected_drag.png>
 File: ../graphes/simulation_-150_-200/21/21-2_corrected_lift.png Graphic file (type bmp)
 <../graphes/simulation_-150_-200/21/21-2_corrected_lift.png>
+ [5]
 File: ../graphes/simulation_900_900/20/20_adjust-value.png Graphic file (type bmp)
 <../graphes/simulation_900_900/20/20_adjust-value.png>
 File: ../graphes/simulation_900_900/21/21-2_corrected_drag.png Graphic file (type bmp)
 <../graphes/simulation_900_900/21/21-2_corrected_drag.png>
 File: ../graphes/simulation_900_900/21/21-2_corrected_lift.png Graphic file (type bmp)
 <../graphes/simulation_900_900/21/21-2_corrected_lift.png>
- [5]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 433.
- [6
-
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 433.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 447.
+ [6]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 447.
  (./2201_1.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 433.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 433.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 447.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 447.
 Package rerunfilecheck Info: File `2201_1.out' has not changed.
 (rerunfilecheck)             Checksum: 786FB71607487DCF12197D11288E66B2;882.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 433.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 447.
  ) 
 Here is how much of TeX's memory you used:
- 8448 strings out of 481768
- 124192 string characters out of 5933620
- 412158 words of memory out of 5000000
- 23678 multiletter control sequences out of 15000+600000
+ 8458 strings out of 481768
+ 124577 string characters out of 5933620
+ 409158 words of memory out of 5000000
+ 23684 multiletter control sequences out of 15000+600000
  545238 words of font info for 84 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 34i,12n,36p,274b,492s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,12n,36p,272b,492s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on 2201_1.dvi (6 pages, 32004 bytes).
+Output written on 2201_1.dvi (6 pages, 31788 bytes).

@@ -40,7 +40,7 @@ int main()
     int range_angle = 150;
     int split_angle = 24;
     int phi_1 = -150; // 抗力方向位相角
-    int phi_2 = -200; // 揚力方向位相角
+    int phi_2 = 200;  // 揚力方向位相角
 
     sprintf(dataname, "simulation_%d_%d", phi_1, phi_2);
 
