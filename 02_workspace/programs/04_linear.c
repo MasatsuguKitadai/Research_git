@@ -199,11 +199,11 @@ int linear(char date[], char angle[])
 
     // range x
     double x_min = 0;
-    double x_max = 1.6;
+    double x_max = 2;
 
     // range y
-    double y_min = -0.8;
-    double y_max = 0.8;
+    double y_min = -1;
+    double y_max = 1;
 
     // label
     const char *xxlabel = "Loadcell voltage [V]";
@@ -246,7 +246,7 @@ int linear(char date[], char angle[])
     fprintf(gp, "set xrange [%.3f:%.3f]\n", x_min, x_max);
     fprintf(gp, "set xlabel '%s'offset 0.0,0\n", xxlabel);
     fprintf(gp, "set yrange [%.3f:%.3f]\n", y_min, y_max);
-    fprintf(gp, "set ylabel '%s'offset 0,0.0\n", yylabel);
+    fprintf(gp, "set ylabel '%s'offset 1,0.0\n", yylabel);
     fprintf(gp, "set title '%s deg'\n", label);
 
     // fprintf(gp, "set samples 10000\n");
