@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.12.14)  31 DEC 2021 14:58
+This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.12.14)  4 JAN 2022 18:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -439,25 +439,25 @@ LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 11.53198pt on input line 71.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 92.
+(Font)              scaled to size 9.60999pt on input line 91.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 92.
+(Font)              scaled to size 9.60999pt on input line 91.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 100.
+(Font)              scaled to size 6.72699pt on input line 99.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 4.805pt on input line 100.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 100.
+(Font)              scaled to size 4.805pt on input line 99.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 99.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 100.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 99.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 117.
+(Font)              scaled to size 8.64899pt on input line 116.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 117.
+(Font)              scaled to size 8.64899pt on input line 116.
 
 Underfull \vbox (badness 1708) has occurred while \output is active []
 
@@ -478,9 +478,9 @@ File: ../images/image_2.png Graphic file (type bmp)
 File: ../images/image_3.png Graphic file (type bmp)
 <../images/image_3.png>
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 349.
+(Font)              scaled to size 6.72699pt on input line 350.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 4.805pt on input line 349.
+(Font)              scaled to size 4.805pt on input line 350.
  [4]
 File: ../graphes/simulation_150_200/20/20_adjust-value.png Graphic file (type bmp)
 <../graphes/simulation_150_200/20/20_adjust-value.png>
@@ -504,26 +504,26 @@ File: ../graphes/simulation_900_900/21/21-2_corrected_drag.png Graphic file (typ
 <../graphes/simulation_900_900/21/21-2_corrected_drag.png>
 File: ../graphes/simulation_900_900/21/21-2_corrected_lift.png Graphic file (type bmp)
 <../graphes/simulation_900_900/21/21-2_corrected_lift.png>
- [6]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 452.
- [7
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 456.
 
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 452.
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 456.
  (./2201_1.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 452.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 452.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 456.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 456.
 Package rerunfilecheck Info: File `2201_1.out' has not changed.
 (rerunfilecheck)             Checksum: 786FB71607487DCF12197D11288E66B2;882.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 452.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 456.
  ) 
 Here is how much of TeX's memory you used:
  8458 strings out of 481768
  124577 string characters out of 5933619
- 409159 words of memory out of 5000000
+ 410159 words of memory out of 5000000
  23684 multiletter control sequences out of 15000+600000
  545238 words of font info for 84 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 34i,12n,36p,272b,494s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,12n,36p,272b,492s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on 2201_1.dvi (7 pages, 32108 bytes).
+Output written on 2201_1.dvi (6 pages, 31528 bytes).

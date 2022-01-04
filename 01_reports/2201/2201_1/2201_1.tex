@@ -74,7 +74,6 @@ lineskip=-0.5ex
     \item 実験装置の自動化
     \item 評価実験
     \item 補正処理の理論
-    \item 校正方法の提案
 \end{enumerate}
 
 \section{進捗状況}
@@ -157,20 +156,8 @@ $\blacksquare$ \textgt{測定方法}
 
 \subsection{実験結果}
 
-以下のFig.1，Fig.2，Table.2に各角度における出力電圧の傾きについての実験結果を示す．
+以下のTable.2，Fig.1，Fig.2に各角度における出力電圧の傾きについての実験結果を示す．
 なお，示している数値は実験結果の平均値である．
-
-\begin{figure}[htbp]
-    \footnotesize
-    \begin{center}
-        \includegraphics[width=86mm]{../graphes/1-1/05/05_summary-outputvoltage.png}
-        \caption{}
-        \includegraphics[width=86mm]{../graphes/1-1/05/05_summary-wave.png}
-        \caption{}
-    \end{center}
-\end{figure}
-
-\newpage
 
 \begin{table}[htbp]
     \begin{center}
@@ -201,11 +188,25 @@ $\blacksquare$ \textgt{測定方法}
             \multicolumn{1}{|c|}{300}                  & \multicolumn{1}{|r|}{}                     & \multicolumn{1}{|r|}{\textgt{}}            \\ \hline
             \multicolumn{1}{|c|}{315}                  & \multicolumn{1}{|r|}{}                     & \multicolumn{1}{|r|}{\textgt{}}            \\ \hline
             \multicolumn{1}{|c|}{330}                  & \multicolumn{1}{|r|}{}                     & \multicolumn{1}{|r|}{\textgt{}}            \\ \hline
-            \multicolumn{1}{|c|}{345}                  & \multicolumn{1}{|r|}{}                     & \multicolumn{1}{|r|}{\textgt{}}            \\ \hline \hline
-            \multicolumn{1}{|c|}{Average}              & \multicolumn{1}{|r|}{}                     & \multicolumn{1}{|r|}{\textgt{}}            \\ \hline
+            \multicolumn{1}{|c|}{345}                  & \multicolumn{1}{|r|}{}                     & \multicolumn{1}{|r|}{\textgt{}}            \\ \hline
         \end{tabular}
     \end{center}
 \end{table}
+
+\newpage
+
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=86mm]{../graphes/1-1/05/05_summary-outputvoltage.png}
+        \caption{}
+        \includegraphics[width=86mm]{../graphes/1-1/05/05_summary-wave.png}
+        \caption{}
+    \end{center}
+\end{figure}
+
+\newpage
+
 
 \newpage
 
@@ -413,27 +414,27 @@ $f_{x1}\left(x\right)$，$f_{y1}\left(x\right)$，点$F_x'$，$F_y'$の座標の
               \end{center}
           \end{figure}       
 \end{itemize}
-          \newpage
-          \textgt{}\\
-          \vskip \baselineskip
+
+\newpage
+
 \begin{itemize}
-          \item [$\blacksquare$] \textgt{$\theta_1 = -15 \; \mathrm{[deg]}$，$\theta_2 = -20 \; \mathrm{[deg]}$のとき}\\
-          \begin{figure}[htbp]
-              \footnotesize
-              \begin{center}
-                  \includegraphics[width=86mm]{../graphes/simulation_-150_-200/20/20_adjust-value.png}
-                  \caption{}
-                  \includegraphics[width=86mm]{../graphes/simulation_-150_-200/21/21-2_corrected_drag.png}
-                  \caption{}
-                  \includegraphics[width=86mm]{../graphes/simulation_-150_-200/21/21-2_corrected_lift.png}
-                  \caption{}
-              \end{center}
-          \end{figure}
-        \end{itemize}
-        \newpage
-        \textgt{}\\
-        \vskip \baselineskip
-        \begin{itemize}
+    \item [$\blacksquare$] \textgt{$\theta_1 = -15 \; \mathrm{[deg]}$，$\theta_2 = -20 \; \mathrm{[deg]}$のとき}\\
+        \begin{figure}[htbp]
+            \footnotesize
+            \begin{center}
+                \includegraphics[width=86mm]{../graphes/simulation_-150_-200/20/20_adjust-value.png}
+                \caption{}
+                \includegraphics[width=86mm]{../graphes/simulation_-150_-200/21/21-2_corrected_drag.png}
+                \caption{}
+                \includegraphics[width=86mm]{../graphes/simulation_-150_-200/21/21-2_corrected_lift.png}
+                \caption{}
+            \end{center}
+        \end{figure}
+\end{itemize}
+
+\newpage
+
+\begin{itemize}
     \item [$\blacksquare$] \textgt{$\theta_1 = 90 \; \mathrm{[deg]}$，$\theta_2 = 90 \; \mathrm{[deg]}$のとき}\\
           \begin{figure}[htbp]
               \footnotesize
@@ -447,8 +448,9 @@ $f_{x1}\left(x\right)$，$f_{y1}\left(x\right)$，点$F_x'$，$F_y'$の座標の
               \end{center}
           \end{figure}
     \item [※] 振幅は，実験結果を基準に0.6と設定している．
-          \newpage
 \end{itemize}
+
+
 
 \section{校正方法の提案}
 \end{document}
