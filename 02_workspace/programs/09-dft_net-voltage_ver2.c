@@ -257,8 +257,8 @@ int netvoltage(char date[], int range, int split)
 
     for (i = 0; i < split; i++)
     {
-        fprintf(fp_csv, "%lf,%lf,%lf,%lf\n", angle[i], voltage_x[i], voltage_y[i], voltage_net[i]);
-        fprintf(fp_dat, "%lf\t%lf\t%lf\t%lf\n", angle[i], voltage_x[i], voltage_y[i], voltage_net[i]);
+        fprintf(fp_csv, "%.1f,%.lf,%.lf,%.lf\n", angle[i], voltage_x[i], voltage_y[i], voltage_net[i]);
+        fprintf(fp_dat, "%.1f\t%.3f\t%.3f\t%.3f\n", angle[i], voltage_x[i], voltage_y[i], voltage_net[i]);
     }
 
     fclose(fp_csv);
@@ -268,10 +268,118 @@ int netvoltage(char date[], int range, int split)
     fp_dat = fopen(filename_dat_average, "w");
 
     fprintf(fp_csv, "%lf,%lf,%lf\n", ave[0], ave[1], ave[2]);
-    fprintf(fp_dat, "%lf\t%lf\t%lf\n", ave[0], ave[1], ave[2]);
+    fprintf(fp_dat, "-30\t%.3f\t%.3f\t%.3f\n", ave[0], ave[1], ave[2]);
+    fprintf(fp_dat, "360\t%.3f\t%.3f\t%.3f\n", ave[0], ave[1], ave[2]);
 
     fclose(fp_csv);
     fclose(fp_dat);
+
+    /*****************************************************************************/
+
+    // Gnuplot //
+
+    // ディレクトリの作成
+
+    char directoryname_plot[100];
+
+    sprintf(directoryname_plot, "../result/%s/plot/09", date);
+    mkdir(directoryname_plot, S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IXOTH | S_IXOTH);
+
+    /*****************************************************************************/
+
+    // filename
+    char filename_plot_1[100];
+    char filename_plot_2[100];
+
+    sprintf(filename_plot_1, "../result/%s/plot/09/09_summary-wave-net.png", date);
+    sprintf(filename_plot_2, "../result/%s/plot/09/09_summary-outputvoltage-net.png", date);
+
+    /*****************************************************************************/
+
+    // range x
+    double x_min = -30;
+    double x_max = 360;
+    double interval = 30;
+
+    // range y
+    double y_min = -0.8;
+    double y_max = 0.8;
+
+    // label
+    const char *xxlabel = "Angle [deg]";
+    const char *yylabel_1 = "Gradient of voltage [V/V]";
+    const char *yylabel_2 = "Net output voltage [V/V]";
+    char label_1[100] = "Gradient value";
+    char label_2[100] = "Output voltage";
+
+    double size;
+
+    /*****************************************************************************/
+
+    // size
+    size = 1;
+
+    if ((gp = popen("gnuplot", "w")) == NULL)
+    {
+        printf("gnuplot is not here!\n");
+        exit(0); // gnuplotが無い場合、異常ある場合は終了
+    }
+
+    fprintf(gp, "set terminal pngcairo enhanced font 'Times New Roman,15' \n");
+
+    fprintf(gp, "set output '%s'\n", filename_plot_1);
+    // fprintf(gp, "set multiplot\n");
+    fprintf(gp, "set key left top\n");
+    fprintf(gp, "set key font ',20'\n");
+    fprintf(gp, "set term pngcairo size 1280, 960 font ',24'\n");
+    // fprintf(gp, "set size ratio %.3f\n", size);
+
+    fprintf(gp, "set lmargin screen 0.10\n");
+    fprintf(gp, "set rmargin screen 0.90\n");
+    fprintf(gp, "set tmargin screen 0.90\n");
+    fprintf(gp, "set bmargin screen 0.15\n");
+
+    fprintf(gp, "set xrange [%.3f:%.3f]\n", x_min, x_max);
+    fprintf(gp, "set xlabel '%s'offset 0.0,0\n", xxlabel);
+    fprintf(gp, "set xtics %.3f\n", interval);
+    fprintf(gp, "set yrange [%.3f:%.3f]\n", y_min, y_max);
+    fprintf(gp, "set ylabel '%s'offset 1,0.0\n", yylabel_1);
+    fprintf(gp, "set title '%s'\n", label_1);
+
+    // fprintf(gp, "set samples 10000\n");
+    fprintf(gp, "plot '%s' using 1:2 with points lc 'blue' pt 5 ps 2 title 'Measured (Drag)', '%s' using 1:3 with points lc 'red' pt 5 ps 2 title 'Measured (Lift)'\n", filename_dat, filename_dat);
+    fflush(gp); // Clean up Data
+
+    // 2枚目
+
+    fprintf(gp, "set output '%s'\n", filename_plot_2);
+    // fprintf(gp, "set multiplot\n");
+    fprintf(gp, "set key left top\n");
+    fprintf(gp, "set key font ',20'\n");
+    fprintf(gp, "set term pngcairo size 1280, 960 font ',24'\n");
+    // fprintf(gp, "set size ratio %.3f\n", size);
+
+    fprintf(gp, "set lmargin screen 0.10\n");
+    fprintf(gp, "set rmargin screen 0.90\n");
+    fprintf(gp, "set tmargin screen 0.90\n");
+    fprintf(gp, "set bmargin screen 0.15\n");
+
+    fprintf(gp, "set xrange [%.3f:%.3f]\n", x_min, x_max);
+    fprintf(gp, "set xlabel '%s'offset 0.0,0\n", xxlabel);
+    fprintf(gp, "set xtics %.3f\n", interval);
+    fprintf(gp, "set yrange [0.6:0.7]\n");
+    fprintf(gp, "set ylabel '%s'offset 1,0.0\n", yylabel_2);
+    fprintf(gp, "set ytics 0.02\n");
+    fprintf(gp, "set title '%s'\n", label_2);
+
+    // fprintf(gp, "set samples 10000\n");
+    // fprintf(gp, "plot 0.63 with lines lc 'grey20' notitle, '%s' using 1:4 with points lc 'green' pt 5 ps 2 notitle\n", filename_dat);
+    fprintf(gp, "plot '%s' using 1:4 with points lc 'green' pt 5 ps 2 notitle, '%s' using 1:4 with lines lc 'gray40' title 'Average'\n", filename_dat, filename_dat_average);
+    fflush(gp); // Clean up Data
+
+    fprintf(gp, "exit\n"); // Quit gnuplot
+
+    pclose(gp);
 
     printf("\n09\t\tsuccess\n");
 }

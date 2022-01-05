@@ -247,7 +247,7 @@ int linear(char date[], char angle[])
     fprintf(gp, "set xlabel '%s'offset 0.0,0\n", xxlabel);
     fprintf(gp, "set yrange [%.3f:%.3f]\n", y_min, y_max);
     fprintf(gp, "set ylabel '%s'offset 1,0.0\n", yylabel);
-    fprintf(gp, "set title '%s deg'\n", label);
+    fprintf(gp, "set title '%s [deg]'\n", label);
 
     // fprintf(gp, "set samples 10000\n");
     fprintf(gp, "plot '%s' using 1:2 with lines lc 'blue' notitle, '%s' using 1:3 with lines lc 'red' notitle, '%s' using 4:2 with points lc 'blue' pt 5 ps 2 title 'drag', '%s' using 4:3 with points lc 'red' pt 5 ps 2 title 'lift'\n", filename_dat_2, filename_dat_2, filename_dat_1, filename_dat_1);

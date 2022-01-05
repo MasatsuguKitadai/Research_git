@@ -106,8 +106,8 @@ int summary(char date[], int range)
         angle_double = i * range;
         angle_double = angle_double / 10;
 
-        fprintf(fp_csv, "%.1f,%lf,%lf,%lf\n", angle_double, value[i][0], value[i][1], value[i][2]);
-        fprintf(fp_dat, "%.1f\t%lf\t%lf\t%lf\n", angle_double, value[i][0], value[i][1], value[i][2]);
+        fprintf(fp_csv, "%.1f,%.3f,%.3f,%.3f\n", angle_double, value[i][0], value[i][1], value[i][2]);
+        fprintf(fp_dat, "%.1f\t%.3f\t%.3f\t%.3f\n", angle_double, value[i][0], value[i][1], value[i][2]);
         // printf("%.3f\t%.3f\t%.3f\t%.3f\n", angle_double, value[i][0], value[i][1], value[i][2]);
     }
 
@@ -118,8 +118,8 @@ int summary(char date[], int range)
     fp_dat = fopen(filename_dat_2, "w");
 
     fprintf(fp_csv, "%.1f,%lf,%lf\n", ave[0], ave[1], ave[2]);
-    fprintf(fp_dat, "-30\t%.1f\t%lf\t%lf\n", ave[0], ave[1], ave[2]);
-    fprintf(fp_dat, "360\t%.1f\t%lf\t%lf\n", ave[0], ave[1], ave[2]);
+    fprintf(fp_dat, "-30\t%.3f\t%.3f\t%.3f\n", ave[0], ave[1], ave[2]);
+    fprintf(fp_dat, "360\t%.3f\t%.3f\t%.3f\n", ave[0], ave[1], ave[2]);
 
     fclose(fp_csv);
     fclose(fp_dat);
@@ -162,7 +162,7 @@ int summary(char date[], int range)
     const char *yylabel_1 = "Gradient of voltage [V/V]";
     const char *yylabel_2 = "Net output voltage [V/V]";
     char label_1[100] = "Gradient value";
-    char label_2[100] = "Output otage";
+    char label_2[100] = "Output voltage";
 
     double size;
 
