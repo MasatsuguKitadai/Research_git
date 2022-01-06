@@ -42,12 +42,12 @@ int main()
     int theta_1, theta_2;
 
     printf("Theta x = ");
-    scanf("%lf", &theta_1);
+    scanf("%d", &theta_1);
     printf("Theta y = ");
-    scanf("%lf", &theta_2);
+    scanf("%d", &theta_2);
     printf("\n");
 
-    sprintf(dataname, "rotation_x=%.0f_y=%.0f", theta_1, theta_2);
+    sprintf(dataname, "rotation_x=%d_y=%d", theta_1, theta_2);
 
     /*****************************************************************************/
 
