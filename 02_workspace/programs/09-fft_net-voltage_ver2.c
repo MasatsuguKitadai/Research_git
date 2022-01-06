@@ -279,6 +279,45 @@ int netvoltage(char date[], int range, int split)
 
     /*****************************************************************************/
 
+    // 分散計算
+
+    long double variance = 0;
+    double deviation = 0;
+    double sum2 = 0;
+
+    for (i = 0; i < 3; i++)
+    {
+        sum[i] = 0;
+        ave[i] = 0;
+    }
+
+    for (i = 0; i < range; i++)
+    {
+        sum[0] = voltage_x[i] + sum[0];
+        sum[1] = voltage_y[i] + sum[1];
+        sum[2] = voltage_net[i] + sum[2];
+    }
+
+    for (i = 0; i < 3; i++)
+    {
+        ave[i] = sum[i] / range;
+        // printf("[%d]\t%.3f\n", i, ave[i]);
+    }
+
+    for (i = 0; i < range; i++)
+    {
+        sum2 = voltage_net[i] * voltage_net[i] + sum2;
+    }
+
+    variance = sum2 / range - ave[2] * ave[2];
+    deviation = sqrt(variance);
+
+    printf("\n");
+    printf("variance \t= %Lf\n", variance);
+    printf("deviation\t= %lf\n\n", deviation);
+
+    /*****************************************************************************/
+
     // Gnuplot //
 
     // ディレクトリの作成
