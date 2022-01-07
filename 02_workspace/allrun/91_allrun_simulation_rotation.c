@@ -49,7 +49,7 @@ int main()
     scanf("%lf", &theta_2);
     printf("\n");
 
-    sprintf(dataname, "rotation_x=%.1f_y=%.1f", theta_1, theta_2);
+    sprintf(dataname, "rotation_x=%.0f_y=%.0f", theta_1, theta_2);
 
     /*****************************************************************************/
 

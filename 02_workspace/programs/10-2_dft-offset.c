@@ -38,11 +38,13 @@ int offset(char date[], int split)
 
     // ファイルの指定
     char filename_read[100];
+    char filename_read_average[100];
 
     char filename_csv[100];
     char filename_dat[100];
 
     sprintf(filename_read, "../result/%s/csv/09-3_net-voltage/09-3.csv", date);
+    sprintf(filename_read_average, "../result/%s/csv/09-4_summary-average/09-4.csv", date);
 
     sprintf(filename_csv, "../result/%s/csv/10-2_offset-dft/10-2.csv", date);
     sprintf(filename_dat, "../result/%s/dat/10-2_offset-dft/10-2.dat", date);
@@ -50,7 +52,7 @@ int offset(char date[], int split)
     /*****************************************************************************/
 
     int i;
-    double num;
+    double average;
     double ch0, ch1, ch2, ch3;
     double angle[split];
     double value_x[split];
@@ -69,12 +71,27 @@ int offset(char date[], int split)
 
     while ((fscanf(fp, "%lf, %lf, %lf, %lf", &ch0, &ch1, &ch2, &ch3)) != EOF)
     {
-        printf("[%.1f]\t%.3f\t%.3f\t%.3f\n", ch0, ch1, ch2, ch3);
+        // printf("[%.1f]\t%.3f\t%.3f\t%.3f\n", ch0, ch1, ch2, ch3);
         angle[i] = ch0;
         value_x[i] = ch1;
         value_y[i] = ch2;
-        value_net[i] = ch2;
+        value_net[i] = ch3;
         i = i + 1;
+    }
+
+    fclose(fp);
+
+    fp = fopen(filename_read_average, "r");
+
+    if (fp == NULL)
+    {
+        printf("Error! I can't open the file.\n");
+        exit(0);
+    }
+
+    fscanf(fp, "%lf, %lf, %lf", &ch0, &ch1, &ch2);
+    {
+        average = ch2;
     }
 
     fclose(fp);
@@ -85,7 +102,7 @@ int offset(char date[], int split)
 
     for (i = 0; i < split; i++)
     {
-        value_R[i] = value_net[i];
+        value_R[i] = value_net[i] - average;
         value_I[i] = 0;
     }
 
@@ -100,7 +117,7 @@ int offset(char date[], int split)
 
     for (i = 0; i < split; i++)
     {
-        ps[i] = sqrt(value_R[i] * value_R[i] + value_I[i] * value_I[i]);
+        ps[i] = value_R[i] * value_R[i] + value_I[i] * value_I[i];
         printf("[%d]\tvalue_Re = %.3f \tvalue_Im = %.3f\t pw: %.3f\n", i, value_R[i], value_I[i], ps[i]);
         fprintf(fp_dat, "%d\t%lf\t%lf\t%lf\n", i, value_R[i], value_I[i], ps[i]);
         fprintf(fp_csv, "%d,%lf,%lf,%lf\n", i, value_R[i], value_I[i], ps[i]);
@@ -136,7 +153,7 @@ int offset(char date[], int split)
 
     // range y
     double y_min = 0;
-    double y_max = 10;
+    double y_max = 0.050;
 
     // label
     const char *xxlabel = "Number of waves [-]";
