@@ -19,14 +19,15 @@ DATE    :
 /** DFT **/
 #include "../programs/07-3_dft_drag.c"
 #include "../programs/07-4_dft_lift.c"
-#include "../programs/08-3_phase-angle_drag.c"
-#include "../programs/08-4_phase-angle_lift.c"
-#include "../programs/09-dft_net-voltage_ver2.c"
-#include "../programs/21-dft_wave-adjuster_ver2.c"
+#include "../programs/08-3_dft_phase-angle_drag.c"
+#include "../programs/08-4_dft_phase-angle_lift.c"
+#include "../programs/09-2_dft_net-voltage_ver2.c"
+#include "../programs/10-2_dft-offset.c"
+#include "../programs/21-2_dft_wave-adjuster_ver2.c"
 #include "../programs/27-3_wave_dft_drag.c"
 #include "../programs/27-4_wave_dft_lift.c"
-#include "../programs/28-3_wave_phase-angle_drag.c"
-#include "../programs/28-4_wave_phase-angle_lift.c"
+#include "../programs/28-3_wave_dft_phase-angle_drag.c"
+#include "../programs/28-4_wave_dft_phase-angle_lift.c"
 
 /*****************************************************************************/
 
@@ -41,6 +42,7 @@ int main()
     int split_angle = 24;
     double x, y;
 
+    printf("[Parameters]\n");
     printf("delta x = ");
     scanf("%lf", &x);
     printf("delta y = ");
@@ -90,6 +92,11 @@ int main()
 
     // 09_net-voltage
     netvoltage(dataname, range_angle, split_angle);
+
+    printf("\n---------------------------------------------------------------------------\n\n");
+
+    // 10_dft-offset
+    offset(dataname, split_angle);
 
     printf("\n---------------------------------------------------------------------------\n\n");
 

@@ -12,31 +12,18 @@ DATE    :
 
 /*****************************************************************************/
 
-/** FFT **/
-// #include "../programs/07-1_fft_drag.c"
-// #include "../programs/07-2_fft_lift.c"
-// #include "../programs/08-1_phase-angle_drag.c"
-// #include "../programs/08-2_phase-angle_lift.c"
-// #include "../programs/09-fft_net-voltage_ver2.c"
-// #include "../programs/21-fft/_wave-adjuster_ver2.c"
-// #include "../programs/27-1_wave_fft_drag.c"
-// #include "../programs/27-2_wave_fft_lift.c"
-// #include "../programs/28-1_wave_phase-angle_drag.c"
-// #include "../programs/28-2_wave_phase-angle_lift.c"
-
-/*****************************************************************************/
-
 /** DFT **/
 #include "../programs/07-3_dft_drag.c"
 #include "../programs/07-4_dft_lift.c"
-#include "../programs/08-3_phase-angle_drag.c"
-#include "../programs/08-4_phase-angle_lift.c"
-#include "../programs/09-dft_net-voltage_ver2.c"
-#include "../programs/21-dft_wave-adjuster_ver2.c"
+#include "../programs/08-3_dft_phase-angle_drag.c"
+#include "../programs/08-4_dft_phase-angle_lift.c"
+#include "../programs/09-2_dft_net-voltage_ver2.c"
+#include "../programs/10-2_dft-offset.c"
+#include "../programs/21-2_dft_wave-adjuster_ver2.c"
 #include "../programs/27-3_wave_dft_drag.c"
 #include "../programs/27-4_wave_dft_lift.c"
-#include "../programs/28-3_wave_phase-angle_drag.c"
-#include "../programs/28-4_wave_phase-angle_lift.c"
+#include "../programs/28-3_wave_dft_phase-angle_drag.c"
+#include "../programs/28-4_wave_dft_phase-angle_lift.c"
 
 /*********************************   MAIN   *********************************/
 int main()
@@ -88,6 +75,11 @@ int main()
 
     // 09_net-voltage
     netvoltage(dataname, range_angle, split_angle);
+
+    printf("\n---------------------------------------------------------------------------\n\n");
+
+    // 10_dft-offset
+    offset(dataname, split_angle);
 
     printf("\n---------------------------------------------------------------------------\n\n");
 

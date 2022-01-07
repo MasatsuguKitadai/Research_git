@@ -19,14 +19,14 @@ DATE    :
 #include "../programs/00_fft.c"
 #include "../programs/07-1_fft_drag.c"
 #include "../programs/07-2_fft_lift.c"
-#include "../programs/08-1_phase-angle_drag.c"
-#include "../programs/08-2_phase-angle_lift.c"
+#include "../programs/08-1_fft_phase-angle_drag.c"
+#include "../programs/08-2_fft_phase-angle_lift.c"
 #include "../programs/09-fft_net-voltage_ver2.c"
-#include "../programs/21-fft_wave-adjuster_ver2.c"
+#include "../programs/21-1_fft_wave-adjuster_ver2.c"
 #include "../programs/27-1_wave_fft_drag.c"
 #include "../programs/27-2_wave_fft_lift.c"
-#include "../programs/28-1_wave_phase-angle_drag.c"
-#include "../programs/28-2_wave_phase-angle_lift.c"
+#include "../programs/28-1_wave_fft_phase-angle_drag.c"
+#include "../programs/28-2_wave_fft_phase-angle_lift.c"
 
 /*****************************************************************************/
 

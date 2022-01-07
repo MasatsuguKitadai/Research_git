@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.12.14)  5 JAN 2022 17:57
+This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.12.14)  7 JAN 2022 11:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -492,8 +492,8 @@ LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 8.64893pt on input line 179.
 File: ../graphes/1-ex/05/05_summary-wave.png Graphic file (type bmp)
 <../graphes/1-ex/05/05_summary-wave.png>
-File: ../images/image_1.png Graphic file (type bmp)
-<../images/image_1.png>
+File: ../images/image_4.png Graphic file (type bmp)
+<../images/image_4.png>
 [2]
 File: ../images/image_2.png Graphic file (type bmp)
 <../images/image_2.png>
@@ -545,16 +545,16 @@ File: ../graphes/1-ex/21/21-2_corrected_drag.png Graphic file (type bmp)
 File: ../graphes/1-ex/21/21-2_corrected_lift.png Graphic file (type bmp)
 <../graphes/1-ex/21/21-2_corrected_lift.png>
  [7]
-File: ../graphes/1-ex/05/05_summary-outputvoltage.png Graphic file (type bmp)
-<../graphes/1-ex/05/05_summary-outputvoltage.png>
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 646.
+File: ../graphes/1-ex/09/09_summary-outputvoltage-net.png Graphic file (type bmp)
+<../graphes/1-ex/09/09_summary-outputvoltage-net.png>
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 643.
  [8
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 646.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 643.
  (./2201_1.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 646.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 646.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 643.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 643.
 Package rerunfilecheck Info: File `2201_1.out' has not changed.
 (rerunfilecheck)             Checksum: AD3C9DFECF9D92FB4AF4741CAA3CD53E;936.
 
@@ -562,15 +562,15 @@ Package rerunfilecheck Info: File `2201_1.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.50003pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 646.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 643.
  ) 
 Here is how much of TeX's memory you used:
- 8532 strings out of 481768
- 126330 string characters out of 5933619
+ 8534 strings out of 481768
+ 126411 string characters out of 5933619
  418216 words of memory out of 5000000
  23742 multiletter control sequences out of 15000+600000
  550803 words of font info for 111 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
  34i,12n,36p,353b,529s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on 2201_1.dvi (8 pages, 49920 bytes).
+Output written on 2201_1.dvi (8 pages, 49676 bytes).
