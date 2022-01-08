@@ -21,8 +21,10 @@ DATE    :
 #include "../programs/07-4_dft_lift.c"
 #include "../programs/08-3_dft_phase-angle_drag.c"
 #include "../programs/08-4_dft_phase-angle_lift.c"
-#include "../programs/09-2_dft_net-voltage_ver2.c"
+// #include "../programs/09-2_dft_net-voltage_ver2.c"
+#include "../programs/09-3_dft_net-voltage_sim.c"
 #include "../programs/10-2_dft-offset.c"
+#include "../programs/11_correct-offset.c"
 #include "../programs/21-2_dft_wave-adjuster_ver2.c"
 #include "../programs/27-3_wave_dft_drag.c"
 #include "../programs/27-4_wave_dft_lift.c"
@@ -49,7 +51,7 @@ int main()
     scanf("%lf", &theta_2);
     printf("\n");
 
-    sprintf(dataname, "rotation_x=%.0f_y=%.0f", theta_1, theta_2);
+    sprintf(dataname, "rotation_x=%.1f_y=%.1f", theta_1, theta_2);
 
     /*****************************************************************************/
 
@@ -95,7 +97,7 @@ int main()
 
     printf("\n---------------------------------------------------------------------------\n\n");
 
-        // 10_dft-offset
+    // 10_dft-offset
     offset(dataname, split_angle);
 
     printf("\n---------------------------------------------------------------------------\n\n");

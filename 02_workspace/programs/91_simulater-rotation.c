@@ -82,7 +82,7 @@ int simulater(char date[], int split, double Phi_1, double Phi_2)
     // printf("Drag\n");
     for (i = 0; i < 3600; i++)
     {
-        wave_drag[i] = 0.64 * sin((2 * pi / 3600) * (i + 2700 - Phi_1));
+        wave_drag[i] = 0.64 * sin((2 * pi / 3600) * (i + 2700 - Phi_1 * 10));
         // printf("value[%d] = %lf\n", i, wave_drag[i]);
     }
 
@@ -90,7 +90,7 @@ int simulater(char date[], int split, double Phi_1, double Phi_2)
     // printf("Lift\n");
     for (i = 0; i < 3600; i++)
     {
-        wave_lift[i] = 0.64 * sin((2 * pi / 3600) * (i + 1800 - Phi_2));
+        wave_lift[i] = 0.64 * sin((2 * pi / 3600) * (i + 1800 - Phi_2 * 10));
         // printf("value[%d] = %lf\n", i, wave_lift[i]);
     }
 

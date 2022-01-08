@@ -19,6 +19,7 @@ DATE    :
 #include "../programs/08-4_dft_phase-angle_lift.c"
 #include "../programs/09-2_dft_net-voltage_ver2.c"
 #include "../programs/10-2_dft-offset.c"
+#include "../programs/11_correct-offset.c"
 #include "../programs/21-2_dft_wave-adjuster_ver2.c"
 #include "../programs/27-3_wave_dft_drag.c"
 #include "../programs/27-4_wave_dft_lift.c"
@@ -33,6 +34,9 @@ int main()
     char model[50] = "1";
     int range_angle = 150;
     int split_angle = 24;
+
+    double delta_X = -2;
+    double delta_Y = 2;
 
     /*****************************************************************************/
 
@@ -80,6 +84,11 @@ int main()
 
     // 10_dft-offset
     offset(dataname, split_angle);
+
+    printf("\n---------------------------------------------------------------------------\n\n");
+
+    // 11_correct-offset
+    correct_offset(dataname, split_angle, delta_X, delta_Y);
 
     printf("\n---------------------------------------------------------------------------\n\n");
 

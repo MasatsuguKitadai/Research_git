@@ -14,7 +14,7 @@ FILE *fp, *fp_csv, *fp_dat;
 // #define pi 4 * atan(1.0)
 
 /*********************************   MAIN   *********************************/
-int simulater(char date[], int split, int delta_y, int delta_x, int Phi_1, int Phi_2)
+int simulater(char date[], int split, int delta_y, int delta_x, double Phi_1, double Phi_2)
 {
     // ディレクトリの作成
     char directoryname_dat[100];
@@ -106,20 +106,20 @@ int simulater(char date[], int split, int delta_y, int delta_x, int Phi_1, int P
 
     for (i = 0; i < 3600; i++)
     {
-        j1 = i + Phi_1 * 10;
+        j1 = i - Phi_1 * 10;
 
-        if (j1 >= 3600)
+        if (j1 < 0)
         {
-            j1 = j1 - 3600;
+            j1 = j1 + 3600;
         }
 
         wave_drag_2[i] = wave_drag[j1];
 
-        j2 = i + Phi_2 * 10;
+        j2 = i - Phi_2 * 10;
 
-        if (j2 >= 3600)
+        if (j2 < 0)
         {
-            j2 = j2 - 3600;
+            j2 = j2 + 3600;
         }
 
         wave_lift_2[i] = wave_lift[j2];

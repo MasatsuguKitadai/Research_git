@@ -90,7 +90,7 @@ int simulater(char date[], int split, int delta_y, int delta_x)
     {
         buf = i;
         theta[i] = pi / 1800 * i;
-        phi[i] = theta[i] - asin((cos((2 * pi / 3600) * i) * delta_y - sin((2 * pi / 3600) * i) * delta_x) / r);
+        phi[i] = theta[i] - asin((cos((pi / 1800) * i) * delta_y - sin((pi / 1800) * i) * delta_x) / r);
         psi[i] = -1 * theta[i] + phi[i];
         wave_drag[i] = -0.64 * cos(psi[i]) * cos(phi[i]);
         wave_lift[i] = -0.64 * cos(psi[i]) * sin(phi[i]);
