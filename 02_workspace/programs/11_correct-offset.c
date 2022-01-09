@@ -31,8 +31,11 @@ int correct_offset(char date[], int split, double delta_y, double delta_x)
     char filename_dat[100];
 
     sprintf(filename_read, "../result/%s/csv/05-1_summary/05-1.csv", date);
-    sprintf(filename_csv, "../result/%s/csv/11_offset-correct/11.csv", date);
-    sprintf(filename_dat, "../result/%s/dat/11_offset-correct/11.dat", date);
+    // sprintf(filename_csv, "../result/%s/csv/11_offset-correct/11.csv", date);
+    // sprintf(filename_dat, "../result/%s/dat/11_offset-correct/11.dat", date);
+
+    sprintf(filename_csv, "../result/%s/csv/05-1_summary/05-1.csv", date);
+    sprintf(filename_dat, "../result/%s/dat/05-1_summary/05-1.dat", date);
 
     /*****************************************************************************/
 
@@ -63,9 +66,11 @@ int correct_offset(char date[], int split, double delta_y, double delta_x)
 
     /*****************************************************************************/
 
-    double F[split][2];
+    double F[split][3];
     double psi[split], phi[split], theta[split];
     double r = 25; // 供試体の半径
+
+    double correct[split];
 
     for (i = 0; i < split; i++)
     {
@@ -73,27 +78,37 @@ int correct_offset(char date[], int split, double delta_y, double delta_x)
         phi[i] = theta[i] - asin((cos(theta[i]) * delta_y - sin(theta[i]) * delta_x) / r);
         psi[i] = -1 * theta[i] + phi[i];
 
-        F[i][0] = -value[i][0] / (cos(psi[i]) * cos(phi[i]));
-        F[i][1] = -value[i][1] / (cos(psi[i]) * sin(phi[i]));
+        correct[i] = cos(psi[i]);
+        F[i][0] = value[i][0] / correct[i];
+        F[i][1] = value[i][1] / correct[i];
+        F[i][2] = sqrt(F[i][0] * F[i][0] + F[i][1] * F[i][1]);
 
         theta[i] = theta[i] * 180 / pi;
         phi[i] = phi[i] * 180 / pi;
-
-        printf("[%.1f]\t[phi] = %.3f\tF[x] = %.3f\tF[y] = %.3f\n", theta[i], phi[i], F[i][0], F[i][1]);
+        printf("[%.1f]\t[phi] = %.3f\tF[x] = %.3f\tF[y] = %.3f\tF[net] = %.3f\n", theta[i], phi[i], F[i][0], F[i][1], F[i][2]);
     }
 
     /*****************************************************************************/
 
     // plot用 データファイルの書き出し
 
-    // fp_csv = fopen(filename_csv, "w");
-    // fp_dat = fopen(filename_dat, "w");
+    double angle_double;
 
-    // fprintf(fp_csv, "%Lf\t%lf\n", variance, deviation);
-    // fprintf(fp_dat, "%Lf\t%lf\n", variance, deviation);
+    fp_csv = fopen(filename_csv, "w");
+    fp_dat = fopen(filename_dat, "w");
 
-    // fclose(fp_csv);
-    // fclose(fp_dat);
+    for (i = 0; i < split; i++)
+    {
+        angle_double = i * 150;
+        angle_double = angle_double / 10;
+
+        fprintf(fp_csv, "%.1f,%lf,%lf,%lf\n", angle_double, F[i][0], F[i][1], F[i][2]);
+        fprintf(fp_dat, "%.1f\t%.3f\t%.3f\t%.3f\n", angle_double, F[i][0], F[i][1], F[i][2]);
+        // printf("%.3f\t%.3f\t%.3f\t%.3f\n", angle_double, value[i][0], value[i][1], value[i][2]);
+    }
+
+    fclose(fp_csv);
+    fclose(fp_dat);
 
     printf("\n11\t\tsuccess\n");
 }

@@ -36,7 +36,7 @@ int main()
     int split_angle = 24;
 
     double delta_X = -2;
-    double delta_Y = 2;
+    double delta_Y = 1.2;
 
     /*****************************************************************************/
 
@@ -51,6 +51,11 @@ int main()
     combine(dataname, range_angle, model);
 
     printf("\n---------------------------------------------------------------------------\n\n");
+
+    // // 11_correct-offset
+    // correct_offset(dataname, split_angle, delta_X, delta_Y);
+
+    // printf("\n---------------------------------------------------------------------------\n\n");
 
     // 06_evaluation
     evaluation(dataname, split_angle);
