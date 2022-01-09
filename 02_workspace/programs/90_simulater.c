@@ -92,8 +92,8 @@ int simulater(char date[], int split, int delta_y, int delta_x, double Phi_1, do
         theta[i] = pi / 1800 * i;
         phi[i] = theta[i] - asin((cos((2 * pi / 3600) * i) * delta_y - sin((2 * pi / 3600) * i) * delta_x) / r);
         psi[i] = -1 * theta[i] + phi[i];
-        wave_drag[i] = -0.64 * cos(psi[i]) * cos(phi[i]);
-        wave_lift[i] = -0.64 * cos(psi[i]) * sin(phi[i]);
+        wave_drag[i] = -0.65 * cos(psi[i]) * cos(phi[i]);
+        wave_lift[i] = -0.65 * cos(psi[i]) * sin(phi[i]);
         // wave_net[i] = sqrt(wave_drag[i] * wave_drag[i] + wave_lift[i] * wave_lift[i]);
     }
 
@@ -131,7 +131,7 @@ int simulater(char date[], int split, int delta_y, int delta_x, double Phi_1, do
 
     double degree = 0;
 
-    printf("\t[phi]\t[Drag]\t[Lift]\t[Net]\n");
+    printf("\t[psi]\t[Drag]\t[Lift]\t[Net]\n");
 
     fp_csv = fopen(filename_csv_1, "w");
     fp_dat = fopen(filename_dat_1, "w");
@@ -146,7 +146,7 @@ int simulater(char date[], int split, int delta_y, int delta_x, double Phi_1, do
         sum[1] = sum[1] + wave_lift[i];
         sum[2] = sum[2] + wave_net[i];
 
-        degree = 180 / pi * phi[i];
+        degree = 180 / pi * psi[i];
 
         fprintf(fp_csv, "%lf,%lf,%lf,%lf\n", angle, wave_drag_2[i], wave_lift_2[i], wave_net[i]);
         fprintf(fp_dat, "%lf\t%lf\t%lf\t%lf\n", angle, wave_drag_2[i], wave_lift_2[i], wave_net[i]);

@@ -70,7 +70,7 @@ int correct_offset(char date[], int split, double delta_y, double delta_x)
     double psi[split], phi[split], theta[split];
     double r = 25; // 供試体の半径
 
-    double correct[split];
+    printf("\t[psi]\tF[x]\tF[y]\tF[net]\n");
 
     for (i = 0; i < split; i++)
     {
@@ -78,14 +78,13 @@ int correct_offset(char date[], int split, double delta_y, double delta_x)
         phi[i] = theta[i] - asin((cos(theta[i]) * delta_y - sin(theta[i]) * delta_x) / r);
         psi[i] = -1 * theta[i] + phi[i];
 
-        correct[i] = cos(psi[i]);
-        F[i][0] = value[i][0] / correct[i];
-        F[i][1] = value[i][1] / correct[i];
+        F[i][0] = value[i][0] / cos(psi[i]);
+        F[i][1] = value[i][1] / cos(psi[i]);
         F[i][2] = sqrt(F[i][0] * F[i][0] + F[i][1] * F[i][1]);
 
         theta[i] = theta[i] * 180 / pi;
-        phi[i] = phi[i] * 180 / pi;
-        printf("[%.1f]\t[phi] = %.3f\tF[x] = %.3f\tF[y] = %.3f\tF[net] = %.3f\n", theta[i], phi[i], F[i][0], F[i][1], F[i][2]);
+        psi[i] = psi[i] * 180 / pi;
+        printf("[%.1f]\t%.3f\t%.3f\t%.3f\t%.3f\n", theta[i], phi[i], F[i][0], F[i][1], F[i][2]);
     }
 
     /*****************************************************************************/

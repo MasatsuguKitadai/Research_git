@@ -76,7 +76,7 @@ int main()
     // 11_correct-offset
     correct_offset(dataname, split_angle, x, y);
 
-    // printf("\n---------------------------------------------------------------------------\n\n");
+    printf("\n---------------------------------------------------------------------------\n\n");
 
     // 06_evaluation
     evaluation(dataname, split_angle);
