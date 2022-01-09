@@ -35,8 +35,11 @@ int main()
     int range_angle = 150;
     int split_angle = 24;
 
-    double delta_X = -2;
-    double delta_Y = 1.2;
+    // double x = 1;
+    // double y = 1.3;
+
+    double x = 2;
+    double y = 2.6;
 
     /*****************************************************************************/
 
@@ -52,13 +55,13 @@ int main()
 
     printf("\n---------------------------------------------------------------------------\n\n");
 
-    // // 11_correct-offset
-    // correct_offset(dataname, split_angle, delta_X, delta_Y);
-
-    // printf("\n---------------------------------------------------------------------------\n\n");
-
     // 06_evaluation
     evaluation(dataname, split_angle);
+
+    printf("\n---------------------------------------------------------------------------\n\n");
+
+    // 11_correct-offset
+    correct_offset(dataname, split_angle, x, y);
 
     printf("\n---------------------------------------------------------------------------\n\n");
 
@@ -90,10 +93,10 @@ int main()
     // 10_dft-offset
     offset(dataname, split_angle);
 
-    printf("\n---------------------------------------------------------------------------\n\n");
+    // printf("\n---------------------------------------------------------------------------\n\n");
 
     // 11_correct-offset
-    correct_offset(dataname, split_angle, delta_X, delta_Y);
+    // correct_offset(dataname, split_angle, delta_X, delta_Y);
 
     printf("\n---------------------------------------------------------------------------\n\n");
 

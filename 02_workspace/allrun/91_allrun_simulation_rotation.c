@@ -72,6 +72,11 @@ int main()
 
     printf("\n---------------------------------------------------------------------------\n\n");
 
+    // 11_correct-offset
+    correct_offset(dataname, split_angle, 0, 0);
+
+    printf("\n---------------------------------------------------------------------------\n\n");
+
     // 07-1_fft_drag
     calculate_drag(dataname, split_angle);
 

@@ -85,46 +85,21 @@ int simulater(char date[], int split, int delta_y, int delta_x, double Phi_1, do
     double theta[3600];
     double phi[3600];
     double psi[3600];
+    double Phi[2];
 
     for (i = 0; i < 3600; i++)
     {
         buf = i;
         theta[i] = pi / 1800 * i;
-        phi[i] = theta[i] - asin((cos((2 * pi / 3600) * i) * delta_y - sin((2 * pi / 3600) * i) * delta_x) / r);
+        Phi[0] = pi / 180 * Phi_1;
+        Phi[1] = pi / 180 * Phi_2;
+
+        phi[i] = theta[i] - asin((cos((pi / 1800) * i) * delta_y - sin((pi / 1800) * i) * delta_x) / r);
         psi[i] = -1 * theta[i] + phi[i];
-        wave_drag[i] = -0.65 * cos(psi[i]) * cos(phi[i]);
-        wave_lift[i] = -0.65 * cos(psi[i]) * sin(phi[i]);
-        // wave_net[i] = sqrt(wave_drag[i] * wave_drag[i] + wave_lift[i] * wave_lift[i]);
-    }
 
-    /*****************************************************************************/
-
-    int j1 = 0;
-    int j2 = 0;
-    double wave_drag_2[3600];
-    double wave_lift_2[3600];
-
-    for (i = 0; i < 3600; i++)
-    {
-        j1 = i - Phi_1 * 10;
-
-        if (j1 < 0)
-        {
-            j1 = j1 + 3600;
-        }
-
-        wave_drag_2[i] = wave_drag[j1];
-
-        j2 = i - Phi_2 * 10;
-
-        if (j2 < 0)
-        {
-            j2 = j2 + 3600;
-        }
-
-        wave_lift_2[i] = wave_lift[j2];
-
-        wave_net[i] = sqrt(wave_drag_2[i] * wave_drag_2[i] + wave_lift_2[i] * wave_lift_2[i]);
+        wave_drag[i] = -0.64 * cos(psi[i]) * cos(phi[i] - Phi[0]);
+        wave_lift[i] = -0.64 * cos(psi[i]) * sin(phi[i] - Phi[1]);
+        wave_net[i] = sqrt(wave_drag[i] * wave_drag[i] + wave_lift[i] * wave_lift[i]);
     }
 
     /*****************************************************************************/
@@ -148,9 +123,9 @@ int simulater(char date[], int split, int delta_y, int delta_x, double Phi_1, do
 
         degree = 180 / pi * psi[i];
 
-        fprintf(fp_csv, "%lf,%lf,%lf,%lf\n", angle, wave_drag_2[i], wave_lift_2[i], wave_net[i]);
-        fprintf(fp_dat, "%lf\t%lf\t%lf\t%lf\n", angle, wave_drag_2[i], wave_lift_2[i], wave_net[i]);
-        printf("[%.1f]\t%.3f\t%.3f\t%.3f\t%.3f\n", angle, degree, wave_drag_2[i], wave_lift_2[i], wave_net[i]);
+        fprintf(fp_csv, "%lf,%lf,%lf,%lf\n", angle, wave_drag[i], wave_lift[i], wave_net[i]);
+        fprintf(fp_dat, "%lf\t%lf\t%lf\t%lf\n", angle, wave_drag[i], wave_lift[i], wave_net[i]);
+        printf("[%.1f]\t%.3f\t%.3f\t%.3f\t%.3f\n", angle, degree, wave_drag[i], wave_lift[i], wave_net[i]);
     }
 
     fclose(fp_csv);

@@ -52,7 +52,7 @@ int netvoltage(char date[], int range, int split)
 
     sprintf(filename_read_1, "../result/%s/csv/08-3_phase-angle_drag/08-3.csv", date);
     sprintf(filename_read_2, "../result/%s/csv/08-4_phase-angle_lift/08-4.csv", date);
-    sprintf(filename_read_3, "../result/%s/csv/05-1_summary/05-1.csv", date);
+    sprintf(filename_read_3, "../result/%s/csv/11_offset-correct/11-1.csv", date);
 
     sprintf(filename_csv, "../result/%s/csv/09-3_net-voltage/09-3.csv", date);
     sprintf(filename_dat, "../result/%s/dat/09-3_net-voltage/09-3.dat", date);

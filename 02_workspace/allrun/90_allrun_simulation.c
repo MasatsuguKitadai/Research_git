@@ -73,13 +73,13 @@ int main()
 
     printf("\n---------------------------------------------------------------------------\n\n");
 
-    // 11_correct-offset
-    correct_offset(dataname, split_angle, x, y);
+    // 06_evaluation
+    evaluation(dataname, split_angle);
 
     printf("\n---------------------------------------------------------------------------\n\n");
 
-    // 06_evaluation
-    evaluation(dataname, split_angle);
+    // 11_correct-offset
+    correct_offset(dataname, split_angle, x, y);
 
     printf("\n---------------------------------------------------------------------------\n\n");
 
@@ -110,11 +110,6 @@ int main()
 
     // 10_dft-offset
     offset(dataname, split_angle);
-
-    printf("\n---------------------------------------------------------------------------\n\n");
-
-    // // 11_correct-offset
-    // correct_offset(dataname, split_angle, x, y);
 
     printf("\n---------------------------------------------------------------------------\n\n");
 

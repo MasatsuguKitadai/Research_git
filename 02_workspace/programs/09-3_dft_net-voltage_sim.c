@@ -52,7 +52,7 @@ int netvoltage(char date[], int range, int split)
 
     sprintf(filename_read_1, "../result/%s/csv/08-3_phase-angle_drag/08-3.csv", date);
     sprintf(filename_read_2, "../result/%s/csv/08-4_phase-angle_lift/08-4.csv", date);
-    sprintf(filename_read_3, "../result/%s/csv/05-1_summary/05-1.csv", date);
+    sprintf(filename_read_3, "../result/%s/csv/11_offset-correct/11-1.csv", date);
 
     sprintf(filename_csv, "../result/%s/csv/09-3_net-voltage/09-3.csv", date);
     sprintf(filename_dat, "../result/%s/dat/09-3_net-voltage/09-3.dat", date);
@@ -258,7 +258,7 @@ int netvoltage(char date[], int range, int split)
     for (i = 0; i < split; i++)
     {
         fprintf(fp_csv, "%.1f,%lf,%lf,%lf\n", angle[i], voltage_x[i], voltage_y[i], voltage_net[i]);
-        fprintf(fp_dat, "%.1f\t%.3f\t%.3f\t%.3f\n", angle[i], voltage_x[i], voltage_y[i], voltage_net[i]);
+        fprintf(fp_dat, "%.1f\t%f\t%f\t%f\n", angle[i], voltage_x[i], voltage_y[i], voltage_net[i]);
     }
 
     fclose(fp_csv);
@@ -268,8 +268,8 @@ int netvoltage(char date[], int range, int split)
     fp_dat = fopen(filename_dat_average, "w");
 
     fprintf(fp_csv, "%lf,%lf,%lf\n", ave[0], ave[1], ave[2]);
-    fprintf(fp_dat, "-30\t%.3f\t%.3f\t%.3f\n", ave[0], ave[1], ave[2]);
-    fprintf(fp_dat, "360\t%.3f\t%.3f\t%.3f\n", ave[0], ave[1], ave[2]);
+    fprintf(fp_dat, "-30\t%lf\t%lf\t%lf\n", ave[0], ave[1], ave[2]);
+    fprintf(fp_dat, "360\t%lf\t%lf\t%lf\n", ave[0], ave[1], ave[2]);
 
     fclose(fp_csv);
     fclose(fp_dat);
