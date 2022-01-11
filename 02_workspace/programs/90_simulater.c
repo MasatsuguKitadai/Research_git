@@ -14,7 +14,7 @@ FILE *fp, *fp_csv, *fp_dat;
 // #define pi 4 * atan(1.0)
 
 /*********************************   MAIN   *********************************/
-int simulater(char date[], int split, int delta_y, int delta_x, double Phi_1, double Phi_2)
+int simulater(char date[], int split, int delta_y, int delta_x, double Theta_1, double Theta_2)
 {
     // ディレクトリの作成
     char directoryname_dat[100];
@@ -82,23 +82,24 @@ int simulater(char date[], int split, int delta_y, int delta_x, double Phi_1, do
     // オフセット考慮
 
     double r = 25; // 供試体の半径
-    double theta[3600];
+    double theta[2];
     double phi[3600];
     double psi[3600];
+    long double alfa[3600];
     double Phi[2];
 
     for (i = 0; i < 3600; i++)
     {
         buf = i;
-        theta[i] = pi / 1800 * i;
-        Phi[0] = pi / 180 * Phi_1;
-        Phi[1] = pi / 180 * Phi_2;
+        phi[i] = pi / 1800 * i;
+        theta[0] = pi / 180 * Theta_1;
+        theta[1] = pi / 180 * Theta_2;
 
-        phi[i] = theta[i] - asin((cos((pi / 1800) * i) * delta_y - sin((pi / 1800) * i) * delta_x) / r);
-        psi[i] = -1 * theta[i] + phi[i];
+        alfa[i] = asinl((delta_x * sin(phi[i]) + delta_y * cos(phi[i])) / r);
+        psi[i] = -phi[i] + alfa[i];
 
-        wave_drag[i] = -0.64 * cos(psi[i]) * cos(phi[i] - Phi[0]);
-        wave_lift[i] = -0.64 * cos(psi[i]) * sin(phi[i] - Phi[1]);
+        wave_drag[i] = -0.64 * cos(alfa[i]) * cos(psi[i] - theta[0]);
+        wave_lift[i] = -0.64 * cos(alfa[i]) * sin(psi[i] - theta[1]);
         wave_net[i] = sqrt(wave_drag[i] * wave_drag[i] + wave_lift[i] * wave_lift[i]);
     }
 
@@ -106,7 +107,7 @@ int simulater(char date[], int split, int delta_y, int delta_x, double Phi_1, do
 
     double degree = 0;
 
-    printf("\t[psi]\t[Drag]\t[Lift]\t[Net]\n");
+    printf("\t[Alfa]\t[Drag]\t[Lift]\t[Net]\n");
 
     fp_csv = fopen(filename_csv_1, "w");
     fp_dat = fopen(filename_dat_1, "w");
@@ -121,7 +122,7 @@ int simulater(char date[], int split, int delta_y, int delta_x, double Phi_1, do
         sum[1] = sum[1] + wave_lift[i];
         sum[2] = sum[2] + wave_net[i];
 
-        degree = 180 / pi * psi[i];
+        degree = 180 / pi * alfa[i];
 
         fprintf(fp_csv, "%lf,%lf,%lf,%lf\n", angle, wave_drag[i], wave_lift[i], wave_net[i]);
         fprintf(fp_dat, "%lf\t%lf\t%lf\t%lf\n", angle, wave_drag[i], wave_lift[i], wave_net[i]);

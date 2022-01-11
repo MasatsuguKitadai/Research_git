@@ -70,9 +70,11 @@ int correct_offset(char date[], int split, double delta_y, double delta_x)
     /*****************************************************************************/
 
     double F[split][3];
-    double psi[split], phi[split], theta[split];
+    double phi[split], psi[split];
+    long double alfa[split];
     double r = 25; // 供試体の半径
 
+    double degree;
     double sum[3], ave[3];
 
     for (i = 0; i < 3; i++)
@@ -81,22 +83,22 @@ int correct_offset(char date[], int split, double delta_y, double delta_x)
         ave[i] = 0;
     }
 
-    printf("\t[psi]\tF[x]\tF[y]\tF[net]\n");
+    printf("\t[Alfa]\tF[x]\tF[y]\tF[net]\n");
 
     for (i = 0; i < split; i++)
     {
-        theta[i] = pi / 180 * angle[i];
+        phi[i] = pi / 180 * angle[i];
 
-        phi[i] = theta[i] - asin((cos(theta[i]) * delta_y - sin(theta[i]) * delta_x) / r);
-        psi[i] = -1 * theta[i] + phi[i];
+        alfa[i] = asinl((delta_x * sin(phi[i]) + delta_y * cos(phi[i])) / r);
+        psi[i] = phi[i] - alfa[i];
 
-        F[i][0] = value[i][0] / cos(psi[i]);
-        F[i][1] = value[i][1] / cos(psi[i]);
+        F[i][0] = value[i][0] / cos(alfa[i]);
+        F[i][1] = value[i][1] / cos(alfa[i]);
         F[i][2] = sqrt(F[i][0] * F[i][0] + F[i][1] * F[i][1]);
 
-        theta[i] = theta[i] * 180 / pi;
-        psi[i] = psi[i] * 180 / pi;
-        printf("[%.1f]\t%.3f\t%.3f\t%.3f\t%.3f\n", theta[i], psi[i], F[i][0], F[i][1], F[i][2]);
+        phi[i] = phi[i] * 180 / pi;
+        degree = 180 / pi * alfa[i];
+        printf("[%.1f]\t%.3f\t%.3f\t%.3f\t%.3f\n", phi[i], degree, F[i][0], F[i][1], F[i][2]);
 
         sum[0] = F[i][0] + sum[0];
         sum[1] = F[i][1] + sum[1];
