@@ -69,7 +69,14 @@ int correct_offset(char date[], int split, double delta_y, double delta_x)
 
     /*****************************************************************************/
 
-    double F[split][3];
+    double value_drag[split];
+    double value_lift[split];
+    double value_net[split];
+
+    double value_drag_2[split];
+    double value_lift_2[split];
+    double value_net_2[split];
+
     double phi[split], psi[split];
     double alfa[split];
     double r = 25; // 供試体の半径
@@ -88,13 +95,11 @@ int correct_offset(char date[], int split, double delta_y, double delta_x)
     for (i = 0; i < split; i++)
     {
         phi[i] = pi / 180 * angle[i];
-
         alfa[i] = asin(-1 * (delta_x * sin(phi[i]) + delta_y * cos(phi[i])) / r);
         psi[i] = phi[i] - alfa[i];
 
-        F[i][0] = value[i][0] / cos(alfa[i]);
-        F[i][1] = value[i][1] / cos(alfa[i]);
-        F[i][2] = sqrt(F[i][0] * F[i][0] + F[i][1] * F[i][1]);
+        value_drag_2[i] = value[i][0];
+        value_lift_2[i] = value[i][1];
 
         phi[i] = phi[i] * 180 / pi;
         degree = 180 / pi * alfa[i];
@@ -104,6 +109,10 @@ int correct_offset(char date[], int split, double delta_y, double delta_x)
         sum[1] = F[i][1] + sum[1];
         sum[2] = F[i][2] + sum[2];
     }
+
+    ave[0] = sum[0] / split;
+    ave[1] = sum[1] / split;
+    ave[2] = sum[2] / split;
 
     /*****************************************************************************/
 
@@ -126,10 +135,6 @@ int correct_offset(char date[], int split, double delta_y, double delta_x)
 
     fclose(fp_csv);
     fclose(fp_dat);
-
-    ave[0] = sum[0] / split;
-    ave[1] = sum[1] / split;
-    ave[2] = sum[2] / split;
 
     fp_csv = fopen(filename_csv_average, "w");
     fp_dat = fopen(filename_dat_average, "w");
