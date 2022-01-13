@@ -22,6 +22,9 @@ DATE    :
 #include "../programs/08-3_dft_phase-angle_drag.c"
 #include "../programs/08-4_dft_phase-angle_lift.c"
 #include "../programs/09-2_dft_net-voltage_ver2.c"
+#include "../programs/10-2_dft-offset.c"
+#include "../programs/11_correct-offset.c"
+#include "../programs/12_interpolation.c"
 #include "../programs/21-2_dft_wave-adjuster_ver2.c"
 #include "../programs/27-3_wave_dft_drag.c"
 #include "../programs/27-4_wave_dft_lift.c"
@@ -35,6 +38,11 @@ int main()
     char dataname[50] = "1-3";
     int range_angle = 150;
     int split_angle = 24;
+
+    double x, y;
+
+    x = 1;
+    y = 1.3;
 
     /*****************************************************************************/
 
@@ -168,6 +176,16 @@ int main()
 
     printf("\n---------------------------------------------------------------------------\n\n");
 
+    // 11_correct-offset
+    correct_offset(dataname, split_angle, x, y);
+
+    printf("\n---------------------------------------------------------------------------\n\n");
+
+    // 12_interpolation
+    interpolation(dataname, split_angle);
+
+    printf("\n---------------------------------------------------------------------------\n\n");
+
     // 07-1_fft_drag
     calculate_drag(dataname, split_angle);
 
@@ -190,6 +208,16 @@ int main()
 
     // 09_net-voltage
     netvoltage(dataname, range_angle, split_angle);
+
+    printf("\n---------------------------------------------------------------------------\n\n");
+
+    // 10_dft-offset
+    offset(dataname, split_angle);
+
+    // printf("\n---------------------------------------------------------------------------\n\n");
+
+    // 11_correct-offset
+    // correct_offset(dataname, split_angle, delta_X, delta_Y);
 
     printf("\n---------------------------------------------------------------------------\n\n");
 
