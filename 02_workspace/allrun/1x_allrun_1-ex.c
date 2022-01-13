@@ -20,6 +20,7 @@ DATE    :
 #include "../programs/09-2_dft_net-voltage_ver2.c"
 #include "../programs/10-2_dft-offset.c"
 #include "../programs/11_correct-offset.c"
+#include "../programs/12_interpolation.c"
 #include "../programs/21-2_dft_wave-adjuster_ver2.c"
 #include "../programs/27-3_wave_dft_drag.c"
 #include "../programs/27-4_wave_dft_lift.c"
@@ -34,14 +35,19 @@ int main()
     char model[50] = "1";
     int range_angle = 150;
     int split_angle = 24;
+    double x, y;
 
-    // double x = 1;
-    // double y = 1.3;
-
-    double x = 2;
-    double y = 2.6;
+    //  x = 1;
+    //  y = 1.3;
 
     /*****************************************************************************/
+
+    printf("[Parameters]\n");
+    printf("delta x = ");
+    scanf("%lf", &x);
+    printf("delta y = ");
+    scanf("%lf", &y);
+    printf("\n");
 
     // ディレクトリの作成
     char directoryname[100];
@@ -62,6 +68,11 @@ int main()
 
     // 11_correct-offset
     correct_offset(dataname, split_angle, x, y);
+
+    printf("\n---------------------------------------------------------------------------\n\n");
+
+    // 12_interpolation
+    interpolation(dataname, split_angle);
 
     printf("\n---------------------------------------------------------------------------\n\n");
 

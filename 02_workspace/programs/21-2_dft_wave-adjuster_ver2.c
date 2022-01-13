@@ -146,19 +146,32 @@ int waveadjuster_ver2(char date[])
     char filename_dat_1[100];
     char filename_dat_2[100];
     char filename_dat_3[100];
+    char filename_dat_4[100];
+    char filename_dat_5[100];
+
     char filename_plot_1[100];
     char filename_plot_2[100];
     char filename_plot_3[100];
     char filename_plot_4[100];
+    char filename_plot_5[100];
+    char filename_plot_6[100];
+    char filename_plot_7[100];
+    char filename_plot_8[100];
 
     sprintf(filename_dat_1, "../result/%s/dat/05-1_summary/05-1.dat", date);
     sprintf(filename_dat_2, "../result/%s/dat/09-3_net-voltage/09-3.dat", date);
     sprintf(filename_dat_3, "../result/%s/dat/21_adjust-value_ver2/21_plot.dat", date);
+    sprintf(filename_dat_4, "../result/%s/dat/11_offset-correct/11-1.dat", date);
+    sprintf(filename_dat_5, "../result/%s/dat/12_interpolation/12-1.dat", date);
 
     sprintf(filename_plot_1, "../result/%s/plot/21/21-1_summary_drag.png", date);
     sprintf(filename_plot_2, "../result/%s/plot/21/21-1_summary_lift.png", date);
-    sprintf(filename_plot_3, "../result/%s/plot/21/21-2_corrected_drag.png", date);
-    sprintf(filename_plot_4, "../result/%s/plot/21/21-2_corrected_lift.png", date);
+    sprintf(filename_plot_3, "../result/%s/plot/21/21-4_corrected_angle_drag.png", date);
+    sprintf(filename_plot_4, "../result/%s/plot/21/21-4_corrected_angle_lift.png", date);
+    sprintf(filename_plot_5, "../result/%s/plot/21/21-2_corrected_offset_drag.png", date);
+    sprintf(filename_plot_6, "../result/%s/plot/21/21-2_corrected_offset_lift.png", date);
+    sprintf(filename_plot_7, "../result/%s/plot/21/21-3_interpolated_drag.png", date);
+    sprintf(filename_plot_8, "../result/%s/plot/21/21-3_interpolated_lift.png", date);
 
     /*****************************************************************************/
 
@@ -294,6 +307,110 @@ int waveadjuster_ver2(char date[])
 
     // fprintf(gp, "set samples 10000\n");
     fprintf(gp, "plot '%s' using 1:3 with points lc 'orange-red' pt 5 ps 2 title 'Corrected (Lift)', '%s' using 1:3 with lines lc 'orange' title 'Theoretical (Lift)'\n", filename_dat_2, filename_dat_3);
+
+    fflush(gp); // Clean up Data
+
+    /*****************************************************************************/
+
+    fprintf(gp, "set output '%s'\n", filename_plot_5);
+    // fprintf(gp, "set multiplot\n");
+    fprintf(gp, "set key left top\n");
+    fprintf(gp, "set key font ',20'\n");
+    fprintf(gp, "set term pngcairo size 1280, 960 font ',24'\n");
+    // fprintf(gp, "set size ratio %.3f\n", size);
+
+    fprintf(gp, "set lmargin screen 0.10\n");
+    fprintf(gp, "set rmargin screen 0.90\n");
+    fprintf(gp, "set tmargin screen 0.90\n");
+    fprintf(gp, "set bmargin screen 0.15\n");
+
+    fprintf(gp, "set xrange [%.3f:%.3f]\n", x_min, x_max);
+    fprintf(gp, "set xlabel '%s'offset 0.0,0\n", xxlabel);
+    fprintf(gp, "set xtics %.3f\n", interval);
+    fprintf(gp, "set yrange [%.3f:%.3f]\n", y_min, y_max);
+    fprintf(gp, "set ylabel '%s'offset 1,0.0\n", yylabel_1);
+    fprintf(gp, "set title '%s (Drag)'\n", label_1);
+
+    // fprintf(gp, "set samples 10000\n");
+    fprintf(gp, "plot '%s' using 1:2 with points lc 'navy' pt 5 ps 2 title 'Corrected (Drag)', '%s' using 1:2 with lines lc 'royalblue' title 'Theoretical (Drag)'\n", filename_dat_4, filename_dat_3);
+
+    fflush(gp); // Clean up Data
+
+    /*****************************************************************************/
+
+    fprintf(gp, "set output '%s'\n", filename_plot_6);
+    // fprintf(gp, "set multiplot\n");
+    fprintf(gp, "set key left top\n");
+    fprintf(gp, "set key font ',20'\n");
+    fprintf(gp, "set term pngcairo size 1280, 960 font ',24'\n");
+    // fprintf(gp, "set size ratio %.3f\n", size);
+
+    fprintf(gp, "set lmargin screen 0.10\n");
+    fprintf(gp, "set rmargin screen 0.90\n");
+    fprintf(gp, "set tmargin screen 0.90\n");
+    fprintf(gp, "set bmargin screen 0.15\n");
+
+    fprintf(gp, "set xrange [%.3f:%.3f]\n", x_min, x_max);
+    fprintf(gp, "set xlabel '%s'offset 0.0,0\n", xxlabel);
+    fprintf(gp, "set xtics %.3f\n", interval);
+    fprintf(gp, "set yrange [%.3f:%.3f]\n", y_min, y_max);
+    fprintf(gp, "set ylabel '%s'offset 1,0.0\n", yylabel_1);
+    fprintf(gp, "set title '%s (Lift)'\n", label_1);
+
+    // fprintf(gp, "set samples 10000\n");
+    fprintf(gp, "plot '%s' using 1:3 with points lc 'orange-red' pt 5 ps 2 title 'Corrected (Lift)', '%s' using 1:3 with lines lc 'orange' title 'Theoretical (Lift)'\n", filename_dat_4, filename_dat_3);
+
+    fflush(gp); // Clean up Data
+
+    /*****************************************************************************/
+
+    fprintf(gp, "set output '%s'\n", filename_plot_7);
+    // fprintf(gp, "set multiplot\n");
+    fprintf(gp, "set key left top\n");
+    fprintf(gp, "set key font ',20'\n");
+    fprintf(gp, "set term pngcairo size 1280, 960 font ',24'\n");
+    // fprintf(gp, "set size ratio %.3f\n", size);
+
+    fprintf(gp, "set lmargin screen 0.10\n");
+    fprintf(gp, "set rmargin screen 0.90\n");
+    fprintf(gp, "set tmargin screen 0.90\n");
+    fprintf(gp, "set bmargin screen 0.15\n");
+
+    fprintf(gp, "set xrange [%.3f:%.3f]\n", x_min, x_max);
+    fprintf(gp, "set xlabel '%s'offset 0.0,0\n", xxlabel);
+    fprintf(gp, "set xtics %.3f\n", interval);
+    fprintf(gp, "set yrange [%.3f:%.3f]\n", y_min, y_max);
+    fprintf(gp, "set ylabel '%s'offset 1,0.0\n", yylabel_1);
+    fprintf(gp, "set title '%s (Drag)'\n", label_1);
+
+    // fprintf(gp, "set samples 10000\n");
+    fprintf(gp, "plot '%s' using 1:2 with points lc 'navy' pt 5 ps 2 title 'Corrected (Drag)', '%s' using 1:2 with lines lc 'royalblue' title 'Theoretical (Drag)'\n", filename_dat_5, filename_dat_3);
+
+    fflush(gp); // Clean up Data
+
+    /*****************************************************************************/
+
+    fprintf(gp, "set output '%s'\n", filename_plot_8);
+    // fprintf(gp, "set multiplot\n");
+    fprintf(gp, "set key left top\n");
+    fprintf(gp, "set key font ',20'\n");
+    fprintf(gp, "set term pngcairo size 1280, 960 font ',24'\n");
+    // fprintf(gp, "set size ratio %.3f\n", size);
+
+    fprintf(gp, "set lmargin screen 0.10\n");
+    fprintf(gp, "set rmargin screen 0.90\n");
+    fprintf(gp, "set tmargin screen 0.90\n");
+    fprintf(gp, "set bmargin screen 0.15\n");
+
+    fprintf(gp, "set xrange [%.3f:%.3f]\n", x_min, x_max);
+    fprintf(gp, "set xlabel '%s'offset 0.0,0\n", xxlabel);
+    fprintf(gp, "set xtics %.3f\n", interval);
+    fprintf(gp, "set yrange [%.3f:%.3f]\n", y_min, y_max);
+    fprintf(gp, "set ylabel '%s'offset 1,0.0\n", yylabel_1);
+    fprintf(gp, "set title '%s (Lift)'\n", label_1);
+
+    // fprintf(gp, "set samples 10000\n");
+    fprintf(gp, "plot '%s' using 1:3 with points lc 'orange-red' pt 5 ps 2 title 'Corrected (Lift)', '%s' using 1:3 with lines lc 'orange' title 'Theoretical (Lift)'\n", filename_dat_5, filename_dat_3);
 
     fflush(gp); // Clean up Data
 

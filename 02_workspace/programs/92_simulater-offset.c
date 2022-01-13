@@ -14,7 +14,7 @@ FILE *fp, *fp_csv, *fp_dat;
 // #define pi 4 * atan(1.0)
 
 /*********************************   MAIN   *********************************/
-int simulater(char date[], int split, int delta_y, int delta_x)
+int simulater(char date[], int split, int delta_x, int delta_y)
 {
     // ディレクトリの作成
     char directoryname_dat[100];
@@ -82,18 +82,22 @@ int simulater(char date[], int split, int delta_y, int delta_x)
     // オフセット考慮
 
     double r = 25; // 供試体の半径
-    double theta[3600];
+    double theta[2];
     double phi[3600];
     double psi[3600];
+    double alpha[3600];
+    double Phi[2];
 
     for (i = 0; i < 3600; i++)
     {
         buf = i;
-        theta[i] = pi / 1800 * i;
-        phi[i] = theta[i] - asin((cos((pi / 1800) * i) * delta_y - sin((pi / 1800) * i) * delta_x) / r);
-        psi[i] = -1 * theta[i] + phi[i];
-        wave_drag[i] = -0.64 * cos(psi[i]) * cos(phi[i]);
-        wave_lift[i] = -0.64 * cos(psi[i]) * sin(phi[i]);
+        phi[i] = pi / 1800 * i;
+
+        alpha[i] = -1 * asin((delta_y * sin(phi[i]) - delta_x * cos(phi[i])) / r);
+        psi[i] = phi[i] - alpha[i];
+
+        wave_drag[i] = -0.64 * cos(alpha[i]) * cos(psi[i]);
+        wave_lift[i] = -0.64 * cos(alpha[i]) * sin(psi[i]);
         wave_net[i] = sqrt(wave_drag[i] * wave_drag[i] + wave_lift[i] * wave_lift[i]);
     }
 

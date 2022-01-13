@@ -1,0 +1,314 @@
+/******************************************************************************
+PROGRAM NAME :
+AUTHER  : Masatsugu Kitadai
+DATE    :
+******************************************************************************/
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <sys/stat.h>
+
+// double pi = 4 * atan(1.0);
+
+FILE *fp, *fp_dat, *fp_csv, *gp;
+/*********************************   MAIN   *********************************/
+int interpolation(char date[], int split)
+{
+    /*****************************************************************************/
+    // ディレクトリの作成
+    char directoryname_dat[100];
+    char directoryname_csv[100];
+
+    sprintf(directoryname_dat, "../result/%s/dat/12_interpolation", date);
+    sprintf(directoryname_csv, "../result/%s/csv/12_interpolation", date);
+
+    mkdir(directoryname_dat, S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IXOTH | S_IXOTH);
+    mkdir(directoryname_csv, S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IXOTH | S_IXOTH);
+
+    /*****************************************************************************/
+
+    // filename
+    char filename_read[100];
+    char filename_csv[100];
+    char filename_dat[100];
+    char filename_csv_average[100];
+    char filename_dat_average[100];
+
+    sprintf(filename_read, "../result/%s/csv/11_offset-correct/11-1.csv", date);
+
+    sprintf(filename_csv, "../result/%s/csv/12_interpolation/12-1.csv", date);
+    sprintf(filename_dat, "../result/%s/dat/12_interpolation/12-1.dat", date);
+
+    sprintf(filename_csv_average, "../result/%s/csv/12_interpolation/12-2.csv", date);
+    sprintf(filename_dat_average, "../result/%s/dat/12_interpolation/12-2.dat", date);
+
+    /*****************************************************************************/
+
+    int i = 0;
+    double buf;
+    double angle[split];
+    double ch0, ch1, ch2;
+    double value[split][3];
+
+    fp = fopen(filename_read, "r");
+    if (fp == NULL)
+    {
+        printf("Error! I can't open the file.\n");
+        exit(0);
+    }
+
+    while ((fscanf(fp, "%lf, %lf, %lf, %lf", &buf, &ch0, &ch1, &ch2)) != EOF)
+    {
+        angle[i] = buf;
+        value[i][0] = ch0; // drag
+        value[i][1] = ch1; // lift
+        value[i][2] = ch2; // sqrt
+        // printf("%.1f, %.3f, %.3f, %.3f\n", angle[i], value[i][0], value[i][1], value[i][2]);
+        i = i + 1;
+    }
+
+    fclose(fp);
+
+    /*****************************************************************************/
+    // 使用する点の特定
+
+    double deg[split];
+    double difference[split];
+    double tmp[2];
+
+    double point[split];
+    int j, k;
+
+    for (i = 0; i < split; i++)
+    {
+        if (angle[i] < -7.5)
+        {
+            angle[i] = angle[i] + 360;
+        }
+    }
+
+    for (i = 0; i < split; i++)
+    {
+        for (j = 0; j < split; j++)
+        {
+            deg[j] = 360 / split * j;
+            difference[j] = fabs(angle[i] - deg[j]);
+            // printf("[%.1f]\t= %.3f\n", angle[i], difference[j]);
+        }
+
+        for (j = 0; j < split; ++j)
+        {
+            for (k = j + 1; k < split; ++k)
+            {
+                if (difference[j] > difference[k])
+                {
+                    tmp[0] = difference[j];
+                    difference[j] = difference[k];
+                    difference[k] = tmp[0];
+
+                    tmp[1] = deg[j];
+                    deg[j] = deg[k];
+                    deg[k] = tmp[1];
+                }
+            }
+        }
+
+        point[i] = deg[0];
+        // printf("[%.1f]\t= %.1f\n", angle[i], point[i]);
+    }
+
+    printf("\n");
+
+    /*****************************************************************************/
+    // ラグランジュ補間
+
+    double x[3], y[3][2];
+    double result_drag[split];
+    double result_lift[split];
+    double result_net[split];
+    double part[3];
+
+    double sum[3], ave[3];
+
+    // printf("[Angle]\t[Drag]\t[Lift]\t[Net]\n");
+
+    for (i = 0; i < split; i++)
+    {
+        j = i - 1;
+        k = i + 1;
+
+        x[1] = angle[i];
+
+        if (j == -1)
+        {
+            j = split - 1;
+            x[0] = angle[j] - 360;
+        }
+        else
+        {
+            x[0] = angle[j];
+        }
+
+        if (k == split)
+        {
+            k = 0;
+            x[2] = angle[k] + 360;
+        }
+        else
+        {
+            x[2] = angle[k];
+        }
+
+        // printf("[x]\t%.3f\t%.3f\t%.3f\n", x[0], x[1], x[2]);
+
+        // drag 方向
+        y[0][0] = value[j][0];
+        y[1][0] = value[i][0];
+        y[2][0] = value[k][0];
+
+        // printf("[y]\t%.3f\t%.3f\t%.3f\n", y[0][0], y[1][0], y[2][0]);
+
+        part[0] = (point[i] - x[1]) * (point[i] - x[2]) / ((x[0] - x[1]) * (x[0] - x[2]));
+        part[1] = (point[i] - x[0]) * (point[i] - x[2]) / ((x[1] - x[0]) * (x[1] - x[2]));
+        part[2] = (point[i] - x[0]) * (point[i] - x[1]) / ((x[2] - x[0]) * (x[2] - x[1]));
+
+        result_drag[i] = part[0] * y[0][0] + part[1] * y[1][0] + part[2] * y[2][0];
+
+        // lift 方向
+        y[0][1] = value[j][1];
+        y[1][1] = value[i][1];
+        y[2][1] = value[k][1];
+
+        // printf("[y]\t%.3f\t%.3f\t%.3f\n\n", y[0][1], y[1][1], y[2][1]);
+
+        result_lift[i] = part[0] * y[0][1] + part[1] * y[1][1] + part[2] * y[2][1];
+
+        result_net[i] = sqrt(result_drag[i] * result_drag[i] + result_lift[i] * result_lift[i]);
+
+        // printf("[%.1f]\t%.3f\t%.3f\t%.3f\n", point[i], result_drag[i], result_lift[i], result_net[i]);
+
+        sum[0] = result_drag[i] + sum[0];
+        sum[1] = result_lift[i] + sum[1];
+        sum[2] = result_net[i] + sum[2];
+    }
+
+    ave[0] = sum[0] / split;
+    ave[1] = sum[1] / split;
+    ave[2] = sum[2] / split;
+
+    /*****************************************************************************/
+
+    // plot用 データファイルの書き出し
+
+    double angle_double;
+
+    fp_csv = fopen(filename_csv, "w");
+    fp_dat = fopen(filename_dat, "w");
+
+    for (i = 0; i < split; i++)
+    {
+        fprintf(fp_csv, "%.1f,%lf,%lf,%lf\n", point[i], result_drag[i], result_lift[i], result_net[i]);
+        fprintf(fp_dat, "%.1f\t%.3f\t%.3f\t%.3f\n", point[i], result_drag[i], result_lift[i], result_net[i]);
+        // printf("%.3f\t%.3f\t%.3f\t%.3f\n", angle_double, value[i][0], value[i][1], value[i][2]);
+    }
+
+    fclose(fp_csv);
+    fclose(fp_dat);
+
+    fp_csv = fopen(filename_csv_average, "w");
+    fp_dat = fopen(filename_dat_average, "w");
+
+    fprintf(fp_csv, "%lf,%lf,%lf\n", ave[0], ave[1], ave[2]);
+    fprintf(fp_dat, "-30\t%.3f\t%.3f\t%.3f\n", ave[0], ave[1], ave[2]);
+    fprintf(fp_dat, "360\t%.3f\t%.3f\t%.3f\n", ave[0], ave[1], ave[2]);
+
+    fclose(fp_csv);
+    fclose(fp_dat);
+
+    /*****************************************************************************/
+
+    // Gnuplot //
+
+    // ディレクトリの作成
+
+    char directoryname_plot[100];
+
+    sprintf(directoryname_plot, "../result/%s/plot/12", date);
+    mkdir(directoryname_plot, S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IXOTH | S_IXOTH);
+
+    /*****************************************************************************/
+
+    // filename
+    char filename_plot_1[100];
+    sprintf(filename_plot_1, "../result/%s/plot/12/12_interpolated.png", date);
+
+    /*****************************************************************************/
+
+    // range x
+    double x_min = -30;
+    double x_max = 360;
+    double interval = 30;
+
+    // range y
+    double y_min = -0.8;
+    double y_max = 0.8;
+
+    // label
+    const char *xxlabel = "Angle [deg]";
+    const char *yylabel_1 = "Gradient of voltage [V/V]";
+    const char *yylabel_2 = "Net output voltage [V/V]";
+    char label_1[100] = "Gradient value (interpolationed)";
+    char label_2[100] = "Output voltage";
+
+    double size;
+
+    /*****************************************************************************/
+
+    // size
+    size = 1;
+
+    if ((gp = popen("gnuplot", "w")) == NULL)
+    {
+        printf("gnuplot is not here!\n");
+        exit(0); // gnuplotが無い場合、異常ある場合は終了
+    }
+
+    fprintf(gp, "set terminal pngcairo enhanced font 'Times New Roman,15' \n");
+
+    fprintf(gp, "set output '%s'\n", filename_plot_1);
+    // fprintf(gp, "set multiplot\n");
+    fprintf(gp, "set key left top\n");
+    fprintf(gp, "set key font ',20'\n");
+    fprintf(gp, "set term pngcairo size 1280, 960 font ',24'\n");
+    // fprintf(gp, "set size ratio %.3f\n", size);
+
+    fprintf(gp, "set lmargin screen 0.10\n");
+    fprintf(gp, "set rmargin screen 0.90\n");
+    fprintf(gp, "set tmargin screen 0.90\n");
+    fprintf(gp, "set bmargin screen 0.15\n");
+
+    fprintf(gp, "set xrange [%.3f:%.3f]\n", x_min, x_max);
+    fprintf(gp, "set xlabel '%s'offset 0.0,0\n", xxlabel);
+    fprintf(gp, "set xtics %.3f\n", interval);
+    fprintf(gp, "set yrange [%.3f:%.3f]\n", y_min, y_max);
+    fprintf(gp, "set ylabel '%s'offset 1,0.0\n", yylabel_1);
+    fprintf(gp, "set title '%s'\n", label_1);
+
+    // fprintf(gp, "set samples 10000\n");
+    fprintf(gp, "plot '%s' using 1:2 with points lc 'blue' pt 5 ps 2 title 'Offset corrected (Drag)', '%s' using 1:3 with points lc 'red' pt 5 ps 2 title 'Offset corrected (Lift)'\n", filename_dat, filename_dat);
+    fflush(gp); // Clean up Data
+
+    fprintf(gp, "exit\n"); // Quit gnuplot
+
+    pclose(gp);
+
+    printf("\n12\t\tsuccess\n");
+}
+
+// int main()
+// {
+//     // simulation
+//     interpolation("simulation_allrun", 24, -1, 2);
+
+//     return (0);
+// }

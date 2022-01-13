@@ -14,7 +14,7 @@ FILE *fp, *fp_csv, *fp_dat;
 // #define pi 4 * atan(1.0)
 
 /*********************************   MAIN   *********************************/
-int simulater(char date[], int split, int delta_y, int delta_x, double Theta_1, double Theta_2)
+int simulater(char date[], int split, int delta_x, int delta_y, double Theta_1, double Theta_2)
 {
     // ディレクトリの作成
     char directoryname_dat[100];
@@ -85,7 +85,7 @@ int simulater(char date[], int split, int delta_y, int delta_x, double Theta_1, 
     double theta[2];
     double phi[3600];
     double psi[3600];
-    double alfa[3600];
+    double alpha[3600];
     double Phi[2];
 
     for (i = 0; i < 3600; i++)
@@ -95,11 +95,11 @@ int simulater(char date[], int split, int delta_y, int delta_x, double Theta_1, 
         theta[0] = pi / 180 * Theta_1;
         theta[1] = pi / 180 * Theta_2;
 
-        alfa[i] = asin(-1 * (delta_x * sin(phi[i]) + delta_y * cos(phi[i])) / r);
-        psi[i] = phi[i] - alfa[i];
+        alpha[i] = -1 * asin((delta_y * sin(phi[i]) - delta_x * cos(phi[i])) / r);
+        psi[i] = phi[i] - alpha[i];
 
-        wave_drag[i] = -0.64 * cos(alfa[i]) * cos(psi[i] - theta[0]);
-        wave_lift[i] = -0.64 * cos(alfa[i]) * sin(psi[i] - theta[1]);
+        wave_drag[i] = -0.64 * cos(alpha[i]) * cos(psi[i] - theta[0]);
+        wave_lift[i] = -0.64 * cos(alpha[i]) * sin(psi[i] - theta[1]);
         wave_net[i] = sqrt(wave_drag[i] * wave_drag[i] + wave_lift[i] * wave_lift[i]);
     }
 
@@ -107,7 +107,7 @@ int simulater(char date[], int split, int delta_y, int delta_x, double Theta_1, 
 
     double degree = 0;
 
-    printf("\t[Alfa]\t[Drag]\t[Lift]\t[Net]\n");
+    printf("\t[alpha]\t[Drag]\t[Lift]\t[Net]\n");
 
     fp_csv = fopen(filename_csv_1, "w");
     fp_dat = fopen(filename_dat_1, "w");
@@ -122,7 +122,7 @@ int simulater(char date[], int split, int delta_y, int delta_x, double Theta_1, 
         sum[1] = sum[1] + wave_lift[i];
         sum[2] = sum[2] + wave_net[i];
 
-        degree = 180 / pi * alfa[i];
+        degree = 180 / pi * alpha[i];
 
         fprintf(fp_csv, "%.10f,%.10f,%.10f,%.10f\n", angle, wave_drag[i], wave_lift[i], wave_net[i]);
         fprintf(fp_dat, "%lf\t%lf\t%lf\t%lf\n", angle, wave_drag[i], wave_lift[i], wave_net[i]);

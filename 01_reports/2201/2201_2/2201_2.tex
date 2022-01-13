@@ -71,9 +71,9 @@ lineskip=-0.5ex
 \section*{報告内容}
 \begin{enumerate}[1.]
     \item 進捗状況
-    \item 実験データ
-    \item 校正装置と供試体のオフセット
-    \item テストデータへの補正プログラム適用結果
+    \item 校正装置と供試体のオフセット(作成中)
+    \item テストデータの作成
+    \item 実験結果とテストデータの比較
     \item 次週の予定
 \end{enumerate}
 
@@ -83,88 +83,38 @@ lineskip=-0.5ex
 今週は，その原因と考えられる校正装置と供試体の軸のオフセットを考慮したテストデータを作成し
 補正プログラムを適用した出力結果と実験結果の比較を行った．
 
-\section{実験データ}
-以前の実験結果について以下のFig.1～Fig.4，その算出値をTable 1に示す．
+% \section{実験データ}
+% 以前の実験結果について以下のFig.1～Fig.3に示す．
 
-\begin{itemize}
-    \item [$\blacksquare$] \textgt{出力電圧の傾き(補正前)}
-\end{itemize}
+% \begin{itemize}
+%     \item [$\blacksquare$] \textgt{正味出力電圧}
+% \end{itemize}
 
-\begin{figure}[htbp]
-    \footnotesize
-    \begin{center}
-        \includegraphics[width=86mm]{../graphes/1-ex/05/05_summary-wave.png}
-        \caption{Summary of gradient voltage (Measured)}
-    \end{center}
-\end{figure}
+% \begin{figure}[htbp]
+%     \footnotesize
+%     \begin{center}
+%         \includegraphics[width=86mm]{../graphes/1-ex/09/09_summary-outputvoltage-net.png}
+%         \caption{Summary of net voltage (Corrected)}
+%     \end{center}
+% \end{figure}
 
-\newpage
+% \newpage
 
-\begin{itemize}
-    \item [$\blacksquare$] \textgt{出力電圧の傾き(補正後)}
-\end{itemize}
+% \begin{itemize}
+%     \item [$\blacksquare$] \textgt{出力電圧の傾き(補正前)}
+% \end{itemize}
 
-\begin{figure}[htbp]
-    \footnotesize
-    \begin{center}
-        \includegraphics[width=86mm]{../graphes/1-ex/21/21-2_corrected_drag.png}
-        \caption{Summary of drag's gradient voltage (corrected)}
-        \includegraphics[width=86mm]{../graphes/1-ex/21/21-2_corrected_lift.png}
-        \caption{Summary of lift's gradient voltage (corrected)}
-    \end{center}
-\end{figure}
+% \begin{figure}[htbp]
+%     \footnotesize
+%     \begin{center}
+%         \includegraphics[width=86mm]{../graphes/1-ex/21/21-1_summary_drag.png}
+%         \caption{Summary of gradient voltage (drag)}
+%         \includegraphics[width=86mm]{../graphes/1-ex/21/21-1_summary_lift.png}
+%         \caption{Summary of gradient voltage (Measured)}
+%     \end{center}
+% \end{figure}
 
-\newpage
-
-\begin{itemize}
-    \item [$\blacksquare$] \textgt{正味出力電圧}
-\end{itemize}
-
-\begin{figure}[htbp]
-    \footnotesize
-    \begin{center}
-        \includegraphics[width=86mm]{../graphes/1-ex/09/09_summary-outputvoltage-net.png}
-        \caption{Summary of net voltage (Corrected)}
-    \end{center}
-\end{figure}
-
-\begin{table}[htbp]
-    \scalefont{0.9}
-    \begin{center}
-        \caption{Result summary}
-        \begin{tabular}{|p{20mm}|p{20mm}|p{20mm}|p{20mm}|}
-            \hline
-            \multicolumn{1}{|c|}{\textgt{Angle [deg]}} & \multicolumn{1}{|c|}{\textgt{$A_d'$ [V/V]}} & \multicolumn{1}{|c|}{\textgt{$A_l'$ [V/V]}} & \multicolumn{1}{|c|}{\textgt{$A_{net}$ [V/V]}} \\ \hline
-            \multicolumn{1}{|c|}{0}                    & \multicolumn{1}{|r|}{-0.640}                & \multicolumn{1}{|r|}{\textgt{-0.022}}       & \multicolumn{1}{|r|}{\textgt{0.640}}           \\ \hline
-            \multicolumn{1}{|c|}{15}                   & \multicolumn{1}{|r|}{-0.615}                & \multicolumn{1}{|r|}{\textgt{-0.161}}       & \multicolumn{1}{|r|}{\textgt{0.636}}           \\ \hline
-            \multicolumn{1}{|c|}{30}                   & \multicolumn{1}{|r|}{-0.541}                & \multicolumn{1}{|r|}{\textgt{-0.317}}       & \multicolumn{1}{|r|}{\textgt{0.627}}           \\ \hline
-            \multicolumn{1}{|c|}{45}                   & \multicolumn{1}{|r|}{-0.428}                & \multicolumn{1}{|r|}{\textgt{-0.443}}       & \multicolumn{1}{|r|}{\textgt{0.616}}           \\ \hline
-            \multicolumn{1}{|c|}{60}                   & \multicolumn{1}{|r|}{-0.307}                & \multicolumn{1}{|r|}{\textgt{-0.539}}       & \multicolumn{1}{|r|}{\textgt{0.620}}           \\ \hline
-            \multicolumn{1}{|c|}{75}                   & \multicolumn{1}{|r|}{-0.154}                & \multicolumn{1}{|r|}{\textgt{-0.604}}       & \multicolumn{1}{|r|}{\textgt{0.624}}           \\ \hline
-            \multicolumn{1}{|c|}{90}                   & \multicolumn{1}{|r|}{0.045}                 & \multicolumn{1}{|r|}{\textgt{-0.623}}       & \multicolumn{1}{|r|}{\textgt{0.624}}           \\ \hline
-            \multicolumn{1}{|c|}{105}                  & \multicolumn{1}{|r|}{0.219}                 & \multicolumn{1}{|r|}{\textgt{-0.602}}       & \multicolumn{1}{|r|}{\textgt{0.641}}           \\ \hline
-            \multicolumn{1}{|c|}{120}                  & \multicolumn{1}{|r|}{0.378}                 & \multicolumn{1}{|r|}{\textgt{-0.529}}       & \multicolumn{1}{|r|}{\textgt{0.650}}           \\ \hline
-            \multicolumn{1}{|c|}{135}                  & \multicolumn{1}{|r|}{0.493}                 & \multicolumn{1}{|r|}{\textgt{-0.425}}       & \multicolumn{1}{|r|}{\textgt{0.651}}           \\ \hline
-            \multicolumn{1}{|c|}{150}                  & \multicolumn{1}{|r|}{0.578}                 & \multicolumn{1}{|r|}{\textgt{-0.295}}       & \multicolumn{1}{|r|}{\textgt{0.649}}           \\ \hline
-            \multicolumn{1}{|c|}{165}                  & \multicolumn{1}{|r|}{0.633}                 & \multicolumn{1}{|r|}{\textgt{-0.134}}       & \multicolumn{1}{|r|}{\textgt{0.647}}           \\ \hline
-            \multicolumn{1}{|c|}{180}                  & \multicolumn{1}{|r|}{0.638}                 & \multicolumn{1}{|r|}{\textgt{0.013}}        & \multicolumn{1}{|r|}{\textgt{0.638}}           \\ \hline
-            \multicolumn{1}{|c|}{195}                  & \multicolumn{1}{|r|}{0.604}                 & \multicolumn{1}{|r|}{\textgt{0.186}}        & \multicolumn{1}{|r|}{\textgt{0.632}}           \\ \hline
-            \multicolumn{1}{|c|}{210}                  & \multicolumn{1}{|r|}{0.534}                 & \multicolumn{1}{|r|}{\textgt{0.329}}        & \multicolumn{1}{|r|}{\textgt{0.627}}           \\ \hline
-            \multicolumn{1}{|c|}{225}                  & \multicolumn{1}{|r|}{0.436}                 & \multicolumn{1}{|r|}{\textgt{0.445}}        & \multicolumn{1}{|r|}{\textgt{0.623}}           \\ \hline
-            \multicolumn{1}{|c|}{240}                  & \multicolumn{1}{|r|}{0.331}                 & \multicolumn{1}{|r|}{\textgt{0.530}}        & \multicolumn{1}{|r|}{\textgt{0.625}}           \\ \hline
-            \multicolumn{1}{|c|}{255}                  & \multicolumn{1}{|r|}{0.205}                 & \multicolumn{1}{|r|}{\textgt{0.595}}        & \multicolumn{1}{|r|}{\textgt{0.630}}           \\ \hline
-            \multicolumn{1}{|c|}{270}                  & \multicolumn{1}{|r|}{0.065}                 & \multicolumn{1}{|r|}{\textgt{0.629}}        & \multicolumn{1}{|r|}{\textgt{0.633}}           \\ \hline
-            \multicolumn{1}{|c|}{285}                  & \multicolumn{1}{|r|}{-0.096}                & \multicolumn{1}{|r|}{\textgt{0.637}}        & \multicolumn{1}{|r|}{\textgt{0.644}}           \\ \hline
-            \multicolumn{1}{|c|}{300}                  & \multicolumn{1}{|r|}{-0.258}                & \multicolumn{1}{|r|}{\textgt{0.596}}        & \multicolumn{1}{|r|}{\textgt{0.650}}           \\ \hline
-            \multicolumn{1}{|c|}{315}                  & \multicolumn{1}{|r|}{-0.413}                & \multicolumn{1}{|r|}{\textgt{0.512}}        & \multicolumn{1}{|r|}{\textgt{0.657}}           \\ \hline
-            \multicolumn{1}{|c|}{330}                  & \multicolumn{1}{|r|}{-0.545}                & \multicolumn{1}{|r|}{\textgt{0.356}}        & \multicolumn{1}{|r|}{\textgt{0.651}}           \\ \hline
-            \multicolumn{1}{|c|}{345}                  & \multicolumn{1}{|r|}{-0.619}                & \multicolumn{1}{|r|}{\textgt{0.166}}        & \multicolumn{1}{|r|}{\textgt{0.641}}           \\ \hline \hline
-            \multicolumn{1}{|c|}{Average}              & \multicolumn{1}{|r|}{0.023}                 & \multicolumn{1}{|r|}{\textgt{0.013}}        & \multicolumn{1}{|r|}{\textgt{0.637}}           \\ \hline
-        \end{tabular}
-    \end{center}
-\end{table}
-
-\newpage
+% \newpage
 
 \section{校正装置と実験装置の軸のオフセット}
 
@@ -178,7 +128,7 @@ lineskip=-0.5ex
 \begin{figure}[htbp]
     \footnotesize
     \begin{center}
-        \includegraphics[width=70mm]{../images/image_5.png}
+        \includegraphics[width=65mm]{../images/image_5.png}
         \caption{}
     \end{center}
 \end{figure}
@@ -201,33 +151,231 @@ lineskip=-0.5ex
     \end{center}
 \end{figure}
 
+% \subsection{角度$\alpha$の算出}
+% はじめに，作用点と点$o'$を通る直線(青点線)と$x''$軸の角度を$\phi$，
+% 作用点と点$o$を通る直線(赤点線)と$x$軸の角度を$\psi$とする．
+% また，作用点と点$o'$を通る直線(青点線)と作用点と点$o$を通る直線(赤点線)の角度を$\alpha$とするとき，
+
+% \begin{itemize}
+%     \item [$\blacksquare$] \textgt{作用点と点$o'$を通る直線及び点$o$を通る直線の角度 $\alpha$}
+%           \begin{eqnarray*}
+%             \alpha = \psi - \phi
+%           \end{eqnarray*}
+% \end{itemize}
+
+% ここで，供試体の半径を$r$として，
+
 \subsection{角度$\psi$の算出}
 
-\subsection{作用力の$F_r$，$F_\psi$への分解とトルク$T$の影響}
-
-供試体に加わる作用力$F$は供試体表面の接線方向の力$F_\varphi$，
-またその法線方向の力$F_r$に分けて考えることができる．
-算出した$\psi$を用いると，それぞれ以下のように求められる．
-
 \begin{itemize}
-    \item [$\blacksquare$] \textgt{接戦方向の力$F_\varphi$，接戦と法線方向の力$F_r$の算出}
+    \item [$\blacksquare$] \textgt{実際の作用力の角度 $\psi$}
           \begin{eqnarray*}
-              F_\varphi &=& F \sin \psi \\
-              F_r &=& F \cos \psi
+            \psi = \phi + \left(-1\right) × \sin^{-1}\left(\frac{\Delta y \sin \phi - \Delta x \cos \phi}{r}\right)
           \end{eqnarray*}
 \end{itemize}
 
-接戦方向成分$F_\varphi$について，供試体に対してトルク$T$として作用することとなる．
+\newpage
+
+% \subsection{作用力の$F_r$，$F_\psi$への分解とトルク$T$の影響}
+
+% 供試体に加わる作用力$F$は供試体表面の接線方向の力$F_\varphi$，
+% またその法線方向の力$F_r$に分けて考えることができる．
+% 算出した$\psi$を用いると，それぞれ以下のように求められる．
+
+% \begin{itemize}
+%     \item [$\blacksquare$] \textgt{接戦方向の力$F_\varphi$，接戦と法線方向の力$F_r$の算出}
+%           \begin{eqnarray*}
+%               F_\varphi &=& F \sin \psi \\
+%               F_r &=& F \cos \psi
+%           \end{eqnarray*}
+% \end{itemize}
+
+% 接戦方向成分$F_\varphi$について，供試体に対してトルク$T$として作用することとなる．
+
+% \begin{itemize}
+%     \item [$\blacksquare$] \textgt{供試体へ作用するトルク$T$}
+%           \begin{eqnarray*}
+%               T &=& F_\phi \cdot r\\
+%               &=& F \sin \psi \cdot r
+%           \end{eqnarray*}
+% \end{itemize}
+
+% ここで，このトルク$T$について，
+% 作用力測定装置に対する影響は十分に小さいと考えられることから無視できる．
+
+\section{テストデータの作成}
+オフセットを考慮したテストデータを複数条件で作成し，
+補正結果について比較した．
 
 \begin{itemize}
-    \item [$\blacksquare$] \textgt{供試体へ作用するトルク$T$}
-          \begin{eqnarray*}
-              T &=& F_\varphi \cdot r\\
-              &=& F \sin \psi \cdot r
-          \end{eqnarray*}
+    \item [$\blacksquare$] \textgt{$\Delta x = 5 [\mathrm{mm}]$，$\Delta y = 5 [\mathrm{mm}]$ のとき}
 \end{itemize}
 
-ここで，このトルク$T$について，
-作用力測定装置に対する影響は十分に小さいと考えられることから無視できる．
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=86mm]{../graphes/offset_x=5_y=0/20/20_adjust-value.png}
+        \caption{Summary of gradient voltage}
+        \includegraphics[width=86mm]{../graphes/offset_x=5_y=0/21/21-2_corrected_offset_drag.png}
+        \caption{Corrected voltage (drag)}
+        \includegraphics[width=86mm]{../graphes/offset_x=5_y=0/21/21-2_corrected_offset_lift.png}
+        \caption{Corrected voltage (lift)}
+    \end{center}
+\end{figure}
 
+\newpage
+
+\begin{itemize}
+    \item [$\blacksquare$] \textgt{$\Delta x = 5 [\mathrm{mm}]$，$\Delta y = 5 [\mathrm{mm}]$ のとき}
+\end{itemize}
+
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=86mm]{../graphes/offset_x=5_y=5/20/20_adjust-value.png}
+        \caption{Summary of gradient voltage}
+        \includegraphics[width=86mm]{../graphes/offset_x=5_y=5/21/21-2_corrected_offset_drag.png}
+        \caption{Corrected voltage (drag)}
+        \includegraphics[width=86mm]{../graphes/offset_x=5_y=5/21/21-2_corrected_offset_lift.png}
+        \caption{Corrected voltage (lift)}
+    \end{center}
+\end{figure}
+
+\newpage
+
+\begin{itemize}
+    \item [$\blacksquare$] \textgt{$\Delta x = 10 [\mathrm{mm}]$，$\Delta y = 5 [\mathrm{mm}]$ のとき}
+\end{itemize}
+
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=86mm]{../graphes/offset_x=10_y=5/20/20_adjust-value.png}
+        \caption{Summary of gradient voltage}
+        \includegraphics[width=86mm]{../graphes/offset_x=10_y=5/21/21-2_corrected_offset_drag.png}
+        \caption{Corrected voltage (drag)}
+        \includegraphics[width=86mm]{../graphes/offset_x=10_y=5/21/21-2_corrected_offset_lift.png}
+        \caption{Corrected voltage (lift)}
+    \end{center}
+\end{figure}
+
+\newpage
+
+テストデータの補正適応結果から，理論曲線に重なるように補正することはできるが，
+それぞれのデータの間隔が変化していることがわかる．
+したがって，この補正結果に離散フーリエ変換を適用することは不可能であることがわかる．
+
+\section{実験データとテストデータの比較}
+
+変換理論を用いて，テストデータを作成した．
+その結果を以下のFig.12～Fig.14に示す．
+なお，テストデータ作成時にパラメータを以下のTable 1のように設定した．
+
+\begin{table}[htbp]
+    \begin{center}
+        \caption{Simulation conditions}
+        \begin{tabular}{|p{30mm}|p{20mm}|p{30mm}|}
+            \hline
+            \multicolumn{1}{|c|}{$x$軸の回転角}       & \multicolumn{1}{|c|}{$\theta_1$} & \multicolumn{1}{|c|}{7 [deg]}             \\ \hline
+            \multicolumn{1}{|c|}{$y$軸の回転角}       & \multicolumn{1}{|c|}{$\theta_2$} & \multicolumn{1}{|c|}{5 [deg]}             \\ \hline
+            \multicolumn{1}{|c|}{$x$軸のオフセット}   & \multicolumn{1}{|c|}{$\Delta x$} & \multicolumn{1}{|c|}{-1 [mm]}             \\ \hline
+            \multicolumn{1}{|c|}{$y$軸のオフセット}   & \multicolumn{1}{|c|}{$\Delta y$} & \multicolumn{1}{|c|}{1.3 [mm]}             \\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+ここで，それぞれの軸の回転角は，以前のプログラムからおおよその値を参照しており，
+オフセット値については，以前の実験結果から概算したものである．
+また，オフセットを考慮した際に算出される校正実験装置の押角$\phi$と
+実際の作用力の角度$\psi$の関係性は以下のようになっている．
+
+\begin{table}[htbp]
+    \scalefont{0.9}
+    \begin{center}
+        \caption{True angle of acting force}
+        \begin{tabular}{|p{20mm}|p{20mm}|p{20mm}|p{20mm}|}
+            \hline
+            \multicolumn{1}{|c|}{\textgt{$\phi$ [deg]}} & \multicolumn{1}{|c|}{\textgt{$\psi$ [deg]}}& \multicolumn{1}{|c|}{\textgt{$\phi$ [deg]}} & \multicolumn{1}{|c|}{\textgt{$\psi$ [deg]}}   \\ \hline
+            \multicolumn{1}{|c|}{0}                     & \multicolumn{1}{|c|}{2.3}                  & \multicolumn{1}{|c|}{180}                   & \multicolumn{1}{|c|}{177.7}  \\ \hline
+            \multicolumn{1}{|c|}{15}                    & \multicolumn{1}{|c|}{18.0}                 & \multicolumn{1}{|c|}{195}                   & \multicolumn{1}{|c|}{192.0}  \\ \hline
+            \multicolumn{1}{|c|}{30}                    & \multicolumn{1}{|c|}{33.5}                 & \multicolumn{1}{|c|}{210}                   & \multicolumn{1}{|c|}{206.5}  \\ \hline
+            \multicolumn{1}{|c|}{45}                    & \multicolumn{1}{|c|}{48.7}                 & \multicolumn{1}{|c|}{225}                   & \multicolumn{1}{|c|}{221.3}  \\ \hline
+            \multicolumn{1}{|c|}{60}                    & \multicolumn{1}{|c|}{63.7}                 & \multicolumn{1}{|c|}{240}                   & \multicolumn{1}{|c|}{236.3}  \\ \hline
+            \multicolumn{1}{|c|}{75}                    & \multicolumn{1}{|c|}{78.5}                 & \multicolumn{1}{|c|}{255}                   & \multicolumn{1}{|c|}{251.5}  \\ \hline
+            \multicolumn{1}{|c|}{90}                    & \multicolumn{1}{|c|}{93.0}                 & \multicolumn{1}{|c|}{270}                   & \multicolumn{1}{|c|}{267.0}  \\ \hline
+            \multicolumn{1}{|c|}{105}                   & \multicolumn{1}{|c|}{107.3}                & \multicolumn{1}{|c|}{285}                   & \multicolumn{1}{|c|}{282.7}  \\ \hline
+            \multicolumn{1}{|c|}{120}                   & \multicolumn{1}{|c|}{121.4}                & \multicolumn{1}{|c|}{300}                   & \multicolumn{1}{|c|}{298.6}  \\ \hline
+            \multicolumn{1}{|c|}{135}                   & \multicolumn{1}{|c|}{135.5}                & \multicolumn{1}{|c|}{315}                   & \multicolumn{1}{|c|}{314.5}  \\ \hline
+            \multicolumn{1}{|c|}{150}                   & \multicolumn{1}{|c|}{149.5}                & \multicolumn{1}{|c|}{330}                   & \multicolumn{1}{|c|}{330.5}  \\ \hline
+            \multicolumn{1}{|c|}{165}                   & \multicolumn{1}{|c|}{163.6}                & \multicolumn{1}{|c|}{345}                   & \multicolumn{1}{|c|}{346.4}  \\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+
+\newpage
+
+\subsection{テストデータ}
+
+$\blacksquare$ \textgt{出力電圧の傾き(補正前)}
+
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=86mm]{../graphes/simulation/21/21-1_summary_drag.png}
+        \caption{Summary of gradient voltage (drag)}
+        \includegraphics[width=86mm]{../graphes/simulation/21/21-1_summary_lift.png}
+        \caption{Summary of gradient voltage (lift)}
+    \end{center}
+\end{figure}
+
+$\blacksquare$ \textgt{正味出力電圧 (仮)}
+
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=86mm]{../graphes/simulation/09/09_summary-outputvoltage-net.png}
+        \caption{Summary of net voltage (Corrected)}
+    \end{center}
+\end{figure}
+
+\newpage
+
+\subsection{実験結果}
+
+$\blacksquare$ \textgt{出力電圧の傾き(補正前)}
+
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=86mm]{../graphes/1-ex/21/21-1_summary_drag.png}
+        \caption{Summary of gradient voltage (drag)}
+        \includegraphics[width=86mm]{../graphes/1-ex/21/21-1_summary_lift.png}
+        \caption{Summary of gradient voltage (lift)}
+    \end{center}
+\end{figure}
+
+$\blacksquare$ \textgt{正味出力電圧(仮)}
+
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=86mm]{../graphes/1-ex/09/09_summary-outputvoltage-net.png}
+        \caption{Summary of net voltage (Corrected)}
+    \end{center}
+\end{figure}
+
+\newpage
+
+$\blacksquare$ \textgt{正味出力電圧(仮) (補正前)}
+
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=86mm]{../graphes/simulation/05/05_summary-outputvoltage.png}
+        \caption{Test data}
+        \includegraphics[width=86mm]{../graphes/1-ex/05/05_summary-outputvoltage.png}
+        \caption{Experimental data}
+    \end{center}
+\end{figure}
 \end{document}

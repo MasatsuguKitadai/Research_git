@@ -38,7 +38,7 @@ int calculate_drag(char date[], int range)
     char filename_csv[100];
     char filename_dat[100];
 
-    sprintf(filename_read, "../result/%s/csv/11_offset-correct/11-1.csv", date);
+    sprintf(filename_read, "../result/%s/csv/12_interpolation/12-1.csv", date);
 
     sprintf(filename_csv, "../result/%s/csv/07-3_dft-drag/07-3.csv", date);
     sprintf(filename_dat, "../result/%s/dat/07-3_dft-drag/07-3.dat", date);

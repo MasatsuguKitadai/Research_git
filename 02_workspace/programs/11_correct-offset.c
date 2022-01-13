@@ -10,7 +10,7 @@ DATE    :
 
 FILE *fp, *fp_dat, *fp_csv, *gp;
 /*********************************   MAIN   *********************************/
-int correct_offset(char date[], int split, double delta_y, double delta_x)
+int correct_offset(char date[], int split, double delta_x, double delta_y)
 {
     /*****************************************************************************/
     // ディレクトリの作成
@@ -44,7 +44,7 @@ int correct_offset(char date[], int split, double delta_y, double delta_x)
 
     int i = 0;
     double buf;
-    int angle[split];
+    double angle[split];
     double ch0, ch1, ch2;
     double value[split][3];
 
@@ -71,10 +71,10 @@ int correct_offset(char date[], int split, double delta_y, double delta_x)
 
     double F[split][3];
     double phi[split], psi[split];
-    double alfa[split];
+    double alpha[split];
     double r = 25; // 供試体の半径
 
-    double degree;
+    double degree[split];
     double sum[3], ave[3];
 
     for (i = 0; i < 3; i++)
@@ -83,22 +83,22 @@ int correct_offset(char date[], int split, double delta_y, double delta_x)
         ave[i] = 0;
     }
 
-    printf("\t[Alfa]\tF[x]\tF[y]\tF[net]\n");
+    printf("\t[Psi]\t[Drag]\t[Lift]\t[Net]\n");
 
     for (i = 0; i < split; i++)
     {
         phi[i] = pi / 180 * angle[i];
 
-        alfa[i] = asin(-1 * (delta_x * sin(phi[i]) + delta_y * cos(phi[i])) / r);
-        psi[i] = phi[i] - alfa[i];
+        alpha[i] = -1 * asin((delta_y * sin(phi[i]) - delta_x * cos(phi[i])) / r);
+        psi[i] = phi[i] - alpha[i];
 
-        F[i][0] = value[i][0] / cos(alfa[i]);
-        F[i][1] = value[i][1] / cos(alfa[i]);
+        F[i][0] = value[i][0] / cos(alpha[i]);
+        F[i][1] = value[i][1] / cos(alpha[i]);
         F[i][2] = sqrt(F[i][0] * F[i][0] + F[i][1] * F[i][1]);
 
         phi[i] = phi[i] * 180 / pi;
-        degree = 180 / pi * alfa[i];
-        printf("[%.1f]\t%.3f\t%.3f\t%.3f\t%.3f\n", phi[i], degree, F[i][0], F[i][1], F[i][2]);
+        degree[i] = 180 / pi * psi[i];
+        printf("[%.1f]\t%.1f\t%.3f\t%.3f\t%.3f\n", phi[i], degree[i], F[i][0], F[i][1], F[i][2]);
 
         sum[0] = F[i][0] + sum[0];
         sum[1] = F[i][1] + sum[1];
@@ -119,8 +119,8 @@ int correct_offset(char date[], int split, double delta_y, double delta_x)
         angle_double = i * 150;
         angle_double = angle_double / 10;
 
-        fprintf(fp_csv, "%.1f,%lf,%lf,%lf\n", angle_double, F[i][0], F[i][1], F[i][2]);
-        fprintf(fp_dat, "%.1f\t%.3f\t%.3f\t%.3f\n", angle_double, F[i][0], F[i][1], F[i][2]);
+        fprintf(fp_csv, "%lf,%lf,%lf,%lf\n", degree[i], F[i][0], F[i][1], F[i][2]);
+        fprintf(fp_dat, "%.3f\t%.3f\t%.3f\t%.3f\n", degree[i], F[i][0], F[i][1], F[i][2]);
         // printf("%.3f\t%.3f\t%.3f\t%.3f\n", angle_double, value[i][0], value[i][1], value[i][2]);
     }
 
@@ -148,7 +148,6 @@ int correct_offset(char date[], int split, double delta_y, double delta_x)
     // ディレクトリの作成
 
     char directoryname_plot[100];
-
     sprintf(directoryname_plot, "../result/%s/plot/11", date);
     mkdir(directoryname_plot, S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IXOTH | S_IXOTH);
 
