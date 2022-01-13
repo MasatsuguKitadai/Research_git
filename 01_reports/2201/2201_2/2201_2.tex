@@ -61,7 +61,7 @@ lineskip=-0.5ex
 \setcounter{tocdepth}{3}
 
 \author{来代 勝胤}
-\title{令和3年度 1月 第2週 報告書}
+\title{令和3年度 1月 第2週 報告書 (追記)}
 \date{2022/1/13}
 
 \begin{document}
@@ -82,39 +82,6 @@ lineskip=-0.5ex
 そのプロットした図(Fig.1)に周期的な振動が見られた．
 今週は，その原因と考えられる校正装置と供試体の軸のオフセットを考慮したテストデータを作成し
 補正プログラムを適用した出力結果と実験結果の比較を行った．
-
-% \section{実験データ}
-% 以前の実験結果について以下のFig.1～Fig.3に示す．
-
-% \begin{itemize}
-%     \item [$\blacksquare$] \textgt{正味出力電圧}
-% \end{itemize}
-
-% \begin{figure}[htbp]
-%     \footnotesize
-%     \begin{center}
-%         \includegraphics[width=86mm]{../graphes/1-ex/09/09_summary-outputvoltage-net.png}
-%         \caption{Summary of net voltage (Corrected)}
-%     \end{center}
-% \end{figure}
-
-% \newpage
-
-% \begin{itemize}
-%     \item [$\blacksquare$] \textgt{出力電圧の傾き(補正前)}
-% \end{itemize}
-
-% \begin{figure}[htbp]
-%     \footnotesize
-%     \begin{center}
-%         \includegraphics[width=86mm]{../graphes/1-ex/21/21-1_summary_drag.png}
-%         \caption{Summary of gradient voltage (drag)}
-%         \includegraphics[width=86mm]{../graphes/1-ex/21/21-1_summary_lift.png}
-%         \caption{Summary of gradient voltage (Measured)}
-%     \end{center}
-% \end{figure}
-
-% \newpage
 
 \section{校正装置と実験装置の軸のオフセット}
 
@@ -141,7 +108,8 @@ lineskip=-0.5ex
 移動した座標系$x''-y''$を校正装置における座標系とする．
 ここで，供試体表面に任意の角度$\theta$から作用力$F$を加える．
 このとき，作用力$F$は，$\Delta x$，$\Delta y$のオフセットを持つため，
-正規座標系における中心$o$を通ることはない．
+座標系$x''-y''$の中心$o'$を通る．
+すなわち，正規座標系における中心$o$を通ることはない．
 
 \begin{figure}[htbp]
     \footnotesize
@@ -151,26 +119,57 @@ lineskip=-0.5ex
     \end{center}
 \end{figure}
 
-% \subsection{角度$\alpha$の算出}
-% はじめに，作用点と点$o'$を通る直線(青点線)と$x''$軸の角度を$\phi$，
-% 作用点と点$o$を通る直線(赤点線)と$x$軸の角度を$\psi$とする．
-% また，作用点と点$o'$を通る直線(青点線)と作用点と点$o$を通る直線(赤点線)の角度を$\alpha$とするとき，
+\subsection{角度$\alpha$の算出}
+はじめに，作用点と点$o'$を通る直線(青点線)と$x''$軸の角度を$\theta$，
+作用点と点$o$を通る直線(赤点線)と$x$軸の角度を$\varphi$とする．
+また，作用点と点$o'$を通る直線(青点線)と作用点と点$o$を通る直線(赤点線)の角度を$\alpha$とするとき，
 
-% \begin{itemize}
-%     \item [$\blacksquare$] \textgt{作用点と点$o'$を通る直線及び点$o$を通る直線の角度 $\alpha$}
-%           \begin{eqnarray*}
-%             \alpha = \psi - \phi
-%           \end{eqnarray*}
-% \end{itemize}
 
-% ここで，供試体の半径を$r$として，
+\begin{itemize}
+    \item [$\blacksquare$] \textgt{作用点と点$o'$を通る直線及び点$o$を通る直線の角度 $\alpha$}
+          \begin{eqnarray*}
+            \alpha = \varphi - \theta
+          \end{eqnarray*}
+\end{itemize}
+
+ここで，供試体の半径を$r$として，正規座標系における作用点$F\left(x,y\right)$の座標は
+角度$\varphi$を用いて以下のように表される．
+
+\begin{itemize}
+    \item [$\blacksquare$] \textgt{正規座標系における作用点$F\left(x,y\right)$の座標}
+          \begin{eqnarray*}
+            x &=& r \cos \varphi\\
+            y &=& r \sin \varphi\\
+          \end{eqnarray*}
+\end{itemize}
+
+このとき，校正装置の座標系において，作用点$F\left(x, y\right)$は
+$\Delta x$，$Delta y$を用いて以下のように表される．
+
+\begin{itemize}
+    \item [$\blacksquare$] \textgt{校正装置の座標系における作用点$F\left(x'',y''\right)$の座標}
+          \begin{eqnarray*}
+            x'' &=& r \cos \varphi - \Delta x\\
+            y'' &=& r \sin \varphi - \Delta y\\
+          \end{eqnarray*}
+\end{itemize}
+
+これより，角度$\varphi$は以下のように求められる．
+
+\begin{itemize}
+    \item [$\blacksquare$] \textgt{作用点と点$o$を通る直線(赤点線)と$x$軸の角度を$\varphi$}
+          \begin{eqnarray*}
+            \varphi = \tan ^{-1} \left(\frac{y''}{x''}\right) 
+            = \tan ^{-1} \left(\frac{ r \sin \varphi - \Delta y}{ r \cos \varphi - \Delta x}\right) 
+          \end{eqnarray*}
+\end{itemize}
 
 \subsection{角度$\psi$の算出}
 
 \begin{itemize}
     \item [$\blacksquare$] \textgt{実際の作用力の角度 $\psi$}
           \begin{eqnarray*}
-            \psi = \phi + \left(-1\right) × \sin^{-1}\left(\frac{\Delta y \sin \phi - \Delta x \cos \phi}{r}\right)
+            \phi = \theta + \left(-1\right) × \sin^{-1}\left(\frac{\Delta y \sin \theta - \Delta x \cos \theta}{r}\right)
           \end{eqnarray*}
 \end{itemize}
 
