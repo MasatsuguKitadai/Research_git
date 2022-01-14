@@ -278,8 +278,8 @@ int interpolation(char date[], int split)
     fprintf(gp, "set output '%s'\n", filename_plot_1);
     // fprintf(gp, "set multiplot\n");
     fprintf(gp, "set key left top\n");
-    fprintf(gp, "set key font ',20'\n");
-    fprintf(gp, "set term pngcairo size 1280, 960 font ',24'\n");
+    fprintf(gp, "set key font ',22'\n");
+    fprintf(gp, "set term pngcairo size 1280, 960 font ',27'\n");
     // fprintf(gp, "set size ratio %.3f\n", size);
 
     fprintf(gp, "set lmargin screen 0.10\n");

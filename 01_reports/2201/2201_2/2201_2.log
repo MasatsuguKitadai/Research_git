@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.12.14)  13 JAN 2022 18:01
+This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.12.14)  14 JAN 2022 13:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -481,101 +481,127 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 167.
+(hyperref)                removing `math shift' on input line 172.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\psi' on input line 167.
+(hyperref)                removing `math shift' on input line 172.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 167.
+(hyperref)                removing `math shift' on input line 172.
 
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 172.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 172.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 172.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 172.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\varphi' on input line 172.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 172.
+
+LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
+(Font)              scaled to size 8.64893pt on input line 254.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 8.64893pt on input line 254.
+LaTeX Font Info:    Calculating math sizes for size <8.99994> on input line 257.
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <4.49997> not available
+(Font)              size <5> substituted on input line 257.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <4.49997> not available
+(Font)              size <5> substituted on input line 257.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <4.49997> not available
+(Font)              size <5> substituted on input line 257.
+
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 6.05421pt on input line 257.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 4.32446pt on input line 257.
+LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
+(Font)              scaled to size 8.64893pt on input line 260.
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 8.64893pt on input line 260.
+[2]
 File: ../graphes/offset_x=5_y=0/20/20_adjust-value.png Graphic file (type bmp)
 <../graphes/offset_x=5_y=0/20/20_adjust-value.png>
 File: ../graphes/offset_x=5_y=0/21/21-2_corrected_offset_drag.png Graphic file (type bmp)
 <../graphes/offset_x=5_y=0/21/21-2_corrected_offset_drag.png>
 File: ../graphes/offset_x=5_y=0/21/21-2_corrected_offset_lift.png Graphic file (type bmp)
 <../graphes/offset_x=5_y=0/21/21-2_corrected_offset_lift.png>
-[2]
 File: ../graphes/offset_x=5_y=5/20/20_adjust-value.png Graphic file (type bmp)
 <../graphes/offset_x=5_y=5/20/20_adjust-value.png>
 File: ../graphes/offset_x=5_y=5/21/21-2_corrected_offset_drag.png Graphic file (type bmp)
 <../graphes/offset_x=5_y=5/21/21-2_corrected_offset_drag.png>
 File: ../graphes/offset_x=5_y=5/21/21-2_corrected_offset_lift.png Graphic file (type bmp)
 <../graphes/offset_x=5_y=5/21/21-2_corrected_offset_lift.png>
+ [3]
 File: ../graphes/offset_x=10_y=5/20/20_adjust-value.png Graphic file (type bmp)
 <../graphes/offset_x=10_y=5/20/20_adjust-value.png>
 File: ../graphes/offset_x=10_y=5/21/21-2_corrected_offset_drag.png Graphic file (type bmp)
 <../graphes/offset_x=10_y=5/21/21-2_corrected_offset_drag.png>
 File: ../graphes/offset_x=10_y=5/21/21-2_corrected_offset_lift.png Graphic file (type bmp)
 <../graphes/offset_x=10_y=5/21/21-2_corrected_offset_lift.png>
- [3]
-LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 8.64893pt on input line 292.
-LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 8.64893pt on input line 292.
-LaTeX Font Info:    Calculating math sizes for size <8.99994> on input line 295.
-
-
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <4.49997> not available
-(Font)              size <5> substituted on input line 295.
-
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <4.49997> not available
-(Font)              size <5> substituted on input line 295.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <4.49997> not available
-(Font)              size <5> substituted on input line 295.
-
-LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 6.05421pt on input line 295.
-LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 4.32446pt on input line 295.
-LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 8.64893pt on input line 297.
-LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 8.64893pt on input line 297.
-File: ../graphes/simulation/21/21-1_summary_drag.png Graphic file (type bmp)
-<../graphes/simulation/21/21-1_summary_drag.png>
-File: ../graphes/simulation/21/21-1_summary_lift.png Graphic file (type bmp)
-<../graphes/simulation/21/21-1_summary_lift.png>
-File: ../graphes/simulation/09/09_summary-outputvoltage-net.png Graphic file (type bmp)
-<../graphes/simulation/09/09_summary-outputvoltage-net.png>
-[4]
+ [4]
+File: ../graphes/simulation_1/21/21-1_summary_drag.png Graphic file (type bmp)
+<../graphes/simulation_1/21/21-1_summary_drag.png>
+File: ../graphes/simulation_1/21/21-1_summary_lift.png Graphic file (type bmp)
+<../graphes/simulation_1/21/21-1_summary_lift.png>
+File: ../graphes/simulation_1/09/09_summary-outputvoltage-net.png Graphic file (type bmp)
+<../graphes/simulation_1/09/09_summary-outputvoltage-net.png>
 File: ../graphes/1-ex/21/21-1_summary_drag.png Graphic file (type bmp)
 <../graphes/1-ex/21/21-1_summary_drag.png>
 File: ../graphes/1-ex/21/21-1_summary_lift.png Graphic file (type bmp)
 <../graphes/1-ex/21/21-1_summary_lift.png>
 File: ../graphes/1-ex/09/09_summary-outputvoltage-net.png Graphic file (type bmp)
 <../graphes/1-ex/09/09_summary-outputvoltage-net.png>
-File: ../graphes/simulation/05/05_summary-outputvoltage.png Graphic file (type bmp)
-<../graphes/simulation/05/05_summary-outputvoltage.png>
+ [5]
+File: ../graphes/simulation_1/05/05_summary-outputvoltage.png Graphic file (type bmp)
+<../graphes/simulation_1/05/05_summary-outputvoltage.png>
 File: ../graphes/1-ex/05/05_summary-outputvoltage.png Graphic file (type bmp)
 <../graphes/1-ex/05/05_summary-outputvoltage.png>
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 380.
- [5]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 380.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 462.
+ [6
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 462.
  (./2201_2.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 380.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 380.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 462.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 462.
 Package rerunfilecheck Info: File `2201_2.out' has not changed.
-(rerunfilecheck)             Checksum: 89BD39E650732F8E0537E93E61F8726B;628.
+(rerunfilecheck)             Checksum: 79416D0E5C5E697CB5DD3D705D607225;727.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.50003pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 380.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 462.
  ) 
 Here is how much of TeX's memory you used:
  8498 strings out of 481768
- 126188 string characters out of 5933619
- 411043 words of memory out of 5000000
+ 126224 string characters out of 5933619
+ 410043 words of memory out of 5000000
  23717 multiletter control sequences out of 15000+600000
  546156 words of font info for 92 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
  34i,9n,36p,280b,438s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on 2201_2.dvi (5 pages, 21576 bytes).
+Output written on 2201_2.dvi (6 pages, 30136 bytes).

@@ -2,8 +2,9 @@
 \BOOKMARK [1][-]{section.2}{校正装置と実験装置の軸のオフセット}{}% 2
 \BOOKMARK [2][-]{subsection.2.1}{オフセットによる出力電圧への影響}{section.2}% 3
 \BOOKMARK [2][-]{subsection.2.2}{角度の算出}{section.2}% 4
-\BOOKMARK [2][-]{subsection.2.3}{角度の算出}{section.2}% 5
-\BOOKMARK [1][-]{section.3}{テストデータの作成}{}% 6
-\BOOKMARK [1][-]{section.4}{実験データとテストデータの比較}{}% 7
-\BOOKMARK [2][-]{subsection.4.1}{テストデータ}{section.4}% 8
-\BOOKMARK [2][-]{subsection.4.2}{実験結果}{section.4}% 9
+\BOOKMARK [2][-]{subsection.2.3}{作用力FのFr，Fへの分解}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.4}{出力電圧の傾きへの補正}{section.2}% 6
+\BOOKMARK [1][-]{section.3}{テストデータの作成}{}% 7
+\BOOKMARK [1][-]{section.4}{実験データとテストデータの比較}{}% 8
+\BOOKMARK [2][-]{subsection.4.1}{テストデータ}{section.4}% 9
+\BOOKMARK [2][-]{subsection.4.2}{実験結果}{section.4}% 10

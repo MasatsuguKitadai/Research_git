@@ -38,7 +38,7 @@ int waveadjuster(char date[])
     char filename_dat[100];
     char filename_dat_plot[100];
 
-    sprintf(filename_read_1, "../result/%s/csv/05-2_summary-average/05-2.csv", date);
+    sprintf(filename_read_1, "../result/%s/csv/09-4_summary-average/09-4.csv", date);
     sprintf(filename_read_2, "../wave-maker/csv/wave-value.csv");
     sprintf(filename_csv, "../result/%s/csv/20_adjust-value/20.csv", date);
     sprintf(filename_dat, "../result/%s/dat/20_adjust-value/20.dat", date);
@@ -177,8 +177,8 @@ int waveadjuster(char date[])
     fprintf(gp, "set output '%s'\n", filename_plot);
     // fprintf(gp, "set multiplot\n");
     fprintf(gp, "set key left top\n");
-    fprintf(gp, "set key font ',20'\n");
-    fprintf(gp, "set term pngcairo size 1280, 960 font ',24'\n");
+    fprintf(gp, "set key font ',22'\n");
+    fprintf(gp, "set term pngcairo size 1280, 960 font ',27'\n");
     // fprintf(gp, "set size ratio %.3f\n", size);
 
     fprintf(gp, "set lmargin screen 0.10\n");

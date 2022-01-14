@@ -122,15 +122,7 @@ lineskip=-0.5ex
 \subsection{角度$\alpha$の算出}
 はじめに，作用点と点$o'$を通る直線(青点線)と$x''$軸の角度を$\theta$，
 作用点と点$o$を通る直線(赤点線)と$x$軸の角度を$\varphi$とする．
-また，作用点と点$o'$を通る直線(青点線)と作用点と点$o$を通る直線(赤点線)の角度を$\alpha$とするとき，
-
-
-\begin{itemize}
-    \item [$\blacksquare$] \textgt{作用点と点$o'$を通る直線及び点$o$を通る直線の角度 $\alpha$}
-          \begin{eqnarray*}
-            \alpha = \varphi - \theta
-          \end{eqnarray*}
-\end{itemize}
+また，作用点と点$o'$を通る直線(青点線)と作用点と点$o$を通る直線(赤点線)の角度を$\alpha$とする．
 
 ここで，供試体の半径を$r$として，正規座標系における作用点$F\left(x,y\right)$の座標は
 角度$\varphi$を用いて以下のように表される．
@@ -143,8 +135,8 @@ lineskip=-0.5ex
           \end{eqnarray*}
 \end{itemize}
 
-このとき，校正装置の座標系において，作用点$F\left(x, y\right)$は
-$\Delta x$，$Delta y$を用いて以下のように表される．
+このとき，$x'' - y ''$座標系において，作用点$F\left(x, y\right)$は
+$\Delta x$，$\Delta y$を用いて以下のように表される．
 
 \begin{itemize}
     \item [$\blacksquare$] \textgt{校正装置の座標系における作用点$F\left(x'',y''\right)$の座標}
@@ -154,60 +146,128 @@ $\Delta x$，$Delta y$を用いて以下のように表される．
           \end{eqnarray*}
 \end{itemize}
 
-これより，角度$\varphi$は以下のように求められる．
+これより，角度$\theta$を用いて，供試体に実際に加わる力$F_r$の角度$\varphi$は以下のように求められる．
 
 \begin{itemize}
-    \item [$\blacksquare$] \textgt{作用点と点$o$を通る直線(赤点線)と$x$軸の角度を$\varphi$}
+    \item [$\blacksquare$] \textgt{作用点と点$o$を通る直線(赤点線)と$x$軸の角度$\varphi$}
           \begin{eqnarray*}
-            \varphi = \tan ^{-1} \left(\frac{y''}{x''}\right) 
-            = \tan ^{-1} \left(\frac{ r \sin \varphi - \Delta y}{ r \cos \varphi - \Delta x}\right) 
+            \tan \theta &=& \frac{y''}{x''} \\
+            &=& \frac{ r \sin \varphi - \Delta y}{ r \cos \varphi - \Delta x} \\
+            \varphi &=& \theta - \sin^{-1}\left(\frac{\Delta x \sin \theta - \Delta y \cos \theta}{r}\right)
           \end{eqnarray*}
 \end{itemize}
 
-\subsection{角度$\psi$の算出}
+したがって，角度$\alpha$は以下のように求められる．
 
 \begin{itemize}
-    \item [$\blacksquare$] \textgt{実際の作用力の角度 $\psi$}
+    \item [$\blacksquare$] \textgt{作用点と点$o'$を通る直線及び点$o$を通る直線の角度 $\alpha$}
           \begin{eqnarray*}
-            \phi = \theta + \left(-1\right) × \sin^{-1}\left(\frac{\Delta y \sin \theta - \Delta x \cos \theta}{r}\right)
+            \alpha &=& \theta - \varphi\\
+                    &=& \sin^{-1}\left(\frac{\Delta x \sin \theta - \Delta y \cos \theta}{r}\right)
           \end{eqnarray*}
 \end{itemize}
+
+\vskip \baselineskip
+
+\subsection{作用力$F$の$F_r$，$F_\varphi$への分解}
+
+供試体に加わる作用力$F$は供試体表面の接線方向の力$F_\varphi$，
+またその法線方向の力$F_r$に分けて考えることができる．
+ロードセルから与える作用力の角度$\theta$，算出した$\varphi$を用いると，それぞれ以下のように求められる．
+
+\begin{itemize}
+    \item [$\blacksquare$] \textgt{接線方向の力$F_\varphi$，接戦と法線方向の力$F_r$の算出}
+          \begin{eqnarray*}
+              F_\varphi &=& F \sin \alpha \\
+              F_r &=& F \cos \alpha
+          \end{eqnarray*}
+\end{itemize}
+
+供試体への作用力について抗力方向を$F_x$，揚力方向を$F_y$とすると
+角度$\varphi$を用いて以下のように求められる．
+
+\begin{itemize}
+    \item [$\blacksquare$] \textgt{供試体への作用力 $F_x$・$F_y$}
+          \begin{eqnarray*}
+              F_x &=& - F_r \cos \varphi\\
+              F_y &=& - F_r \sin \varphi
+          \end{eqnarray*}
+\end{itemize}
+
+また，接線方向成分$F_\varphi$について，供試体に対してトルク$T$として作用することとなる．
+
+\begin{itemize}
+    \item [$\blacksquare$] \textgt{供試体へ作用するトルク$T$}
+          \begin{eqnarray*}
+              T &=& F_\varphi \cdot r\\
+              &=& F \sin \alpha \cdot r
+          \end{eqnarray*}
+\end{itemize}
+
+ここで，このトルク$T$について，
+作用力測定装置に対する影響は十分に小さいと考えられることから無視できる．\\
 
 \newpage
 
-% \subsection{作用力の$F_r$，$F_\psi$への分解とトルク$T$の影響}
+\subsection{出力電圧の傾きへの補正}
 
-% 供試体に加わる作用力$F$は供試体表面の接線方向の力$F_\varphi$，
-% またその法線方向の力$F_r$に分けて考えることができる．
-% 算出した$\psi$を用いると，それぞれ以下のように求められる．
+正規座標系$x-y$座標系に対して，オフセットを持つ$x''-y''$座標系を
+基準にロードセルから与えられる作用力$F$はすべて供試体に伝わることはなく，
+接線方向の力$F_r$，その法線方向の力$F_\theta$に分解される．
+すなわち，測定時にはロードセルから作用力$F$を与えた際の出力電圧，
+ひずみセンサから作用力$F_r$を与えた際の出力電圧を得ているということになる．
+したがって，ひずみセンサの出力電圧の傾きを一様に評価することは不可能であり，
+実際の作用力$F_r$の角度$\alpha$を算出し補正を加える必要がある．\par
 
-% \begin{itemize}
-%     \item [$\blacksquare$] \textgt{接戦方向の力$F_\varphi$，接戦と法線方向の力$F_r$の算出}
-%           \begin{eqnarray*}
-%               F_\varphi &=& F \sin \psi \\
-%               F_r &=& F \cos \psi
-%           \end{eqnarray*}
-% \end{itemize}
-
-% 接戦方向成分$F_\varphi$について，供試体に対してトルク$T$として作用することとなる．
-
-% \begin{itemize}
-%     \item [$\blacksquare$] \textgt{供試体へ作用するトルク$T$}
-%           \begin{eqnarray*}
-%               T &=& F_\phi \cdot r\\
-%               &=& F \sin \psi \cdot r
-%           \end{eqnarray*}
-% \end{itemize}
-
-% ここで，このトルク$T$について，
-% 作用力測定装置に対する影響は十分に小さいと考えられることから無視できる．
-
-\section{テストデータの作成}
-オフセットを考慮したテストデータを複数条件で作成し，
-補正結果について比較した．
+ここで，ひずみセンサの出力電圧は抗力・揚力方向の
+それぞれが$F_r / F$倍されていると考えられることから，
+出力電圧の傾きについて抗力方向を$V_d$，
+揚力方向を$V_l$，その補正値をそれぞれ$V_x$，$V_y$とするとき
+角度$\alpha$を用いて以下のような関係が成立する．
 
 \begin{itemize}
-    \item [$\blacksquare$] \textgt{$\Delta x = 5 [\mathrm{mm}]$，$\Delta y = 5 [\mathrm{mm}]$ のとき}
+    \item [$\blacksquare$] \textgt{出力電圧の傾きの補正値$V'_x$・$V'_y$}
+          \begin{eqnarray*}
+            V'_x &=& \frac{F}{F_r} V_x = \frac{1}{\cos \alpha} V_x\\
+            V'_y &=& \frac{F}{F_r} V_y = \frac{1}{\cos \alpha} V_y
+          \end{eqnarray*}
+\end{itemize}
+
+\section{テストデータの作成}
+以上の理論より，オフセットを考慮したテストデータを作成する．
+抗力方向の出力電圧の傾きを$f_x$，揚力方向を$f_y$とすると，
+以下のように表される．
+
+\begin{itemize}
+    \item [$\blacksquare$] \textgt{オフセットを考慮したテストデータの理論式 $f_x$・$f_y$}
+          \begin{eqnarray*}
+            f_x(\alpha , \varphi ) &=& - A \cos \alpha \cos \varphi \\
+            f_y(\alpha , \varphi ) &=& - A \cos \alpha \sin \varphi
+          \end{eqnarray*}
+    \item [※] $A$は定数 (実験結果より，$A=0.64$と設定)
+\end{itemize}
+
+今回は，以下のTable 1についてテストデータを作成し，補正理論が有効か確かめた．
+その結果を以下のFig.3～fig.11に示す．
+
+\begin{table}[htbp]
+    \scalefont{0.9}
+    \begin{center}
+        \caption{Simulation conditions}
+        \begin{tabular}{|p{30mm}|p{20mm}|p{20mm}|}
+            \hline
+            \multicolumn{1}{|c|}{}          & \multicolumn{1}{|c|}{$\Delta x$ [mm]} & \multicolumn{1}{|c|}{$\Delta y$ [mm]}             \\ \hline
+            \multicolumn{1}{|c|}{\textgt{case(1)}}   & \multicolumn{1}{|c|}{5 } & \multicolumn{1}{|c|}{0}             \\ \hline
+            \multicolumn{1}{|c|}{\textgt{case(2)}}   & \multicolumn{1}{|c|}{5 } & \multicolumn{1}{|c|}{5}             \\ \hline
+            \multicolumn{1}{|c|}{\textgt{case(3)}}   & \multicolumn{1}{|c|}{10} & \multicolumn{1}{|c|}{5}             \\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+\newpage
+
+\begin{itemize}
+    \item [$\blacksquare$] \textgt{$\Delta x = 5 [\mathrm{mm}]$，$\Delta y = 0 [\mathrm{mm}]$ のとき}
 \end{itemize}
 
 \begin{figure}[htbp]
@@ -258,26 +318,41 @@ $\Delta x$，$Delta y$を用いて以下のように表される．
     \end{center}
 \end{figure}
 
-\newpage
-
-テストデータの補正適応結果から，理論曲線に重なるように補正することはできるが，
+補正適応結果から，理論曲線に重なるように補正することはできるが，
 それぞれのデータの間隔が変化していることがわかる．
-したがって，この補正結果に離散フーリエ変換を適用することは不可能であることがわかる．
+したがって，離散フーリエ変換を適用し軸の回転角を算出することは
+不可能となることがわかった．
+
+\newpage
 
 \section{実験データとテストデータの比較}
 
-変換理論を用いて，テストデータを作成した．
+以前の回転を考慮した補正理論及び，今回のオフセットを考慮した補正理論から
+軸の回転とオフセットの複合状態にある場合のテストデータを作成した．
+抗力方向の出力電圧の傾きを$g_x$，揚力方向を$g_y$，
+正規座標系$x-y$について$x$軸の回転角を$\theta_1$，y軸を$\theta_2$とすると以下のように表される．
+
+\begin{itemize}
+    \item [$\blacksquare$] \textgt{複合状態にある場合のテストデータの理論式 $g_x$・$g_y$}
+          \begin{eqnarray*}
+            g_x(\alpha , \varphi , \theta_1) &=& - B \cos \alpha \cos \left(\varphi - \theta_1\right) \\
+            g_y(\alpha , \varphi , \theta_2) &=& - B \cos \alpha \sin \left(\varphi - \theta_2\right)
+          \end{eqnarray*}
+    \item [※] $B$は定数 (実験結果より，$B=0.64$と設定)
+\end{itemize}
+
 その結果を以下のFig.12～Fig.14に示す．
-なお，テストデータ作成時にパラメータを以下のTable 1のように設定した．
+なお，テストデータ作成時にパラメータを以下のTable 2のように設定した．
 
 \begin{table}[htbp]
+    \scalefont{0.9}
     \begin{center}
-        \caption{Simulation conditions}
+        \caption{Simulation conditions (2)}
         \begin{tabular}{|p{30mm}|p{20mm}|p{30mm}|}
             \hline
-            \multicolumn{1}{|c|}{$x$軸の回転角}       & \multicolumn{1}{|c|}{$\theta_1$} & \multicolumn{1}{|c|}{7 [deg]}             \\ \hline
-            \multicolumn{1}{|c|}{$y$軸の回転角}       & \multicolumn{1}{|c|}{$\theta_2$} & \multicolumn{1}{|c|}{5 [deg]}             \\ \hline
-            \multicolumn{1}{|c|}{$x$軸のオフセット}   & \multicolumn{1}{|c|}{$\Delta x$} & \multicolumn{1}{|c|}{-1 [mm]}             \\ \hline
+            \multicolumn{1}{|c|}{$x$軸の回転角}       & \multicolumn{1}{|c|}{$\theta_1$} & \multicolumn{1}{|c|}{7.0 [deg]}             \\ \hline
+            \multicolumn{1}{|c|}{$y$軸の回転角}       & \multicolumn{1}{|c|}{$\theta_2$} & \multicolumn{1}{|c|}{5.0 [deg]}             \\ \hline
+            \multicolumn{1}{|c|}{$x$軸のオフセット}   & \multicolumn{1}{|c|}{$\Delta x$} & \multicolumn{1}{|c|}{-1.0 [mm]}             \\ \hline
             \multicolumn{1}{|c|}{$y$軸のオフセット}   & \multicolumn{1}{|c|}{$\Delta y$} & \multicolumn{1}{|c|}{1.3 [mm]}             \\ \hline
         \end{tabular}
     \end{center}
@@ -321,9 +396,9 @@ $\blacksquare$ \textgt{出力電圧の傾き(補正前)}
 \begin{figure}[htbp]
     \footnotesize
     \begin{center}
-        \includegraphics[width=86mm]{../graphes/simulation/21/21-1_summary_drag.png}
+        \includegraphics[width=86mm]{../graphes/simulation_1/21/21-1_summary_drag.png}
         \caption{Summary of gradient voltage (drag)}
-        \includegraphics[width=86mm]{../graphes/simulation/21/21-1_summary_lift.png}
+        \includegraphics[width=86mm]{../graphes/simulation_1/21/21-1_summary_lift.png}
         \caption{Summary of gradient voltage (lift)}
     \end{center}
 \end{figure}
@@ -333,7 +408,7 @@ $\blacksquare$ \textgt{正味出力電圧 (仮)}
 \begin{figure}[htbp]
     \footnotesize
     \begin{center}
-        \includegraphics[width=86mm]{../graphes/simulation/09/09_summary-outputvoltage-net.png}
+        \includegraphics[width=86mm]{../graphes/simulation_1/09/09_summary-outputvoltage-net.png}
         \caption{Summary of net voltage (Corrected)}
     \end{center}
 \end{figure}
@@ -366,12 +441,19 @@ $\blacksquare$ \textgt{正味出力電圧(仮)}
 
 \newpage
 
+Fig.17をみると，補正後の正味出力電圧は周期的な変化を示しているような印象を受ける．
+ここで，以下のFig.18をみると対応関係のあるFig.14と比較して
+補正前の波を打ち消す方向に補正が行われていることがわかる．
+すなわち，逆位相の波を足し合わせていると捉えることができる．
+したがって，同様の補正処理をFig.19に対して行った結果Fig.17のように変化したと考えると，
+妥当な結果であるといえる．\\
+
 $\blacksquare$ \textgt{正味出力電圧(仮) (補正前)}
 
 \begin{figure}[htbp]
     \footnotesize
     \begin{center}
-        \includegraphics[width=86mm]{../graphes/simulation/05/05_summary-outputvoltage.png}
+        \includegraphics[width=86mm]{../graphes/simulation_1/05/05_summary-outputvoltage.png}
         \caption{Test data}
         \includegraphics[width=86mm]{../graphes/1-ex/05/05_summary-outputvoltage.png}
         \caption{Experimental data}

@@ -58,7 +58,20 @@ int main()
     scanf("%lf", &y);
     printf("\n");
 
-    sprintf(dataname, "simulation_allrun");
+    if (theta_1 == 0 && theta_2 == 0)
+    {
+        sprintf(dataname, "rotation_tx=%.1f_tx=%.1f", theta_1, theta_2);
+    }
+
+    else if (x == 0 && y == 0)
+    {
+        sprintf(dataname, "offset_dx=%.1f_dx=%.1f", x, y);
+    }
+
+    else
+    {
+        sprintf(dataname, "simulation_tx=%.1f_tx=%.1f_dx=%.1f_dy=%.1f", theta_1, theta_2, x, y);
+    }
 
     /*****************************************************************************/
 

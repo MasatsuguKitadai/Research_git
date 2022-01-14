@@ -104,11 +104,6 @@ int main()
     // 10_dft-offset
     offset(dataname, split_angle);
 
-    // printf("\n---------------------------------------------------------------------------\n\n");
-
-    // 11_correct-offset
-    // correct_offset(dataname, split_angle, delta_X, delta_Y);
-
     printf("\n---------------------------------------------------------------------------\n\n");
 
     // 20_wave-adjuster
