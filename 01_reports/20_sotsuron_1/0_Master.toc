@@ -1,5 +1,0 @@
-\contentsline {section}{\numberline {1.}序論}{3}%
-\contentsline {section}{\numberline {2.}理論}{4}%
-\contentsline {section}{\numberline {3.}理論}{5}%
-\contentsline {section}{\gt 謝辞}{6}%
-\contentsline {subsection}{\gt 付録}{6}%
