@@ -34,14 +34,14 @@ $y''$軸は$y$軸から$x$方向に$\Delta y$だけオフセットを持つ状�
 
 \subsection{出力電圧勾配}
 
-作用力測定装置を評価にあたり，作用力測定装置に取り付けられた2組のひずみセンサ
+作用力測定装置の評価にあたり，作用力測定装置に取り付けられた2組のひずみセンサ
 および校正実験の際に作用力を与えるロードセルの出力電圧の対応関係を調べることで評価を行う．
 ここで，作用力測定装置において抗力方向のひずみセンサの出力電圧を$V_d$，揚力方向を$V_l$，
 ロードセルの出力電圧を$V$とするとき，抗力方向の出力電圧勾配を$v_d$，
 揚力方向の出力電圧勾配を$v_l$とすると以下のように表すことができる．
 
 \begin{align}
-    v_d = V_d / V\\
+    v_d = V_d / V \\
     v_l = V_l / V
 \end{align}
 
@@ -80,7 +80,7 @@ $\theta_1$，
 $\theta_2$は以下のように表される．
 
 \begin{align}
-    \theta_1 = \pi - \phi_1\\
+    \theta_1 = \pi - \phi_1 \\
     \theta_2 = \frac{\pi}{2} - \phi_2
 \end{align}
 \vskip \baselineskip
@@ -105,8 +105,8 @@ $\theta_2$は以下のように表される．
 以下のように表される．
 
 \begin{align}
-    f_{x1}\left(x\right) &= \tan \theta_1 \; x\\
-    f_{y1}\left(x\right) &= - \frac{1}{\tan \theta_2}\; x
+    f_{x1}\left(x\right) & = \tan \theta_1 \; x            \\
+    f_{y1}\left(x\right) & = - \frac{1}{\tan \theta_2}\; x
 \end{align}
 \vskip \baselineskip
 
@@ -121,8 +121,8 @@ $v_{x'1}$，$v_{y'1}$のベクトルの大きさ$|\boldsymbol{v_{x'1}}|$，$|\bo
 点$v_{x'1}$，$v_{y'1}$の座標は以下のように求めることができる．
 
 \begin{align}
-    v_{x'1} \left(x ,y\right) &= \left(|\boldsymbol{v_{x'1}}| \cos \theta_1,\; |\boldsymbol{v_{x'1}}| \sin \theta_2\right)\\
-    v_{y'1} \left(x ,y\right) &= \left( - |\boldsymbol{v_{y'1}}| \sin \theta_1,\; |\boldsymbol{v_{y'1}}| \cos \theta_2\right)
+    v_{x'1} \left(x ,y\right) & = \left(|\boldsymbol{v_{x'1}}| \cos \theta_1,\; |\boldsymbol{v_{x'1}}| \sin \theta_2\right)    \\
+    v_{y'1} \left(x ,y\right) & = \left( - |\boldsymbol{v_{y'1}}| \sin \theta_1,\; |\boldsymbol{v_{y'1}}| \cos \theta_2\right)
 \end{align}
 \vskip \baselineskip
 
@@ -131,8 +131,8 @@ $f_{x1}\left(x\right)$，$f_{y1}\left(x\right)$，点$v_{x'1}$，$v_{y'1}$の座
 それぞれ以下のように算出される．
 
 \begin{align}
-    f_{x2}\left(x\right) &= - \frac{1}{\tan \theta_1} \; x + \frac{|v_{x'}|}{\sin \theta_1}\\
-    f_{y2}\left(x\right) &= \tan \theta_2\; x + \frac{|v_{y'}|}{\cos \theta_2}
+    f_{x2}\left(x\right) & = - \frac{1}{\tan \theta_1} \; x + \frac{|v_{x'}|}{\sin \theta_1} \\
+    f_{y2}\left(x\right) & = \tan \theta_2\; x + \frac{|v_{y'}|}{\cos \theta_2}
 \end{align}
 \vskip \baselineskip
 
@@ -140,18 +140,18 @@ $f_{x1}\left(x\right)$，$f_{y1}\left(x\right)$，点$v_{x'1}$，$v_{y'1}$の座
 交点の座標$F_1\left(x,y\right)$を求めると以下のようになる．
 
 \begin{align}
-    x &= \frac{v_{x'1} \cos \theta_2 - v_{y'1} \sin \theta_1}{\sin \theta_1 \sin \theta_2 + \cos \theta_1 \cos \theta_2}\\          
-    y &= - \frac{1}{\tan \theta_1} \; \left(\frac{v_{x'1} \cos \theta_2 - v_{y'1} \sin \theta_1}{\sin \theta_1 \sin \theta_2 + \cos \theta_1 \cos \theta_2}\right) + \frac{|v_{x'1}|}{\sin \theta_1}\\
-    &= \tan \theta_2\; \left(\frac{v_{x'1} \cos \theta_2 - v_{y'1} \sin \theta_1}{\sin \theta_1 \sin \theta_2 + \cos \theta_1 \cos \theta_2}\right) + \frac{|v_{y'}|}{\cos \theta_2}
-\end{align}  
+    x & = \frac{v_{x'1} \cos \theta_2 - v_{y'1} \sin \theta_1}{\sin \theta_1 \sin \theta_2 + \cos \theta_1 \cos \theta_2}                                                                             \\
+    y & = - \frac{1}{\tan \theta_1} \; \left(\frac{v_{x'1} \cos \theta_2 - v_{y'1} \sin \theta_1}{\sin \theta_1 \sin \theta_2 + \cos \theta_1 \cos \theta_2}\right) + \frac{|v_{x'1}|}{\sin \theta_1} \\
+      & = \tan \theta_2\; \left(\frac{v_{x'1} \cos \theta_2 - v_{y'1} \sin \theta_1}{\sin \theta_1 \sin \theta_2 + \cos \theta_1 \cos \theta_2}\right) + \frac{|v_{y'}|}{\cos \theta_2}
+\end{align}
 \vskip \baselineskip
 
 したがって，正規座標系における$x$軸方向の出力電圧勾配$v_x$および揚力方向の$v_y$は，以下のように表される．
 
 \begin{align}
-    v_x &= \frac{v_{x'} \cos \theta_2 - v_{y'} \sin \theta_1}{\sin \theta_1 \sin \theta_2 + \cos \theta_1 \cos \theta_2}\\          
-    v_y &= - \frac{1}{\tan \theta_1} \; \left(\frac{v_{x'} \cos \theta_2 - v_{y'} \sin \theta_1}{\sin \theta_1 \sin \theta_2 + \cos \theta_1 \cos \theta_2}\right) + \frac{|v_{x'}|}{\sin \theta_1}\\
-    &= \tan \theta_2\; \left(\frac{v_{x'} \cos \theta_2 - v_{y'} \sin \theta_1}{\sin \theta_1 \sin \theta_2 + \cos \theta_1 \cos \theta_2}\right) + \frac{|v_{y'}|}{\cos \theta_2}
+    v_x & = \frac{v_{x'} \cos \theta_2 - v_{y'} \sin \theta_1}{\sin \theta_1 \sin \theta_2 + \cos \theta_1 \cos \theta_2}                                                                            \\
+    v_y & = - \frac{1}{\tan \theta_1} \; \left(\frac{v_{x'} \cos \theta_2 - v_{y'} \sin \theta_1}{\sin \theta_1 \sin \theta_2 + \cos \theta_1 \cos \theta_2}\right) + \frac{|v_{x'}|}{\sin \theta_1} \\
+        & = \tan \theta_2\; \left(\frac{v_{x'} \cos \theta_2 - v_{y'} \sin \theta_1}{\sin \theta_1 \sin \theta_2 + \cos \theta_1 \cos \theta_2}\right) + \frac{|v_{y'}|}{\cos \theta_2}
 \end{align}
 \vskip \baselineskip
 
@@ -167,8 +167,8 @@ $f_{x1}\left(x\right)$，$f_{y1}\left(x\right)$，点$v_{x'1}$，$v_{y'1}$の座
 として，テストデータを作成した．
 
 \begin{align}
-    v_{x\;\mathrm{test}} \left(i\right) &= \cos \left( \frac{\pi}{24}\; i + \pi - \theta_{1\;\mathrm{test}} \right)\\
-    v_{y\;\mathrm{test}} \left(i\right) &= \cos \left( \frac{\pi}{24}\; i + \frac{1}{2} \pi - \theta_{2\;\mathrm{test}} \right) \; \left(i = 1,2,3,\cdots\right)
+    v_{x\;\mathrm{test}} \left(i\right) & = \cos \left( \frac{\pi}{24}\; i + \pi - \theta_{1\;\mathrm{test}} \right)                                              \\
+    v_{y\;\mathrm{test}} \left(i\right) & = \cos \left( \frac{\pi}{24}\; i + \frac{1}{2} \pi - \theta_{2\;\mathrm{test}} \right) \; \left(i = 1,2,3,\cdots\right)
 \end{align}
 \vskip \baselineskip
 
@@ -179,24 +179,24 @@ $f_{x1}\left(x\right)$，$f_{y1}\left(x\right)$，点$v_{x'1}$，$v_{y'1}$の座
         \caption{Test data conditions}
         \begin{tabular}{|p{30mm}|p{20mm}|p{30}|}
             \hline
-            \multicolumn{1}{|c|}{} & \multicolumn{1}{|c|}{\textgt{$\theta_{1\mathrm{test}}$ [deg]}}   & \multicolumn{1}{|c|}{$\theta_{2\mathrm{test}}$ [deg]}                 \\ \hline
-            \multicolumn{1}{|c|}{Case 1}      & \multicolumn{1}{|c|}{15}  & \multicolumn{1}{|c|}{20} \\ \hline
-            \multicolumn{1}{|c|}{Case 2}      & \multicolumn{1}{|c|}{-15}  & \multicolumn{1}{|c|}{-20}       \\ \hline
-            \multicolumn{1}{|c|}{Case 3}      & \multicolumn{1}{|c|}{15}  & \multicolumn{1}{|c|}{-20}       \\ \hline
-            \multicolumn{1}{|c|}{Case 4}      & \multicolumn{1}{|c|}{90}  & \multicolumn{1}{|c|}{-90}       \\ \hline
+            \multicolumn{1}{|c|}{}       & \multicolumn{1}{|c|}{\textgt{$\theta_{1\mathrm{test}}$ [deg]}} & \multicolumn{1}{|c|}{$\theta_{2\mathrm{test}}$ [deg]} \\ \hline
+            \multicolumn{1}{|c|}{Case 1} & \multicolumn{1}{|c|}{15}                                       & \multicolumn{1}{|c|}{20}                              \\ \hline
+            \multicolumn{1}{|c|}{Case 2} & \multicolumn{1}{|c|}{-15}                                      & \multicolumn{1}{|c|}{-20}                             \\ \hline
+            \multicolumn{1}{|c|}{Case 3} & \multicolumn{1}{|c|}{15}                                       & \multicolumn{1}{|c|}{-20}                             \\ \hline
+            \multicolumn{1}{|c|}{Case 4} & \multicolumn{1}{|c|}{90}                                       & \multicolumn{1}{|c|}{-90}                             \\ \hline
         \end{tabular}
     \end{center}
 \end{table}
 
-
 このとき，作成されたテストデータの図および補正適用後の図は以下のFig.～Fig. のようになる．
 
+\newpage
 \begin{multicols}{2}
 
     \begin{figure_here}
-    \subsubsection{テストデータ : Case 1}
-    \vskip \baselineskip
-    $\theta_{1 \mathrm{test}} = 15 \; \mathrm{[deg]}$, $\theta_{2 \mathrm{test}} = 20 \; \mathrm{[deg]}$
+        \subsubsection{テストデータ : Case 1}
+        \vskip \baselineskip
+        $\theta_{1 \mathrm{test}} = 15 \; \mathrm{[deg]}$, $\theta_{2 \mathrm{test}} = 20 \; \mathrm{[deg]}$
         \footnotesize
         \begin{center}
             \includegraphics[width=65mm]{../../02_workspace/result/rotation_tx=15.0_tx=20.0/plot/20/20_adjust-value.png}
@@ -223,7 +223,7 @@ $f_{x1}\left(x\right)$，$f_{y1}\left(x\right)$，点$v_{x'1}$，$v_{y'1}$の座
         \end{center}
     \end{figure_here}
 
-\newpage
+    \newpage
 
     \begin{figure_here}
         \subsubsection{テストデータ : Case 3}

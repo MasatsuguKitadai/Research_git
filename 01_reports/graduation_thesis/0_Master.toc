@@ -11,7 +11,7 @@
 \contentsline {subsection}{\numberline {3.4}回転角$\theta _{x1}$，$\theta _{y1}$の算出}{7}%
 \contentsline {subsection}{\numberline {3.5}出力電圧勾配の座標変換}{8}%
 \contentsline {subsection}{\numberline {3.6}補正理論のテストデータへの適用 (1)}{10}%
-\contentsline {subsubsection}{\numberline {3.6.1}テストデータ : Case 1}{10}%
+\contentsline {subsubsection}{\numberline {3.6.1}テストデータ : Case 1}{11}%
 \contentsline {subsubsection}{\numberline {3.6.2}テストデータ : Case 2}{11}%
 \contentsline {subsubsection}{\numberline {3.6.3}テストデータ : Case 3}{12}%
 \contentsline {subsubsection}{\numberline {3.6.4}テストデータ : Case 2}{12}%
