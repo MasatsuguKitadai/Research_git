@@ -98,8 +98,8 @@ int simulater(char date[], int split, int delta_x, int delta_y, double Theta_1, 
         alpha[i] = -1 * asin((delta_y * sin(phi[i]) - delta_x * cos(phi[i])) / r);
         psi[i] = phi[i] - alpha[i];
 
-        wave_drag[i] = -0.64 * cos(alpha[i]) * cos(psi[i] - theta[0]);
-        wave_lift[i] = -0.64 * cos(alpha[i]) * sin(psi[i] - theta[1]);
+        wave_drag[i] = -1 * cos(alpha[i]) * cos(psi[i] - theta[0]);
+        wave_lift[i] = -1 * cos(alpha[i]) * sin(psi[i] - theta[1]);
         wave_net[i] = sqrt(wave_drag[i] * wave_drag[i] + wave_lift[i] * wave_lift[i]);
     }
 
@@ -176,8 +176,8 @@ int simulater(char date[], int split, int delta_x, int delta_y, double Theta_1, 
     double interval = 30;
 
     // range y
-    double y_min = -0.8;
-    double y_max = 0.8;
+    double y_min = -1.2;
+    double y_max = 1.2;
 
     // label
     const char *xxlabel = "Angle [deg]";
@@ -241,7 +241,7 @@ int simulater(char date[], int split, int delta_x, int delta_y, double Theta_1, 
     fprintf(gp, "set xrange [%.3f:%.3f]\n", x_min, x_max);
     fprintf(gp, "set xlabel '%s'offset 0.0,0\n", xxlabel);
     fprintf(gp, "set xtics %.3f\n", interval);
-    fprintf(gp, "set yrange [0.6:0.7]\n");
+    fprintf(gp, "set yrange [0.8:1.2]\n");
     fprintf(gp, "set ylabel '%s'offset 1,0.0\n", yylabel_2);
     fprintf(gp, "set ytics 0.02\n");
     fprintf(gp, "set title '%s'\n", label_2);

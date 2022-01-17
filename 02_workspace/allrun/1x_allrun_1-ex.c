@@ -37,17 +37,17 @@ int main()
     int split_angle = 24;
     double x, y;
 
-    //  x = 1;
-    //  y = 1.3;
+    x = 0.1;
+    y = 0.13;
 
     /*****************************************************************************/
 
-    printf("[Parameters]\n");
-    printf("delta x = ");
-    scanf("%lf", &x);
-    printf("delta y = ");
-    scanf("%lf", &y);
-    printf("\n");
+    // printf("[Parameters]\n");
+    // printf("delta x = ");
+    // scanf("%lf", &x);
+    // printf("delta y = ");
+    // scanf("%lf", &y);
+    // printf("\n");
 
     // ディレクトリの作成
     char directoryname[100];

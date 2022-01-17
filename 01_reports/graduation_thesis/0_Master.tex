@@ -7,6 +7,12 @@
 \usepackage[dvipdfmx]{graphicx}
 \usepackage{here} %画像位置
 
+\usepackage{multicol}
+
+\makeatletter
+\newenvironment{table_here}{\def\@captype{table}}{}
+\newenvironment{figure_here}{\def\@captype{figure}}{}
+
 \title{\LARGE ひずみセンサを用いた}
 \secondtitle{\LARGE 揚抗力同時測定法の性能に関する一考察}
 \author{tanaka}

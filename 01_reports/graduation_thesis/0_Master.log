@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.12.14)  14 JAN 2022 19:37
+This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.12.14)  17 JAN 2022 20:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -207,136 +207,236 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \float@box=\box64
 \@float@everytoks=\toks23
 \@floatcapt=\box65
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
+\c@tracingmulticols=\count287
+\mult@box=\box66
+\multicol@leftmargin=\dimen167
+\c@unbalance=\count288
+\c@collectmore=\count289
+\doublecol@number=\count290
+\multicoltolerance=\count291
+\multicolpretolerance=\count292
+\full@width=\dimen168
+\page@free=\dimen169
+\premulticols=\dimen170
+\postmulticols=\dimen171
+\multicolsep=\skip84
+\multicolbaselineskip=\skip85
+\partial@page=\box67
+\last@line=\box68
+\maxbalancingoverflow=\dimen172
+\mult@rightbox=\box69
+\mult@grightbox=\box70
+\mult@gfirstbox=\box71
+\mult@firstbox=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\@tempa=\box98
+\@tempa=\box99
+\@tempa=\box100
+\@tempa=\box101
+\@tempa=\box102
+\@tempa=\box103
+\@tempa=\box104
+\@tempa=\box105
+\@tempa=\box106
+\@tempa=\box107
+\@tempa=\box108
+\@tempa=\box109
+\c@minrows=\count293
+\c@columnbadness=\count294
+\c@finalcolumnbadness=\count295
+\last@try=\dimen173
+\multicolovershoot=\dimen174
+\multicolundershoot=\dimen175
+\mult@nat@firstbox=\box110
+\colbreak@box=\box111
+\mc@col@check@num=\count296
 ) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
 File: l3backend-dvips.def 2020-02-03 L3 backend support: dvips
-\l__pdf_internal_box=\box66
-\g__pdf_backend_object_int=\count287
-\l__pdf_backend_content_box=\box67
-\l__pdf_backend_model_box=\box68
-\g__pdf_backend_annotation_int=\count288
-\g__pdf_backend_link_int=\count289
-\g__pdf_backend_link_sf_int=\count290
+\l__pdf_internal_box=\box112
+\g__pdf_backend_object_int=\count297
+\l__pdf_backend_content_box=\box113
+\l__pdf_backend_model_box=\box114
+\g__pdf_backend_annotation_int=\count298
+\g__pdf_backend_link_int=\count299
+\g__pdf_backend_link_sf_int=\count300
 ) (./0_Master.aux)
 \openout1 = `0_Master.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
  (./Section/1_Introduction.tex
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 16.60605pt on input line 1.
+(Font)              scaled to size 16.60605pt on input line 2.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 16.60605pt on input line 1.
+(Font)              scaled to size 16.60605pt on input line 2.
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 1.
+(Font)              scaled to size 11.53198pt on input line 2.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 1.
+(Font)              scaled to size 11.53198pt on input line 2.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 5.76599pt on input line 1.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 1.
+(Font)              scaled to size 5.76599pt on input line 2.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 1.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 23.90964pt on input line 1.
+(Font)              scaled to size 23.90964pt on input line 2.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 23.90964pt on input line 1.
+(Font)              scaled to size 23.90964pt on input line 2.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 23.90964pt on input line 1.
+(Font)              scaled to size 23.90964pt on input line 2.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 23.90964pt on input line 1.
+(Font)              scaled to size 23.90964pt on input line 2.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 16.60605pt on input line 1.
+(Font)              scaled to size 16.60605pt on input line 2.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 16.60605pt on input line 1.
+(Font)              scaled to size 16.60605pt on input line 2.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 1.
+(Font)              scaled to size 6.72699pt on input line 2.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 4.805pt on input line 1.
+(Font)              scaled to size 4.805pt on input line 2.
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 1.
+(Font)              scaled to size 13.83836pt on input line 2.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 1.
+(Font)              scaled to size 13.83836pt on input line 2.
 LaTeX Font Info:    Font shape `JT1/mc/b/n' in size <17.28> not available
-(Font)              Font shape `JT1/mc/bx/n' tried instead on input line 1.
+(Font)              Font shape `JT1/mc/bx/n' tried instead on input line 2.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <17.28> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 1.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 2.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 16.60605pt on input line 1.
+(Font)              scaled to size 16.60605pt on input line 2.
 LaTeX Font Info:    Font shape `JY1/mc/b/n' in size <17.28> not available
-(Font)              Font shape `JY1/mc/bx/n' tried instead on input line 1.
+(Font)              Font shape `JY1/mc/bx/n' tried instead on input line 2.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <17.28> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 1.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 2.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 16.60605pt on input line 1.
+(Font)              scaled to size 16.60605pt on input line 2.
  [1
 
 ]
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 2.
+(Font)              scaled to size 13.83836pt on input line 3.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 2.
+(Font)              scaled to size 13.83836pt on input line 3.
  [1]
 LaTeX Font Info:    Font shape `JT1/mc/b/n' in size <14.4> not available
-(Font)              Font shape `JT1/mc/bx/n' tried instead on input line 4.
+(Font)              Font shape `JT1/mc/bx/n' tried instead on input line 5.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 4.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 5.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 4.
+(Font)              scaled to size 13.83836pt on input line 5.
 LaTeX Font Info:    Font shape `JY1/mc/b/n' in size <14.4> not available
-(Font)              Font shape `JY1/mc/bx/n' tried instead on input line 4.
+(Font)              Font shape `JY1/mc/bx/n' tried instead on input line 5.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 4.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 5.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 4.
+(Font)              scaled to size 13.83836pt on input line 5.
  (./0_Master.toc
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 25.
+(Font)              scaled to size 9.60999pt on input line 32.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 25.
+(Font)              scaled to size 9.60999pt on input line 32.
 )
 \tf@toc=\write3
 \openout3 = `0_Master.toc'.
 
  [2]
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 40.
+(Font)              scaled to size 6.72699pt on input line 41.
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 4.805pt on input line 40.
+(Font)              scaled to size 4.805pt on input line 41.
  [3]) [4] (./Section/2_Experimental_device.tex
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
 (Font)              scaled to size 11.53198pt on input line 3.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 11.53198pt on input line 3.
-) [5] (./Section/3_Correction_theory.tex [6] [7]) [8] (./Section/4_Basic_experiment_(1).tex) [9] (./Section/5_Basic_experiment_(2).tex) [10] (./Section/6_Applied_experiment.tex) [11]
+) [5] (./Section/3_Correction_theory.tex [6] [7] [8] [9]
+LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
+(Font)              scaled to size 8.64899pt on input line 179.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 8.64899pt on input line 179.
+File: ../../02_workspace/result/rotation_tx=15.0_tx=20.0/plot/20/20_adjust-value.png Graphic file (type bmp)
+<../../02_workspace/result/rotation_tx=15.0_tx=20.0/plot/20/20_adjust-value.png>
+File: ../../02_workspace/result/rotation_tx=15.0_tx=20.0/plot/21/21-4_corrected_angle_drag.png Graphic file (type bmp)
+<../../02_workspace/result/rotation_tx=15.0_tx=20.0/plot/21/21-4_corrected_angle_drag.png>
+File: ../../02_workspace/result/rotation_tx=15.0_tx=20.0/plot/21/21-4_corrected_angle_lift.png Graphic file (type bmp)
+<../../02_workspace/result/rotation_tx=15.0_tx=20.0/plot/21/21-4_corrected_angle_lift.png>
+ [10]
+File: ../../02_workspace/result/rotation_tx=-15.0_tx=-20.0/plot/20/20_adjust-value.png Graphic file (type bmp)
+<../../02_workspace/result/rotation_tx=-15.0_tx=-20.0/plot/20/20_adjust-value.png>
+File: ../../02_workspace/result/rotation_tx=-15.0_tx=-20.0/plot/21/21-4_corrected_angle_drag.png Graphic file (type bmp)
+<../../02_workspace/result/rotation_tx=-15.0_tx=-20.0/plot/21/21-4_corrected_angle_drag.png>
+File: ../../02_workspace/result/rotation_tx=-15.0_tx=-20.0/plot/21/21-4_corrected_angle_lift.png Graphic file (type bmp)
+<../../02_workspace/result/rotation_tx=-15.0_tx=-20.0/plot/21/21-4_corrected_angle_lift.png>
+ [11]
+File: ../../02_workspace/result/rotation_tx=15.0_tx=-20.0/plot/20/20_adjust-value.png Graphic file (type bmp)
+<../../02_workspace/result/rotation_tx=15.0_tx=-20.0/plot/20/20_adjust-value.png>
+File: ../../02_workspace/result/rotation_tx=15.0_tx=-20.0/plot/21/21-4_corrected_angle_drag.png Graphic file (type bmp)
+<../../02_workspace/result/rotation_tx=15.0_tx=-20.0/plot/21/21-4_corrected_angle_drag.png>
+File: ../../02_workspace/result/rotation_tx=15.0_tx=-20.0/plot/21/21-4_corrected_angle_lift.png Graphic file (type bmp)
+<../../02_workspace/result/rotation_tx=15.0_tx=-20.0/plot/21/21-4_corrected_angle_lift.png>
+File: ../../02_workspace/result/rotation_tx=90.0_tx=-90.0/plot/20/20_adjust-value.png Graphic file (type bmp)
+<../../02_workspace/result/rotation_tx=90.0_tx=-90.0/plot/20/20_adjust-value.png>
+File: ../../02_workspace/result/rotation_tx=90.0_tx=-90.0/plot/21/21-4_corrected_angle_drag.png Graphic file (type bmp)
+<../../02_workspace/result/rotation_tx=90.0_tx=-90.0/plot/21/21-4_corrected_angle_drag.png>
+File: ../../02_workspace/result/rotation_tx=90.0_tx=-90.0/plot/21/21-4_corrected_angle_lift.png Graphic file (type bmp)
+<../../02_workspace/result/rotation_tx=90.0_tx=-90.0/plot/21/21-4_corrected_angle_lift.png>
+ [12]) [13] (./Section/4_Basic_experiment_(1).tex) [14] (./Section/5_Basic_experiment_(2).tex) [15] (./Section/6_Applied_experiment.tex) [16]
 No file 0_Master.bbl.
-[12] (./0_Master.aux) ) 
+[17] (./0_Master.aux) ) 
 Here is how much of TeX's memory you used:
- 2621 strings out of 481768
- 34088 string characters out of 5933619
- 286521 words of memory out of 5000000
- 18001 multiletter control sequences out of 15000+600000
- 550231 words of font info for 110 fonts, out of 8000000 for 9000
+ 2827 strings out of 481768
+ 40750 string characters out of 5933619
+ 291431 words of memory out of 5000000
+ 18172 multiletter control sequences out of 15000+600000
+ 553873 words of font info for 123 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 31i,10n,31p,273b,367s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 31i,14n,31p,340b,636s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on 0_Master.dvi (13 pages, 23812 bytes).
+Output written on 0_Master.dvi (18 pages, 43192 bytes).

@@ -6,13 +6,8 @@ DATE    :
 
 #include <sys/stat.h>
 #include "../programs/00_dft.c"
-#include "../programs/01_reverse.c"
-#include "../programs/02_drift.c"
-#include "../programs/03_average.c"
-#include "../programs/04_linear.c"
-#include "../programs/05_summary.c"
 #include "../programs/06_evaluation.c"
-#include "../programs/20_wave-adjuster.c"
+#include "../programs/20-2_wave-adjuster_sim.c"
 
 /*****************************************************************************/
 
@@ -26,7 +21,7 @@ DATE    :
 #include "../programs/10-2_dft-offset.c"
 #include "../programs/11_correct-offset.c"
 #include "../programs/12_interpolation.c"
-#include "../programs/21-2_dft_wave-adjuster_ver2.c"
+#include "../programs/21-3_sim_wave-adjuster_ver2.c"
 #include "../programs/27-3_wave_dft_drag.c"
 #include "../programs/27-4_wave_dft_lift.c"
 #include "../programs/28-3_wave_dft_phase-angle_drag.c"
@@ -60,12 +55,12 @@ int main()
 
     if (theta_1 == 0 && theta_2 == 0)
     {
-        sprintf(dataname, "rotation_tx=%.1f_tx=%.1f", theta_1, theta_2);
+        sprintf(dataname, "offset_dx=%.1f_dx=%.1f", x, y);
     }
 
     else if (x == 0 && y == 0)
     {
-        sprintf(dataname, "offset_dx=%.1f_dx=%.1f", x, y);
+        sprintf(dataname, "rotation_tx=%.1f_tx=%.1f", theta_1, theta_2);
     }
 
     else
