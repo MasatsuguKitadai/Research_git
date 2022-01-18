@@ -51,15 +51,15 @@ $y''$軸は$y$軸から$x$方向に$\Delta y$だけオフセットを持つ状�
 ここでは，座標系のオフセットはない($\Delta x = 0$，$\Delta y = 0$)として考える．
 上述の通り正規座標系と座標系[1]について，以下のFig.のように回転角$\theta_{x1}$，$\theta_{y1}$を持つ．
 ここで，作用力$F_1$を与えるとそれぞれの方向に作用力$F_{x1}$，$F_{y1}$，$F_{x'1}$，$F_{y'1}$が加わる．
-このとき，作用力測定装置から得られる電圧$V_{d1}$，$V_{l1}$は作用力$F_{x'1}$，$F_{y'1}$に起因するものである．
-また，得られた出力電圧$V_{d1}$，$V_{l1}$および$V_{x'1}$，$V_{y'1}$から，ロードセルの出力電圧$V_1$を用いて
-出力電圧勾配$v_{d1}$，$v_{l1}$および$v_{x'1}$，$v_{y'1}$をm止めることができる．
+このとき，作用力測定装置から得られる電圧$V_{x'1}$，$V_{y'1}$は作用力$F_{x'1}$，$F_{y'1}$に起因するものである．
+また，得られた出力電圧$V_{x'1}$，$V_{y'1}$から，ロードセルの出力電圧$V_1$を用いて
+出力電圧勾配$v_{x'1}$，$v_{y'1}$を求めることができる．
 したがって，正規座標系と座標系[1]の関係について，
 $v_{x1}$と$v_{x'1}$および$v_{y1}$と$v_{y'1}$の関係を明らかにすれば良い，
 
-\subsection{回転角$\theta_{x1}$，$\theta_{y1}$の算出}
+\subsubsection{回転角$\theta_{x1}$，$\theta_{y1}$の算出}
 はじめに，回転角$\theta_{x1}$，$\theta_{y1}$を算出する．
-理論式における$v_{x\;Theory}$及び$v_{y\;Theory}$は正弦波とその位相差で表すことができる．
+理論式における$v_{x\;\mathrm{theory}}$及び$v_{y\;\mathrm{theory}}$は正弦波とその位相差で表すことができる．
 したがって，校正実験結果の各角度の出力電圧勾配においても同様の正弦波と
 その位相差で表すことが可能であると予想することができる．
 このとき，離散フーリエ変換を適用し，
@@ -73,10 +73,10 @@ $v_{x1}$と$v_{x'1}$および$v_{y1}$と$v_{y'1}$の関係を明らかにすれ�
 
 抗力方向の結果から得られた位相角を$\phi_1$，揚力方向から得られた位相角を$\phi_2$と
 するとき，抗力方向の出力電圧勾配$v_d$と
-正規座標系における$x$軸方向の出力電圧勾配の理論値$v_{x\; Theory}$との位相差
+正規座標系における$x$軸方向の出力電圧勾配の理論値$v_{x\;\mathrm{theory}}$との位相差
 $\theta_1$，
 揚力方向の出力電圧勾配$v_l$と
-正規座標系における$y$軸方向の出力電圧勾配の理論値$v_{y\; Theory}$との位相差
+正規座標系における$y$軸方向の出力電圧勾配の理論値$v_{y\;\mathrm{theory}}$との位相差
 $\theta_2$は以下のように表される．
 
 \begin{align}
@@ -94,7 +94,7 @@ $\theta_2$は以下のように表される．
     \phi_s = \left| \phi_1 - \phi_2 \right|
 \end{align}
 
-\subsection{出力電圧勾配の座標変換}
+\subsubsection{出力電圧勾配の座標変換}
 位相角$\theta_1$，$\theta_2$が求められたことから，
 それらを用いて出力電圧勾配の座標変換を行う．
 ここで，座標系[1]の$x'$軸，$y'$軸を
@@ -141,17 +141,17 @@ $f_{x1}\left(x\right)$，$f_{y1}\left(x\right)$，点$v_{x'1}$，$v_{y'1}$の座
 
 \begin{align}
     x & = \frac{v_{x'1} \cos \theta_2 - v_{y'1} \sin \theta_1}{\sin \theta_1 \sin \theta_2 + \cos \theta_1 \cos \theta_2}                                                                             \\
-    y & = - \frac{1}{\tan \theta_1} \; \left(\frac{v_{x'1} \cos \theta_2 - v_{y'1} \sin \theta_1}{\sin \theta_1 \sin \theta_2 + \cos \theta_1 \cos \theta_2}\right) + \frac{|v_{x'1}|}{\sin \theta_1} \\
-      & = \tan \theta_2\; \left(\frac{v_{x'1} \cos \theta_2 - v_{y'1} \sin \theta_1}{\sin \theta_1 \sin \theta_2 + \cos \theta_1 \cos \theta_2}\right) + \frac{|v_{y'}|}{\cos \theta_2}
+    y & = - \frac{1}{\tan \theta_1} \; \left(\frac{v_{x'1} \cos \theta_2 - v_{y'1} \sin \theta_1}{\sin \theta_1 \sin \theta_2 + \cos \theta_1 \cos \theta_2}\right) + \frac{|v_{x'1}|}{\sin \theta_1} \notag  \\
+    & = \tan \theta_2\; \left(\frac{v_{x'1} \cos \theta_2 - v_{y'1} \sin \theta_1}{\sin \theta_1 \sin \theta_2 + \cos \theta_1 \cos \theta_2}\right) + \frac{|v_{y'1}|}{\cos \theta_2}
 \end{align}
 \vskip \baselineskip
 
 したがって，正規座標系における$x$軸方向の出力電圧勾配$v_x$および揚力方向の$v_y$は，以下のように表される．
 
 \begin{align}
-    v_x & = \frac{v_{x'} \cos \theta_2 - v_{y'} \sin \theta_1}{\sin \theta_1 \sin \theta_2 + \cos \theta_1 \cos \theta_2}                                                                            \\
-    v_y & = - \frac{1}{\tan \theta_1} \; \left(\frac{v_{x'} \cos \theta_2 - v_{y'} \sin \theta_1}{\sin \theta_1 \sin \theta_2 + \cos \theta_1 \cos \theta_2}\right) + \frac{|v_{x'}|}{\sin \theta_1} \\
-        & = \tan \theta_2\; \left(\frac{v_{x'} \cos \theta_2 - v_{y'} \sin \theta_1}{\sin \theta_1 \sin \theta_2 + \cos \theta_1 \cos \theta_2}\right) + \frac{|v_{y'}|}{\cos \theta_2}
+    v_x & = \frac{v_{x'1} \cos \theta_2 - v_{y'1} \sin \theta_1}{\sin \theta_1 \sin \theta_2 + \cos \theta_1 \cos \theta_2}                                                                             \\
+    v_y & = - \frac{1}{\tan \theta_1} \; \left(\frac{v_{x'1} \cos \theta_2 - v_{y'1} \sin \theta_1}{\sin \theta_1 \sin \theta_2 + \cos \theta_1 \cos \theta_2}\right) + \frac{|v_{x'1}|}{\sin \theta_1} \notag  \\
+        & = \tan \theta_2\; \left(\frac{v_{x'1} \cos \theta_2 - v_{y'1} \sin \theta_1}{\sin \theta_1 \sin \theta_2 + \cos \theta_1 \cos \theta_2}\right) + \frac{|v_{y'1}|}{\cos \theta_2}
 \end{align}
 \vskip \baselineskip
 
@@ -159,16 +159,16 @@ $f_{x1}\left(x\right)$，$f_{y1}\left(x\right)$，点$v_{x'1}$，$v_{y'1}$の座
 
 \newpage
 
-\subsection{補正理論のテストデータへの適用 (1)}
+\subsubsection{補正理論のテストデータへの適用 (1)}
 
 上記の座標系の回転における補正理論の有用性を確かめるために，
 以下の式から，任意の回転角$\theta_{1\;\mathrm{test}}$，$\theta_{2\; \mathrm{test}}$を与えて
-出力電圧勾配について抗力方向を$v_{x\;\mathrm{test}}$，揚力方向を$v_{y\;\mathrm{test}}$
-として，テストデータを作成した．
+座標系[1]の出力電圧勾配について，$x'$軸方向を$v_{x'\;\mathrm{test}}$，
+$y'$軸方向を$v_{y'\;\mathrm{test}}$としてテストデータを作成した．
 
 \begin{align}
-    v_{x\;\mathrm{test}} \left(i\right) & = \cos \left( \frac{\pi}{24}\; i + \pi - \theta_{1\;\mathrm{test}} \right)                                              \\
-    v_{y\;\mathrm{test}} \left(i\right) & = \cos \left( \frac{\pi}{24}\; i + \frac{1}{2} \pi - \theta_{2\;\mathrm{test}} \right) \; \left(i = 1,2,3,\cdots\right)
+    v_{x'\;\mathrm{test}} \left(i\right) & = \cos \left( \frac{\pi}{24}\; i + \pi - \theta_{1\;\mathrm{test}} \right)                                              \\
+    v_{y'\;\mathrm{test}} \left(i\right) & = \cos \left( \frac{\pi}{24}\; i + \frac{1}{2} \pi - \theta_{2\;\mathrm{test}} \right) \; \left(i = 1,2,3,\cdots\right)
 \end{align}
 \vskip \baselineskip
 
@@ -177,37 +177,145 @@ $f_{x1}\left(x\right)$，$f_{y1}\left(x\right)$，点$v_{x'1}$，$v_{y'1}$の座
 \begin{table}[htbp]
     \begin{center}
         \caption{Test data conditions}
-        \begin{tabular}{|p{30mm}|p{20mm}|p{30}|}
+        \begin{tabular}{|p{30mm}|p{20mm}|p{20mm}|}
             \hline
-            \multicolumn{1}{|c|}{}       & \multicolumn{1}{|c|}{\textgt{$\theta_{1\mathrm{test}}$ [deg]}} & \multicolumn{1}{|c|}{$\theta_{2\mathrm{test}}$ [deg]} \\ \hline
+            \multicolumn{1}{|c|}{}       & \multicolumn{1}{|c|}{$\theta_{1\;\mathrm{test}}$ [deg]} & \multicolumn{1}{|c|}{$\theta_{2\;\mathrm{test}}$ [deg]} \\ \hline
             \multicolumn{1}{|c|}{Case 1} & \multicolumn{1}{|c|}{15}                                       & \multicolumn{1}{|c|}{20}                              \\ \hline
             \multicolumn{1}{|c|}{Case 2} & \multicolumn{1}{|c|}{-15}                                      & \multicolumn{1}{|c|}{-20}                             \\ \hline
-            \multicolumn{1}{|c|}{Case 3} & \multicolumn{1}{|c|}{15}                                       & \multicolumn{1}{|c|}{-20}                             \\ \hline
-            \multicolumn{1}{|c|}{Case 4} & \multicolumn{1}{|c|}{90}                                       & \multicolumn{1}{|c|}{-90}                             \\ \hline
+            \multicolumn{1}{|c|}{Case 3} & \multicolumn{1}{|c|}{90}                                       & \multicolumn{1}{|c|}{-90}                             \\ \hline
         \end{tabular}
     \end{center}
 \end{table}
 
-このとき，作成されたテストデータの図および補正適用後の図は以下のFig.～Fig. のようになる．
+ここで，Case 1 に対する座標系の回転おける補正理論の適用過程について説明する．
+はじめに，作成したテストデータは以下のようになる．
 
-\newpage
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=95mm]{../../02_workspace/result/rotation_tx=15.0_tx=20.0/plot/20/20_adjust-value.png}
+        \caption{Simulated data [Case 1]}
+    \end{center}
+\end{figure}
+
+Fig.をみると，理論値の曲線とプロットされたテストデータに位相差があることがわかる．
+このとき，テストデータに離散フーリ変換を適用すると波数1の成分について以下のTable のような値を得ることができる．
+また，そのときのスペクトルは以下のFig. のようになる．
+
+\begin{table}[htbp]
+    \begin{center}
+        \caption{DFT result value [Case 1]}
+        \begin{tabular}{|p{30mm}|p{20mm}|p{20mm}|}
+            \hline
+            \multicolumn{1}{|c|}{}       & \multicolumn{1}{|c|}{$Re$}   & \multicolumn{1}{|c|}{$Im$} \\ \hline
+            \multicolumn{1}{|c|}{Drag} & \multicolumn{1}{|c|}{-11.591} & \multicolumn{1}{|c|}{3.106}         \\ \hline
+            \multicolumn{1}{|c|}{Lift} & \multicolumn{1}{|c|}{4.104}     & \multicolumn{1}{|c|}{11.276}         \\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
 \begin{multicols}{2}
-
     \begin{figure_here}
-        \subsubsection{テストデータ : Case 1}
-        \vskip \baselineskip
-        $\theta_{1 \mathrm{test}} = 15 \; \mathrm{[deg]}$, $\theta_{2 \mathrm{test}} = 20 \; \mathrm{[deg]}$
-        \footnotesize
         \begin{center}
-            \includegraphics[width=65mm]{../../02_workspace/result/rotation_tx=15.0_tx=20.0/plot/20/20_adjust-value.png}
-            \caption{Simulated data [Case 1]}
-            \includegraphics[width=65mm]{../../02_workspace/result/rotation_tx=15.0_tx=20.0/plot/21/21-4_corrected_angle_drag.png}
-            \caption{Corrected data (Drag) [Case 1]}
-            \includegraphics[width=65mm]{../../02_workspace/result/rotation_tx=15.0_tx=20.0/plot/21/21-4_corrected_angle_lift.png}
-            \caption{Corrected data (Lift) [Case 1]}
+            \includegraphics[width=65mm]{../../02_workspace/result/rotation_tx=15.0_tx=20.0/plot/07/07-3_dft-drag.png}
+            \caption{DFT result (Drag) [Case 1]}
         \end{center}
     \end{figure_here}
 
+    \begin{figure_here}
+        \begin{center}
+            \includegraphics[width=65mm]{../../02_workspace/result/rotation_tx=15.0_tx=20.0/plot/07/07-4_dft-lift.png}
+            \caption{DFT result (Lift) [Case 1]}
+        \end{center}
+    \end{figure_here}
+\end{multicols}
+
+Fig. ，Fig. より，波数1についてピークがあることがわかり，データの特徴を正しく捉えられているといえる．
+ここで，Table について，式()より位相角$\phi_{1\;\mathrm{test}}$，$\phi_{2\;\mathrm{test}}$をそれぞれ算出する．
+
+\begin{align}
+    \phi_{1\;\mathrm{test}} &= \arctan \left(\frac{3.106}{-11.591} \right) \cdot \frac{180}{\pi} = 165.000 \;\mathrm{[deg]}\\
+    \notag \\
+    \phi_{2\;\mathrm{test}} &= \arctan \left(\frac{11.276}{4.101}\right) \cdot \frac{180}{\pi} = 70.000 \;\mathrm{[deg]}
+\end{align}
+\vskip \baselineskip
+
+式()，式()より算出した位相角を用いて位相差$\theta_{1 \;\mathrm{test}}$，$\theta_{2 \;\mathrm{test}}$を求める．
+
+\begin{align}
+    \theta_{1\;\mathrm{test}} &= \pi \cdot \frac{180}{\pi} - 165.000 = 15.000\;\mathrm{[deg]}\\
+    \notag \\
+    \theta_{2\;\mathrm{test}} &= \frac{\pi}{2} \cdot \frac{180}{\pi} - 70.000 = 20.000\;\mathrm{[deg]}
+\end{align}
+\vskip \baselineskip
+
+また，位相差$\theta_{1 \;\mathrm{test}}$，$\theta_{2 \;\mathrm{test}}$より，
+ひずみセンサの取付角$\phi_{s\;\mathrm{test}}$が式()よりわかる．
+
+\begin{align}
+    \phi_{s\;\mathrm{test}} = \left|15.000 - 20.000\right| = 5 \;\mathrm{deg}
+\end{align}
+
+次に，位相差位相差$\theta_{1 \;\mathrm{test}}$，$\theta_{2 \;\mathrm{test}}$，
+テストデータから得られる$v_{x'\;\mathrm{test}}$，$v_{xy\;\mathrm{test}}$より，
+正規座標系における出力電圧勾配$v_x$，$v_y$を
+式()を用いて算出する．それぞれの角度についての算出結果を以下のTable ，Fig. ，Fig. に示す．
+
+\begin{table}[htbp]
+    \begin{center}
+        \caption{Corected result of test data [Case 1]}
+        \begin{tabular}{|p{20mm}|p{20mm}|p{20mm}|p{20mm}|p{20mm}|}
+            \hline
+            \multicolumn{1}{|c|}{\textgt{Angle [deg]}} & \multicolumn{1}{|c|}{\textgt{$v_{x'\;\mathrm{test}}$ [V/V]}} & \multicolumn{1}{|c|}{\textgt{$v_{xy\;\mathrm{test}}$ [V/V]}} & \multicolumn{1}{|c|}{\textgt{$v_x$ [V/V]}} & \multicolumn{1}{|c|}{\textgt{$v_y$ [V/V]}} \\ \hline
+            \multicolumn{1}{|c|}{0}                    & \multicolumn{1}{|r|}{-0.966}                     & \multicolumn{1}{|r|}{0.342}        & \multicolumn{1}{|r|}{-1.000}      & \multicolumn{1}{|r|}{0.000}      \\ \hline
+            \multicolumn{1}{|c|}{15}                   & \multicolumn{1}{|r|}{-1.000}                     & \multicolumn{1}{|r|}{0.087}        & \multicolumn{1}{|r|}{-0.966}      & \multicolumn{1}{|r|}{-0.259}      \\ \hline
+            \multicolumn{1}{|c|}{30}                   & \multicolumn{1}{|r|}{-0.966}                     & \multicolumn{1}{|r|}{-0.174}       & \multicolumn{1}{|r|}{-0.866}      & \multicolumn{1}{|r|}{-0.500}      \\ \hline
+            \multicolumn{1}{|c|}{45}                   & \multicolumn{1}{|r|}{-0.866}                     & \multicolumn{1}{|r|}{-0.423}       & \multicolumn{1}{|r|}{-0.707}      & \multicolumn{1}{|r|}{-0.707}      \\ \hline
+            \multicolumn{1}{|c|}{60}                   & \multicolumn{1}{|r|}{-0.707}                     & \multicolumn{1}{|r|}{-0.643}       & \multicolumn{1}{|r|}{-0.500}      & \multicolumn{1}{|r|}{-0.866}      \\ \hline
+            \multicolumn{1}{|c|}{75}                   & \multicolumn{1}{|r|}{-0.500}                     & \multicolumn{1}{|r|}{-0.819}       & \multicolumn{1}{|r|}{-0.259}      & \multicolumn{1}{|r|}{-0.966}      \\ \hline
+            \multicolumn{1}{|c|}{90}                   & \multicolumn{1}{|r|}{-0.259}                     & \multicolumn{1}{|r|}{-0.940}       & \multicolumn{1}{|r|}{0.000}       & \multicolumn{1}{|r|}{-1.000}      \\ \hline
+            \multicolumn{1}{|c|}{105}                  & \multicolumn{1}{|r|}{0.000}                      & \multicolumn{1}{|r|}{-0.996}       & \multicolumn{1}{|r|}{0.259}       & \multicolumn{1}{|r|}{-0.966}      \\ \hline
+            \multicolumn{1}{|c|}{120}                  & \multicolumn{1}{|r|}{0.259}                      & \multicolumn{1}{|r|}{-0.985}       & \multicolumn{1}{|r|}{0.500}       & \multicolumn{1}{|r|}{-0.866}      \\ \hline
+            \multicolumn{1}{|c|}{135}                  & \multicolumn{1}{|r|}{0.500}                      & \multicolumn{1}{|r|}{-0.906}       & \multicolumn{1}{|r|}{0.707}       & \multicolumn{1}{|r|}{-0.707}      \\ \hline
+            \multicolumn{1}{|c|}{150}                  & \multicolumn{1}{|r|}{0.707}                      & \multicolumn{1}{|r|}{-0.766}       & \multicolumn{1}{|r|}{0.866}       & \multicolumn{1}{|r|}{-0.500}      \\ \hline
+            \multicolumn{1}{|c|}{165}                  & \multicolumn{1}{|r|}{0.866}                      & \multicolumn{1}{|r|}{-0.574}       & \multicolumn{1}{|r|}{0.966}       & \multicolumn{1}{|r|}{-0.259}      \\ \hline
+            \multicolumn{1}{|c|}{180}                  & \multicolumn{1}{|r|}{0.966}                      & \multicolumn{1}{|r|}{-0.342}       & \multicolumn{1}{|r|}{1.000}       & \multicolumn{1}{|r|}{-0.000}      \\ \hline
+            \multicolumn{1}{|c|}{195}                  & \multicolumn{1}{|r|}{1.000}                      & \multicolumn{1}{|r|}{-0.087}       & \multicolumn{1}{|r|}{0.966}       & \multicolumn{1}{|r|}{0.259}      \\ \hline
+            \multicolumn{1}{|c|}{210}                  & \multicolumn{1}{|r|}{0.966}                      & \multicolumn{1}{|r|}{0.174}        & \multicolumn{1}{|r|}{0.866}       & \multicolumn{1}{|r|}{0.500}      \\ \hline
+            \multicolumn{1}{|c|}{225}                  & \multicolumn{1}{|r|}{0.866}                      & \multicolumn{1}{|r|}{0.423}        & \multicolumn{1}{|r|}{0.707}       & \multicolumn{1}{|r|}{0.707}      \\ \hline
+            \multicolumn{1}{|c|}{240}                  & \multicolumn{1}{|r|}{0.707}                      & \multicolumn{1}{|r|}{0.643}        & \multicolumn{1}{|r|}{0.500}       & \multicolumn{1}{|r|}{0.866}      \\ \hline
+            \multicolumn{1}{|c|}{255}                  & \multicolumn{1}{|r|}{0.500}                      & \multicolumn{1}{|r|}{0.819}        & \multicolumn{1}{|r|}{0.259}       & \multicolumn{1}{|r|}{0.966}      \\ \hline
+            \multicolumn{1}{|c|}{270}                  & \multicolumn{1}{|r|}{0.259}                      & \multicolumn{1}{|r|}{0.940}        & \multicolumn{1}{|r|}{-0.000}      & \multicolumn{1}{|r|}{1.000}      \\ \hline
+            \multicolumn{1}{|c|}{285}                  & \multicolumn{1}{|r|}{-0.000}                     & \multicolumn{1}{|r|}{0.996}        & \multicolumn{1}{|r|}{-0.259}      & \multicolumn{1}{|r|}{0.966}      \\ \hline
+            \multicolumn{1}{|c|}{300}                  & \multicolumn{1}{|r|}{-0.259}                     & \multicolumn{1}{|r|}{0.985}        & \multicolumn{1}{|r|}{-0.500}      & \multicolumn{1}{|r|}{0.866}      \\ \hline
+            \multicolumn{1}{|c|}{315}                  & \multicolumn{1}{|r|}{-0.500}                     & \multicolumn{1}{|r|}{0.906}        & \multicolumn{1}{|r|}{-0.707}      & \multicolumn{1}{|r|}{0.707}      \\ \hline
+            \multicolumn{1}{|c|}{330}                  & \multicolumn{1}{|r|}{-0.707}                     & \multicolumn{1}{|r|}{0.766}        & \multicolumn{1}{|r|}{-0.866}      & \multicolumn{1}{|r|}{0.500}      \\ \hline
+            \multicolumn{1}{|c|}{345}                  & \multicolumn{1}{|r|}{-0.866}                     & \multicolumn{1}{|r|}{0.574}        & \multicolumn{1}{|r|}{-0.966}      & \multicolumn{1}{|r|}{0.259}      \\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+\begin{figure}
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=95mm]{../../02_workspace/result/rotation_tx=15.0_tx=20.0/plot/21/21-4_corrected_angle_drag.png}
+        \caption{Corrected data (Drag) [Case 1]}
+        \includegraphics[width=95mm]{../../02_workspace/result/rotation_tx=15.0_tx=20.0/plot/21/21-4_corrected_angle_lift.png}
+        \caption{Corrected data (Lift) [Case 1]}
+    \end{center}
+\end{figure}
+
+\newpage
+
+Fig.，Fig.をみると算出された補正値すなわち正規座標系における出力電圧勾配は，
+理論曲線状に位置していることが確認でき，正しく算出されていることがわかる．
+
+\newpage
+また，以下のFig.～Fig.に，Case2 および Case3 におけるテストデータとその補正結果について示す．
+
+\newpage
+
+\begin{multicols}{2}
     \begin{figure_here}
         \subsubsection{テストデータ : Case 2}
         \vskip \baselineskip
@@ -223,43 +331,267 @@ $f_{x1}\left(x\right)$，$f_{y1}\left(x\right)$，点$v_{x'1}$，$v_{y'1}$の座
         \end{center}
     \end{figure_here}
 
-    \newpage
-
     \begin{figure_here}
         \subsubsection{テストデータ : Case 3}
-        \vskip \baselineskip
-        $\theta_{1 \mathrm{test}} = 15 \; \mathrm{[deg]}$, $\theta_{2 \mathrm{test}} = -20 \; \mathrm{[deg]}$
-        \footnotesize
-        \begin{center}
-            \includegraphics[width=65mm]{../../02_workspace/result/rotation_tx=15.0_tx=-20.0/plot/20/20_adjust-value.png}
-            \caption{Simulated data [Case 2]}
-            \includegraphics[width=65mm]{../../02_workspace/result/rotation_tx=15.0_tx=-20.0/plot/21/21-4_corrected_angle_drag.png}
-            \caption{Corrected data (Drag) [Case 2]}
-            \includegraphics[width=65mm]{../../02_workspace/result/rotation_tx=15.0_tx=-20.0/plot/21/21-4_corrected_angle_lift.png}
-            \caption{Corrected data (Lift) [Case 2]}
-        \end{center}
-    \end{figure_here}
-
-    \begin{figure_here}
-        \subsubsection{テストデータ : Case 2}
         \vskip \baselineskip
         $\theta_{1 \mathrm{test}} = 90 \; \mathrm{[deg]}$, $\theta_{2 \mathrm{test}} = -90 \; \mathrm{[deg]}$
         \footnotesize
         \begin{center}
             \includegraphics[width=65mm]{../../02_workspace/result/rotation_tx=90.0_tx=-90.0/plot/20/20_adjust-value.png}
-            \caption{Simulated data [Case 2]}
+            \caption{Simulated data [Case 3]}
             \includegraphics[width=65mm]{../../02_workspace/result/rotation_tx=90.0_tx=-90.0/plot/21/21-4_corrected_angle_drag.png}
-            \caption{Corrected data (Drag) [Case 2]}
+            \caption{Corrected data (Drag) [Case 3]}
             \includegraphics[width=65mm]{../../02_workspace/result/rotation_tx=90.0_tx=-90.0/plot/21/21-4_corrected_angle_lift.png}
-            \caption{Corrected data (Lift) [Case 2]}
+            \caption{Corrected data (Lift) [Case 3]}
         \end{center}
     \end{figure_here}
 \end{multicols}
 
+ここで，Fig.～Fig.をみると回転角度が負の値の場合，その値が非常に大きい場合であっても
+問題なく補正処理が可能であることがわかる．
+したがって，座標系の回転における補正理論はテストデータについて正しく機能しており
+正規座標系と座標系[1]の回転角および作用力測定装置のひずみセンサの取付角，
+正規座標系における出力電圧勾配を調べることができる．
+
 \subsection{座標系のオフセットにおける補正理論}
 
-正規座標系と座標系[2]のオフセットの補正理論を説明する．
+次に，正規座標系と座標系[2]のオフセットの補正理論を説明する．
+ここでは，回転角はない($\theta_1 = 0$，$\theta_2 = 0$)として考える．
+正規座標系と座標系[2]の中心との位置関係にオフセット$\Delta x$，$\Delta y$を持つ．
+ここで，作用力$F_2$を与えるとき，その作用線はオフセット$\Delta x$，$\Delta y$によって
+正規座標系の中心$o$を通ることはなく，座標系[2]の中心$o''$を通る．
+このとき，作用点と点$o''$を通る直線(青点線)と$x''$軸の角度を$\theta$，
+作用点と点$o$を通る直線(赤点線)と$x$軸の角度を$\varphi$とする．
+また，作用点と点$o'$を通る直線(青点線)と作用点と点$o$を通る直線(赤点線)の角度を$\alpha$とする．
+角度$\theta$は校正実験時に記録される角度となる．
 
+\subsubsection{角度$\alpha$の算出}
+供試体の半径を$r$とするとき，作用点$F_2(x,y)$の座標は角度$\varphi$を用いて以下のように表すことができる．
+
+\begin{align}
+    x &= r \cos \varphi\\
+    y &= r \sin \varphi
+\end{align}
+\vskip \baselineskip
+
+また，座標系[2]において，作用点$F_2(x'',y'')$の座標はオフセット$\Delta x$，$\Delta y$を用いて
+以下のように表される．
+
+\begin{align}
+    x'' &= r \cos \varphi -\Delta x\\
+    y'' &= r \sin \varphi -\Delta y
+\end{align}
+\vskip \baselineskip
+
+以上より，角度$\theta$を用いて角度$\varphi$を求めることができる．
+
+\begin{align}
+    \tan \theta &= \frac{y''}{x''} = \frac{ r \sin \varphi - \Delta y}{ r \cos \varphi - \Delta x}\\
+    \notag \\
+    \varphi &= \theta - \sin^{-1}\left(\frac{\Delta x \sin \theta - \Delta y \cos \theta}{r}\right)
+\end{align}
+\vskip \baselineskip
+
+したがって，角度$\alpha$は以下のように求めることができる．
+
+\begin{align}
+    \alpha = \theta - \varphi = \sin^{-1} \left( \frac{\Delta x \sin \theta - \Delta y \cos \theta}{r} \right)
+\end{align}
+\vskip \baselineskip
+
+\subsubsection{作用力$F_2$の分解}
+
+供試体に加わる作用力$F$は供試体表面の接線方向の力$F_\varphi$，
+またその法線方向の力$F_r$に分けて考えることができる．
+ロードセルから与える作用力の角度$\theta$，算出した$\varphi$を用いると，それぞれ以下のように求められる．
+
+\begin{align}
+    F_{\varphi} &= F_2 \sin \alpha \\
+    F_{r} &= F_2 \cos \alpha
+\end{align}
+\vskip \baselineskip
+
+供試体への作用力について抗力方向を$F_{x}$，揚力方向を$F_{y}$とすると
+角度$\varphi$を用いて以下のように求められる．
+
+\begin{align}
+    F_{x} &= - F_r \cos \varphi\\
+    F_{y} &= - F_r \sin \varphi
+\end{align}
+\vskip \baselineskip
+
+また，接線方向成分$F_\varphi$について，供試体に対してトルク$T$として作用することとなる．
+
+\begin{align}
+    T &= F_\varphi \cdot r = F \sin \alpha \cdot r
+\end{align}
+\vskip \baselineskip
+
+ここで，このトルク$T$について，
+作用力測定装置に対する影響は十分に小さいと考えられることから無視できる．\\
+
+\subsubsection{出力電圧勾配の座標系変換 (2)}
+
+正規座標系に対して，オフセットを持つ座標系[2]を基準に
+ロードセルから与えられる作用力$F_2$はすべて供試体に伝わることはなく，
+接線方向の力$F_r$，その法線方向の力$F_\theta$に分解される．
+すなわち，測定時にはロードセルから作用力$F$を与えた際の出力電圧，
+ひずみセンサから作用力$F_r$を与えた際の出力電圧を得ているということになる．
+したがって，ひずみセンサの出力電圧の傾きを一様に評価することは不可能であり，
+実際の作用力$F_r$の角度$\alpha$を算出し補正を加える必要がある．
+
+ここで，ひずみセンサの出力電圧$V_{x''2}$，$V_{y''2}$は
+それぞれ$F_r / F$倍されていると考えられることから，
+正規座標系における出力電圧勾配$v_{x}$，$v_{y}$と
+座標系[2]における出力電圧勾配$v_{x''2}$，$v_{y''2}$は
+角度$\alpha$を用いて以下のような関係が成立する．
+
+\begin{align}
+    v_{x} & = \frac{F}{F_r} v_{x''2} = \frac{1}{\cos \alpha} v_{x''2} \\
+    \notag \\
+    v_{y} & = \frac{F}{F_r} v_{y''2} = \frac{1}{\cos \alpha} v_{y''2} 
+\end{align}
+
+\subsubsection{補正理論のテストデータへの適用 (2)}
+
+以上の補正理論より，オフセットを考慮したテストデータを作成する．
+任意のオフセット$\Delta x_\mathrm{test}$，$\Delta y_\mathrm{test}$を与えて
+座標系[2]の出力電圧勾配について，$x''$軸方向を$v_{x''\;\mathrm{test}}$，
+$y''$軸方向を$v_{y''\;\mathrm{test}}$とするとき，以下のように表される．
+
+\begin{align}
+    \theta &= \frac{\pi}{180} \; i \;\left(i = 0, 1, 2, 3, \cdots\right)\\
+    \alpha &= \sin^{-1} \left( \frac{\Delta x_\mathrm{test} \sin \theta - \Delta y_\mathrm{test} \cos \theta}{r} \right) \\
+    \varphi &= \theta - \sin^{-1}\left(\frac{\Delta x_\mathrm{test} \sin \theta - \Delta y_\mathrm{test} \cos \theta}{r}\right)\\
+    \notag \\
+    v_{x'' \;\mathrm{test}} &= - \cos \alpha \cos \varphi \\
+    v_{y'' \;\mathrm{test}} &= - \cos \alpha \sin \varphi 
+\end{align}
+\vskip \baselineskip
+
+また，今回は以下のTable のようなパラメータを用いた．
+
+\begin{table}[htbp]
+    \begin{center}
+        \caption{Test data conditions (2)}
+        \begin{tabular}{|p{30mm}|p{20mm}|p{20mm}|}
+            \hline
+            \multicolumn{1}{|c|}{}       & \multicolumn{1}{|c|}{$\Delta x_\mathrm{test}$ [mm]} & \multicolumn{1}{|c|}{$\Delta y_\mathrm{test}$ [mm]} \\ \hline
+            \multicolumn{1}{|c|}{Case 4} & \multicolumn{1}{|c|}{5.0}                                       & \multicolumn{1}{|c|}{0.0}                              \\ \hline
+            \multicolumn{1}{|c|}{Case 5} & \multicolumn{1}{|c|}{5.0}                                      & \multicolumn{1}{|c|}{-5.0}                             \\ \hline
+            \multicolumn{1}{|c|}{Case 6} & \multicolumn{1}{|c|}{10.0}                                       & \multicolumn{1}{|c|}{-5.0}                             \\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+ここでは，Case 4 に対する座標系の回転おける補正理論の適用過程について説明する．
+はじめに，作成したテストデータは以下のようになる．
+
+\newpage
+
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=95mm]{../../02_workspace/result/offset_dx=5.0_dy=0.0/plot/20/20_adjust-value.png}
+        \caption{Simulated data [Case 4]}
+    \end{center}
+\end{figure}
+\vskip \baselineskip
+
+Fig.をみると，プロットされたテストデータは理論値の曲線とは異なる値を示している．
+また，波形は少し不規則な形状となっていることがわかる．
+
+\newpage
+
+ここで，$\theta$，$\Delta x_\mathrm{test}$，$\Delta y_\mathrm{test}$は既知の変数であるため
+式()より，$\alpha$および$\varphi$を求めることができる．
+したがって，式()を適用した結果を以下のTable に示す．
+ここで，$\varphi$は正規座標系において供試体へ作用力が加えられている角度を示していることになる．
+
+\begin{table}[htbp]
+    \begin{center}
+        \caption{Corected result of test data [Case 4]}
+        \begin{tabular}{|p{15 mm}|p{15 mm}|p{15 mm}|p{15 mm}|p{15 mm}|p{15 mm}|}
+            \hline
+            \multicolumn{1}{|c|}{\textgt{Angle [deg]}} & \multicolumn{1}{|c|}{\textgt{$v_{x''\;\mathrm{test}}$ [V/V]}} & \multicolumn{1}{|c|}{\textgt{$v_{y''\;\mathrm{test}}$ [V/V]}} & \multicolumn{1}{|c|}{\textgt{$v_x$ [V/V]}} & \multicolumn{1}{|c|}{\textgt{$v_y$ [V/V]}} & \multicolumn{1}{|c|}{\textgt{$\varphi$ [deg]}} \\ \hline
+            \multicolumn{1}{|c|}{0}                    & \multicolumn{1}{|r|}{-0.960}                    & \multicolumn{1}{|r|}{0.196}      & \multicolumn{1}{|r|}{-0.980}     & \multicolumn{1}{|r|}{0.200}         & \multicolumn{1}{|r|}{-11.5}      \\ \hline
+            \multicolumn{1}{|c|}{15}                   & \multicolumn{1}{|r|}{-0.979}                    & \multicolumn{1}{|r|}{-0.066}     & \multicolumn{1}{|r|}{-0.998}     & \multicolumn{1}{|r|}{-0.067}        & \multicolumn{1}{|r|}{3.9}      \\ \hline
+            \multicolumn{1}{|c|}{30}                   & \multicolumn{1}{|r|}{-0.925}                    & \multicolumn{1}{|r|}{-0.337}     & \multicolumn{1}{|r|}{-0.940}     & \multicolumn{1}{|r|}{-0.342}        & \multicolumn{1}{|r|}{20.0}      \\ \hline
+            \multicolumn{1}{|c|}{45}                   & \multicolumn{1}{|r|}{-0.792}                    & \multicolumn{1}{|r|}{-0.594}     & \multicolumn{1}{|r|}{-0.800}     & \multicolumn{1}{|r|}{-0.600}        & \multicolumn{1}{|r|}{36.9}      \\ \hline
+            \multicolumn{1}{|c|}{60}                   & \multicolumn{1}{|r|}{-0.581}                    & \multicolumn{1}{|r|}{-0.808}     & \multicolumn{1}{|r|}{-0.584}     & \multicolumn{1}{|r|}{-0.812}        & \multicolumn{1}{|r|}{54.3}      \\ \hline
+            \multicolumn{1}{|c|}{75}                   & \multicolumn{1}{|r|}{-0.308}                    & \multicolumn{1}{|r|}{-0.950}     & \multicolumn{1}{|r|}{-0.308}     & \multicolumn{1}{|r|}{-0.951}        & \multicolumn{1}{|r|}{72.0}      \\ \hline
+            \multicolumn{1}{|c|}{90}                   & \multicolumn{1}{|r|}{-0.000}                    & \multicolumn{1}{|r|}{-1.000}     & \multicolumn{1}{|r|}{-0.000}     & \multicolumn{1}{|r|}{-1.000}        & \multicolumn{1}{|r|}{90.0}      \\ \hline
+            \multicolumn{1}{|c|}{105}                  & \multicolumn{1}{|r|}{0.308}                     & \multicolumn{1}{|r|}{-0.950}     & \multicolumn{1}{|r|}{0.308}      & \multicolumn{1}{|r|}{-0.951}        & \multicolumn{1}{|r|}{108.0}      \\ \hline
+            \multicolumn{1}{|c|}{120}                  & \multicolumn{1}{|r|}{0.581}                     & \multicolumn{1}{|r|}{-0.808}     & \multicolumn{1}{|r|}{0.584}      & \multicolumn{1}{|r|}{-0.812}        & \multicolumn{1}{|r|}{125.7}      \\ \hline
+            \multicolumn{1}{|c|}{135}                  & \multicolumn{1}{|r|}{0.792}                     & \multicolumn{1}{|r|}{-0.594}     & \multicolumn{1}{|r|}{0.800}      & \multicolumn{1}{|r|}{-0.600}        & \multicolumn{1}{|r|}{143.1}      \\ \hline
+            \multicolumn{1}{|c|}{150}                  & \multicolumn{1}{|r|}{0.925}                     & \multicolumn{1}{|r|}{-0.337}     & \multicolumn{1}{|r|}{0.940}      & \multicolumn{1}{|r|}{-0.342}        & \multicolumn{1}{|r|}{160.0}      \\ \hline
+            \multicolumn{1}{|c|}{165}                  & \multicolumn{1}{|r|}{0.979}                     & \multicolumn{1}{|r|}{-0.066}     & \multicolumn{1}{|r|}{0.998}      & \multicolumn{1}{|r|}{-0.067}        & \multicolumn{1}{|r|}{176.1}      \\ \hline
+            \multicolumn{1}{|c|}{180}                  & \multicolumn{1}{|r|}{0.960}                     & \multicolumn{1}{|r|}{0.196}      & \multicolumn{1}{|r|}{0.980}      & \multicolumn{1}{|r|}{0.200}         & \multicolumn{1}{|r|}{191.5}      \\ \hline
+            \multicolumn{1}{|c|}{195}                  & \multicolumn{1}{|r|}{0.881}                     & \multicolumn{1}{|r|}{0.432}      & \multicolumn{1}{|r|}{0.898}      & \multicolumn{1}{|r|}{0.441}         & \multicolumn{1}{|r|}{206.1}      \\ \hline
+            \multicolumn{1}{|c|}{210}                  & \multicolumn{1}{|r|}{0.755}                     & \multicolumn{1}{|r|}{0.632}      & \multicolumn{1}{|r|}{0.766}      & \multicolumn{1}{|r|}{0.642}         & \multicolumn{1}{|r|}{220.0}      \\ \hline
+            \multicolumn{1}{|c|}{225}                  & \multicolumn{1}{|r|}{0.594}                     & \multicolumn{1}{|r|}{0.792}      & \multicolumn{1}{|r|}{0.600}      & \multicolumn{1}{|r|}{0.800}         & \multicolumn{1}{|r|}{233.1}      \\ \hline
+            \multicolumn{1}{|c|}{240}                  & \multicolumn{1}{|r|}{0.409}                     & \multicolumn{1}{|r|}{0.907}      & \multicolumn{1}{|r|}{0.411}      & \multicolumn{1}{|r|}{0.912}         & \multicolumn{1}{|r|}{245.7}      \\ \hline
+            \multicolumn{1}{|c|}{255}                  & \multicolumn{1}{|r|}{0.208}                     & \multicolumn{1}{|r|}{0.977}      & \multicolumn{1}{|r|}{0.208}      & \multicolumn{1}{|r|}{0.978}         & \multicolumn{1}{|r|}{258.0}      \\ \hline
+            \multicolumn{1}{|c|}{270}                  & \multicolumn{1}{|r|}{0.000}                     & \multicolumn{1}{|r|}{1.000}      & \multicolumn{1}{|r|}{0.000}      & \multicolumn{1}{|r|}{1.000}         & \multicolumn{1}{|r|}{270.0}      \\ \hline
+            \multicolumn{1}{|c|}{285}                  & \multicolumn{1}{|r|}{-0.208}                    & \multicolumn{1}{|r|}{0.977}      & \multicolumn{1}{|r|}{-0.208}     & \multicolumn{1}{|r|}{0.978}         & \multicolumn{1}{|r|}{282.0}      \\ \hline
+            \multicolumn{1}{|c|}{300}                  & \multicolumn{1}{|r|}{-0.409}                    & \multicolumn{1}{|r|}{0.907}      & \multicolumn{1}{|r|}{-0.411}     & \multicolumn{1}{|r|}{0.912}         & \multicolumn{1}{|r|}{294.3}      \\ \hline
+            \multicolumn{1}{|c|}{315}                  & \multicolumn{1}{|r|}{-0.594}                    & \multicolumn{1}{|r|}{0.792}      & \multicolumn{1}{|r|}{-0.600}     & \multicolumn{1}{|r|}{0.800}         & \multicolumn{1}{|r|}{306.9}      \\ \hline
+            \multicolumn{1}{|c|}{330}                  & \multicolumn{1}{|r|}{-0.755}                    & \multicolumn{1}{|r|}{0.633}      & \multicolumn{1}{|r|}{-0.766}     & \multicolumn{1}{|r|}{0.642}         & \multicolumn{1}{|r|}{320.0}      \\ \hline
+            \multicolumn{1}{|c|}{345}                  & \multicolumn{1}{|r|}{-0.881}                    & \multicolumn{1}{|r|}{0.432}      & \multicolumn{1}{|r|}{-0.898}     & \multicolumn{1}{|r|}{0.441}         & \multicolumn{1}{|r|}{333.9}      \\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+\newpage
+
+\begin{figure}
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=95mm]{../../02_workspace/result/offset_dx=5.0_dy=0.0/plot/21/21-2_corrected_offset_drag.png}
+        \caption{Corrected data (Drag) [Case 4]}
+        \includegraphics[width=95mm]{../../02_workspace/result/offset_dx=5.0_dy=0.0/plot/21/21-2_corrected_offset_lift.png}
+        \caption{Corrected data (Lift) [Case 4]}
+    \end{center}
+\end{figure}
+
+
+Fig.，Fig.をみると算出された補正値は理論曲線上に位置していることがわかる．
+しかし，プロットされているデータの角度は$\varphi$となるため，不等間隔となってしまう．
+
+\newpage
+また，以下のFig.～Fig.に，Case 5 および Case 6 におけるテストデータとその補正結果について示す．
+
+\begin{multicols}{2}
+    \begin{figure_here}
+        \subsubsection{テストデータ : Case 5}
+        \vskip \baselineskip
+        $\Delta x_\mathrm{test} = 5.0$ [mm]，$\Delta x_\mathrm{test} = -5.0$ [mm]
+        \footnotesize
+        \begin{center}
+            \includegraphics[width=65mm]{../../02_workspace/result/offset_dx=5.0_dy=-5.0/plot/20/20_adjust-value.png}
+            \caption{Simulated data [Case 5]}
+            \includegraphics[width=65mm]{../../02_workspace/result/offset_dx=5.0_dy=-5.0/plot/21/21-2_corrected_offset_drag.png}
+            \caption{Corrected data (Drag) [Case 5]}
+            \includegraphics[width=65mm]{../../02_workspace/result/offset_dx=5.0_dy=-5.0/plot/21/21-2_corrected_offset_lift.png}
+            \caption{Corrected data (Lift) [Case 5]}
+        \end{center}
+    \end{figure_here}
+
+    \begin{figure_here}
+        \subsubsection{テストデータ : Case 6}
+        \vskip \baselineskip
+        $\Delta x_\mathrm{test} = 10.0$ [mm]，$\Delta x_\mathrm{test} = -5.0$ [mm]
+        \footnotesize
+        \begin{center}
+            \includegraphics[width=65mm]{../../02_workspace/result/offset_dx=10.0_dy=-5.0/plot/20/20_adjust-value.png}
+            \caption{Simulated data [Case 6]}
+            \includegraphics[width=65mm]{../../02_workspace/result/offset_dx=10.0_dy=-5.0/plot/21/21-2_corrected_offset_drag.png}
+            \caption{Corrected data (Drag) [Case 6]}
+            \includegraphics[width=65mm]{../../02_workspace/result/offset_dx=10.0_dy=-5.0/plot/21/21-2_corrected_offset_lift.png}
+            \caption{Corrected data (Lift) [Case 6]}
+        \end{center}
+    \end{figure_here}
+\end{multicols}
 
 \subsection{複合状態における補正理論}
 

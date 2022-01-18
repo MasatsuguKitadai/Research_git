@@ -55,17 +55,17 @@ int main()
 
     if (theta_1 == 0 && theta_2 == 0)
     {
-        sprintf(dataname, "offset_dx=%.1f_dx=%.1f", x, y);
+        sprintf(dataname, "offset_dx=%.1f_dy=%.1f", x, y);
     }
 
     else if (x == 0 && y == 0)
     {
-        sprintf(dataname, "rotation_tx=%.1f_tx=%.1f", theta_1, theta_2);
+        sprintf(dataname, "rotation_tx=%.1f_ty=%.1f", theta_1, theta_2);
     }
 
     else
     {
-        sprintf(dataname, "simulation_tx=%.1f_tx=%.1f_dx=%.1f_dy=%.1f", theta_1, theta_2, x, y);
+        sprintf(dataname, "simulation_tx=%.1f_ty=%.1f_dx=%.2f_dy=%.2f", theta_1, theta_2, x, y);
     }
 
     /*****************************************************************************/

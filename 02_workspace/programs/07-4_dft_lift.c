@@ -141,7 +141,7 @@ int calculate_lift(char date[], int range)
 
     // range y
     double y_min = 0;
-    double y_max = 100;
+    double y_max = 200;
 
     // label
     char label[100] = "DFT";
@@ -177,6 +177,7 @@ int calculate_lift(char date[], int range)
 
     fprintf(gp, "set xrange [%.3f:%d]\n", x_min, x_max);
     fprintf(gp, "set xlabel '%s'offset 0.0,0\n", xxlabel);
+    fprintf(gp, "set xtics 1\n");
     fprintf(gp, "set yrange [%.3f:%.3f]\n", y_min, y_max);
     fprintf(gp, "set ylabel '%s'offset 1,0.0\n", yylabel);
     fprintf(gp, "set title '%s (lift)'\n", label);
