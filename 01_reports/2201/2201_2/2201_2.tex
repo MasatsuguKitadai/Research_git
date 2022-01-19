@@ -71,7 +71,7 @@ lineskip=-0.5ex
 \section*{報告内容}
 \begin{enumerate}[1.]
     \item 進捗状況
-    \item 校正装置と供試体のオフセット(作成中)
+    \item 校正装置と供試体のオフセット
     \item テストデータの作成
     \item 実験結果とテストデータの比較
     \item 次週の予定
@@ -130,8 +130,8 @@ lineskip=-0.5ex
 \begin{itemize}
     \item [$\blacksquare$] \textgt{正規座標系における作用点$F\left(x,y\right)$の座標}
           \begin{eqnarray*}
-            x &=& r \cos \varphi\\
-            y &=& r \sin \varphi\\
+              x &=& r \cos \varphi\\
+              y &=& r \sin \varphi\\
           \end{eqnarray*}
 \end{itemize}
 
@@ -141,8 +141,8 @@ $\Delta x$，$\Delta y$を用いて以下のように表される．
 \begin{itemize}
     \item [$\blacksquare$] \textgt{校正装置の座標系における作用点$F\left(x'',y''\right)$の座標}
           \begin{eqnarray*}
-            x'' &=& r \cos \varphi - \Delta x\\
-            y'' &=& r \sin \varphi - \Delta y\\
+              x'' &=& r \cos \varphi - \Delta x\\
+              y'' &=& r \sin \varphi - \Delta y\\
           \end{eqnarray*}
 \end{itemize}
 
@@ -151,9 +151,9 @@ $\Delta x$，$\Delta y$を用いて以下のように表される．
 \begin{itemize}
     \item [$\blacksquare$] \textgt{作用点と点$o$を通る直線(赤点線)と$x$軸の角度$\varphi$}
           \begin{eqnarray*}
-            \tan \theta &=& \frac{y''}{x''} \\
-            &=& \frac{ r \sin \varphi - \Delta y}{ r \cos \varphi - \Delta x} \\
-            \varphi &=& \theta - \sin^{-1}\left(\frac{\Delta x \sin \theta - \Delta y \cos \theta}{r}\right)
+              \tan \theta &=& \frac{y''}{x''} \\
+              &=& \frac{ r \sin \varphi - \Delta y}{ r \cos \varphi - \Delta x} \\
+              \varphi &=& \theta - \sin^{-1}\left(\frac{\Delta x \sin \theta - \Delta y \cos \theta}{r}\right)
           \end{eqnarray*}
 \end{itemize}
 
@@ -162,8 +162,8 @@ $\Delta x$，$\Delta y$を用いて以下のように表される．
 \begin{itemize}
     \item [$\blacksquare$] \textgt{作用点と点$o'$を通る直線及び点$o$を通る直線の角度 $\alpha$}
           \begin{eqnarray*}
-            \alpha &=& \theta - \varphi\\
-                    &=& \sin^{-1}\left(\frac{\Delta x \sin \theta - \Delta y \cos \theta}{r}\right)
+              \alpha &=& \theta - \varphi\\
+              &=& \sin^{-1}\left(\frac{\Delta x \sin \theta - \Delta y \cos \theta}{r}\right)
           \end{eqnarray*}
 \end{itemize}
 
@@ -228,8 +228,8 @@ $\Delta x$，$\Delta y$を用いて以下のように表される．
 \begin{itemize}
     \item [$\blacksquare$] \textgt{出力電圧の傾きの補正値$V'_x$・$V'_y$}
           \begin{eqnarray*}
-            V'_x &=& \frac{F}{F_r} V_x = \frac{1}{\cos \alpha} V_x\\
-            V'_y &=& \frac{F}{F_r} V_y = \frac{1}{\cos \alpha} V_y
+              V'_x &=& \frac{F}{F_r} V_x = \frac{1}{\cos \alpha} V_x\\
+              V'_y &=& \frac{F}{F_r} V_y = \frac{1}{\cos \alpha} V_y
           \end{eqnarray*}
 \end{itemize}
 
@@ -241,8 +241,8 @@ $\Delta x$，$\Delta y$を用いて以下のように表される．
 \begin{itemize}
     \item [$\blacksquare$] \textgt{オフセットを考慮したテストデータの理論式 $f_x$・$f_y$}
           \begin{eqnarray*}
-            f_x(\alpha , \varphi ) &=& - A \cos \alpha \cos \varphi \\
-            f_y(\alpha , \varphi ) &=& - A \cos \alpha \sin \varphi
+              f_x(\alpha , \varphi ) &=& - A \cos \alpha \cos \varphi \\
+              f_y(\alpha , \varphi ) &=& - A \cos \alpha \sin \varphi
           \end{eqnarray*}
     \item [※] $A$は定数 (実験結果より，$A=0.64$と設定)
 \end{itemize}
@@ -256,10 +256,10 @@ $\Delta x$，$\Delta y$を用いて以下のように表される．
         \caption{Simulation conditions}
         \begin{tabular}{|p{30mm}|p{20mm}|p{20mm}|}
             \hline
-            \multicolumn{1}{|c|}{}          & \multicolumn{1}{|c|}{$\Delta x$ [mm]} & \multicolumn{1}{|c|}{$\Delta y$ [mm]}             \\ \hline
-            \multicolumn{1}{|c|}{\textgt{case(1)}}   & \multicolumn{1}{|c|}{5 } & \multicolumn{1}{|c|}{0}             \\ \hline
-            \multicolumn{1}{|c|}{\textgt{case(2)}}   & \multicolumn{1}{|c|}{5 } & \multicolumn{1}{|c|}{5}             \\ \hline
-            \multicolumn{1}{|c|}{\textgt{case(3)}}   & \multicolumn{1}{|c|}{10} & \multicolumn{1}{|c|}{5}             \\ \hline
+            \multicolumn{1}{|c|}{}                 & \multicolumn{1}{|c|}{$\Delta x$ [mm]} & \multicolumn{1}{|c|}{$\Delta y$ [mm]} \\ \hline
+            \multicolumn{1}{|c|}{\textgt{case(1)}} & \multicolumn{1}{|c|}{5 }              & \multicolumn{1}{|c|}{0}               \\ \hline
+            \multicolumn{1}{|c|}{\textgt{case(2)}} & \multicolumn{1}{|c|}{5 }              & \multicolumn{1}{|c|}{5}               \\ \hline
+            \multicolumn{1}{|c|}{\textgt{case(3)}} & \multicolumn{1}{|c|}{10}              & \multicolumn{1}{|c|}{5}               \\ \hline
         \end{tabular}
     \end{center}
 \end{table}
@@ -335,8 +335,8 @@ $\Delta x$，$\Delta y$を用いて以下のように表される．
 \begin{itemize}
     \item [$\blacksquare$] \textgt{複合状態にある場合のテストデータの理論式 $g_x$・$g_y$}
           \begin{eqnarray*}
-            g_x(\alpha , \varphi , \theta_1) &=& - B \cos \alpha \cos \left(\varphi - \theta_1\right) \\
-            g_y(\alpha , \varphi , \theta_2) &=& - B \cos \alpha \sin \left(\varphi - \theta_2\right)
+              g_x(\alpha , \varphi , \theta_1) &=& - B \cos \alpha \cos \left(\varphi - \theta_1\right) \\
+              g_y(\alpha , \varphi , \theta_2) &=& - B \cos \alpha \sin \left(\varphi - \theta_2\right)
           \end{eqnarray*}
     \item [※] $B$は定数 (実験結果より，$B=0.64$と設定)
 \end{itemize}
@@ -350,10 +350,10 @@ $\Delta x$，$\Delta y$を用いて以下のように表される．
         \caption{Simulation conditions (2)}
         \begin{tabular}{|p{30mm}|p{20mm}|p{30mm}|}
             \hline
-            \multicolumn{1}{|c|}{$x$軸の回転角}       & \multicolumn{1}{|c|}{$\theta_1$} & \multicolumn{1}{|c|}{7.0 [deg]}             \\ \hline
-            \multicolumn{1}{|c|}{$y$軸の回転角}       & \multicolumn{1}{|c|}{$\theta_2$} & \multicolumn{1}{|c|}{5.0 [deg]}             \\ \hline
-            \multicolumn{1}{|c|}{$x$軸のオフセット}   & \multicolumn{1}{|c|}{$\Delta x$} & \multicolumn{1}{|c|}{-1.0 [mm]}             \\ \hline
-            \multicolumn{1}{|c|}{$y$軸のオフセット}   & \multicolumn{1}{|c|}{$\Delta y$} & \multicolumn{1}{|c|}{1.3 [mm]}             \\ \hline
+            \multicolumn{1}{|c|}{$x$軸の回転角}     & \multicolumn{1}{|c|}{$\theta_1$} & \multicolumn{1}{|c|}{7.0 [deg]} \\ \hline
+            \multicolumn{1}{|c|}{$y$軸の回転角}     & \multicolumn{1}{|c|}{$\theta_2$} & \multicolumn{1}{|c|}{5.0 [deg]} \\ \hline
+            \multicolumn{1}{|c|}{$x$軸のオフセット} & \multicolumn{1}{|c|}{$\Delta x$} & \multicolumn{1}{|c|}{-1.0 [mm]} \\ \hline
+            \multicolumn{1}{|c|}{$y$軸のオフセット} & \multicolumn{1}{|c|}{$\Delta y$} & \multicolumn{1}{|c|}{1.3 [mm]}  \\ \hline
         \end{tabular}
     \end{center}
 \end{table}
@@ -369,19 +369,19 @@ $\Delta x$，$\Delta y$を用いて以下のように表される．
         \caption{True angle of acting force}
         \begin{tabular}{|p{20mm}|p{20mm}|p{20mm}|p{20mm}|}
             \hline
-            \multicolumn{1}{|c|}{\textgt{$\phi$ [deg]}} & \multicolumn{1}{|c|}{\textgt{$\psi$ [deg]}}& \multicolumn{1}{|c|}{\textgt{$\phi$ [deg]}} & \multicolumn{1}{|c|}{\textgt{$\psi$ [deg]}}   \\ \hline
-            \multicolumn{1}{|c|}{0}                     & \multicolumn{1}{|c|}{2.3}                  & \multicolumn{1}{|c|}{180}                   & \multicolumn{1}{|c|}{177.7}  \\ \hline
-            \multicolumn{1}{|c|}{15}                    & \multicolumn{1}{|c|}{18.0}                 & \multicolumn{1}{|c|}{195}                   & \multicolumn{1}{|c|}{192.0}  \\ \hline
-            \multicolumn{1}{|c|}{30}                    & \multicolumn{1}{|c|}{33.5}                 & \multicolumn{1}{|c|}{210}                   & \multicolumn{1}{|c|}{206.5}  \\ \hline
-            \multicolumn{1}{|c|}{45}                    & \multicolumn{1}{|c|}{48.7}                 & \multicolumn{1}{|c|}{225}                   & \multicolumn{1}{|c|}{221.3}  \\ \hline
-            \multicolumn{1}{|c|}{60}                    & \multicolumn{1}{|c|}{63.7}                 & \multicolumn{1}{|c|}{240}                   & \multicolumn{1}{|c|}{236.3}  \\ \hline
-            \multicolumn{1}{|c|}{75}                    & \multicolumn{1}{|c|}{78.5}                 & \multicolumn{1}{|c|}{255}                   & \multicolumn{1}{|c|}{251.5}  \\ \hline
-            \multicolumn{1}{|c|}{90}                    & \multicolumn{1}{|c|}{93.0}                 & \multicolumn{1}{|c|}{270}                   & \multicolumn{1}{|c|}{267.0}  \\ \hline
-            \multicolumn{1}{|c|}{105}                   & \multicolumn{1}{|c|}{107.3}                & \multicolumn{1}{|c|}{285}                   & \multicolumn{1}{|c|}{282.7}  \\ \hline
-            \multicolumn{1}{|c|}{120}                   & \multicolumn{1}{|c|}{121.4}                & \multicolumn{1}{|c|}{300}                   & \multicolumn{1}{|c|}{298.6}  \\ \hline
-            \multicolumn{1}{|c|}{135}                   & \multicolumn{1}{|c|}{135.5}                & \multicolumn{1}{|c|}{315}                   & \multicolumn{1}{|c|}{314.5}  \\ \hline
-            \multicolumn{1}{|c|}{150}                   & \multicolumn{1}{|c|}{149.5}                & \multicolumn{1}{|c|}{330}                   & \multicolumn{1}{|c|}{330.5}  \\ \hline
-            \multicolumn{1}{|c|}{165}                   & \multicolumn{1}{|c|}{163.6}                & \multicolumn{1}{|c|}{345}                   & \multicolumn{1}{|c|}{346.4}  \\ \hline
+            \multicolumn{1}{|c|}{\textgt{$\phi$ [deg]}} & \multicolumn{1}{|c|}{\textgt{$\psi$ [deg]}} & \multicolumn{1}{|c|}{\textgt{$\phi$ [deg]}} & \multicolumn{1}{|c|}{\textgt{$\psi$ [deg]}} \\ \hline
+            \multicolumn{1}{|c|}{0}                     & \multicolumn{1}{|c|}{2.3}                   & \multicolumn{1}{|c|}{180}                   & \multicolumn{1}{|c|}{177.7}                 \\ \hline
+            \multicolumn{1}{|c|}{15}                    & \multicolumn{1}{|c|}{18.0}                  & \multicolumn{1}{|c|}{195}                   & \multicolumn{1}{|c|}{192.0}                 \\ \hline
+            \multicolumn{1}{|c|}{30}                    & \multicolumn{1}{|c|}{33.5}                  & \multicolumn{1}{|c|}{210}                   & \multicolumn{1}{|c|}{206.5}                 \\ \hline
+            \multicolumn{1}{|c|}{45}                    & \multicolumn{1}{|c|}{48.7}                  & \multicolumn{1}{|c|}{225}                   & \multicolumn{1}{|c|}{221.3}                 \\ \hline
+            \multicolumn{1}{|c|}{60}                    & \multicolumn{1}{|c|}{63.7}                  & \multicolumn{1}{|c|}{240}                   & \multicolumn{1}{|c|}{236.3}                 \\ \hline
+            \multicolumn{1}{|c|}{75}                    & \multicolumn{1}{|c|}{78.5}                  & \multicolumn{1}{|c|}{255}                   & \multicolumn{1}{|c|}{251.5}                 \\ \hline
+            \multicolumn{1}{|c|}{90}                    & \multicolumn{1}{|c|}{93.0}                  & \multicolumn{1}{|c|}{270}                   & \multicolumn{1}{|c|}{267.0}                 \\ \hline
+            \multicolumn{1}{|c|}{105}                   & \multicolumn{1}{|c|}{107.3}                 & \multicolumn{1}{|c|}{285}                   & \multicolumn{1}{|c|}{282.7}                 \\ \hline
+            \multicolumn{1}{|c|}{120}                   & \multicolumn{1}{|c|}{121.4}                 & \multicolumn{1}{|c|}{300}                   & \multicolumn{1}{|c|}{298.6}                 \\ \hline
+            \multicolumn{1}{|c|}{135}                   & \multicolumn{1}{|c|}{135.5}                 & \multicolumn{1}{|c|}{315}                   & \multicolumn{1}{|c|}{314.5}                 \\ \hline
+            \multicolumn{1}{|c|}{150}                   & \multicolumn{1}{|c|}{149.5}                 & \multicolumn{1}{|c|}{330}                   & \multicolumn{1}{|c|}{330.5}                 \\ \hline
+            \multicolumn{1}{|c|}{165}                   & \multicolumn{1}{|c|}{163.6}                 & \multicolumn{1}{|c|}{345}                   & \multicolumn{1}{|c|}{346.4}                 \\ \hline
         \end{tabular}
     \end{center}
 \end{table}
