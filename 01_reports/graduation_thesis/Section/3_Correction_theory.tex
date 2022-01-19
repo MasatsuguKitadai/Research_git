@@ -1,7 +1,7 @@
 \section{校正理論}
 作用力測定装置から得た抗力方向および揚力方向における出力電圧$V_D$，$V_L$を
-正規座標系の$x$軸方向および$y$軸方向の荷重$v_x$，$v_y$に換算する際に，
-出力電圧$V_D$，$V_L$と$v_x$，$v_y$の関係性を明らかにするための校正実験を
+正規座標系の$x$軸方向および$y$軸方向の荷重$F_x$，$F_y$に換算する際に，
+出力電圧$V_D$，$V_L$と$F_x$，$F_y$の関係性を明らかにするための校正実験を
 行う必要がある．
 校正実験によって得られた結果を用いて関係性を明らかにするための校正理論について述べる．
 
@@ -29,6 +29,14 @@ $x'$軸は$x$軸から$\theta_x$，$y'$軸は$y$軸から$\theta_y$だけ回転�
 また，座標系[2]は正規座標系に対して
 $x''$軸は$x$軸から$y$方向に$\Delta x$，
 $y''$軸は$y$軸から$x$方向に$\Delta y$だけオフセットを持つ状態となる．
+
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=80mm]{images/31-1.png}
+        \caption{}
+    \end{center}
+\end{figure}
 
 \newpage
 
@@ -60,7 +68,8 @@ $v_{x}$と$v_{x'}$および$v_{y}$と$v_{y'}$の関係を明らかにすれば�
 \begin{figure}[htbp]
     \footnotesize
     \begin{center}
-        \caption{rotation}
+        \includegraphics[width=75mm]{images/33-1.png}
+        \caption{}
     \end{center}
 \end{figure}
 
@@ -84,7 +93,7 @@ $v_{x}$と$v_{x'}$および$v_{y}$と$v_{y'}$の関係を明らかにすれば�
 $\theta_1$，
 揚力方向の出力電圧勾配$v_l$と
 正規座標系における$y$軸方向の出力電圧勾配の理論値$v_{y\;\mathrm{theory}}$との位相差
-$\theta_2$は以下のように表される．
+$\theta_2$を以下のように表される．
 
 \begin{align}
     \theta_1 = \pi - \phi_1 \\
@@ -101,20 +110,23 @@ $\theta_2$は以下のように表される．
     \phi_s = \left| \phi_1 - \phi_2 \right|
 \end{align}
 
-\subsubsection{出力電圧勾配の座標変換}
+\newpage
 
-\begin{figure}[htbp]
-    \footnotesize
-    \begin{center}
-        \caption{rotation}
-    \end{center}
-\end{figure}
+\subsubsection{出力電圧勾配の座標変換}
 
 位相角$\theta_1$，$\theta_2$が求められたことから，
 それらを用いて出力電圧勾配の座標変換を行う．
 ここで，座標系[1]の$x'$軸，$y'$軸を
 それぞれ$f_{x}\left(x\right)$，$f_{y}\left(x\right)$として，
 正規座標軸の$x$を用いた式で表す．
+
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=75mm]{images/33-2.png}
+        \caption{}
+    \end{center}
+\end{figure}
 
 算出した位相角$\theta_1$，$\theta_2$より，$f_{x}\left(x\right)$，$f_{y}\left(x\right)$は
 以下のように表される．
@@ -133,7 +145,7 @@ $f_{x2}\left(x\right)$，$f_{y2}\left(x\right)$の交点であることがわか
 $v_{x'}$，$v_{y'}$のベクトルの大きさ$|\boldsymbol{v_{x'}}|$，$|\boldsymbol{v_{y'}}|$を
 得ることができる．
 角度$\theta_1$，$\theta_2$が求められていることから，
-点$v_{x'}$，$v_{y'}$の座標は以下のように求めることができる．
+点$v_{x'}$，$v_{y'}$の座標を以下のように求めることができる．
 
 \begin{align}
     v_{x'} \left(x ,y\right) & = \left(|\boldsymbol{v_{x'}}| \cos \theta_1,\; |\boldsymbol{v_{x'}}| \sin \theta_2\right)    \\
@@ -203,7 +215,7 @@ $y'$軸方向を$v_{y'\;\mathrm{test}}$としてテストデータを作成し�
 \end{table}
 
 ここで，Case 1 に対する座標系の回転おける補正理論の適用過程について説明する．
-はじめに，作成したテストデータは以下に示す．
+はじめに，作成したテストデータを以下のFig.に示す．
 
 \begin{figure}[htbp]
     \footnotesize
@@ -215,7 +227,7 @@ $y'$軸方向を$v_{y'\;\mathrm{test}}$としてテストデータを作成し�
 
 Fig.をみると，理論値の曲線とプロットされたテストデータに位相差があることがわかる．
 このとき，テストデータに離散フーリ変換を適用すると波数1の成分について以下のTable のような値を得ることができる．
-また，そのときのスペクトルは以下のFig. に示す．
+また，そのときのスペクトルを以下のFig. に示す．
 
 \begin{table}[htbp]
     \begin{center}
@@ -378,6 +390,14 @@ Fig.，Fig.をみると算出された補正値すなわち正規座標系にお
 また，作用点と点$o'$を通る直線(青点線)と作用点と点$o$を通る直線(赤点線)の角度を$\alpha$とする．
 角度$\theta$は校正実験時に記録される角度となる．
 
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=75mm]{images/34-1.png}
+        \caption{}
+    \end{center}
+\end{figure}
+
 \subsubsection{角度$\alpha$の算出}
 供試体の半径を$r$とするとき，作用点$F(x,y)$の座標は角度$\varphi$を用いて以下のように表すことができる．
 
@@ -405,7 +425,7 @@ Fig.，Fig.をみると算出された補正値すなわち正規座標系にお
 \end{align}
 \vskip \baselineskip
 
-したがって，角度$\alpha$は以下のように求めることができる．
+したがって，角度$\alpha$を以下のように求めることができる．
 
 \begin{align}
     \alpha = \theta - \varphi = \sin^{-1} \left( \frac{\Delta x \sin \theta - \Delta y \cos \theta}{r} \right)
@@ -482,7 +502,7 @@ $y''$軸方向を$v_{y''\;\mathrm{test}}$とするとき，以下のように表
 \end{align}
 \vskip \baselineskip
 
-また，今回は以下のTable のようなパラメータを用いた．
+また，今回を以下のTable のようなパラメータを用いた．
 
 \begin{table}[htbp]
     \begin{center}
@@ -497,10 +517,8 @@ $y''$軸方向を$v_{y''\;\mathrm{test}}$とするとき，以下のように表
     \end{center}
 \end{table}
 
-ここでは，Case 4 に対する座標系の回転おける補正理論の適用過程について説明する．
-はじめに，作成したテストデータは以下に示す．
-
-\newpage
+ここで，Case 4 に対する座標系の回転おける補正理論の適用過程について説明する．
+はじめに，作成したテストデータを以下に示す．
 
 \begin{figure}[htbp]
     \footnotesize
@@ -622,7 +640,10 @@ Fig.，Fig.をみると算出された補正値は理論曲線上に位置して
 \subsubsection{ラグランジュ補間}
 
 ラグランジュ補間とは，一般的に以下のように表される．
-（ラグランジュの補間公式の説明）
+\\
+\vskip \baselineskip
+\textgt{（ラグランジュの補間公式の説明）}
+\\
 
 \begin{align}
     P\left(x\right) &= \sum^{n+1}_{i=1} y_i \frac{f_i\left(x\right)}{f_i \left(x_i\right)}\\
@@ -644,6 +665,11 @@ Fig.，Fig.をみると算出された補正値は理論曲線上に位置して
 $\delta \theta$を絶対値で評価することで，その値$|\delta \theta|$が
 最も小さくなる角度$\varphi$とその前後のデータを使用することで，$\theta$に最も近い3点を選択することができる．
 
+\begin{align}
+    \delta \theta = |\theta - \varphi|
+\end{align}
+\vskip \baselineskip
+
 \subsubsection{テストデータへの適用 (3)}
 上述の補正理論より座標系の回転・オフセットを考慮したテストデータを作成する．
 任意の回転角$\theta_{1\;\mathrm{test}}$，$\theta_{2\; \mathrm{test}}$，
@@ -660,7 +686,7 @@ $y''$軸方向を$v_{y''\;\mathrm{test}}$とするとき，以下のように表
     v_{y'' \;\mathrm{test}} &= - \cos \alpha \sin \left(\varphi - \theta_{2\; \mathrm{test}}\right) 
 \end{align}
 
-また，今回は以下のTable のようなパラメータを用いた．
+また，今回を以下のTable のようなパラメータを用いた．
 
 \begin{table}[htbp]
     \begin{center}
@@ -674,7 +700,7 @@ $y''$軸方向を$v_{y''\;\mathrm{test}}$とするとき，以下のように表
 \end{table}
 
 Case 7 に対する座標系の回転おける補正理論の適用過程について説明する．
-はじめに，作成したテストデータは以下に示す．
+はじめに，作成したテストデータを以下に示す．
 
 \begin{figure}[htbp]
     \footnotesize
@@ -684,7 +710,7 @@ Case 7 に対する座標系の回転おける補正理論の適用過程につ�
     \end{center}
 \end{figure}
 
-ここで，座標系のオフセットにおける補正理論を適用した結果は以下のFig.，Fig.に示す．
+ここで，座標系のオフセットにおける補正理論を適用した結果を以下のFig.，Fig.に示す．
 
 \begin{multicols}{2}
     \begin{figure_here}
@@ -701,7 +727,7 @@ Case 7 に対する座標系の回転おける補正理論の適用過程につ�
 また，プロットされたデータ間隔は異なることもわかる．
 このとき，ラグランジュ補間を用いて，等間隔のデータを得るための処理を行う．
 なお，データの採用点については上述の処理によって行うこととする．
-ラグランジュ補間を行った結果は以下のFig.，Fig.に示す．
+ラグランジュ補間を行った結果を以下のFig.，Fig.に示す．
 
 \begin{multicols}{2}
     \begin{figure_here}
@@ -716,7 +742,7 @@ Case 7 に対する座標系の回転おける補正理論の適用過程につ�
 
 上記のFig.，Fig.と比較すると等間隔のデータを得られていることがわかる．
 次に，フーリエ変換を適用する．
-このときの結果は以下のFig.，Fig.に示す．
+このときの結果を以下のFig.，Fig.に示す．
 また，波数1の成分についての算出値を以下のTable に示す．
 
 \begin{table}[htbp]
@@ -730,6 +756,8 @@ Case 7 に対する座標系の回転おける補正理論の適用過程につ�
         \end{tabular}
     \end{center}
 \end{table}
+
+\newpage
 
 \begin{multicols}{2}
     \begin{figure_here}
@@ -763,7 +791,10 @@ Fig. ，Fig. より，波数1についてピークがあることがわかり，
 Table の Case 7 で設定したパラメータと比較すると，異なっていることがわかる．
 これは，ラグランジュ補間公式を用いた2次近似による誤差が生じているためと考えられる．
 ここで，誤差を算出すると，
-
+\\
+\vskip \baselineskip
+\textgt{(誤差の算出と評価)}
+\\
 したがって，誤差は非常に小さいため無視できると考えられる．
 
 また，算出した回転角$\theta_{1\;\mathrm{test}}$，$\theta_{2\;\mathrm{test}}$を用いて
@@ -780,5 +811,7 @@ Table の Case 7 で設定したパラメータと比較すると，異なって
 \end{figure}
 
 % 同様に Case 8，Case 9 について，作成したテストデータとその補正結果および算出された回転角の値とその誤差について示す．
+
+\newpage
 
 \subsection{推定理論}
