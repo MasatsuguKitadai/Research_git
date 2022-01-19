@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.3.30)  19 JAN 2022 10:05
+This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.12.14)  19 JAN 2022 17:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -377,12 +377,12 @@ LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 5.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 13.83836pt on input line 5.
- (./0_Master.toc
+ (./0_Master.toc [2]
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 36.
+(Font)              scaled to size 9.60999pt on input line 40.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 36.
- [2])
+(Font)              scaled to size 9.60999pt on input line 40.
+)
 \tf@toc=\write3
 \openout3 = `0_Master.toc'.
 
@@ -396,11 +396,12 @@ LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
 (Font)              scaled to size 11.53198pt on input line 3.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 11.53198pt on input line 3.
-) [6] (./Section/3_Correction_theory.tex [7] [8] [9] [10]
+) [6] (./Section/3_Correction_theory.tex [7]
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 179.
+(Font)              scaled to size 8.64899pt on input line 63.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 179.
+(Font)              scaled to size 8.64899pt on input line 63.
+ [8] [9] [10]
 File: ../../02_workspace/result/rotation_tx=15.0_tx=20.0/plot/20/20_adjust-value.png Graphic file (type bmp)
 <../../02_workspace/result/rotation_tx=15.0_tx=20.0/plot/20/20_adjust-value.png>
  [11]
@@ -413,7 +414,7 @@ File: ../../02_workspace/result/rotation_tx=15.0_tx=20.0/plot/21/21-4_corrected_
 <../../02_workspace/result/rotation_tx=15.0_tx=20.0/plot/21/21-4_corrected_angle_drag.png>
 File: ../../02_workspace/result/rotation_tx=15.0_tx=20.0/plot/21/21-4_corrected_angle_lift.png Graphic file (type bmp)
 <../../02_workspace/result/rotation_tx=15.0_tx=20.0/plot/21/21-4_corrected_angle_lift.png>
- [13] [14] [15]
+ [13] [14]
 File: ../../02_workspace/result/rotation_tx=-15.0_tx=-20.0/plot/20/20_adjust-value.png Graphic file (type bmp)
 <../../02_workspace/result/rotation_tx=-15.0_tx=-20.0/plot/20/20_adjust-value.png>
 File: ../../02_workspace/result/rotation_tx=-15.0_tx=-20.0/plot/21/21-4_corrected_angle_drag.png Graphic file (type bmp)
@@ -426,15 +427,21 @@ File: ../../02_workspace/result/rotation_tx=90.0_tx=-90.0/plot/21/21-4_corrected
 <../../02_workspace/result/rotation_tx=90.0_tx=-90.0/plot/21/21-4_corrected_angle_drag.png>
 File: ../../02_workspace/result/rotation_tx=90.0_tx=-90.0/plot/21/21-4_corrected_angle_lift.png Graphic file (type bmp)
 <../../02_workspace/result/rotation_tx=90.0_tx=-90.0/plot/21/21-4_corrected_angle_lift.png>
- [16] [17] [18] [19]
+
+Overfull \vbox (0.0766pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (0.0766pt too high) has occurred while \output is active []
+
+ [15] [16] [17] [18]
 File: ../../02_workspace/result/offset_dx=5.0_dy=0.0/plot/20/20_adjust-value.png Graphic file (type bmp)
 <../../02_workspace/result/offset_dx=5.0_dy=0.0/plot/20/20_adjust-value.png>
- [20] [21]
+ [19] [20]
 File: ../../02_workspace/result/offset_dx=5.0_dy=0.0/plot/21/21-2_corrected_offset_drag.png Graphic file (type bmp)
 <../../02_workspace/result/offset_dx=5.0_dy=0.0/plot/21/21-2_corrected_offset_drag.png>
 File: ../../02_workspace/result/offset_dx=5.0_dy=0.0/plot/21/21-2_corrected_offset_lift.png Graphic file (type bmp)
 <../../02_workspace/result/offset_dx=5.0_dy=0.0/plot/21/21-2_corrected_offset_lift.png>
- [22]
+ [21]
 File: ../../02_workspace/result/offset_dx=5.0_dy=-5.0/plot/20/20_adjust-value.png Graphic file (type bmp)
 <../../02_workspace/result/offset_dx=5.0_dy=-5.0/plot/20/20_adjust-value.png>
 File: ../../02_workspace/result/offset_dx=5.0_dy=-5.0/plot/21/21-2_corrected_offset_drag.png Graphic file (type bmp)
@@ -453,16 +460,37 @@ Overfull \vbox (0.0766pt too high) has occurred while \output is active []
 
 Overfull \vbox (0.0766pt too high) has occurred while \output is active []
 
- [23]) [24] (./Section/4_Basic_experiment_(1).tex) [25] (./Section/5_Basic_experiment_(2).tex) [26] (./Section/6_Applied_experiment.tex) [27]
+ [22] [23]
+File: ../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/05/05_summary-wave.png Graphic file (type bmp)
+<../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/05/05_summary-wave.png>
+ [24]
+File: ../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-2_corrected_offset_drag.png Graphic file (type bmp)
+<../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-2_corrected_offset_drag.png>
+File: ../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-2_corrected_offset_lift.png Graphic file (type bmp)
+<../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-2_corrected_offset_lift.png>
+File: ../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-3_interpolated_drag.png Graphic file (type bmp)
+<../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-3_interpolated_drag.png>
+File: ../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-3_interpolated_lift.png Graphic file (type bmp)
+<../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-3_interpolated_lift.png>
+ [25]
+File: ../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/07/07-3_dft-drag.png Graphic file (type bmp)
+<../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/07/07-3_dft-drag.png>
+File: ../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/07/07-4_dft-lift.png Graphic file (type bmp)
+<../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/07/07-4_dft-lift.png>
+File: ../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-4_corrected_angle_drag.png Graphic file (type bmp)
+<../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-4_corrected_angle_drag.png>
+File: ../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-4_corrected_angle_lift.png Graphic file (type bmp)
+<../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-4_corrected_angle_lift.png>
+) [26] (./Section/4_Basic_experiment_(1).tex) [27] [28] (./Section/5_Basic_experiment_(2).tex) [29] (./Section/6_Applied_experiment.tex) [30]
 No file 0_Master.bbl.
-[28] (./0_Master.aux) ) 
+[31] (./0_Master.aux) ) 
 Here is how much of TeX's memory you used:
- 2865 strings out of 481768
- 43557 string characters out of 5933620
- 295430 words of memory out of 5000000
- 18196 multiletter control sequences out of 15000+600000
+ 2901 strings out of 481768
+ 47093 string characters out of 5933619
+ 295431 words of memory out of 5000000
+ 18223 multiletter control sequences out of 15000+600000
  553873 words of font info for 123 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
  31i,14n,31p,450b,444s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on 0_Master.dvi (29 pages, 76264 bytes).
+Output written on 0_Master.dvi (32 pages, 89248 bytes).

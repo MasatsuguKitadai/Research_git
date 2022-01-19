@@ -129,8 +129,14 @@ int interpolation(char date[], int split)
     double part[3];
 
     double sum[3], ave[3];
+    double number[split];
 
     // printf("[Angle]\t[Drag]\t[Lift]\t[Net]\n");
+
+    for (i = 0; i < split; i++)
+    {
+        number[i] = i * 15;
+    }
 
     for (i = 0; i < split; i++)
     {
@@ -168,9 +174,9 @@ int interpolation(char date[], int split)
 
         // printf("[y]\t%.3f\t%.3f\t%.3f\n", y[0][0], y[1][0], y[2][0]);
 
-        part[0] = (point[i] - x[1]) * (point[i] - x[2]) / ((x[0] - x[1]) * (x[0] - x[2]));
-        part[1] = (point[i] - x[0]) * (point[i] - x[2]) / ((x[1] - x[0]) * (x[1] - x[2]));
-        part[2] = (point[i] - x[0]) * (point[i] - x[1]) / ((x[2] - x[0]) * (x[2] - x[1]));
+        part[0] = (number[i] - x[1]) * (number[i] - x[2]) / ((x[0] - x[1]) * (x[0] - x[2]));
+        part[1] = (number[i] - x[0]) * (number[i] - x[2]) / ((x[1] - x[0]) * (x[1] - x[2]));
+        part[2] = (number[i] - x[0]) * (number[i] - x[1]) / ((x[2] - x[0]) * (x[2] - x[1]));
 
         result_drag[i] = part[0] * y[0][0] + part[1] * y[1][0] + part[2] * y[2][0];
 
@@ -207,8 +213,8 @@ int interpolation(char date[], int split)
 
     for (i = 0; i < split; i++)
     {
-        fprintf(fp_csv, "%.1f,%lf,%lf,%lf\n", point[i], result_drag[i], result_lift[i], result_net[i]);
-        fprintf(fp_dat, "%.1f\t%.3f\t%.3f\t%.3f\n", point[i], result_drag[i], result_lift[i], result_net[i]);
+        fprintf(fp_csv, "%.1f,%lf,%lf,%lf\n", number[i], result_drag[i], result_lift[i], result_net[i]);
+        fprintf(fp_dat, "%.1f\t%.3f\t%.3f\t%.3f\n", number[i], result_drag[i], result_lift[i], result_net[i]);
         // printf("%.3f\t%.3f\t%.3f\t%.3f\n", angle_double, value[i][0], value[i][1], value[i][2]);
     }
 

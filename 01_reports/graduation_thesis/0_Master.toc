@@ -8,30 +8,34 @@
 \contentsline {subsection}{\numberline {3.1}作用力測定装置と校正実験装置の関係}{7}%
 \contentsline {subsection}{\numberline {3.2}出力電圧勾配}{8}%
 \contentsline {subsection}{\numberline {3.3}座標系の回転における補正理論}{8}%
-\contentsline {subsubsection}{\numberline {3.3.1}回転角$\theta _{x1}$，$\theta _{y1}$の算出}{8}%
+\contentsline {subsubsection}{\numberline {3.3.1}回転角$\theta _{x}$，$\theta _{y}$の算出}{8}%
 \contentsline {subsubsection}{\numberline {3.3.2}出力電圧勾配の座標変換}{9}%
 \contentsline {subsubsection}{\numberline {3.3.3}補正理論のテストデータへの適用 (1)}{11}%
-\contentsline {subsubsection}{\numberline {3.3.4}テストデータ : Case 2}{16}%
-\contentsline {subsubsection}{\numberline {3.3.5}テストデータ : Case 3}{16}%
-\contentsline {subsection}{\numberline {3.4}座標系のオフセットにおける補正理論}{17}%
-\contentsline {subsubsection}{\numberline {3.4.1}角度$\alpha $の算出}{17}%
-\contentsline {subsubsection}{\numberline {3.4.2}作用力$F_2$の分解}{18}%
-\contentsline {subsubsection}{\numberline {3.4.3}出力電圧勾配の座標系変換 (2)}{18}%
-\contentsline {subsubsection}{\numberline {3.4.4}補正理論のテストデータへの適用 (2)}{19}%
-\contentsline {subsubsection}{\numberline {3.4.5}テストデータ : Case 5}{23}%
-\contentsline {subsubsection}{\numberline {3.4.6}テストデータ : Case 6}{23}%
-\contentsline {subsection}{\numberline {3.5}複合状態における補正理論}{24}%
-\contentsline {subsection}{\numberline {3.6}推定理論}{24}%
-\contentsline {section}{\numberline {4.}基礎実験(1)}{25}%
-\contentsline {subsection}{\numberline {4.1}実験方法}{25}%
-\contentsline {subsection}{\numberline {4.2}実験結果}{25}%
-\contentsline {section}{\numberline {5.}基礎実験(2) (特性評価実験)}{26}%
-\contentsline {subsection}{\numberline {5.1}実験方法}{26}%
-\contentsline {subsection}{\numberline {5.2}実験結果}{26}%
-\contentsline {subsection}{\numberline {5.3}補正適用結果}{26}%
-\contentsline {subsection}{\numberline {5.4}テストデータの作成}{26}%
-\contentsline {section}{\numberline {6.}応用実験 (推定実験)}{27}%
-\contentsline {subsection}{\numberline {6.1}実験方法}{27}%
-\contentsline {subsection}{\numberline {6.2}実験結果}{27}%
-\contentsline {section}{\gt 謝辞}{28}%
-\contentsline {subsection}{\gt 付録}{28}%
+\contentsline {subsubsection}{\numberline {3.3.4}テストデータ : Case 2}{15}%
+\contentsline {subsubsection}{\numberline {3.3.5}テストデータ : Case 3}{15}%
+\contentsline {subsection}{\numberline {3.4}座標系のオフセットにおける補正理論}{16}%
+\contentsline {subsubsection}{\numberline {3.4.1}角度$\alpha $の算出}{16}%
+\contentsline {subsubsection}{\numberline {3.4.2}作用力$F$の分解}{17}%
+\contentsline {subsubsection}{\numberline {3.4.3}出力電圧勾配の座標系変換 (2)}{17}%
+\contentsline {subsubsection}{\numberline {3.4.4}補正理論のテストデータへの適用 (2)}{18}%
+\contentsline {subsubsection}{\numberline {3.4.5}テストデータ : Case 5}{22}%
+\contentsline {subsubsection}{\numberline {3.4.6}テストデータ : Case 6}{22}%
+\contentsline {subsection}{\numberline {3.5}複合状態における補正理論}{23}%
+\contentsline {subsubsection}{\numberline {3.5.1}補正理論の適用順序}{23}%
+\contentsline {subsubsection}{\numberline {3.5.2}ラグランジュ補間}{23}%
+\contentsline {subsubsection}{\numberline {3.5.3}使用するデータの選択}{23}%
+\contentsline {subsubsection}{\numberline {3.5.4}テストデータへの適用 (3)}{23}%
+\contentsline {subsection}{\numberline {3.6}推定理論}{26}%
+\contentsline {section}{\numberline {4.}基礎実験(1)}{27}%
+\contentsline {subsection}{\numberline {4.1}実験方法}{28}%
+\contentsline {subsection}{\numberline {4.2}実験結果}{28}%
+\contentsline {section}{\numberline {5.}基礎実験(2) (特性評価実験)}{29}%
+\contentsline {subsection}{\numberline {5.1}実験方法}{29}%
+\contentsline {subsection}{\numberline {5.2}実験結果}{29}%
+\contentsline {subsection}{\numberline {5.3}補正適用結果}{29}%
+\contentsline {subsection}{\numberline {5.4}テストデータの作成}{29}%
+\contentsline {section}{\numberline {6.}応用実験 (推定実験)}{30}%
+\contentsline {subsection}{\numberline {6.1}実験方法}{30}%
+\contentsline {subsection}{\numberline {6.2}実験結果}{30}%
+\contentsline {section}{\gt 謝辞}{31}%
+\contentsline {subsection}{\gt 付録}{31}%
