@@ -1,0 +1,154 @@
+\section{作用力測定装置の評価実験とその考察}
+
+製作した校正実験装置を用いて行った作用力測定装置の性能評価実験について説明する．
+
+\subsection{実験方法}
+
+作用力測定装置の性能を調べるために，
+可能な限り多くの方向からのデータを使用した結果を得る必要があり，
+結果の再現性，一般性を担保するためには評価実験を複数回繰り返さなければならない．
+ここで，大量のデータを一度にプログラムで処理できるようにするため，
+測定手順を以下のように定めた．
+
+\subsection{実験条件}
+
+\subsection{試行回数と測定角度}
+本研究で行った実験についての測定角度および試行回数を以下のTable に示す．
+
+\begin{table}[htbp]
+    \begin{center}
+        \caption{Experiment conditions}
+        \begin{tabular}{|p{30mm}|p{20mm}|p{30}|}
+            \hline
+            \multicolumn{1}{|c|}{} & \multicolumn{1}{|c|}{\textgt{Condition number}} & \multicolumn{1}{|c|}{\textgt{remarks}}\\ \hline
+            \multicolumn{1}{|c|}{Angle}                            & \multicolumn{1}{|c|}{24} & \multicolumn{1}{|c|}{Mesurement every 15 [deg]}  \\ \hline
+            \multicolumn{1}{|c|}{Number of trials}                  & \multicolumn{1}{|c|}{7} & \multicolumn{1}{|c|}{}  \\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+\subsubsection{測定条件}
+\begin{enumerate}[(1)]
+    \item サンプリング周期は5[Hz]とする
+    \item ロードセルをマイクロステージを用いて 0.03 [mm] ずつ移動させ，ひずみセンサ，\\
+            ロードセルの出力電圧を測定する
+    \item 基準を0 [mm]として，0.03 [mm]，0.06 [mm]，0.09 [mm]，0.12 [mm]の計4回移動させる
+\end{enumerate}
+
+\subsubsection{測定準備}
+\begin{enumerate}[(1)]
+    \item 自動回転ステージを用いてロードセルを測定する角度に固定する
+    \item 自動一軸ステージを用いてロードセルが供試体に接触する位置を0.01[mm]単位で特定する
+    \item 接触する前の位置を基準に測定を開始する
+\end{enumerate}
+
+\subsubsection{測定手順}
+\begin{enumerate}[(1)]
+    \item 測定開始から60秒間待機する
+    \item 40秒間の出力電圧の測定
+    \item 60秒間の自動ステージ動作時間 (※ 自動ステージ動作後，電圧の安定を図るため)
+    \item (2)，(3)の作業を5回繰り返す (100秒周期) (※ 5回目はロードセル，供試体を非接触状態にする)
+\end{enumerate}
+
+\subsection{実験結果}
+
+上述の手順にしたがって，各角度ごとに行った測定結果を以下のFig.～Fig.に示す．
+なお，この結果は1回目の測定結果である．
+\vskip \baselineskip
+
+\begin{multicols}{2}
+    \begin{figure_here}
+        \begin{center}
+            \includegraphics[width=70mm]{../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_0.png}
+            \caption{Output voltage : 0 [deg]}
+            \includegraphics[width=70mm]{../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_150.png}
+            \caption{Output voltage : 15 [deg]}
+            \includegraphics[width=70mm]{../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_300.png}
+            \caption{Output voltage : 30 [deg]}
+            \includegraphics[width=70mm]{../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_450.png}
+            \caption{Output voltage : 45 [deg]}
+            \includegraphics[width=70mm]{../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_600.png}
+            \caption{Output voltage : 60 [deg]}
+            \includegraphics[width=70mm]{../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_750.png}
+            \caption{Output voltage : 75 [deg]}
+            \includegraphics[width=70mm]{../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_900.png}
+            \caption{Output voltage : 90 [deg]}
+            \includegraphics[width=70mm]{../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_1050.png}
+            \caption{Output voltage : 105 [deg]}
+            \includegraphics[width=70mm]{../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_1200.png}
+            \caption{Output voltage : 120 [deg]}
+            \includegraphics[width=70mm]{../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_1350.png}
+            \caption{Output voltage : 135 [deg]}
+            \includegraphics[width=70mm]{../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_1500.png}
+            \caption{Output voltage : 150 [deg]}
+            \includegraphics[width=70mm]{../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_1650.png}
+            \caption{Output voltage : 165 [deg]}
+            \includegraphics[width=70mm]{../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_1800.png}
+            \caption{Output voltage : 180 [deg]}
+            \includegraphics[width=70mm]{../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_1950.png}
+            \caption{Output voltage : 195 [deg]}
+            \includegraphics[width=70mm]{../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_2100.png}
+            \caption{Output voltage : 210 [deg]}
+            \includegraphics[width=70mm]{../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_2250.png}
+            \caption{Output voltage : 225 [deg]}
+            \includegraphics[width=70mm]{../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_2400.png}
+            \caption{Output voltage : 240 [deg]}
+            \includegraphics[width=70mm]{../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_2550.png}
+            \caption{Output voltage : 255 [deg]}
+            \includegraphics[width=70mm]{../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_2700.png}
+            \caption{Output voltage : 270 [deg]}
+            \includegraphics[width=70mm]{../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_2850.png}
+            \caption{Output voltage : 285 [deg]}
+            \includegraphics[width=70mm]{../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_3000.png}
+            \caption{Output voltage : 300 [deg]}
+            \includegraphics[width=70mm]{../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_3150.png}
+            \caption{Output voltage : 315 [deg]}
+            \includegraphics[width=70mm]{../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_3300.png}
+            \caption{Output voltage : 330 [deg]}
+            \includegraphics[width=70mm]{../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_3450.png}
+            \caption{Output voltage : 345 [deg]}
+        \end{center}
+    \end{figure_here}
+\end{multicols}
+
+\newpage
+
+\subsection{データ処理手法}
+
+実験結果から，式()の出力電圧勾配を算出する．
+そのために以下の手順でデータ処理を行った．
+
+\begin{enumerate}[(1)]
+    \item ドリフト補正
+    \item 各距離における平均値の算出
+    \item 出力電圧勾配の算出
+\end{enumerate}
+
+\subsubsection{ドリフト補正}
+性能評価実験は各角度に対して約10分間の測定を行うが，
+ストレインアンプは時間経過に対して基準の電圧が変動する場合がある．
+この現象をドリフトと呼ぶ．
+そのため，実験結果を出力電圧勾配の算出に用いる
+前処理として，ドリフトを考慮したデータへと変換する必要がある．
+
+ここで，例として 1回目の性能評価実験，0 [deg]におけるロードセルの出力電圧の図 (Fig.) を用いて説明する．
+
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=95mm]{../../02_workspace/result/2-1/plot/01-1_loadcell/01_loadcell_0.png}
+        \caption{Loadcell output voltage : 0 [deg]}
+    \end{center}
+\end{figure}
+
+\subsubsection{押込距離における平均値の算出}
+
+
+\subsubsection{出力電圧勾配の算出}
+
+\section{校正理論の適用とその結果}
+
+
+
+
+\subsection{考察}

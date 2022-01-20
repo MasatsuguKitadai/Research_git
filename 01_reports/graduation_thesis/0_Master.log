@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.12.14)  20 JAN 2022 12:34
+This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.12.14)  20 JAN 2022 17:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -366,63 +366,65 @@ LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 13.83836pt on input line 3.
  [1]
 LaTeX Font Info:    Font shape `JT1/mc/b/n' in size <14.4> not available
-(Font)              Font shape `JT1/mc/bx/n' tried instead on input line 5.
+(Font)              Font shape `JT1/mc/bx/n' tried instead on input line 6.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 5.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 6.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 5.
+(Font)              scaled to size 13.83836pt on input line 6.
 LaTeX Font Info:    Font shape `JY1/mc/b/n' in size <14.4> not available
-(Font)              Font shape `JY1/mc/bx/n' tried instead on input line 5.
+(Font)              Font shape `JY1/mc/bx/n' tried instead on input line 6.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 5.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 6.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 5.
- (./0_Master.toc [2]
+(Font)              scaled to size 13.83836pt on input line 6.
+ (./0_Master.toc
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 40.
+(Font)              scaled to size 9.60999pt on input line 44.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 40.
+(Font)              scaled to size 9.60999pt on input line 44.
 )
 \tf@toc=\write3
 \openout3 = `0_Master.toc'.
 
- [3]
+ [2]
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 41.
+(Font)              scaled to size 6.72699pt on input line 42.
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 4.805pt on input line 41.
- [4]) [5] (./Section/2_Experimental_device.tex
+(Font)              scaled to size 4.805pt on input line 42.
+ [3]) [4] (./Section/2_Experimental_device.tex
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
 (Font)              scaled to size 11.53198pt on input line 3.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 11.53198pt on input line 3.
-) [6] (./Section/3_Correction_theory.tex
+File: images/21-1.png Graphic file (type bmp)
+<images/21-1.png>
+LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
+(Font)              scaled to size 8.64899pt on input line 26.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 8.64899pt on input line 26.
+) [5] (./Section/3_Correction_theory.tex
 File: images/31-1.png Graphic file (type bmp)
 <images/31-1.png>
-LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 37.
-LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 37.
- [7]
+ [6]
 File: images/33-1.png Graphic file (type bmp)
 <images/33-1.png>
- [8] [9]
+ [7] [8]
 File: images/33-2.png Graphic file (type bmp)
 <images/33-2.png>
- [10] [11]
+ [9] [10]
 File: ../../02_workspace/result/rotation_tx=15.0_tx=20.0/plot/20/20_adjust-value.png Graphic file (type bmp)
 <../../02_workspace/result/rotation_tx=15.0_tx=20.0/plot/20/20_adjust-value.png>
- [12]
+ [11]
 File: ../../02_workspace/result/rotation_tx=15.0_tx=20.0/plot/07/07-3_dft-drag.png Graphic file (type bmp)
 <../../02_workspace/result/rotation_tx=15.0_tx=20.0/plot/07/07-3_dft-drag.png>
 File: ../../02_workspace/result/rotation_tx=15.0_tx=20.0/plot/07/07-4_dft-lift.png Graphic file (type bmp)
 <../../02_workspace/result/rotation_tx=15.0_tx=20.0/plot/07/07-4_dft-lift.png>
- [13]
+ [12]
 File: ../../02_workspace/result/rotation_tx=15.0_tx=20.0/plot/21/21-4_corrected_angle_drag.png Graphic file (type bmp)
 <../../02_workspace/result/rotation_tx=15.0_tx=20.0/plot/21/21-4_corrected_angle_drag.png>
 File: ../../02_workspace/result/rotation_tx=15.0_tx=20.0/plot/21/21-4_corrected_angle_lift.png Graphic file (type bmp)
 <../../02_workspace/result/rotation_tx=15.0_tx=20.0/plot/21/21-4_corrected_angle_lift.png>
- [14] [15]
+ [13] [14]
 File: ../../02_workspace/result/rotation_tx=-15.0_tx=-20.0/plot/20/20_adjust-value.png Graphic file (type bmp)
 <../../02_workspace/result/rotation_tx=-15.0_tx=-20.0/plot/20/20_adjust-value.png>
 File: ../../02_workspace/result/rotation_tx=-15.0_tx=-20.0/plot/21/21-4_corrected_angle_drag.png Graphic file (type bmp)
@@ -441,18 +443,18 @@ Overfull \vbox (0.0766pt too high) has occurred while \output is active []
 
 Overfull \vbox (0.0766pt too high) has occurred while \output is active []
 
- [16]
+ [15]
 File: images/34-1.png Graphic file (type bmp)
 <images/34-1.png>
- [17] [18] [19]
+ [16] [17] [18]
 File: ../../02_workspace/result/offset_dx=5.0_dy=0.0/plot/20/20_adjust-value.png Graphic file (type bmp)
 <../../02_workspace/result/offset_dx=5.0_dy=0.0/plot/20/20_adjust-value.png>
- [20] [21]
+ [19] [20]
 File: ../../02_workspace/result/offset_dx=5.0_dy=0.0/plot/21/21-2_corrected_offset_drag.png Graphic file (type bmp)
 <../../02_workspace/result/offset_dx=5.0_dy=0.0/plot/21/21-2_corrected_offset_drag.png>
 File: ../../02_workspace/result/offset_dx=5.0_dy=0.0/plot/21/21-2_corrected_offset_lift.png Graphic file (type bmp)
 <../../02_workspace/result/offset_dx=5.0_dy=0.0/plot/21/21-2_corrected_offset_lift.png>
- [22]
+ [21]
 File: ../../02_workspace/result/offset_dx=5.0_dy=-5.0/plot/20/20_adjust-value.png Graphic file (type bmp)
 <../../02_workspace/result/offset_dx=5.0_dy=-5.0/plot/20/20_adjust-value.png>
 File: ../../02_workspace/result/offset_dx=5.0_dy=-5.0/plot/21/21-2_corrected_offset_drag.png Graphic file (type bmp)
@@ -471,19 +473,19 @@ Overfull \vbox (0.0766pt too high) has occurred while \output is active []
 
 Overfull \vbox (0.0766pt too high) has occurred while \output is active []
 
- [23] [24]
+ [22] [23]
 File: ../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/05/05_summary-wave.png Graphic file (type bmp)
 <../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/05/05_summary-wave.png>
 File: ../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-2_corrected_offset_drag.png Graphic file (type bmp)
 <../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-2_corrected_offset_drag.png>
 File: ../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-2_corrected_offset_lift.png Graphic file (type bmp)
 <../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-2_corrected_offset_lift.png>
- [25]
+ [24]
 File: ../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-3_interpolated_drag.png Graphic file (type bmp)
 <../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-3_interpolated_drag.png>
 File: ../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-3_interpolated_lift.png Graphic file (type bmp)
 <../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-3_interpolated_lift.png>
- [26]
+ [25]
 File: ../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/07/07-3_dft-drag.png Graphic file (type bmp)
 <../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/07/07-3_dft-drag.png>
 File: ../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/07/07-4_dft-lift.png Graphic file (type bmp)
@@ -492,16 +494,191 @@ File: ../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot
 <../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-4_corrected_angle_drag.png>
 File: ../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-4_corrected_angle_lift.png Graphic file (type bmp)
 <../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-4_corrected_angle_lift.png>
- [27]) [28] (./Section/4_Basic_experiment_(1).tex) [29] (./Section/5_Basic_experiment_(2).tex) [30] (./Section/6_Applied_experiment.tex) [31]
+ [26]) [27] (./Section/4_Basic_experiment.tex [28]
+File: ../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_0.png Graphic file (type bmp)
+<../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_0.png>
+
+Overfull \hbox (6.87582pt too wide) in paragraph at lines 62--63
+ [] 
+ []
+
+File: ../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_150.png Graphic file (type bmp)
+<../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_150.png>
+
+Overfull \hbox (6.87582pt too wide) in paragraph at lines 64--65
+ [][] 
+ []
+
+File: ../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_300.png Graphic file (type bmp)
+<../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_300.png>
+
+Overfull \hbox (6.87582pt too wide) in paragraph at lines 66--67
+ [][] 
+ []
+
+File: ../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_450.png Graphic file (type bmp)
+<../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_450.png>
+
+Overfull \hbox (6.87582pt too wide) in paragraph at lines 68--69
+ [][] 
+ []
+
+File: ../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_600.png Graphic file (type bmp)
+<../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_600.png>
+
+Overfull \hbox (6.87582pt too wide) in paragraph at lines 70--71
+ [][] 
+ []
+
+File: ../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_750.png Graphic file (type bmp)
+<../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_750.png>
+
+Overfull \hbox (6.87582pt too wide) in paragraph at lines 72--73
+ [][] 
+ []
+
+[29]
+File: ../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_900.png Graphic file (type bmp)
+<../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_900.png>
+
+Overfull \hbox (6.87582pt too wide) in paragraph at lines 74--75
+ [][] 
+ []
+
+File: ../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_1050.png Graphic file (type bmp)
+<../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_1050.png>
+
+Overfull \hbox (6.87582pt too wide) in paragraph at lines 76--77
+ [][] 
+ []
+
+File: ../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_1200.png Graphic file (type bmp)
+<../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_1200.png>
+
+Overfull \hbox (6.87582pt too wide) in paragraph at lines 78--79
+ [][] 
+ []
+
+File: ../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_1350.png Graphic file (type bmp)
+<../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_1350.png>
+
+Overfull \hbox (6.87582pt too wide) in paragraph at lines 80--81
+ [][] 
+ []
+
+File: ../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_1500.png Graphic file (type bmp)
+<../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_1500.png>
+
+Overfull \hbox (6.87582pt too wide) in paragraph at lines 82--83
+ [][] 
+ []
+
+File: ../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_1650.png Graphic file (type bmp)
+<../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_1650.png>
+
+Overfull \hbox (6.87582pt too wide) in paragraph at lines 84--85
+ [][] 
+ []
+
+[30]
+File: ../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_1800.png Graphic file (type bmp)
+<../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_1800.png>
+
+Overfull \hbox (6.87582pt too wide) in paragraph at lines 86--87
+ [][] 
+ []
+
+File: ../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_1950.png Graphic file (type bmp)
+<../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_1950.png>
+
+Overfull \hbox (6.87582pt too wide) in paragraph at lines 88--89
+ [][] 
+ []
+
+File: ../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_2100.png Graphic file (type bmp)
+<../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_2100.png>
+
+Overfull \hbox (6.87582pt too wide) in paragraph at lines 90--91
+ [][] 
+ []
+
+File: ../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_2250.png Graphic file (type bmp)
+<../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_2250.png>
+
+Overfull \hbox (6.87582pt too wide) in paragraph at lines 92--93
+ [][] 
+ []
+
+File: ../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_2400.png Graphic file (type bmp)
+<../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_2400.png>
+
+Overfull \hbox (6.87582pt too wide) in paragraph at lines 94--95
+ [][] 
+ []
+
+File: ../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_2550.png Graphic file (type bmp)
+<../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_2550.png>
+
+Overfull \hbox (6.87582pt too wide) in paragraph at lines 96--97
+ [][] 
+ []
+
+[31]
+File: ../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_2700.png Graphic file (type bmp)
+<../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_2700.png>
+
+Overfull \hbox (6.87582pt too wide) in paragraph at lines 98--99
+ [][] 
+ []
+
+File: ../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_2850.png Graphic file (type bmp)
+<../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_2850.png>
+
+Overfull \hbox (6.87582pt too wide) in paragraph at lines 100--101
+ [][] 
+ []
+
+File: ../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_3000.png Graphic file (type bmp)
+<../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_3000.png>
+
+Overfull \hbox (6.87582pt too wide) in paragraph at lines 102--103
+ [][] 
+ []
+
+File: ../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_3150.png Graphic file (type bmp)
+<../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_3150.png>
+
+Overfull \hbox (6.87582pt too wide) in paragraph at lines 104--105
+ [][] 
+ []
+
+File: ../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_3300.png Graphic file (type bmp)
+<../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_3300.png>
+
+Overfull \hbox (6.87582pt too wide) in paragraph at lines 106--107
+ [][] 
+ []
+
+File: ../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_3450.png Graphic file (type bmp)
+<../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_3450.png>
+
+Overfull \hbox (6.87582pt too wide) in paragraph at lines 108--109
+ [][] 
+ []
+
+[32] [33]
+File: ../../02_workspace/result/2-1/plot/01-1_loadcell/01_loadcell_0.png Graphic file (type bmp)
+<../../02_workspace/result/2-1/plot/01-1_loadcell/01_loadcell_0.png>
+) [34] (./Section/5_conclusion.tex) [35]
 No file 0_Master.bbl.
-[32] (./0_Master.aux) ) 
+[36] (./0_Master.aux) ) 
 Here is how much of TeX's memory you used:
- 2919 strings out of 481768
- 47398 string characters out of 5933619
+ 3022 strings out of 481768
+ 53812 string characters out of 5933619
  295431 words of memory out of 5000000
- 18235 multiletter control sequences out of 15000+600000
+ 18312 multiletter control sequences out of 15000+600000
  553873 words of font info for 123 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 31i,14n,31p,450b,444s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 31i,14n,31p,450b,518s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on 0_Master.dvi (33 pages, 91468 bytes).
+Output written on 0_Master.dvi (37 pages, 93584 bytes).

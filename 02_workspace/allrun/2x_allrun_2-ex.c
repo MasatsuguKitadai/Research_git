@@ -37,7 +37,7 @@ int main()
     int split_angle = 24;
     double x, y;
 
-    int number = 4;
+    int number = 5;
 
     x = 0.08;
     y = 0.06;

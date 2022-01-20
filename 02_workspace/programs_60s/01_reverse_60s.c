@@ -55,6 +55,8 @@ int reverse(char date[], char angle[])
     double value[5000][ch];
     double ch0, ch1, ch2; // ch0:drag, ch1:lift, ch2:load-cell
 
+    double time = 0;
+
     // 配列の初期化
 
     for (i = 0; i < 5000; i++)
@@ -103,8 +105,9 @@ int reverse(char date[], char angle[])
 
     for (i = 0; i < datalength; i++)
     {
+        time = i * 0.2;
         fprintf(fp_csv, "%.3f,%.3f,%.3f\n", value[i][0], value[i][1], value[i][2]);
-        fprintf(fp_dat, "%d\t%.3f\t%.3f\t%.3f\n", i, value[i][0], value[i][1], value[i][2]);
+        fprintf(fp_dat, "%d\t%.3f\t%.3f\t%.3f\t%.1f\n", i, value[i][0], value[i][1], value[i][2], time);
     }
 
     fclose(fp_csv);
@@ -116,25 +119,30 @@ int reverse(char date[], char angle[])
     // ディレクトリの作成
     char directoryname_plot_1[100];
     char directoryname_plot_2[100];
+    char directoryname_plot_3[100];
 
     sprintf(directoryname_plot_1, "../result/%s/plot/01-1_loadcell", date);
     sprintf(directoryname_plot_2, "../result/%s/plot/01-2_strainsensors", date);
+    sprintf(directoryname_plot_3, "../result/%s/plot/01-3_allsensors", date);
 
     mkdir(directoryname_plot_1, S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IXOTH | S_IXOTH);
     mkdir(directoryname_plot_2, S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IXOTH | S_IXOTH);
+    mkdir(directoryname_plot_3, S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IXOTH | S_IXOTH);
 
     char filename_plot_1[100];
     char filename_plot_2[100];
+    char filename_plot_3[100];
 
     sprintf(filename_dat, "../result/%s/dat/01_reverse/01_%s.dat", date, angle);
     sprintf(filename_plot_1, "../result/%s/plot/01-1_loadcell/01_loadcell_%s.png", date, angle);
     sprintf(filename_plot_2, "../result/%s/plot/01-2_strainsensors/01_strainsensors_%s.png", date, angle);
+    sprintf(filename_plot_3, "../result/%s/plot/01-3_allsensors/01_allsensors_%s.png", date, angle);
 
     /*****************************************************************************/
 
     // range x
     int x_min = 0;
-    int x_max = 3000;
+    int x_max = 600;
 
     // range y
     double y_min = -1.5;
@@ -145,7 +153,7 @@ int reverse(char date[], char angle[])
     double y_max_loadcell = 3;
 
     // label
-    const char *xxlabel = "Time [1/5 s]";
+    const char *xxlabel = "Time [s]";
     const char *yylabel = "Output voltage [V]";
     char label[100];
 
@@ -184,10 +192,10 @@ int reverse(char date[], char angle[])
     fprintf(gp, "set xlabel '%s'offset 0.0,0\n", xxlabel);
     fprintf(gp, "set yrange [%.3f:%.3f]\n", y_min_loadcell, y_max_loadcell);
     fprintf(gp, "set ylabel '%s'offset 1,0.0\n", yylabel);
-    fprintf(gp, "set title '%s deg'\n", label);
+    fprintf(gp, "set title '%s [deg]'\n", label);
 
     // fprintf(gp, "set samples 10000\n");
-    fprintf(gp, "plot '%s' using 1:4 with lines lc 'black' title 'loadcell'\n", filename_dat);
+    fprintf(gp, "plot '%s' using 5:4 with lines lc 'black' title 'loadcell'\n", filename_dat);
     fflush(gp); // Clean up Data
 
     /*****************************************************************************/
@@ -195,7 +203,7 @@ int reverse(char date[], char angle[])
     fprintf(gp, "set terminal pngcairo enhanced font 'Times New Roman,15' \n");
     fprintf(gp, "set output '%s'\n", filename_plot_2);
     // fprintf(gp, "set multiplot\n");
-    fprintf(gp, "set key right top\n");
+    fprintf(gp, "set key left top\n");
     fprintf(gp, "set key font ',22'\n");
     fprintf(gp, "set term pngcairo size 1280, 960 font ',27'\n");
     // fprintf(gp, "set size ratio %.3f\n", size);
@@ -209,10 +217,35 @@ int reverse(char date[], char angle[])
     fprintf(gp, "set xlabel '%s'offset 0.0,0\n", xxlabel);
     fprintf(gp, "set yrange [%.3f:%.3f]\n", y_min, y_max);
     fprintf(gp, "set ylabel '%s'offset 1,0.0\n", yylabel);
-    fprintf(gp, "set title '%s deg'\n", label);
+    fprintf(gp, "set title '%s [deg]'\n", label);
 
     // fprintf(gp, "set samples 10000\n");
-    fprintf(gp, "plot '%s' using 1:2 with lines lc 'blue' title 'Drag', '%s' using 1:3 with lines lc 'red' title 'Lift'\n", filename_dat, filename_dat);
+    fprintf(gp, "plot '%s' using 5:2 with lines lc 'blue' title 'Drag', '%s' using 5:3 with lines lc 'red' title 'Lift'\n", filename_dat, filename_dat);
+    fflush(gp); // Clean up Data
+
+    /*****************************************************************************/
+
+    fprintf(gp, "set terminal pngcairo enhanced font 'Times New Roman,15' \n");
+    fprintf(gp, "set output '%s'\n", filename_plot_3);
+    // fprintf(gp, "set multiplot\n");
+    fprintf(gp, "set key left top\n");
+    fprintf(gp, "set key font ',22'\n");
+    fprintf(gp, "set term pngcairo size 1280, 960 font ',27'\n");
+    // fprintf(gp, "set size ratio %.3f\n", size);
+
+    fprintf(gp, "set lmargin screen 0.10\n");
+    fprintf(gp, "set rmargin screen 0.90\n");
+    fprintf(gp, "set tmargin screen 0.90\n");
+    fprintf(gp, "set bmargin screen 0.15\n");
+
+    fprintf(gp, "set xrange [%d:%d]\n", x_min, x_max);
+    fprintf(gp, "set xlabel '%s'offset 0.0,0\n", xxlabel);
+    fprintf(gp, "set yrange [%.3f:%.3f]\n", y_min, y_max_loadcell);
+    fprintf(gp, "set ylabel '%s'offset 1,0.0\n", yylabel);
+    fprintf(gp, "set title '%s [deg]'\n", label);
+
+    // fprintf(gp, "set samples 10000\n");
+    fprintf(gp, "plot '%s' using 5:4 with lines lc 'black' title 'loadcell', '%s' using 5:2 with lines lc 'blue' title 'Drag', '%s' using 5:3 with lines lc 'red' title 'Lift'\n", filename_dat, filename_dat, filename_dat);
     fflush(gp); // Clean up Data
 
     fprintf(gp, "exit\n"); // Quit gnuplot

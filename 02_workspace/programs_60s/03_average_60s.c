@@ -45,6 +45,7 @@ int average(char date[], char angle[])
     int data_flame = 5000;
     double value[data_flame][ch];
     double ch0, ch1, ch2; // ch0:drag, ch1:lift, ch2:load-cell
+    double time = 0;
 
     // 配列の初期化
 
@@ -130,8 +131,9 @@ int average(char date[], char angle[])
 
     for (i = 0; i < 6; i++)
     {
+        time = average_time[i] * 0.2;
         fprintf(fp_csv, "%lf,%lf,%lf\n", average_value[i][0], average_value[i][1], average_value[i][2]);
-        fprintf(fp_dat, "%d\t%lf\t%lf\t%lf\n", average_time[i], average_value[i][0], average_value[i][1], average_value[i][2]);
+        fprintf(fp_dat, "%d\t%lf\t%lf\t%lf\t%.1f\n", average_time[i], average_value[i][0], average_value[i][1], average_value[i][2], time);
     }
 
     fclose(fp_csv);
@@ -173,7 +175,7 @@ int average(char date[], char angle[])
 
     // range x
     int x_min = 0;
-    int x_max = 3000;
+    int x_max = 600;
 
     // range y
     double y_min = -1;
@@ -184,7 +186,7 @@ int average(char date[], char angle[])
     double y_max_loadcell = 2;
 
     // label
-    const char *xxlabel = "Time [1/5 s]";
+    const char *xxlabel = "Time [s]";
     const char *yylabel = "Output voltage [V]";
     char label_loadcell[100];
     char label_drag[100];
@@ -196,9 +198,9 @@ int average(char date[], char angle[])
     angle_2 = atoi(angle);
     angle_2 = angle_2 / 10;
 
-    sprintf(label_loadcell, "%.1f deg (loadcell)", angle_2);
-    sprintf(label_drag, "%.1f deg (drag)", angle_2);
-    sprintf(label_lift, "%.1f deg (lift)", angle_2);
+    sprintf(label_loadcell, "%.1f [deg] (loadcell)", angle_2);
+    sprintf(label_drag, "%.1f [deg] (drag)", angle_2);
+    sprintf(label_lift, "%.1f [deg] (lift)", angle_2);
 
     /*****************************************************************************/
 
@@ -216,7 +218,7 @@ int average(char date[], char angle[])
     fprintf(gp, "set terminal pngcairo enhanced font 'Times New Roman,15' \n");
     fprintf(gp, "set output '%s'\n", filename_plot_1);
     // fprintf(gp, "set multiplot\n");
-    fprintf(gp, "set key right top\n");
+    fprintf(gp, "set key left top\n");
     fprintf(gp, "set key font ',22'\n");
     fprintf(gp, "set term pngcairo size 1280, 960 font ',27'\n");
     // fprintf(gp, "set size ratio %.3f\n", size);
@@ -233,7 +235,7 @@ int average(char date[], char angle[])
     fprintf(gp, "set title '%s '\n", label_loadcell);
 
     // fprintf(gp, "set samples 10000\n");
-    fprintf(gp, "plot '%s' using 1:4 with points pt 5 ps 2 lc 'red' title 'average', '%s' using 1:4 with lines lc 'gray20' title 'corrected'\n", filename_dat_1, filename_dat_2);
+    fprintf(gp, "plot '%s' using 5:4 with points pt 5 ps 2 lc 'red' title 'average', '%s' using 5:4 with lines lc 'gray20' title 'corrected'\n", filename_dat_1, filename_dat_2);
     fflush(gp); // Clean up Data
 
     // graph : drag
@@ -241,7 +243,7 @@ int average(char date[], char angle[])
     fprintf(gp, "set terminal pngcairo enhanced font 'Times New Roman,15' \n");
     fprintf(gp, "set output '%s'\n", filename_plot_2);
     // fprintf(gp, "set multiplot\n");
-    fprintf(gp, "set key right top\n");
+    fprintf(gp, "set key left top\n");
     fprintf(gp, "set key font ',22'\n");
     fprintf(gp, "set term pngcairo size 1280, 960 font ',27'\n");
     // fprintf(gp, "set size ratio %.3f\n", size);
@@ -258,7 +260,7 @@ int average(char date[], char angle[])
     fprintf(gp, "set title '%s '\n", label_drag);
 
     // fprintf(gp, "set samples 10000\n");
-    fprintf(gp, "plot '%s' using 1:2 with points pt 5 ps 2 lc 'red' title 'average', '%s' using 1:2 with lines lc 'gray20' title 'corrected'\n", filename_dat_1, filename_dat_2);
+    fprintf(gp, "plot '%s' using 5:2 with points pt 5 ps 2 lc 'red' title 'average', '%s' using 5:2 with lines lc 'gray20' title 'corrected'\n", filename_dat_1, filename_dat_2);
     fflush(gp); // Clean up Data
 
     // graph : lift
@@ -266,7 +268,7 @@ int average(char date[], char angle[])
     fprintf(gp, "set terminal pngcairo enhanced font 'Times New Roman,15' \n");
     fprintf(gp, "set output '%s'\n", filename_plot_3);
     // fprintf(gp, "set multiplot\n");
-    fprintf(gp, "set key right top\n");
+    fprintf(gp, "set key left top\n");
     fprintf(gp, "set key font ',22'\n");
     fprintf(gp, "set term pngcairo size 1280, 960 font ',27'\n");
     // fprintf(gp, "set size ratio %.3f\n", size);
@@ -278,12 +280,12 @@ int average(char date[], char angle[])
 
     fprintf(gp, "set xrange [%d:%d]\n", x_min, x_max);
     fprintf(gp, "set xlabel '%s'offset 0.0,0\n", xxlabel);
-    fprintf(gp, "set yrange [%.3f:%.3f]\n", y_min, y_max);
+    fprintf(gp, "set yrange [%.3f:%.3f]\n", y_min, y_max_loadcell);
     fprintf(gp, "set ylabel '%s'offset 0.5,0.0\n", yylabel);
     fprintf(gp, "set title '%s '\n", label_lift);
 
     // fprintf(gp, "set samples 10000\n");
-    fprintf(gp, "plot '%s' using 1:3 with points pt 5 ps 2 lc 'red' title 'average', '%s' using 1:3 with lines lc 'gray20' title 'corrected'\n", filename_dat_1, filename_dat_2);
+    fprintf(gp, "plot '%s' using 5:3 with points pt 5 ps 2 lc 'red' title 'average', '%s' using 5:3 with lines lc 'gray20' title 'corrected'\n", filename_dat_1, filename_dat_2);
     fflush(gp); // Clean up Data
 
     fprintf(gp, "exit\n"); // Quit gnuplot
