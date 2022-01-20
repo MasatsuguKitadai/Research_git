@@ -37,6 +37,8 @@ int main()
     int split_angle = 24;
     double x, y;
 
+    int number = 4;
+
     x = 0.08;
     y = 0.06;
 
@@ -57,7 +59,7 @@ int main()
     printf("\n---------------------------------------------------------------------------\n\n");
 
     // ex-1_combine
-    combine(dataname, range_angle, model);
+    combine(dataname, range_angle, model, number);
 
     printf("\n---------------------------------------------------------------------------\n\n");
 

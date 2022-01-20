@@ -56,7 +56,7 @@ lineskip=-0.5ex
 {\LARGE \@title \par}
 \end{center}
 \begin{flushright}
-{\large 報告書 NO.09 - 2\quad\@date\quad\@author}
+{\large 報告書 NO.09 - 3\quad\@date\quad\@author}
 \end{flushright}
 \par\vskip 1.5em
 }
@@ -75,9 +75,8 @@ lineskip=-0.5ex
 \section*{報告内容}
 \begin{enumerate}[1.]
     \item 進捗状況
-    \item 二次補間による補正
-    \item 卒業論文について
-    \item 使用する図表
+    \item 作用力測定装置と校正実験装置の関係
+    \item ラグランジュ補間による補正
 \end{enumerate}
 
 \section{進捗状況}
@@ -121,7 +120,7 @@ $x'$軸は$x$軸から$\theta_x$，$y'$軸は$y$軸から$\theta_y$だけ回転�
 $x''$軸は$x$軸から$y$方向に$\Delta x$，
 $y''$軸は$y$軸から$x$方向に$\Delta y$だけオフセットを持つ状態となる．
 
-\section{二次補間による補正}
+\section{ラグランジュ補間による補正}
 
 \subsection{複合状態における補正理論}
 
@@ -226,23 +225,21 @@ Case 7 に対する座標系の回転おける補正理論の適用過程につ�
 また，プロットされたデータ間隔は異なることもわかる．
 このとき，ラグランジュ補間を用いて，等間隔のデータを得るための処理を行う．
 なお，データの採用点については上述の処理によって行うこととする．
-ラグランジュ補間を行った結果を以下のFig.，Fig.に示す．
+ラグランジュ補間を行った結果を以下のFig.5，Fig.6に示す．
 
-
-\begin{figure}
+\begin{figure}[htbp]
     \begin{center}
         \includegraphics[width=85mm]{../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-3_interpolated_drag.png}
-        \caption{Offset corrected value (Drag) }
+        \caption{Interporlated value (Drag) }
         \includegraphics[width=85mm]{../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-3_interpolated_lift.png}
-        \caption{Offset corrected value (lift) }
+        \caption{Interporlated value (lift) }
     \end{center}
 \end{figure}
 
-
 上記のFig.，Fig.と比較すると等間隔のデータを得られていることがわかる．
 次に，フーリエ変換を適用する．
-このときの結果を以下のFig.，Fig.に示す．
-また，波数1の成分についての算出値を以下のTable に示す．
+このときの結果を以下のFig.7，Fig.8に示す．
+また，波数1の成分についての算出値を以下のTable 2に示す．
 
 \begin{table}[htbp]
     \begin{center}
@@ -258,8 +255,7 @@ Case 7 に対する座標系の回転おける補正理論の適用過程につ�
 
 \newpage
 
-
-\begin{figure}
+\begin{figure}[htbp]
     \begin{center}
         \includegraphics[width=85mm]{../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/07/07-3_dft-drag.png}
         \caption{DFT result (Drag) }
@@ -269,9 +265,9 @@ Case 7 に対する座標系の回転おける補正理論の適用過程につ�
 \end{figure}
 
 
-Fig. ，Fig. より，波数1についてピークがあることがわかり，
+Fig.7，Fig.8より，波数1についてピークがあることがわかり，
 座標軸の回転における補正理論の適用結果と同様にデータの特徴を正しく捉えられているといえる．
-ここで，Table について，式()，式()，式()より
+ここで，Table 3 について，
 回転角$\theta_1$，$\theta_2$をそれぞれ算出する．
 
 \begin{table}[htbp]
@@ -291,21 +287,73 @@ Table の Case 7 で設定したパラメータと比較すると，異なって
 これは，ラグランジュ補間公式を用いた2次近似による誤差が生じているためと考えられる．
 
 また，算出した回転角$\theta_{1\;\mathrm{test}}$，$\theta_{2\;\mathrm{test}}$を用いて
-座標系の回転における補正理論を適用した結果を以下のFig.，Fig.,に示す．
+座標系の回転における補正理論を適用した結果を以下のFig.9，Fig.10,に示す．
 
-\begin{figure}
+\begin{figure}[htbp]
     \footnotesize
     \begin{center}
         \includegraphics[width=85mm]{../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-4_corrected_angle_drag.png}
-        \caption{Corrected data (Drag) }
+        \caption{Corrected test data (Drag) }
         \includegraphics[width=85mm]{../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-4_corrected_angle_lift.png}
-        \caption{Corrected data (Lift) }
+        \caption{Corrected test data (Lift) }
     \end{center}
 \end{figure}
 
+\newpage
 
-\section{卒業論文について}
+\subsection{実験結果への適用}
 
-\section{使用する図表}
+作成したラグランジュ補間を用いた補正理論を実験結果へ適用する．
+補正処理前をFig.11に，補正処理後をFig.12，Fig.13に示す．
+
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=85mm]{../../../02_workspace/result/2-ex/plot/05/05_summary-wave.png}
+        \caption{Experiment data}
+    \end{center}
+\end{figure}
+
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=85mm]{../../../02_workspace/result/2-ex/plot/21/21-4_corrected_angle_drag.png}
+        \caption{Corrected experiment data (Drag) }
+        \includegraphics[width=85mm]{../../../02_workspace/result/2-ex/plot/21/21-4_corrected_angle_lift.png}
+        \caption{Corrected experiment data (Lift) }
+    \end{center}
+\end{figure}
+
+\newpage
+
+このときに算出された回転角は以下のTable 4 のようになる．
+
+\begin{table}[htbp]
+    \begin{center}
+        \caption{Calculated rotation angle}
+        \begin{tabular}{|p{20mm}|p{20mm}|}
+            \hline
+            \multicolumn{1}{|c|}{$\theta_1$ [deg]} & \multicolumn{1}{|c|}{$\theta_2$ [deg]} \\ \hline
+            \multicolumn{1}{|c|}{7.894}           & \multicolumn{1}{|c|}{5.088}           \\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+また，実験結果から得た
+作用力測定装置と校正実験装置の座標系のオフセットを以下のTable 5 に示す
+
+\begin{table}[htbp]
+    \begin{center}
+        \caption{Offset value}
+        \begin{tabular}{|p{20mm}|p{20mm}|}
+            \hline
+            \multicolumn{1}{|c|}{$\Delta x$ [mm]} & \multicolumn{1}{|c|}{$\Delta y$ [mm]} \\ \hline
+            \multicolumn{1}{|c|}{0.08}           & \multicolumn{1}{|c|}{0.06}           \\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+オフセットの値は非常に小さく，補正の際に大きく影響を与えていない可能性があることがわかる．
+したがって，他の要因によって不規則な波形を示している可能性が高く，引き続き調べる必要がある．
 
 \end{document}

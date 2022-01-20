@@ -10,7 +10,7 @@ DATE    :
 
 FILE *fp, *fp_dat, *fp_csv, *gp;
 /*********************************   MAIN   *********************************/
-int combine(char date[], int range, char model[])
+int combine(char date[], int range, char model[], int num)
 {
     /*****************************************************************************/
     // ディレクトリの作成
@@ -58,7 +58,6 @@ int combine(char date[], int range, char model[])
 
     int i, j;
 
-    int num = 3;
     int count = 0;
     double buf, ch0, ch1, ch2;
     double value[num][split][3];
@@ -113,9 +112,12 @@ int combine(char date[], int range, char model[])
 
     for (i = 0; i < split; i++)
     {
-        value_sum[i][0] = value[0][i][0] + value[1][i][0] + value[2][i][0];
-        value_sum[i][1] = value[0][i][1] + value[1][i][1] + value[2][i][1];
-        value_sum[i][2] = value[0][i][2] + value[1][i][2] + value[2][i][2];
+        for (j = 0; j < num; j++)
+        {
+            value_sum[i][0] = value[j][i][0] + value_sum[i][0];
+            value_sum[i][1] = value[j][i][1] + value_sum[i][1];
+            value_sum[i][2] = value[j][i][2] + value_sum[i][2];
+        }
 
         value_ave[i][0] = value_sum[i][0] / num;
         value_ave[i][1] = value_sum[i][1] / num;
