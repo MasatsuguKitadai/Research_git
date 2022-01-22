@@ -258,7 +258,7 @@ int netvoltage(char date[], int range, int split)
     for (i = 0; i < split; i++)
     {
         fprintf(fp_csv, "%.1f,%lf,%lf,%lf\n", angle[i], voltage_x[i], voltage_y[i], voltage_net[i]);
-        fprintf(fp_dat, "%.1f\t%f\t%f\t%f\n", angle[i], voltage_x[i], voltage_y[i], voltage_net[i]);
+        fprintf(fp_dat, "%.1f\t%.3f\t%.3f\t%.3f\n", angle[i], voltage_x[i], voltage_y[i], voltage_net[i]);
     }
 
     fclose(fp_csv);
@@ -268,8 +268,8 @@ int netvoltage(char date[], int range, int split)
     fp_dat = fopen(filename_dat_average, "w");
 
     fprintf(fp_csv, "%lf,%lf,%lf\n", ave[0], ave[1], ave[2]);
-    fprintf(fp_dat, "-30\t%lf\t%lf\t%lf\n", ave[0], ave[1], ave[2]);
-    fprintf(fp_dat, "360\t%lf\t%lf\t%lf\n", ave[0], ave[1], ave[2]);
+    fprintf(fp_dat, "-30\t%.3f\t%.3f\t%.3f\n", ave[0], ave[1], ave[2]);
+    fprintf(fp_dat, "360\t%.3f\t%.3f\t%.3f\n", ave[0], ave[1], ave[2]);
 
     fclose(fp_csv);
     fclose(fp_dat);
@@ -406,7 +406,7 @@ int netvoltage(char date[], int range, int split)
     fprintf(gp, "set xrange [%.3f:%.3f]\n", x_min, x_max);
     fprintf(gp, "set xlabel '%s'offset 0.0,0\n", xxlabel);
     fprintf(gp, "set xtics %.3f\n", interval);
-    fprintf(gp, "set yrange [0.6:0.7]\n");
+    fprintf(gp, "set yrange [0.95:1.05]\n");
     fprintf(gp, "set ylabel '%s'offset 1,0.0\n", yylabel_2);
     fprintf(gp, "set ytics 0.01\n");
     fprintf(gp, "set title '%s'\n", label_2);

@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.12.14)  21 JAN 2022 18:50
+This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.12.14)  22 JAN 2022 17:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -485,23 +485,123 @@ File: ../../../02_workspace/result/2-ex/plot/05/05_summary-wave.png Graphic file
  [2]
 File: ../images/31-1.png Graphic file (type bmp)
 <../images/31-1.png>
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 283.
- [3]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 283.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 266.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\theta' on input line 266.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 266.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 266.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 266.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\theta' on input line 266.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 266.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 266.
+
+[3]
+File: ../images/33-2.png Graphic file (type bmp)
+<../images/33-2.png>
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 6.72699pt on input line 334.
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 4.805pt on input line 334.
+File: ../images/34-1.png Graphic file (type bmp)
+<../images/34-1.png>
+ [4]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 396.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\alpha' on input line 396.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 396.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 430.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 430.
+
+[5]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \hbox (6.3543pt too wide) in paragraph at lines 545--550
+ [] 
+ []
+
+File: ../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/05/05_summary-wave.png Graphic file (type bmp)
+<../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/05/05_summary-wave.png>
+File: ../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-2_corrected_offset_drag.png Graphic file (type bmp)
+<../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-2_corrected_offset_drag.png>
+File: ../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-2_corrected_offset_lift.png Graphic file (type bmp)
+<../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-2_corrected_offset_lift.png>
+[6]
+File: ../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-3_interpolated_drag.png Graphic file (type bmp)
+<../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-3_interpolated_drag.png>
+File: ../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-3_interpolated_lift.png Graphic file (type bmp)
+<../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-3_interpolated_lift.png>
+ [7]
+File: ../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/07/07-3_dft-drag.png Graphic file (type bmp)
+<../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/07/07-3_dft-drag.png>
+File: ../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/07/07-4_dft-lift.png Graphic file (type bmp)
+<../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/07/07-4_dft-lift.png>
+File: ../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-4_corrected_angle_drag.png Graphic file (type bmp)
+<../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-4_corrected_angle_drag.png>
+File: ../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-4_corrected_angle_lift.png Graphic file (type bmp)
+<../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-4_corrected_angle_lift.png>
+File: ../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/09/09_summary-outputvoltage-net.png Graphic file (type bmp)
+<../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/09/09_summary-outputvoltage-net.png>
+ [8]
+File: ../../../02_workspace/result/2-ex/plot/21/21-4_corrected_angle_drag.png Graphic file (type bmp)
+<../../../02_workspace/result/2-ex/plot/21/21-4_corrected_angle_drag.png>
+File: ../../../02_workspace/result/2-ex/plot/21/21-4_corrected_angle_lift.png Graphic file (type bmp)
+<../../../02_workspace/result/2-ex/plot/21/21-4_corrected_angle_lift.png>
+File: ../../../02_workspace/result/2-ex/plot/09/09_summary-outputvoltage-net.png Graphic file (type bmp)
+<../../../02_workspace/result/2-ex/plot/09/09_summary-outputvoltage-net.png>
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 732.
+ [9]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 732.
  (./TOYOTIRES_220123.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 283.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 283.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 732.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 732.
 Package rerunfilecheck Info: File `TOYOTIRES_220123.out' has not changed.
-(rerunfilecheck)             Checksum: 122D8F255659B432D8B4C8DB50A79F2F;599.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 283.
+(rerunfilecheck)             Checksum: 436F8271B3F7387AFD9EED38A2232AB2;1730.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 732.
  ) 
 Here is how much of TeX's memory you used:
- 8421 strings out of 481768
- 124260 string characters out of 5933619
- 412080 words of memory out of 5000000
- 23660 multiletter control sequences out of 15000+600000
- 541962 words of font info for 72 fonts, out of 8000000 for 9000
+ 8510 strings out of 481768
+ 129883 string characters out of 5933619
+ 413878 words of memory out of 5000000
+ 23717 multiletter control sequences out of 15000+600000
+ 544903 words of font info for 83 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 34i,9n,36p,290b,440s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,14n,36p,352b,440s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on TOYOTIRES_220123.dvi (3 pages, 19340 bytes).
+Output written on TOYOTIRES_220123.dvi (9 pages, 55540 bytes).

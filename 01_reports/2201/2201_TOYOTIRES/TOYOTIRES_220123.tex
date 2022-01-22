@@ -260,6 +260,454 @@ $y''$軸は$y$軸から$x$方向に$\Delta y$だけオフセットを持つ状�
     \end{center}
 \end{figure}
 
+\subsection{座標系の回転における補正理論}
+\vskip \baselineskip
+
+\subsubsection{回転角$\theta_x$，$\theta_y$の算出}
+
+はじめに，回転角$\theta_{x}$，$\theta_{y}$を算出する．
+理論式における$v_{x\;\mathrm{theory}}$及び$v_{y\;\mathrm{theory}}$は正弦波とその位相差で表すことができる．
+したがって，校正実験結果の各角度の出力電圧勾配においても同様の正弦波と
+その位相差で表すことが可能であると予想することができる．
+このとき，離散フーリエ変換を適用し，
+波数1の成分について,実部を$Re$，虚部を$Im$として
+位相角$\phi$を求めることができる．
+
+\begin{align*}
+    \phi = \arctan \left(\frac{Im}{Re}\right) \cdot \frac{180}{\pi}
+\end{align*}
+\vskip \baselineskip
+
+抗力方向の結果から得られた位相角を$\phi_1$，揚力方向から得られた位相角を$\phi_2$と
+するとき，抗力方向の出力電圧勾配$v_d$と
+正規座標系における$x$軸方向の出力電圧勾配の理論値$v_{x\;\mathrm{theory}}$との位相差
+$\theta_1$，
+揚力方向の出力電圧勾配$v_l$と
+正規座標系における$y$軸方向の出力電圧勾配の理論値$v_{y\;\mathrm{theory}}$との位相差
+$\theta_2$を以下のように表される．
+
+\begin{align*}
+    \theta_1 = \pi - \phi_1 \\
+    \theta_2 = \frac{\pi}{2} - \phi_2
+\end{align*}
+\vskip \baselineskip
+
+したがって，$x'$軸，$y'$軸は左回りを正方向として，それぞれ$\theta_1$，$\theta_2$だけ
+回転していることとなる．
+また，作用力測定装置に取り付けられた抗力・揚力方向のひずみセンサの取付角$\phi_s$は
+位相角$\phi_1$，$\phi_2$より求めることができる．
+
+\begin{align*}
+    \phi_s = \left| \phi_1 - \phi_2 \right|
+\end{align*}
+
+\subsubsection{出力電圧勾配の座標変換}
+
+位相角$\theta_1$，$\theta_2$が求められたことから，
+それらを用いて出力電圧勾配の座標変換を行う．
+ここで，座標系[1]の$x'$軸，$y'$軸を
+それぞれ$f_{x}\left(x\right)$，$f_{y}\left(x\right)$として，
+正規座標軸の$x$を用いた式で表す．
+
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=75mm]{../images/33-2.png}
+        \caption{}
+    \end{center}
+\end{figure}
+
+算出した位相角$\theta_1$，$\theta_2$より，$f_{x}\left(x\right)$，$f_{y}\left(x\right)$は
+以下のように表される．
+
+\begin{align*}
+    f_{x}\left(x\right) & = \tan \theta_1 \; x            \\
+    f_{y}\left(x\right) & = - \frac{1}{\tan \theta_2}\; x
+\end{align*}
+\vskip \baselineskip
+
+このとき，作用力$F$は，Fig.に示す点$F$の座標を表すベクトルと考えることができる．
+また，その座標はFig.より，$f_{x}\left(x\right)$，$f_{y}\left(x\right)$の法線で，
+点$v_{x'}$，$v_{y'}$を通る直線，
+$f_{x2}\left(x\right)$，$f_{y2}\left(x\right)$の交点であることがわかる．\par
+ここで，ひずみゲージから得ることのできる出力電圧の傾きから，
+$v_{x'}$，$v_{y'}$のベクトルの大きさ$|\boldsymbol{v_{x'}}|$，$|\boldsymbol{v_{y'}}|$を
+得ることができる．
+角度$\theta_1$，$\theta_2$が求められていることから，
+点$v_{x'}$，$v_{y'}$の座標を以下のように求めることができる．
+
+\begin{align*}
+    v_{x'} \left(x ,y\right) & = \left(|\boldsymbol{v_{x'}}| \cos \theta_1,\; |\boldsymbol{v_{x'}}| \sin \theta_2\right)    \\
+    v_{y'} \left(x ,y\right) & = \left( - |\boldsymbol{v_{y'}}| \sin \theta_1,\; |\boldsymbol{v_{y'}}| \cos \theta_2\right)
+\end{align*}
+\vskip \baselineskip
+
+次に，直線$f_{x2}\left(x\right)$，$f_{y2}\left(x\right)$を求める．
+$f_{x}\left(x\right)$，$f_{y}\left(x\right)$，点$v_{x'}$，$v_{y'}$の座標から
+それぞれ以下のように算出される．
+
+\begin{align*}
+    f_{x2}\left(x\right) & = - \frac{1}{\tan \theta_1} \; x + \frac{|v_{x'}|}{\sin \theta_1} \\
+    f_{y2}\left(x\right) & = \tan \theta_2\; x + \frac{|v_{y'}|}{\cos \theta_2}
+\end{align*}
+\vskip \baselineskip
+
+以上の$f_{x2}\left(x\right)$，$f_{y2}\left(x\right)$から，
+交点の座標$v\left(x,y\right)$を求めると以下に示す．
+
+\begin{align*}
+    x & = \frac{v_{x'} \cos \theta_2 - v_{y'} \sin \theta_1}{\sin \theta_1 \sin \theta_2 + \cos \theta_1 \cos \theta_2}                                                                             \\
+    y & = - \frac{1}{\tan \theta_1} \; \left(\frac{v_{x'} \cos \theta_2 - v_{y'} \sin \theta_1}{\sin \theta_1 \sin \theta_2 + \cos \theta_1 \cos \theta_2}\right) + \frac{|v_{x'}|}{\sin \theta_1} \notag  \\
+    & = \tan \theta_2\; \left(\frac{v_{x'} \cos \theta_2 - v_{y'} \sin \theta_1}{\sin \theta_1 \sin \theta_2 + \cos \theta_1 \cos \theta_2}\right) + \frac{|v_{y'}|}{\cos \theta_2}
+\end{align*}
+\vskip \baselineskip
+
+したがって，正規座標系における$x$軸方向の出力電圧勾配$v_x$および揚力方向の$v_y$は，以下のように表される．
+
+\begin{align*}
+    v_x & = \frac{v_{x'} \cos \theta_2 - v_{y'} \sin \theta_1}{\sin \theta_1 \sin \theta_2 + \cos \theta_1 \cos \theta_2}                                                                             \\
+    v_y & = - \frac{1}{\tan \theta_1} \; \left(\frac{v_{x'} \cos \theta_2 - v_{y'} \sin \theta_1}{\sin \theta_1 \sin \theta_2 + \cos \theta_1 \cos \theta_2}\right) + \frac{|v_{x'}|}{\sin \theta_1} \notag  \\
+        & = \tan \theta_2\; \left(\frac{v_{x'} \cos \theta_2 - v_{y'} \sin \theta_1}{\sin \theta_1 \sin \theta_2 + \cos \theta_1 \cos \theta_2}\right) + \frac{|v_{y'}|}{\cos \theta_2}
+\end{align*}
+\vskip \baselineskip
+
+\subsection{座標系のオフセットにおける補正理論}
+
+次に，正規座標系と座標系[2]のオフセットの補正理論を説明する．
+ここでは，回転角はない($\theta_1 = 0$，$\theta_2 = 0$)として考える．
+正規座標系と座標系[2]の中心との位置関係にオフセット$\Delta x$，$\Delta y$を持つ．
+ここで，作用力$F$を与えるとき，その作用線はオフセット$\Delta x$，$\Delta y$によって
+正規座標系の中心$o$を通ることはなく，座標系[2]の中心$o''$を通る．
+このとき，作用点と点$o''$を通る直線(青点線)と$x''$軸の角度を$\theta$，
+作用点と点$o$を通る直線(赤点線)と$x$軸の角度を$\varphi$とする．
+また，作用点と点$o'$を通る直線(青点線)と作用点と点$o$を通る直線(赤点線)の角度を$\alpha$とする．
+角度$\theta$は校正実験時に記録される角度となる．
+
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=75mm]{../images/34-1.png}
+        \caption{}
+    \end{center}
+\end{figure}
+
+\newpage
+
+\subsubsection{角度$\alpha$の算出}
+供試体の半径を$r$とするとき，作用点$F(x,y)$の座標は角度$\varphi$を用いて以下のように表すことができる．
+
+\begin{align*}
+    x &= r \cos \varphi\\
+    y &= r \sin \varphi
+\end{align*}
+\vskip \baselineskip
+
+また，座標系[2]において，作用点$F(x'',y'')$の座標はオフセット$\Delta x$，$\Delta y$を用いて
+以下のように表される．
+
+\begin{align*}
+    x'' &= r \cos \varphi -\Delta x\\
+    y'' &= r \sin \varphi -\Delta y
+\end{align*}
+\vskip \baselineskip
+
+以上より，角度$\theta$を用いて角度$\varphi$を求めることができる．
+
+\begin{align*}
+    \tan \theta &= \frac{y''}{x''} = \frac{ r \sin \varphi - \Delta y}{ r \cos \varphi - \Delta x}\\
+    \notag \\
+    \varphi &= \theta - \sin^{-1}\left(\frac{\Delta x \sin \theta - \Delta y \cos \theta}{r}\right)
+\end{align*}
+\vskip \baselineskip
+
+したがって，角度$\alpha$を以下のように求めることができる．
+
+\begin{align*}
+    \alpha = \theta - \varphi = \sin^{-1} \left( \frac{\Delta x \sin \theta - \Delta y \cos \theta}{r} \right)
+\end{align*}
+\vskip \baselineskip
+
+\subsubsection{作用力$F$の分解}
+
+供試体に加わる作用力$F$は供試体表面の接線方向の力$F_\varphi$，
+またその法線方向の力$F_r$に分けて考えることができる．
+ロードセルから与える作用力の角度$\theta$，算出した$\varphi$を用いると，それぞれ以下のように求められる．
+
+\begin{align*}
+    F_{\varphi} &= F \sin \alpha \\
+    F_{r} &= F \cos \alpha
+\end{align*}
+\vskip \baselineskip
+
+供試体への作用力について抗力方向を$F_{x}$，揚力方向を$F_{y}$とすると
+角度$\varphi$を用いて以下のように求められる．
+
+\begin{align*}
+    F_{x} &= - F_r \cos \varphi\\
+    F_{y} &= - F_r \sin \varphi
+\end{align*}
+\vskip \baselineskip
+
+また，接線方向成分$F_\varphi$について，供試体に対してトルク$T$として作用することとなる．
+
+\begin{align*}
+    T &= F_\varphi \cdot r = F \sin \alpha \cdot r
+\end{align*}
+\vskip \baselineskip
+
+ここで，このトルク$T$について，
+作用力測定装置に対する影響は十分に小さいと考えられることから無視できる．\\
+
+\subsubsection{出力電圧勾配の座標系変換 (2)}
+
+正規座標系に対して，オフセットを持つ座標系[2]を基準に
+ロードセルから与えられる作用力$F$はすべて供試体に伝わることはなく，
+接線方向の力$F_r$，その法線方向の力$F_\theta$に分解される．
+すなわち，測定時にはロードセルから作用力$F$を与えた際の出力電圧，
+ひずみセンサから作用力$F_r$を与えた際の出力電圧を得ているということになる．
+したがって，ひずみセンサの出力電圧の傾きを一様に評価することは不可能であり，
+実際の作用力$F_r$の角度$\alpha$を算出し補正を加える必要がある．
+
+ここで，ひずみセンサの出力電圧$V_{x''2}$，$V_{y''2}$は
+それぞれ$F_r / F$倍されていると考えられることから，
+正規座標系における出力電圧勾配$v_{x}$，$v_{y}$と
+座標系[2]における出力電圧勾配$v_{x''2}$，$v_{y''2}$は
+角度$\alpha$を用いて以下のような関係が成立する．
+
+\begin{align*}
+    v_{x} & = \frac{F}{F_r} v_{x''2} = \frac{1}{\cos \alpha} v_{x''2} \\
+    \notag \\
+    v_{y} & = \frac{F}{F_r} v_{y''2} = \frac{1}{\cos \alpha} v_{y''2} 
+\end{align*}
+
+\newpage
+
+\subsection{複合状態における補正理論} 
+\vskip \baselineskip
+
+\subsubsection{補正理論の適用順序}
+
+作成した補正理論について，座標系の回転角$\theta_1$，$\theta_2$の特定の際に
+離散フーリエ変換を適用することから，座標系のオフセットにおける補正理論を先に適用する必要がある．
+ここで，オフセットを考慮した場合，データ間隔が不等間隔となるため
+回転角を特定するための離散フーリエ変換が適用できない．
+したがって，ラグランジュ補間を用いて二次近似を行い，等間隔のデータを補完することとした．\\
+
+\subsubsection{ラグランジュ補間}
+
+ラグランジュ補間とは，一般的に以下のように表される．
+
+\begin{align*}
+    P\left(x\right) &= \sum^{n+1}_{i=1} y_i \frac{f_i\left(x\right)}{f_i \left(x_i\right)}\\
+    f_i \left(x\right) &= \prod_{k \neq i} \left(x - x_k\right)
+\end{align*}
+\vskip \baselineskip
+
+ここで，2次補間を行う場合，使用する3点を適切に選択する必要があるが
+アルゴリズムを用いて処理を行いたい．
+そこで，以下のような手順でラグランジュ補間を行った．\\
+
+\subsubsection{使用するデータの選択}
+
+性能評価実験では，15度ずつ測定しているため，計24点のデータを得ることができる．
+座標系のオフセットにおける補正理論を用いた補正処理では，正規座標系における作用力とその角度が算出される．
+しかし，離散フーリエ変換を適用するとき，等間隔のデータが必要となるため15度ごとの補間値を算出しなければならない．
+ここで，必要な補間値の角度を$\theta$とするとき，
+実際の作用力の角度$\varphi$との差
+$\delta \theta$を絶対値で評価することで，その値$|\delta \theta|$が
+最も小さくなる角度$\varphi$とその前後のデータを使用することで，$\theta$に最も近い3点を選択することができる．
+
+\begin{align*}
+    \delta \theta = |\theta - \varphi|
+\end{align*}
+
+\subsubsection{テストデータへの適用 (3)}
+上述の補正理論より座標系の回転・オフセットを考慮したテストデータを作成する．
+任意の回転角$\theta_{1\;\mathrm{test}}$，$\theta_{2\; \mathrm{test}}$，
+任意のオフセット$\Delta x_\mathrm{test}$，$\Delta y_\mathrm{test}$を与え，
+複合状態における出力電圧勾配について，$x''$軸方向を$v_{x''\;\mathrm{test}}$，
+$y''$軸方向を$v_{y''\;\mathrm{test}}$とするとき，以下のように表される．
+
+\begin{align*}
+    \theta &= \frac{\pi}{180} \; i \;\left(i = 0, 1, 2, 3, \cdots\right)\\
+    \alpha &= \sin^{-1} \left( \frac{\Delta x_\mathrm{test} \sin \theta - \Delta y_\mathrm{test} \cos \theta}{r} \right) \\
+    \varphi &= \theta - \sin^{-1}\left(\frac{\Delta x_\mathrm{test} \sin \theta - \Delta y_\mathrm{test} \cos \theta}{r}\right)\\
+    \notag \\
+    v_{x'' \;\mathrm{test}} &= - \cos \alpha \cos \left(\varphi - \theta_{1\; \mathrm{test}} \right) \\
+    v_{y'' \;\mathrm{test}} &= - \cos \alpha \sin \left(\varphi - \theta_{2\; \mathrm{test}}\right) 
+\end{align*}
+
+また，今回を以下のTable 2のようなパラメータを用いた．
+
+\begin{table}[htbp]
+    \begin{center}
+        \caption{Test data conditions (3)}
+        \begin{tabular}{|p{20mm}|p{20mm}|p{20mm}|p{20mm}|}
+            \hline
+            \multicolumn{1}{|c|}{$\theta_{1\;\mathrm{test}}$ [deg]} & \multicolumn{1}{|c|}{$\theta_{2\;\mathrm{test}}$ [deg]} & \multicolumn{1}{|c|}{$\Delta x_\mathrm{test}$ [mm]} & \multicolumn{1}{|c|}{$\Delta y_\mathrm{test}$ [mm]} \\ \hline
+            \multicolumn{1}{|c|}{10.0}                                & \multicolumn{1}{|c|}{-5.0}                               & \multicolumn{1}{|c|}{5.00}                                       & \multicolumn{1}{|c|}{-2.50}                       \\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+はじめに，作成したテストデータを以下に示す．
+
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=82mm]{../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/05/05_summary-wave.png}
+        \caption{Simulated data}
+    \end{center}
+\end{figure}
+
+ここで，座標系のオフセットにおける補正理論を適用した結果を以下のFig.15，Fig.16に示す．
+
+\begin{figure}[htbp]
+    \begin{center}
+    \includegraphics[width=82mm]{../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-2_corrected_offset_drag.png}
+    \caption{Offset corrected value (Drag)}
+    \includegraphics[width=82mm]{../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-2_corrected_offset_lift.png}
+    \caption{Offset corrected value (lift)}
+    \end{center}
+\end{figure}
+
+\newpage
+
+理論曲線と比較して，波形の再現はされているが，位相差があるようにみえる．
+また，プロットされたデータ間隔は異なることもわかる．
+このとき，ラグランジュ補間を用いて，等間隔のデータを得るための処理を行う．
+なお，データの採用点については上述の処理によって行うこととする．
+ラグランジュ補間を行った結果を以下のFig.17，Fig.18に示す．
+
+\begin{figure} [htbp]
+    \begin{center}
+    \includegraphics[width=82mm]{../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-3_interpolated_drag.png}
+    \caption{Offset corrected value (Drag)}
+    \includegraphics[width=82mm]{../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-3_interpolated_lift.png}
+    \caption{Offset corrected value (lift)}
+    \end{center}
+\end{figure}
+
+    \newpage
+
+上記のFig.17，Fig.18と比較すると等間隔のデータを得られていることがわかる．
+次に，フーリエ変換を適用する．
+このときの結果を以下のFig.19，Fig.20 に示す．
+また，波数1の成分についての算出値を以下のTable 3に示す．
+
+\begin{table}[htbp]
+    \begin{center}
+        \caption{DFT result value}
+        \begin{tabular}{|p{30mm}|p{20mm}|p{20mm}|}
+            \hline
+            \multicolumn{1}{|c|}{}       & \multicolumn{1}{|c|}{$Re$}   & \multicolumn{1}{|c|}{$Im$} \\ \hline
+            \multicolumn{1}{|c|}{Drag} & \multicolumn{1}{|c|}{-11.835}     & \multicolumn{1}{|c|}{2.083}         \\ \hline
+            \multicolumn{1}{|c|}{Lift} & \multicolumn{1}{|c|}{-1.081}     & \multicolumn{1}{|c|}{11.978}         \\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+\newpage
+\begin{figure}[htbp]
+        \begin{center}
+        \includegraphics[width=82mm]{../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/07/07-3_dft-drag.png}
+        \caption{DFT result (Drag)}
+        \includegraphics[width=82mm]{../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/07/07-4_dft-lift.png}
+        \caption{DFT result (lift)}
+        \end{center}
+    \end{figure}
+
+Fig.19，Fig.20 より，波数1についてピークがあることがわかり，
+座標軸の回転における補正理論の適用結果と同様にデータの特徴を正しく捉えられているといえる．
+ここで，Table 4 について，回転角$\theta_1$，$\theta_2$をそれぞれ算出する．
+
+\begin{table}[htbp]
+    \begin{center}
+        \caption{Specified rotation angle}
+        \begin{tabular}{|p{30mm}|p{20mm}|p{20mm}|}
+            \hline
+            \multicolumn{1}{|c|}{$\theta_1$ [deg]}   & \multicolumn{1}{|c|}{$\theta_2$ [deg]} \\ \hline
+            \multicolumn{1}{|c|}{10.018}     & \multicolumn{1}{|c|}{-5.158}         \\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+結果より，算出された回転角$\theta_{1\;\mathrm{test}}$，$\theta_{2\;\mathrm{test}}$は
+Table 2で設定したパラメータと比較すると，異なっていることがわかる．
+これは，ラグランジュ補間公式を用いた2次近似による誤差が生じているためと考えられる．
+
+算出した回転角$\theta_{1\;\mathrm{test}}$，$\theta_{2\;\mathrm{test}}$を用いて
+座標系の回転における補正理論を適用した結果を以下のFig.21，Fig.22,に示す．
+
+\newpage
+
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=82mm]{../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-4_corrected_angle_drag.png}
+        \caption{interpolated data (Drag)}
+        \includegraphics[width=82mm]{../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-4_corrected_angle_lift.png}
+        \caption{interpolated data (Lift)}
+    \end{center}
+\end{figure}
+
+また，以下の式を用いて算出した正味出力電圧勾配$v_{\mathrm{net}}$を以下のFig.23に示す．
+
+\begin{align*}
+    v_{\mathrm{net}} &= \sqrt{v_d^2 + v_l^2}
+\end{align*}
+
+\begin{figure}[htbp]
+    \footnotesize
+    \begin{center}
+        \includegraphics[width=82mm]{../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/09/09_summary-outputvoltage-net.png}
+        \caption{Net output voltage (test data)}
+    \end{center}
+\end{figure}
+
+\newpage
+
+
+ここで，正味出力電圧勾配とは，テストデータにおける市ぷくの大きさを表しており，
+その値は1としてテストデータは作成されている．
+Fig.23 をみるとラグランジュ補間による影響から値が変動しているものの
+おおよその値はどの角度においても1を示していることがわかる．
+したがって，上述のホセ理論は正常に動作しているといえる．
+
+\section{補正理論の適用結果}
+
+ここで，上述の補正理論を実験結果への適用結果を以下のFig.24，Fig.25に示す．
+
+\begin{figure}[htbp]
+    \begin{center}
+    \includegraphics[width=82mm]{../../../02_workspace/result/2-ex/plot/21/21-4_corrected_angle_drag.png}
+    \caption{Corrected result (Drag)}
+    \includegraphics[width=82mm]{../../../02_workspace/result/2-ex/plot/21/21-4_corrected_angle_lift.png}
+    \caption{Corrected result (lift)}
+    \end{center}
+\end{figure}
+
+Fig.24，Fig.25をみると理論曲線に対しておおよその波形は一致しているようにみえる．
+しかし，180度以降理論曲線から大きく外れているデータもみられる．
+したがって，今後この補正値と理論曲線についての評価方法を検討する必要がある．
+
+\newpage
+
+また，算出した正味出力電圧勾配を以下のFig.26に示す．
+
+\begin{figure}[htbp]
+    \begin{center}
+    \includegraphics[width=82mm]{../../../02_workspace/result/2-ex/plot/09/09_summary-outputvoltage-net.png}
+    \caption{Net gradient of voltage}
+    \end{center}
+\end{figure}
+
+ここで，Fig.26をみると周期的な振動を確認できる．
+本来，正味出力電圧は一定であると考えることができるため，
+他の要因によって影響を受けていることが考えられる．
+今後はこの波形が生じる要因を検討し，補正理論へ組み込むことを考えている．
+
+
 \section{今月のまとめと今後の予定}
 \begin{itemize}
     \item [$\blacksquare$] 今月のまとめ
@@ -277,6 +725,7 @@ $y''$軸は$y$軸から$x$方向に$\Delta y$だけオフセットを持つ状�
           \begin{itemize}
               \item [$\bullet$] 卒業論文の執筆
               \item [$\bullet$] 実験の実施 (1月末まで)
+              \item [$\bullet$] 補正適用結果の評価方法の検討
               \item [$\bullet$] 新たな補正方法の検討
           \end{itemize}
 \end{itemize}
