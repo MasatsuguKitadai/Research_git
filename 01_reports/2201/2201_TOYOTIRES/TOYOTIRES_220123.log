@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.12.14)  23 JAN 2022 11:49
+This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.3.30)  23 JAN 2022 20:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -448,8 +448,8 @@ LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
 (Font)              scaled to size 8.64899pt on input line 100.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
 (Font)              scaled to size 8.64899pt on input line 100.
-File: ../images/21-1.png Graphic file (type bmp)
-<../images/21-1.png>
+File: ../images/device_01.jpg Graphic file (type bmp)
+<../images/device_01.jpg>
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
 (Font)              scaled to size 6.72699pt on input line 117.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
@@ -596,12 +596,12 @@ Package rerunfilecheck Info: File `TOYOTIRES_220123.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 731.
  ) 
 Here is how much of TeX's memory you used:
- 8510 strings out of 481768
- 129883 string characters out of 5933619
- 413878 words of memory out of 5000000
- 23717 multiletter control sequences out of 15000+600000
+ 8515 strings out of 481768
+ 129982 string characters out of 5933620
+ 413877 words of memory out of 5000000
+ 23720 multiletter control sequences out of 15000+600000
  544903 words of font info for 83 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
  34i,14n,36p,352b,440s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on TOYOTIRES_220123.dvi (9 pages, 55540 bytes).
+Output written on TOYOTIRES_220123.dvi (9 pages, 55552 bytes).
