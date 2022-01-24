@@ -91,7 +91,7 @@ lineskip=-0.5ex
 自動一軸ステージ，自動回転ステージを用いて実験を自動化し，
 \textgt{可能な限りの人為的操作を削除すること，実験回数の確保すること}
 を目標に新たに実験装置を製作した．
-以下のFig.に実験装置の3Dモデル，Fig.に製作した実験装置の写真を示す．
+以下のFig.1に実験装置の3Dモデル，Fig.2に製作した実験装置の写真を示す．
 
 \begin{figure}[htbp]
     \footnotesize
@@ -124,7 +124,7 @@ lineskip=-0.5ex
 \end{table}
 
 \subsection{実験結果}
-今回の実験結果について以下のFig.～Fig.に示す．
+今回の実験結果について以下のFig.3～Fig.4に示す．
 なお，ここでは実験1回目における 0 [deg]，45 [deg]についての結果を示している．
 
 \begin{figure}[htbp]
@@ -138,7 +138,7 @@ lineskip=-0.5ex
 \end{figure}
 
 \newpage
-Fig.4，Fig.5より，自動ステージを用いることによってノイズが除去されていることがわかる．
+Fig.3，Fig.4より，自動ステージを用いることによってノイズが除去されていることがわかる．
 また，自動一軸ステージが移動した直後から出力電圧の減衰が見られる場合があるが，
 同様の変化がロードセルおよびひずみセンサにみられることから大きな問題ではないと考える．\\
 
@@ -425,7 +425,8 @@ $f_{x}\left(x\right)$，$f_{y}\left(x\right)$，点$v_{x'}$，$v_{y'}$の座標�
 \begin{align*}
     \alpha = \theta - \varphi = \sin^{-1} \left( \frac{\Delta x \sin \theta - \Delta y \cos \theta}{r} \right)
 \end{align*}
-\vskip \baselineskip
+
+\newpage
 
 \subsubsection{作用力$F$の分解}
 
@@ -533,8 +534,8 @@ $y''$軸方向を$v_{y''\;\mathrm{test}}$とするとき，以下のように表
     \alpha                  & = \sin^{-1} \left( \frac{\Delta x_\mathrm{test} \sin \theta - \Delta y_\mathrm{test} \cos \theta}{r} \right)       \\
     \varphi                 & = \theta - \sin^{-1}\left(\frac{\Delta x_\mathrm{test} \sin \theta - \Delta y_\mathrm{test} \cos \theta}{r}\right) \\
     \notag                                                                                                                                       \\
-    v_{x'' \;\mathrm{test}} & = - \cos \alpha \cos \left(\varphi - \theta_{1\; \mathrm{test}} \right)                                            \\
-    v_{y'' \;\mathrm{test}} & = - \cos \alpha \sin \left(\varphi - \theta_{2\; \mathrm{test}}\right)
+    v_{x'' \;\mathrm{test}} & = - \cos \alpha \cos \left(\varphi - \theta_{x\; \mathrm{test}} \right)                                            \\
+    v_{y'' \;\mathrm{test}} & = - \cos \alpha \sin \left(\varphi - \theta_{y\; \mathrm{test}}\right)
 \end{align*}
 
 また，今回を以下のTable 2のようなパラメータを用いた．
@@ -544,7 +545,7 @@ $y''$軸方向を$v_{y''\;\mathrm{test}}$とするとき，以下のように表
         \caption{Test data conditions (3)}
         \begin{tabular}{|p{20mm}|p{20mm}|p{20mm}|p{20mm}|}
             \hline
-            \multicolumn{1}{|c|}{$\theta_{1\;\mathrm{test}}$ [deg]} & \multicolumn{1}{|c|}{$\theta_{2\;\mathrm{test}}$ [deg]} & \multicolumn{1}{|c|}{$\Delta x_\mathrm{test}$ [mm]} & \multicolumn{1}{|c|}{$\Delta y_\mathrm{test}$ [mm]} \\ \hline
+            \multicolumn{1}{|c|}{$\theta_{x\;\mathrm{test}}$ [deg]} & \multicolumn{1}{|c|}{$\theta_{y\;\mathrm{test}}$ [deg]} & \multicolumn{1}{|c|}{$\Delta x_\mathrm{test}$ [mm]} & \multicolumn{1}{|c|}{$\Delta y_\mathrm{test}$ [mm]} \\ \hline
             \multicolumn{1}{|c|}{10.0}                              & \multicolumn{1}{|c|}{-5.0}                              & \multicolumn{1}{|c|}{5.00}                          & \multicolumn{1}{|c|}{-2.50}                         \\ \hline
         \end{tabular}
     \end{center}
@@ -601,8 +602,8 @@ $y''$軸方向を$v_{y''\;\mathrm{test}}$とするとき，以下のように表
         \begin{tabular}{|p{30mm}|p{20mm}|p{20mm}|}
             \hline
             \multicolumn{1}{|c|}{}     & \multicolumn{1}{|c|}{$Re$}    & \multicolumn{1}{|c|}{$Im$}   \\ \hline
-            \multicolumn{1}{|c|}{Drag} & \multicolumn{1}{|c|}{-11.835} & \multicolumn{1}{|c|}{2.083}  \\ \hline
-            \multicolumn{1}{|c|}{Lift} & \multicolumn{1}{|c|}{-1.081}  & \multicolumn{1}{|c|}{11.978} \\ \hline
+            \multicolumn{1}{|c|}{Drag} & \multicolumn{1}{|c|}{-11.826} & \multicolumn{1}{|c|}{2.088}  \\ \hline
+            \multicolumn{1}{|c|}{Lift} & \multicolumn{1}{|c|}{-1.094}  & \multicolumn{1}{|c|}{11.974} \\ \hline
         \end{tabular}
     \end{center}
 \end{table}
@@ -627,7 +628,7 @@ Fig.19，Fig.20 より，波数1についてピークがあることがわかり
         \begin{tabular}{|p{30mm}|p{20mm}|p{20mm}|}
             \hline
             \multicolumn{1}{|c|}{$\theta_x$ [deg]} & \multicolumn{1}{|c|}{$\theta_y$ [deg]} \\ \hline
-            \multicolumn{1}{|c|}{10.018}           & \multicolumn{1}{|c|}{-5.158}           \\ \hline
+            \multicolumn{1}{|c|}{10.014}           & \multicolumn{1}{|c|}{5.222}           \\ \hline
         \end{tabular}
     \end{center}
 \end{table}
@@ -669,13 +670,25 @@ Table 2で設定したパラメータと比較すると，異なっているこ�
 
 ここで，正味出力電圧勾配とは，テストデータにおける市ぷくの大きさを表しており，
 その値は1としてテストデータは作成されている．
-Fig.23 をみるとラグランジュ補間による影響から値が変動しているものの
+Fig.23 をみるとラグランジュ補間による影響から値が変動しているものの，
 おおよその値はどの角度においても1を示していることがわかる．
-したがって，上述のホセ理論は正常に動作しているといえる．
+したがって，上述の補正理論は正常に動作しているといえる．\\
 
-\section{補正理論の適用結果}
+\subsection{実験結果の適用}
 
 ここで，上述の補正理論を実験結果への適用結果を以下のFig.24，Fig.25に示す．
+なお，オフセット値は実験時の測定から以下のTable 5のように設定している．
+
+\begin{table}[htbp]
+    \begin{center}
+        \caption{Offset velue}
+        \begin{tabular}{|p{30mm}|p{20mm}|p{20mm}|}
+            \hline
+            \multicolumn{1}{|c|}{$\Delta x$ [mm]} & \multicolumn{1}{|c|}{$\Delta y$ [mm]} \\ \hline
+            \multicolumn{1}{|c|}{0.09}           & \multicolumn{1}{|c|}{0.06}           \\ \hline
+        \end{tabular}
+    \end{center}
+\end{table}
 
 \begin{figure}[htbp]
     \begin{center}
@@ -688,7 +701,7 @@ Fig.23 をみるとラグランジュ補間による影響から値が変動し�
 
 Fig.24，Fig.25をみると理論曲線に対しておおよその波形は一致しているようにみえる．
 しかし，180度以降理論曲線から大きく外れているデータもみられる．
-したがって，今後この補正値と理論曲線についての評価方法を検討する必要がある．
+したがって，補正値と理論曲線についての評価方法を検討する必要がある．
 
 \newpage
 

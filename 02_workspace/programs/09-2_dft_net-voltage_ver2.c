@@ -407,7 +407,7 @@ int netvoltage(char date[], int range, int split)
     fprintf(gp, "set xlabel '%s'offset 0.0,0\n", xxlabel);
     fprintf(gp, "set xtics %.3f\n", interval);
     fprintf(gp, "set yrange [0.6:0.7]\n");
-    fprintf(gp, "set ylabel '%s'offset 1,0.0\n", yylabel_2);
+    fprintf(gp, "set ylabel '%s'offset 1.5,0.0\n", yylabel_2);
     fprintf(gp, "set ytics 0.02\n");
     fprintf(gp, "set title '%s'\n", label_2);
 

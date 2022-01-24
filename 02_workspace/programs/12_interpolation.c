@@ -47,6 +47,7 @@ int interpolation(char date[], int split)
     int i = 0;
     double buf;
     double angle[split];
+    double angle_buf[split];
     double ch0, ch1, ch2;
     double value[split][3];
 
@@ -60,6 +61,7 @@ int interpolation(char date[], int split)
     while ((fscanf(fp, "%lf, %lf, %lf, %lf", &buf, &ch0, &ch1, &ch2)) != EOF)
     {
         angle[i] = buf;
+        angle_buf[i] = buf;
         value[i][0] = ch0; // drag
         value[i][1] = ch1; // lift
         value[i][2] = ch2; // sqrt
@@ -79,11 +81,18 @@ int interpolation(char date[], int split)
     double point[split];
     int j, k;
 
+    double number[split];
+
+    for (i = 0; i < split; i++)
+    {
+        number[i] = i * 15;
+    }
+
     for (i = 0; i < split; i++)
     {
         if (angle[i] < -7.5)
         {
-            angle[i] = angle[i] + 360;
+            angle_buf[i] = angle_buf[i] + 360;
         }
     }
 
@@ -91,8 +100,7 @@ int interpolation(char date[], int split)
     {
         for (j = 0; j < split; j++)
         {
-            deg[j] = 360 / split * j;
-            difference[j] = fabs(angle[i] - deg[j]);
+            difference[j] = fabs(number[i] - angle_buf[j]);
             // printf("[%.1f]\t= %.3f\n", angle[i], difference[j]);
         }
 
@@ -106,16 +114,21 @@ int interpolation(char date[], int split)
                     difference[j] = difference[k];
                     difference[k] = tmp[0];
 
-                    tmp[1] = deg[j];
-                    deg[j] = deg[k];
-                    deg[k] = tmp[1];
+                    tmp[1] = angle_buf[j];
+                    angle_buf[j] = angle_buf[k];
+                    angle_buf[k] = tmp[1];
                 }
             }
         }
 
-        point[i] = deg[0];
-        // printf("[%.1f]\t= %.1f\n", angle[i], point[i]);
+        point[i] = angle_buf[0];
+        printf("[%.1f]\t= %.1f\n", number[i], point[i]);
     }
+
+    // for (i = 0; i < split; i++)
+    // {
+    //     printf("[%d] = %.1f \n", i, angle_buf[i]);
+    // }
 
     printf("\n");
 
@@ -129,50 +142,71 @@ int interpolation(char date[], int split)
     double part[3];
 
     double sum[3], ave[3];
-    double number[split];
-
-    // printf("[Angle]\t[Drag]\t[Lift]\t[Net]\n");
+    int l, m;
 
     for (i = 0; i < split; i++)
     {
-        number[i] = i * 15;
-    }
-
-    for (i = 0; i < split; i++)
-    {
-        j = i - 1;
-        k = i + 1;
-
-        x[1] = angle[i];
-
-        if (j == -1)
+        for (l = 0; l < split; l++)
         {
-            j = split - 1;
-            x[0] = angle[j] - 360;
-        }
-        else
-        {
-            x[0] = angle[j];
+            if (point[i] == angle[l])
+            {
+                j = l - 1;
+                m = l;
+                k = l + 1;
+
+                x[1] = angle[l];
+
+                if (j == -1)
+                {
+                    j = split - 1;
+                    x[0] = angle[j] - 360;
+                }
+                else
+                {
+                    x[0] = angle[j];
+                }
+
+                if (k == split)
+                {
+                    k = 0;
+                    x[2] = angle[k] + 360;
+                }
+                else
+                {
+                    x[2] = angle[k];
+                }
+            }
+            else if (point[i] == angle[l] + 360)
+            {
+                j = l - 1;
+                m = l;
+                k = l + 1;
+
+                x[1] = angle[l] + 360;
+
+                if (j == -1)
+                {
+                    j = split - 1;
+                    x[0] = angle[j];
+                }
+                else
+                {
+                    x[0] = angle[j] + 360;
+                }
+
+                x[2] = angle[k] + 360;
+            }
         }
 
-        if (k == split)
-        {
-            k = 0;
-            x[2] = angle[k] + 360;
-        }
-        else
-        {
-            x[2] = angle[k];
-        }
-
-        // printf("[x]\t%.3f\t%.3f\t%.3f\n", x[0], x[1], x[2]);
+        printf("[%.1f]\t= %.1f\t|\t%.1f\t%.1f\t%.1f\n", number[i], point[i], x[0], x[1], x[2]);
+        // printf("[%.1f]\t=%.1f\n[x]\t%.3f\t%.3f\t%.3f\n", number[i], point[i], x[0], x[1], x[2]);
 
         // drag 方向
         y[0][0] = value[j][0];
-        y[1][0] = value[i][0];
         y[2][0] = value[k][0];
+        y[1][0] = value[m][0];
 
-        // printf("[y]\t%.3f\t%.3f\t%.3f\n", y[0][0], y[1][0], y[2][0]);
+        // printf("[y1]\t%.3f\t%.3f\t%.3f\n", y[0][0], y[1][0], y[2][0]);
 
         part[0] = (number[i] - x[1]) * (number[i] - x[2]) / ((x[0] - x[1]) * (x[0] - x[2]));
         part[1] = (number[i] - x[0]) * (number[i] - x[2]) / ((x[1] - x[0]) * (x[1] - x[2]));
@@ -182,7 +216,7 @@ int interpolation(char date[], int split)
 
         // lift 方向
         y[0][1] = value[j][1];
-        y[1][1] = value[i][1];
+        y[1][1] = value[m][1];
         y[2][1] = value[k][1];
 
         // printf("[y]\t%.3f\t%.3f\t%.3f\n\n", y[0][1], y[1][1], y[2][1]);

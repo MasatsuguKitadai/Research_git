@@ -157,6 +157,9 @@ int waveadjuster_ver2(char date[])
     char filename_plot_6[100];
     char filename_plot_7[100];
     char filename_plot_8[100];
+    char filename_plot_9[100];
+    char filename_plot_10[100];
+    char filename_plot_11[100];
 
     sprintf(filename_dat_1, "../result/%s/dat/05-1_summary/05-1.dat", date);
     sprintf(filename_dat_2, "../result/%s/dat/09-3_net-voltage/09-3.dat", date);
@@ -172,6 +175,9 @@ int waveadjuster_ver2(char date[])
     sprintf(filename_plot_6, "../result/%s/plot/21/21-2_corrected_offset_lift.png", date);
     sprintf(filename_plot_7, "../result/%s/plot/21/21-3_interpolated_drag.png", date);
     sprintf(filename_plot_8, "../result/%s/plot/21/21-3_interpolated_lift.png", date);
+    sprintf(filename_plot_9, "../result/%s/plot/21/21-4_summary.png", date);
+    sprintf(filename_plot_10, "../result/%s/plot/21/21-2_summary_offset.png", date);
+    sprintf(filename_plot_11, "../result/%s/plot/21/21-3_summary_interpolated.png", date);
 
     /*****************************************************************************/
 
@@ -189,7 +195,7 @@ int waveadjuster_ver2(char date[])
     const char *yylabel_1 = "Gradient of voltage [V/V]";
     const char *yylabel_2 = "Net output voltage [V/V]";
     char label_1[100] = "Gradient value";
-    char label_2[100] = "Output otage";
+    char label_2[100] = "Output voltage";
 
     double size;
 
@@ -411,6 +417,84 @@ int waveadjuster_ver2(char date[])
 
     // fprintf(gp, "set samples 10000\n");
     fprintf(gp, "plot '%s' using 1:3 with points lc 'orange-red' pt 5 ps 2 title 'Corrected (Lift)', '%s' using 1:3 with lines lc 'orange' title 'Theoretical (Lift)'\n", filename_dat_5, filename_dat_3);
+
+    fflush(gp); // Clean up Data
+
+    /*****************************************************************************/
+
+    fprintf(gp, "set output '%s'\n", filename_plot_9);
+    // fprintf(gp, "set multiplot\n");
+    fprintf(gp, "set key left top\n");
+    fprintf(gp, "set key font ',22'\n");
+    fprintf(gp, "set term pngcairo size 1280, 960 font ',27'\n");
+    // fprintf(gp, "set size ratio %.3f\n", size);
+
+    fprintf(gp, "set lmargin screen 0.10\n");
+    fprintf(gp, "set rmargin screen 0.90\n");
+    fprintf(gp, "set tmargin screen 0.90\n");
+    fprintf(gp, "set bmargin screen 0.15\n");
+
+    fprintf(gp, "set xrange [%.3f:%.3f]\n", x_min, x_max);
+    fprintf(gp, "set xlabel '%s'offset 0.0,0\n", xxlabel);
+    fprintf(gp, "set xtics %.3f\n", interval);
+    fprintf(gp, "set yrange [%.3f:%.3f]\n", y_min, y_max);
+    fprintf(gp, "set ylabel '%s'offset 1,0.0\n", yylabel_1);
+    fprintf(gp, "set title '%s'\n", label_1);
+
+    // fprintf(gp, "set samples 10000\n");
+    fprintf(gp, "plot '%s' using 1:2 with points lc 'navy' pt 5 ps 2 title 'Corrected (Drag)', '%s' using 1:3 with points lc 'orange-red' pt 5 ps 2 title 'Corrected (Lift)', '%s' using 1:2 with lines lc 'royalblue' title 'Theoretical (Drag)', '%s' using 1:3 with lines lc 'orange' title 'Theoretical (Lift)'\n", filename_dat_2, filename_dat_2, filename_dat_3, filename_dat_3);
+
+    fflush(gp); // Clean up Data
+
+    /*****************************************************************************/
+
+    fprintf(gp, "set output '%s'\n", filename_plot_10);
+    // fprintf(gp, "set multiplot\n");
+    fprintf(gp, "set key left top\n");
+    fprintf(gp, "set key font ',22'\n");
+    fprintf(gp, "set term pngcairo size 1280, 960 font ',27'\n");
+    // fprintf(gp, "set size ratio %.3f\n", size);
+
+    fprintf(gp, "set lmargin screen 0.10\n");
+    fprintf(gp, "set rmargin screen 0.90\n");
+    fprintf(gp, "set tmargin screen 0.90\n");
+    fprintf(gp, "set bmargin screen 0.15\n");
+
+    fprintf(gp, "set xrange [%.3f:%.3f]\n", x_min, x_max);
+    fprintf(gp, "set xlabel '%s'offset 0.0,0\n", xxlabel);
+    fprintf(gp, "set xtics %.3f\n", interval);
+    fprintf(gp, "set yrange [%.3f:%.3f]\n", y_min, y_max);
+    fprintf(gp, "set ylabel '%s'offset 1,0.0\n", yylabel_1);
+    fprintf(gp, "set title '%s'\n", label_1);
+
+    // fprintf(gp, "set samples 10000\n");
+    fprintf(gp, "plot '%s' using 1:2 with points lc 'navy' pt 5 ps 2 title 'Corrected (Drag)', '%s' using 1:3 with points lc 'orange-red' pt 5 ps 2 title 'Corrected (Lift)', '%s' using 1:2 with lines lc 'royalblue' title 'Theoretical (Drag)', '%s' using 1:3 with lines lc 'orange' title 'Theoretical (Lift)'\n", filename_dat_4, filename_dat_4, filename_dat_3, filename_dat_3);
+
+    fflush(gp); // Clean up Data
+
+    /*****************************************************************************/
+
+    fprintf(gp, "set output '%s'\n", filename_plot_11);
+    // fprintf(gp, "set multiplot\n");
+    fprintf(gp, "set key left top\n");
+    fprintf(gp, "set key font ',22'\n");
+    fprintf(gp, "set term pngcairo size 1280, 960 font ',27'\n");
+    // fprintf(gp, "set size ratio %.3f\n", size);
+
+    fprintf(gp, "set lmargin screen 0.10\n");
+    fprintf(gp, "set rmargin screen 0.90\n");
+    fprintf(gp, "set tmargin screen 0.90\n");
+    fprintf(gp, "set bmargin screen 0.15\n");
+
+    fprintf(gp, "set xrange [%.3f:%.3f]\n", x_min, x_max);
+    fprintf(gp, "set xlabel '%s'offset 0.0,0\n", xxlabel);
+    fprintf(gp, "set xtics %.3f\n", interval);
+    fprintf(gp, "set yrange [%.3f:%.3f]\n", y_min, y_max);
+    fprintf(gp, "set ylabel '%s'offset 1,0.0\n", yylabel_1);
+    fprintf(gp, "set title '%s'\n", label_1);
+
+    // fprintf(gp, "set samples 10000\n");
+    fprintf(gp, "plot '%s' using 1:2 with points lc 'navy' pt 5 ps 2 title 'Corrected (Drag)', '%s' using 1:3 with points lc 'orange-red' pt 5 ps 2 title 'Corrected (Lift)', '%s' using 1:2 with lines lc 'royalblue' title 'Theoretical (Drag)', '%s' using 1:3 with lines lc 'orange' title 'Theoretical (Lift)'\n", filename_dat_5, filename_dat_5, filename_dat_3, filename_dat_3);
 
     fflush(gp); // Clean up Data
 

@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.3.30)  23 JAN 2022 20:29
+This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.12.14)  24 JAN 2022 18:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -542,17 +542,17 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 430.
+(hyperref)                removing `math shift' on input line 431.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 430.
+(hyperref)                removing `math shift' on input line 431.
 
 [5]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Overfull \hbox (6.3543pt too wide) in paragraph at lines 545--550
+Overfull \hbox (7.22351pt too wide) in paragraph at lines 546--551
  [] 
  []
 
@@ -585,23 +585,23 @@ File: ../../../02_workspace/result/2-ex/plot/21/21-4_corrected_angle_lift.png Gr
 <../../../02_workspace/result/2-ex/plot/21/21-4_corrected_angle_lift.png>
 File: ../../../02_workspace/result/2-ex/plot/09/09_summary-outputvoltage-net.png Graphic file (type bmp)
 <../../../02_workspace/result/2-ex/plot/09/09_summary-outputvoltage-net.png>
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 731.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 744.
  [9]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 731.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 744.
  (./TOYOTIRES_220123.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 731.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 731.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 744.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 744.
 Package rerunfilecheck Info: File `TOYOTIRES_220123.out' has not changed.
-(rerunfilecheck)             Checksum: 436F8271B3F7387AFD9EED38A2232AB2;1730.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 731.
+(rerunfilecheck)             Checksum: 5992B98947C57A99EE87940EE77B3D79;1738.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 744.
  ) 
 Here is how much of TeX's memory you used:
  8515 strings out of 481768
- 129982 string characters out of 5933620
- 413877 words of memory out of 5000000
+ 129982 string characters out of 5933619
+ 413881 words of memory out of 5000000
  23720 multiletter control sequences out of 15000+600000
  544903 words of font info for 83 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
  34i,14n,36p,352b,440s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on TOYOTIRES_220123.dvi (9 pages, 55552 bytes).
+Output written on TOYOTIRES_220123.dvi (9 pages, 56116 bytes).
