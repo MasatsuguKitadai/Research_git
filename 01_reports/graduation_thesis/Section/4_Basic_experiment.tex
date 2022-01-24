@@ -20,9 +20,9 @@
         \caption{Experiment conditions}
         \begin{tabular}{|p{30mm}|p{20mm}|p{30}|}
             \hline
-            \multicolumn{1}{|c|}{} & \multicolumn{1}{|c|}{\textgt{Condition number}} & \multicolumn{1}{|c|}{\textgt{remarks}}\\ \hline
-            \multicolumn{1}{|c|}{Angle}                            & \multicolumn{1}{|c|}{24} & \multicolumn{1}{|c|}{Mesurement every 15 [deg]}  \\ \hline
-            \multicolumn{1}{|c|}{Number of trials}                  & \multicolumn{1}{|c|}{7} & \multicolumn{1}{|c|}{}  \\ \hline
+            \multicolumn{1}{|c|}{}                 & \multicolumn{1}{|c|}{\textgt{Condition number}} & \multicolumn{1}{|c|}{\textgt{remarks}}          \\ \hline
+            \multicolumn{1}{|c|}{Angle}            & \multicolumn{1}{|c|}{24}                        & \multicolumn{1}{|c|}{Mesurement every 15 [deg]} \\ \hline
+            \multicolumn{1}{|c|}{Number of trials} & \multicolumn{1}{|c|}{7}                         & \multicolumn{1}{|c|}{}                          \\ \hline
         \end{tabular}
     \end{center}
 \end{table}
@@ -31,7 +31,7 @@
 \begin{enumerate}[(1)]
     \item サンプリング周期は5[Hz]とする
     \item ロードセルをマイクロステージを用いて 0.03 [mm] ずつ移動させ，ひずみセンサ，\\
-            ロードセルの出力電圧を測定する
+          ロードセルの出力電圧を測定する
     \item 基準を0 [mm]として，0.03 [mm]，0.06 [mm]，0.09 [mm]，0.12 [mm]の計4回移動させる
 \end{enumerate}
 
@@ -154,8 +154,8 @@
     \item 測定開始後，60秒間(150点)の待機時間のデータを除く
     \item 待機時刻終了直後およびロードセルの動作直前のそれぞれ5秒間(25点)を除いた計30秒間(150点)のデータの平均値を計算する
     \item [※] なお，前後5秒間の計10秒間[50点]のデータを除くのは，
-            データロガーの測定開始と自動ステージの動作プログラムの始動は
-            人為的に同期させるため，その時刻のズレを除くためである．
+          データロガーの測定開始と自動ステージの動作プログラムの始動は
+          人為的に同期させるため，その時刻のズレを除くためである．
     \item その平均値は測定時刻の中央に位置し，算出された2点を結ぶことで補正直線を算出する．
     \item 実験結果と算出された補正直線の差を取ることで，ドリフト補正を行うことができる．
 \end{enumerate}
@@ -220,7 +220,7 @@ Fig.をみると，ロードセルの出力電圧の持つオフセットは補�
 このとき，その傾きについて出力電圧勾配と定義し，抗力方向を$v_d$，揚力方向を$v_l$とする．
 
 \begin{eqnarray}
-    \displaystyle v_d &= \frac{n\sum^n_{k=1} V_{k} V_{dk} - \sum^n_{k=1} V_{K} \sum^n_{K=1} V_{dk}}{n\sum^n_{k=1}V_{dk}^2 - \left(\sum^n_{k=1}V_k\right)^2}\\ 
+    \displaystyle v_d &= \frac{n\sum^n_{k=1} V_{k} V_{dk} - \sum^n_{k=1} V_{K} \sum^n_{K=1} V_{dk}}{n\sum^n_{k=1}V_{dk}^2 - \left(\sum^n_{k=1}V_k\right)^2}\\
     \displaystyle v_l &= \frac{n\sum^n_{k=1} V_{k} V_{lk} - \sum^n_{k=1} V_{K} \sum^n_{K=1} V_{lk}}{n\sum^n_{k=1}V_{lk}^2 - \left(\sum^n_{k=1}V_k\right)^2}
 \end{eqnarray}
 
@@ -281,6 +281,45 @@ Fig.～Fig.に算出した出力電圧勾配についての結果を示す．
         \end{center}
     \end{figure_here}
 \end{multicols}
+
+\newpage
+
+また，以下のTable に，実験結果の出力電圧勾配の値を示す．
+
+% \begin{table}[htbp]
+%     \begin{center}
+%         \caption{}
+%         \begin{tabular}{|p{20mm}|p{20mm}|p{20mm}|}
+%             \hline
+%             \multicolumn{1}{|c|}{\textgt{Angle [deg]}} & \multicolumn{1}{|c|}{\textgt{$v_{d}}$ [V/V]}} & \multicolumn{1}{|c|}{\textgt{$v_{l}$ [V/V]}} \\ \hline
+%             \multicolumn{1}{|c|}{0}                    & \multicolumn{1}{|r|}{}                        & \multicolumn{1}{|r|}{}                       \\ \hline
+%             \multicolumn{1}{|c|}{15}                   & \multicolumn{1}{|r|}{}                        & \multicolumn{1}{|r|}{}                       \\ \hline
+%             \multicolumn{1}{|c|}{30}                   & \multicolumn{1}{|r|}{}                        & \multicolumn{1}{|r|}{}                       \\ \hline
+%             \multicolumn{1}{|c|}{45}                   & \multicolumn{1}{|r|}{}                        & \multicolumn{1}{|r|}{}                       \\ \hline
+%             \multicolumn{1}{|c|}{60}                   & \multicolumn{1}{|r|}{}                        & \multicolumn{1}{|r|}{}                       \\ \hline
+%             \multicolumn{1}{|c|}{75}                   & \multicolumn{1}{|r|}{}                        & \multicolumn{1}{|r|}{}                       \\ \hline
+%             \multicolumn{1}{|c|}{90}                   & \multicolumn{1}{|r|}{}                        & \multicolumn{1}{|r|}{}                       \\ \hline
+%             \multicolumn{1}{|c|}{105}                  & \multicolumn{1}{|r|}{}                        & \multicolumn{1}{|r|}{}                       \\ \hline
+%             \multicolumn{1}{|c|}{120}                  & \multicolumn{1}{|r|}{}                        & \multicolumn{1}{|r|}{}                       \\ \hline
+%             \multicolumn{1}{|c|}{135}                  & \multicolumn{1}{|r|}{}                        & \multicolumn{1}{|r|}{}                       \\ \hline
+%             \multicolumn{1}{|c|}{150}                  & \multicolumn{1}{|r|}{}                        & \multicolumn{1}{|r|}{}                       \\ \hline
+%             \multicolumn{1}{|c|}{165}                  & \multicolumn{1}{|r|}{}                        & \multicolumn{1}{|r|}{}                       \\ \hline
+%             \multicolumn{1}{|c|}{180}                  & \multicolumn{1}{|r|}{}                        & \multicolumn{1}{|r|}{}                       \\ \hline
+%             \multicolumn{1}{|c|}{195}                  & \multicolumn{1}{|r|}{}                        & \multicolumn{1}{|r|}{}                       \\ \hline
+%             \multicolumn{1}{|c|}{210}                  & \multicolumn{1}{|r|}{}                        & \multicolumn{1}{|r|}{}                       \\ \hline
+%             \multicolumn{1}{|c|}{225}                  & \multicolumn{1}{|r|}{}                        & \multicolumn{1}{|r|}{}                       \\ \hline
+%             \multicolumn{1}{|c|}{240}                  & \multicolumn{1}{|r|}{}                        & \multicolumn{1}{|r|}{}                       \\ \hline
+%             \multicolumn{1}{|c|}{255}                  & \multicolumn{1}{|r|}{}                        & \multicolumn{1}{|r|}{}                       \\ \hline
+%             \multicolumn{1}{|c|}{270}                  & \multicolumn{1}{|r|}{}                        & \multicolumn{1}{|r|}{}                       \\ \hline
+%             \multicolumn{1}{|c|}{285}                  & \multicolumn{1}{|r|}{}                        & \multicolumn{1}{|r|}{}                       \\ \hline
+%             \multicolumn{1}{|c|}{300}                  & \multicolumn{1}{|r|}{}                        & \multicolumn{1}{|r|}{}                       \\ \hline
+%             \multicolumn{1}{|c|}{315}                  & \multicolumn{1}{|r|}{}                        & \multicolumn{1}{|r|}{}                       \\ \hline
+%             \multicolumn{1}{|c|}{330}                  & \multicolumn{1}{|r|}{}                        & \multicolumn{1}{|r|}{}                       \\ \hline
+%             \multicolumn{1}{|c|}{345}                  & \multicolumn{1}{|r|}{}                        & \multicolumn{1}{|r|}{}                       \\ \hline
+%         \end{tabular}
+%     \end{center}
+% \end{table}
+
 
 \section{校正理論の適用とその結果}
 
