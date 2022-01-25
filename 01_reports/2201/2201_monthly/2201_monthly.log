@@ -1,9 +1,9 @@
-This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.12.14)  24 JAN 2022 18:59
+This is e-pTeX, Version 3.14159265-p3.8.2-190908-2.6 (utf8.euc) (TeX Live 2019/Debian) (preloaded format=platex 2021.12.14)  25 JAN 2022 18:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**/home/masatsugu/git/lab/01_reports/2201/2201_TOYOTIRES/TOYOTIRES_220123
-(/home/masatsugu/git/lab/01_reports/2201/2201_TOYOTIRES/TOYOTIRES_220123.tex
+**/home/masatsugu/git/lab/01_reports/2201/2201_monthly/2201_monthly
+(/home/masatsugu/git/lab/01_reports/2201/2201_monthly/2201_monthly.tex
 pLaTeX2e <2020-02-02>+2 (based on LaTeX2e <2020-02-02> patch level 2)
 L3 programming layer <2020-02-14> (/usr/share/texlive/texmf-dist/tex/platex/jsclasses/jsarticle.cls
 Document Class: jsarticle 2020/02/02 jsclasses (okumura, texjporg)
@@ -349,29 +349,29 @@ File: l3backend-dvips.def 2020-02-03 L3 backend support: dvips
 \g__pdf_backend_annotation_int=\count284
 \g__pdf_backend_link_int=\count285
 \g__pdf_backend_link_sf_int=\count286
-) (./TOYOTIRES_220123.aux)
-\openout1 = `TOYOTIRES_220123.aux'.
+) (./2201_monthly.aux)
+\openout1 = `2201_monthly.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 69.
-LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 67.
+LaTeX Font Info:    ... okay on input line 67.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: dvips
@@ -381,15 +381,15 @@ LaTeX Font Info:    ... okay on input line 69.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(42.67912pt, 512.14963pt, 42.67912pt)
-* v-part:(T,H,B)=(36.98857pt, 751.15277pt, 56.9055pt)
+* h-part:(L,W,R)=(56.9055pt, 483.69687pt, 56.9055pt)
+* v-part:(T,H,B)=(42.67912pt, 731.23584pt, 71.13188pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=512.14963pt
-* \textheight=751.15277pt
-* \oddsidemargin=-29.59087pt
-* \evensidemargin=-29.59087pt
-* \topmargin=-70.9786pt
+* \textwidth=483.69687pt
+* \textheight=731.23584pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-65.28806pt
 * \headheight=20.0pt
 * \headsep=15.69719pt
 * \topskip=12.76073pt
@@ -409,7 +409,7 @@ LaTeX Font Info:    ... okay on input line 69.
 
 \c@lstlisting=\count287
 \AtBeginShipoutBox=\box81
-Package hyperref Info: Link coloring OFF on input line 69.
+Package hyperref Info: Link coloring OFF on input line 67.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
  (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
@@ -419,189 +419,180 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count288
 )
-LaTeX Info: Redefining \ref on input line 69.
-LaTeX Info: Redefining \pageref on input line 69.
-LaTeX Info: Redefining \nameref on input line 69.
- (./TOYOTIRES_220123.out) (./TOYOTIRES_220123.out)
+LaTeX Info: Redefining \ref on input line 67.
+LaTeX Info: Redefining \pageref on input line 67.
+LaTeX Info: Redefining \nameref on input line 67.
+ (./2201_monthly.out) (./2201_monthly.out)
 \@outlinefile=\write3
-\openout3 = `TOYOTIRES_220123.out'.
+\openout3 = `2201_monthly.out'.
 
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 16.60605pt on input line 73.
+(Font)              scaled to size 16.60605pt on input line 71.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 16.60605pt on input line 73.
+(Font)              scaled to size 16.60605pt on input line 71.
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 73.
+(Font)              scaled to size 11.53198pt on input line 71.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 73.
+(Font)              scaled to size 11.53198pt on input line 71.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 73.
+(Font)              scaled to size 11.53198pt on input line 71.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 73.
-LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 92.
-LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 92.
-File: ../images/21-1.png Graphic file (type bmp)
-<../images/21-1.png>
+(Font)              scaled to size 11.53198pt on input line 71.
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 100.
+(Font)              scaled to size 8.64899pt on input line 94.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 100.
-File: ../images/device_01.jpg Graphic file (type bmp)
-<../images/device_01.jpg>
+(Font)              scaled to size 8.64899pt on input line 94.
+File: ../images/21-2.png Graphic file (type bmp)
+<../images/21-2.png>
+
+Overfull \hbox (9.24686pt too wide) in paragraph at lines 95--96
+ [] 
+ []
+
+LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
+(Font)              scaled to size 9.60999pt on input line 107.
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 9.60999pt on input line 107.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 117.
+(Font)              scaled to size 6.72699pt on input line 110.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 4.805pt on input line 117.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 117.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+(Font)              scaled to size 4.805pt on input line 110.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 110.
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 117.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 110.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-File: ../../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_0.png Graphic file (type bmp)
-<../../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_0.png>
-File: ../../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_450.png Graphic file (type bmp)
-<../../../02_workspace/result/2-1/plot/01-3_allsensors/01_allsensors_450.png>
+LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
+(Font)              scaled to size 7.688pt on input line 137.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 7.688pt on input line 137.
+LaTeX Font Info:    Calculating math sizes for size <8.00003> on input line 140.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <5.59999> not available
+(Font)              size <6> substituted on input line 140.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <4.00002> not available
+(Font)              size <5> substituted on input line 140.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <5.59999> not available
+(Font)              size <6> substituted on input line 140.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <4.00002> not available
+(Font)              size <5> substituted on input line 140.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <5.59999> not available
+(Font)              size <6> substituted on input line 140.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <4.00002> not available
+(Font)              size <5> substituted on input line 140.
+
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 5.38158pt on input line 140.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 3.844pt on input line 140.
+LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
+(Font)              scaled to size 7.688pt on input line 142.
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 7.688pt on input line 142.
+
+Overfull \hbox (34.46979pt too wide) in paragraph at lines 140--146
+ [] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [1
 
 
 ]
-File: ../../../02_workspace/result/2-1/plot/05/05_summary-wave.png Graphic file (type bmp)
-<../../../02_workspace/result/2-1/plot/05/05_summary-wave.png>
-File: ../../../02_workspace/result/2-2/plot/05/05_summary-wave.png Graphic file (type bmp)
-<../../../02_workspace/result/2-2/plot/05/05_summary-wave.png>
-File: ../../../02_workspace/result/2-3/plot/05/05_summary-wave.png Graphic file (type bmp)
-<../../../02_workspace/result/2-3/plot/05/05_summary-wave.png>
-File: ../../../02_workspace/result/2-4/plot/05/05_summary-wave.png Graphic file (type bmp)
-<../../../02_workspace/result/2-4/plot/05/05_summary-wave.png>
-File: ../../../02_workspace/result/2-5/plot/05/05_summary-wave.png Graphic file (type bmp)
-<../../../02_workspace/result/2-5/plot/05/05_summary-wave.png>
-File: ../../../02_workspace/result/2-ex/plot/05/05_summary-wave.png Graphic file (type bmp)
-<../../../02_workspace/result/2-ex/plot/05/05_summary-wave.png>
- [2]
 File: ../images/31-1.png Graphic file (type bmp)
 <../images/31-1.png>
+File: ../../../02_workspace/result/rotation_tx=15.0_ty=20.0/plot/20/20_adjust-value.png Graphic file (type bmp)
+<../../../02_workspace/result/rotation_tx=15.0_ty=20.0/plot/20/20_adjust-value.png>
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 5.76599pt on input line 208.
+File: ../../../02_workspace/result/rotation_tx=15.0_ty=20.0/plot/21/21-4_summary.png Graphic file (type bmp)
+<../../../02_workspace/result/rotation_tx=15.0_ty=20.0/plot/21/21-4_summary.png>
+ [2]
+File: ../../../02_workspace/result/offset_dx=10.0_dy=5.0/plot/20/20_adjust-value.png Graphic file (type bmp)
+<../../../02_workspace/result/offset_dx=10.0_dy=5.0/plot/20/20_adjust-value.png>
+File: ../../../02_workspace/result/offset_dx=10.0_dy=5.0/plot/21/21-2_summary_offset.png Graphic file (type bmp)
+<../../../02_workspace/result/offset_dx=10.0_dy=5.0/plot/21/21-2_summary_offset.png>
+File: ../../../02_workspace/result/offset_dx=10.0_dy=5.0/plot/21/21-3_summary_interpolated.png Graphic file (type bmp)
+<../../../02_workspace/result/offset_dx=10.0_dy=5.0/plot/21/21-3_summary_interpolated.png>
+ [3]
+File: ../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/20/20_adjust-value.png Graphic file (type bmp)
+<../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/20/20_adjust-value.png>
+File: ../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-2_summary_offset.png Graphic file (type bmp)
+<../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-2_summary_offset.png>
+File: ../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-3_summary_interpolated.png Graphic file (type bmp)
+<../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-3_summary_interpolated.png>
+File: ../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-4_summary.png Graphic file (type bmp)
+<../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-4_summary.png>
+LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
+(Font)              scaled to size 9.12946pt on input line 353.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 9.12946pt on input line 353.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 266.
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <9.49997> not available
+(Font)              size <9> substituted on input line 353.
+
+LaTeX Font Info:    Calculating math sizes for size <9.49997> on input line 355.
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <9.49997> not available
+(Font)              size <9> substituted on input line 355.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\theta' on input line 266.
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <9.49997> not available
+(Font)              size <9> substituted on input line 355.
 
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 266.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 266.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 266.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\theta' on input line 266.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 266.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 266.
-
-[3]
-File: ../images/33-2.png Graphic file (type bmp)
-<../images/33-2.png>
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 6.39058pt on input line 355.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 4.56473pt on input line 355.
+LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
+(Font)              scaled to size 9.12946pt on input line 357.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 334.
-LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 4.805pt on input line 334.
-File: ../images/34-1.png Graphic file (type bmp)
-<../images/34-1.png>
+(Font)              scaled to size 9.12946pt on input line 357.
+
+Underfull \vbox (badness 1152) has occurred while \output is active []
+
  [4]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 396.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\alpha' on input line 396.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 396.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 431.
+File: ../../../02_workspace/result/2-ex/plot/20/20_adjust-value.png Graphic file (type bmp)
+<../../../02_workspace/result/2-ex/plot/20/20_adjust-value.png>
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 414.
+ [5]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 414.
+ (./2201_monthly.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 414.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 414.
+Package rerunfilecheck Info: File `2201_monthly.out' has not changed.
+(rerunfilecheck)             Checksum: 376EFC079386931B62D981D2C975C79A;832.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 431.
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.99998pt have occurred.
 
-[5]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \hbox (7.22351pt too wide) in paragraph at lines 546--551
- [] 
- []
-
-File: ../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/05/05_summary-wave.png Graphic file (type bmp)
-<../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/05/05_summary-wave.png>
-File: ../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-2_corrected_offset_drag.png Graphic file (type bmp)
-<../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-2_corrected_offset_drag.png>
-File: ../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-2_corrected_offset_lift.png Graphic file (type bmp)
-<../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-2_corrected_offset_lift.png>
-[6]
-File: ../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-3_interpolated_drag.png Graphic file (type bmp)
-<../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-3_interpolated_drag.png>
-File: ../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-3_interpolated_lift.png Graphic file (type bmp)
-<../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-3_interpolated_lift.png>
- [7]
-File: ../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/07/07-3_dft-drag.png Graphic file (type bmp)
-<../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/07/07-3_dft-drag.png>
-File: ../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/07/07-4_dft-lift.png Graphic file (type bmp)
-<../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/07/07-4_dft-lift.png>
-File: ../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-4_corrected_angle_drag.png Graphic file (type bmp)
-<../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-4_corrected_angle_drag.png>
-File: ../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-4_corrected_angle_lift.png Graphic file (type bmp)
-<../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-4_corrected_angle_lift.png>
-File: ../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/09/09_summary-outputvoltage-net.png Graphic file (type bmp)
-<../../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/09/09_summary-outputvoltage-net.png>
- [8]
-File: ../../../02_workspace/result/2-ex/plot/21/21-4_corrected_angle_drag.png Graphic file (type bmp)
-<../../../02_workspace/result/2-ex/plot/21/21-4_corrected_angle_drag.png>
-File: ../../../02_workspace/result/2-ex/plot/21/21-4_corrected_angle_lift.png Graphic file (type bmp)
-<../../../02_workspace/result/2-ex/plot/21/21-4_corrected_angle_lift.png>
-File: ../../../02_workspace/result/2-ex/plot/09/09_summary-outputvoltage-net.png Graphic file (type bmp)
-<../../../02_workspace/result/2-ex/plot/09/09_summary-outputvoltage-net.png>
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 744.
- [9]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 744.
- (./TOYOTIRES_220123.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 744.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 744.
-Package rerunfilecheck Info: File `TOYOTIRES_220123.out' has not changed.
-(rerunfilecheck)             Checksum: 5992B98947C57A99EE87940EE77B3D79;1738.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 744.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 414.
  ) 
 Here is how much of TeX's memory you used:
- 8515 strings out of 481768
- 129982 string characters out of 5933619
- 413881 words of memory out of 5000000
- 23720 multiletter control sequences out of 15000+600000
- 544903 words of font info for 83 fonts, out of 8000000 for 9000
+ 8501 strings out of 481768
+ 126789 string characters out of 5933619
+ 411119 words of memory out of 5000000
+ 23730 multiletter control sequences out of 15000+600000
+ 550807 words of font info for 116 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 34i,14n,36p,352b,440s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,10n,36p,350b,470s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on TOYOTIRES_220123.dvi (9 pages, 56116 bytes).
+Output written on 2201_monthly.dvi (5 pages, 31052 bytes).
