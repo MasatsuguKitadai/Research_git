@@ -141,7 +141,7 @@ int calculate_lift(char date[], int range)
 
     // range y
     double y_min = 0;
-    double y_max = 200;
+    double y_max = 100;
 
     // label
     char label[100] = "DFT";
