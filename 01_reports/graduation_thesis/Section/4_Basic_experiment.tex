@@ -194,23 +194,22 @@
 実験結果から，式()の出力電圧勾配を算出する．
 そのために以下の手順でデータ処理を行った．
 
-\begin{enumerate}[2.3.1]
+\begin{enumerate}[(1)]
 	\item ドリフト補正
 	\item 各距離における平均値の算出
 	\item 出力電圧勾配の算出
 \end{enumerate}
 
 ここで，例として 1回目の性能評価実験，0 [deg]におけるロードセルの出力電圧の図 (Fig.) を用いて説明する．\\
+※ ロードセルの出力電圧は使用しているストレインアンプの影響によりオフセット値を持つ．
 
 \begin{figure}[htbp]
 	\footnotesize
 	\begin{center}
 		\includegraphics[width=95mm]{../../02_workspace/result/2-1/plot/01-1_loadcell/01_loadcell_0.png}
-		\caption{Loadcell output voltage : 0 [deg] (1st)}
+		\caption{Loadcell output voltage : 0 [deg]}
 	\end{center}
 \end{figure}
-
-※ ロードセルの出力電圧は使用しているストレインアンプの影響によりオフセット値を持つ．
 
 また，このとき実験結果をロードセルの押込距離および時間経過によって
 それぞれのデータ範囲についてその呼称を以下のTable のように定義することとする．
@@ -254,7 +253,7 @@
 	\footnotesize
 	\begin{center}
 		\includegraphics[width=95mm]{../../02_workspace/result/2-1/plot/02-1_loadcell/02_loadcell-drift_0.png}
-		\caption{Drift corrected (load cell) : 0 [deg] (1st)}
+		\caption{Drift corrected (load cell) : 0 [deg]}
 	\end{center}
 \end{figure}
 
@@ -271,9 +270,9 @@ Fig.から補正前のデータから算出された補正直線(赤線)の差�
 	\footnotesize
 	\begin{center}
 		\includegraphics[width=95mm]{../../02_workspace/result/2-1/plot/02-2_drag/02_drag-drift_0.png}
-		\caption{Drift corrected (drag) : 0 [deg] (1st)}
+		\caption{Drift corrected (drag) : 0 [deg]}
 		\includegraphics[width=95mm]{../../02_workspace/result/2-1/plot/02-3_lift/02_lift-drift_0.png}
-		\caption{Drift corrected (lift) : 0 [deg] (1st)}
+		\caption{Drift corrected (lift) : 0 [deg]}
 	\end{center}
 \end{figure}
 
@@ -295,7 +294,7 @@ Fig.から補正前のデータから算出された補正直線(赤線)の差�
 	\footnotesize
 	\begin{center}
 		\includegraphics[width=95mm]{../../02_workspace/result/2-1/plot/03-1_loadcell/03_loadcell_average_0.png}
-		\caption{Each distance average (load cell) : 0 [deg] (1st)}
+		\caption{Each distance average (load cell) : 0 [deg]}
 	\end{center}
 \end{figure}
 
@@ -306,12 +305,12 @@ Fig.から補正前のデータから算出された補正直線(赤線)の差�
 	\begin{minipage}[b]{0.45\linewidth}
 		\centering
 		\includegraphics[width=65mm]{../../02_workspace/result/2-1/plot/03-2_drag/03_drag_average_0.png}
-		\caption{Drift corrected (drag) : 0 [deg] (1st)}
+		\caption{Drift corrected (drag) : 0 [deg]}
 	\end{minipage}
 	\begin{minipage}[b]{0.45\linewidth}
 		\centering
 		\includegraphics[width=65mm]{../../02_workspace/result/2-1/plot/03-3_lift/03_lift_average_0.png}
-		\caption{Drift corrected (lift) : 0 [deg] (1st)}
+		\caption{Drift corrected (lift) : 0 [deg]}
 	\end{minipage}
 \end{figure}
 
@@ -470,25 +469,13 @@ Fig.から補正前のデータから算出された補正直線(赤線)の差�
 \newpage
 
 \subsection{校正理論の適用とその結果}
-Fig.について作成した補正理論を適用し，
-水槽座標系における出力電圧勾配への変換を行う．
+実験結果について作成した補正理論を適用し，水槽座標系における出力電圧勾配への変換を行う．
 
 \subsubsection{座標系のオフセットにおける補正理論の適用}
 Fig.，Fig.について，座標系のオフセットにおける補正理論である
 式()の適用後の出力電圧勾配$v_{x'1}$，$v_{y'1}$を以下のFig.，Fig.に示す．
 なお，補正の際に用いたオフセット距離$\Delta x$，$\Delta y$は
 実験の際に測定した以下のTable の数値を用いて行った．
-
-\begin{table}[htbp]
-  \begin{center}
-      \caption{Offset velue}
-      \begin{tabular}{|p{30mm}|p{20mm}|p{20mm}|}
-          \hline
-          \multicolumn{1}{|c|}{$\Delta x$ [mm]} & \multicolumn{1}{|c|}{$\Delta y$ [mm]} \\ \hline
-          \multicolumn{1}{|c|}{0.09}           & \multicolumn{1}{|c|}{0.06}           \\ \hline
-      \end{tabular}
-  \end{center}
-\end{table}
 
 \begin{figure}[htbp]
 		\centering
@@ -497,6 +484,18 @@ Fig.，Fig.について，座標系のオフセットにおける補正理論で
 		\includegraphics[width=95mm]{../../02_workspace/result/2-ex/plot/21/21-2_corrected_offset_lift.png}
 		\caption{Offset corrected : lift (Average)}
 \end{figure}
+
+\begin{table}[htbp]
+  \scalefont{0.9}
+  \begin{center}
+      \caption{Offset length}
+      \begin{tabular}{|p{30mm}|p{20mm}|p{20mm}|}
+          \hline
+          \multicolumn{1}{|c|}{$\Delta x$ [mm]} & \multicolumn{1}{|c|}{$\Delta y$ [mm]} \\ \hline
+          \multicolumn{1}{|c|}{0.09}           & \multicolumn{1}{|c|}{0.06}           \\ \hline
+      \end{tabular}
+  \end{center}
+\end{table}
 
 \newpage
 
@@ -514,12 +513,10 @@ Fig.，Fig.について，式()のラグランジュ補間公式によって
 
 \newpage
 
-Fig.，Fig.について
-
 \subsubsection{座標系の回転における補正理論の適用}
 はじめに，水槽座標系からの回転角$\theta_x$，$\theta_y$を推定するため，
 Fig.，Fig.の結果に離散フーリエ変換を適用し，波数1の成分から$\theta_x$，$\theta_y$を算出する．
-ここで，Fig.，Fig.について，離散フーリ変換を適用した結果を以下のFig.，Fig.に示す．
+ここで，その結果を以下のFig.，Fig.に示す．
 
 \begin{figure}
         \begin{minipage}[b]{0.45\linewidth}
@@ -553,8 +550,8 @@ Fig.，Fig.をみると，どちらもピークは波数1のときにあり，
 ここで，式()，式()を用いてそれぞれの回転角$\theta_x$，$\theta_y$を算出する．
 余弦波からの位相角をそれぞれ$\phi_x$，$\phi_y$とすると，以下のように算出される．
 \begin{align}
-	\phi_x &= \arctan \left(\frac{1.022}{-7.503}\right) \cdot \frac{180}{\pi} = \\
-	\phi_y &= \arctan \left(\frac{0.664}{7.559}\right) \cdot \frac{180}{\pi} = 
+	\phi_x &= \arctan \left(\frac{1.022}{-7.503}\right) \cdot \frac{180}{\pi} = 172.243\; [\mathrm{deg}]\\
+	\phi_y &= \arctan \left(\frac{7.559}{0.664}\right) \cdot \frac{180}{\pi} = 84.979\; [\mathrm{deg}]\\
 \end{align}
 
 したがって，回転角$\theta_x$，$\theta_y$は，以下のように表される．
@@ -614,33 +611,35 @@ Fig.をみると正味出力電圧勾配$v_{net}$は周期的な変動を示し�
         \begin{tabular}{|p{20mm}|p{20mm}|p{20mm}|p{20mm}|p{20mm}|p{20mm}|}
             \hline
             \multicolumn{1}{|c|}{\textgt{$\theta$ [deg]}} & \multicolumn{1}{|c|}{\textgt{$v_d$ [V/V]}} & \multicolumn{1}{|c|}{\textgt{$v_l$ [V/V]}} & \multicolumn{1}{|c|}{\textgt{$v_x$ [V/V]}} & \multicolumn{1}{|c|}{\textgt{$v_y$ [V/V]}} & \multicolumn{1}{|c|}{\textgt{$v_{net}$ [V/V]}}\\ \hline
-            \multicolumn{1}{|c|}{0}                       & \multicolumn{1}{|r|}{}                        & \multicolumn{1}{|r|}{}                   & \multicolumn{1}{|r|}{}                    & \multicolumn{1}{|r|}{}                   & \multicolumn{1}{|r|}{}                         \\ \hline
-            \multicolumn{1}{|c|}{15}                      & \multicolumn{1}{|r|}{}                        & \multicolumn{1}{|r|}{}                   & \multicolumn{1}{|r|}{}                    & \multicolumn{1}{|r|}{}                   & \multicolumn{1}{|r|}{}                         \\ \hline
-            \multicolumn{1}{|c|}{30}                      & \multicolumn{1}{|r|}{}                        & \multicolumn{1}{|r|}{}                   & \multicolumn{1}{|r|}{}                    & \multicolumn{1}{|r|}{}                   & \multicolumn{1}{|r|}{}                         \\ \hline
-            \multicolumn{1}{|c|}{45}                      & \multicolumn{1}{|r|}{}                        & \multicolumn{1}{|r|}{}                   & \multicolumn{1}{|r|}{}                    & \multicolumn{1}{|r|}{}                   & \multicolumn{1}{|r|}{}                         \\ \hline
-            \multicolumn{1}{|c|}{60}                      & \multicolumn{1}{|r|}{}                        & \multicolumn{1}{|r|}{}                   & \multicolumn{1}{|r|}{}                    & \multicolumn{1}{|r|}{}                   & \multicolumn{1}{|r|}{}                         \\ \hline
-            \multicolumn{1}{|c|}{75}                      & \multicolumn{1}{|r|}{}                        & \multicolumn{1}{|r|}{}                   & \multicolumn{1}{|r|}{}                    & \multicolumn{1}{|r|}{}                   & \multicolumn{1}{|r|}{}                         \\ \hline
-            \multicolumn{1}{|c|}{90}                      & \multicolumn{1}{|r|}{}                        & \multicolumn{1}{|r|}{}                   & \multicolumn{1}{|r|}{}                    & \multicolumn{1}{|r|}{}                   & \multicolumn{1}{|r|}{}                         \\ \hline
-            \multicolumn{1}{|c|}{105}                     & \multicolumn{1}{|r|}{}                        & \multicolumn{1}{|r|}{}                   & \multicolumn{1}{|r|}{}                    & \multicolumn{1}{|r|}{}                   & \multicolumn{1}{|r|}{}                         \\ \hline
-            \multicolumn{1}{|c|}{120}                     & \multicolumn{1}{|r|}{}                        & \multicolumn{1}{|r|}{}                   & \multicolumn{1}{|r|}{}                    & \multicolumn{1}{|r|}{}                   & \multicolumn{1}{|r|}{}                         \\ \hline
-            \multicolumn{1}{|c|}{135}                     & \multicolumn{1}{|r|}{}                        & \multicolumn{1}{|r|}{}                   & \multicolumn{1}{|r|}{}                    & \multicolumn{1}{|r|}{}                   & \multicolumn{1}{|r|}{}                         \\ \hline
-            \multicolumn{1}{|c|}{150}                     & \multicolumn{1}{|r|}{}                        & \multicolumn{1}{|r|}{}                   & \multicolumn{1}{|r|}{}                    & \multicolumn{1}{|r|}{}                   & \multicolumn{1}{|r|}{}                         \\ \hline
-            \multicolumn{1}{|c|}{165}                     & \multicolumn{1}{|r|}{}                        & \multicolumn{1}{|r|}{}                   & \multicolumn{1}{|r|}{}                    & \multicolumn{1}{|r|}{}                   & \multicolumn{1}{|r|}{}                         \\ \hline
-            \multicolumn{1}{|c|}{180}                     & \multicolumn{1}{|r|}{}                        & \multicolumn{1}{|r|}{}                   & \multicolumn{1}{|r|}{}                    & \multicolumn{1}{|r|}{}                   & \multicolumn{1}{|r|}{}                         \\ \hline
-            \multicolumn{1}{|c|}{195}                     & \multicolumn{1}{|r|}{}                        & \multicolumn{1}{|r|}{}                   & \multicolumn{1}{|r|}{}                    & \multicolumn{1}{|r|}{}                   & \multicolumn{1}{|r|}{}                         \\ \hline
-            \multicolumn{1}{|c|}{210}                     & \multicolumn{1}{|r|}{}                        & \multicolumn{1}{|r|}{}                   & \multicolumn{1}{|r|}{}                    & \multicolumn{1}{|r|}{}                   & \multicolumn{1}{|r|}{}                         \\ \hline
-            \multicolumn{1}{|c|}{225}                     & \multicolumn{1}{|r|}{}                        & \multicolumn{1}{|r|}{}                   & \multicolumn{1}{|r|}{}                    & \multicolumn{1}{|r|}{}                   & \multicolumn{1}{|r|}{}                         \\ \hline
-            \multicolumn{1}{|c|}{240}                     & \multicolumn{1}{|r|}{}                        & \multicolumn{1}{|r|}{}                   & \multicolumn{1}{|r|}{}                    & \multicolumn{1}{|r|}{}                   & \multicolumn{1}{|r|}{}                         \\ \hline
-            \multicolumn{1}{|c|}{255}                     & \multicolumn{1}{|r|}{}                        & \multicolumn{1}{|r|}{}                   & \multicolumn{1}{|r|}{}                    & \multicolumn{1}{|r|}{}                   & \multicolumn{1}{|r|}{}                         \\ \hline
-            \multicolumn{1}{|c|}{270}                     & \multicolumn{1}{|r|}{}                        & \multicolumn{1}{|r|}{}                   & \multicolumn{1}{|r|}{}                    & \multicolumn{1}{|r|}{}                   & \multicolumn{1}{|r|}{}                         \\ \hline
-            \multicolumn{1}{|c|}{285}                     & \multicolumn{1}{|r|}{}                        & \multicolumn{1}{|r|}{}                   & \multicolumn{1}{|r|}{}                    & \multicolumn{1}{|r|}{}                   & \multicolumn{1}{|r|}{}                         \\ \hline
-            \multicolumn{1}{|c|}{300}                     & \multicolumn{1}{|r|}{}                        & \multicolumn{1}{|r|}{}                   & \multicolumn{1}{|r|}{}                    & \multicolumn{1}{|r|}{}                   & \multicolumn{1}{|r|}{}                         \\ \hline
-            \multicolumn{1}{|c|}{315}                     & \multicolumn{1}{|r|}{}                        & \multicolumn{1}{|r|}{}                   & \multicolumn{1}{|r|}{}                    & \multicolumn{1}{|r|}{}                   & \multicolumn{1}{|r|}{}                         \\ \hline
-            \multicolumn{1}{|c|}{330}                     & \multicolumn{1}{|r|}{}                        & \multicolumn{1}{|r|}{}                   & \multicolumn{1}{|r|}{}                    & \multicolumn{1}{|r|}{}                   & \multicolumn{1}{|r|}{}                         \\ \hline
-            \multicolumn{1}{|c|}{345}                     & \multicolumn{1}{|r|}{}                        & \multicolumn{1}{|r|}{}                   & \multicolumn{1}{|r|}{}                    & \multicolumn{1}{|r|}{}                   & \multicolumn{1}{|r|}{}                         \\ \hline
+            \multicolumn{1}{|c|}{0}                       & \multicolumn{1}{|r|}{-0.627}                        & \multicolumn{1}{|r|}{0.063}                   & \multicolumn{1}{|r|}{-0.634}                    & \multicolumn{1}{|r|}{0.005}                   & \multicolumn{1}{|r|}{0.634}                         \\ \hline
+            \multicolumn{1}{|c|}{15}                      & \multicolumn{1}{|r|}{-0.617}                        & \multicolumn{1}{|r|}{-0.103}                  & \multicolumn{1}{|r|}{-0.601}                    & \multicolumn{1}{|r|}{-0.157}                  & \multicolumn{1}{|r|}{0.621}                         \\ \hline
+            \multicolumn{1}{|c|}{30}                      & \multicolumn{1}{|r|}{-0.566}                        & \multicolumn{1}{|r|}{-0.261}                  & \multicolumn{1}{|r|}{-0.528}                    & \multicolumn{1}{|r|}{-0.310}                  & \multicolumn{1}{|r|}{0.612}                         \\ \hline
+            \multicolumn{1}{|c|}{45}                      & \multicolumn{1}{|r|}{-0.479}                        & \multicolumn{1}{|r|}{-0.405}                  & \multicolumn{1}{|r|}{-0.423}                    & \multicolumn{1}{|r|}{-0.444}                  & \multicolumn{1}{|r|}{0.613}                         \\ \hline
+            \multicolumn{1}{|c|}{60}                      & \multicolumn{1}{|r|}{-0.365}                        & \multicolumn{1}{|r|}{-0.508}                  & \multicolumn{1}{|r|}{-0.296}                    & \multicolumn{1}{|r|}{-0.536}                  & \multicolumn{1}{|r|}{0.612}                         \\ \hline
+            \multicolumn{1}{|c|}{75}                      & \multicolumn{1}{|r|}{-0.226}                        & \multicolumn{1}{|r|}{-0.582}                  & \multicolumn{1}{|r|}{-0.148}                    & \multicolumn{1}{|r|}{-0.597}                  & \multicolumn{1}{|r|}{0.615}                         \\ \hline
+            \multicolumn{1}{|c|}{90}                      & \multicolumn{1}{|r|}{-0.038}                        & \multicolumn{1}{|r|}{-0.624}                  & \multicolumn{1}{|r|}{0.044}                     & \multicolumn{1}{|r|}{-0.623}                  & \multicolumn{1}{|r|}{0.624}                         \\ \hline
+            \multicolumn{1}{|c|}{105}                     & \multicolumn{1}{|r|}{0.131}                         & \multicolumn{1}{|r|}{-0.618}                  & \multicolumn{1}{|r|}{0.212}                     & \multicolumn{1}{|r|}{-0.602}                  & \multicolumn{1}{|r|}{0.639}                         \\ \hline
+            \multicolumn{1}{|c|}{120}                     & \multicolumn{1}{|r|}{0.296}                         & \multicolumn{1}{|r|}{-0.560}                  & \multicolumn{1}{|r|}{0.369}                     & \multicolumn{1}{|r|}{-0.531}                  & \multicolumn{1}{|r|}{0.647}                         \\ \hline
+            \multicolumn{1}{|c|}{135}                     & \multicolumn{1}{|r|}{0.425}                         & \multicolumn{1}{|r|}{-0.474}                  & \multicolumn{1}{|r|}{0.486}                     & \multicolumn{1}{|r|}{-0.435}                  & \multicolumn{1}{|r|}{0.652}                         \\ \hline
+            \multicolumn{1}{|c|}{150}                     & \multicolumn{1}{|r|}{0.536}                         & \multicolumn{1}{|r|}{-0.345}                  & \multicolumn{1}{|r|}{0.580}                     & \multicolumn{1}{|r|}{-0.297}                  & \multicolumn{1}{|r|}{0.651}                         \\ \hline
+            \multicolumn{1}{|c|}{165}                     & \multicolumn{1}{|r|}{0.611}                         & \multicolumn{1}{|r|}{-0.189}                  & \multicolumn{1}{|r|}{0.634}                     & \multicolumn{1}{|r|}{-0.137}                  & \multicolumn{1}{|r|}{0.649}                         \\ \hline
+            \multicolumn{1}{|c|}{180}                     & \multicolumn{1}{|r|}{0.643}                         & \multicolumn{1}{|r|}{-0.011}                  & \multicolumn{1}{|r|}{0.643}                     & \multicolumn{1}{|r|}{0.043}                   & \multicolumn{1}{|r|}{0.645}                         \\ \hline
+            \multicolumn{1}{|c|}{195}                     & \multicolumn{1}{|r|}{0.620}                         & \multicolumn{1}{|r|}{0.156}                   & \multicolumn{1}{|r|}{0.597}                     & \multicolumn{1}{|r|}{0.208}                   & \multicolumn{1}{|r|}{0.633}                         \\ \hline
+            \multicolumn{1}{|c|}{210}                     & \multicolumn{1}{|r|}{0.561}                         & \multicolumn{1}{|r|}{0.294}                   & \multicolumn{1}{|r|}{0.520}                     & \multicolumn{1}{|r|}{0.340}                   & \multicolumn{1}{|r|}{0.622}                         \\ \hline
+            \multicolumn{1}{|c|}{225}                     & \multicolumn{1}{|r|}{0.487}                         & \multicolumn{1}{|r|}{0.402}                   & \multicolumn{1}{|r|}{0.432}                     & \multicolumn{1}{|r|}{0.441}                   & \multicolumn{1}{|r|}{0.617}                         \\ \hline
+            \multicolumn{1}{|c|}{240}                     & \multicolumn{1}{|r|}{0.399}                         & \multicolumn{1}{|r|}{0.489}                   & \multicolumn{1}{|r|}{0.331}                     & \multicolumn{1}{|r|}{0.521}                   & \multicolumn{1}{|r|}{0.617}                         \\ \hline
+            \multicolumn{1}{|c|}{255}                     & \multicolumn{1}{|r|}{0.289}                         & \multicolumn{1}{|r|}{0.565}                   & \multicolumn{1}{|r|}{0.211}                     & \multicolumn{1}{|r|}{0.586}                   & \multicolumn{1}{|r|}{0.623}                         \\ \hline
+            \multicolumn{1}{|c|}{270}                     & \multicolumn{1}{|r|}{0.163}                         & \multicolumn{1}{|r|}{0.616}                   & \multicolumn{1}{|r|}{0.078}                     & \multicolumn{1}{|r|}{0.626}                   & \multicolumn{1}{|r|}{0.631}                         \\ \hline
+            \multicolumn{1}{|c|}{285}                     & \multicolumn{1}{|r|}{0.006}                         & \multicolumn{1}{|r|}{0.641}                   & \multicolumn{1}{|r|}{-0.082}                    & \multicolumn{1}{|r|}{0.636}                   & \multicolumn{1}{|r|}{0.642}                         \\ \hline
+            \multicolumn{1}{|c|}{300}                     & \multicolumn{1}{|r|}{-0.181}                        & \multicolumn{1}{|r|}{0.615}                   & \multicolumn{1}{|r|}{-0.266}                    & \multicolumn{1}{|r|}{0.593}                   & \multicolumn{1}{|r|}{0.650}                         \\ \hline
+            \multicolumn{1}{|c|}{315}                     & \multicolumn{1}{|r|}{-0.353}                        & \multicolumn{1}{|r|}{0.532}                   & \multicolumn{1}{|r|}{-0.426}                    & \multicolumn{1}{|r|}{0.495}                   & \multicolumn{1}{|r|}{0.653}                         \\ \hline
+            \multicolumn{1}{|c|}{330}                     & \multicolumn{1}{|r|}{-0.490}                        & \multicolumn{1}{|r|}{0.406}                   & \multicolumn{1}{|r|}{-0.545}                    & \multicolumn{1}{|r|}{0.357}                   & \multicolumn{1}{|r|}{0.652}                         \\ \hline
+            \multicolumn{1}{|c|}{345}                     & \multicolumn{1}{|r|}{-0.582}                        & \multicolumn{1}{|r|}{0.237}                   & \multicolumn{1}{|r|}{-0.613}                    & \multicolumn{1}{|r|}{0.181}                   & \multicolumn{1}{|r|}{0.640}                         \\ \hline
         \end{tabular}
     \end{center}
 \end{table}
+
+\newpage
 
 \subsection{RMS誤差による補正値の評価}
 

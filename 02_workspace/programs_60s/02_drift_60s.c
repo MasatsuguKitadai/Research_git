@@ -283,7 +283,7 @@ int drift(char date[], char angle[])
 
     // fprintf(gp, "set samples 10000\n");
     // fprintf(gp, "plot '%s' using 8:4 with lines lc 'gray70' notitle, '%s' using 8:4 with lines lc 'gray20' notitle\n", filename_dat_1, filename_dat_2);
-    fprintf(gp, "plot '%s' using 5:4 with lines lc 'gray70' title 'raw data', '%s' using 8:4 with lines lc 'gray20' title 'corrected', '%s' using 8:7 with lines lc 'red' title 'Correction straight line'\n", filename_dat_1, filename_dat_2, filename_dat_2);
+    fprintf(gp, "plot '%s' using 5:4 with lines lc 'gray70' title 'raw data', '%s' using 8:4 with lines lc 'gray20' title 'corrected', '%s' using 8:7 with lines lc 'red' title 'Correction line'\n", filename_dat_1, filename_dat_2, filename_dat_2);
     fflush(gp); // Clean up Data
 
     // graph : drag
@@ -309,7 +309,7 @@ int drift(char date[], char angle[])
 
     // fprintf(gp, "set samples 10000\n");
     // fprintf(gp, "plot '%s' using 8:2 with lines lc 'gray70' notitle, '%s' using 8:2 with lines lc 'gray20' notitle\n", filename_dat_1, filename_dat_2);
-    fprintf(gp, "plot '%s' using 5:2 with lines lc 'gray70' title 'raw data', '%s' using 8:2 with lines lc 'gray20' title 'corrected', '%s' using 8:5 with lines lc 'red' title 'Correction straight line'\n", filename_dat_1, filename_dat_2, filename_dat_2);
+    fprintf(gp, "plot '%s' using 5:2 with lines lc 'gray70' title 'raw data', '%s' using 8:2 with lines lc 'gray20' title 'corrected', '%s' using 8:5 with lines lc 'red' title 'Correction line'\n", filename_dat_1, filename_dat_2, filename_dat_2);
     fflush(gp); // Clean up Data
 
     // graph : lift
@@ -335,7 +335,7 @@ int drift(char date[], char angle[])
 
     // fprintf(gp, "set samples 10000\n");
     // fprintf(gp, "plot '%s' using 8:3 with lines lc 'gray70' notitle, '%s' using 8:3 with lines lc 'gray20' notitle\n", filename_dat_1, filename_dat_2);
-    fprintf(gp, "plot '%s' using 5:3 with lines lc 'gray70' title 'raw data', '%s' using 8:3 with lines lc 'gray20' title 'corrected', '%s' using 8:6 with lines lc 'red' title 'Correction straight line'\n", filename_dat_1, filename_dat_2, filename_dat_2);
+    fprintf(gp, "plot '%s' using 5:3 with lines lc 'gray70' title 'raw data', '%s' using 8:3 with lines lc 'gray20' title 'corrected', '%s' using 8:6 with lines lc 'red' title 'Correction line'\n", filename_dat_1, filename_dat_2, filename_dat_2);
     fflush(gp); // Clean up Data
 
     fprintf(gp, "exit\n"); // Quit gnuplot
