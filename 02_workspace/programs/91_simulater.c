@@ -85,45 +85,45 @@ int simulater(char date[], double Theta_1, double Theta_2)
 
     /*****************************************************************************/
 
-    double degree = 0;
+    // double degree = 0;
 
-    for (i = 0; i < 3900; i++)
-    {
-        sum[0] = sum[0] + wave_drag_sum[i];
-        sum[1] = sum[1] + wave_lift_sum[i];
-        sum[2] = sum[2] + wave_net[i];
+    // for (i = 0; i < 3900; i++)
+    // {
+    //     sum[0] = sum[0] + wave_drag_sum[i];
+    //     sum[1] = sum[1] + wave_lift_sum[i];
+    //     sum[2] = sum[2] + wave_net[i];
 
-        ave[0] = sum[0] / 3900;
-        ave[1] = sum[1] / 3900;
-        ave[2] = sum[2] / 3900;
-    }
+    //     ave[0] = sum[0] / 3900;
+    //     ave[1] = sum[1] / 3900;
+    //     ave[2] = sum[2] / 3900;
+    // }
 
-    fp_csv = fopen(filename_csv_1, "w");
-    fp_dat = fopen(filename_dat_1, "w");
+    // fp_csv = fopen(filename_csv_1, "w");
+    // fp_dat = fopen(filename_dat_1, "w");
 
-    for (i = 0; i < 3900; i++)
-    {
-        buf = i;
-        angle = (buf - 300) / 10;
+    // for (i = 0; i < 3900; i++)
+    // {
+    //     buf = i;
+    //     angle = (buf - 300) / 10;
 
-        fprintf(fp_csv, "%.1f,%lf,%lf,%lf,%lf,%lf,%lf,%lf\n", angle, wave_drag_1[i], wave_drag_2[i], wave_drag_sum[i], wave_lift_1[i], wave_lift_2[i], wave_lift_sum[i], wave_net[i]);
-        fprintf(fp_dat, "%.1f\t%lf\t%lf\t%lf\t%lf\t%lf\t%lf\t%lf\n", angle, wave_drag_1[i], wave_drag_2[i], wave_drag_sum[i], wave_lift_1[i], wave_lift_2[i], wave_lift_sum[i], wave_net[i]);
-    }
+    //     fprintf(fp_csv, "%.1f,%lf,%lf,%lf,%lf,%lf,%lf,%lf\n", angle, wave_drag_1[i], wave_drag_2[i], wave_drag_sum[i], wave_lift_1[i], wave_lift_2[i], wave_lift_sum[i], wave_net[i]);
+    //     fprintf(fp_dat, "%.1f\t%lf\t%lf\t%lf\t%lf\t%lf\t%lf\t%lf\n", angle, wave_drag_1[i], wave_drag_2[i], wave_drag_sum[i], wave_lift_1[i], wave_lift_2[i], wave_lift_sum[i], wave_net[i]);
+    // }
 
-    fclose(fp_csv);
-    fclose(fp_dat);
+    // fclose(fp_csv);
+    // fclose(fp_dat);
 
-    /*****************************************************************************/
+    // /*****************************************************************************/
 
-    fp_csv = fopen(filename_csv_2, "w");
-    fp_dat = fopen(filename_dat_2, "w");
+    // fp_csv = fopen(filename_csv_2, "w");
+    // fp_dat = fopen(filename_dat_2, "w");
 
-    fprintf(fp_csv, "%.lf,%.lf,%.lf\n", ave[0], ave[1], ave[2]);
-    fprintf(fp_dat, "-30\t%.1f\t%lf\t%lf\n", ave[0], ave[1], ave[2]);
-    fprintf(fp_dat, "360\t%.1f\t%lf\t%lf\n", ave[0], ave[1], ave[2]);
+    // fprintf(fp_csv, "%.lf,%.lf,%.lf\n", ave[0], ave[1], ave[2]);
+    // fprintf(fp_dat, "-30\t%.1f\t%lf\t%lf\n", ave[0], ave[1], ave[2]);
+    // fprintf(fp_dat, "360\t%.1f\t%lf\t%lf\n", ave[0], ave[1], ave[2]);
 
-    fclose(fp_csv);
-    fclose(fp_dat);
+    // fclose(fp_csv);
+    // fclose(fp_dat);
 
     /*****************************************************************************/
 
@@ -175,20 +175,34 @@ int simulater(char date[], double Theta_1, double Theta_2)
 
     /*****************************************************************************/
 
-    double target_1 = 0.0555;
+    double target_1 = 0.0554;
     double target_2 = 0.0575;
 
-    if (ps[2] > target_1 && ps[2] < target_2)
+    double target_3 = 0.0505;
+    double target_4 = 0.0514;
+
+    double target_5 = 0.2324;
+    double target_6 = 0.2315;
+
+    // if (ps[2] > target_1 && ps[2] < target_2)
+    // {
+    if (wave_net_2[2] > target_3 && wave_net_2[2] < target_4)
     {
-        fp_csv = fopen(filename_csv_3, "a");
-        fp_dat = fopen(filename_dat_3, "a");
+        if (value_i[2] > target_5 && value_i[2] < target_6)
+        {
+            printf("\t[%.2f]\tHit!!\n", Theta_2);
 
-        fprintf(fp_csv, "%.2f,%.2f,%lf,%lf,%lf\n", Theta_1, Theta_2, wave_net_2[2], value_i[2], ps[2]);
-        fprintf(fp_dat, "%.2f\t%.2f\t%lf\t%lf\t%lf\n", Theta_1, Theta_2, wave_net_2[2], value_i[2], ps[2]);
+            fp_csv = fopen(filename_csv_3, "a");
+            fp_dat = fopen(filename_dat_3, "a");
 
-        fclose(fp_csv);
-        fclose(fp_dat);
+            fprintf(fp_csv, "%.2f,%.2f,%lf,%lf,%lf\n", Theta_1, Theta_2, wave_net_2[2], value_i[2], ps[2]);
+            fprintf(fp_dat, "%.2f\t%.2f\t%lf\t%lf\t%lf\n", Theta_1, Theta_2, wave_net_2[2], value_i[2], ps[2]);
+
+            fclose(fp_csv);
+            fclose(fp_dat);
+        }
     }
+    // }
 
     /*****************************************************************************/
 

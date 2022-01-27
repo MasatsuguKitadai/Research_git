@@ -315,10 +315,9 @@ Fig.から補正前のデータから算出された補正直線(赤線)の差�
 	\end{minipage}
 \end{figure}
 
+\newpage
 
 \subsubsection{出力電圧勾配の算出}
-
-\newpage
 
 以下のFig.～Fig. に，以上の過程から算出された実験結果の出力電圧勾配を示す．\\
 なお，ここでは1回目の実験の算出結果について示している．
@@ -477,16 +476,8 @@ Fig.について作成した補正理論を適用し，
 \subsubsection{座標系のオフセットにおける補正理論の適用}
 Fig.，Fig.について，座標系のオフセットにおける補正理論である
 式()の適用後の出力電圧勾配$v_{x'1}$，$v_{y'1}$を以下のFig.，Fig.に示す．
-ここで，補正の際に用いるオフセット$\Delta x$，$\Delta y$は
-実験を実施した際に測定した以下の数値を用いて行う．
-
-\begin{figure}[htbp]
-		\centering
-		\includegraphics[width=95mm]{../../02_workspace/result/2-ex/plot/21/21-2_corrected_offset_drag.png}
-		\caption{Offset corrected : drag (Average)}
-		\includegraphics[width=95mm]{../../02_workspace/result/2-ex/plot/21/21-2_corrected_offset_lift.png}
-		\caption{Offset corrected : lift (Average)}
-\end{figure}
+なお，補正の際に用いたオフセット距離$\Delta x$，$\Delta y$は
+実験の際に測定した以下のTable の数値を用いて行った．
 
 \begin{table}[htbp]
   \begin{center}
@@ -498,6 +489,14 @@ Fig.，Fig.について，座標系のオフセットにおける補正理論で
       \end{tabular}
   \end{center}
 \end{table}
+
+\begin{figure}[htbp]
+		\centering
+		\includegraphics[width=95mm]{../../02_workspace/result/2-ex/plot/21/21-2_corrected_offset_drag.png}
+		\caption{Offset corrected : drag (Average)}
+		\includegraphics[width=95mm]{../../02_workspace/result/2-ex/plot/21/21-2_corrected_offset_lift.png}
+		\caption{Offset corrected : lift (Average)}
+\end{figure}
 
 \newpage
 
@@ -552,7 +551,7 @@ Fig.，Fig.をみると，どちらもピークは波数1のときにあり，
 \end{table}
 
 ここで，式()，式()を用いてそれぞれの回転角$\theta_x$，$\theta_y$を算出する．
-余弦波からの位相角をそれぞれ$phi_x$，$phi_y$とすると，以下のように算出される．
+余弦波からの位相角をそれぞれ$\phi_x$，$\phi_y$とすると，以下のように算出される．
 \begin{align}
 	\phi_x &= \arctan \left(\frac{1.022}{-7.503}\right) \cdot \frac{180}{\pi} = \\
 	\phi_y &= \arctan \left(\frac{0.664}{7.559}\right) \cdot \frac{180}{\pi} = 
@@ -560,11 +559,11 @@ Fig.，Fig.をみると，どちらもピークは波数1のときにあり，
 
 したがって，回転角$\theta_x$，$\theta_y$は，以下のように表される．
 \begin{align}
-	\theta_x &= 180 - \phi_1 = 7.757 \; [\mathrm{deg}]\\
-	\theta_y &= 90 - \phi_2 = 5.019 \; [\mathrm{deg}]
+	\theta_x &= 180 - \phi_x = 7.757 \; [\mathrm{deg}]\\
+	\theta_y &= 90 - \phi_y = 5.019 \; [\mathrm{deg}]
 \end{align}
 
-また，そ算出結果を以下のTable に示す．
+また，その算出結果を以下のTable に示す．
 
 \begin{table}[htbp]
   \begin{center}
@@ -602,9 +601,7 @@ Fig.，Fig.の値を用いて，式()から算出される正味出力電圧勾�
   \caption{Interpolated : drag (Average)}
 \end{figure}
 
-Fig.をみると正味出力電圧$v_{net}$は周期的な波形を示していることがわかる．
-ここで，作用力測定装置は2ゲージ法を用いてひずみの計測を行っているため，
-その影響により振動している可能性が考えられる．
+Fig.をみると正味出力電圧勾配$v_{net}$は周期的な変動を示していることがわかる．
 
 \newpage
 
@@ -613,7 +610,7 @@ Fig.をみると正味出力電圧$v_{net}$は周期的な波形を示してい�
 
 \begin{table}[htbp]
     \begin{center}
-        \caption{}
+        \caption{Result summary}
         \begin{tabular}{|p{20mm}|p{20mm}|p{20mm}|p{20mm}|p{20mm}|p{20mm}|}
             \hline
             \multicolumn{1}{|c|}{\textgt{$\theta$ [deg]}} & \multicolumn{1}{|c|}{\textgt{$v_d$ [V/V]}} & \multicolumn{1}{|c|}{\textgt{$v_l$ [V/V]}} & \multicolumn{1}{|c|}{\textgt{$v_x$ [V/V]}} & \multicolumn{1}{|c|}{\textgt{$v_y$ [V/V]}} & \multicolumn{1}{|c|}{\textgt{$v_{net}$ [V/V]}}\\ \hline
@@ -645,4 +642,24 @@ Fig.をみると正味出力電圧$v_{net}$は周期的な波形を示してい�
     \end{center}
 \end{table}
 
-\section{考察}
+\subsection{RMS誤差による補正値の評価}
+
+ここで，RMS誤差を用いて補正前および補正後の結果について評価する．
+補正前の結果である座標系Aの抗力方向におけるRMS誤差を$E_{vd}$，その揚力方向を$E_{vl}$，
+補正後の結果である水槽座標系の抗力方向におけるRMS誤差を$E_{vx}$，その揚力方向を$E_{vy}$として，
+算出結果を以下のTable に示す．
+
+\begin{table}[htbp]
+  \begin{center}
+      \caption{RMS error}
+      \begin{tabular}{|p{20mm}|p{20mm}p{20mm}|p{20mm}|}
+          \hline
+          \multicolumn{1}{|c|}{$E_{vd}$ [V/V]} & \multicolumn{1}{|c|}{$E_{vd}$ [V/V]} & \multicolumn{1}{|c|}{$E_{vx}$ [V/V]} & \multicolumn{1}{|c|}{$E_{vy}$ [V/V]} \\ \hline
+          \multicolumn{1}{|c|}{0.071}          & \multicolumn{1}{|c|}{0.046}          & \multicolumn{1}{|c|}{0.036}          & \multicolumn{1}{|c|}{0.025}            \\ \hline
+      \end{tabular}
+  \end{center}
+\end{table}
+
+Tableをみると，補正前における誤差$E_{vd}$，$E_{vl}$と比較して，
+補正後における誤差$E_{vx}$，$E_{vy}$は抗力方向，揚力方向ともに小さくなっており，
+補正理論の適用によって実験結果を理論値に近づけることができたことがわかる．

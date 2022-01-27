@@ -26,6 +26,7 @@ DATE    :
 #include "../programs/27-4_wave_dft_lift.c"
 #include "../programs/28-3_wave_dft_phase-angle_drag.c"
 #include "../programs/28-4_wave_dft_phase-angle_lift.c"
+#include "../programs/30_Error.c"
 
 /*********************************   MAIN   *********************************/
 int main()
@@ -135,6 +136,11 @@ int main()
 
     // 28-2_wave_phase-angle_lift
     phase_angle_lift_theory(dataname);
+
+    printf("\n---------------------------------------------------------------------------\n\n");
+
+    // 30_Error
+    RMSE(dataname);
 
     printf("\n---------------------------------------------------------------------------\n\n");
 

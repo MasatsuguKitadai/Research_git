@@ -153,7 +153,7 @@ int offset(char date[], int split)
 
     // range y
     double y_min = 0;
-    double y_max = 0.050;
+    double y_max = 0.10;
 
     // label
     const char *xxlabel = "Number of waves [-]";
@@ -191,7 +191,7 @@ int offset(char date[], int split)
     fprintf(gp, "set xlabel '%s'offset 0.0,0\n", xxlabel);
     fprintf(gp, "set xtics %.3f\n", interval);
     fprintf(gp, "set yrange [%.3f:%.3f]\n", y_min, y_max);
-    fprintf(gp, "set ylabel '%s'offset 1,0.0\n", yylabel);
+    fprintf(gp, "set ylabel '%s'offset 1.5,0.0\n", yylabel);
     fprintf(gp, "set title '%s'\n", label);
 
     // fprintf(gp, "set samples 10000\n");

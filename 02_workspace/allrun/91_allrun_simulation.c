@@ -8,7 +8,7 @@ DATE    :
 #include <math.h>
 #include <sys/stat.h>
 #include "../programs/00_dft.c"
-#include "../programs/91_simulater.c"
+#include "../programs/91_simulater_2.c"
 
 FILE *fp, *fp_csv, *fp_dat, *gp;
 
@@ -64,25 +64,36 @@ int main()
     /*****************************************************************************/
     double theta_x, theta_y;
 
-    // printf("[Parameters]\n");
-    // printf("Theta x = ");
-    // scanf("%lf", &theta_x);
-    // printf("Theta y = ");
-    // scanf("%lf", &theta_y);
-    // printf("\n");
+    printf("[Parameters]\n");
+    printf("Theta x = ");
+    scanf("%lf", &theta_x);
+    printf("Theta y = ");
+    scanf("%lf", &theta_y);
+    printf("\n");
 
-    int i, j;
-    int num = 500;
+    simulater(dataname, theta_x, theta_y);
 
-    for (i = 0; i < num; i++)
-    {
-        for (j = 0; j < num; j++)
-        {
-            theta_x = i * 0.01;
-            theta_y = j * 0.01;
-            simulater(dataname, theta_x, theta_y);
-        }
-    }
+    /*****************************************************************************/
+
+    // int i, j;
+    // int num = 36000;
+
+    // for (i = 0; i < num; i++)
+    // {
+    //     theta_x = i * 0.01 - 180;
+    //     printf("[%.2f]", theta_x);
+
+    //     for (j = 0; j < num; j++)
+    //     {
+    //         theta_y = j * 0.01 - 180;
+    //         // printf("\t[%.2f]\n", theta_y);
+    //         simulater(dataname, theta_x, theta_y);
+    //     }
+
+    //     printf("\n");
+    // }
+
+    /*****************************************************************************/
 
     return (0);
 }
