@@ -183,7 +183,7 @@
 	\begin{center}
 		\Large 京都工芸繊維大学 工芸科学部\par
 		\vskip 16truept
-		\Large 機械システム工学課程\par
+		\Large 機械工学課程\par
 	\end{center}
 	\par\vskip 1.5em
 	\ifvoid\@abstractbox\else\centerline{\box\@abstractbox}\vskip1.5em\fi

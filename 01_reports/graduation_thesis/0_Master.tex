@@ -1,5 +1,25 @@
 \documentclass[a4paper,12pt]{jsarticle_measlab_3}
 \bibliographystyle{junsrt} 
+
+\usepackage[subrefformat=parens]{subcaption}
+\captionsetup{compatibility=false}
+
+\makeatletter
+\long\def\@makecaption#1#2{%
+  \vskip\abovecaptionskip
+  \iftdir\sbox\@tempboxa{#1\hskip1zw#2}%
+    \else\sbox\@tempboxa{#1 #2}%
+  \fi
+  \ifdim \wd\@tempboxa >\hsize
+    \iftdir #1\hskip1zw#2\relax\par
+      \else #1 #2\relax\par\fi
+  \else
+    \global \@minipagefalse
+    \hbox to\hsize{\hfil\box\@tempboxa\hfil}%
+  \fi
+  \vskip\belowcaptionskip}
+\makeatother
+
 \usepackage{layout}
 \usepackage{amsmath}
 \usepackage{amssymb}

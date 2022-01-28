@@ -7,7 +7,6 @@
 
 \subsection{作用力測定装置と校正実験装置の関係}
 はじめに，作用力測定装置と校正実験装置の関係について説明する．
-
 作用力測定装置と校正実験装置の設置位置によって校正実験結果は大きく変動するため，
 その影響を考慮し，補正処理を行う必要がある．
 このとき以下のような要因が，校正実験結果への影響を与えていると考えられる．
@@ -33,8 +32,8 @@ $y''$軸は$y$軸から$x$方向に$\Delta y$だけオフセットを持つ状�
 \begin{figure}[htbp]
 	\footnotesize
 	\begin{center}
-		\includegraphics[width=100mm]{images/31-1.png}
-		\caption{}
+		\includegraphics[width=90mm]{images/31-1.png}
+		\subcaption{Coordinate systems relationship}
 	\end{center}
 \end{figure}
 
@@ -63,9 +62,7 @@ $y''$軸は$y$軸から$x$方向に$\Delta y$だけオフセットを持つ状�
 	A &= const \notag
 \end{align}
 
-\newpage
-
-\subsection{座標系の回転における補正理論}
+\subsection{補正理論[1] : 座標系の回転における補正理論}
 
 水槽座標系と座標系Aの回転における補正理論を説明する．
 ここでは，座標系のオフセットはない($\Delta x = 0$，$\Delta y = 0$)として考える．
@@ -80,8 +77,8 @@ $v_{x}$と$v_{x'}$および$v_{y}$と$v_{y'}$の関係を明らかにすれば�
 \begin{figure}[htbp]
 	\footnotesize
 	\begin{center}
-		\includegraphics[width=75mm]{images/33-1.png}
-		\caption{}
+		\includegraphics[width=65mm]{images/33-1.png}
+		\subcaption{Relationship between ($x-y$) and ($x'-y'$)}
 	\end{center}
 \end{figure}
 
@@ -133,8 +130,8 @@ $\theta_y$を以下のように表される．
 \begin{figure}[htbp]
 	\footnotesize
 	\begin{center}
-		\includegraphics[width=75mm]{images/33-2.png}
-		\caption{}
+		\includegraphics[width=65mm]{images/33-2.png}
+		\subcaption{}
 	\end{center}
 \end{figure}
 
@@ -161,7 +158,6 @@ $v_{x'}$，$v_{y'}$のベクトルの大きさ$|\boldsymbol{v_{x'}}|$，$|\bolds
 	v_{x'} \left(x ,y\right) & = \left(|\boldsymbol{v_{x'}}| \cos \theta_x,\; |\boldsymbol{v_{x'}}| \sin \theta_y\right)    \\
 	v_{y'} \left(x ,y\right) & = \left( - |\boldsymbol{v_{y'}}| \sin \theta_x,\; |\boldsymbol{v_{y'}}| \cos \theta_y\right)
 \end{align}
-\newpage
 
 次に，直線$f_{x2}\left(x\right)$，$f_{y2}\left(x\right)$を求める．
 $f_{x}\left(x\right)$，$f_{y}\left(x\right)$，点$v_{x'}$，$v_{y'}$の座標から
@@ -198,7 +194,7 @@ $f_{x}\left(x\right)$，$f_{y}\left(x\right)$，点$v_{x'}$，$v_{y'}$の座標�
 
 \subsubsection{補正理論のテストデータへの適用 (1)}
 
-上記の座標系の回転における補正理論の有用性を確かめるために，
+上記の補正理論[1]の有用性を確かめるために，
 以下の式から，任意の回転角$\theta_{x\;\mathrm{test}}$，$\theta_{y\; \mathrm{test}}$を与えて
 座標系Aの出力電圧勾配について，$x'$軸方向を$v_{x'\;\mathrm{test}}$，
 $y'$軸方向を$v_{y'\;\mathrm{test}}$としてテストデータを作成した．
@@ -213,7 +209,7 @@ $y'$軸方向を$v_{y'\;\mathrm{test}}$としてテストデータを作成し�
 
 \begin{table}[htbp]
 	\begin{center}
-		\caption{Test data conditions}
+		\subcaption{Test data conditions}
 		\begin{tabular}{|p{30mm}|p{20mm}|p{20mm}|}
 			\hline
 			\multicolumn{1}{|c|}{}       & \multicolumn{1}{|c|}{$\theta_{x\;\mathrm{test}}$ [deg]} & \multicolumn{1}{|c|}{$\theta_{y\;\mathrm{test}}$ [deg]} \\ \hline
@@ -231,7 +227,7 @@ $y'$軸方向を$v_{y'\;\mathrm{test}}$としてテストデータを作成し�
 	\footnotesize
 	\begin{center}
 		\includegraphics[width=95mm]{../../02_workspace/result/rotation_tx=15.0_ty=20.0/plot/20/20_adjust-value.png}
-		\caption{Simulated data [Case 1]}
+		\subcaption{Simulated data [Case 1]}
 	\end{center}
 \end{figure}
 
@@ -243,7 +239,7 @@ Fig.をみると，理論値の曲線とプロットされたテストデータ�
 
 \begin{table}[htbp]
 	\begin{center}
-		\caption{DFT result value [Case 1]}
+		\subcaption{DFT result value [Case 1]}
 		\begin{tabular}{|p{30mm}|p{20mm}|p{20mm}|}
 			\hline
 			\multicolumn{1}{|c|}{}     & \multicolumn{1}{|c|}{Re}    & \multicolumn{1}{|c|}{Im}   \\ \hline
@@ -257,14 +253,14 @@ Fig.をみると，理論値の曲線とプロットされたテストデータ�
 	\begin{figure_here}
 		\begin{center}
 			\includegraphics[width=65mm]{../../02_workspace/result/rotation_tx=15.0_ty=20.0/plot/07/07-3_dft-drag.png}
-			\caption{DFT result (Drag) [Case 1]}
+			\subcaption{DFT Spectrum (Drag) [Case 1]}
 		\end{center}
 	\end{figure_here}
 
 	\begin{figure_here}
 		\begin{center}
 			\includegraphics[width=65mm]{../../02_workspace/result/rotation_tx=15.0_ty=20.0/plot/07/07-4_dft-lift.png}
-			\caption{DFT result (Lift) [Case 1]}
+			\subcaption{DFT Spectrum (Lift) [Case 1]}
 		\end{center}
 	\end{figure_here}
 \end{multicols}
@@ -302,7 +298,7 @@ Fig. ，Fig. より，波数1についてピークがあることがわかり，
 
 \begin{table}[htbp]
 	\begin{center}
-		\caption{Corected result of test data [Case 1]}
+		\subcaption{Corected result of test data [Case 1]}
 		\begin{tabular}{|p{20mm}|p{20mm}|p{20mm}|p{20mm}|p{20mm}|}
 			\hline
 			\multicolumn{1}{|c|}{\textgt{Angle [deg]}} & \multicolumn{1}{|c|}{\textgt{$v_{x'\;\mathrm{test}}$ [V/V]}} & \multicolumn{1}{|c|}{\textgt{$v_{xy\;\mathrm{test}}$ [V/V]}} & \multicolumn{1}{|c|}{\textgt{$v_x$ [V/V]}} & \multicolumn{1}{|c|}{\textgt{$v_y$ [V/V]}} \\ \hline
@@ -338,9 +334,9 @@ Fig. ，Fig. より，波数1についてピークがあることがわかり，
 	\footnotesize
 	\begin{center}
 		\includegraphics[width=95mm]{../../02_workspace/result/rotation_tx=15.0_ty=20.0/plot/21/21-4_corrected_angle_drag.png}
-		\caption{Corrected data (Drag) [Case 1]}
+		\subcaption{Corrected data (Drag) [Case 1]}
 		\includegraphics[width=95mm]{../../02_workspace/result/rotation_tx=15.0_ty=20.0/plot/21/21-4_corrected_angle_lift.png}
-		\caption{Corrected data (Lift) [Case 1]}
+		\subcaption{Corrected data (Lift) [Case 1]}
 	\end{center}
 \end{figure}
 
@@ -358,12 +354,12 @@ Fig.，Fig.をみると算出された補正値すなわち水槽座標系にお
 	\begin{minipage}[b]{0.45\linewidth}
 		\centering
 		\includegraphics[width=65mm]{../../02_workspace/result/rotation_tx=-15.0_ty=-20.0/plot/20/20_adjust-value.png}
-		\caption{Simulated data [Case 2]}
+		\subcaption{Simulated data [Case 2]}
 	\end{minipage}
 	\begin{minipage}[b]{0.45\linewidth}
 		\centering
 		\includegraphics[width=65mm]{../../02_workspace/result/rotation_tx=-15.0_ty=-20.0/plot/21/21-4_summary.png}
-		\caption{Corrected data [Case 2]}
+		\subcaption{Corrected data [Case 2]}
 	\end{minipage}
 \end{figure}
 
@@ -373,23 +369,23 @@ Fig.，Fig.をみると算出された補正値すなわち水槽座標系にお
 	\begin{minipage}[b]{0.45\linewidth}
 		\centering
 		\includegraphics[width=65mm]{../../02_workspace/result/rotation_tx=90.0_ty=-90.0/plot/20/20_adjust-value.png}
-		\caption{Simulated data [Case 3]}
+		\subcaption{Simulated data [Case 3]}
 	\end{minipage}
 	\begin{minipage}[b]{0.45\linewidth}
 		\centering
 		\includegraphics[width=65mm]{../../02_workspace/result/rotation_tx=90.0_ty=-90.0/plot/21/21-4_summary.png}
-		\caption{Corrected data [Case 3]}
+		\subcaption{Corrected data [Case 3]}
 	\end{minipage}
 \end{figure}
 
 ここで，Fig.～Fig.をみると回転角度が負の値の場合，その値が非常に大きい場合であっても
 問題なく補正処理が可能であることがわかる．
-したがって，座標系の回転における補正理論はテストデータについて正しく機能しており
+したがって，補正理論[1]はテストデータについて正しく機能しており
 水槽座標系と座標系Aの回転角および作用力測定装置のひずみセンサの取付角，
 水槽座標系における出力電圧勾配を調べることができる．
 
 \newpage
-\subsection{座標系のオフセットにおける補正理論}
+\subsection{補正理論[2] : 座標系のオフセットにおける補正理論}
 
 次に，水槽座標系と座標系Bのオフセットの補正理論を説明する．
 ここでは，回転角はない($\theta_x = 0$，$\theta_2 = 0$)として考える．
@@ -404,8 +400,8 @@ Fig.，Fig.をみると算出された補正値すなわち水槽座標系にお
 \begin{figure}[htbp]
 	\footnotesize
 	\begin{center}
-		\includegraphics[width=75mm]{images/34-1.png}
-		\caption{}
+		\includegraphics[width=65mm]{images/34-1.png}
+		\subcaption{Relationship between ($x-y$) and ($x''-y''$)}
 	\end{center}
 \end{figure}
 
@@ -517,7 +513,7 @@ $y''$軸方向を$v_{y''\;\mathrm{test}}$とするとき，以下のように表
 
 \begin{table}[htbp]
 	\begin{center}
-		\caption{Test data conditions (2)}
+		\subcaption{Test data conditions (2)}
 		\begin{tabular}{|p{30mm}|p{20mm}|p{20mm}|}
 			\hline
 			\multicolumn{1}{|c|}{}       & \multicolumn{1}{|c|}{$\Delta x_\mathrm{test}$ [mm]} & \multicolumn{1}{|c|}{$\Delta y_\mathrm{test}$ [mm]} \\ \hline
@@ -535,7 +531,7 @@ $y''$軸方向を$v_{y''\;\mathrm{test}}$とするとき，以下のように表
 	\footnotesize
 	\begin{center}
 		\includegraphics[width=95mm]{../../02_workspace/result/offset_dx=5.0_dy=0.0/plot/20/20_adjust-value.png}
-		\caption{Simulated data [Case 4]}
+		\subcaption{Simulated data [Case 4]}
 	\end{center}
 \end{figure}
 \vskip \baselineskip
@@ -552,7 +548,7 @@ Fig.をみると，プロットされたテストデータは理論値の曲線�
 
 \begin{table}[htbp]
 	\begin{center}
-		\caption{Corected result of test data [Case 4]}
+		\subcaption{Corected result of test data [Case 4]}
 		\begin{tabular}{|p{15 mm}|p{15 mm}|p{15 mm}|p{15 mm}|p{15 mm}|p{15 mm}|}
 			\hline
 			\multicolumn{1}{|c|}{\textgt{Angle [deg]}} & \multicolumn{1}{|c|}{\textgt{$v_{x''\;\mathrm{test}}$ [V/V]}} & \multicolumn{1}{|c|}{\textgt{$v_{y''\;\mathrm{test}}$ [V/V]}} & \multicolumn{1}{|c|}{\textgt{$v_x$ [V/V]}} & \multicolumn{1}{|c|}{\textgt{$v_y$ [V/V]}} & \multicolumn{1}{|c|}{\textgt{$\varphi$ [deg]}} \\ \hline
@@ -590,7 +586,7 @@ Fig.をみると，プロットされたテストデータは理論値の曲線�
 	\footnotesize
 	\begin{center}
 		\includegraphics[width=95mm]{../../02_workspace/result/offset_dx=5.0_dy=0.0/plot/21/21-2_summary_offset.png}
-		\caption{Corrected data [Case 4]}
+		\subcaption{Corrected data [Case 4]}
 	\end{center}
 \end{figure}
 
@@ -604,12 +600,12 @@ Fig.をみると算出された補正値は理論曲線上に位置している�
 	\begin{minipage}[b]{0.45\linewidth}
 		\centering
 		\includegraphics[width=65mm]{../../02_workspace/result/offset_dx=5.0_dy=-5.0/plot/20/20_adjust-value.png}
-		\caption{Simulated data [Case 5]}
+		\subcaption{Simulated data [Case 5]}
 	\end{minipage}
 	\begin{minipage}[b]{0.45\linewidth}
 		\centering
 		\includegraphics[width=65mm]{../../02_workspace/result/offset_dx=5.0_dy=-5.0/plot/21/21-2_summary_offset.png}
-		\caption{Corrected data [Case 5]}
+		\subcaption{Corrected data [Case 5]}
 	\end{minipage}
 \end{figure}
 
@@ -620,16 +616,16 @@ Fig.をみると算出された補正値は理論曲線上に位置している�
 	\begin{minipage}[b]{0.45\linewidth}
 		\centering
 		\includegraphics[width=65mm]{../../02_workspace/result/offset_dx=10.0_dy=-5.0/plot/20/20_adjust-value.png}
-		\caption{Simulated data [Case 6]}
+		\subcaption{Simulated data [Case 6]}
 	\end{minipage}
 	\begin{minipage}[b]{0.45\linewidth}
 		\centering
 		\includegraphics[width=65mm]{../../02_workspace/result/offset_dx=10.0_dy=-5.0/plot/21/21-2_summary_offset.png}
-		\caption{Corrected data [Case 6]}
+		\subcaption{Corrected data [Case 6]}
 	\end{minipage}
 \end{figure}
 
-\subsection{複合状態における補正理論}
+\subsection{補正理論[3] : 複合状態における補正理論}
 
 実際に校正実験を行う際には，座標系の回転，オフセットは同時に発生する．
 したがって，上記の2つの補正理論を組み合わせて補正処理を行う必要がある．
@@ -637,7 +633,7 @@ Fig.をみると算出された補正値は理論曲線上に位置している�
 \subsubsection{補正理論の適用順序}
 
 作成した補正理論について，座標系の回転角$\theta_x$，$\theta_2$の特定の際に
-離散フーリエ変換を適用することから，座標系のオフセットにおける補正理論を先に適用する必要がある．
+離散フーリエ変換を適用することから，補正理論[2]を先に適用する必要がある．
 また，上述のようにオフセットを考慮した場合，データ間隔が不等間隔となるため
 回転角を特定するための離散フーリエ変換が適用できない．
 したがって，ラグランジュ補間を用いて二次近似を行い，等間隔のデータを補完することとした．
@@ -660,7 +656,7 @@ $(x_3,f \left(x_3\right))$，$\cdots$の点を通る関数$P\left(x\right)$を�
 \subsubsection{使用するデータの選択}
 
 校正実験では，15度ずつ測定しているため，計24点のデータを得ることができる．
-座標系のオフセットにおける補正理論を用いた補正処理では，水槽座標系における作用力とその角度が算出される．
+補正理論[2]を用いた補正処理では，水槽座標系における作用力とその角度が算出される．
 しかし，離散フーリエ変換を適用するとき，等間隔のデータが必要となるため15度ごとの補間値を算出しなければならない．
 ここで，必要な補間値の角度を$\theta$とするとき，
 実際の作用力の角度$\varphi$との差
@@ -693,7 +689,7 @@ $y''$軸方向を$v_{y''\;\mathrm{test}}$とするとき，以下のように表
 
 \begin{table}[htbp]
 	\begin{center}
-		\caption{Test data conditions (3)}
+		\subcaption{Test data conditions (3)}
 		\begin{tabular}{|p{30mm}|p{20mm}|p{20mm}|p{20mm}|p{20mm}|}
 			\hline
 			\multicolumn{1}{|c|}{}       & \multicolumn{1}{|c|}{$\theta_{x\;\mathrm{test}}$ [deg]} & \multicolumn{1}{|c|}{$\theta_{y\;\mathrm{test}}$ [deg]} & \multicolumn{1}{|c|}{$\Delta x_\mathrm{test}$ [mm]} & \multicolumn{1}{|c|}{$\Delta y_\mathrm{test}$ [mm]} \\ \hline
@@ -711,16 +707,16 @@ Case 7 に対する座標系の回転おける補正理論の適用過程につ�
 	\footnotesize
 	\begin{center}
 		\includegraphics[width=95mm]{../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/20/20_adjust-value.png}
-		\caption{Simulated data [Case 7]}
+		\subcaption{Simulated data [Case 7]}
 	\end{center}
 \end{figure}
 
-ここで，座標系のオフセットにおける補正理論を適用した結果を以下のFig.に示す．
+ここで，補正理論[2]を適用した結果を以下のFig.に示す．
 
 \begin{figure}[htbp]
 	\begin{center}
 		\includegraphics[width=95mm]{../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-2_summary_offset.png}
-		\caption{Offset corrected [Case 7]}
+		\subcaption{Offset corrected [Case 7]}
 	\end{center}
 \end{figure}
 
@@ -735,7 +731,7 @@ Case 7 に対する座標系の回転おける補正理論の適用過程につ�
 \begin{figure}[htbp]
 	\begin{center}
 		\includegraphics[width=95mm]{../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-3_summary_interpolated.png}
-		\caption{interpolated [Case 7]}
+		\subcaption{interpolated [Case 7]}
 	\end{center}
 \end{figure}
 
@@ -748,18 +744,18 @@ Case 7 に対する座標系の回転おける補正理論の適用過程につ�
 	\begin{minipage}[b]{0.45\linewidth}
 		\centering
 		\includegraphics[width=65mm]{../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/07/07-3_dft-drag.png}
-		\caption{DFT result (Drag) [Case 7]}
+		\subcaption{DFT result (Drag) [Case 7]}
 	\end{minipage}
 	\begin{minipage}[b]{0.45\linewidth}
 		\centering
 		\includegraphics[width=65mm]{../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/07/07-4_dft-lift.png}
-		\caption{DFT result (lift) [Case 7]}
+		\subcaption{DFT result (lift) [Case 7]}
 	\end{minipage}
 \end{figure}
 
 \begin{table}[htbp]
 	\begin{center}
-		\caption{DFT result value [Case 7]}
+		\subcaption{DFT result value [Case 7]}
 		\begin{tabular}{|p{30mm}|p{20mm}|p{20mm}|}
 			\hline
 			\multicolumn{1}{|c|}{}     & \multicolumn{1}{|c|}{Re}    & \multicolumn{1}{|c|}{Im}   \\ \hline
@@ -777,7 +773,7 @@ Fig. ，Fig. より，波数1についてピークがあることがわかり，
 
 \begin{table}[htbp]
 	\begin{center}
-		\caption{Specified rotation angle [Case 7]}
+		\subcaption{Specified rotation angle [Case 7]}
 		\begin{tabular}{|p{30mm}|p{20mm}|p{20mm}|}
 			\hline
 			\multicolumn{1}{|c|}{}       & \multicolumn{1}{|c|}{$\theta_x$ [deg]} & \multicolumn{1}{|c|}{$\theta_y$ [deg]} \\ \hline
@@ -792,13 +788,13 @@ Table の Case 7 で設定したパラメータと比較すると，異なって
 これは，ラグランジュ補間公式を用いた2次近似による誤差が生じているためと考えられる．
 
 また，算出した回転角$\theta_{x\;\mathrm{test}}$，$\theta_{y\;\mathrm{test}}$を用いて
-座標系の回転における補正理論を適用した結果を以下のFig.,に示す．
+補正理論[1]を適用した結果を以下のFig.,に示す．
 
 \begin{figure}
 	\footnotesize
 	\begin{center}
 		\includegraphics[width=95mm]{../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-4_summary.png}
-		\caption{Corrected data [Case 7]}
+		\subcaption{Corrected data [Case 7]}
 	\end{center}
 \end{figure}
 
@@ -817,7 +813,7 @@ Fig.をみると，理論曲線と補正値がおおよそ一致しているこ�
 	\footnotesize
 	\begin{center}
 		\includegraphics[width=95mm]{../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/09/09_summary-outputvoltage-net.png}
-		\caption{Net output voltage [Case 7]}
+		\subcaption{Net output voltage [Case 7]}
 	\end{center}
 \end{figure}
 
