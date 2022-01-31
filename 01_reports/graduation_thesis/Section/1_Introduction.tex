@@ -3,49 +3,53 @@
 \section*{概要}
 
 本研究では，ひずみセンサを使用した揚抗力の同時測定を行う際に発生する現象の理解
-とその補正方法の確立を目的とし，揚抗力測定装置を複数の角度から
-
-
+とその補正方法の確立を目的とし，揚抗力測定装置に複数の角度から作用力を与えることによる
+出力電圧の変化を測定し，作用力測定装置の性能評価および補正理論の作成を行った．
+実験結果から作用力測定装置の設置や，ひずみセンサの取付時の人為的操作によって
+発生する誤差の影響を検討し，補正理論を作成・適用した結果，測定結果を理論値へと近づけることができた．
+したがって，作用力測定装置を使用する上での人為的操作による誤差は
+作成した補正理論を用いることで，それぞれの誤差を推定することができ，
+実験結果を任意の座標系における出力結果へと変換することができる可能性を示すことができた．
 
 \newpage
 \setcounter{tocdepth}{2}
 \tableofcontents
 \newpage
 
-\section*{記号表}
-\begin{flalign*}
-    (x, y) \quad &: \quad 水流に対する座標系，正規座標系 \\
-    (x', y') \quad &: \quad 作用力測定装置の座標系，座標系[1]\\
-    (x'', y'') \quad &: \quad 校正実験装置の座標系，座標系[2] \\
-    V_{d} \quad &: \quad 作用力測定実験から得た抗力方向における出力電圧 \; \mathrm{[V]} & \\
-    V_{l} \quad &: \quad 作用力測定実験から得た揚力方向における出力電圧 \; \mathrm{[V]} & \\
-    F_{x} \quad &: \quad 正規座標系\;(x,y)\;について抗力方向における荷重 \; \mathrm{[N]} & \\
-    F_{y} \quad &: \quad 正規座標系\;(x,y)\;について揚力方向における荷重 \; \mathrm{[N]} & \\
-    \theta_x \quad &: \quad 正規座標系\; x軸と座標系[1]\; x'軸の角度 \mathrm{[deg]}\\
-    \theta_y \quad &: \quad 正規座標系\; y軸と座標系[1]\; y'軸の角度 \mathrm{[deg]}\\
-    \Delta x \quad &: \quad 正規座標系\; x軸と座標系[2]\; x''軸のy方向の距離 \mathrm{[mm]}\\
-    \Delta y \quad &: \quad 正規座標系\; y軸と座標系[2]\; y''軸のx方向の距離 \mathrm{[mm]}\\
-    v_{d} \quad &: \quad 基礎実験結果から得た抗力方向における出力電圧勾配 \; \mathrm{[V/V]} & \\
-    v_{l} \quad &: \quad 基礎実験結果から得た揚力方向における出力電圧勾配 \; \mathrm{[V/V]} & \\
-    v_{d'} \quad &: \quad 軸のオフセットについて補正を適用した抗力方向における出力電圧勾配 \; \mathrm{[V/V]} & \\
-    v_{l'} \quad &: \quad 軸のオフセットについて補正を適用した揚力方向における出力電圧勾配 \; \mathrm{[V/V]} & \\
-    v_{x} \quad &: \quad 正規座標系\;(x,y)\;について抗力方向における出力電圧勾配 \; \mathrm{[V/V]} & \\
-    v_{y} \quad &: \quad 正規座標系\;(x,y)\;について揚力方向における出力電圧勾配 \; \mathrm{[V/V]} & \\
-    \\
-    3.x\; &\quad \textgt{抗力・揚力における出力電圧勾配の理論式}&\\
-    v_{x\; Theory} \quad &: \quad 理論上の抗力方向における出力電圧勾配&\\
-    v_{y\; Theory} \quad &: \quad 理論上の揚力方向における出力電圧勾配&\\
-    \omega \quad &: \quad 角度\\
-    \\
-    3.2\; &\quad \textgt{座標系の回転における補正理論}&\\
-    F_1 \quad &: \quad 作用力& \\
-    \theta_{x1} \quad &: \quad 正規座標系\; x軸と座標系[1]\; x'軸の角度\\
-    \theta_{y1} \quad &: \quad 正規座標系\; y軸と座標系[1]\; y'軸の角度\\
-    F_{1x} \quad &: \quad x軸方向作用力& \\
-    F_{1y} \quad &: \quad y軸方向作用力& \\
-    F_{1x'} \quad &: \quad x'軸方向作用力& \\
-    F_{1y'} \quad &: \quad y'軸方向作用力& \\
-\end{flalign*}
+% \section*{記号表}
+% \begin{flalign*}
+%     (x, y) \quad &: \quad 水流に対する座標系，正規座標系 \\
+%     (x', y') \quad &: \quad 作用力測定装置の座標系，座標系[1]\\
+%     (x'', y'') \quad &: \quad 校正実験装置の座標系，座標系[2] \\
+%     V_{d} \quad &: \quad 作用力測定実験から得た抗力方向における出力電圧 \; \mathrm{[V]} & \\
+%     V_{l} \quad &: \quad 作用力測定実験から得た揚力方向における出力電圧 \; \mathrm{[V]} & \\
+%     F_{x} \quad &: \quad 正規座標系\;(x,y)\;について抗力方向における荷重 \; \mathrm{[N]} & \\
+%     F_{y} \quad &: \quad 正規座標系\;(x,y)\;について揚力方向における荷重 \; \mathrm{[N]} & \\
+%     \theta_x \quad &: \quad 正規座標系\; x軸と座標系[1]\; x'軸の角度 \mathrm{[deg]}\\
+%     \theta_y \quad &: \quad 正規座標系\; y軸と座標系[1]\; y'軸の角度 \mathrm{[deg]}\\
+%     \Delta x \quad &: \quad 正規座標系\; x軸と座標系[2]\; x''軸のy方向の距離 \mathrm{[mm]}\\
+%     \Delta y \quad &: \quad 正規座標系\; y軸と座標系[2]\; y''軸のx方向の距離 \mathrm{[mm]}\\
+%     v_{d} \quad &: \quad 基礎実験結果から得た抗力方向における出力電圧勾配 \; \mathrm{[V/V]} & \\
+%     v_{l} \quad &: \quad 基礎実験結果から得た揚力方向における出力電圧勾配 \; \mathrm{[V/V]} & \\
+%     v_{d'} \quad &: \quad 軸のオフセットについて補正を適用した抗力方向における出力電圧勾配 \; \mathrm{[V/V]} & \\
+%     v_{l'} \quad &: \quad 軸のオフセットについて補正を適用した揚力方向における出力電圧勾配 \; \mathrm{[V/V]} & \\
+%     v_{x} \quad &: \quad 正規座標系\;(x,y)\;について抗力方向における出力電圧勾配 \; \mathrm{[V/V]} & \\
+%     v_{y} \quad &: \quad 正規座標系\;(x,y)\;について揚力方向における出力電圧勾配 \; \mathrm{[V/V]} & \\
+%     \\
+%     3.x\; &\quad \textgt{抗力・揚力における出力電圧勾配の理論式}&\\
+%     v_{x\; Theory} \quad &: \quad 理論上の抗力方向における出力電圧勾配&\\
+%     v_{y\; Theory} \quad &: \quad 理論上の揚力方向における出力電圧勾配&\\
+%     \omega \quad &: \quad 角度\\
+%     \\
+%     3.2\; &\quad \textgt{座標系の回転における補正理論}&\\
+%     F_1 \quad &: \quad 作用力& \\
+%     \theta_{x1} \quad &: \quad 正規座標系\; x軸と座標系[1]\; x'軸の角度\\
+%     \theta_{y1} \quad &: \quad 正規座標系\; y軸と座標系[1]\; y'軸の角度\\
+%     F_{1x} \quad &: \quad x軸方向作用力& \\
+%     F_{1y} \quad &: \quad y軸方向作用力& \\
+%     F_{1x'} \quad &: \quad x'軸方向作用力& \\
+%     F_{1y'} \quad &: \quad y'軸方向作用力& \\
+% \end{flalign*}
+% \newpage
 
-\newpage
 \section{序論}
