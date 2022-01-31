@@ -9,7 +9,7 @@
 大量のデータをプログラムで一度に処理できるようにするため，測定手順を以下のように定めた．
 
 \subsubsection{試行回数と測定角度}
-本研究で行った実験についての測定角度および試行回数をTableに示す．
+本研究で行った実験についての測定角度および試行回数をTable 9に示す．
 
 \begin{table}[htbp]
   \begin{center}
@@ -45,7 +45,7 @@
 
 \subsection{実験結果}
 
-4.1節に示した手順にしたがって，角度ごとに行った測定結果をFig.～Fig.に示す．
+4.1節に示した手順にしたがって，角度ごとに行った測定結果をFig.26に示す．
 なお，以下に示す結果は1回目の測定結果における 0，30, 45，60, 90, 180 [deg]である．
 
 \begin{figure}[htbp]
@@ -225,7 +225,7 @@
 
 \subsection{データ処理手法}
 
-実験結果から，式()の出力電圧勾配を算出する．
+実験結果から，式(1)，式(2)の出力電圧勾配を算出する．
 そのために以下の手順でデータ処理を行った．
 
 \begin{enumerate}[(1)]
@@ -234,7 +234,7 @@
   \item 出力電圧勾配の算出
 \end{enumerate}
 
-ここで，例として 1回目の性能評価実験，0 [deg]におけるロードセルの出力電圧の図 (Fig.) を用いて説明する．\\
+ここで，例として 1回目の性能評価実験，Fig.27に示す 0 [deg]におけるロードセルの出力電圧の図を用いて説明する．\\
 なお，ロードセルの出力電圧は使用しているストレインアンプの影響によりオフセット値を持つ．
 
 \begin{figure}[htbp]
@@ -246,7 +246,7 @@
 \end{figure}
 
 また，このとき実験結果をロードセルの押込距離および時間経過を
-Tableのように定義することとする．
+Table 10のように定義することとする．
 
 \begin{table}[htbp]
   \begin{center}
@@ -276,12 +276,12 @@ Tableのように定義することとする．
 このとき，以下の手順でドリフト補正を行うこととする．
 
 \begin{enumerate}[(1)]
-  \item 測定開始直後(Range : 1)及び終了直前(Range : 6)のデータ(30秒/150点)における平均値を算出
+  \item Range : 1及びRange : 6のデータ(30秒/150点)における平均値を算出
   \item 算出した2つの平均値を結び，直線を作成
   \item 元データと直線の差をとり，補正値として採用する
 \end{enumerate}
 
-Fig. にドリフト補正を適用した結果を示す．
+Fig.28 にドリフト補正を適用した結果を示す．
 
 \begin{figure}[htbp]
   \footnotesize
@@ -291,24 +291,27 @@ Fig. にドリフト補正を適用した結果を示す．
   \end{center}
 \end{figure}
 
-Fig.から補正前のデータから算出された補正直線(赤線)の差を取ると，
+Fig.28から補正前のデータから算出された補正直線(赤線)の差を取ると，
 補正後のデータはオフセット値の分だけ移動しており，
 タイヤモデルと接触していないとき($t = 0 \sim 100 \; [\mathrm{s}]$，$t = 500 \sim 600 \; [\mathrm{s}]$)の
 出力電圧の値は0付近を推移していることがわかる．
 したがって，ドリフト補正処理は正しく動作していると考えられる．
 
-また，Fig.に抗力及び揚力方向のひずみセンサの出力電圧について
+また，Fig.29に抗力及び揚力方向のひずみセンサの出力電圧について
 同様のプログラムを用いてドリフト補正処理を行った結果を示す．
 
 \begin{figure}[htbp]
-  \footnotesize
-  \begin{center}
-    \includegraphics[width=95mm]{../../02_workspace/result/2-1/plot/02-2_drag/02_drag-drift_0.png}
+  \begin{minipage}[b]{0.45\linewidth}
+    \centering
+    \includegraphics[width=65mm]{../../02_workspace/result/2-1/plot/02-2_drag/02_drag-drift_0.png}
     \subcaption{Drag}
-    \includegraphics[width=95mm]{../../02_workspace/result/2-1/plot/02-3_lift/02_lift-drift_0.png}
+  \end{minipage}
+  \begin{minipage}[b]{0.45\linewidth}
+    \centering
+    \includegraphics[width=65mm]{../../02_workspace/result/2-1/plot/02-3_lift/02_lift-drift_0.png}
     \subcaption{Lift}
-    \caption{Drift corrected voltage (strain sensors) : 0 [deg]}
-  \end{center}
+  \end{minipage}
+  \caption{Drift corrected voltage (strain sensors) : 0 [deg]}
 \end{figure}
 
 \newpage
@@ -323,8 +326,8 @@ Fig.から補正前のデータから算出された補正直線(赤線)の差�
   \item 前後5秒(各25点)のデータを除いた30秒間(計150点)のデータの平均値を算出する
 \end{enumerate}
 
-Fig. にロードセルの出力電圧について平均値を算出した結果を示す．
-また，Fig.に抗力及び揚力方向のひずみセンサの出力電圧について
+Fig.30 にロードセルの出力電圧について平均値を算出した結果を示す．
+また，Fig.31に抗力及び揚力方向のひずみセンサの出力電圧について
 同様のプログラムを用いて平均値の算出を行った結果を示す．
 
 \begin{figure}[htbp]
@@ -333,9 +336,6 @@ Fig. にロードセルの出力電圧について平均値を算出した結果
     \includegraphics[width=95mm]{../../02_workspace/result/2-1/plot/03-1_loadcell/03_loadcell_average_0.png}
     \caption{Each distance average voltage (load cell) : 0 [deg]}
   \end{center}
-\end{figure}
-
-\begin{figure}[htbp]
   \begin{minipage}[b]{0.45\linewidth}
     \centering
     \includegraphics[width=65mm]{../../02_workspace/result/2-1/plot/03-2_drag/03_drag_average_0.png}
@@ -353,7 +353,7 @@ Fig. にロードセルの出力電圧について平均値を算出した結果
 
 \subsubsection{出力電圧勾配の算出}
 
-Fig. に，4.3.1節及び4.3.2節の過程から算出された実験結果の出力電圧勾配を示す．\\
+Fig.32 に，4.3.1節及び4.3.2節の過程から算出された実験結果の出力電圧勾配を示す．\\
 ここで，出力電圧勾配は，平均値を用いて最小二乗法から算出した傾きの値を採用している．
 なお，以下に示す結果は1回目の測定結果における 0，30, 45，60, 90, 180 [deg]である．
 
@@ -525,7 +525,7 @@ Fig. に，4.3.1節及び4.3.2節の過程から算出された実験結果の�
 
 \newpage
 
-また，出力電圧勾配について各角度における算出値をプロットした図をFig.，Fig.に示す．
+また，出力電圧勾配について各角度における算出値をプロットした図をFig.33に示す．
 なお，ここで示す出力電圧勾配の値は5回実施した実験結果の平均値である．
 
 \begin{figure}[htbp]
@@ -544,8 +544,8 @@ Fig. に，4.3.1節及び4.3.2節の過程から算出された実験結果の�
 実験結果に対する補正理論を適用し，水槽座標系における出力電圧勾配への変換を行う．
 
 \subsubsection{補正理論[2]の適用}
-Fig.，Fig.について，座標系のオフセットにおける補正理論式()の適用する．
-その出力電圧勾配$v_{x'1}$，$v_{y'1}$をFig.，Fig.に示す．
+Fig.33について，座標系のオフセットにおける補正理論式(38)，式(39)の適用する．
+その出力電圧勾配$v_{x'1}$，$v_{y'1}$をFig.34に示す．
 なお，補正の際に用いたオフセット距離$\Delta x$，$\Delta y$は
 実験の際に測定したTableの数値を用いて行った．
 
@@ -574,8 +574,8 @@ Fig.，Fig.について，座標系のオフセットにおける補正理論式
 \newpage
 
 \subsubsection{補正理論[3]の適用}
-Fig.，Fig.について，式()のラグランジュ補間公式によって
-二次補間の適用後の出力電圧勾配$v_{x'2}$，$v_{y'2}$をFig.，Fig.に示す．
+Fig.34について，式(45)，式(46)のラグランジュ補間公式によって
+二次補間の適用後の出力電圧勾配$v_{x'2}$，$v_{y'2}$をFig.35に示す．
 
 \begin{figure}[htbp]
   \begin{center}
@@ -591,8 +591,8 @@ Fig.，Fig.について，式()のラグランジュ補間公式によって
 
 \subsubsection{補正理論[1]の適用}
 はじめに，水槽座標系からの回転角$\theta_x$，$\theta_y$を推定するため，
-Fig.，Fig.の結果に離散フーリエ変換を適用し，波数1の成分から$\theta_x$，$\theta_y$を算出する．
-ここで，その結果をFig.，Fig.に示す．
+Fig.35の結果に離散フーリエ変換を適用し，波数1の成分から$\theta_x$，$\theta_y$を算出する．
+ここで，その結果をFig.36に示す．
 
 \begin{figure}
   \begin{minipage}[b]{0.45\linewidth}
@@ -608,9 +608,9 @@ Fig.，Fig.の結果に離散フーリエ変換を適用し，波数1の成分�
   \caption{DFT spectrum}
 \end{figure}
 
-Fig.，Fig.をみると，どちらもピークは波数1のときにあり，
+Fig.36をみると，どちらもピークは波数1のときにあり，
 波の特徴を正しく捉えられていることがわかる．
-また，このとき算出された波数1の値について，Tableに示す．
+また，このとき算出された波数1の値について，Table 12に示す．
 
 \begin{table}[htbp]
   \begin{center}
@@ -624,7 +624,7 @@ Fig.，Fig.をみると，どちらもピークは波数1のときにあり，
   \end{center}
 \end{table}
 
-ここで，式()，式()を用いてそれぞれの回転角$\theta_x$，$\theta_y$を算出する．
+ここで，式(5)，式(6)，式(7)を用いてそれぞれの回転角$\theta_x$，$\theta_y$を算出する．
 余弦波からの位相角をそれぞれ$\phi_x$，$\phi_y$とすると，以下のように算出される．
 \begin{align}
   \phi_x & = \arctan \left(\frac{1.022}{-7.503}\right) \cdot \frac{180}{\pi} = 172.243\; [\mathrm{deg}] \\
@@ -638,7 +638,10 @@ Fig.，Fig.をみると，どちらもピークは波数1のときにあり，
   \theta_y & = 90 - \phi_y = 5.019 \; [\mathrm{deg}]
 \end{align}
 
-また，その算出結果をTableに示す．
+回転角$\theta_x$，$\theta_y$の算出結果をTable 13に示す．
+推定した回転角$\theta_x$，$\theta_y$を用いて
+Fig.35について，座標系の回転における補正理論である
+式(17)，式(18)の適用後の出力電圧勾配$v_x$，$v_y$をFig.37に示す．
 
 \begin{table}[htbp]
   \begin{center}
@@ -650,11 +653,6 @@ Fig.，Fig.をみると，どちらもピークは波数1のときにあり，
     \end{tabular}
   \end{center}
 \end{table}
-
-\newpage
-推定した回転角$\theta_x$，$\theta_y$を用いて
-Fig.，Fig.について，座標系の回転における補正理論である
-式()の適用後の出力電圧勾配$v_x$，$v_y$をFig.，Fig.に示す．
 
 \begin{figure}[htbp]
   \begin{center}
@@ -669,8 +667,6 @@ Fig.，Fig.について，座標系の回転における補正理論である
 \newpage
 
 \subsubsection{実験結果における正味出力電圧}
-Fig.，Fig.の値を用いて，式()から算出される正味出力電圧勾配$v_{\mathrm{net}}$の値について
-Fig.に示す．
 
 \begin{figure}[htbp]
   \centering
@@ -678,9 +674,14 @@ Fig.に示す．
   \caption{Net voltage gradient}
 \end{figure}
 
-Fig.をみると正味出力電圧勾配$v_{net}$は周期的な変動を示していることがわかる．
-また，Tableに補正前の出力電圧勾配$v_d$，$v_l$と補正後の$v_x$，$v_y$，
+Fig.37の値を用いて，式(53)から算出される正味出力電圧勾配$v_{\mathrm{net}}$の値について
+Fig.38に示す．
+
+Fig.38をみると正味出力電圧勾配$v_{net}$は周期的な変動を示していることがわかる．
+また，Table 14に補正前の出力電圧勾配$v_d$，$v_l$と補正後の$v_x$，$v_y$，
 算出された正味出力電圧勾配$v_{\mathrm{net}}$の値について示す．
+
+\newpage
 
 \begin{table}[htbp]
   \begin{center}

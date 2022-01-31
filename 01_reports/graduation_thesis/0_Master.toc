@@ -8,7 +8,7 @@
 \contentsline {subsection}{\numberline {3.2}出力電圧勾配}{9}%
 \contentsline {subsection}{\numberline {3.3}補正理論[1] : 座標系の回転における補正理論}{9}%
 \contentsline {subsubsection}{\numberline {3.3.1}回転角$\theta _{x}$，$\theta _{y}$の算出}{9}%
-\contentsline {subsubsection}{\numberline {3.3.2}出力電圧勾配の座標変換}{10}%
+\contentsline {subsubsection}{\numberline {3.3.2}出力電圧勾配の座標変換}{11}%
 \contentsline {subsubsection}{\numberline {3.3.3}補正理論のテストデータへの適用 (1)}{13}%
 \contentsline {subsubsection}{\numberline {3.3.4}テストデータ : Case 2 ($\theta _{x \mathrm {test}} = -15 \tmspace +\thickmuskip {.2777em} \mathrm {[deg]}$, $\theta _{y \mathrm {test}} = -20 \tmspace +\thickmuskip {.2777em} \mathrm {[deg]}$)}{17}%
 \contentsline {subsubsection}{\numberline {3.3.5}テストデータ : Case 3 ($\theta _{x \mathrm {test}} = 90 \tmspace +\thickmuskip {.2777em} \mathrm {[deg]}$, $\theta _{y \mathrm {test}} = -90 \tmspace +\thickmuskip {.2777em} \mathrm {[deg]}$)}{17}%
@@ -34,14 +34,14 @@
 \contentsline {subsection}{\numberline {4.2}実験結果}{31}%
 \contentsline {subsection}{\numberline {4.3}データ処理手法}{32}%
 \contentsline {subsubsection}{\numberline {4.3.1}ドリフト補正}{33}%
-\contentsline {subsubsection}{\numberline {4.3.2}各距離における平均値の算出}{34}%
+\contentsline {subsubsection}{\numberline {4.3.2}各距離における平均値の算出}{35}%
 \contentsline {subsubsection}{\numberline {4.3.3}出力電圧勾配の算出}{36}%
-\contentsline {subsection}{\numberline {4.4}校正理論の適用とその結果}{39}%
-\contentsline {subsubsection}{\numberline {4.4.1}補正理論[2]の適用}{39}%
-\contentsline {subsubsection}{\numberline {4.4.2}補正理論[3]の適用}{41}%
-\contentsline {subsubsection}{\numberline {4.4.3}補正理論[1]の適用}{42}%
-\contentsline {subsubsection}{\numberline {4.4.4}実験結果における正味出力電圧}{45}%
+\contentsline {subsection}{\numberline {4.4}校正理論の適用とその結果}{38}%
+\contentsline {subsubsection}{\numberline {4.4.1}補正理論[2]の適用}{38}%
+\contentsline {subsubsection}{\numberline {4.4.2}補正理論[3]の適用}{40}%
+\contentsline {subsubsection}{\numberline {4.4.3}補正理論[1]の適用}{41}%
+\contentsline {subsubsection}{\numberline {4.4.4}実験結果における正味出力電圧}{44}%
 \contentsline {subsection}{\numberline {4.5}RMS誤差による補正値の評価}{46}%
-\contentsline {section}{\numberline {5.}結言}{48}%
-\contentsline {section}{\gt 謝辞}{49}%
-\contentsline {subsection}{\gt 付録}{49}%
+\contentsline {section}{\numberline {5.}結言}{47}%
+\contentsline {section}{\gt 謝辞}{48}%
+\contentsline {subsection}{\gt 付録}{48}%

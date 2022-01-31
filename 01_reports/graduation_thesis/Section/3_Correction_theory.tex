@@ -29,7 +29,7 @@ $x'$軸は$x$軸から$\theta_x$，$y'$軸は$y$軸から$\theta_y$だけ回転�
 また，座標系Bは水槽座標系に対して
 $x''$軸は$x$軸から$y$方向に$\Delta x$，
 $y''$軸は$y$軸から$x$方向に$\Delta y$だけオフセットを持つ状態となる．
-その位置関係の概略図を以下のFig.に示す．
+その位置関係の概略図をFig.7に示す．
 
 \begin{figure}[htbp]
   \begin{center}
@@ -53,7 +53,7 @@ $y''$軸は$y$軸から$x$方向に$\Delta y$だけオフセットを持つ状�
   v_l = V_l / V
 \end{align}
 
-また，Fig.のように座標系を定めるとき，出力電圧勾配の理論値は，
+また，Fig.7のように座標系を定めるとき，出力電圧勾配の理論値は，
 抗力方向を$v_{x\;\mathrm{theory}}$，揚力方向を$v_{y\;\mathrm{theory}}$として，
 以下のように与えられる．
 
@@ -68,7 +68,7 @@ $y''$軸は$y$軸から$x$方向に$\Delta y$だけオフセットを持つ状�
 
 水槽座標系と座標系Aの回転における補正理論を説明する．
 ここでは，座標系のオフセットはない($\Delta x = 0$，$\Delta y = 0$)として考える．
-上述の通り水槽座標系と座標系Aについて，以下のFig.のように回転角$\theta_{x}$，$\theta_{y}$を持つ．
+上述の通り水槽座標系と座標系Aについて，Fig.8のように回転角$\theta_{x}$，$\theta_{y}$を持つ．
 ここで，作用力$F$を与えるとそれぞれの方向に作用力$F_{x}$，$F_{y}$，$F_{x'}$，$F_{y'}$が加わる．
 このとき，作用力測定装置から得られる電圧$V_{x'}$，$V_{y'}$は作用力$F_{x'}$，$F_{y'}$に起因するものである．
 また，得られた出力電圧$V_{x'}$，$V_{y'}$から，ロードセルの出力電圧$V_1$を用いて
@@ -120,8 +120,11 @@ $\theta_y$を以下のように表される．
   \phi_s = \left| \phi_1 - \phi_2 \right|
 \end{align}
 
+\newpage
+
 \subsubsection{出力電圧勾配の座標変換}
 
+ここで，水槽座標系と座標系Aについて，Fig.9のように考える．
 位相角$\theta_x$，$\theta_y$が求められたことから，
 それらを用いて出力電圧勾配の座標変換を行う．
 ここで，座標系Aの$x'$軸，$y'$軸を
@@ -144,8 +147,8 @@ $\theta_y$を以下のように表される．
 \end{align}
 \vskip \baselineskip
 
-このとき，作用力$F$は，Fig.に示す点$v$の座標を表すベクトルと考えることができる．
-また，その座標はFig.より，$f_{x}\left(x\right)$，$f_{y}\left(x\right)$の法線で，
+このとき，作用力$F$は，Fig.9に示す点$v$の座標を表すベクトルと考えることができる．
+また，その座標は$f_{x}\left(x\right)$，$f_{y}\left(x\right)$の法線で，
 点$v_{x'}$，$v_{y'}$を通る直線，
 $f_{x2}\left(x\right)$，$f_{y2}\left(x\right)$の交点であることがわかる．\par
 ここで，ひずみゲージから得ることのできる出力電圧の傾きから，
@@ -205,7 +208,7 @@ $y'$軸方向を$v_{y'\;\mathrm{test}}$としてテストデータを作成し�
 \end{align}
 \vskip \baselineskip
 
-また，今回は以下のTable のようなパラメータを用いた．
+また，今回はTable 1のようなパラメータを用いた．
 
 \begin{table}[htbp]
   \begin{center}
@@ -221,7 +224,7 @@ $y'$軸方向を$v_{y'\;\mathrm{test}}$としてテストデータを作成し�
 \end{table}
 
 ここで，Case 1 に対する座標系の回転おける補正理論の適用過程について説明する．
-はじめに，作成したテストデータを以下のFig.に示す．
+はじめに，作成したテストデータをFig.10に示す．
 
 \begin{figure}[htbp]
 
@@ -233,9 +236,9 @@ $y'$軸方向を$v_{y'\;\mathrm{test}}$としてテストデータを作成し�
 
 \newpage
 
-Fig.をみると，理論値の曲線とプロットされたテストデータに位相差があることがわかる．
-このとき，テストデータに離散フーリ変換を適用すると波数1の成分について以下のTable のような値を得ることができる．
-また，そのときのスペクトルを以下のFig. に示す．
+Fig.10をみると，理論値の曲線とプロットされたテストデータに位相差があることがわかる．
+このとき，テストデータに離散フーリ変換を適用すると波数1の成分についてTable 2のような値を得ることができる．
+また，そのときのスペクトルをFig.11 に示す．
 
 \begin{table}[htbp]
   \begin{center}
@@ -263,8 +266,8 @@ Fig.をみると，理論値の曲線とプロットされたテストデータ�
   \caption{DFT spectrum [Case 1]}
 \end{figure}
 
-Fig. より，波数1についてピークがあることがわかり，データの特徴を正しく捉えられているといえる．
-ここで，Table について，式()より位相角$\phi_{1\;\mathrm{test}}$，$\phi_{2\;\mathrm{test}}$をそれぞれ算出する．
+Fig.11 より，波数1についてピークがあることがわかり，データの特徴を正しく捉えられているといえる．
+ここで，Table 2について，式(5)より位相角$\phi_{1\;\mathrm{test}}$，$\phi_{2\;\mathrm{test}}$をそれぞれ算出する．
 
 \begin{align}
   \phi_{1\;,\mathrm{test}} & = \arctan \left(\frac{3.106}{-11.591} \right) \cdot \frac{180}{\pi} = 165.000 \;\mathrm{[deg]} \\
@@ -273,7 +276,7 @@ Fig. より，波数1についてピークがあることがわかり，デー�
 \end{align}
 \vskip \baselineskip
 
-式()，式()より算出した位相角を用いて位相差$\theta_{x \;\mathrm{test}}$，$\theta_{y \;\mathrm{test}}$を求める．
+式(6)，式(7)より算出した位相角を用いて位相差$\theta_{x \;\mathrm{test}}$，$\theta_{y \;\mathrm{test}}$を求める．
 
 \begin{align}
   \theta_{x\;,\mathrm{test}} & = \pi \cdot \frac{180}{\pi} - 165 = 15\;\mathrm{[deg]}          \\
@@ -283,7 +286,7 @@ Fig. より，波数1についてピークがあることがわかり，デー�
 
 \newpage
 また，位相差$\theta_{x \;\mathrm{test}}$，$\theta_{y \;\mathrm{test}}$より，
-ひずみセンサの取付角$\phi_{s\;\mathrm{test}}$が式()よりわかる．
+ひずみセンサの取付角$\phi_{s\;\mathrm{test}}$が式(8)よりわかる．
 
 \begin{align}
   \phi_{s\;\mathrm{test}} = \left|15 - 20\right| = 5 \;[\mathrm{deg} ]
@@ -292,7 +295,7 @@ Fig. より，波数1についてピークがあることがわかり，デー�
 次に，位相差位相差$\theta_{x,\;\mathrm{test}}$，$\theta_{y,\;\mathrm{test}}$，
 テストデータから得られる$v_{x',\;\mathrm{test}}$，$v_{xy,\;\mathrm{test}}$より，
 水槽座標系における出力電圧勾配$v_x$，$v_y$を
-式()を用いて算出する．それぞれの角度についての算出結果を以下のTable ，Fig. ，Fig. に示す．
+式(1)，式(2)を用いて算出する．それぞれの角度についての算出結果をTable 3，Fig.12 に示す．
 
 \begin{table}[htbp]
   \begin{center}
@@ -342,7 +345,7 @@ Fig.をみると算出された補正値すなわち水槽座標系における�
 理論曲線状に位置していることが確認でき，正しく算出されていることがわかる．
 
 \newpage
-また，以下のFig.～Fig.に，Case2 および Case3 におけるテストデータとその補正結果について示す．
+また，Fig.13，Fig.14に，Case2 および Case3 におけるテストデータとその補正結果について示す．
 
 \subsubsection{テストデータ : Case 2 ($\theta_{x \mathrm{test}} = -15 \; \mathrm{[deg]}$, $\theta_{y \mathrm{test}} = -20 \; \mathrm{[deg]}$)}
 
@@ -377,7 +380,7 @@ Fig.をみると算出された補正値すなわち水槽座標系における�
   \caption{Test data [Case 3]}
 \end{figure}
 
-ここで，Fig.～Fig.をみると回転角度が負の値の場合，その値が非常に大きい場合であっても
+ここで，Fig.13，Fig.14をみると回転角度が負の値の場合，その値が非常に大きい場合であっても
 問題なく補正処理が可能であることがわかる．
 したがって，補正理論[1]はテストデータについて正しく機能しており，
 水槽座標系と座標系Aの回転角および作用力測定装置のひずみセンサの取付角，
@@ -387,7 +390,8 @@ Fig.をみると算出された補正値すなわち水槽座標系における�
 \subsection{補正理論[2] : 座標系のオフセットにおける補正理論}
 
 次に，水槽座標系と座標系Bのオフセットの補正理論を説明する．
-ここでは，回転角はなく，水槽座標系の中心oと座標系Bの中心o''はオフセット$\Delta x$，$\Delta y$を持つ．
+ここでは，Fig.15に示すように回転角はなく，
+水槽座標系の中心oと座標系Bの中心o''はオフセット$\Delta x$，$\Delta y$を持つ．
 ここで，作用力$F$を与えるとき，その作用線はオフセット$\Delta x$，$\Delta y$によって
 水槽座標系の中心oを通ることはなく，座標系Bの中心o''を通る．
 このとき，作用点と点o''を通る直線(青点線)と$x''$軸の角度を$\theta$，
@@ -459,14 +463,13 @@ Fig.をみると算出された補正値すなわち水槽座標系における�
 
 \newpage
 また，接線方向成分$F_\varphi$について，供試体に対してトルク$T$として作用することとなる．
+ここで，このトルク$T$について，
+作用力測定装置に対する影響は十分に小さいと考えられることから無視する．\\
 
 \begin{align}
   T & = F_\varphi \cdot r = F \sin \alpha \cdot r
 \end{align}
 \vskip \baselineskip
-
-ここで，このトルク$T$について，
-作用力測定装置に対する影響は十分に小さいと考えられることから無視する．\\
 
 \subsubsection{出力電圧勾配の座標系変換 (2)}
 
@@ -496,6 +499,7 @@ Fig.をみると算出された補正値すなわち水槽座標系における�
 任意のオフセット$\Delta x_\mathrm{test}$，$\Delta y_\mathrm{test}$を与えて
 座標系Bの出力電圧勾配について，$x''$軸方向を$v_{x''\;\mathrm{test}}$，
 $y''$軸方向を$v_{y''\;\mathrm{test}}$とするとき，以下のように表される．
+また，今回はTable 4のようなパラメータを用いてテストデータを作成した．
 
 \begin{align}
   \theta                  & = \frac{\pi}{180} \; i \;\left(i = 0, 1, 2, 3, \cdots\right)                                                       \\
@@ -504,9 +508,6 @@ $y''$軸方向を$v_{y''\;\mathrm{test}}$とするとき，以下のように表
   v_{x'' \;\mathrm{test}} & = - \cos \alpha \cos \varphi                                                                                       \\
   v_{y'' \;\mathrm{test}} & = - \cos \alpha \sin \varphi
 \end{align}
-
-\newpage
-また，今回を以下のTable のようなパラメータを用いた．
 
 \begin{table}[htbp]
   \begin{center}
@@ -525,7 +526,6 @@ $y''$軸方向を$v_{y''\;\mathrm{test}}$とするとき，以下のように表
 はじめに，作成したテストデータを以下に示す．
 
 \begin{figure}[htbp]
-
   \begin{center}
     \includegraphics[width=95mm]{../../02_workspace/result/offset_dx=5.0_dy=0.0/plot/20/20_adjust-value.png}
     \caption{Simulated gradient [Case 4]}
@@ -533,14 +533,14 @@ $y''$軸方向を$v_{y''\;\mathrm{test}}$とするとき，以下のように表
 \end{figure}
 \vskip \baselineskip
 
-Fig.をみると，プロットされたテストデータは理論値の曲線とは異なる値を示している．
+Fig.16をみると，プロットされたテストデータは理論値の曲線とは異なる値を示している．
 また，波形は少し不規則な形状となっていることがわかる．
 
 \newpage
 
 ここで，$\theta$，$\Delta x_\mathrm{test}$，$\Delta y_\mathrm{test}$は既知の変数であるため
-式()より，$\alpha$および$\varphi$を求めることができる．
-したがって，式()を適用した結果を以下のTable に示す．
+式(31)，式(32)より，$\alpha$および$\varphi$を求めることができる．
+したがって，式(38)，式(39)を適用した結果を5に示す．
 ここで，$\varphi$は水槽座標系において供試体へ作用力が加えられている角度を示していることになる．
 
 \begin{table}[htbp]
@@ -587,9 +587,9 @@ Fig.をみると，プロットされたテストデータは理論値の曲線�
 \end{figure}
 
 
-Fig.をみると算出された補正値は理論曲線上に位置していることがわかる．
+Fig.17をみると算出された補正値は理論曲線上に位置していることがわかる．
 しかし，プロットされているデータの角度は$\varphi$となるため，不等間隔となってしまうことがわかる．\par
-また，以下のFig.～Fig.に，Case 5 および Case 6 におけるテストデータとその補正結果について示す．
+また，Fig.18，Fig.19に，Case 5 および Case 6 におけるテストデータとその補正結果について示す．
 
 \subsubsection{テストデータ : Case 5 ($\Delta x_\mathrm{test} = 5.0$ [mm]，$\Delta x_\mathrm{test} = -5.0$ [mm])}
 \begin{figure}[htbp]
@@ -672,6 +672,7 @@ $\delta \theta$を絶対値で評価することで，その値$|\delta \theta|$
 任意のオフセット$\Delta x_\mathrm{test}$，$\Delta y_\mathrm{test}$を与え，
 複合状態における出力電圧勾配について，$x''$軸方向を$v_{x''\;\mathrm{test}}$，
 $y''$軸方向を$v_{y''\;\mathrm{test}}$とするとき，以下のように表される．
+また，今回をTable 6のようなパラメータを用いてテストデータを作成した．
 
 \begin{align}
   \theta                  & = \frac{\pi}{180} \; i \;\left(i = 0, 1, 2, 3, \cdots\right)                                                       \\
@@ -681,9 +682,6 @@ $y''$軸方向を$v_{y''\;\mathrm{test}}$とするとき，以下のように表
   v_{x'' \;\mathrm{test}} & = - \cos \alpha \cos \left(\varphi - \theta_{x\; \mathrm{test}} \right)                                            \\
   v_{y'' \;\mathrm{test}} & = - \cos \alpha \sin \left(\varphi - \theta_{y\; \mathrm{test}}\right)
 \end{align}
-\vskip \baselineskip
-
-また，今回を以下のTable のようなパラメータを用いた．
 
 \begin{table}[htbp]
   \begin{center}
@@ -699,15 +697,15 @@ $y''$軸方向を$v_{y''\;\mathrm{test}}$とするとき，以下のように表
 \newpage
 
 Case 7 に対する座標系の回転おける補正理論の適用過程について説明する．
-はじめに，作成したテストデータを以下のFig. に示す．
-また，補正理論[2]を適用した結果を以下のFig.に示す．
+はじめに，作成したテストデータをFig.20 に示す．
+また，補正理論[2]を適用した結果をFig.21 に示す．
 
 \begin{figure}[htbp]
   \begin{center}
     \includegraphics[width=95mm]{../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/20/20_adjust-value.png}
     \caption{Simulated gradient [Case 7]}
     \includegraphics[width=95mm]{../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-2_summary_offset.png}
-    \subcaption{Offset Corrected gradient [Case 7]}
+    \caption{Offset Corrected gradient [Case 7]}
   \end{center}
 \end{figure}
 
@@ -717,19 +715,19 @@ Case 7 に対する座標系の回転おける補正理論の適用過程につ�
 また，プロットされたデータ間隔は異なることもわかる．
 このとき，ラグランジュ補間を用いて，等間隔のデータを得るための処理を行う．
 なお，データの採用点については上述の処理によって行うこととする．
-ラグランジュ補間を行った結果を以下のFig.，Fig.に示す．
+ラグランジュ補間を行った結果をFig.22に示す．
 
 \begin{figure}[htbp]
   \begin{center}
     \includegraphics[width=95mm]{../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-3_summary_interpolated.png}
-    \subcaption{interpolated data [Case 7]}
+    \caption{interpolated data [Case 7]}
   \end{center}
 \end{figure}
 
-上記のFig.，Fig.と比較すると等間隔のデータを得られていることがわかる．
+上記のFig.20，Fig.21と比較するとFig.22は等間隔のデータを得られていることがわかる．
 次に，フーリエ変換を適用する．
-このときの結果を以下のFig.，Fig.に示す．
-また，波数1の成分についての算出値を以下のTable に示す．
+このときの結果をFig.23に示す．
+また，波数1の成分についての算出値をTable 7に示す．
 
 \begin{figure}[htbp]
   \begin{minipage}[b]{0.45\linewidth}
@@ -758,10 +756,10 @@ Case 7 に対する座標系の回転おける補正理論の適用過程につ�
 \end{table}
 
 \newpage
-Fig. ，Fig. より，波数1についてピークがあることがわかり，
+Fig.23より，波数1についてピークがあることがわかり，
 座標軸の回転における補正理論の適用結果と同様にデータの特徴を正しく捉えられているといえる．
-ここで，Table について，式()，式()，式()より
-回転角$\theta_x$，$\theta_y$をそれぞれ算出する．
+ここで，Table 7について，式(5)，式(6)，式(7)より
+回転角$\theta_x$，$\theta_y$をそれぞれ算出し，その値をTable 8に示す．
 
 \begin{table}[htbp]
   \begin{center}
@@ -776,25 +774,26 @@ Fig. ，Fig. より，波数1についてピークがあることがわかり，
 
 
 結果より，算出された回転角$\theta_{x\;\mathrm{test}}$，$\theta_{y\;\mathrm{test}}$は
-Table の Case 7 で設定したパラメータと比較すると，異なっていることがわかる．
+Table 8の Case 7 で設定したパラメータと比較すると，異なっていることがわかる．
 これは，ラグランジュ補間公式を用いた2次近似による誤差が生じているためと考えられる．
 
 また，算出した回転角$\theta_{x\;\mathrm{test}}$，$\theta_{y\;\mathrm{test}}$を用いて
-補正理論[1]を適用した結果を以下のFig.,に示す．
+補正理論[1]を適用した結果をFig.24に示す．
 
-\begin{figure}
+\begin{figure}[htbp]
   \begin{center}
     \includegraphics[width=95mm]{../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-4_summary.png}
     \caption{Corrected gradient [Case 7]}
   \end{center}
 \end{figure}
 
-Fig.をみると，理論曲線と補正値がおおよそ一致していることが考えられる．
+Fig.24をみると，理論曲線と補正値がおおよそ一致していることが考えられる．
 
 \subsection{正味出力電圧勾配による評価}
 
 また，補正適用後に得られる水槽座標系の出力電圧$v_x$，$v_y$から，
 以下の式によって正味出力電圧勾配$v_{\mathrm{net}}$と定義し，
+その結果をFig.25に示す．
 
 \begin{align}
   v_{\mathrm{net}} & = \sqrt{v_x^2 + v_y^2}
@@ -807,7 +806,7 @@ Fig.をみると，理論曲線と補正値がおおよそ一致しているこ�
   \end{center}
 \end{figure}
 
-Fig.をみると，テストデータ[Case 7]における正味出力電圧はおおよそ一定になることがわかる．
+Fig.25をみると，テストデータ[Case 7]における正味出力電圧はおおよそ一定になることがわかる．
 同時に，細かな変動もみられるが，これはラグランジュ補間による誤差の影響であると考えられる．
 
 以上より，作成した補正理論は正しく機能しているといえ，
