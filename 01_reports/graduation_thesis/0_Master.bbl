@@ -1,0 +1,57 @@
+\begin{thebibliography}{10}
+
+\bibitem{2021_roadmap}
+国・地方脱炭素実現会議,
+\newblock 地域脱炭素ロードマップ ～地方から始まる 次の時代への移行戦略～, 2021.
+
+\bibitem{1994_smokewire}
+福富純一郎, 中瀬敬之,
+\newblock スモークワイヤ法による空気流の流速測定,
+\newblock ターボ機械, Vol.~22, No.~10, pp. 588--595, 1994.
+
+\bibitem{1994_taft}
+朴倉斗, 松田皎, 東海正,
+\newblock タフト法による平板の周りの流れの可視化,
+\newblock 日本水産学会誌, Vol.~60, No.~2, pp. 193--199, 1994.
+
+\bibitem{1999_PIV}
+利光和彦, 小川哲明, 山崎伸彦, 難波昌伸,
+\newblock 円弧翼および円柱周り流れ場の piv 測定,
+\newblock 九州大学工学集報, Vol.~72, No.~4, pp. 377--383, 1999.
+
+\bibitem{1974_automobile}
+織田紀彦,
+\newblock 自動車の風洞試験,
+\newblock 日本航空宇宙学会誌, Vol.~22, No. 245, pp. 283--287, 1974.
+
+\bibitem{2013_aircraft}
+今村太郎,
+\newblock 航空機の機体開発におけるcfdの活用,
+\newblock マシンエンジニアリング, Vol.~48, No.~5, pp. 618--622, 2013.
+
+\bibitem{1996_ship}
+野澤和男, 児玉良明,
+\newblock Cfdによる船体流場の推定と設計への応用,
+\newblock 日本造船学会誌, Vol. 806, pp. 542--551, 1996.
+
+\bibitem{2007_CFD_comparison}
+古川~裕之能村~旭浩,
+\newblock テイラー渦流れにおけるpiv測定およびcfdの比較,
+\newblock 可視化情報学会誌, Vol.~27, No.~2, pp. 23--24, 2007.
+
+\bibitem{2001_CFD_kobe}
+満田正彦, 細川佳之, 織田剛,
+\newblock 解説 数値流体力学 (cfd) が設計者に開く新しい世界 (特集 21
+  世紀を拓くシミュレーション),
+\newblock R\&D 神戸製鋼技報, Vol.~51, No.~3, pp. 69--73, 2001.
+
+\bibitem{2019_master}
+田中真央,
+\newblock 京都工芸繊維大学大学院修士論文, 2019.
+
+\bibitem{2006_strainsensor}
+熊谷常雄,
+\newblock ひずみゲージとブリッジ回路,
+\newblock 計測と制御, Vol.~45, No.~4, pp. 323--328, 2006.
+
+\end{thebibliography}

@@ -134,7 +134,7 @@ $\theta_y$を以下のように表される．
 \begin{figure}[htbp]
   \begin{center}
     \includegraphics[width=65mm]{images/33-2.png}
-    \caption{}
+    \caption{Coordinate calculation}
   \end{center}
 \end{figure}
 
@@ -299,7 +299,7 @@ Fig.11 より，波数1についてピークがあることがわかり，デー
 
 \begin{table}[htbp]
   \begin{center}
-    \caption{Corected test [Case 1]}
+    \caption{Correction test [Case 1]}
     \begin{tabular}{|p{20mm}|p{20mm}|p{20mm}|p{20mm}|p{20mm}|}
       \hline
       \multicolumn{1}{|c|}{\textgt{$\varphi$ [deg]}} & \multicolumn{1}{|c|}{\textgt{$v_{x'\;\mathrm{test}}$ [V/V]}} & \multicolumn{1}{|c|}{\textgt{$v_{xy\;\mathrm{test}}$ [V/V]}} & \multicolumn{1}{|c|}{\textgt{$v_x$ [V/V]}} & \multicolumn{1}{|c|}{\textgt{$v_y$ [V/V]}} \\ \hline
@@ -394,9 +394,9 @@ Fig.をみると算出された補正値すなわち水槽座標系における�
 水槽座標系の中心oと座標系Bの中心o''はオフセット$\Delta x$，$\Delta y$を持つ．
 ここで，作用力$F$を与えるとき，その作用線はオフセット$\Delta x$，$\Delta y$によって
 水槽座標系の中心oを通ることはなく，座標系Bの中心o''を通る．
-このとき，作用点と点o''を通る直線(青点線)と$x''$軸の角度を$\theta$，
-作用点と点oを通る直線(赤点線)と$x$軸の角度を$\varphi$とする．
-また，作用点と点o''を通る直線(青点線)と作用点と点oを通る直線(赤点線)の角度を$\alpha$とする．
+このとき，作用点$f$と点o''を通る直線(青点線)と$x''$軸の角度を$\theta$，
+作用点$f$と点oを通る直線(赤点線)と$x$軸の角度を$\varphi$とする．
+また，作用点$f$と点o''を通る直線(青点線)と作用点$f$と点oを通る直線(赤点線)の角度を$\alpha$とする．
 角度$\theta$は校正実験時に記録される角度となる．
 
 \begin{figure}[htbp]
@@ -407,7 +407,8 @@ Fig.をみると算出された補正値すなわち水槽座標系における�
 \end{figure}
 
 \subsubsection{角度$\alpha$の算出}
-供試体の半径を$r$とするとき，作用点$F(x,y)$の座標は角度$\varphi$を用いて以下のように表すことができる．
+供試体の半径を$r$とするとき，水槽座標系について
+作用点$f$の$(x,y)$座標は角度$\varphi$を用いて以下のように表すことができる．
 
 \begin{align}
   x & = r \cos \varphi \\
@@ -416,7 +417,8 @@ Fig.をみると算出された補正値すなわち水槽座標系における�
 
 \newpage
 
-また，座標系Bにおいて，作用点$F(x'',y'')$の座標はオフセット$\Delta x$，$\Delta y$を用いて
+また，座標系Bについて考える，
+このとき作用点$f$の$(x'',y'')$の座標はオフセット$\Delta x$，$\Delta y$を用いて
 以下のように表される．
 
 \begin{align}
@@ -545,7 +547,7 @@ Fig.16をみると，プロットされたテストデータは理論値の曲�
 
 \begin{table}[htbp]
   \begin{center}
-    \caption{Corected test [Case 4]}
+    \caption{Correction test [Case 4]}
     \begin{tabular}{|p{15 mm}|p{15 mm}|p{15 mm}|p{15 mm}|p{15 mm}|p{15 mm}|}
       \hline
       \multicolumn{1}{|c|}{\textgt{Angle [deg]}} & \multicolumn{1}{|c|}{\textgt{$v_{x''\;\mathrm{test}}$ [V/V]}} & \multicolumn{1}{|c|}{\textgt{$v_{y''\;\mathrm{test}}$ [V/V]}} & \multicolumn{1}{|c|}{\textgt{$v_x$ [V/V]}} & \multicolumn{1}{|c|}{\textgt{$v_y$ [V/V]}} & \multicolumn{1}{|c|}{\textgt{$\varphi$ [deg]}} \\ \hline
@@ -720,7 +722,7 @@ Case 7 に対する座標系の回転おける補正理論の適用過程につ�
 \begin{figure}[htbp]
   \begin{center}
     \includegraphics[width=95mm]{../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/21/21-3_summary_interpolated.png}
-    \caption{interpolated data [Case 7]}
+    \caption{Interpolated data [Case 7]}
   \end{center}
 \end{figure}
 
@@ -802,7 +804,7 @@ Fig.24をみると，理論曲線と補正値がおおよそ一致している�
 \begin{figure}[htbp]
   \begin{center}
     \includegraphics[width=95mm]{../../02_workspace/result/simulation_tx=10.0_ty=-5.0_dx=5.00_dy=-2.50/plot/09/09_summary-outputvoltage-net.png}
-    \caption{Net output voltage [Case 7]}
+    \caption{Net voltage gradient [Case 7]}
   \end{center}
 \end{figure}
 
