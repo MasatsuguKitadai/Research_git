@@ -1,47 +1,47 @@
 \contentsline {section}{\numberline {1.}序論}{3}%
-\contentsline {section}{\numberline {2.}実験装置}{5}%
-\contentsline {subsection}{\numberline {2.1}作用力測定装置}{5}%
-\contentsline {subsubsection}{\numberline {2.1.1}測定原理}{6}%
-\contentsline {subsection}{\numberline {2.2}校正実験装置}{6}%
-\contentsline {section}{\numberline {3.}校正理論}{9}%
-\contentsline {subsection}{\numberline {3.1}作用力測定装置と校正実験装置の関係}{9}%
-\contentsline {subsection}{\numberline {3.2}出力電圧勾配}{10}%
-\contentsline {subsection}{\numberline {3.3}補正理論[1] : 座標系の回転における補正理論}{10}%
-\contentsline {subsubsection}{\numberline {3.3.1}回転角$\theta _{x}$，$\theta _{y}$の算出}{10}%
-\contentsline {subsubsection}{\numberline {3.3.2}出力電圧勾配の座標変換}{12}%
-\contentsline {subsubsection}{\numberline {3.3.3}補正理論のテストデータへの適用 (1)}{14}%
-\contentsline {subsubsection}{\numberline {3.3.4}テストデータ : Case 2 ($\theta _{x \mathrm {test}} = -15 \tmspace +\thickmuskip {.2777em} \mathrm {[deg]}$, $\theta _{y \mathrm {test}} = -20 \tmspace +\thickmuskip {.2777em} \mathrm {[deg]}$)}{18}%
-\contentsline {subsubsection}{\numberline {3.3.5}テストデータ : Case 3 ($\theta _{x \mathrm {test}} = 90 \tmspace +\thickmuskip {.2777em} \mathrm {[deg]}$, $\theta _{y \mathrm {test}} = -90 \tmspace +\thickmuskip {.2777em} \mathrm {[deg]}$)}{18}%
-\contentsline {subsection}{\numberline {3.4}補正理論[2] : 座標系のオフセットにおける補正理論}{19}%
-\contentsline {subsubsection}{\numberline {3.4.1}角度$\alpha $の算出}{19}%
-\contentsline {subsubsection}{\numberline {3.4.2}作用力$F$の分解}{20}%
-\contentsline {subsubsection}{\numberline {3.4.3}出力電圧勾配の座標系変換 (2)}{21}%
-\contentsline {subsubsection}{\numberline {3.4.4}補正理論[2]のテストデータへの適用}{21}%
-\contentsline {subsubsection}{\numberline {3.4.5}テストデータ : Case 5 ($\Delta x_\mathrm {test} = 5.0$ [mm]，$\Delta x_\mathrm {test} = -5.0$ [mm])}{24}%
-\contentsline {subsubsection}{\numberline {3.4.6}テストデータ : Case 6 $\Delta x_\mathrm {test} = 10.0$ [mm]，$\Delta x_\mathrm {test} = -5.0$ [mm]}{25}%
-\contentsline {subsection}{\numberline {3.5}補正理論[3] : 複合状態における補正理論}{25}%
-\contentsline {subsubsection}{\numberline {3.5.1}補正理論の適用順序}{25}%
-\contentsline {subsubsection}{\numberline {3.5.2}ラグランジュ補間}{25}%
-\contentsline {subsubsection}{\numberline {3.5.3}使用するデータの選択}{26}%
-\contentsline {subsubsection}{\numberline {3.5.4}補正理論[3]のテストデータへの適用}{26}%
-\contentsline {subsection}{\numberline {3.6}正味出力電圧勾配による評価}{30}%
-\contentsline {section}{\numberline {4.}評価実験とその考察}{31}%
-\contentsline {subsection}{\numberline {4.1}実験方法}{31}%
-\contentsline {subsubsection}{\numberline {4.1.1}試行回数と測定角度}{31}%
-\contentsline {subsubsection}{\numberline {4.1.2}測定条件}{31}%
-\contentsline {subsubsection}{\numberline {4.1.3}測定準備}{31}%
-\contentsline {subsubsection}{\numberline {4.1.4}測定手順}{31}%
-\contentsline {subsection}{\numberline {4.2}実験結果}{32}%
-\contentsline {subsection}{\numberline {4.3}データ処理手法}{33}%
-\contentsline {subsubsection}{\numberline {4.3.1}ドリフト補正}{34}%
-\contentsline {subsubsection}{\numberline {4.3.2}各距離における平均値の算出}{36}%
-\contentsline {subsubsection}{\numberline {4.3.3}出力電圧勾配の算出}{37}%
-\contentsline {subsection}{\numberline {4.4}校正理論の適用とその結果}{39}%
-\contentsline {subsubsection}{\numberline {4.4.1}補正理論[2]の適用}{39}%
-\contentsline {subsubsection}{\numberline {4.4.2}補正理論[3]の適用}{41}%
-\contentsline {subsubsection}{\numberline {4.4.3}補正理論[1]の適用}{42}%
-\contentsline {subsubsection}{\numberline {4.4.4}実験結果における正味出力電圧}{45}%
-\contentsline {subsection}{\numberline {4.5}RMS誤差による補正値の評価}{47}%
-\contentsline {section}{\numberline {5.}結言}{48}%
-\contentsline {section}{\gt 謝辞}{49}%
-\contentsline {section}{参考文献}{50}%
+\contentsline {section}{\numberline {2.}実験装置}{6}%
+\contentsline {subsection}{\numberline {2.1}作用力測定装置}{6}%
+\contentsline {subsubsection}{\numberline {2.1.1}測定原理}{7}%
+\contentsline {subsection}{\numberline {2.2}校正実験装置}{7}%
+\contentsline {section}{\numberline {3.}補正理論}{10}%
+\contentsline {subsection}{\numberline {3.1}作用力測定装置と校正実験装置の関係}{10}%
+\contentsline {subsection}{\numberline {3.2}出力電圧勾配}{11}%
+\contentsline {subsection}{\numberline {3.3}補正理論[1] : 座標系の回転における補正理論}{11}%
+\contentsline {subsubsection}{\numberline {3.3.1}回転角$\theta _{x}$，$\theta _{y}$の算出}{11}%
+\contentsline {subsubsection}{\numberline {3.3.2}出力電圧勾配の座標変換}{13}%
+\contentsline {subsubsection}{\numberline {3.3.3}補正理論のテストデータへの適用 (1)}{15}%
+\contentsline {subsubsection}{\numberline {3.3.4}テストデータ : Case 2 ($\theta _{x \mathrm {test}} = -15 \tmspace +\thickmuskip {.2777em} \mathrm {[deg]}$, $\theta _{y \mathrm {test}} = -20 \tmspace +\thickmuskip {.2777em} \mathrm {[deg]}$)}{19}%
+\contentsline {subsubsection}{\numberline {3.3.5}テストデータ : Case 3 ($\theta _{x \mathrm {test}} = 90 \tmspace +\thickmuskip {.2777em} \mathrm {[deg]}$, $\theta _{y \mathrm {test}} = -90 \tmspace +\thickmuskip {.2777em} \mathrm {[deg]}$)}{19}%
+\contentsline {subsection}{\numberline {3.4}補正理論[2] : 座標系のオフセットにおける補正理論}{20}%
+\contentsline {subsubsection}{\numberline {3.4.1}角度$\alpha $の算出}{20}%
+\contentsline {subsubsection}{\numberline {3.4.2}作用力$F$の分解}{21}%
+\contentsline {subsubsection}{\numberline {3.4.3}出力電圧勾配の座標系変換 (2)}{22}%
+\contentsline {subsubsection}{\numberline {3.4.4}補正理論[2]のテストデータへの適用}{22}%
+\contentsline {subsubsection}{\numberline {3.4.5}テストデータ : Case 5 ($\Delta x_\mathrm {test} = 5.0$ [mm]，$\Delta x_\mathrm {test} = -5.0$ [mm])}{25}%
+\contentsline {subsubsection}{\numberline {3.4.6}テストデータ : Case 6 $\Delta x_\mathrm {test} = 10.0$ [mm]，$\Delta x_\mathrm {test} = -5.0$ [mm]}{26}%
+\contentsline {subsection}{\numberline {3.5}補正理論[3] : 複合状態における補正理論}{26}%
+\contentsline {subsubsection}{\numberline {3.5.1}補正理論の適用順序}{26}%
+\contentsline {subsubsection}{\numberline {3.5.2}ラグランジュ補間}{26}%
+\contentsline {subsubsection}{\numberline {3.5.3}使用するデータの選択}{27}%
+\contentsline {subsubsection}{\numberline {3.5.4}補正理論[3]のテストデータへの適用}{27}%
+\contentsline {subsection}{\numberline {3.6}正味出力電圧勾配による評価}{31}%
+\contentsline {section}{\numberline {4.}評価実験とその考察}{32}%
+\contentsline {subsection}{\numberline {4.1}実験方法}{32}%
+\contentsline {subsubsection}{\numberline {4.1.1}試行回数と測定角度}{32}%
+\contentsline {subsubsection}{\numberline {4.1.2}測定条件}{32}%
+\contentsline {subsubsection}{\numberline {4.1.3}測定準備}{32}%
+\contentsline {subsubsection}{\numberline {4.1.4}測定手順}{32}%
+\contentsline {subsection}{\numberline {4.2}実験結果}{33}%
+\contentsline {subsection}{\numberline {4.3}データ処理手法}{34}%
+\contentsline {subsubsection}{\numberline {4.3.1}ドリフト補正}{35}%
+\contentsline {subsubsection}{\numberline {4.3.2}各距離における平均値の算出}{37}%
+\contentsline {subsubsection}{\numberline {4.3.3}出力電圧勾配の算出}{38}%
+\contentsline {subsection}{\numberline {4.4}校正理論の適用とその結果}{40}%
+\contentsline {subsubsection}{\numberline {4.4.1}補正理論[2]の適用}{40}%
+\contentsline {subsubsection}{\numberline {4.4.2}補正理論[3]の適用}{42}%
+\contentsline {subsubsection}{\numberline {4.4.3}補正理論[1]の適用}{43}%
+\contentsline {subsubsection}{\numberline {4.4.4}実験結果における正味出力電圧}{46}%
+\contentsline {subsection}{\numberline {4.5}RMS誤差による補正値の評価}{48}%
+\contentsline {section}{\numberline {5.}結論}{49}%
+\contentsline {section}{\gt 謝辞}{50}%
+\contentsline {section}{参考文献}{51}%
