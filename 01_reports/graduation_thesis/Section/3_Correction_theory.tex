@@ -195,7 +195,7 @@ $f_{x}\left(x\right)$，$f_{y}\left(x\right)$，点$v_{x'}$，$v_{y'}$の座標�
 
 \newpage
 
-\subsubsection{補正理論のテストデータへの適用 (1)}
+\subsubsection{補正理論[1]のテストデータへの適用}
 
 上記の補正理論[1]の有用性を確かめるために，
 以下の式から，任意の回転角$\theta_{x\;\mathrm{test}}$，$\theta_{y\; \mathrm{test}}$を与えて
@@ -347,9 +347,6 @@ Fig.をみると算出された補正値すなわち水槽座標系における�
 \newpage
 また，Fig.13，Fig.14に，Case2 および Case3 におけるテストデータとその補正結果について示す．
 
-\subsubsection{テストデータ : Case 2 ($\theta_{x \mathrm{test}} = -15 \; \mathrm{[deg]}$, $\theta_{y \mathrm{test}} = -20 \; \mathrm{[deg]}$)}
-
-
 \begin{figure}[htbp]
   \begin{minipage}[b]{0.45\linewidth}
     \centering
@@ -361,10 +358,8 @@ Fig.をみると算出された補正値すなわち水槽座標系における�
     \includegraphics[width=65mm]{../../02_workspace/result/rotation_tx=-15.0_ty=-20.0/plot/21/21-4_summary.png}
     \subcaption{Corrected gradient}
   \end{minipage}
-  \caption{Test data [Case 2]}
+  \caption{Test data [Case 2] ($\theta_{x \mathrm{test}} = -15 \; \mathrm{[deg]}$, $\theta_{y \mathrm{test}} = -20 \; \mathrm{[deg]}$)}
 \end{figure}
-
-\subsubsection{テストデータ : Case 3 ($\theta_{x \mathrm{test}} = 90 \; \mathrm{[deg]}$, $\theta_{y \mathrm{test}} = -90 \; \mathrm{[deg]}$)}
 
 \begin{figure}[htbp]
   \begin{minipage}[b]{0.45\linewidth}
@@ -377,7 +372,7 @@ Fig.をみると算出された補正値すなわち水槽座標系における�
     \includegraphics[width=65mm]{../../02_workspace/result/rotation_tx=90.0_ty=-90.0/plot/21/21-4_summary.png}
     \subcaption{Corrected gradient}
   \end{minipage}
-  \caption{Test data [Case 3]}
+  \caption{Test data [Case 3] ($\theta_{x \mathrm{test}} = 90 \; \mathrm{[deg]}$, $\theta_{y \mathrm{test}} = -90 \; \mathrm{[deg]}$)}
 \end{figure}
 
 ここで，Fig.13，Fig.14をみると回転角度が負の値の場合，その値が非常に大きい場合であっても
@@ -593,7 +588,6 @@ Fig.17をみると算出された補正値は理論曲線上に位置してい�
 しかし，プロットされているデータの角度は$\varphi$となるため，不等間隔となってしまうことがわかる．\par
 また，Fig.18，Fig.19に，Case 5 および Case 6 におけるテストデータとその補正結果について示す．
 
-\subsubsection{テストデータ : Case 5 ($\Delta x_\mathrm{test} = 5.0$ [mm]，$\Delta x_\mathrm{test} = -5.0$ [mm])}
 \begin{figure}[htbp]
   \begin{minipage}[b]{0.45\linewidth}
     \centering
@@ -605,12 +599,11 @@ Fig.17をみると算出された補正値は理論曲線上に位置してい�
     \includegraphics[width=65mm]{../../02_workspace/result/offset_dx=5.0_dy=-5.0/plot/21/21-2_summary_offset.png}
     \subcaption{Corrected gradient}
   \end{minipage}
-  \caption{Teat data [Case 5]}
+  \caption{Teat data [Case 5] ($\Delta x_\mathrm{test} = 5.0$ [mm]，$\Delta x_\mathrm{test} = -5.0$ [mm])}
 \end{figure}
 
 \newpage
 
-\subsubsection{テストデータ : Case 6 $\Delta x_\mathrm{test} = 10.0$ [mm]，$\Delta x_\mathrm{test} = -5.0$ [mm]}
 \begin{figure}[htbp]
   \begin{minipage}[b]{0.45\linewidth}
     \centering
@@ -622,7 +615,7 @@ Fig.17をみると算出された補正値は理論曲線上に位置してい�
     \includegraphics[width=65mm]{../../02_workspace/result/offset_dx=10.0_dy=-5.0/plot/21/21-2_summary_offset.png}
     \subcaption{Corrected gradient}
   \end{minipage}
-  \caption{Teat data [Case 6]}
+  \caption{Teat data [Case 6] $\Delta x_\mathrm{test} = 10.0$ [mm]，$\Delta x_\mathrm{test} = -5.0$ [mm]}
 \end{figure}
 
 \subsection{補正理論[3] : 複合状態における補正理論}
