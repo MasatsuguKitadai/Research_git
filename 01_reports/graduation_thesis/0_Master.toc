@@ -9,7 +9,7 @@
 \contentsline {subsection}{\numberline {3.3}補正理論[1] : 座標系の回転における補正理論}{11}%
 \contentsline {subsubsection}{\numberline {3.3.1}回転角$\theta _{x}$，$\theta _{y}$の算出}{11}%
 \contentsline {subsubsection}{\numberline {3.3.2}出力電圧勾配の座標変換}{13}%
-\contentsline {subsubsection}{\numberline {3.3.3}補正理論のテストデータへの適用 (1)}{15}%
+\contentsline {subsubsection}{\numberline {3.3.3}補正理論[1]のテストデータへの適用}{15}%
 \contentsline {subsection}{\numberline {3.4}補正理論[2] : 座標系のオフセットにおける補正理論}{20}%
 \contentsline {subsubsection}{\numberline {3.4.1}角度$\alpha $の算出}{20}%
 \contentsline {subsubsection}{\numberline {3.4.2}作用力$F$の分解}{21}%

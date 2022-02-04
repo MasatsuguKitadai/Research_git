@@ -75,4 +75,31 @@ lineskip=-0.5ex
 \begin{enumerate}[1.]
     \item 
 \end{enumerate}
+
+\begin{table}[htbp]
+    \begin{center}
+      \caption{RMS error}
+      \begin{tabular}{|p{20mm}|p{20mm}p{20mm}|p{20mm}|}
+        \hline
+        \multicolumn{1}{|c|}{$E_{vd}$ [V/V]} & \multicolumn{1}{|c|}{$E_{vl}$ [V/V]} & \multicolumn{1}{|c|}{$E_{vx}$ [V/V]} & \multicolumn{1}{|c|}{$E_{vy}$ [V/V]} \\ \hline
+        \multicolumn{1}{|c|}{0.144}          & \multicolumn{1}{|c|}{0.133}          & \multicolumn{1}{|c|}{0.012}          & \multicolumn{1}{|c|}{0.007}          \\ \hline
+      \end{tabular}
+    \end{center}
+\end{table}
+    
+    \begin{table}[htbp]
+        \begin{center}
+          \caption{Specified rotation angle}
+          \begin{tabular}{|p{30mm}|p{20mm}|p{20mm}|}
+            \hline
+            \multicolumn{1}{|c|}{$\theta_x$ [deg]} & \multicolumn{1}{|c|}{$\theta_y$ [deg]} \\ \hline
+            \multicolumn{1}{|c|}{10.014}            & \multicolumn{1}{|c|}{-5.222}            \\ \hline
+          \end{tabular}
+        \end{center}
+      \end{table}
+
+\begin{eqnarray*}
+    \theta = \arctan \left(\frac{\mathrm{Im}}{\mathrm{Re}}\right) \times \frac{180}{\pi}
+\end{eqnarray*}
+
 \end{document}
