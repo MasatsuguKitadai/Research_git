@@ -85,12 +85,12 @@ int main()
     for (i = 0; i < range; i++)
     {
         buf_1 = i;
-        x = buf_1 / 100;
+        x = buf_1 / 10;
 
         for (j = 0; j < range; j++)
         {
             buf_2 = j;
-            y = buf_2 / 100;
+            y = buf_2 / 10;
 
             // ディレクトリの作成
             sprintf(directoryname, "../result/%s", dataname);
@@ -194,12 +194,9 @@ int main()
                 printf("no data file\n");
                 return 1;
             }
-
-            i = 0;
-
             fscanf(fp, "%lf, %lf", &ch0, &ch1);
 
-            error[0] = ch0 * 180 / pi;
+            error[0] = ch0 * 180 / pi - 90;
 
             fclose(fp);
 
@@ -211,8 +208,6 @@ int main()
                 printf("no data file\n");
                 return 1;
             }
-
-            i = 0;
 
             fscanf(fp, "%lf, %lf", &ch0, &ch1);
 
@@ -227,8 +222,113 @@ int main()
             fprintf(fp, "%.2f\t%.2f\t%.3f\t%.3f\n", x, y, error[0], error[1]);
 
             fclose(fp);
+
+            /*****************************************************************************/
         }
     }
+
+    /*****************************************************************************/
+    // Gnuplot //
+
+    // ディレクトリの作成
+    char filename_plot_1[100];
+    char filename_plot_2[100];
+
+    sprintf(filename_plot_1, "../result/%s/plot/map_drag.png", dataname);
+    sprintf(filename_plot_2, "../result/%s/plot/map_drag.png", dataname);
+
+    /*****************************************************************************/
+
+    // range x
+    double x_min = 0;
+    int x_max = range / 100;
+
+    // range y
+    double y_min = 0;
+    double y_max = 10;
+
+    // label
+    char label[100] = "";
+    char xxlabel[100] = "delta y";
+    char yylabel[100] = "delta x";
+
+    double size;
+
+    char cb_label = "Error [deg]";
+    double cb_min = 10;
+    double cb_max = 0;
+
+    /*****************************************************************************/
+
+    if ((gp = popen("gnuplot", "w")) == NULL)
+    {
+        printf("gnuplot is not here!\n");
+        exit(0); // gnuplotが無い場合、異常ある場合は終了
+    }
+
+    fprintf(gp, "set terminal pngcairo enhanced font 'Times New Roman,15' \n");
+
+    fprintf(gp, "set output '%s'\n", filename_plot_1);
+    fprintf(gp, "set multiplot\n");
+    fprintf(gp, "set key left top\n");
+    fprintf(gp, "set key font ',22'\n");
+    fprintf(gp, "set term pngcairo size 1280, 960 font ',27'\n");
+
+    fprintf(gp, "set lmargin screen 0.10\n");
+    fprintf(gp, "set rmargin screen 0.90\n");
+    fprintf(gp, "set tmargin screen 0.90\n");
+    fprintf(gp, "set bmargin screen 0.15\n");
+
+    fprintf(gp, "set xrange [%.3f:%d]\n", x_min, x_max);
+    fprintf(gp, "set xlabel '%s'offset 0.0,0\n", xxlabel);
+    fprintf(gp, "set xtics 1\n");
+    fprintf(gp, "set yrange [%.3f:%.3f]\n", y_min, y_max);
+    fprintf(gp, "set ylabel '%s'offset 1,0.0\n", yylabel);
+    fprintf(gp, "set title '%s (drag)'\n", label);
+
+    fprintf(gp, "set cblabel '%s'offset 0.0,0.0\n", cb_label);
+    fprintf(gp, "set cbrange['%d':'%d']\n", cb_min, cb_max);
+    fprintf(gp, "set palette rgbformulae 22,13,-31\n");
+
+    fprintf(gp, "set pm3d map\n"); // <steps in scan>,<steps between scans>
+
+    // fprintf(gp, "set samples 10000\n");
+    fprintf(gp, "splot '%s' using 1:2:3 with  pm3d notitle\n", filename_dat);
+    fflush(gp); // Clean up Data
+
+    /*****************************************************************************/
+
+    fprintf(gp, "set output '%s'\n", filename_plot_2);
+    fprintf(gp, "set multiplot\n");
+    fprintf(gp, "set key left top\n");
+    fprintf(gp, "set key font ',22'\n");
+    fprintf(gp, "set term pngcairo size 1280, 960 font ',27'\n");
+
+    fprintf(gp, "set lmargin screen 0.10\n");
+    fprintf(gp, "set rmargin screen 0.90\n");
+    fprintf(gp, "set tmargin screen 0.90\n");
+    fprintf(gp, "set bmargin screen 0.15\n");
+
+    fprintf(gp, "set xrange [%.3f:%d]\n", x_min, x_max);
+    fprintf(gp, "set xlabel '%s'offset 0.0,0\n", xxlabel);
+    fprintf(gp, "set xtics 1\n");
+    fprintf(gp, "set yrange [%.3f:%.3f]\n", y_min, y_max);
+    fprintf(gp, "set ylabel '%s'offset 1,0.0\n", yylabel);
+    fprintf(gp, "set title '%s (drag)'\n", label);
+
+    fprintf(gp, "set cblabel '%s'offset 0.0,0.0\n", cb_label);
+    fprintf(gp, "set cbrange['%d':'%d']\n", cb_min, cb_max);
+    fprintf(gp, "set palette rgbformulae 22,13,-31\n");
+
+    fprintf(gp, "set pm3d map\n"); // <steps in scan>,<steps between scans>
+
+    // fprintf(gp, "set samples 10000\n");
+    fprintf(gp, "splot '%s' using 1:2:4 with  pm3d notitle\n", filename_dat);
+    fflush(gp); // Clean up Data
+
+    fprintf(gp, "exit\n"); // Quit gnuplot
+
+    pclose(gp);
 
     return (0);
 }
