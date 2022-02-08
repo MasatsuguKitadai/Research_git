@@ -145,11 +145,11 @@ int reverse(char date[], char angle[])
     int x_max = 600;
 
     // range y
-    double y_min = -1.5;
-    double y_max = 1.5;
+    double y_min = -1.0;
+    double y_max = 0.5;
 
     // range y (loadcell)
-    double y_min_loadcell = -0.5;
+    double y_min_loadcell = 0;
     double y_max_loadcell = 2;
 
     // label
@@ -180,7 +180,7 @@ int reverse(char date[], char angle[])
     fprintf(gp, "set output '%s'\n", filename_plot_1);
     // fprintf(gp, "set multiplot\n");
     fprintf(gp, "unset key\n");
-    fprintf(gp, "set term pngcairo size 1280, 960 font ',27'\n");
+    fprintf(gp, "set term pngcairo size 1920, 960 font ',27'\n");
     // fprintf(gp, "set size ratio %.3f\n", size);
 
     fprintf(gp, "set lmargin screen 0.10\n");
@@ -205,7 +205,7 @@ int reverse(char date[], char angle[])
     // fprintf(gp, "set multiplot\n");
     fprintf(gp, "set key left top\n");
     fprintf(gp, "set key font ',22'\n");
-    fprintf(gp, "set term pngcairo size 1280, 960 font ',27'\n");
+    fprintf(gp, "set term pngcairo size 1920, 960 font ',27'\n");
     // fprintf(gp, "set size ratio %.3f\n", size);
 
     fprintf(gp, "set lmargin screen 0.10\n");
