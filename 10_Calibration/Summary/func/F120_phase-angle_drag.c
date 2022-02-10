@@ -11,7 +11,7 @@ DATE    :
 FILE *fp, *fp_csv, *fp_dat;
 
 // 円周率の定義
-// #define pi 4 * atan(1.0);
+// double pi = 4 * atan(1.0);
 
 char filename_read[100];
 char filename_dat[100];
@@ -19,15 +19,15 @@ char filename_csv[100];
 
 /*********************************   MAIN   *********************************/
 
-int phase_angle_lift_theory(char date[])
+int phase_angle_drag(char date[])
 {
     /*****************************************************************************/
     // ディレクトリの作成
     char directoryname_dat[100];
     char directoryname_csv[100];
 
-    sprintf(directoryname_dat, "../result/%s/dat/40-LD-ratio", date);
-    sprintf(directoryname_csv, "../result/%s/csv/40-LD-ratio", date);
+    sprintf(directoryname_dat, "../result/%s/dat/08-3_phase-angle_drag", date);
+    sprintf(directoryname_csv, "../result/%s/csv/08-3_phase-angle_drag", date);
 
     mkdir(directoryname_dat, S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IXOTH | S_IXOTH);
     mkdir(directoryname_csv, S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IXOTH | S_IXOTH);
@@ -37,9 +37,9 @@ int phase_angle_lift_theory(char date[])
     char filename_csv[100];
     char filename_dat[100];
 
-    sprintf(filename_read, "../result/%s/csv/21_adjust-value_ver2/21.csv", date);
-    sprintf(filename_csv, "../result/%s/csv/40_LD-ratio/40.csv", date);
-    sprintf(filename_dat, "../result/%s/dat/40_LD-ratio/40.dat", date);
+    sprintf(filename_read, "../result/%s/csv/07-3_dft-drag/07-3.csv", date);
+    sprintf(filename_csv, "../result/%s/csv/08-3_phase-angle_drag/08-3.csv", date);
+    sprintf(filename_dat, "../result/%s/dat/08-3_phase-angle_drag/08-3.dat", date);
 
     /*****************************************************************************/
 
@@ -89,55 +89,27 @@ int phase_angle_lift_theory(char date[])
         degree = 180;
     }
 
-    printf("[lift-Theory]\n");
-    printf("Im/Re =\t%.3f\n\n", gradient);
-    printf("angle =\t%.3f\t[deg]\n", degree);
+    // printf("pi = %.3f\n", pi);
 
-    /*****************************************************************************/
-
-    char filename_read_result[100];
-    sprintf(filename_read_result, "../result/%s/csv/08-4_phase-angle_lift/08-4.csv", date);
-
-    double radian_result = 0;
-    double degree_result = 0;
-
-    fp = fopen(filename_read_result, "r");
-
-    if (filename_read_result == NULL)
-    {
-        printf("Error! I can't open the file.\n");
-        exit(0);
-    }
-
-    i = 0;
-
-    fscanf(fp, "%lf, %lf", &ch0, &ch1);
-    // printf("Radian = \t%.3f\tDegree =\t%.3f\n", ch0, ch1);
-    radian_result = ch0; // 実験結果 Radian
-    degree_result = ch1; // 実験結果 Degree
-
-    fclose(fp);
-
-    double difference = 0;
-    difference = degree_result - degree;
-    printf("Difference =\t%.3f [deg]\n\n", difference);
-
-    /*****************************************************************************/
+    printf("[DRAG]\n");
+    printf("Im/Re =\t%.3f\n", gradient);
+    printf("angle(1) =\t%.3f\t[deg]\n", degree);
+    printf("angle(2) =\t%.3f\t[rad]\n\n", radian);
 
     fp_csv = fopen(filename_csv, "w");
     fp_dat = fopen(filename_dat, "w");
 
-    fprintf(fp_csv, "%lf,%lf\n", gradient, degree);
-    fprintf(fp_dat, "%lf\t%lf\n", gradient, degree);
+    fprintf(fp_csv, "%lf,%lf\n", radian, degree);
+    fprintf(fp_dat, "%lf\t%lf\n", radian, degree);
 
     fclose(fp_csv);
     fclose(fp_dat);
 
-    printf("28-4\t\tsuccess\n");
+    printf("08-3\t\tsuccess\n");
 }
 
 // int main()
 // {
-//     radian_lift("test-dft");
+//     phase_angle_drag("test-fft");
 //     return (0);
 // }

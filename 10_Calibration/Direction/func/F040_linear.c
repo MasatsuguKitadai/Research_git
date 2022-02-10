@@ -3,10 +3,7 @@ PROGRAM NAME :
 AUTHER  : Masatsugu Kitadai
 DATE    :
 ******************************************************************************/
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
-#include <sys/stat.h>
+#include "head.h"
 
 FILE *fp, *fp_dat, *fp_csv, *gp;
 /*********************************   MAIN   *********************************/
@@ -24,10 +21,10 @@ int linear(char date[], char angle[])
     sprintf(directoryname_csv_1, "../result/%s/csv/04-1_linear", date);
     sprintf(directoryname_csv_2, "../result/%s/csv/04-2_gradient", date);
 
-    mkdir(directoryname_dat_1, S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IXOTH | S_IXOTH);
-    mkdir(directoryname_dat_2, S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IXOTH | S_IXOTH);
-    mkdir(directoryname_csv_1, S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IXOTH | S_IXOTH);
-    mkdir(directoryname_csv_2, S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IXOTH | S_IXOTH);
+    mkdir(directoryname_dat_1, mode);
+    mkdir(directoryname_dat_2, mode);
+    mkdir(directoryname_csv_1, mode);
+    mkdir(directoryname_csv_2, mode);
 
     /*****************************************************************************/
 
@@ -184,7 +181,7 @@ int linear(char date[], char angle[])
     char directoryname_plot[100];
 
     sprintf(directoryname_plot, "../result/%s/plot/04", date);
-    mkdir(directoryname_plot, S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IXOTH | S_IXOTH);
+    mkdir(directoryname_plot, mode);
 
     /*****************************************************************************/
 
@@ -261,10 +258,33 @@ int linear(char date[], char angle[])
     printf("%.3lf\t%.3f\t%.3f\n", a1[0], a1[1], sqrt_value);
 }
 
-int main()
-{
-    // simulation
-    force("testdata", "0");
+// int main()
+// {
+//     // simulation
+//     linear("testdata", "0");
+//     linear("testdata", "15");
+//     linear("testdata", "30");
+//     linear("testdata", "45");
+//     linear("testdata", "60");
+//     linear("testdata", "75");
+//     linear("testdata", "90");
+//     linear("testdata", "105");
+//     linear("testdata", "120");
+//     linear("testdata", "135");
+//     linear("testdata", "150");
+//     linear("testdata", "165");
+//     linear("testdata", "180");
+//     linear("testdata", "195");
+//     linear("testdata", "210");
+//     linear("testdata", "225");
+//     linear("testdata", "240");
+//     linear("testdata", "255");
+//     linear("testdata", "270");
+//     linear("testdata", "285");
+//     linear("testdata", "300");
+//     linear("testdata", "315");
+//     linear("testdata", "330");
+//     linear("testdata", "345");
 
-    return (0);
-}
+//     return (0);
+// }
