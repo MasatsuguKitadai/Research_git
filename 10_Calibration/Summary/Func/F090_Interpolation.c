@@ -13,34 +13,25 @@ int Interpolation(char date[], int split)
 {
     // ディレクトリの作成
     char directoryname_1[100];
-    char directoryname_2[100];
     char directoryname_dat_1[100];
-    char directoryname_dat_2[100];
     char directoryname_csv_1[100];
-    char directoryname_csv_2[100];
     char directoryname_png[100];
 
     /*****************************************************************************/
 
     // 元ディレクトリの作成
-    sprintf(directoryname_1, "../Result/%s/091_Interpolation", date);
-    sprintf(directoryname_2, "../Result/%s/092_Interpolation-Ave", date);
+    sprintf(directoryname_1, "../Result/%s/090_Interpolation", date);
 
     mkdir(directoryname_1, mode);
-    mkdir(directoryname_2, mode);
 
     /*****************************************************************************/
 
-    sprintf(directoryname_dat_1, "../Result/%s/091_Interpolation/dat", date);
-    sprintf(directoryname_csv_1, "../Result/%s/091_Interpolation/csv", date);
-    sprintf(directoryname_dat_2, "../Result/%s/092_Interpolation-Ave/dat", date);
-    sprintf(directoryname_csv_2, "../Result/%s/092_Interpolation-Ave/csv", date);
-    sprintf(directoryname_png, "../Result/%s/091_Interpolation/png", date);
+    sprintf(directoryname_dat_1, "../Result/%s/090_Interpolation/dat", date);
+    sprintf(directoryname_csv_1, "../Result/%s/090_Interpolation/csv", date);
+    sprintf(directoryname_png, "../Result/%s/090_Interpolation/png", date);
 
     mkdir(directoryname_dat_1, mode);
     mkdir(directoryname_csv_1, mode);
-    mkdir(directoryname_dat_2, mode);
-    mkdir(directoryname_csv_2, mode);
     mkdir(directoryname_png, mode);
 
     /*****************************************************************************/
@@ -52,13 +43,13 @@ int Interpolation(char date[], int split)
     char filename_csv_average[100];
     char filename_dat_average[100];
 
-    sprintf(filename_read, "../Result/%s/081_Offset/csv/Offset.csv", date);
+    sprintf(filename_read, "../Result/%s/080_Offset/csv/Offset.csv", date);
 
-    sprintf(filename_csv, "../Result/%s/091_Interpolation/csv/Interpolation.csv", date);
-    sprintf(filename_dat, "../Result/%s/091_Interpolation/dat/Interpolation.dat", date);
+    sprintf(filename_csv, "../Result/%s/090_Interpolation/csv/Interpolation.csv", date);
+    sprintf(filename_dat, "../Result/%s/090_Interpolation/dat/Interpolation.dat", date);
 
-    sprintf(filename_csv_average, "../Result/%s/092_Interpolation-Ave/csv/Interpolation-Ave.csv", date);
-    sprintf(filename_dat_average, "../Result/%s/092_Interpolation-Ave/dat/Interpolation-Ave.dat", date);
+    sprintf(filename_csv_average, "../Result/%s/090_Interpolation/csv/Interpolation-Ave.csv", date);
+    sprintf(filename_dat_average, "../Result/%s/090_Interpolation/dat/Interpolation-Ave.dat", date);
 
     /*****************************************************************************/
 
@@ -291,7 +282,7 @@ int Interpolation(char date[], int split)
 
     // filename
     char filename_png_1[100];
-    sprintf(filename_png_1, "../Result/%s/091_Interpolation/png/Interpolation.png", date);
+    sprintf(filename_png_1, "../Result/%s/090_Interpolation/png/Interpolation.png", date);
 
     /*****************************************************************************/
 

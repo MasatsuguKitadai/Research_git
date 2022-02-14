@@ -13,52 +13,43 @@ int Offset(char date[], int split, double delta_x, double delta_y)
 
     // ディレクトリの作成
     char directoryname_1[100];
-    char directoryname_2[100];
     char directoryname_dat_1[100];
-    char directoryname_dat_2[100];
     char directoryname_csv_1[100];
-    char directoryname_csv_2[100];
     char directoryname_png[100];
 
     /*****************************************************************************/
 
     // 元ディレクトリの作成
-    sprintf(directoryname_1, "../Result/%s/081_Offset", date);
-    sprintf(directoryname_2, "../Result/%s/082_Offset-Ave", date);
+    sprintf(directoryname_1, "../Result/%s/080_Offset", date);
 
     mkdir(directoryname_1, mode);
-    mkdir(directoryname_2, mode);
 
     /*****************************************************************************/
 
-    sprintf(directoryname_dat_1, "../Result/%s/081_Offset/dat", date);
-    sprintf(directoryname_csv_1, "../Result/%s/081_Offset/csv", date);
-    sprintf(directoryname_dat_2, "../Result/%s/082_Offset-Ave/dat", date);
-    sprintf(directoryname_csv_2, "../Result/%s/082_Offset-Ave/csv", date);
-    sprintf(directoryname_png, "../Result/%s/081_Offset/png", date);
+    sprintf(directoryname_dat_1, "../Result/%s/080_Offset/dat", date);
+    sprintf(directoryname_csv_1, "../Result/%s/080_Offset/csv", date);
+    sprintf(directoryname_png, "../Result/%s/080_Offset/png", date);
 
     mkdir(directoryname_dat_1, mode);
     mkdir(directoryname_csv_1, mode);
-    mkdir(directoryname_dat_2, mode);
-    mkdir(directoryname_csv_2, mode);
     mkdir(directoryname_png, mode);
 
     /*****************************************************************************/
 
     // filename
     char filename_read[100];
-    char filename_csv[100];
-    char filename_dat[100];
-    char filename_csv_average[100];
-    char filename_dat_average[100];
+    char filename_csv_1[100];
+    char filename_dat_1[100];
+    char filename_csv_2[100];
+    char filename_dat_2[100];
 
-    sprintf(filename_read, "../Result/%s/061_Summary/csv/Summary.csv", date);
+    sprintf(filename_read, "../Result/%s/060_Summary/csv/Summary.csv", date);
 
-    sprintf(filename_csv, "../Result/%s/081_Offset/csv/Offset.csv", date);
-    sprintf(filename_dat, "../Result/%s/081_Offset/dat/Offset.dat", date);
+    sprintf(filename_csv_1, "../Result/%s/080_Offset/csv/Offset.csv", date);
+    sprintf(filename_dat_1, "../Result/%s/080_Offset/dat/Offset.dat", date);
 
-    sprintf(filename_csv_average, "../Result/%s/082_Offset-Ave/csv/Offset-Ave.csv", date);
-    sprintf(filename_dat_average, "../Result/%s/082_Offset-Ave/dat/Offset-Ave.dat", date);
+    sprintf(filename_csv_2, "../Result/%s/080_Offset/csv/Offset-Ave.csv", date);
+    sprintf(filename_dat_2, "../Result/%s/080_Offset/dat/Offset-Ave.dat", date);
 
     /*****************************************************************************/
 
@@ -131,8 +122,8 @@ int Offset(char date[], int split, double delta_x, double delta_y)
 
     double angle_double;
 
-    fp_csv = fopen(filename_csv, "w");
-    fp_dat = fopen(filename_dat, "w");
+    fp_csv = fopen(filename_csv_1, "w");
+    fp_dat = fopen(filename_dat_1, "w");
 
     for (i = 0; i < split; i++)
     {
@@ -151,8 +142,8 @@ int Offset(char date[], int split, double delta_x, double delta_y)
     ave[1] = sum[1] / split;
     ave[2] = sum[2] / split;
 
-    fp_csv = fopen(filename_csv_average, "w");
-    fp_dat = fopen(filename_dat_average, "w");
+    fp_csv = fopen(filename_csv_2, "w");
+    fp_dat = fopen(filename_dat_2, "w");
 
     fprintf(fp_csv, "%lf,%lf,%lf\n", ave[0], ave[1], ave[2]);
     fprintf(fp_dat, "-30\t%.3f\t%.3f\t%.3f\n", ave[0], ave[1], ave[2]);
@@ -169,7 +160,7 @@ int Offset(char date[], int split, double delta_x, double delta_y)
 
     // filename
     char filename_png_1[100];
-    sprintf(filename_png_1, "../Result/%s/081_Offset/png/Offset.png", date);
+    sprintf(filename_png_1, "../Result/%s/080_Offset/png/Offset.png", date);
 
     /*****************************************************************************/
 
@@ -224,7 +215,7 @@ int Offset(char date[], int split, double delta_x, double delta_y)
     fprintf(gp, "set title '%s'\n", label_1);
 
     // fprintf(gp, "set samples 10000\n");
-    fprintf(gp, "plot '%s' using 1:2 with points lc 'blue' pt 5 ps 2 title 'Offset corrected : Drag', '%s' using 1:3 with points lc 'red' pt 5 ps 2 title 'Offset corrected : Lift'\n", filename_dat, filename_dat);
+    fprintf(gp, "plot '%s' using 1:2 with points lc 'blue' pt 5 ps 2 title 'Offset corrected : Drag', '%s' using 1:3 with points lc 'red' pt 5 ps 2 title 'Offset corrected : Lift'\n", filename_dat_1, filename_dat_1);
     fflush(gp); // Clean up Data
 
     fprintf(gp, "exit\n"); // Quit gnuplot

@@ -37,7 +37,7 @@ int Adjust(char date[])
     char filename_dat_1[100];
     char filename_dat_2[100];
 
-    sprintf(filename_read, "../Result/%s/062_Summary-Ave/csv/Summary-Ave.csv", date);
+    sprintf(filename_read, "../Result/%s/060_Summary/csv/Summary-Ave.csv", date);
     sprintf(filename_csv, "../Result/%s/150_Adjust/csv/Adjust.csv", date);
     sprintf(filename_dat_1, "../Result/%s/150_Adjust/dat/Adjust.dat", date);
     sprintf(filename_dat_2, "../Result/%s/150_Adjust/dat/Adjust-plot.dat", date);
@@ -143,11 +143,11 @@ int Adjust(char date[])
     char filename_plot_8[100];
     char filename_plot_9[100];
 
-    sprintf(filename_dat_1, "../Result/%s/061_Summary/dat/Summary.dat", date);
-    sprintf(filename_dat_2, "../Result/%s/141_Rotation/dat/Rotation.dat", date);
-    sprintf(filename_dat_3, "../Result/%s/150_Adjust/dat/Adjust.dat", date);
-    sprintf(filename_dat_4, "../Result/%s/081_Offset/dat/Offset.dat", date);
-    sprintf(filename_dat_5, "../Result/%s/091_Interpolation/dat/Interpolation.dat", date);
+    sprintf(filename_dat_1, "../Result/%s/060_Summary/dat/Summary.dat", date);
+    sprintf(filename_dat_2, "../Result/%s/140_Rotation/dat/Rotation.dat", date);
+    sprintf(filename_dat_3, "../Result/%s/150_Adjust/dat/Adjust-plot.dat", date);
+    sprintf(filename_dat_4, "../Result/%s/080_Offset/dat/Offset.dat", date);
+    sprintf(filename_dat_5, "../Result/%s/090_Interpolation/dat/Interpolation.dat", date);
 
     sprintf(filename_plot_1, "../Result/%s/150_Adjust/png/Raw-data_drag.png", date);
     sprintf(filename_plot_2, "../Result/%s/150_Adjust/png/Raw-data_lift.png", date);

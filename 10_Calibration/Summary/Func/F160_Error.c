@@ -40,9 +40,9 @@ int RMSE(char date[])
     char filename_read_2[100];
     char filename_read_3[100];
 
-    sprintf(filename_read_1, "../Result/%s/141_Rotation/csv/Rotation.csv", date);
+    sprintf(filename_read_1, "../Result/%s/140_Rotation/csv/Rotation.csv", date);
     sprintf(filename_read_2, "../Result/%s/150_Adjust/csv/Adjust.csv", date);
-    sprintf(filename_read_3, "../Result/%s/061_Summary/csv/Summary.csv", date);
+    sprintf(filename_read_3, "../Result/%s/060_Summary/csv/Summary.csv", date);
 
     char filename_csv[100];
     char filename_dat[100];

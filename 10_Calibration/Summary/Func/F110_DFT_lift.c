@@ -36,7 +36,7 @@ int DFT_lift(char date[], int range)
     char filename_csv[100];
     char filename_dat[100];
 
-    sprintf(filename_read, "../Result/%s/091_Interpolation/csv/Interpolation.csv", date);
+    sprintf(filename_read, "../Result/%s/090_Interpolation/csv/Interpolation.csv", date);
     sprintf(filename_csv, "../Result/%s/110_DFT_lift/csv/DFT_lift.csv", date);
     sprintf(filename_dat, "../Result/%s/110_DFT_lift/dat/DFT_lift.dat", date);
 

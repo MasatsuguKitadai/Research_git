@@ -22,23 +22,19 @@ int Rotation(char date[], int split)
 
     /*****************************************************************************/
 
-    sprintf(directoryname_1, "../Result/%s/141_Rotation", date);
-    sprintf(directoryname_2, "../Result/%s/142_Rotation-Ave", date);
+    sprintf(directoryname_1, "../Result/%s/140_Rotation", date);
+    sprintf(directoryname_2, "../Result/%s/140_Rotation-Ave", date);
     mkdir(directoryname_1, mode);
     mkdir(directoryname_2, mode);
 
     /*****************************************************************************/
 
-    sprintf(directoryname_dat_1, "../Result/%s/141_Rotation/dat", date);
-    sprintf(directoryname_csv_1, "../Result/%s/141_Rotation/csv", date);
-    sprintf(directoryname_dat_2, "../Result/%s/142_Rotation-Ave/dat", date);
-    sprintf(directoryname_csv_2, "../Result/%s/142_Rotation-Ave/csv", date);
-    sprintf(directoryname_png, "../Result/%s/141_Rotation/png", date);
+    sprintf(directoryname_dat_1, "../Result/%s/140_Rotation/dat", date);
+    sprintf(directoryname_csv_1, "../Result/%s/140_Rotation/csv", date);
+    sprintf(directoryname_png, "../Result/%s/140_Rotation/png", date);
 
     mkdir(directoryname_dat_1, mode);
     mkdir(directoryname_csv_1, mode);
-    mkdir(directoryname_dat_2, mode);
-    mkdir(directoryname_csv_2, mode);
     mkdir(directoryname_png, mode);
 
     /*****************************************************************************/
@@ -57,12 +53,12 @@ int Rotation(char date[], int split)
 
     sprintf(filename_read_1, "../Result/%s/120_Phase-angle_drag/csv/Phase-angle_drag.csv", date);
     sprintf(filename_read_2, "../Result/%s/130_Phase-angle_lift/csv/Phase-angle_lift.csv", date);
-    sprintf(filename_read_3, "../Result/%s/091_Interpolation/csv/Interpolation.csv", date);
+    sprintf(filename_read_3, "../Result/%s/090_Interpolation/csv/Interpolation.csv", date);
 
-    sprintf(filename_csv, "../Result/%s/141_Rotation/csv/Rotation.csv", date);
-    sprintf(filename_dat, "../Result/%s/141_Rotation/dat/Rotation.dat", date);
-    sprintf(filename_csv_average, "../Result/%s/142_Rotation-Ave/csv/Rotation-Ave.csv", date);
-    sprintf(filename_dat_average, "../Result/%s/142_Rotation-Ave/dat/Rotation-Ave.dat", date);
+    sprintf(filename_csv, "../Result/%s/140_Rotation/csv/Rotation.csv", date);
+    sprintf(filename_dat, "../Result/%s/140_Rotation/dat/Rotation.dat", date);
+    sprintf(filename_csv_average, "../Result/%s/140_Rotation/csv/Rotation-Ave.csv", date);
+    sprintf(filename_dat_average, "../Result/%s/140_Rotation/dat/Rotation-Ave.dat", date);
 
     /*****************************************************************************/
 
@@ -328,8 +324,8 @@ int Rotation(char date[], int split)
     char filename_plot_1[100];
     char filename_plot_2[100];
 
-    sprintf(filename_plot_1, "../Result/%s/141_Rotation/png/Gradient.png", date);
-    sprintf(filename_plot_2, "../Result/%s/141_Rotation/png/Voltage.png", date);
+    sprintf(filename_plot_1, "../Result/%s/140_Rotation/png/Gradient.png", date);
+    sprintf(filename_plot_2, "../Result/%s/140_Rotation/png/Voltage.png", date);
 
     /*****************************************************************************/
 

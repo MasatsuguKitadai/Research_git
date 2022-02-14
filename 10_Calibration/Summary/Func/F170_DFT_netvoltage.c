@@ -40,8 +40,8 @@ int DFT_netvoltage(char date[], int split)
     char filename_csv[100];
     char filename_dat[100];
 
-    sprintf(filename_read_1, "../Result/%s/141_Rotation/csv/Rotation.csv", date);
-    sprintf(filename_read_2, "../Result/%s/142_Rotation-Ave/csv/Rotation-Ave.csv", date);
+    sprintf(filename_read_1, "../Result/%s/140_Rotation/csv/Rotation.csv", date);
+    sprintf(filename_read_2, "../Result/%s/140_Rotation/csv/Rotation-Ave.csv", date);
 
     sprintf(filename_csv, "../Result/%s/170_DFT_net-voltage/csv/DFT_net-voltage.csv", date);
     sprintf(filename_dat, "../Result/%s/170_DFT_net-voltage/dat/DFT_net-voltage.dat", date);

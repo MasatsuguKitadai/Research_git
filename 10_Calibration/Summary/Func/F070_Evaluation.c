@@ -38,7 +38,7 @@ int Evaluation(char date[], int split)
     char filename_csv[100];
     char filename_dat[100];
 
-    sprintf(filename_read, "../Result/%s/061_Summary/csv/Summary.csv", date);
+    sprintf(filename_read, "../Result/%s/060_Summary/csv/Summary.csv", date);
     sprintf(filename_csv, "../Result/%s/070_Evaluation/csv/Evaluation.csv", date);
     sprintf(filename_dat, "../Result/%s/070_Evaluation/dat/Evaluation.dat", date);
 

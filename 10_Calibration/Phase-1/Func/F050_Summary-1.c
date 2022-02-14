@@ -12,34 +12,25 @@ int Summary(char date[], int split)
 
     // ディレクトリの作成
     char directoryname_1[100];
-    char directoryname_2[100];
     char directoryname_dat_1[100];
-    char directoryname_dat_2[100];
     char directoryname_csv_1[100];
-    char directoryname_csv_2[100];
     char directoryname_png[100];
 
     /*****************************************************************************/
 
     // 元ディレクトリの作成
-    sprintf(directoryname_1, "../Result/%s/051_Summary", date);
-    sprintf(directoryname_2, "../Result/%s/052_Summary-Ave", date);
+    sprintf(directoryname_1, "../Result/%s/050_Summary", date);
 
     mkdir(directoryname_1, mode);
-    mkdir(directoryname_2, mode);
 
     /*****************************************************************************/
 
-    sprintf(directoryname_dat_1, "../Result/%s/051_Summary/dat", date);
-    sprintf(directoryname_dat_2, "../Result/%s/052_Summary-Ave/dat", date);
-    sprintf(directoryname_csv_1, "../Result/%s/051_Summary/csv", date);
-    sprintf(directoryname_csv_2, "../Result/%s/052_Summary-Ave/csv", date);
-    sprintf(directoryname_png, "../Result/%s/051_Summary/png", date);
+    sprintf(directoryname_dat_1, "../Result/%s/050_Summary/dat", date);
+    sprintf(directoryname_csv_1, "../Result/%s/050_Summary/csv", date);
+    sprintf(directoryname_png, "../Result/%s/050_Summary/png", date);
 
     mkdir(directoryname_dat_1, mode);
-    mkdir(directoryname_dat_2, mode);
     mkdir(directoryname_csv_1, mode);
-    mkdir(directoryname_csv_2, mode);
     mkdir(directoryname_png, mode);
 
     /*****************************************************************************/
@@ -51,11 +42,11 @@ int Summary(char date[], int split)
     char filename_dat_1[100];
     char filename_dat_2[100];
 
-    sprintf(filename_dat_1, "../Result/%s/051_Summary/dat/Summary.dat", date);
-    sprintf(filename_dat_2, "../Result/%s/052_Summary-Ave/dat/Summary-Ave.dat", date);
+    sprintf(filename_dat_1, "../Result/%s/050_Summary/dat/Summary.dat", date);
+    sprintf(filename_dat_2, "../Result/%s/050_Summary/dat/Summary-Ave.dat", date);
 
-    sprintf(filename_csv_1, "../Result/%s/051_Summary/csv/Summary.csv", date);
-    sprintf(filename_csv_2, "../Result/%s/052_Summary-Ave/csv/Summary-Ave.csv", date);
+    sprintf(filename_csv_1, "../Result/%s/050_Summary/csv/Summary.csv", date);
+    sprintf(filename_csv_2, "../Result/%s/050_Summary/csv/Summary-Ave.csv", date);
 
     int i = 0;
     int angle = 0;
@@ -141,10 +132,10 @@ int Summary(char date[], int split)
     char filename_plot_1[100];
     char filename_plot_2[100];
 
-    sprintf(filename_dat_1, "../Result/%s/051_Summary/dat/Summary.dat", date);
-    sprintf(filename_dat_2, "../Result/%s/052_Summary-Ave/dat/Summary-Ave.dat", date);
-    sprintf(filename_plot_1, "../Result/%s/051_Summary/png/Gradient.png", date);
-    sprintf(filename_plot_2, "../Result/%s/051_Summary/png/Voltage.png", date);
+    sprintf(filename_dat_1, "../Result/%s/050_Summary/dat/Summary.dat", date);
+    sprintf(filename_dat_2, "../Result/%s/050_Summary/dat/Summary-Ave.dat", date);
+    sprintf(filename_plot_1, "../Result/%s/050_Summary/png/Gradient.png", date);
+    sprintf(filename_plot_2, "../Result/%s/050_Summary/png/Voltage.png", date);
 
     /*****************************************************************************/
 

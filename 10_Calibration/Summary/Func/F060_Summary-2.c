@@ -12,37 +12,29 @@ int Summary(char model[], int num, int split)
     // ディレクトリの作成
     char directoryname[100];
     char directoryname_1[100];
-    char directoryname_2[100];
 
     /*****************************************************************************/
 
     // 元ディレクトリの作成
     sprintf(directoryname, "../Result/%s", model);
-    sprintf(directoryname_1, "../Result/%s/061_Summary", model);
-    sprintf(directoryname_2, "../Result/%s/062_Summary-Ave", model);
+    sprintf(directoryname_1, "../Result/%s/060_Summary", model);
 
     mkdir(directoryname, mode);
     mkdir(directoryname_1, mode);
-    mkdir(directoryname_2, mode);
 
     /*****************************************************************************/
 
     char directoryname_dat_1[100];
-    char directoryname_dat_2[100];
     char directoryname_csv_1[100];
-    char directoryname_csv_2[100];
     char directoryname_png[100];
 
-    sprintf(directoryname_dat_1, "../Result/%s/061_Summary/dat", model);
-    sprintf(directoryname_csv_1, "../Result/%s/061_Summary/csv", model);
-    sprintf(directoryname_dat_2, "../Result/%s/062_Summary-Ave/dat", model);
-    sprintf(directoryname_csv_2, "../Result/%s/062_Summary-Ave/csv", model);
-    sprintf(directoryname_png, "../Result/%s/061_Summary/png", model);
+    sprintf(directoryname_dat_1, "../Result/%s/060_Summary/dat", model);
+    sprintf(directoryname_csv_1, "../Result/%s/060_Summary/csv", model);
+    ;
+    sprintf(directoryname_png, "../Result/%s/060_Summary/png", model);
 
     mkdir(directoryname_dat_1, mode);
-    mkdir(directoryname_dat_2, mode);
     mkdir(directoryname_csv_1, mode);
-    mkdir(directoryname_csv_2, mode);
     mkdir(directoryname_png, mode);
 
     /*****************************************************************************/
@@ -54,10 +46,10 @@ int Summary(char model[], int num, int split)
     char filename_dat_1[100];
     char filename_dat_2[100];
 
-    sprintf(filename_dat_1, "../Result/%s/061_Summary/dat/Summary.dat", model);
-    sprintf(filename_csv_1, "../Result/%s/061_Summary/csv/Summary.csv", model);
-    sprintf(filename_dat_2, "../Result/%s/062_Summary-Ave/dat/Summary-Ave.dat", model);
-    sprintf(filename_csv_2, "../Result/%s/062_Summary-Ave/csv/Summary-Ave.csv", model);
+    sprintf(filename_dat_1, "../Result/%s/060_Summary/dat/Summary.dat", model);
+    sprintf(filename_csv_1, "../Result/%s/060_Summary/csv/Summary.csv", model);
+    sprintf(filename_dat_2, "../Result/%s/060_Summary/dat/Summary-Ave.dat", model);
+    sprintf(filename_csv_2, "../Result/%s/060_Summary/csv/Summary-Ave.csv", model);
 
     /*****************************************************************************/
 
@@ -174,10 +166,10 @@ int Summary(char model[], int num, int split)
     char filename_png_1[100];
     char filename_png_2[100];
 
-    sprintf(filename_dat_1, "../Result/%s/061_Summary/dat/Summary.dat", model);
-    sprintf(filename_dat_2, "../Result/%s/062_Summary-Ave/dat/Summary-Ave.dat", model);
-    sprintf(filename_png_1, "../Result/%s/061_Summary/png/Gradient.png", model);
-    sprintf(filename_png_2, "../Result/%s/061_Summary/png/Voltage.png", model);
+    sprintf(filename_dat_1, "../Result/%s/060_Summary/dat/Summary.dat", model);
+    sprintf(filename_dat_2, "../Result/%s/060_Summary/dat/Summary-Ave.dat", model);
+    sprintf(filename_png_1, "../Result/%s/060_Summary/png/Gradient.png", model);
+    sprintf(filename_png_2, "../Result/%s/060_Summary/png/Voltage.png", model);
 
     /*****************************************************************************/
 
