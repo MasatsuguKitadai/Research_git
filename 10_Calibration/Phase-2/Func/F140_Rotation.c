@@ -338,7 +338,7 @@ int Rotation(char date[], int split)
     // label
     const char *xxlabel = "Angle [deg]";
     const char *yylabel_1 = "Gradient of voltage [-]";
-    const char *yylabel_2 = "Net output voltage [-]]";
+    const char *yylabel_2 = "Net voltage [-]";
     char label_1[100] = "Gradient value";
     char label_2[100] = "Output voltage";
 
