@@ -4,7 +4,6 @@ AUTHER  : Masatsugu Kitadai
 DATE    :
 ******************************************************************************/
 
-#include <sys/stat.h>
 #include "../Func/head.h"
 #include "../Func/F010_Reverse.c"
 #include "../Func/F020_Drift.c"
