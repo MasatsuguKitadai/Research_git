@@ -19,14 +19,14 @@ int Evaluation(char date[], int split)
     /*****************************************************************************/
 
     // 元ディレクトリの作成
-    sprintf(directoryname, "../Result/%s/070_Evaluation", date);
+    sprintf(directoryname, "../Result/%s/071_Evaluation", date);
 
     mkdir(directoryname, mode);
 
     /*****************************************************************************/
 
-    sprintf(directoryname_dat, "../Result/%s/070_Evaluation/dat", date);
-    sprintf(directoryname_csv, "../Result/%s/070_Evaluation/csv", date);
+    sprintf(directoryname_dat, "../Result/%s/071_Evaluation/dat", date);
+    sprintf(directoryname_csv, "../Result/%s/071_Evaluation/csv", date);
 
     mkdir(directoryname_dat, mode);
     mkdir(directoryname_csv, mode);
@@ -38,9 +38,9 @@ int Evaluation(char date[], int split)
     char filename_csv[100];
     char filename_dat[100];
 
-    sprintf(filename_read, "../Result/%s/060_Summary/csv/Summary.csv", date);
-    sprintf(filename_csv, "../Result/%s/070_Evaluation/csv/Evaluation.csv", date);
-    sprintf(filename_dat, "../Result/%s/070_Evaluation/dat/Evaluation.dat", date);
+    sprintf(filename_read, "../Result/%s/061_Summary/csv/Summary.csv", date);
+    sprintf(filename_csv, "../Result/%s/071_Evaluation/csv/Evaluation.csv", date);
+    sprintf(filename_dat, "../Result/%s/071_Evaluation/dat/Evaluation.dat", date);
 
     /*****************************************************************************/
 
@@ -109,8 +109,8 @@ int Evaluation(char date[], int split)
     fp_csv = fopen(filename_csv, "w");
     fp_dat = fopen(filename_dat, "w");
 
-    fprintf(fp_csv, "%lf\t%lf\n", variance, deviation);
-    fprintf(fp_dat, "%lf\t%lf\n", variance, deviation);
+    fprintf(fp_csv, "%Lf\t%lf\n", variance, deviation);
+    fprintf(fp_dat, "%Lf\t%lf\n", variance, deviation);
 
     fclose(fp_csv);
     fclose(fp_dat);

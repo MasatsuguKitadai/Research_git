@@ -3,7 +3,7 @@ PROGRAM NAME :
 AUTHER  : masatsugu Kitadai
 DATE    :
 ******************************************************************************/
-#include "head.h"
+// #include "head.h"
 
 /*********************************   MAIN   *********************************/
 
@@ -126,10 +126,19 @@ int Force(char date[])
 
     c = a / net;
     printf("C = %.3f [N/V]\n", c);
+
+    fp_csv = fopen(filename_csv, "w");
+    fp_dat = fopen(filename_dat, "w");
+
+    fprintf(fp_csv, "%lf\t%lf", c, a);
+    fprintf(fp_dat, "%lf\t%lf", c, a);
+
+    fclose(fp_csv);
+    fclose(fp_dat);
 }
 
-int main()
-{
-    Force("1");
-    return (0);
-}
+// int main()
+// {
+//     Force("1");
+//     return (0);
+// }
