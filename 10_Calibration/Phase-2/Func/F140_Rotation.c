@@ -13,7 +13,6 @@ int Rotation(char date[], int split)
 
     // ディレクトリの作成
     char directoryname_1[100];
-    char directoryname_2[100];
     char directoryname_dat_1[100];
     char directoryname_csv_1[100];
     char directoryname_dat_2[100];
@@ -23,9 +22,7 @@ int Rotation(char date[], int split)
     /*****************************************************************************/
 
     sprintf(directoryname_1, "../Result/%s/140_Rotation", date);
-    sprintf(directoryname_2, "../Result/%s/140_Rotation-Ave", date);
     mkdir(directoryname_1, mode);
-    mkdir(directoryname_2, mode);
 
     /*****************************************************************************/
 
