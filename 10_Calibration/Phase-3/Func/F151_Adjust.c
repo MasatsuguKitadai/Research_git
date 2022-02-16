@@ -139,7 +139,7 @@ int Adjust(char date[])
         // printf("angle = %.3f\ti = %d\n", angle, i);
         fprintf(fp_csv, "%lf,%lf,%lf\n", angle, wave_drag[i], wave_lift[i]);
         fprintf(fp_dat, "%lf\t%lf\t%lf\n", angle, wave_drag[i], wave_lift[i]);
-        fprintf(fp_plot, "%lf\t%lf\t%.3f\n", angle, wave_drag[i], wave_lift[i]);
+        fprintf(fp_plot, "%lf\t%lf\t%lf\n", angle, wave_drag[i], wave_lift[i]);
     }
 
     fclose(fp_csv);
@@ -235,7 +235,7 @@ int Adjust(char date[])
     fprintf(gp, "set title '%s (Drag)'\n", label_1);
 
     // fprintf(gp, "set samples 10000\n");
-    fprintf(gp, "plot '%s' using 1:2 with points lc 'blue' pt 5 ps 2 title 'Measured (Drag)', '%s' using 1:2 with lines lc 'royalblue' title 'Theoretical (Drag)'\n", filename_dat_1, filename_dat_3);
+    fprintf(gp, "plot '%s' using 1:2 with points lc 'blue' pt 5 ps 2 title 'Measured (Drag)', '%s' using 1:2 with lines lc 'royalblue' title 'Theoretical : Drag'\n", filename_dat_1, filename_dat_3);
 
     fflush(gp); // Clean up Data
 
@@ -261,7 +261,7 @@ int Adjust(char date[])
     fprintf(gp, "set title '%s (Lift)'\n", label_1);
 
     // fprintf(gp, "set samples 10000\n");
-    fprintf(gp, "plot '%s' using 1:3 with points lc 'red' pt 5 ps 2 title 'Measured (Lift)', '%s' using 1:3 with lines lc 'orangered' title 'Theoretical (Lift)'\n", filename_dat_1, filename_dat_3);
+    fprintf(gp, "plot '%s' using 1:3 with points lc 'red' pt 5 ps 2 title 'Measured (Lift)', '%s' using 1:3 with lines lc 'orangered' title 'Theoretical : Lift'\n", filename_dat_1, filename_dat_3);
 
     fflush(gp); // Clean up Data
 
@@ -287,7 +287,7 @@ int Adjust(char date[])
     fprintf(gp, "set title '%s (Drag)'\n", label_1);
 
     // fprintf(gp, "set samples 10000\n");
-    fprintf(gp, "plot '%s' using 1:2 with points lc 'navy' pt 5 ps 2 title 'Corrected (Drag)', '%s' using 1:2 with lines lc 'royalblue' title 'Theoretical (Drag)'\n", filename_dat_2, filename_dat_3);
+    fprintf(gp, "plot '%s' using 1:2 with points lc 'navy' pt 5 ps 2 title 'Corrected  : Drag', '%s' using 1:2 with lines lc 'royalblue' title 'Theoretical : Drag'\n", filename_dat_2, filename_dat_3);
 
     fflush(gp); // Clean up Data
 
@@ -313,7 +313,7 @@ int Adjust(char date[])
     fprintf(gp, "set title '%s (Lift)'\n", label_1);
 
     // fprintf(gp, "set samples 10000\n");
-    fprintf(gp, "plot '%s' using 1:3 with points lc 'orange-red' pt 5 ps 2 title 'Corrected (Lift)', '%s' using 1:3 with lines lc 'orange' title 'Theoretical (Lift)'\n", filename_dat_2, filename_dat_3);
+    fprintf(gp, "plot '%s' using 1:3 with points lc 'orange-red' pt 5 ps 2 title 'Corrected  : LIft', '%s' using 1:3 with lines lc 'orange' title 'Theoretical : Lift'\n", filename_dat_2, filename_dat_3);
 
     fflush(gp); // Clean up Data
 
@@ -339,7 +339,7 @@ int Adjust(char date[])
     fprintf(gp, "set title '%s (Drag)'\n", label_1);
 
     // fprintf(gp, "set samples 10000\n");
-    fprintf(gp, "plot '%s' using 1:2 with points lc 'navy' pt 5 ps 2 title 'Corrected (Drag)', '%s' using 1:2 with lines lc 'royalblue' title 'Theoretical (Drag)'\n", filename_dat_4, filename_dat_3);
+    fprintf(gp, "plot '%s' using 1:2 with points lc 'navy' pt 5 ps 2 title 'Corrected  : Drag', '%s' using 1:2 with lines lc 'royalblue' title 'Theoretical : Drag'\n", filename_dat_4, filename_dat_3);
 
     fflush(gp); // Clean up Data
 
@@ -365,7 +365,7 @@ int Adjust(char date[])
     fprintf(gp, "set title '%s (Lift)'\n", label_1);
 
     // fprintf(gp, "set samples 10000\n");
-    fprintf(gp, "plot '%s' using 1:3 with points lc 'orange-red' pt 5 ps 2 title 'Corrected (Lift)', '%s' using 1:3 with lines lc 'orange' title 'Theoretical (Lift)'\n", filename_dat_4, filename_dat_3);
+    fprintf(gp, "plot '%s' using 1:3 with points lc 'orange-red' pt 5 ps 2 title 'Corrected  : LIft', '%s' using 1:3 with lines lc 'orange' title 'Theoretical : Lift'\n", filename_dat_4, filename_dat_3);
 
     fflush(gp); // Clean up Data
 
@@ -391,7 +391,7 @@ int Adjust(char date[])
     fprintf(gp, "set title '%s (Drag)'\n", label_1);
 
     // fprintf(gp, "set samples 10000\n");
-    fprintf(gp, "plot '%s' using 1:2 with points lc 'navy' pt 5 ps 2 title 'Corrected (Drag)', '%s' using 1:2 with lines lc 'royalblue' title 'Theoretical (Drag)'\n", filename_dat_5, filename_dat_3);
+    fprintf(gp, "plot '%s' using 1:2 with points lc 'navy' pt 5 ps 2 title 'Corrected  : Drag', '%s' using 1:2 with lines lc 'royalblue' title 'Theoretical : Drag'\n", filename_dat_5, filename_dat_3);
 
     fflush(gp); // Clean up Data
 
@@ -417,7 +417,7 @@ int Adjust(char date[])
     fprintf(gp, "set title '%s (Lift)'\n", label_1);
 
     // fprintf(gp, "set samples 10000\n");
-    fprintf(gp, "plot '%s' using 1:3 with points lc 'orange-red' pt 5 ps 2 title 'Corrected (Lift)', '%s' using 1:3 with lines lc 'orange' title 'Theoretical (Lift)'\n", filename_dat_5, filename_dat_3);
+    fprintf(gp, "plot '%s' using 1:3 with points lc 'orange-red' pt 5 ps 2 title 'Corrected  : LIft', '%s' using 1:3 with lines lc 'orange' title 'Theoretical : Lift'\n", filename_dat_5, filename_dat_3);
 
     fflush(gp); // Clean up Data
 
@@ -443,7 +443,7 @@ int Adjust(char date[])
     fprintf(gp, "set title '%s'\n", label_1);
 
     // fprintf(gp, "set samples 10000\n");
-    fprintf(gp, "plot '%s' using 1:2 with points lc 'navy' pt 5 ps 2 title 'Corrected (Drag)', '%s' using 1:3 with points lc 'orange-red' pt 5 ps 2 title 'Corrected (Lift)', '%s' using 1:2 with lines lc 'royalblue' title 'Theoretical (Drag)', '%s' using 1:3 with lines lc 'orange' title 'Theoretical (Lift)'\n", filename_dat_2, filename_dat_2, filename_dat_3, filename_dat_3);
+    fprintf(gp, "plot '%s' using 1:2 with points lc 'navy' pt 5 ps 2 title 'Corrected  : Drag', '%s' using 1:3 with points lc 'orange-red' pt 5 ps 2 title 'Corrected  : LIft', '%s' using 1:2 with lines lc 'royalblue' title 'Theoretical : Drag', '%s' using 1:3 with lines lc 'orange' title 'Theoretical : Lift'\n", filename_dat_2, filename_dat_2, filename_dat_3, filename_dat_3);
 
     fflush(gp); // Clean up Data
 

@@ -109,8 +109,8 @@ int Evaluation(char date[], int split)
     fp_csv = fopen(filename_csv, "w");
     fp_dat = fopen(filename_dat, "w");
 
-    fprintf(fp_csv, "%lf\t%lf\n", variance, deviation);
-    fprintf(fp_dat, "%lf\t%lf\n", variance, deviation);
+    fprintf(fp_csv, "%Lf\t%lf\n", variance, deviation);
+    fprintf(fp_dat, "%Lf\t%lf\n", variance, deviation);
 
     fclose(fp_csv);
     fclose(fp_dat);

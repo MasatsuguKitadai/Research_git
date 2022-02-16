@@ -30,7 +30,6 @@ int Summary(char model[], int num, int split)
 
     sprintf(directoryname_dat_1, "../Result/%s/060_Summary/dat", model);
     sprintf(directoryname_csv_1, "../Result/%s/060_Summary/csv", model);
-    ;
     sprintf(directoryname_png, "../Result/%s/060_Summary/png", model);
 
     mkdir(directoryname_dat_1, mode);
