@@ -5,13 +5,18 @@ DATE    :
 ******************************************************************************/
 
 #include "../Func/head.h"
-#include "../Func/F061_Summary-2.c"
-#include "../Func/F071_Evaluation.c"
-#include "../Func/F081_Offset.c"
-#include "../Func/F091_Interpolation.c"
-#include "../Func/F141_Rotation.c"
-#include "../Func/F151_Adjust.c"
-#include "../Func/F180_Force.c"
+#include "../Func/F060_Summary-2.c"
+#include "../Func/F070_Evaluation.c"
+#include "../Func/F080_Offset.c"
+#include "../Func/F090_Interpolation.c"
+#include "../Func/F100_DFT_drag.c"
+#include "../Func/F110_DFT_lift.c"
+#include "../Func/F120_Phase-angle_drag.c"
+#include "../Func/F130_Phase-angle_lift.c"
+#include "../Func/F140_Rotation.c"
+#include "../Func/F150_Adjust.c"
+#include "../Func/F160_Error.c"
+#include "../Func/F170_DFT_net-voltage.c"
 
 /*********************************   MAIN   *********************************/
 int main()
@@ -38,10 +43,6 @@ int main()
 
     printf("\n---------------------------------------------------------------------------\n\n");
 
-    Force(dataname);
-
-    printf("\n---------------------------------------------------------------------------\n\n");
-
     Summary(dataname, number, split_angle);
 
     printf("\n---------------------------------------------------------------------------\n\n");
@@ -58,6 +59,22 @@ int main()
 
     printf("\n---------------------------------------------------------------------------\n\n");
 
+    DFT_drag(dataname, split_angle);
+
+    printf("\n---------------------------------------------------------------------------\n\n");
+
+    DFT_lift(dataname, split_angle);
+
+    printf("\n---------------------------------------------------------------------------\n\n");
+
+    Phase_angle_drag(dataname);
+
+    printf("\n---------------------------------------------------------------------------\n\n");
+
+    Phase_angle_lift(dataname);
+
+    printf("\n---------------------------------------------------------------------------\n\n");
+
     Rotation(dataname, split_angle);
 
     printf("\n---------------------------------------------------------------------------\n\n");
@@ -65,6 +82,12 @@ int main()
     Adjust(dataname);
 
     printf("\n---------------------------------------------------------------------------\n\n");
+
+    RMSE(dataname);
+
+    printf("\n---------------------------------------------------------------------------\n\n");
+
+    DFT_netvoltage(dataname, split_angle);
 
     return (0);
 }

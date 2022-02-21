@@ -57,7 +57,7 @@ int simulater(char date[], double Theta_1, double Theta_2)
     double sum[3];
     double ave[3];
 
-    double half = 0.315;
+    double half = 0.3165;
 
     for (i = 0; i < 3; i++)
     {
