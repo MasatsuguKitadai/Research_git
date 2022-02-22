@@ -7,7 +7,7 @@ DATE    :
 
 /*********************************   MAIN   *********************************/
 
-int twogage(char date[], int split, double phi_1, double phi_2)
+int twogage(char date[], int split, double phi_1, double phi_2, double phi_3, double phi_4)
 {
     /*****************************************************************************/
 
@@ -64,7 +64,7 @@ int twogage(char date[], int split, double phi_1, double phi_2)
     int i;
     double num;
     double ch0, ch1, ch2;
-    double phi[2];
+    double phi[4];
 
     fp = fopen(filename_read_1, "r");
 
@@ -81,6 +81,8 @@ int twogage(char date[], int split, double phi_1, double phi_2)
 
     phi[0] = phi_1 * pi / 180;
     phi[1] = phi_2 * pi / 180;
+    phi[2] = phi_3 * pi / 180;
+    phi[3] = phi_4 * pi / 180;
 
     printf("Phi[1] = %.3f\tPhi[2] = %.3f\n", phi_1, phi_2);
 
@@ -135,6 +137,9 @@ int twogage(char date[], int split, double phi_1, double phi_2)
     ave[1] = sum[1] / split;
     ave[2] = sum[2] / split;
 
+    double value = 0;
+    value = ave[2];
+
     // printf("=============================\n");
     // printf("[Ave]\t%.3f\t%.3f\t%.3f\n", ave[0], ave[1], ave[2]);
 
@@ -160,8 +165,8 @@ int twogage(char date[], int split, double phi_1, double phi_2)
     for (i = 0; i < split; i++)
     {
         rad[i] = angle[i] * pi / 180;
-        voltage_x[i] = 2 * cos(rad[i]) / (cos(rad[i]) + cos(rad[i] - phi[0])) * voltage_drag[i];
-        voltage_y[i] = 2 * sin(rad[i]) / (sin(rad[i]) + sin(rad[i] - phi[1])) * voltage_lift[i];
+        voltage_x[i] = 2 * cos(rad[i]) / (cos(rad[i] - phi[0]) + cos(rad[i] - phi[1])) * voltage_drag[i];
+        voltage_y[i] = 2 * sin(rad[i]) / (sin(rad[i] - phi[2]) + sin(rad[i] - phi[3])) * voltage_lift[i];
 
         voltage_y[0] = 0;
 
@@ -179,8 +184,8 @@ int twogage(char date[], int split, double phi_1, double phi_2)
 
     double line[2];
 
-    line[0] = ave[2] * 0.97;
-    line[1] = ave[2] * 1.03;
+    line[0] = value * 0.97;
+    line[1] = value * 1.03;
 
     printf("=============================\n");
     printf("[Ave]\t%.3f\t%.3f\t%.3f\n", ave[0], ave[1], ave[2]);
@@ -203,8 +208,8 @@ int twogage(char date[], int split, double phi_1, double phi_2)
     fp_dat = fopen(filename_dat_average, "w");
 
     fprintf(fp_csv, "%lf,%lf,%lf\n", ave[0], ave[1], ave[2]);
-    fprintf(fp_dat, "-30\t%.3f\t%.3f\t%.3f\t%.3f\t%.3f\n", ave[0], ave[1], ave[2], line[0], line[1]);
-    fprintf(fp_dat, "360\t%.3f\t%.3f\t%.3f\t%.3f\t%.3f\n", ave[0], ave[1], ave[2], line[0], line[1]);
+    fprintf(fp_dat, "-30\t%.3f\t%.3f\t%.3f\t%.3f\t%.3f\n", ave[0], ave[1], value, line[0], line[1]);
+    fprintf(fp_dat, "360\t%.3f\t%.3f\t%.3f\t%.3f\t%.3f\n", ave[0], ave[1], value, line[0], line[1]);
 
     fclose(fp_csv);
     fclose(fp_dat);
@@ -258,8 +263,8 @@ int twogage(char date[], int split, double phi_1, double phi_2)
     char filename_plot_1[100];
     char filename_plot_2[100];
 
-    sprintf(filename_plot_1, "../Result/%s/190_2-gage/png-1/Gradient_%.1f_%.1f.png", date, phi_1, phi_2);
-    sprintf(filename_plot_2, "../Result/%s/190_2-gage/png-2/Voltage_%.1f_%.1f.png", date, phi_1, phi_2);
+    sprintf(filename_plot_1, "../Result/%s/190_2-gage/png-1/Gradient_%.1f&%.1f_%.1f&%.1f.png", date, phi_1, phi_2, phi_3, phi_4);
+    sprintf(filename_plot_2, "../Result/%s/190_2-gage/png-2/Voltage_%.1f&%.1f_%.1f&%.1f.png", date, phi_1, phi_2, phi_3, phi_4);
 
     /*****************************************************************************/
 
@@ -286,7 +291,7 @@ int twogage(char date[], int split, double phi_1, double phi_2)
     char label_1[100] = "Gradient value";
     char label_2[100];
 
-    sprintf(label_2, "[%.1f , %.1f]", phi_1, phi_2);
+    sprintf(label_2, "[%.1f&%.1f, %.1f&%.1f]", phi_1, phi_2, phi_3, phi_4);
 
     double size;
 
@@ -363,7 +368,7 @@ int twogage(char date[], int split, double phi_1, double phi_2)
 int main()
 {
     int split = 24;
-    double phi_x, phi_y;
+    double phi_x1, phi_x2, phi_y1, phi_y2;
     double voltage_x[split];
     double voltage_y[split];
     double voltage_net[split];
@@ -379,19 +384,30 @@ int main()
     double average = 0;
     double sum = 0;
 
-    for (i = -5; i < 6; i++)
+    for (i = -3; i < 4; i++)
     {
         buf = i;
         // phi_x = buf / 10;
-        phi_x = i;
+        phi_x1 = i;
 
-        for (j = -5; j < 6; j++)
+        for (j = -3; j < 4; j++)
         {
             buf = j;
             // phi_y = buf / 10;
-            phi_y = j;
+            phi_x2 = j;
 
-            twogage("1", split, phi_x, phi_y);
+            for (k = -3; k < 4; k++)
+            {
+
+                phi_y1 = k;
+
+                for (l = -3; l < 4; l++)
+                {
+                    phi_y2 = l;
+
+                    twogage("1", split, phi_x1, phi_x2, phi_y1, phi_y2);
+                }
+            }
         }
     }
     return (0);
