@@ -13,8 +13,8 @@ int x_min = -50;
 int x_max = 750;
 
 // label
-const char *xxlabel = "time [s]";
-const char *yylabel = "output [V]";
+const char *xxlabel = "Time [s]";
+const char *yylabel = "Output voltage [V]";
 char label[100];
 
 double size;
@@ -37,11 +37,11 @@ int plot(char name[], char date[], char label_name[])
         exit(0); // gnuplotが無い場合、異常ある場合は終了
     }
 
-// #include "plot/01.h"
+#include "plot/01.h"
 #include "plot/02.h"
-// #include "plot/03.h"
-// #include "plot/04.h"
-#include "plot/06.h"
+#include "plot/03.h"
+#include "plot/04.h"
+    // #include "plot/06.h"
 
     fprintf(gp, "exit\n"); // Quit gnuplot
 

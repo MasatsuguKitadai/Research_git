@@ -17,7 +17,7 @@ fprintf(gp, "set bmargin screen 0.15\n");
 fprintf(gp, "set xrange [0:0.5]\n");
 fprintf(gp, "set xlabel 'frequency [Hz]'offset 0,0\n");
 fprintf(gp, "set yrange [0:20]\n");
-fprintf(gp, "set ylabel 'power spectral density'offset 1.5,0\n");
+fprintf(gp, "set ylabel 'power spectral density'offset 1.0,0\n");
 fprintf(gp, "set title '%s drag FFT Range 1'\n", label);
 
 // fprintf(gp, "set samples 10000\n");

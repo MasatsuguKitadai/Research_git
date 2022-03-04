@@ -17,7 +17,7 @@ fprintf(gp, "set bmargin screen 0.15\n");
 fprintf(gp, "set xrange [%d:%d]\n", x_min, x_max);
 fprintf(gp, "set xlabel '%s'offset 0.0,0\n", xxlabel);
 fprintf(gp, "set yrange [%d:%d]\n", y_min1, y_max1);
-fprintf(gp, "set ylabel '%s'offset 2,0.0\n", yylabel);
+fprintf(gp, "set ylabel '%s'offset 1.0,0.0\n", yylabel);
 fprintf(gp, "set title '%s drag'\n", label);
 
 // fprintf(gp, "set samples 10000\n");
