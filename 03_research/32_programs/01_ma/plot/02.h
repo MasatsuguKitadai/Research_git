@@ -23,7 +23,7 @@ fprintf(gp, "set title '%s drag'\n", label);
 // fprintf(gp, "set samples 10000\n");
 fprintf(gp, "plot 0 lw 2 lc 'dark-grey' notitle, '%s' using 1:2 with lines lc 'black' notitle, '%s' using 1:2 with points pt 5 ps 2 lc 'red' title 'start', '%s' using 1:2 with points pt 5 ps 2 lc 'blue' title 'finish'\n", filename1, filename5, filename6);
 
-fflush(gp); //Clean up Data
+fflush(gp); // Clean up Data
 
 // lift
 
@@ -49,4 +49,4 @@ fprintf(gp, "set title '%s lift'\n", label);
 // fprintf(gp, "set samples 10000\n");
 fprintf(gp, "plot 0 lw 2 lc 'dark-grey' notitle, '%s' using 1:3 with lines lc 'black' notitle, '%s' using 1:4 with points pt 5 ps 2 lc 'red' title 'start', '%s' using 1:3 with points pt 5 ps 2 lc 'blue' title 'finish'\n", filename1, filename5, filename6);
 
-fflush(gp); //Clean up Data
+fflush(gp); // Clean up Data
