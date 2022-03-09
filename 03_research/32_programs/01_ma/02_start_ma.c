@@ -9,7 +9,7 @@ DATE    :
 #define ch 2
 #include "files/fp.h"
 
-int range_ma = 11;
+// int range_ma = 11;
 /*********************************   MAIN   *********************************/
 int start(char name[], char date[])
 {
@@ -19,7 +19,7 @@ int start(char name[], char date[])
 
     // 起動点特定 範囲
     int range_1 = 90; // 前部の範囲
-    int range_2 = 10;  // 後部の範囲
+    int range_2 = 10; // 後部の範囲
 
     fp4 = fopen(filename4, "r");
     if (filename4 == NULL)
@@ -38,10 +38,10 @@ int start(char name[], char date[])
     int number[N];
 
     // 変数の初期化
-    for(i = 0; i < N; i++)
+    for (i = 0; i < N; i++)
     {
         value_2[i][1] = 0;
-        value_2[i][2] = 0; 
+        value_2[i][2] = 0;
     }
 
     // ch1:drag, ch2:lift
@@ -62,7 +62,6 @@ int start(char name[], char date[])
     data_long = i;
     // printf("datalong\t%d\n", data_long);
 
-
     // 計算 (測定開始点の特定)
 
     int j, k;
@@ -81,7 +80,6 @@ int start(char name[], char date[])
 
     start_num = 0;
     start_value_2[1] = 0;
-
 
     // printf("[%d]\n", start_num);
 
@@ -226,17 +224,17 @@ int start(char name[], char date[])
     fclose(fp13);
 }
 
-int main()
-{
-    // 2021/8/6
-    start("C1", "210806");
-    start("Groove_A", "210806");
-    start("Groove_B", "210806");
-    start("Groove_C", "210806");
-    start("Groove_D", "210806");
-    start("Normal", "210806");
-    start("R1_17.9", "210806");
-    start("R1_18.6", "210806");
-    start("R1_19.3", "210806");
-return (0);
-}
+// int main()
+// {
+//     // 2021/8/6
+//     start("C1", "210806");
+//     start("Groove_A", "210806");
+//     start("Groove_B", "210806");
+//     start("Groove_C", "210806");
+//     start("Groove_D", "210806");
+//     start("Normal", "210806");
+//     start("R1_17.9", "210806");
+//     start("R1_18.6", "210806");
+//     start("R1_19.3", "210806");
+// return (0);
+// }
