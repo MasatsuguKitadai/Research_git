@@ -6,7 +6,6 @@ DATE    :
 void S_dft(double ak[], double bk[], int n, int ff)
 {
 
-    /* ff=1 for FFT, ff=-1 for Inverse FT */
     // ak = 実部, bk = 虚部, n = データ数
 
     int j, k;

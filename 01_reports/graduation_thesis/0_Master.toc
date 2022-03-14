@@ -30,8 +30,8 @@
 \contentsline {subsection}{\numberline {4.2}実験結果}{33}%
 \contentsline {subsection}{\numberline {4.3}データ処理手法}{34}%
 \contentsline {subsubsection}{\numberline {4.3.1}ドリフト補正}{35}%
-\contentsline {subsubsection}{\numberline {4.3.2}各距離における平均値の算出}{37}%
-\contentsline {subsubsection}{\numberline {4.3.3}出力電圧勾配の算出}{38}%
+\contentsline {subsubsection}{\numberline {4.3.2}各距離における平均値の算出}{36}%
+\contentsline {subsubsection}{\numberline {4.3.3}出力電圧勾配の算出}{37}%
 \contentsline {subsection}{\numberline {4.4}校正理論の適用とその結果}{40}%
 \contentsline {subsubsection}{\numberline {4.4.1}補正理論[2]の適用}{40}%
 \contentsline {subsubsection}{\numberline {4.4.2}補正理論[3]の適用}{42}%
