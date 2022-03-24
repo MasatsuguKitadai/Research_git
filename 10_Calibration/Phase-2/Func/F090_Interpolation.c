@@ -1,11 +1,3 @@
-/******************************************************************************
-PROGRAM NAME :
-AUTHER  : Masatsugu Kitadai
-DATE    :
-******************************************************************************/
-// #include "head.h"
-
-/*********************************   MAIN   *********************************/
 int Interpolation(char date[], int split)
 {
     // ディレクトリの作成
@@ -343,11 +335,3 @@ int Interpolation(char date[], int split)
 
     printf("\n12\t\tsuccess\n");
 }
-
-// int main()
-// {
-//     // simulation
-//     Interpolation("1", 24);
-
-//     return (0);
-// }

@@ -1,11 +1,3 @@
-/******************************************************************************
-PROGRAM NAME :
-AUTHER  : Masatsugu Kitadai
-DATE    :
-******************************************************************************/
-// #include "head.h"
-
-/*********************************   MAIN   *********************************/
 int Offset(char date[], int split, double delta_x, double delta_y)
 {
     /*****************************************************************************/
@@ -223,11 +215,3 @@ int Offset(char date[], int split, double delta_x, double delta_y)
 
     printf("\n11\t\tsuccess\n");
 }
-
-// int main()
-// {
-//     // simulation
-//     Offset("1", 24, 0.06, 0.08);
-
-//     return (0);
-// }
