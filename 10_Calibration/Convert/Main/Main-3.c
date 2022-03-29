@@ -1,9 +1,3 @@
-/******************************************************************************
-PROGRAM NAME :allrun_testdata.c
-AUTHER  : Masatsugu Kitadai
-DATE    :
-******************************************************************************/
-
 #include "../Func/head.h"
 #include "../Func/F061_Summary-2.c"
 #include "../Func/F071_Evaluation.c"
